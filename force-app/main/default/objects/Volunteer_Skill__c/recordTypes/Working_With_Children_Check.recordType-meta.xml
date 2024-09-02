@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Working_With_Children_Check</fullName>
+    <active>true</active>
+    <label>Working With Children Check</label>
+    <picklistValues>
+        <picklist>License__c</picklist>
+        <values>
+            <fullName>ACT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QLD Exempt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA DCSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stat Dec %28Requires SCO Approval%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC Police %26 Teacher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WWCC type</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Skill_Description__c</picklist>
+        <values>
+            <fullName>Police Check %28SA%29 Releasable Record %26 Exp Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WWCC%2FPolice Check</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

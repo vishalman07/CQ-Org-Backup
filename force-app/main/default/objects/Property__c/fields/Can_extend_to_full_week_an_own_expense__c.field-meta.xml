@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_extend_to_full_week_an_own_expense__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Option to extend to the full week at the
+family’s own expense</description>
+    <inlineHelpText>Option to extend to the full week at the
+family’s own expense</inlineHelpText>
+    <label>Can extend to full week an own expense</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

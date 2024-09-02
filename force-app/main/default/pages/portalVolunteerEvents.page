@@ -1,0 +1,146 @@
+<apex:page controller="portalVolunteerEventsController" standardStylesheets="false" title="My Events">
+    
+    <script>
+    
+    $j(function () {
+        $j('[data-toggle="popover"]').popover();
+    });
+    
+    </script>
+    
+    <apex:param name="filterContact" value="false" assignTo="{!filterContact}" />
+        
+    <apex:outputPanel rendered="{!raction = 'booking'}">
+        <div class="alert alert-success alert-dismissible" role="alert">
+            Thank you for registering for this event.  For any questions your local office.
+        </div>
+    </apex:outputPanel>
+    
+    <apex:outputPanel rendered="{!raction = 'cancel'}">
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            Your event booking has been canceled.
+        </div>
+    </apex:outputPanel>
+    
+    <!-- <div class="page-header">
+<h1>
+My Bookings
+</h1>
+</div> -->
+    <br />
+    <apex:form id="eventForm">
+        
+        <!--<h4>My Bookings.</h4>-->
+        
+        <apex:outputPanel id="eventPanel" >
+            <apex:messages />            
+            <div>
+                <apex:outputPanel rendered="{!AND(numberOfEvents>0, FALSE)}">
+                    {!numberOfEvents} Events Currently Displayed
+                </apex:outputPanel>
+                
+                
+                <apex:outputPanel rendered="{!numberOfEvents == 0}">
+                    There are currently no invitations available to you 
+                </apex:outputPanel>
+            </div>
+            
+            <ul class="list-group" style="list-style: none;">
+                
+                <apex:repeat value="{!eventList}" var="k">
+                    
+                    <li style="margin-left:0px;">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">{!eventList[k]['Portal_Title__c'].Value}</h3>
+                            </div>
+                            <div class="panel-body">
+                                
+                                <div class="row">
+                                    
+                                    <div class="col-xs-12 col-md-3">
+                                        <h3 class="ticket-header">
+                                            <apex:outputText value="{!eventList[k]['Portal_Title__c'].Value}" />
+                                        </h3>
+                                        <img style="max-width:100%;border-radius:10px;" src="{!eventList[k]['Banner_Image_URL__c'].Value}" />
+                                    </div>
+                                    
+                                    <div class="col-xs-12 col-md-3">
+                                        
+                                        <table class="table borderless no-th-padding event-table">
+                                            <tr>
+                                                <th>Event Type</th>
+                                                <td>
+                                                    <apex:outputText value=" {!eventList[k]['Event_Type__c'].Value}" />
+                                                </td>
+                                            </tr>
+                                            
+                                            <!--<tr>
+                                                <th>Venue</th>
+                                                <td>
+                                                    <apex:outputText value=" {!eventList[k]['Location_Venue__c'].Value}" />
+                                                </td>
+                                            </tr>-->
+                                            
+                                            <tr>
+                                                <th>Start Date</th>
+                                                <td>
+                                                    <apex:outputText value=" {!eventList[k]['StartDate'].Value}" />
+                                                </td>
+                                            </tr>
+                                                <tr>
+                                <th>Time</th>
+                                <td>
+                                    <apex:outputText value=" {!eventList[k]['Event_time__c'].Value}" />
+                                </td>
+                            </tr>
+                                            
+                                            <tr>
+                                                <th>Finish Date</th> 
+                                                <td>
+                                                    <apex:outputText value=" {!eventList[k]['EndDate'].Value}" />
+                                                </td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <th>Description</th>
+                                                <td>
+                                                    <apex:outputText value="{!eventList[k]['Portal_Description__c'].Value}" /><br/>
+                                                </td>
+                                            </tr>
+                                            
+                                        </table>
+                                        
+                                    </div>
+                                    
+                                    <div class="col-xs-12 col-md-3 pull-right" style="text-align:right;padding-top:1.2%;">
+                                        
+                                        <a href="{!portalEventUrl}portalpage?p=volunteerEvent&s=volunteerPortal&e={!eBMap[k]['Event__c'].Value}" class="btn btn-primary btn-lg btn-block">Event Details</a>
+                                       
+                                        <!--<apex:outputPanel rendered="{!eBMap[k]['FA_00000__c'].Value = 'Invited' || eBMap[k]['FA_00000__c'].Value = 'Requested to Attend'}">
+                                            <a href="{!portalEventUrl}&e={!eBMap[k]['Event__c'].Value}" class="btn btn-success btn-lg btn-block">Register</a>
+                                        </apex:outputPanel>        
+                                        
+                                        <apex:outputPanel rendered="{!eBMap[k].Status__c = 'Attended'}">
+                                            <a href="portalBookingCertificate?id={!eBMap[k].Id}" class="btn btn-success btn-lg btn-block">Print Certificate</a>
+                                        </apex:outputPanel>
+                                        
+                                        <p style="margin-top:40px;">
+                                            Booking Reference:&nbsp;<apex:outputText value="{!eBMap[k].Booking_Reference__c}" />
+                                        </p>-->
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>               
+                </apex:repeat> 
+                
+            </ul>
+            
+        </apex:outputPanel>
+        
+    </apex:form>    
+    
+</apex:page>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <assignments>
+        <name>Add_Bequest_Constituent_Type</name>
+        <label>Add Bequest Constituent Type</label>
+        <locationX>396</locationX>
+        <locationY>647</locationY>
+        <assignmentItems>
+            <assignToReference>Current_Constituent_Value</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Bequest Giver</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Current_Constituent_Value</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>;</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Add_Constituent_loops_from_before</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Add_Constituent_loops_from_before</name>
+        <label>Add Constituent loops from before</label>
+        <locationX>396</locationX>
+        <locationY>755</locationY>
+        <assignmentItems>
+            <assignToReference>Current_Constituent_Value</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Loop_through_all_line_items.Constituent_Types__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Current_Constituent_Value</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>;</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_through_all_line_items</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Is this person already marked as a Bequest Giver</description>
+        <name>Look_for_Bequest_Giver_Constituent</name>
+        <label>Look for Bequest Giver Constituent</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Loop_through_all_line_items</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_already_Bequest_Giver</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.npsp__Primary_Contact__r.Constituent_Types__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Bequest Giver</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Is already Bequest Giver</label>
+        </rules>
+    </decisions>
+    <description>Assign &quot;bequest giver&quot; constituent type to contacts with a Bequest Opportunity</description>
+    <environments>Default</environments>
+    <interviewLabel>Update Constituent Type - Bequest Giver {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Constituent Type - Bequest Giver</label>
+    <loops>
+        <description>Loop for</description>
+        <name>Loop_through_all_line_items</name>
+        <label>Loop through all line items</label>
+        <locationX>308</locationX>
+        <locationY>539</locationY>
+        <collectionReference>Get_Records</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Add_Bequest_Constituent_Type</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>UpdateOppPrimaryContact</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get Primary Contact from Opp</description>
+        <name>Get_Records</name>
+        <label>Get Records</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Look_for_Bequest_Giver_Constituent</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ContactFullID__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.npsp__Primary_Contact__r.Case_Safe_ID__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>UpdateOppPrimaryContact</name>
+        <label>UpdateOppPrimaryContact</label>
+        <locationX>308</locationX>
+        <locationY>947</locationY>
+        <inputAssignments>
+            <field>Constituent_Types__c</field>
+            <value>
+                <elementReference>Current_Constituent_Value</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.npsp__Primary_Contact__r</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Records</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0120K0000019bzsQAA</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Closed Lost</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <description>Current constituent picklist values</description>
+        <name>Current_Constituent_Value</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>MULTIPPICKLIST</description>
+        <name>MULTIPICKLIST</name>
+        <dataType>Multipicklist</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

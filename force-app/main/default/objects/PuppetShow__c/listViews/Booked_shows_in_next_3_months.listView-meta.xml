@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booked_shows_in_next_3_months</fullName>
+    <columns>NAME</columns>
+    <columns>Show_Date__c</columns>
+    <columns>Venue__c</columns>
+    <columns>Venue_State__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Show_Status__c</field>
+        <operation>equals</operation>
+        <value>Booked</value>
+    </filters>
+    <filters>
+        <field>Show_Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_MONTH,NEXT_N_MONTHS:2</value>
+    </filters>
+    <filters>
+        <field>Show_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Booked shows in next 3 months</label>
+</ListView>

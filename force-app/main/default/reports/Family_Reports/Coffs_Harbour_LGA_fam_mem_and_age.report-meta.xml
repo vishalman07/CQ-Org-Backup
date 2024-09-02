@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.Family_Member_Type__c</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact.Age__c</field>
+    </columns>
+    <columns>
+        <field>ADDRESS2_CITY</field>
+    </columns>
+    <description>Coffs Harbour, Sawtell, Woolgoolga, Emerald Beach</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Branch_Office__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Northern New South Wales,Newcastle</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Family_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Former Patient,Former Offspring Family,Test Family</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_CITY</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Coffs Harbour,Arrawarra,Boambee,Boambee East,Bonville,Brooklana,Bucca,Coramba,Corindi,Corindi Beach,Crossmaglen,Emerald Beach,Karangi,Korora,Lowanna,Moonee Beach,Nana Glen,Red Rock,Sandy Beach,Sawtell,Timmsvale,Toormina,Ulong,Upper Corindi,Upper Orara,Woolgoolga</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Family_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Coffs Harbour LGA fam mem and age</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <sortColumn>Contact.Age__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

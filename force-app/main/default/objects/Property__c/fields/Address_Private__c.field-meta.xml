@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_Private__c</fullName>
+    <description>Complete address of property (used when address is not visible on portal)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Complete address of property (used when address is not visible on portal)</inlineHelpText>
+    <label>Address (Private)</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solicit_Code__c</fullName>
+    <label>Solicit Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DNEmail - Marketing/Fundraising</fullName>
+                <default>false</default>
+                <label>DNEmail - Marketing/Fundraising</label>
+            </value>
+            <value>
+                <fullName>DNMail - Annual Receipt</fullName>
+                <default>false</default>
+                <label>DNMail - Annual Receipt</label>
+            </value>
+            <value>
+                <fullName>DNMail - The Optimist</fullName>
+                <default>false</default>
+                <label>DNMail - The Optimist</label>
+            </value>
+            <value>
+                <fullName>DNSolicit - Appeals</fullName>
+                <default>false</default>
+                <label>DNSolicit - Appeals</label>
+            </value>
+            <value>
+                <fullName>DNSolicit - Regular Giving</fullName>
+                <default>false</default>
+                <label>DNSolicit - Regular Giving</label>
+            </value>
+            <value>
+                <fullName>Solicit - No Ask String</fullName>
+                <default>false</default>
+                <label>Solicit - No Ask String</label>
+            </value>
+            <value>
+                <fullName>Solicit - only Autumn &amp; Spring Appeal</fullName>
+                <default>false</default>
+                <label>Solicit - only Autumn &amp; Spring Appeal</label>
+            </value>
+            <value>
+                <fullName>Solicit - only Autumn Appeal</fullName>
+                <default>false</default>
+                <label>Solicit - only Autumn Appeal</label>
+            </value>
+            <value>
+                <fullName>Solicit - only Spring Appeal</fullName>
+                <default>false</default>
+                <label>Solicit - only Spring Appeal</label>
+            </value>
+            <value>
+                <fullName>Solicit - only Tax &amp; Xmas Appeal</fullName>
+                <default>false</default>
+                <label>Solicit - only Tax &amp; Xmas Appeal</label>
+            </value>
+            <value>
+                <fullName>Solicit - only Tax Appeal</fullName>
+                <default>false</default>
+                <label>Solicit - only Tax Appeal</label>
+            </value>
+            <value>
+                <fullName>Solicit - only Xmas Appeal</fullName>
+                <default>false</default>
+                <label>Solicit - only Xmas Appeal</label>
+            </value>
+            <value>
+                <fullName>TBC</fullName>
+                <default>false</default>
+                <label>TBC</label>
+            </value>
+            <value>
+                <fullName>2022 - Once A Year Donation</fullName>
+                <default>false</default>
+                <label>2022 - Once A Year Donation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

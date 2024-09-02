@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <format>Summary</format>
+    <name>2020 Payment Method Breakdown</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Payment_Txn_s_with_Contacts_Campaign__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

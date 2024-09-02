@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.OpportunityContactRoles$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$Id</field>
+    </columns>
+    <columns>
+        <field>Contact$Email</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact.OpportunityContactRoles$Amount</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Id</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>7012x000000I4yt</value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>Contact$Id</primaryTableColumn>
+        <relatedTable>CampaignMember-Campaign</relatedTable>
+        <relatedTableJoinColumn>Contact</relatedTableJoinColumn>
+    </crossFilters>
+    <description>Donors who have already donated, to be excluded from the 2nd wave of the Spring Appeal EDM</description>
+    <filter>
+        <booleanFilter>(1 OR 2) AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles*Opportunity$Campaign_Name__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>startsWith</operator>
+            <value>2021 Spring Appeal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles*Opportunity$Campaign_Name__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Spring Appeal 2021</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles$StageName</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles$CloseDate</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>9/1/2021</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.OpportunityContactRoles*Opportunity$Campaign_Name__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>2021 Spring Appeal - EDM 2 suppressions</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

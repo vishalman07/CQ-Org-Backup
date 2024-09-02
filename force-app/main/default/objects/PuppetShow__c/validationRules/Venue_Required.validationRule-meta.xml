@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Venue_Required</fullName>
+    <active>false</active>
+    <description>removing validation rule for venue required for Formstack integration for CQ based events</description>
+    <errorConditionFormula>AND( Child_Requesting_Show__r.School__c = &quot;&quot; , Venue__c = &quot;&quot;,
+NOT(
+OR(
+ISPICKVAL(Show_Type__c, &quot;Camp Quality Event - Program&quot;),
+ISPICKVAL(Show_Type__c, &quot;Camp Quality Event - School Show&quot;),
+ISPICKVAL(Show_Type__c, &quot;Brand Relations&quot;),
+ISPICKVAL(Show_Type__c, &quot;Puppet Digital Playdate&quot;)
+)
+))</errorConditionFormula>
+    <errorMessage>Please add a school to the child requesting show, or add a venue manually to this show.</errorMessage>
+</ValidationRule>

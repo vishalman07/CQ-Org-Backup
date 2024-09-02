@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Internal_Research__c</fullName>
+    <inlineHelpText>Please search for the person and the event online to ensure the person/event doesn&apos;t have a bad press/high risk.  Please flag any risks found here, as well as any other useful information.</inlineHelpText>
+    <label>Internal Research</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

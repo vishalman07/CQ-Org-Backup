@@ -1,0 +1,19 @@
+<!--
+ - Created by prakruti on 3/1/19.
+ -->
+
+
+<apex:page standardStylesheets="false" title="Retreat Booking Confirmation"  docType="html-5.0" applyHtmlTag="false" applyBodyTag="false"
+               showHeader="false" sidebar="false">
+
+    <style>
+        body {
+            font-family: "Nunito", "Myriad Pro", "Helvetica", "sans-serif";
+        }
+    </style>
+
+    <h2>Request submitted</h2>
+    <p> One of our friendly family liason co-ordinators will be in touch shortly...</p>
+
+
+</apex:page>

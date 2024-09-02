@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.npe01__One2OneContact__c</field>
+    </columns>
+    <columns>
+        <field>Account.Primary_Contact_Contact_Id__c</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Show_Status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Performed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Show_Date__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>LAST_YEAR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Show_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Metropolitan School Visit,Country School Visit,Camp Quality Event - School Show</value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>CONTACT_ID</primaryTableColumn>
+        <relatedTable>PSP_Show_Attendee__c</relatedTable>
+        <relatedTableJoinColumn>Contact__c</relatedTableJoinColumn>
+    </crossFilters>
+    <format>Tabular</format>
+    <name>Tim PSP Attendees 140122</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

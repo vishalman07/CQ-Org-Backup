@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATF_Status__c</fullName>
+    <defaultValue>&quot;New Request/Registration&quot;</defaultValue>
+    <label>ATF Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Request/Registration</fullName>
+                <default>false</default>
+                <label>New Request/Registration</label>
+            </value>
+            <value>
+                <fullName>Contacted</fullName>
+                <default>false</default>
+                <label>Contacted</label>
+            </value>
+            <value>
+                <fullName>Request Approval</fullName>
+                <default>false</default>
+                <label>Request Approval</label>
+            </value>
+            <value>
+                <fullName>Authorised</fullName>
+                <default>false</default>
+                <label>Authorised</label>
+            </value>
+            <value>
+                <fullName>ATF created and sent</fullName>
+                <default>false</default>
+                <label>ATF created and sent</label>
+            </value>
+            <value>
+                <fullName>Funds Received</fullName>
+                <default>false</default>
+                <label>Funds Received</label>
+            </value>
+            <value>
+                <fullName>Thanked</fullName>
+                <default>false</default>
+                <label>Thanked</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>Authority To Fundraise Declined</fullName>
+                <default>false</default>
+                <label>RTF Declined</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

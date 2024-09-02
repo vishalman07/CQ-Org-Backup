@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Wealth_Capacity__c</fullName>
+    <description>What is the approximate capacity to give for this individual? Used for MD/Philanthropy donors</description>
+    <inlineHelpText>What is the approximate capacity to give for this individual? Used for MD/Philanthropy donors</inlineHelpText>
+    <label>Wealth Capacity</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

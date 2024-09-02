@@ -1,0 +1,25 @@
+<apex:page standardController="Campaign" sidebar="false" showHeader="false">
+    
+    <apex:stylesheet value="{!URLFOR($Resource.slds203, '/assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+    
+    <apex:outputPanel rendered="{!NOT(ISBLANK(Campaign.Annotations__c))}">
+        
+        <div class="mycampquality">
+            
+            <div class="slds-notify slds-notify--toast slds-theme--error" role="alert" style="width:100%;margin:0;">
+                <span class="slds-assistive-text">Error</span>
+                <div class="slds-notify__content slds-grid">
+                    <svg aria-hidden="true" class="slds-icon slds-icon--small slds-m-right--small slds-col slds-no-flex">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS203, '/assets/icons/utility-sprite/svg/symbols.svg#warning')}"></use>
+                    </svg>
+                    <div class="slds-col slds-align-middle">
+                        <h2 class="slds-text-heading--small">{!Campaign.Annotations__c}</h2>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </apex:outputPanel>
+    
+</apex:page>

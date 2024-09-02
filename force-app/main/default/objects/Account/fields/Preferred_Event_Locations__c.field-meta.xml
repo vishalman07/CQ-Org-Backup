@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Event_Locations__c</fullName>
+    <label>Preferred Event Locations</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Illawarra</fullName>
+                <default>false</default>
+                <label>Illawarra</label>
+            </value>
+            <value>
+                <fullName>Sydney</fullName>
+                <default>false</default>
+                <label>Sydney</label>
+            </value>
+            <value>
+                <fullName>Northern New South Wales</fullName>
+                <default>false</default>
+                <label>Northern New South Wales</label>
+            </value>
+            <value>
+                <fullName>South Queensland</fullName>
+                <default>false</default>
+                <label>South Queensland</label>
+            </value>
+            <value>
+                <fullName>Victoria</fullName>
+                <default>false</default>
+                <label>Victoria</label>
+            </value>
+            <value>
+                <fullName>South Australia</fullName>
+                <default>false</default>
+                <label>South Australia</label>
+            </value>
+            <value>
+                <fullName>Australian Capital Territory</fullName>
+                <default>false</default>
+                <label>Australian Capital Territory</label>
+            </value>
+            <value>
+                <fullName>Newcastle</fullName>
+                <default>false</default>
+                <label>Newcastle</label>
+            </value>
+            <value>
+                <fullName>Western Australia</fullName>
+                <default>false</default>
+                <label>Western Australia</label>
+            </value>
+            <value>
+                <fullName>Central Queensland</fullName>
+                <default>false</default>
+                <label>Central Queensland</label>
+            </value>
+            <value>
+                <fullName>Tasmania</fullName>
+                <default>false</default>
+                <label>Tasmania</label>
+            </value>
+            <value>
+                <fullName>North Queensland</fullName>
+                <default>false</default>
+                <label>North Queensland</label>
+            </value>
+            <value>
+                <fullName>Northern Territory</fullName>
+                <default>false</default>
+                <label>Northern Territory</label>
+            </value>
+            <value>
+                <fullName>Queensland</fullName>
+                <default>false</default>
+                <label>Queensland</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

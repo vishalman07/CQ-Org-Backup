@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X41_QLD_Campaigns</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>Registrations_Closed__c</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.END_DATE</columns>
+    <columns>Campaign_Owner_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN.STATUS</field>
+        <operation>contains</operation>
+        <value>Planned,Approved for portal and invites,In Progress</value>
+    </filters>
+    <filters>
+        <field>Event_Group__c</field>
+        <operation>contains</operation>
+        <value>CQLD,NQLD,QLD</value>
+    </filters>
+    <filters>
+        <field>CAMPAIGN.START_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <filters>
+        <field>CAMPAIGN.ACTIVE</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>41 - QLD Campaigns</label>
+</ListView>

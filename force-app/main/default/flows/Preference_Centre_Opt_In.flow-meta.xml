@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <decisions>
+        <name>Copy_2_of_Motocyc_Fundraiser_vs_Donor</name>
+        <label>Escarpade Motocyc Fundraiser vs Donor</label>
+        <locationX>710</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Opted_into_Escarpade_Donor</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Donor</defaultConnectorLabel>
+        <rules>
+            <name>ESS_Fundraiser</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Fundraiser</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Team Leader</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_3_of_Opted_into_MotoCyc</targetReference>
+            </connector>
+            <label>ESS Fundraiser</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Motocyc_Fundraiser_vs_Donor</name>
+        <label>Motocyc Fundraiser vs Donor</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Copy_2_of_Opted_into_MotoCyc</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Donor</defaultConnectorLabel>
+        <rules>
+            <name>Fundraiser</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Fundraiser</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Team Leader</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Contact</targetReference>
+            </connector>
+            <label>Fundraiser</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Going off event type</description>
+        <name>What_campaign_type_is_it</name>
+        <label>What campaign type is it?</label>
+        <locationX>644</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Motocyc</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Campaign.Event_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Motoring Event - Motocyc</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Motocyc_Fundraiser_vs_Donor</targetReference>
+            </connector>
+            <label>Motocyc</label>
+        </rules>
+        <rules>
+            <name>Escarpade</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Campaign.Event_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Motoring Event - esCarpade</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_Motocyc_Fundraiser_vs_Donor</targetReference>
+            </connector>
+            <label>Escarpade</label>
+        </rules>
+    </decisions>
+    <description>Triggered by Campaign Member Status
+Based on Event Type of Campaign</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>6month time period</description>
+        <name>SixMonthsAgo</name>
+        <dataType>Date</dataType>
+        <expression>ADDMONTHS(TODAY(), -6)</expression>
+    </formulas>
+    <interviewLabel>Preference Centre Opt In {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Preference Centre Opt In</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Will override opt out status</description>
+        <name>Copy_2_of_Opted_into_MotoCyc</name>
+        <label>Copy 2 of Opted into MotoCyc</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <filterLogic>1 AND (2 AND 3)</filterLogic>
+        <filters>
+            <field>Motocyc_emailpref__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Opted Out</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>012280000007dCjAAI</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CreatedDate</field>
+            <operator>LessThan</operator>
+            <value>
+                <elementReference>SixMonthsAgo</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Motocyc_emailpref__c</field>
+            <value>
+                <stringValue>Opted In</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Contact</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Will override opt out status</description>
+        <name>Copy_3_of_Opted_into_MotoCyc</name>
+        <label>Opted into Escarpade Fundraiser</label>
+        <locationX>578</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Escarpade_email_pref__c</field>
+            <value>
+                <stringValue>Opted In</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Contact</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Opted_into_Escarpade_Donor</name>
+        <label>Opted into Escarpade Donor</label>
+        <locationX>842</locationX>
+        <locationY>539</locationY>
+        <filterLogic>1 AND (2 and 3)</filterLogic>
+        <filters>
+            <field>Escarpade_email_pref__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Opted Out</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>012280000007dCjAAI</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CreatedDate</field>
+            <operator>LessThan</operator>
+            <value>
+                <elementReference>SixMonthsAgo</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Escarpade_email_pref__c</field>
+            <value>
+                <stringValue>Opted In</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Contact</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Will override opt out status</description>
+        <name>Update_Contact</name>
+        <label>Opted into MotoCyc</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Motocyc_emailpref__c</field>
+            <value>
+                <stringValue>Opted In</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Contact</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>518</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>What_campaign_type_is_it</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Donor</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Fundraiser</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Team Leader</stringValue>
+            </value>
+        </filters>
+        <object>CampaignMember</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

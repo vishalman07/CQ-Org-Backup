@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FOLDER</field>
+    </columns>
+    <columns>
+        <field>SHORT_NAME</field>
+    </columns>
+    <columns>
+        <field>LONG_NAME</field>
+    </columns>
+    <columns>
+        <field>CREATED</field>
+    </columns>
+    <columns>
+        <field>CREATEDDATE</field>
+    </columns>
+    <columns>
+        <field>LASTMODIFIEDDATE</field>
+    </columns>
+    <columns>
+        <field>LASTMODIFIED</field>
+    </columns>
+    <description>Reports in Fundraising/General folders. Excludes reports that have never been run.</description>
+    <filter>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <criteriaItems>
+            <column>FOLDER</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>2018 Xmas,2019,2019 Regular Giving Telemarketing,2019 Spring,2019 Xmas,2020 Fundraising Dashboards Reports,2020 Maserati Raffle Reports,2020 Regular Giving Telemarketing,2020 Spring Appeal,2020 Spring Appeal Dashboard Reports,2020 - Tax,2020 Tax Appeal Reports,2020 Xmas,2020 Xmas Appeal Dashboard Reports,Acts of Kidness,Autumn,Bequests,Big Walk,Calls 4 a Cause - C4C,Camp In,Camp In Dashboard Reports,Chatter Reports,Community Fundraising,Conga Reports,Contract Management,Corporate Partnerships,Danielle Reports,Dashboard Reports,Data Hygiene Revenue,Data Quality Programs,Donor Care,E-Communications,eDM reports,esCarpade Reports,Fundraising Dashboard Reports,Fundraising Reports,Funx4,Individual Giving,LemonTree,Major Donors,Marketing/Mailchimp Lists,Marketing Reports,Marketing Statistics,Membership - Camp Quality Annual Members,NAB Reports,NCLE NNSW Reports,Nonprofit Edition Reports,NPSP Health Check,One Day Campaign,Pareto Benchmark,Payments2Us InPage Reports,Payments2Us Reports,Philanthropy,QLD Reports,Receipting Hygiene,Regular Giving,Regular Giving Analysis,Regular Giving Comms,Regular Giving - Credit Cards,Regular Giving Dashboard reports,Regular Giving - Direct Debits</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FOLDER</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Regular Giving Inactive,Regular Giving - Migration,Regular Giving Suspends,Research Project,SA/NT Reports,Schools Fundraising,Slingshot Data,Supporter Survey Reports,SYD Reports,TAX,Telemarketing,Telemarketing Data,TJS Moved from Public Folders,Unfiled Public Reports,VIC Reports,Volunteer Reports,WA Fundraising Reports,WA Reports,WesCarpade Reports</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LASTRUNDATE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>LASTRUNDATE</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <name>Fundraising reports</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ReportList</reportType>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATEDDATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

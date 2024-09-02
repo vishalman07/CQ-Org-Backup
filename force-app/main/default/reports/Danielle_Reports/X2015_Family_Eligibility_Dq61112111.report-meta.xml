@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_27297561</developerName>
+        <masterLabel>Year Age</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>Contact.Year_Age__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>6</to>
+            </sourceValues>
+            <value>Not Eligible</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>6</from>
+                <to>10</to>
+            </sourceValues>
+            <value>Mini Camp</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>10</from>
+                <to>12</to>
+            </sourceValues>
+            <value>Junior Camp</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>12</from>
+                <to>16</to>
+            </sourceValues>
+            <value>Middle Camp</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>16</from>
+            </sourceValues>
+            <value>Not Eligible 2</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Contact.Family_Member_Type__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>(1 AND (2 OR 3) AND 4) AND (5 AND 6)</booleanFilter>
+        <criteriaItems>
+            <column>Account.Start_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>12/31/2015</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.End_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>12/31/2015</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.End_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Family_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Former Patient,Patient,Bereaved Family,Restricted Family,Former Bereaved</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Year_Age__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>16</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Year_Age__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>7</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_27297561</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.Family_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>2015 Kids Eligibility</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

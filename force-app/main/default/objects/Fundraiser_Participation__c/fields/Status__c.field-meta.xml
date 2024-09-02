@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>How was this contact involved in the fundraising</description>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Team Leader</fullName>
+                <default>false</default>
+                <label>Team Leader</label>
+            </value>
+            <value>
+                <fullName>Fundraiser</fullName>
+                <default>false</default>
+                <label>Fundraiser</label>
+            </value>
+            <value>
+                <fullName>Driver</fullName>
+                <default>false</default>
+                <label>Driver</label>
+            </value>
+            <value>
+                <fullName>Co-Driver</fullName>
+                <default>false</default>
+                <label>Co-Driver</label>
+            </value>
+            <value>
+                <fullName>Pillion</fullName>
+                <default>false</default>
+                <label>Pillion</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

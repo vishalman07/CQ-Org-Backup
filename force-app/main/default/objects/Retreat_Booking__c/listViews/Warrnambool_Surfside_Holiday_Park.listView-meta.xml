@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Warrnambool_Surfside_Holiday_Park</fullName>
+    <columns>Account__c</columns>
+    <columns>NAME</columns>
+    <columns>Contact__c</columns>
+    <columns>Check_In_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>Property__c</columns>
+    <columns>Cleaner_Notified__c</columns>
+    <columns>Property_Notified__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Property__c</field>
+        <operation>equals</operation>
+        <value>Warrnambool (VIC) – Surfside Holiday Park</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Confirmed,Pending</value>
+    </filters>
+    <label>Warrnambool Surfside Holiday Park</label>
+</ListView>

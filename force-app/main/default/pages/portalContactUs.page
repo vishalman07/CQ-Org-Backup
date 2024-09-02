@@ -1,0 +1,43 @@
+<apex:page standardStylesheets="false" title="Contact Us" controller="PortalContactUsPageController">
+    <div class="row">
+        
+        <div class="col-md-12">
+            
+            <h3>
+                 Is your query is related to an upcoming event? To ensure we can respond to you in time please contact us on 1300 662 267 or email the Family Program Coordinator directly.
+                 <br />
+                 <br />
+                 <br />
+                            </h3>
+            
+            <p>
+                                
+                                <!--<strong>Email: </strong> admin@campquality.org.au-->
+            </p>
+            
+        </div>
+        
+    </div>
+    
+    <div class="row">
+        
+        <div class="col-md-6">
+            
+            <h3>
+                Or send us a general message via the form below: 
+                
+            </h3>
+
+            <!--<apex:outputPanel rendered="{! property == null}">-->
+                 <!--<c:portalContactUsComponent RecordTypeName="{!contactType}" />-->
+            <!--</apex:outputPanel>-->
+
+            <!--<apex:outputPanel rendered="{! property != null}">-->
+                <c:portalContactUsComponent RecordTypeName="{!contactType}" pId="{!property}" />
+            <!--</apex:outputPanel>-->
+            
+        </div>
+        
+    </div>
+    
+</apex:page>

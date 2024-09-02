@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Fundraising_Complaints</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Open up access to complaint record type where department = fundraising</description>
+        <label>Fundraising Complaints</label>
+        <sharedTo>
+            <group>Fundraising</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Complaint</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>Community Fundraising,Donor</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Incident_Review_Committee</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>All incidents except safeguarding</description>
+        <label>Incident Review Committee</label>
+        <sharedTo>
+            <group>Incident_Review_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Safeguarding Children,Complaint</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Public_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Public Sharing</label>
+        <sharedTo>
+            <group>Camp_Quality_Staff</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Public</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Risk_Safety_View</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>All incidents &amp; all fields</description>
+        <label>Risk &amp; Safety View</label>
+        <sharedTo>
+            <group>Risk_Safety_Incidents_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Safeguarding Children,Behaviour Incident,Breach,Medication Error,Injury,Near Miss,Vehicle Incident,Damaged Property,CyberSecurity,Illness</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

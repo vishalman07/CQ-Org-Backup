@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Retreat_Booking__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>Retreat_Booking__c.Check_In_Date__c</field>
+    </columns>
+    <columns>
+        <field>Retreat_Booking__c.Check_Out_Date__c</field>
+    </columns>
+    <columns>
+        <field>Retreat_Booking__c.Special_Requests__c</field>
+    </columns>
+    <columns>
+        <field>Retreat_Booking__c.Send_confirmation_email__c</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Retreat_Booking__c.Property__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>2020 retreat bookings</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Retreat_Booking__c@Retreat_Booking__c.Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Retreat_Booking__c.Check_In_Date__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Retreat_Booking__c.Check_In_Date__c</dateColumn>
+        <interval>INTERVAL_CURY</interval>
+    </timeFrameFilter>
+</Report>

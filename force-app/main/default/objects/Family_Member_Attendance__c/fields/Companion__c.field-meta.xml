@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Companion__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Companion</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$Source.Event__c</field>
+            <operation>equals</operation>
+            <valueField>Volunteer_Attendance__c.Event__c</valueField>
+        </filterItems>
+        <infoMessage>The volunteer attendance record must be for the same event.</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Volunteer_Attendance__c</referenceTo>
+    <relationshipLabel>Companion Children</relationshipLabel>
+    <relationshipName>Companion_Children</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

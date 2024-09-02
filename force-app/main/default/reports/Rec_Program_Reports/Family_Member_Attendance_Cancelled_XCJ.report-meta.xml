@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>(Family_Attendance__c.Attended_Members__c:SUM + Family_Attendance__c.Accepted_Members__c:SUM) /RowCount</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Percentage Attendance Rate per Campaign</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_68203830</developerName>
+        <masterLabel>Attended Program</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Campaign.Family_Attendances__r$FA_00000__c</sourceColumnName>
+        <useOther>false</useOther>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_5767127</developerName>
+        <masterLabel>Came to Camp</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Campaign.Family_Attendances__r$FA_00000__c</sourceColumnName>
+        <useOther>false</useOther>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_66860706</developerName>
+        <masterLabel>Didn&apos;t Attend Program</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Campaign.Family_Attendances__r$FA_00000__c</sourceColumnName>
+        <useOther>false</useOther>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_65471219</developerName>
+        <masterLabel>Didn&apos;t attend camp</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Campaign.Family_Attendances__r$FA_00000__c</sourceColumnName>
+        <useOther>false</useOther>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_12677374</developerName>
+        <masterLabel>Family Program Attendance</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Campaign.Family_Attendances__r$FA_00000__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Accepted</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Attended</sourceValue>
+            </sourceValues>
+            <value>Attended</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Invited</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Declined</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>-1</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>No Show</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cancelled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cancelled &lt; 24 hours</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Medical Withdrawal</sourceValue>
+            </sourceValues>
+            <value>Didn&apos;t Attend</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Request to Attend</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Unsuccessful</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Unsuccessful – Waitlist</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Unsuccessful – Declined</sourceValue>
+            </sourceValues>
+            <value>Didn&apos;t attend but wanted to</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBarStacked</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Campaign$StartDate</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <secondaryGroupingColumn>Campaign$Status</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Campaign.Family_Attendances__r$Name</field>
+    </columns>
+    <columns>
+        <field>Campaign.Family_Attendances__r.Family_Member_Attendance__r$Name</field>
+    </columns>
+    <description>Families sitting as request to attend and accepted in previous campaigns marked as cancelled.</description>
+    <filter>
+        <criteriaItems>
+            <column>Campaign$RecordType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Campaign.Age_Camp,Campaign.Family_Camp,Campaign.Family_Programs,Campaign.Family_Experience,Campaign.Family_Fun_Day</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign$Event_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Family Camp,Family Experience,Family Fun Day,Junior Camp,Middle Camp,Mini Camp,Multi Age Group Camp,Grad Camp,Virtual Camp</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Family_Attendances__r$FA_00000__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Request to Attend,Accepted</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign$StartDate</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessThan</operator>
+            <value>LAST_WEEK</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>test</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign$Status</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Cancelled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign$StartDate</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>1/1/2020</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Year</dateGranularity>
+        <field>Campaign$StartDate</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign$Status</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Family Member Attendance- Cancelled</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Campaigns_with_Family_Attendances_with_Family_Memb__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Campaign$StartDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

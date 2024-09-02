@@ -1,0 +1,53 @@
+<apex:component controller="FamilyMemberAttendanceListController" access="global">
+    
+    <apex:attribute name="AttendanceStatus" assignTo="{!aStatus}" description="This is the status of the Family Members being displayed" type="String" />
+    <apex:attribute name="FamilyAttendanceId" assignTo="{!faId}" description="The ID of the Family Attendance record." type="String" />
+    
+    
+        <apex:repeat value="{!fmas}" var="fma">
+            <apex:outputPanel rendered="{!fma.Attendance__c == aStatus}">
+                <h2>
+                    Camp Details For {!fma.Contact__R.Preferred_First_Name__c}
+                </h2>
+                <H3>Transport Details</H3>
+                <h4>Getting to Camp:</h4>
+                <p><b>When</b> {!fma.Transport_Pick_Up_Time__c}</p>
+				<p><b>Where</b> {!fma.Transport_Pick_Up_Location__c}</p>
+<h4>Getting Home:</h4>
+                <p><b>When</b> {!fma.Transport_Drop_Off_Time__c}</p>
+				<p><b>Where</b> {!fma.Transport_Drop_Off_Location__c}</p>
+<p>If this is incorrect, please contact the office Immediately</p>
+               
+                <h3>
+                    Medical Needs
+                </h3>
+                <table>
+                    <tr><td>Currently on Treatment?</td> <td>{!fma.Currently_on_Treatment__c}</td></tr>
+                    <tr><td>Requires medication or Vitamins?</td> <td>{!fma.Requires_Medication_or_Vitamins__c}</td></tr>
+					<tr><td>Requires Doctor’s Form?</td> <td><apex:outputText value="Yes" rendered="{!fma.Requires_Doctors_Form__c}"/><apex:outputText value="No" rendered="{!NOT(fma.Requires_Doctors_Form__c)}"/>
+</td></tr>
+                    <tr><td>Immunisation Schedule Up to Date?</td><td>{!fma.Child_Immunisation_Schedule_Current__c}</td></tr>
+                    <tr><td>Has permission for Over the Counter Medications to be administered?</td> <td>{!fma.OTC_Standard__c} {!fma.OTC_Comments__c}</td></tr>
+
+                </table>
+
+
+
+
+               <c:SpecialNeedsList ContactID="{!fma.Contact__c}" />
+
+                
+    <p>If your child’s medication has changed since online registration please let us know prior to the day of camp.</p>
+
+<p>
+    Now here is the news you have been waiting for:</p>
+<p>
+    
+                Your companion is <b>{!fma.COMPANION__R.VOLUNTEER__R.Preferred_First_Name__c}</b></p>
+
+                
+            </apex:outputPanel>
+       </apex:repeat>
+    
+    
+</apex:component>

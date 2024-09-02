@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RG_Lapsed_something_we_could_improve_on__c</fullName>
+    <label>02. RG Lapsed something we could improve</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I have needed to direct my money elsewhere for a while.</fullName>
+                <default>false</default>
+                <label>a. I have needed to direct my money elsewhere for a while.</label>
+            </value>
+            <value>
+                <fullName>I would prefer to switch back from regular monthly donations to occasional donations.</fullName>
+                <default>false</default>
+                <label>b. I would prefer to switch back from regular monthly donations to occasional donations.</label>
+            </value>
+            <value>
+                <fullName>My bank account or credit card details have changed and I haven’t sent you updated details yet.</fullName>
+                <default>false</default>
+                <label>c. My bank account or credit card details have changed and I haven’t sent you updated details yet.</label>
+            </value>
+            <value>
+                <fullName>I have not found your stories motivating enough to compel me to donate.</fullName>
+                <default>false</default>
+                <label>d. I have not found your stories motivating enough to compel me to donate.</label>
+            </value>
+            <value>
+                <fullName>You have not provided enough information about how my donations make a difference.</fullName>
+                <default>false</default>
+                <label>e. You have not provided enough information about how my donations make a difference.</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>f. Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account$Diagnosis_Date__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account$Patients_in_Family__c</field>
+    </columns>
+    <columns>
+        <field>Account$Deceased__c</field>
+    </columns>
+    <description>Part of 5 year stats project; additional report request</description>
+    <filter>
+        <criteriaItems>
+            <column>Account$Family_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Patient,Restricted Family,Bereaved Family,Graduating Patient Family,Graduating Restricted Family,Graduating Bereaved Family,Former Patient Family,Former Bereaved Family</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$BillingState</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Family_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name># Kids with Diagnosis Date prev CY</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_Contacts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$Diagnosis_Date__c</dateColumn>
+        <interval>INTERVAL_PREVY</interval>
+    </timeFrameFilter>
+</Report>

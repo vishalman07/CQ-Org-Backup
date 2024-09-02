@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>Hi&nbsp;{{{Recipient.FirstName}}},<br />
+<br />
+Thank you for registering as a corporate volunteer to take part in the {{{Recipient.Company}}}&nbsp;volunteer day.&nbsp;<br />
+&nbsp;<br />
+Volunteer day information&nbsp;<br />
+<br />
+Time:&nbsp;<br />
+Date:&nbsp;&nbsp;<br />
+Location:&nbsp;<br />
+Activity details:&nbsp;<br />
+<br />
+If you are unable to attend or have any questions regarding the day, please email the Camp Quality team at partnerships@campquality.org.au.&nbsp;<br />
+<br />
+We are looking forward to having you and your team give kids facing cancer the chance to be kids again. Thank you so much for generously donating your time to support Camp Quality.&nbsp;<br />
+<br />
+Kind regards,&nbsp;<br />
+The Camp Quality Partnerships team</body>
+</html>

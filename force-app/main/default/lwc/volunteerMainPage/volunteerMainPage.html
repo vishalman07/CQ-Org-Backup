@@ -1,0 +1,221 @@
+<template>
+	<div class="Header-position">
+		<div class='slds-grid custom_padding desktop header-padding'>
+			<div class='slds-col logoSizing '>
+				<a onclick={clickLogo}><img src={campQualityLogo}></a>
+			</div>
+			<div class="slds-col custom_right ">
+				<li class="slds-context-bar__item  slds-col right-align user" onclick={toggleDropdownuser}>
+					<div class="slds-dropdown-trigger_click slds-is-open">
+						<span class="slds-avatar slds-avatar_circle dropdown-button_User">
+							<abbr class="slds-avatar__initials slds-icon-standard-user"
+								title="person name">{avtar}</abbr>
+						</span>
+						<div class={dropdownUserClass}>
+							<ul class="slds-dropdown__list " role="menu" aria-label="Show More"
+								onmouseleave={toggleDropdownuser}>
+								<li class="slds-dropdown__item " role="presentation">
+									<a rel="#" role="menuitem" tabindex="0" class="customLiPadding">
+										<span class="" title="Menu Item One">{currentUserName}</span>
+										<input type="hidden" id="username" value={currentUserName} />
+										<input type="hidden" id="contId"  class="slds-input" value={currentUserConId} />
+									</a>
+								</li>
+								<li class="slds-dropdown__item " role="presentation">
+									<a onclick={logoutLink} title="Menu Item" class="customLiPadding">
+										<span class="" title="Menu Item"> {label.logout}</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</div>
+		</div>
+		<!-- Desktop Navigation Start  -->
+		<div>
+			<nav class="custom_nav font_popins header-padding" role="navigation">
+				<ul class="slds-grid">
+					<li class="custom_color2">
+						<a onclick={homerender} class=" slds_customAnchor" title="Home">
+							<span class=" custom_font" title="Home">{label.mobileHome}</span>
+						</a>
+					</li>
+					<li class="custom_color2">
+						<a onclick={profilerender} class=" slds_customAnchor">
+							<span class=" custom_font" title="Profile">{label.mobileMyProfile}</span>
+						</a>
+					</li>
+					<li class="custom_color2">
+						<a onclick={incidentrender} class="slds_customAnchor">
+							<span class=" custom_font" title="Incidents">{label.incidents}</span>
+						</a>
+					</li>
+					<li class="custom_color2">
+						<a onclick={eventrender} class="slds_customAnchor">
+							<span class=" custom_font" title="Event">{label.event}</span>
+						</a>
+					</li>
+					<!-- <li class="custom_color2">
+						<a onclick={newsrender} class="slds_customAnchor">
+							<span class=" custom_font" title="News & Update">{label.newsUpdate}</span>
+						</a>
+					</li> -->
+					<li class="custom_color2">
+						<a onclick={resourcesrender} class="slds_customAnchor">
+							<span class=" custom_font" title="Resources">{label.resource}</span>
+						</a>
+					</li>
+					<li class="custom_color2">
+						<a onclick={contactRender} class=" slds_customAnchor">
+							<span class=" custom_font" title="Contact Us">{label.mobileContactUs}</span>
+						</a>
+					</li>
+
+				</ul>
+			</nav>
+		</div>
+		<!-- Desktop Navigation End  -->
+
+		<!-- Mobile Navigation Start  -->
+		<div class="custom_nav_mobile font_popinsLight ">
+			<div class=" mobile">
+				<li class="custom_right" onclick={toggleDropdownuser}>
+					<div class="slds-dropdown-trigger_click slds-is-open">
+						<span class="slds-avatar slds-avatar_circle dropdown-button_User">
+							<abbr class="slds-avatar__initials slds-icon-standard-user"
+								title="person name">{avtar}</abbr>
+						</span>
+						<div class={dropdownUserClass}>
+							<ul class="slds-dropdown__list " role="menu" aria-label="Show More"
+								onmouseleave={toggleDropdownuser}>
+								<li class="slds-dropdown__item " role="presentation">
+									<a rel="#" role="menuitem" tabindex="0" class="customLiPadding">
+										<span class="" title="Menu Item One">{currentUserName}</span>
+									</a>
+								</li>
+								<li class="slds-dropdown__item" role="presentation">
+									<a href={logoutLink} title="Menu Item" class="customLiPadding">
+										<span class="" title="Menu Item"> {label.logout}</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</div>
+			<div class="header-padding mobile-header">
+				<div class='mobile-logo'>
+					<img src={campQualityLogo}>
+					<div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open right-align">
+						<button
+							class="slds-button slds-button_icon slds-button_icon-border-filled btn-dropdown nav-trigger js-nav-trigger"
+							aria-haspopup="true" aria-expanded="true" title="Show More" onclick={handleDropDown}>
+							<template if:false={showCross}>
+								<svg viewBox="0 0 100 80" width="30" height="20">
+									<rect width="100" height="8" rx="10"></rect>
+									<rect y="30" width="100" height="8" rx="10"></rect>
+									<rect y="60" width="100" height="8" rx="10"></rect>
+								</svg>
+							</template>
+	
+							<template if:true={showCross}>
+								<svg width="64px" height="64px" viewBox="-19.2 -19.2 102.40 102.40"
+									xmlns="http://www.w3.org/2000/svg" stroke-width="7.144" stroke-height="7.144"
+									stroke="#000000" fill="none">
+									<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+									<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+									<g id="SVGRepo_iconCarrier">
+										<line x1="8.06" y1="8.06" x2="55.41" y2="55.94"></line>
+										<line x1="55.94" y1="8.06" x2="8.59" y2="55.94"></line>
+									</g>
+								</svg>
+							</template>
+						</button>
+					</div>
+				</div>
+
+				
+			</div>
+			<div if:true={showDropDown} onmouseleave={handleDropDown}>
+				<div class=" droplist font_popins ">
+					<ul class="slds-dropdown__list slds-scrollable_y" role="menu" aria-label="Show More">
+						<li class=" mobile-header topBorder" role="presentation">
+							<a onclick={homerender} role="menuitem" tabindex="0">
+								<span class="slds-truncate " title="Menu Item One">
+									{label.mobileHome}</span>
+							</a>
+						</li>
+						<li class=" mobile-header" role="presentation">
+							<a onclick={profilerender} role="menuitem" tabindex="-1">
+								<span class="slds-truncate " title="Menu Item Two">
+									{label.mobileMyProfile}</span>
+							</a>
+						</li>
+
+						<li class=" mobile-header" role="presentation">
+							<a onclick={incidentrender} role="menuitem" tabindex="-1">
+								<span class="slds-truncate " title="Menu Item Two">
+									{label.incidents}</span>
+							</a>
+						</li>
+						<li class=" mobile-header" role="presentation">
+							<a onclick={eventrender} role="menuitem" tabindex="-1">
+								<span class="slds-truncate " title="Menu Item Two">
+									{label.event}</span>
+							</a>
+						</li>
+						<!-- <li class=" mobile-header" role="presentation">
+							<a onclick={newsrender} role="menuitem" tabindex="-1">
+								<span class="slds-truncate " title="Menu Item Two">
+									{label.newsUpdate}</span>
+							</a>
+						</li> -->
+						<li class=" mobile-header" role="presentation">
+							<a onclick={resourcesrender} role="menuitem" tabindex="-1">
+								<span class="slds-truncate " title="Menu Item Two">
+									{label.resource}</span>
+							</a>
+						</li>
+						<li class=" mobile-header" role="presentation">
+							<a onclick={contactRender} role="menuitem" tabindex="-1">
+								<span class="slds-truncate " title="Menu Item Three">
+									{label.mobileContactUs}</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Mobile Navigation End  -->
+	</div>
+
+
+	<template if:true={renderHomePg}>
+		<c-community-home-page></c-community-home-page>
+	</template>
+
+	<template if:true={renderProfilePg}>
+		<c-community-profile-page></c-community-profile-page>
+	</template>
+
+	<template if:true={incidentPage}>
+		<c-community-incident-page></c-community-incident-page>
+	</template>
+
+	<template if:true={eventPage}>
+		<c-community-event-page></c-community-event-page>
+	</template>
+
+	<template if:true={newsPage}>
+		<c-community-news-page></c-community-news-page>
+	</template>
+
+	<template if:true={resourcesPage}>
+		<c-community-resources-page></c-community-resources-page>
+	</template>
+
+	<template if:true={renderContactPg}>
+		<c-site-contact-us-page></c-site-contact-us-page>
+	</template>
+</template>

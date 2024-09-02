@@ -1,0 +1,27 @@
+{
+  "type" : "sfdc_cms__trustedSites",
+  "title" : "trustedSites",
+  "contentBody" : {
+    "trustedSites" : [ {
+      "isActive" : true,
+      "source" : "https://www.googletagmanager.com",
+      "sourceName" : "Google Tag Manager"
+    }, {
+      "isActive" : true,
+      "source" : "https://www.google-analytics.com",
+      "sourceName" : "Google Analysis"
+    }, {
+      "isActive" : true,
+      "source" : "https://www.fullstory.com/",
+      "sourceName" : "Fullstory site"
+    }, {
+      "isActive" : true,
+      "source" : "https://edge.fullstory.com/s/fs.js",
+      "sourceName" : "Fullstory .com"
+    }, {
+      "isActive" : true,
+      "source" : "https://rs.fullstory.com/rec/page",
+      "sourceName" : "Fullstory Page"
+    } ]
+  }
+}

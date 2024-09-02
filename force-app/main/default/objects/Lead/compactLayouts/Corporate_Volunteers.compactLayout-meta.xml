@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Corporate_Volunteers</fullName>
+    <fields>Name</fields>
+    <fields>Company</fields>
+    <fields>Position__c</fields>
+    <fields>MobilePhone</fields>
+    <fields>Email</fields>
+    <label>Corporate Volunteers</label>
+</CompactLayout>

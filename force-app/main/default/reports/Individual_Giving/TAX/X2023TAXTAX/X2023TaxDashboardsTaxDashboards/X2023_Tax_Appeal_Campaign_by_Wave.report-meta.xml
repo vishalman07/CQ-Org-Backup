@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <aggregate>Sum</aggregate>
+            <axisBinding>y</axisBinding>
+            <column>Contact.OpportunityContactRoles$Amount</column>
+        </chartSummaries>
+        <chartType>Donut</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>false</expandOthers>
+        <groupingColumn>Contact.OpportunityContactRoles$Campaign.Name</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>true</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.OpportunityContactRoles$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.OpportunityContactRoles$CloseDate</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <aggregateTypes>Average</aggregateTypes>
+        <aggregateTypes>Maximum</aggregateTypes>
+        <field>Contact.OpportunityContactRoles$Amount</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(
+    
+        CONTAINS(OCR_Opportunity.Campaign.Name, &apos;wave 2&apos;), &apos;Wave 2&apos;,
+    IF(
+        CONTAINS(OCR_Opportunity.Campaign.Name, &apos;W2&apos;), &apos;Wave 2&apos;,
+    IF(
+        CONTAINS(OCR_Opportunity.Campaign.Name, &apos;Funraisin&apos;), &apos;Wave 1&apos;,
+        IF(
+        CONTAINS(OCR_Opportunity.Campaign.Name, &apos;Wave 1&apos;), &apos;Wave 1&apos;,
+        IF(
+        CONTAINS(OCR_Opportunity.Campaign.Name, &apos;W1&apos;), &apos;Wave 1&apos;,
+         &apos;Other&apos;
+    )
+    )
+)
+)
+)</calculatedFormula>
+        <dataType>Text</dataType>
+        <developerName>CDF1</developerName>
+        <label>Wave</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <description>For 2023 Tax Appeal Dashboard</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles$StageName</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles$Campaign</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Tax</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles$Role</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Donor</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles*Opportunity$Campaign_Financial_Coding__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>1502</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles*Opportunity$Campaign_Name__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>- RG</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CDF1</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <field>Contact.OpportunityContactRoles$Campaign.Event_Start_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.OpportunityContactRoles$Campaign.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>2023 Tax Appeal - Campaign by Wave</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Contact.OpportunityContactRoles$Amount</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Contact.OpportunityContactRoles$CloseDate</dateColumn>
+        <endDate>2023-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2023-01-01</startDate>
+    </timeFrameFilter>
+</Report>

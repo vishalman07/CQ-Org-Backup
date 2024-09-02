@@ -1,0 +1,149 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0cm; line-height: normal; background: white;"><br></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0cm; line-height: normal; background: white;"><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0cm; line-height: normal; background: white;"><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal; background: white;"><font color="#393d47" face="Helvetica, sans-serif"><span style="font-size: 12pt;">Hi </span>{!Contact.Preferred_First_Name__c}</font><br style="mso-special-character:line-break">
+<!--[if !supportLineBreakNewLine]--><br style="mso-special-character:line-break">
+<!--[endif]--><font color="#393d47" face="Helvetica, sans-serif"><span style="font-size: 12pt;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal; background: white;"><font color="#393d47" face="Helvetica, sans-serif"><span style="font-size: 12pt;">I want to sincerely
+thank you for supporting Camp Quality with </span>{!CampaignMember.Pack_Type__c}<span style="font-size: 12pt;">&nbsp;donations this year.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0cm; line-height: normal; background: white;"><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal; background: white;"><font color="#393d47" face="Helvetica, sans-serif"><span style="font-size: 12pt;">The total value of your
+donations for the 2021/22 financial year is </span>{!CampaignMember.RG_Ask_1__c}<span style="font-size: 12pt;">. Your donations are tax deductible, so
+please keep this letter for tax purposes. <o:p></o:p></span></font></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0cm; line-height: normal; background: white;"><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0cm; line-height: normal; background: white;"><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU">The last 12 months
+saw great optimism here at Camp Quality as we believed the worst of COVID-19
+was behind us. Boy, were we wrong!<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0cm; line-height: normal; background: white;"><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU"><br>
+But despite the evolving challenges of 2022, we learned a lot from the
+pandemic, and your generous support, along with our team’s can-do attitude, has
+allowed us to continue to expand our services and programs to achieve great
+outcomes for kids facing cancer and their families.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0cm; line-height: normal; background: white;"><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU"><br>
+Some of the highlights include:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0cm; line-height: normal; background: white;"><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-left: 54pt; text-indent: -18pt; line-height: normal; background: white;"><!--[if !supportLists]--><span style="font-size:12.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;
+color:#393D47;mso-fareast-language:EN-AU;mso-bidi-font-weight:bold"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><b><span style="font-size:12.0pt;font-family:
+&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:&quot;Times New Roman&quot;;color:#393D47;
+mso-fareast-language:EN-AU">More Camps. </span></b><span style="font-size:12.0pt;
+font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:#393D47;mso-fareast-language:EN-AU">The past couple of years have left us
+with plenty of work to do to make up for the disruption to our face-to-face
+programs. We will run <span style="mso-spacerun:yes">&nbsp;</span>a record-breaking
+number of camps for kids and families in 2022.<b><o:p></o:p></b></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-left: 54pt; text-indent: -18pt; line-height: normal; background: white;"><!--[if !supportLists]--><span style="font-size:12.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;
+color:#393D47;mso-fareast-language:EN-AU"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><b><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU">More Family Retreats</span></b><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU">, giving respite to
+families in dire need of a break from cancer as pandemic restrictions and
+cost-of-living increases made life even tougher. We currently have four
+retreats in operation and are in the process of setting up another six to meet
+the increase in demand.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-left: 54pt; text-indent: -18pt; line-height: normal; background: white;"><!--[if !supportLists]--><span style="font-size:12.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;
+color:#393D47;mso-fareast-language:EN-AU"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><b><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU">Increase to Child
+Life Therapists </span></b><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:
+EN-AU">as we fund more therapists in more children’s hospitals to help kids
+cope with scary or painful cancer treatments.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-left: 54pt; text-indent: -18pt; line-height: normal; background: white;"><!--[if !supportLists]--><span style="font-size:12.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;
+color:#393D47;mso-fareast-language:EN-AU"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><b><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU">Redevelopment of
+the Camp Quality Puppet Programs</span></b><span style="font-size:12.0pt;
+font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:#393D47;mso-fareast-language:EN-AU">, with a brand-new show and puppet family
+to deliver our Cancer Education Program to schools all over the country. We
+can’t wait to introduce you to our new characters in the coming months.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-left: 54pt; text-indent: -18pt; line-height: normal; background: white;"><!--[if !supportLists]--><span style="font-size:12.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;
+color:#393D47;mso-fareast-language:EN-AU"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><b><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU">Formation of the
+Child and Youth Cancer Alliance</span></b><span style="font-size:12.0pt;
+font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:#393D47;mso-fareast-language:EN-AU">&nbsp;in partnership with Canteen. By
+sharing resources, services and expertise we can provide better support to
+young people and their families throughout their cancer experience, with less
+duplication and better cost-efficiency.&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-left: 54pt; text-indent: -18pt; line-height: normal; background: white;"><!--[if !supportLists]--><span style="font-size:12.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;
+color:#393D47;mso-fareast-language:EN-AU"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><b><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU">The opening of the
+Hunter Cancer Hub</span></b><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:
+EN-AU">. One of the difficulties for many newly diagnosed families is trying to
+navigate all of the different support available. The Cancer Hub is the first of
+its kind, and brings eight charities together under one roof to make access to
+services much easier.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-left: 54pt; text-indent: -18pt; line-height: normal; background: white;"><!--[if !supportLists]--><span style="font-size:12.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;
+color:#393D47;mso-fareast-language:EN-AU"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><b><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU">The launch of more
+digital services</span></b><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:
+EN-AU">, including Puppet Digital Playdates for kids in hospital or isolated at
+home, Virtual Camps, and the Parenting Through Cancer platform to allow parents
+to connect with other parents, access vital resources, and speak to specialist
+counsellors.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0cm; line-height: normal; background: white;"><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU"><br>
+On behalf of the entire Camp Quality family, and all of the kids and families
+whose lives you have improved, thank you for your kindness, generosity and
+compassion. We couldn’t do what we do without you.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0cm; line-height: normal; background: white;"><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU">Warmest regards,<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0cm; line-height: normal; background: white;"><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0cm; line-height: normal; background: white;"><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU">&lt;Signature
+image&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0cm; line-height: normal; background: white;"><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0cm; line-height: normal; background: white;"><span style="font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#393D47;mso-fareast-language:EN-AU">Deborah Thomas<br>
+CEO<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="mso-spacerun:yes">&nbsp;</span><o:p></o:p></p>]]></td>
+</tr>
+</table>

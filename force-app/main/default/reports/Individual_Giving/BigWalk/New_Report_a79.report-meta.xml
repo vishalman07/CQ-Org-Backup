@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.CampaignMembers$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$Id</field>
+    </columns>
+    <columns>
+        <field>Contact$Salutation</field>
+    </columns>
+    <columns>
+        <field>Contact$Preferred_First_Name__c</field>
+    </columns>
+    <columns>
+        <field>Contact$LastName</field>
+    </columns>
+    <columns>
+        <field>Contact$Email</field>
+    </columns>
+    <columns>
+        <field>Contact.CampaignMembers.CampaignMembers$Status</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Contact.CampaignMembers$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>2021 Campaigns Head Office Big Walk PARENT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.CampaignMembers.CampaignMembers$Status</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Donor</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Big Walk 2021 - Donors</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Campaigns_Campaign_Members__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

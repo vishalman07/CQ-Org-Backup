@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shopify_Payments_excl_PayPal</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>md_npsp_pack__Receipt_Number__c</columns>
+    <columns>Banking_Reference__c</columns>
+    <columns>Payment_Source__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Funraisin__Payment_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Merchandise</value>
+    </filters>
+    <filters>
+        <field>Funraisin__Payment_Method__c</field>
+        <operation>equals</operation>
+        <value>shopify_payments</value>
+    </filters>
+    <filters>
+        <field>Banking_Reference__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Shopify Payments excl PayPal</label>
+</ListView>

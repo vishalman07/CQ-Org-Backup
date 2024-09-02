@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>S4K_Campaigns</fullName>
+    <columns>Branch_Code__c</columns>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.END_DATE</columns>
+    <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>Cost_Centre__c</columns>
+    <columns>Account_No__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Campaign.Fundraising</value>
+    </filters>
+    <filters>
+        <field>CAMPAIGN.NAME</field>
+        <operation>startsWith</operation>
+        <value>s4k</value>
+    </filters>
+    <label>S4K Campaigns</label>
+</ListView>

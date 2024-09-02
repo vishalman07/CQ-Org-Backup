@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Donor_Salutation__c</fullName>
+    <description>For organisations, &quot;Friends&quot;. For contacts it will use their first name. If the contact only has an first initial, then it will use Salutation + Surname, if we do not have a Salutation then &quot;Friend&quot;</description>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK(npe03__Contact__c ),&quot;Friends&quot;,
+IF( LEN(npe03__Contact__r.FirstName)&gt;1 ,npe03__Contact__r.FirstName,
+IF( ISPICKVAL(npe03__Contact__r.Salutation,&quot;&quot;),  &quot;Friend&quot;,
+TEXT(npe03__Contact__r.Salutation)+&quot; &quot;+ npe03__Contact__r.LastName )))</formula>
+    <inlineHelpText>For organisations, &quot;Friends&quot;. For contacts it will use their first name. If the contact only has an first initial, then it will use Salutation + Surname, if we do not have a Salutation then &quot;Friend&quot;</inlineHelpText>
+    <label>Donor Salutation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

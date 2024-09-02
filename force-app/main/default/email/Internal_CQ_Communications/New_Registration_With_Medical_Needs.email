@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Dear RPC,<div><br></div><div>The following child has registered&nbsp;{!Family_Member_Attendance__c.Contact__c} ({!Family_Member_Attendance__c.Id}) for {!Family_Member_Attendance__c.Event__c} and requires a medical form or to bring a signed management plan/webster pack.</div><div><br></div><div>Thanks,</div><div><br></div><div>Camp Quality.</div>]]></td>
+</tr>
+</table>

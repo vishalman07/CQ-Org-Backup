@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Family_Engaged__c</fullName>
+    <externalId>false</externalId>
+    <formula>if ( isblank(Last_Engagement_Date__c), if(today() -  Start_Date__c &lt;= 365, &quot;Never Engaged - New Family&quot;, &quot;Never Engaged - Existing Family&quot;),
+if(Today() -  Last_Engagement_Date__c  &lt;= 1095,  if(Today() -  Last_Engagement_Date__c  &lt;= 365, &quot;Currently Engaged&quot;, &quot;Recently Engaged&quot;), &quot;Disengaged&quot;))</formula>
+    <inlineHelpText>Has family attended a program in last 3 years, or had puppet show.</inlineHelpText>
+    <label>Family Engaged</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

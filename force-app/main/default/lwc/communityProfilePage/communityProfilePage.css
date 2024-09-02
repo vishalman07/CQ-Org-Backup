@@ -1,0 +1,476 @@
+.dummy{
+	color : black;
+}
+.alert{
+  color:#f37130;
+	display: block;
+	margin-top:5px;
+
+}
+.custom-body-font{
+  font-family: Poppins,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+
+.headerImg {
+  height: 100px;
+  width:  100%;
+}
+.slds-modal_prompt p{
+   font-family: Poppins Light;
+}
+.footer{
+  background-color: #001f34;
+  height: 5vw;
+  width: 100%;
+  margin-top: 10vh;
+  margin-left: 0;
+}
+.addicon{
+  padding-right:2vh;
+}
+.exampleHolder{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    height: 1110px;
+    width: 100%;
+    z-index: 30;
+}
+.custom_slds_forExp{
+      padding: 4vh;
+
+}
+
+.add_padding{
+  padding-left: 4vh;
+}
+
+.slds-form{
+  padding: 4vh;
+}
+
+.custom-input{
+  margin-top: 3vh;
+}
+.header {
+    color: rgb(0, 31, 52);
+    /* font-weight: bolder; */
+    font-size: 3rem;
+    margin-bottom: 1vw;
+    padding-left: 8rem;
+    padding-top: 3rem;
+}
+.head{
+    /* margin-top: 12vw; */
+    background-color: #FFF8BF;
+}
+
+.form_input{
+    font-size: 1em;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    display: block;
+    min-width: 100%;
+    font-family: inherit;
+    height: 2.5em !important;
+    padding: 0 0.625em;
+    outline: 0;
+    margin: 0;
+    text-align: left;
+}
+
+/* @font-face {
+  font-family: "Poppins Light";
+  src: url(poppinsLight) format('TrueType');
+}
+
+@font-face {
+  font-family: "Poppins SemiBold";
+  src: url({poppinsSemiBold}) format('TrueType');
+}
+@font-face {
+  font-family: "Mr Orange";
+  src: url(${mrOrange}) format('OpenType');
+}  */
+
+.form_inputtext{
+ 
+    font-size: 1em ;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    display: block;
+    min-width: 100%;
+    font-family: inherit;
+    /* height: 2.5em ; */
+    padding: 0.625em;
+    outline: 0;
+    margin: 0;
+    text-align: left;
+
+
+}
+
+.custom_slds_link{
+  padding-right: 1vw;
+}
+
+.custom_btn{  
+    height: 2.5rem;
+		background-color: #001f34;
+		color: white;
+		border-radius: 2.5rem;
+		font-size: 18px;
+    margin: 10px;
+    border: none!important;
+    float: right;
+}
+.custom_inline{
+  float: right;
+}
+
+.phonenumMsg{
+  margin-bottom:2rem;
+}
+
+/* Navigation Css */
+.navigation{
+    background-color: #fafaf8;
+    color: black;
+    width: 100%;
+    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+    z-index: 1;
+    display: inline-block;
+}
+.navigation li a{
+font-size: larger;
+text-align: center;
+}
+.navigation li{
+font-size: larger;
+width : auto;
+margin-left: 30px;
+}
+
+.navigation li:hover{
+  border-bottom: 2px solid orange;
+}
+/*Dropdown Css */
+.dropdown-content {
+    display: none;
+    background-color: #fafaf8;
+    color: black;
+    width: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content_User{
+    display: none;
+    background-color: #fafaf8;
+    color: black;
+    width: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.show {
+    display: block;
+}
+.dropdown {
+  position: absolute;
+  display: none;
+
+}
+abbr {
+  border-radius: 20px;
+    height: 27px;
+    width: 25px;
+}
+.dropdown_User{
+  position: absolute;
+  right: 0;
+}
+/* Style the dropdown button */
+.dropdown-button {
+  background-color: #fafaf8;
+  color: black;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+ .dropdown-button_User {
+  color: black;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+ }
+.user{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.slds-dropdown-trigger {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    }
+
+/* Style the dropdown icon */
+.dropdown-icon {
+  font-size: 34px; /* Adjust the size as needed */
+  margin-right: 10px; /* Add some spacing between the icon and text */
+}
+.right-align{
+    position: absolute;
+    right: 0;
+}
+
+
+.cointainer{
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.custom-combobox__form-element{
+   width: 80%;
+   font-family: 'Poppins Light'
+}
+
+
+
+.custom_clslabel{
+  margin-bottom: 25px;
+}
+
+.custom_padding{
+  padding-left: 70px;
+}
+
+
+.font_orange{
+  font-family: Mr Orange;
+  /* font-size: 4rem; */
+}
+
+.font_popinsLight{
+  font-family: Poppins Light;
+}
+
+.font_poppinsSemiBold{
+  font-family: Poppins SemiBold;
+}
+
+.position_content{
+  position: absolute;
+  top: 100px;
+}
+
+.custom_manageWidth{
+  width:auto;
+}
+
+.customhandleBtn{
+  text-align: center;
+  /* margin: 10px;   */
+}
+
+.form_btn {
+    width: 7rem;
+    height: 2.5rem;
+    border: 2px solid #001f34;
+    background-color: #001f34;
+    color: white;
+    border-radius: 4px;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.form_btn_cancel{
+    width: 7rem;
+    height: 2.5rem;
+    border: 2px solid #ffe600;
+    background-color: #ffe600;
+    color: 001f34;
+    border-radius: 4px;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.astrickColor{
+  color: #f37130;
+}
+
+.wholeform{
+  /* width: 80%; */
+  /* margin: auto; */
+  width: 63%;
+    margin: auto;
+    /* margin-top: 15%; */
+    left: 10vw;
+}
+.icon{
+  margin:auto;
+}
+/* file upload button */
+input[type="file"]::file-selector-button {
+  border-radius: 4px;
+  padding: 0 16px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  transition: background-color 200ms;
+}
+
+/* file upload button hover state */
+input[type="file"]::file-selector-button:hover {
+  background-color: #f3f4f6;
+}
+
+/* file upload button active state */
+input[type="file"]::file-selector-button:active {
+  background-color: #e5e7eb;
+}
+
+
+
+/* Media query for smaller screens */
+@media (max-width: 1260px) {
+  .navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown {
+    display: inline-block;
+}
+.navigation{
+  display: none;
+}
+  .custom_clslabel{
+    width:100%;
+  }
+
+  input[type="text"]{
+    width: 100%;
+  }
+  .slds-combobox{
+    width:100%;
+  }
+
+  .wholeform{
+  width: 100%;
+  margin: auto;
+
+}
+}
+
+@media(max-width:480px){
+  .header{
+  font-size: 3rem;
+  padding-left: 1rem;
+  padding-top: 3rem;
+}
+
+.wholeform{
+  width: 100%;
+  margin: auto;
+
+}
+.head {
+  margin-top: 1rem;
+}
+
+ .icon{
+    padding-top: 5px;
+  }
+
+
+.custom_clslabel{
+  width: 100%;
+}
+.contact_Form{
+  width: 100%;
+}
+.cointainer{
+width: 100%;
+}
+.custom_btn{
+		/* width: 100%; */
+    float:right;
+}
+input[type="text"]{
+  width: 100%;
+}
+.custom-combobox__form-element{
+   width: 100%;
+}
+.custom_manageWidth{
+  width:100%;
+}
+.slds-dueling-list{
+  width:55vh;
+}
+.customhandleBtn img{
+    width:50vh;
+    text-align: center;
+  }
+}
+
+img{
+  margin-left: 0%;
+  /* width: 100%; */
+}
+
+
+
+@media(max-width:1059px){
+
+  .custom_clslabel{
+    width:100%;
+  }
+
+  .icon{
+    padding-top: 5px;
+  }
+
+  input[type="text"]{
+    width: 100%;
+  }
+  .slds-combobox{
+    width:40vh;
+  }
+.custom-combobox__form-element{
+   width: 100%;
+}
+
+
+.custom_btn{
+    /* width:100%; */
+    float:right;
+    margin-left: 0px;
+  }
+
+  .header{
+     padding-left: 1rem;
+    padding-top: 5rem;
+    font-size: 3rem;
+  }
+
+  .head{
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>npe03__Recurring_Donation__c.Contact_Id__c</field>
+    </columns>
+    <columns>
+        <field>CUST_ID</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>npe03__Recurring_Donation__c.npsp__Status__c</field>
+    </columns>
+    <columns>
+        <field>npe03__Recurring_Donation__c.npsp_plus__Stripe_Subscription__c</field>
+    </columns>
+    <columns>
+        <field>npe03__Recurring_Donation__c.Stripe_Customer_External_Id__c</field>
+    </columns>
+    <columns>
+        <field>npe03__Recurring_Donation__c.npsp__PaymentMethod__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>npe03__Recurring_Donation__c.npe03__Amount__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Recurring Donations</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$npe03__Recurring_Donation__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>npe03__Recurring_Donation__c.npsp_plus__Acknowledgment_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

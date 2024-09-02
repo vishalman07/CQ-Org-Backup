@@ -1,0 +1,44 @@
+<messaging:emailTemplate subject="Important Information about {!relatedTo.Event__R.Portal_Title__c}" recipientType="Contact" relatedToType="Family_Attendance__c">
+<messaging:htmlEmailBody >
+<c:EmailHeader />
+
+<div style="width:100%; max-width:600px;">
+<apex:image id="Image" value="https://campquality.my.salesforce.com/servlet/servlet.ImageServer?id=01528000002X5KD&oid=00D28000001e3zu" width="220" height="55"/>
+<p>
+Dear {!relatedTo.Family__R.Name},      <br /><br />
+
+We can now share with you all the important news of camp and your companion.
+</p>
+<H2>Camp Details</H2>     
+<h3>Venue</h3>
+<p>{!relatedTo.Event__R.Location_Venue__r.Name}<br />
+{!relatedTo.Event__R.Location_Venue__r.BillingStreet} <br />
+{!relatedTo.Event__R.Location_Venue__r.BillingCity}</p>
+<p><b>Camp Dates</b> <apex:outputText value="{0, date, EEEE d MMMM yyyy}"><apex:param value="{!relatedTo.Event__R.StartDate}" /></apex:outputText> to <apex:outputText value="{0, date, EEEE d MMMM yyyy}"><apex:param value="{!relatedTo.Event__R.EndDate}" /></apex:outputText></p>
+        <c:FamilyMemberAttendanceChildList FamilyAttendanceId="{!relatedTo.id}" AttendanceStatus="Accepted" />
+
+<p>Your companion(s) will be given your details and will call to make contact with you and your family very soon. If you have not heard from your companion within two weeks, please contact the office and we will follow up with them directly.
+</P>
+
+
+<p>        
+        We look forward to seeing you on camp.<br /><br />
+        {!relatedTo.Event__R.Owner.Name}
+        
+</p>
+
+</div> <p> <i> Due to the nature of attending participants having compromised immune systems, Camp Quality has a strict policy that no person is to attend programs or events if they are unwell.  Please contact the office if you display symptoms or have been exposed to any infectious disease (including cold, flu and gastro) within two weeks of an event.
+<br  /> <br  /> 
+
+As a friendly reminder, whilst we understand connections and relationships are formed between our volunteers and family members during our Programs it is Camp Quality’s understanding that these connections and relationships start and end with each Program. </i> </p>
+    
+<c:EmailFooter />
+
+<p style="Font-family:arial;Font-size:10px; color:red;">
+If you would like to unsubscribe from these program event invitations as you will not be attending future Camp Quality programs please email us on 
+<a href="mailto:programhelp@campquality.org.au?subject=UNSUBSCRIBE from Rec Programs Child Match Up Ltr"> programhelp@campquality.org.au </a>
+</p>
+
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>amit@cloudsheer.com</contactEmail>
+    <description>Grants access to Pardot from our APEX</description>
+    <label>APEX Access to Pardot</label>
+    <oauthConfig>
+        <callbackUrl>https://test.salesforce.com/services/oauth2/callback</callbackUrl>
+        <certificate>MIIErDCCA5SgAwIBAgIOAYvbgDUcAAAAAA3g59MwDQYJKoZIhvcNAQELBQAwgZAxKDAmBgNVBAMMH1BhcmRvdF9JbnRlZ3JhdGlvbl9DZXJ0aWZpY2F0ZTIxGDAWBgNVBAsMDzAwRDF5MDAwMDAwOGx4VTEXMBUGA1UECgwOU2FsZXNmb3JjZS5jb20xFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xCzAJBgNVBAgMAkNBMQwwCgYDVQQGEwNVU0EwHhcNMjMxMTE3MDQxODE0WhcNMjQxMTE3MDAwMDAwWjCBkDEoMCYGA1UEAwwfUGFyZG90X0ludGVncmF0aW9uX0NlcnRpZmljYXRlMjEYMBYGA1UECwwPMDBEMXkwMDAwMDA4bHhVMRcwFQYDVQQKDA5TYWxlc2ZvcmNlLmNvbTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzELMAkGA1UECAwCQ0ExDDAKBgNVBAYTA1VTQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJ5JjnagPBXVu9pTp/GXkBsRaB2FDUkAfbbq363FB6ZmexGtgMh8ZNLF8bq49zAYVkn5mgFI/TPZFZ3G+511tY9dCgjjprM3InkGDuxq2hqGT7FJLs8lnxV99Dlr4s0eb7rASTzVYId6vMzsmaTPKyRPrPH/TUe2Yw82uGBftIyfCQDRgt4BVimQNUWGASn6JcZC0Q1afq9hAomqNvOdJSFXs9Ini/DNLZ14nsLcTHe7Z7Ixek9F1nMCZ3e5t/ucW3U1S+0cfIJBFTw1B+pLcFk/z6zaBBd6hwAW6BNL1xQGLn4U3PE1lRrGBjId3coO2IW4WD2TsxsvV3pzfXF0s38CAwEAAaOCAQAwgf0wHQYDVR0OBBYEFB9bnixQ2sCII8GrGys8tbt5KgI6MA8GA1UdEwEB/wQFMAMBAf8wgcoGA1UdIwSBwjCBv4AUH1ueLFDawIgjwasbKzy1u3kqAjqhgZakgZMwgZAxKDAmBgNVBAMMH1BhcmRvdF9JbnRlZ3JhdGlvbl9DZXJ0aWZpY2F0ZTIxGDAWBgNVBAsMDzAwRDF5MDAwMDAwOGx4VTEXMBUGA1UECgwOU2FsZXNmb3JjZS5jb20xFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xCzAJBgNVBAgMAkNBMQwwCgYDVQQGEwNVU0GCDgGL24A1HAAAAAAN4OfTMA0GCSqGSIb3DQEBCwUAA4IBAQBxUs8KrNa48/a7DmpN335yZIKbm0y3gUIlpU7lZrTfgDrDURdmM4CrJNYaWHQqPG0jhrE9hVqHPwtLdWhT9RcMtDMN11r77J7iGEVM8zZofsxDUcOr45heClkSe674Dt/GW3adBDaC3DzT7TEggnPyouJuZEYHt5N7EHlqqHzsGc9kfWfyCJf9BcF6uTFwjH/TZY4kpSJasZMgL/RAJoJ1n1M1wcDLsMDztne1R0pUXKYd7Gl0Q1iwqqffyQLhEtEfcv7HQuHezcQu3Ut7MX0kZ/LgeAhzbLlgvDOa8fXHtbPQdRP6v4LWdonwie1g7rSMLQ6lBJrEfGKxFwn5tmhn</certificate>
+        <consumerKey>3MVG9iLRabl2Tf4hGbW18PwAfZRDTCK53C2ayiSExt7jjlytIsx.i48oQY26B4_N84jWOB3NYaCo.RTKhBqgN</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+        <isPkceRequired>true</isPkceRequired>
+        <isRefreshTokenRotationEnabled>false</isRefreshTokenRotationEnabled>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <isSecretRequiredForTokenExchange>false</isSecretRequiredForTokenExchange>
+        <isTokenExchangeEnabled>false</isTokenExchangeEnabled>
+        <scopes>RefreshToken</scopes>
+        <scopes>Pardot</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <isTokenExchangeFlowEnabled>false</isTokenExchangeFlowEnabled>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <permissionSetName>Pardot API Access</permissionSetName>
+</ConnectedApp>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Logo_Letterhead</letterhead>
+    <name>Family Event Invitation Email</name>
+    <style>formalLetter</style>
+    <subject>You are Invited to {!Campaign.Portal_Title__c} on {!Campaign.StartDate}</subject>
+    <textOnly>Dear {!Account.Name},
+ 
+We would like to invite you to express interest for
+
+{!Campaign.Portal_Title__c}
+
+{!Campaign.Portal_Description__c}
+ 
+When: {!Campaign.StartDate} - {!Campaign.EndDate}
+Time: {!Campaign.Event_time__c}
+
+Where: {!Campaign.Location_Venue__c}
+ 
+RSVP By: {!Campaign.RVSP__c}
+ 
+
+Go to {!Campaign.Family_Portal_Event_URL__c} to express interest for your family
+ 
+
+Kind Regards,
+
+{!Campaign.Campaign_Owner_Name__c}
+
+You are receiving this email as you are a registered Camp Quality Family or Volunteer.  To manage your invites update your profile at www.mycampquality.org.au</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

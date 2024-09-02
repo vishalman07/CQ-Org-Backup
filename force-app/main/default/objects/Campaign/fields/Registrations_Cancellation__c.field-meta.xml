@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Registrations_Cancellation__c</fullName>
+    <inlineHelpText>Last Date and Time a Event registration can be cancelled</inlineHelpText>
+    <label>Registrations Cancellation</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

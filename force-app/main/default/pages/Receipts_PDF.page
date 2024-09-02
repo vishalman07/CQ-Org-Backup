@@ -1,0 +1,2 @@
+<apex:page controller="Receipts_PdfController" standardStylesheets="false" renderAs="pdf" applyBodyTag="false">
+</apex:page>

@@ -1,0 +1,266 @@
+<apex:page controller="SendBulkEmailController" title="Mass Email Attendees">
+    
+    <apex:includeScript value="{!URLFOR($Resource.assets, '/assets/js/jquery.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS201, '/assets/styles/salesforce-lightning-design-system.min.css')}" />
+    
+    <style>/*
+        .cssLabelColumn {
+        min-width: 200px;
+        vertical-align: middle;
+        }
+        
+        .cssTabHelpLink {
+        cursor: pointer;
+        border-style: solid;
+        border-radius: 4px;
+        border-width: 1px;
+        border-color: #DEEFF5;
+        width: 110px;
+        height: 20px; 
+        color: black;
+        vertical-align: middle;
+        text-align: center;
+        background-color: #FCFFFE;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        padding-top: 4px;   
+        }
+        
+        .cssTabHelpLink .helpLink {
+        text-decoration: none;
+        color: black;
+        font-size: 105%;
+        vertical-align: bottom;
+        }
+        
+        .hideHelpLink {
+        cursor: pointer;
+        color: black;
+        }
+        
+        .hideHelpLink .helpLink {
+        color: grey;
+        text-decoration: none;
+        }
+        
+        .cssHelpText {
+        background-color: mintcream;
+        border-style: solid;
+        border-width: 1px;
+        border-color: lightBlue;
+        border-radius: 10px;
+        padding-top: 5px;   
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;    
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        }
+        
+        .Error { 
+        color: red; 
+        }
+        */
+    </style> 
+    
+    <script type="text/javascript">
+    	$(function() {
+            $('.slds-button').removeClass("btn");
+        });
+    </script>
+    
+    <div xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <apex:form > 
+            
+            <div class="slds-page-header" role="banner">
+                <div class="slds-grid">
+                    <div class="slds-col slds-has-flexi-truncate">
+                        <div class="slds-media slds-no-space slds-grow">
+                            <div class="slds-media__figure">
+                                <span class="slds-icon_container slds-icon-standard-campaign">
+                                    <svg aria-hidden="true" class="slds-icon">
+                                        <use xlink:href="{!URLFOR($Resource.SLDS201, '/assets/icons/standard-sprite/svg/symbols.svg#campaign')}"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="slds-media__body">
+                                <p class="slds-text-title--caps slds-line-height--reset">Campaign</p>
+                                <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="Send Mass Email - {!strJobName}">Send Mass Email - {!strJobName}</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                        <div class="slds-button-group" role="group">
+                            <apex:commandButton action="{!SendMail}" value="Send" immediate="false" styleClass="slds-button slds-button--neutral" />
+                            <apex:commandButton action="{!Cancel}" value="Cancel" immediate="true" styleClass="slds-button slds-button--neutral" />
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="slds-grid">
+            <div class="slds-panel slds-grid slds-grid--vertical slds-nowrap">
+                <div class="slds-form--horizontal slds-grow slds-scrollable--y">
+                    <div class="slds-panel__section slds-has-divider--bottom">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="inputSample2"></label>
+                            <div class="slds-form-element__control">
+                            	Please Note: You may not send more than 200 emails at a time via this page. Please ensure that you set the status to change after sending so that you can avoid duplicates in subsequent runs.
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="inputSample2">Attendee Type</label>
+                            <div class="slds-form-element__control">
+                                <div class="slds-select_container">
+                                    <apex:selectList value="{!campaignMemberType}" size="1" styleClass="slds-select" >
+                                        <apex:selectOption itemValue="" itemLabel="--Please Select--" />
+                                        <apex:selectOption itemValue="Family" itemLabel="Family" />
+                                        <apex:selectOption itemValue="Volunteer" itemLabel="Volunteer" />
+                                        <apex:actionSupport immediate="false" event="onchange" rerender="lblNumberOfContacts,panelEditTemplate" action="{!StatusChanged}" status="statusLoadContacts"/>
+                                    </apex:selectList>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="inputSample2">From</label>
+                            <div class="slds-form-element__control">
+                                <div class="slds-select_container">
+                                    <apex:selectList value="{!fromEmailId}" size="1" styleClass="slds-select" >
+                                        <apex:selectOptions value="{!listSOFromEmails}" /> 
+                                    </apex:selectList>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="inputSample2">Status</label>
+                            <div class="slds-form-element__control">
+                                <div class="slds-select_container">
+                                    <apex:selectList value="{!trStatus}" size="1" multiselect="false" styleClass="slds-select">
+                                        <apex:selectOptions value="{!cmStatuses}" />
+                                        <apex:actionSupport immediate="false" event="onchange" rerender="lblNumberOfContacts,panelPreviewTemplate" action="{!StatusChanged}" status="statusLoadContacts"/>
+                                    </apex:selectList>      
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                    <apex:outputLabel styleClass="slds-checkbox__label" for="updateCmStatus">
+                                        <apex:inputCheckbox id="updateCmStatus" value="{!updateCmStatus}" > 
+                                            <apex:actionSupport immediate="false" event="onchange" rerender="newCmStatus" />
+                                        </apex:inputCheckbox>
+                                        <span class="slds-checkbox--faux"></span>
+                                        <span class="slds-form-element__label">Update Status</span>
+                                    </apex:outputLabel>
+                                </span>
+                            </div>
+                        </div>
+                        <apex:outputPanel id="newCmStatus">
+                            <apex:outputPanel rendered="{!updateCmStatus}">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="inputSample2">Updated Status To</label>
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-select_container">
+                                            <apex:selectList value="{!cmStatus}" size="1" multiselect="false" styleClass="slds-select">
+                                                <apex:selectOptions value="{!cmStatuses}" />
+                                            </apex:selectList>      
+                                        </div>
+                                    </div>
+                                </div>
+                            </apex:outputPanel>    
+                        </apex:outputPanel>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-01">Number of Attendees</label>
+                            <div class="slds-form-element__control">
+                                <apex:actionStatus layout="inline" startText="Loading" stopText="" id="statusLoadContacts" startStyle="color:green; font-style:italic" stopStyle="color:black;"/>
+                                <apex:outputText id="lblNumberOfContacts" value="{!numberOfContacts}" styleClass="slds-form-element__static" />{!IF(numberOfContacts > 200, ' (limited to 200)', '')}                                   
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <span class="slds-checkbox">
+                                    <apex:outputLabel styleClass="slds-checkbox__label" for="fLogActivity">
+                                        <apex:inputCheckbox id="fLogActivity" value="{!fLogActivity}" />
+                                        <span class="slds-checkbox--faux"></span>
+                                        <span class="slds-form-element__label">Log Activity to Attendees?</span>
+                                    </apex:outputLabel>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-panel__section slds-has-divider--bottom">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="inputSample2">Select Email Folder</label>
+                            <div class="slds-form-element__control">
+                                <div class="slds-select_container">
+                                    <apex:selectList value="{!folderId}" size="1" multiselect="false" styleClass="slds-select">
+                                        <apex:selectOptions value="{!listEmailFolders}" />
+                                        <apex:actionSupport immediate="false" event="onchange" rerender="emailTemplatesPanel" status="statusLoadTemplate"/>
+                                    </apex:selectList>   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="inputSample2">Select Email Template</label>
+                            <div class="slds-form-element__control">
+                                <div class="slds-select_container">
+                                    <apex:outputPanel id="emailTemplatesPanel">
+                                        <apex:selectList value="{!templateId}" size="1" styleClass="slds-select">
+                                            <apex:actionSupport immediate="false" event="onchange" status="statusLoadTemplate" rerender="txtType,txtSubject,txtMessage,panelEditTemplate,panelPreviewTemplate" action="{!LoadEmailTemplate}" />
+                                            <apex:selectOptions value="{!listSOTemplates}" /> 
+                                        </apex:selectList>  
+                                    </apex:outputPanel>
+                                </div>
+                                <apex:commandLink action="{!OpenEmailTemplateFolder}" immediate="true" target="_blank" value="View Templates" />  
+                                <apex:outputPanel id="panelEditTemplate">   
+                                    &nbsp;&nbsp;                        
+                                    <apex:commandLink action="{!EditEmailTemplate}" immediate="true" target="_blank" value="Edit Template" rendered="{!templateId != null}" />
+                                </apex:outputPanel>
+                             <apex:outputPanel id="panelPreviewTemplate" >  
+                                                                     &nbsp;&nbsp;                        
+
+                                <!-- <a href="{!ContentUrl}/email/templaterenderer?id={!templateid}&who_id={!testWhoID}&related_to_id={!testRelatedID}&preview_frame=previewFrame&base_href={!BaseUrl}&render_type=REPLACED_HTML_BODY">Preview Email</a> -->
+                                  <a href="https://campquality--c.documentforce.com/email/templaterenderer?id={!templateid}&who_id={!testWhoID}&related_to_id={!testRelatedID}&preview_frame=previewFrame&base_href={!BaseUrl}&render_type=REPLACED_HTML_BODY">Preview Email</a>
+                            </apex:outputPanel>
+                                </div>
+                            <apex:actionStatus layout="inline" startText="{!'Loading'}" stopText="" id="statusLoadTemplate" startStyle="color:green; font-style:italic" stopStyle="color:black;"/>
+                        </div>
+                    </div>
+                   
+                    <div class="slds-panel__section slds-has-divider--bottom">
+                        <div class="slds-form-element slds-hint-parent">
+                            <label class="slds-form-element__label" for="text-input-01">Template Type</label>
+                            <div class="slds-form-element__control">
+                                <apex:outputText id="txtType" value="{!strType}" styleClass="slds-form-element__static" />
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-hint-parent">
+                            <label class="slds-form-element__label" for="text-input-01">Set Subject</label>
+                            <div class="slds-form-element__control">
+                                <apex:outputText id="txtSubject" value="{!IF(strType != 'visualforce1', strSubject, 'Unable to render preview for visualforce templates.')}" styleClass="slds-form-element__static"  />
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-hint-parent">
+                            <label class="slds-form-element__label" for="text-input-01">Set Message</label>
+                            <div class="slds-form-element__control">
+                                
+                                <apex:outputText id="txtMessage"  value="{!IF(strType != 'visualforce1', strMessage, '')}" escape="false" styleClass="slds-form-element__static slds-text-longform" />     
+                                <table  border="0" cellpadding="1" cellspacing="0"><tr><td class="previewTable"><iframe  frameborder="0" height="250" id="previewFrame" name="previewFrame" scrolling="no" src="https://campquality--Training--c.cs31.content.force.com/email/templaterenderer?id={!templateid}&amp;recipient_type_id=003p000000DzuK9&amp;related_to_id=a1cp00000006Osf&amp;base_href=https%3A%2F%2Fcampquality--Training.cs31.my.salesforce.com&amp;preview_frame=previewFrame&amp;render_type=REPLACED_HTML_BODY&amp;setupid=CommunicationTemplatesEmail" style="background-color:#FFFFFF;" title="Preview" width="650"></iframe></td></tr>
+</table>
+
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </apex:form>   
+        
+    </div>
+</apex:page>

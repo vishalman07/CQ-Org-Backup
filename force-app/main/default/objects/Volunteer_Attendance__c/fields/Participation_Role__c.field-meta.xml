@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Participation_Role__c</fullName>
+    <label>Participation Role</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Activity Provider</fullName>
+                <default>false</default>
+                <label>Activity Provider</label>
+            </value>
+            <value>
+                <fullName>Camp Leader</fullName>
+                <default>false</default>
+                <label>Camp Leader</label>
+            </value>
+            <value>
+                <fullName>Chaperone</fullName>
+                <default>false</default>
+                <label>Chaperone</label>
+            </value>
+            <value>
+                <fullName>Co-Driver</fullName>
+                <default>false</default>
+                <label>Co-Driver</label>
+            </value>
+            <value>
+                <fullName>Committee</fullName>
+                <default>false</default>
+                <label>Committee</label>
+            </value>
+            <value>
+                <fullName>Companion</fullName>
+                <default>false</default>
+                <label>Companion</label>
+            </value>
+            <value>
+                <fullName>Companion Support</fullName>
+                <default>false</default>
+                <label>Companion Support</label>
+            </value>
+            <value>
+                <fullName>Coordinator</fullName>
+                <default>false</default>
+                <label>Coordinator</label>
+            </value>
+            <value>
+                <fullName>Corporate Volunteer</fullName>
+                <default>false</default>
+                <label>Corporate Volunteer</label>
+            </value>
+            <value>
+                <fullName>Doctor</fullName>
+                <default>false</default>
+                <label>Doctor</label>
+            </value>
+            <value>
+                <fullName>Driver</fullName>
+                <default>false</default>
+                <label>Driver</label>
+            </value>
+            <value>
+                <fullName>Endorsed Enrolled Nurse</fullName>
+                <default>false</default>
+                <label>Endorsed Enrolled Nurse</label>
+            </value>
+            <value>
+                <fullName>Entrant</fullName>
+                <default>false</default>
+                <label>Entrant</label>
+            </value>
+            <value>
+                <fullName>Event Official</fullName>
+                <default>false</default>
+                <label>Event Official</label>
+            </value>
+            <value>
+                <fullName>Events/Fundraising</fullName>
+                <default>false</default>
+                <label>Events/Fundraising</label>
+            </value>
+            <value>
+                <fullName>First Aider</fullName>
+                <default>false</default>
+                <label>First Aider</label>
+            </value>
+            <value>
+                <fullName>Guest</fullName>
+                <default>false</default>
+                <label>Guest</label>
+            </value>
+            <value>
+                <fullName>Host</fullName>
+                <default>false</default>
+                <label>Host</label>
+            </value>
+            <value>
+                <fullName>Leadership Committee Member</fullName>
+                <default>false</default>
+                <label>Leadership Committee Member</label>
+            </value>
+            <value>
+                <fullName>Official</fullName>
+                <default>false</default>
+                <label>Official</label>
+            </value>
+            <value>
+                <fullName>Paramedic</fullName>
+                <default>false</default>
+                <label>Paramedic</label>
+            </value>
+            <value>
+                <fullName>Participant</fullName>
+                <default>false</default>
+                <label>Participant</label>
+            </value>
+            <value>
+                <fullName>Photographer</fullName>
+                <default>false</default>
+                <label>Photographer</label>
+            </value>
+            <value>
+                <fullName>Puppets - Puppeteer</fullName>
+                <default>false</default>
+                <label>Puppets - Puppeteer</label>
+            </value>
+            <value>
+                <fullName>Registered Nurse</fullName>
+                <default>false</default>
+                <label>Registered Nurse</label>
+            </value>
+            <value>
+                <fullName>Restaurant/Caterer</fullName>
+                <default>false</default>
+                <label>Restaurant/Caterer</label>
+            </value>
+            <value>
+                <fullName>Rover</fullName>
+                <default>false</default>
+                <label>Rover</label>
+            </value>
+            <value>
+                <fullName>Speaker</fullName>
+                <default>false</default>
+                <label>Speaker</label>
+            </value>
+            <value>
+                <fullName>Staff</fullName>
+                <default>false</default>
+                <label>Staff</label>
+            </value>
+            <value>
+                <fullName>Support Crew</fullName>
+                <default>false</default>
+                <label>Support Crew</label>
+            </value>
+            <value>
+                <fullName>Camp Support Officer</fullName>
+                <default>false</default>
+                <label>Camp Support Officer</label>
+            </value>
+            <value>
+                <fullName>Midwife</fullName>
+                <default>false</default>
+                <label>Midwife</label>
+            </value>
+            <value>
+                <fullName>Mentor</fullName>
+                <default>false</default>
+                <label>Mentor</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

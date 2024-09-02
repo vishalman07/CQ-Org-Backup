@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_80537445</developerName>
+        <masterLabel>CP</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Account.Family_Type__c</sourceColumnName>
+        <useOther>false</useOther>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_12080847</developerName>
+        <masterLabel>Family Type</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Account.Family_Type__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Former Offspring Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Offspring Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Offspring Bereaved Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Graduating Offspring Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Graduating Offspring Bereaved Family</sourceValue>
+            </sourceValues>
+            <value>AP</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Patient</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Bereaved Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Graduating Patient Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Graduating Bereaved Family</sourceValue>
+            </sourceValues>
+            <value>CP</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_25916195</developerName>
+        <masterLabel>Priority</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>Account.Priority__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>0</to>
+            </sourceValues>
+            <value>&lt;0</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>0</from>
+                <to>200</to>
+            </sourceValues>
+            <value>0-200</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>200</from>
+                <to>400</to>
+            </sourceValues>
+            <value>201-400</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>400</from>
+                <to>600</to>
+            </sourceValues>
+            <value>401-600</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>600</from>
+            </sourceValues>
+            <value>&gt;600</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <filter>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <column>Account.Family_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Patient,Bereaved Family,Offspring Family,Restricted Family,Offspring Bereaved Family,Graduating Patient Family,Graduating Offspring Family,Graduating Bereaved Family,Graduating Offspring Bereaved Family</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Family_Engaged__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_12080847</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Family Engagement this CY</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

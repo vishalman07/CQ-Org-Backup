@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>true</active>
+    <businessHours>Sydney 9-5</businessHours>
+    <entryStartDateField>Case.CreatedDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.IsClosed</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <milestones>
+        <businessHours>Sydney 9-5</businessHours>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Priority</field>
+            <operation>equals</operation>
+            <value>Close Of Business</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Case Closed</milestoneName>
+        <minutesToComplete>360</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>Sydney 9-5</businessHours>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Priority</field>
+            <operation>equals</operation>
+            <value>Next Few Days</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Case Closed</milestoneName>
+        <minutesToComplete>1440</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+</EntitlementProcess>

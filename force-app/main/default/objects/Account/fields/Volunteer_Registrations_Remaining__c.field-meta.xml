@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer_Registrations_Remaining__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(NOT(ISNULL(Maximum_Volunteers__c)), Maximum_Volunteers__c &gt; 0), 
+  Maximum_Volunteers__c - Number_of_Volunteers__c,
+  0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Volunteer Registrations Remaining</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

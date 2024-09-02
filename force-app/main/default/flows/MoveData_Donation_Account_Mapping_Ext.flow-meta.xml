@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <name>Set_Is_MoveData</name>
+        <label>Set Is MoveData</label>
+        <locationX>264</locationX>
+        <locationY>278</locationY>
+        <assignmentItems>
+            <assignToReference>Record.Is_MoveData__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Determine_Is_MoveData</name>
+        <label>Determine Is MoveData</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <defaultConnector>
+            <targetReference>Set_Is_MoveData</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>[Default]</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Exists_Is_MoveData</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Record.Is_MoveData__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>True</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Yes Exists</label>
+        </rules>
+    </decisions>
+    <interviewLabel>[MoveData Extension] Donation: Account - Mapping {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[MoveData Extension] Donation: Account - Mapping</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Determine_Is_MoveData</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>Record</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+</Flow>

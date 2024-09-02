@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_Not_Accept_Reason</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Do_Not_Accept_Donations__c = TRUE, ISBLANK(Do_Not_Accept_Donations_Reasons__c))</errorConditionFormula>
+    <errorMessage>Please provide a reason for not accepting donations</errorMessage>
+</ValidationRule>

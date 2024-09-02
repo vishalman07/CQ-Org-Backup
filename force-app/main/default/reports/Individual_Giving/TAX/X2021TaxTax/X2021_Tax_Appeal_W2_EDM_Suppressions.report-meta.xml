@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Id</field>
+    </columns>
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.OpportunityContactRoles$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$Email</field>
+    </columns>
+    <columns>
+        <field>Contact.OpportunityContactRoles$CloseDate</field>
+    </columns>
+    <columns>
+        <field>Contact.OpportunityContactRoles*Opportunity$Parent_Campaign_Name__c</field>
+    </columns>
+    <columns>
+        <field>Contact$npo02__LastCloseDate__c</field>
+    </columns>
+    <description>Suppression list for W2 EDMs, donors who have give to Tax Appeal or any other campaign since 28/4/21</description>
+    <filter>
+        <booleanFilter>(1 OR 2) AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles*Opportunity$Campaign_Name__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>2021 Tax Appeal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles$CloseDate</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>4/28/2021</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$Email</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles$StageName</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>2021 Tax Appeal - W2 - EDM Suppressions</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

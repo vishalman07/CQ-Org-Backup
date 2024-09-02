@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACF_Superceeded__c</fullName>
+    <description>Checks if ACF was greater than 3 years ago. If so, ACF refresher course should be used to check volunteer eligibility instead</description>
+    <formula>AND(
+OR(
+ ISPICKVAL(Course__c ,&quot;ACF Safeguarding Children&quot;),
+ ISPICKVAL(Course__c ,&quot;ACF Refresh&quot;)
+),
+Course_Date__c &gt; TODAY()-1095)</formula>
+    <inlineHelpText>Checks if ACF was greater than 3 years ago. If so, ACF refresher course should be used to check volunteer eligibility instead</inlineHelpText>
+    <label>ACF Superceeded</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_72842180</developerName>
+        <masterLabel>Status Grouped</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>PuppetShow__c.Show_Status__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Requested</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>In Progress</sourceValue>
+            </sourceValues>
+            <value>Requested/In Progress</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Cancelled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>On Hold</sourceValue>
+            </sourceValues>
+            <value>Cancelled/ On Hold</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Venue__c</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Puppet_Show_Name__c</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Show_Status__c</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Request_Date__c</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Booking_Request_Notes__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>PuppetShow__c.Show_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Cancelled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>PuppetShow__c.Show_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Metropolitan School Visit,Country School Visit,Camp Quality Event - School Show</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>PuppetShow__c.Performance_Group__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>NSW/ACT,QLD,SA/NT,WA,VIC/TAS,National</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Week</dateGranularity>
+        <field>CUST_CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_72842180</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>PuppetShow__c.Show_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Puppet Show Cancelled</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$PuppetShow__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CURY</interval>
+    </timeFrameFilter>
+</Report>

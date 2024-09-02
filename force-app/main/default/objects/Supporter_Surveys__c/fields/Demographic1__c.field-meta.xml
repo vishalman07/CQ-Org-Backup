@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Demographic1__c</fullName>
+    <label>09. Demographic</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I am living in my own home.</fullName>
+                <default>false</default>
+                <label>a. I am living in my own home.</label>
+            </value>
+            <value>
+                <fullName>I live in a retirement home or aged care facility.</fullName>
+                <default>false</default>
+                <label>b. I live in a retirement home or aged care facility.</label>
+            </value>
+            <value>
+                <fullName>I live alone.</fullName>
+                <default>false</default>
+                <label>c. I live alone.</label>
+            </value>
+            <value>
+                <fullName>I live with a partner.</fullName>
+                <default>false</default>
+                <label>d. I live with a partner.</label>
+            </value>
+            <value>
+                <fullName>I have children and/or grandchildren.</fullName>
+                <default>false</default>
+                <label>e. I have children and/or grandchildren.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

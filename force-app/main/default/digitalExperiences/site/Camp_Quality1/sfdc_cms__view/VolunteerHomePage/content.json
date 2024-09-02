@@ -1,0 +1,62 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "VolunteerHomePage",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"1c61731f-b687-4ef2-ace3-a68b3d4eccde\",\"columns\":[{\"UUID\":\"0d3f1932-b082-4ca4-95ee-d5a4f8227d82\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : { }
+              },
+              "definition" : "c:volunteerMainPage",
+              "id" : "5a3b853c-4b9f-4fb4-8eed-4708fbcbed80",
+              "type" : "component"
+            } ],
+            "id" : "0d3f1932-b082-4ca4-95ee-d5a4f8227d82",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "1c61731f-b687-4ef2-ace3-a68b3d4eccde",
+          "type" : "component"
+        } ],
+        "id" : "709b2a24-75ed-4785-a2f1-c3ac34109412",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "VolunteerHomePage",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "6e9429d0-9eb1-4839-b4a4-3010ba75cabd",
+          "type" : "component"
+        } ],
+        "id" : "ac3459cb-5159-41da-b089-74793b94f477",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "fd723c5d-0fa7-41c7-b974-e60dad332711",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-volunteerhomepage"
+  }
+}

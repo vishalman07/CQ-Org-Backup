@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Code__c</fullName>
+    <description>The Code field is required to create barcodes and must be unique hence the Autonumber</description>
+    <displayFormat>{000}1</displayFormat>
+    <externalId>false</externalId>
+    <inlineHelpText>The Code field is required to create barcodes and is the second part of the code.</inlineHelpText>
+    <label>Code</label>
+    <trackHistory>false</trackHistory>
+    <type>AutoNumber</type>
+</CustomField>

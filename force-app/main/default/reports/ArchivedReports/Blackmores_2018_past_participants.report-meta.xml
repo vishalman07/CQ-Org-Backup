@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign$Name</field>
+    </columns>
+    <columns>
+        <field>Campaign.CampaignMembers$Name</field>
+    </columns>
+    <columns>
+        <field>Campaign.CampaignMembers$MemberId</field>
+    </columns>
+    <columns>
+        <field>Campaign.CampaignMembers$Id</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Campaign.CampaignMembers$DoNotCall</field>
+    </columns>
+    <description>Past Participants of the 2018 Blackmores running festival</description>
+    <filter>
+        <criteriaItems>
+            <column>Campaign$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Blackmores</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Blackmores 2018 past participants</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Campaigns_with_Campaign_Members_with_Contacts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Campaign$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

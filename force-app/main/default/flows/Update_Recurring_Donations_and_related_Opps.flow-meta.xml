@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <constants>
+        <description>&quot;2024 Recurring Donations Campaign&quot;</description>
+        <name>NewRGCampaign</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>7011y000000BxwrAAC</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>Opp record type ID for &quot;Recurring Donation&quot;
+0120K0000019c05QAA</description>
+        <name>OppRecordType</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>0120K0000019c05QAA</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Change the campaign source from where its needed most</description>
+        <name>Change_the_campaign_source_from_where_its_needed_most</name>
+        <label>Change source campaign</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Update_Opp_Record_Type</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.npe03__Recurring_Donation_Campaign__r.Id</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>7011y000000BxwwAAC</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_source_campaign</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Update the primary campaign source of recurring donations and the opportunity record type of its opportunity.
+Workaround for NPSP+ packages</description>
+    <environments>Default</environments>
+    <interviewLabel>Update Recurring Donations and related Opps {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Recurring Donations and related Opps</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Opp_Record_Type</name>
+        <label>Update Opp Record Type</label>
+        <locationX>182</locationX>
+        <locationY>623</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>npe03__Recurring_Donation__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>OppRecordType</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>To &quot;recurring Donations Campaign&quot;</description>
+        <name>Update_source_campaign</name>
+        <label>Update source campaign</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Update_Opp_Record_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>npe03__Recurring_Donation_Campaign__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>NewRGCampaign</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>npe03__Recurring_Donation_Campaign__c</field>
+            <value>
+                <elementReference>NewRGCampaign</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Change_the_campaign_source_from_where_its_needed_most</targetReference>
+        </connector>
+        <object>npe03__Recurring_Donation__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

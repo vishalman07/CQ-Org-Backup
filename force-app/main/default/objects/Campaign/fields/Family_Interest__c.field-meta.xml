@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Family_Interest__c</fullName>
+    <label>Family Interest</label>
+    <summarizedField>Registration_Type__c.Interested__c</summarizedField>
+    <summaryFilterItems>
+        <field>Registration_Type__c.RecordTypeId</field>
+        <operation>notEqual</operation>
+        <value>Volunteer</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Registration_Type__c.RecordTypeId</field>
+        <operation>notEqual</operation>
+        <value>Volunteer Training</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Registration_Type__c.RecordTypeId</field>
+        <operation>notEqual</operation>
+        <value>Corporate Volunteer</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Registration_Type__c.Event__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

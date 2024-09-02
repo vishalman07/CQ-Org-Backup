@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cant_end_date_active_family</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(
+        AND(
+            NOT(ISBLANK(End_Date__c)),
+            OR(
+                ISPICKVAL(Family_Type__c, &quot;Patient&quot;),
+                ISPICKVAL(Family_Type__c, &quot;Offspring Family&quot;),
+                ISPICKVAL(Family_Type__c, &quot;Bereaved Family&quot;),
+                ISPICKVAL(Family_Type__c, &quot;Offspring Bereaved Family&quot;)
+            )
+        ),
+        AND(
+            ISBLANK(End_Date__c),
+            OR(
+                ISPICKVAL(Family_Type__c, &quot;Former Patient&quot;),
+                ISPICKVAL(Family_Type__c, &quot;Former Offspring Family&quot;),
+                ISPICKVAL(Family_Type__c, &quot;Former Bereaved Family&quot;),
+                ISPICKVAL(Family_Type__c, &quot;Former Offspring Bereaved Family&quot;)
+            )
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>Can&apos;t end date an active family. Update Family Type to include Former or add the End date to the record.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsCompanion__c</fullName>
+    <formula>if( TEXT( Participation_Role__c ) = &quot;Companion&quot;,true,false)</formula>
+    <label>IsCompanion</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Activity__c</fullName>
+    <label>Type of Activity</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bullying</fullName>
+                <default>false</default>
+                <label>Bullying</label>
+            </value>
+            <value>
+                <fullName>Danger to self / self-harm</fullName>
+                <default>false</default>
+                <label>Danger to self / self-harm</label>
+            </value>
+            <value>
+                <fullName>Emotional or Psychological</fullName>
+                <default>false</default>
+                <label>Emotional or Psychological</label>
+            </value>
+            <value>
+                <fullName>Exposure to Family Violence</fullName>
+                <default>false</default>
+                <label>Exposure to Family Violence</label>
+            </value>
+            <value>
+                <fullName>Grooming</fullName>
+                <default>false</default>
+                <label>Grooming</label>
+            </value>
+            <value>
+                <fullName>Harm</fullName>
+                <default>false</default>
+                <label>Harm</label>
+            </value>
+            <value>
+                <fullName>Neglect</fullName>
+                <default>false</default>
+                <label>Neglect</label>
+            </value>
+            <value>
+                <fullName>Physical</fullName>
+                <default>false</default>
+                <label>Physical</label>
+            </value>
+            <value>
+                <fullName>Sexual</fullName>
+                <default>false</default>
+                <label>Sexual</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

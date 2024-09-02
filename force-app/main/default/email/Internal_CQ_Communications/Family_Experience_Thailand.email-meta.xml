@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Logo</letterhead>
+    <name>Family Experience Thailand</name>
+    <style>freeForm</style>
+    <subject>A very unique chance for ONE Camp Quality family to enjoy a special family experience in Phuket, Thailand</subject>
+    <textOnly>Dear {!Family_Attendance__c.Family__c},
+
+
+Have you ever dreamt of taking your family to a luxury villa in Phuket and just soaking up the sun?
+
+
+Well thanks to an incredibly generous gift from an amazing individual donor, we are excited to offer ONE very lucky Camp Quality family just this opportunity.
+
+
+This family experience won’t suit everyone, and is only available to ONE family, so we are asking families to let us know if they SHOULDN’T be considered for this opportunity by declining this invite by 5pm AEST 30th November 2018.
+
+
+We will then randomly, and anonymously, select ONE family for this unique family experience on or around Monday 03rd December and notifying them of the outcome on Tuesday 4th December.  The holiday must be redeemed (with a date for the holiday to be requested) no later than Thursday 20th December, so families are asked to be mindful of these timelines when considering whether you should be considered or not. Please also note flights to Thailand are NOT INCLUDED.
+
+
+So what exactly does this family experience include? Camp Quality has secured the chance for ONE family currently registered with us to visit the Phuket Premium Surin Hideaway, a luxury villa that includes 5 extra-large bedrooms, with luxury ensuite bathrooms, an oversized private pool and outdoor areas to relax, all within a few minutes’ walk of the magnificent Surin Beach and Bang Tao Bay.
+
+
+The package includes a personal Thai MasterChef (although food and drinks are to be purchased separately), while guests can also choose to unwind with a day of Yoga and traditional massages in the comfort of your villa (again, at this own cost but in the private luxury of the villa). The villa also has a complete staff of housekeepers, garden/pool attendant, security guards and a manager/concierge. The fridge will be stocked with beer, wine and snacks for guest to enjoy on arrival! Further information about the accommodation is available at http://goodwillgetaways.com/home/phuket-surin-hill-villa-2.
+
+
+This truly is a unique opportunity for ONE Camp Quality family to escape away from it all and enjoy some valuable time together.
+
+
+Although flights are NOT included, return transfers from Phuket International Airport to the villa are. The prize needs to be redeemed by the selected family by 20th of December 2018, and the holiday taken by September 2019 (bookings are subject to availability).
+
+
+Camp Quality has decided to give all our currently registered families the opportunity to access this family experience. If you are interested, you don’t need to do anything, but if you know you couldn’t accept the experience please do decline at http://mycampquality.force.com/members/portalpage?p=event&amp;s=familyPortal&amp;e=7010K000001hj0e so that we only consider interested families in the random, anonymous selection process.
+
+
+Ultimately the selected family will need to make arrangements for their luxury Phuket holiday directly with Givergy, and will be responsible for flights and all expenses related to the trip. In this case, Camp Quality is just facilitating access to this incredible donation to a family impacted by cancer; we are not directly involved in the gift or holiday in anyway. By accepting access to this opportunity, you acknowledge Camp Quality’s limited role in this process.
+
+
+The only remaining proviso is we would ask the winning family to share their story with us once they return so the very generous donor gains an understanding of what their gift has enabled. Remember a photo can say a thousand words so a simple family snap would be lovely!
+
+
+
+Kind Regards,
+
+
+
+Danielle Miller
+
+Head of Services and Programs
+
+
+
+You are receiving this email as you are a registered Camp Quality Family or Volunteer. To manage your invites update your profile at www.mycampquality.org.au</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteers_Required__c</fullName>
+    <externalId>false</externalId>
+    <formula>if( text(Event_Type__c) = &quot;Junior Camp&quot;,  Family_Registrations_Accepted__c  + 5, 
+if( text(Event_Type__c) = &quot;Middle Camp&quot;, Family_Registrations_Accepted__c/2 +5,
+if( text(Event_Type__c) = &quot;Family Camp&quot;,4,
+if( text(Event_Type__c) = &quot;Family Fun Day&quot;,2,
+if( text(Event_Type__c) = &quot;Mini Camp&quot;, Family_Registrations_Accepted__c  + 5, 
+0
+)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Min Volunteers Required</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

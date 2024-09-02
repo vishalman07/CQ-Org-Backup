@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>3rd Party Family Referral</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Other_Contact_Name__c</fieldNames>
+        <fieldNames>Other_Contact_Email__c</fieldNames>
+        <fieldNames>Other_Contact_Phone__c</fieldNames>
+        <picklistValueName>Contacted</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>x3rd_Party_Applicant_Name__c</fieldNames>
+        <fieldNames>X3rd_Party_Application_Email__c</fieldNames>
+        <fieldNames>X3rd_Party_Application_Phone__c</fieldNames>
+        <fieldNames>Who_should_we_contact_about_this_referra__c</fieldNames>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Family_Referral</recordTypeName>
+</PathAssistant>

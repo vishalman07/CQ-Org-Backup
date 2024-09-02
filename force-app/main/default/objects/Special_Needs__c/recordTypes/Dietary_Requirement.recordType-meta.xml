@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dietary_Requirement</fullName>
+    <active>true</active>
+    <label>Dietary Requirement</label>
+    <picklistValues>
+        <picklist>AttributeType__c</picklist>
+        <values>
+            <fullName>DietryNeeds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SpecialNeeds</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Long_Description__c</picklist>
+        <values>
+            <fullName>Allergic - All Nuts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergic - Buckwheat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergic - Eggs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergic - Fish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergic - Garlic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergic - Kiwi Fruit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergic - Mushrooms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergic - Oranges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergic - Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergic - Parmesan Cheese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergic - Peanuts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergic - Pork</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergic - Prawns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergic - Seafood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergic - Sesame</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergic - Shellfish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergic - Tomatoes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergic - Yeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coeliac</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gluten Free</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Halal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kosher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lactose Intolerant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liquid Diet Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Fat Diet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Bananas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Chicken</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Dairy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Fish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Grapefruits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Red Meat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Spicy Food</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pescetarian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soy Milk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vegan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vegetarian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wheat Free</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

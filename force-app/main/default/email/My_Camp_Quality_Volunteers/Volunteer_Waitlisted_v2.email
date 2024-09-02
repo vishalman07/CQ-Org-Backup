@@ -1,0 +1,32 @@
+<messaging:emailTemplate subject="{!relatedTo.Event__R.Portal_Title__c}" recipientType="Contact" relatedToType="Volunteer_Attendance__c">
+<messaging:htmlEmailBody >
+<c:EmailHeader />
+
+
+<div style="width:100%; max-width:600px;">
+<apex:image id="Image" value="https://campquality.my.salesforce.com/servlet/servlet.ImageServer?id=01528000002X5KD&oid=00D28000001e3zu" width="220" height="55"/>
+
+    <p>
+        Dear {!relatedTo.Volunteer__R.Preferred_First_Name__c},<br /><br />
+Thank you so much for registering your interest to attend {!relatedTo.Event__R.Portal_Title__c}.
+We&#39;ve been overwhelmed with expression of interest for this event from generous volunteers just like you and at this stage, we unfortunately don&#39;t have any places available.
+However, we will keep you on the waitlist and if any volunteers are no longer able to attend, we&#39;ll be sure to notify you as soon as possible.
+We hope to see you on one of our fun-filled  resilience building programs very soon!
+</p>
+<p>        
+        Kind Regards,<br /><br />
+        {!relatedTo.Event__R.Owner.Name}
+        
+    </p>
+<c:EmailFooter />
+
+<p style="Font-family:arial;Font-size:10px; color:red;">
+If you would like to unsubscribe from these program event invitations as you will not be attending future Camp Quality programs please email us on 
+<a href="mailto:programhelp@campquality.org.au?subject=UNSUBSCRIBE from Rec Programs Waitlist VOL"> programhelp@campquality.org.au </a>
+</p>
+
+
+</div>
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

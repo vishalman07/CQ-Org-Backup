@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>CONTACT_ID</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Camp In 2022 - Acquisition EDM 3</value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>CONTACT_ID</primaryTableColumn>
+        <relatedTable>CampaignMember-Campaign</relatedTable>
+        <relatedTableJoinColumn>Contact</relatedTableJoinColumn>
+    </crossFilters>
+    <description>Contacts who are listed in 2+ Camp In ACQ EDMS</description>
+    <filter>
+        <criteriaItems>
+            <column>CAMPAIGN_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Camp In 2022 - Acquisition EDM 2</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Camp In EDMS - Dupe Recipients</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignContact</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+</Report>

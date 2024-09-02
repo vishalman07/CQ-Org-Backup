@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Connection_To_Camp_Quality_2__c</fullName>
+    <label>Connection To Camp Quality 2</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I have been a Camp Quality volunteer and witnessed how wonderful this work is</fullName>
+                <default>false</default>
+                <label>I have been a Camp Quality volunteer and witnessed how wonderful this work is</label>
+            </value>
+            <value>
+                <fullName>During my working life I&apos;ve dealt with children and/or cancer</fullName>
+                <default>false</default>
+                <label>During my working life I&apos;ve dealt with children and/or cancer</label>
+            </value>
+            <value>
+                <fullName>I simply want to help children facing cancer and their families</fullName>
+                <default>false</default>
+                <label>I simply want to help children facing cancer and their families</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

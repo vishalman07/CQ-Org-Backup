@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Major_Donors</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>npo02__LastOppAmount__c</columns>
+    <columns>npo02__LastCloseDate__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Constituent_Types__c</field>
+        <operation>includes</operation>
+        <value>Philanthropy</value>
+    </filters>
+    <label>Major Donors</label>
+    <sharedTo>
+        <role>CEO</role>
+        <role>Philanthropy</role>
+        <role>Philanthropy_Manager</role>
+    </sharedTo>
+</ListView>

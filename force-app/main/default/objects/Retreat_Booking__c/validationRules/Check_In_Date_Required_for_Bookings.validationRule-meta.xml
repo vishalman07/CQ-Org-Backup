@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_In_Date_Required_for_Bookings</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    IF(
+        OR(
+            ISPICKVAL(Status__c, &quot;Confirmed&quot;),
+            ISPICKVAL(Status__c, &quot;Completed&quot;),
+            ISPICKVAL(Status__c, &quot;Rebooked&quot;)
+        ),
+        ISBLANK(Check_In_Date__c),
+        false
+    ))</errorConditionFormula>
+    <errorMessage>Please add a check-in date or update your Retreat Booking Status.</errorMessage>
+</ValidationRule>

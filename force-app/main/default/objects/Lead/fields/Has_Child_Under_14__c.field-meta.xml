@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_Child_Under_14__c</fullName>
+    <formula>OR( if(AND(YEAR( TODAY() ) - Year(Child_1_Birth_Date__c )&lt;16,  NOT(ISBLANK(Child_1_Birth_Date__c)))  ,true,false),
+if(AND(YEAR( TODAY() ) - Year(Child_2_Birth_Date__c )&lt;16,  NOT(ISBLANK(Child_2_Birth_Date__c)))  ,true,false),
+if(AND(YEAR( TODAY() ) - Year(Child_3_Birth_Date__c )&lt;16,  NOT(ISBLANK(Child_3_Birth_Date__c)))  ,true,false),
+if(AND(YEAR( TODAY() ) - Year(Child_4_Birth_Date__c )&lt;16,  NOT(ISBLANK(Child_4_Birth_Date__c)))  ,true,false))</formula>
+    <label>Has Child Under 16</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

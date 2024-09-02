@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Diagnosis_Info_Errors__c</fullName>
+    <externalId>false</externalId>
+    <formula>if( isblank(Diagnosis_Date__c), &quot;Diagnosis Date Blank&quot;,&quot;&quot;)&amp;  if( isblank(text(Diagnosis__c)), &quot;Diagnosis Blank&quot;,&quot;&quot;) &amp; if(isblank(text( Hospital__c)),&quot;Hospital Blank&quot;,&quot;&quot;) &amp; IF (text(Diagnosis__c) = &quot;Other&quot; ,&quot;Other Diagnosis - Please confirm family eligibility.&quot;,&quot;&quot;)</formula>
+    <label>Diagnosis Info Errors</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>esCarpade_Campaigns</fullName>
+    <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>Branch_Code__c</columns>
+    <columns>Fundraiser_Page_ID__c</columns>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.END_DATE</columns>
+    <columns>Cost_Centre__c</columns>
+    <columns>Account_No__c</columns>
+    <columns>CAMPAIGN.ACTIVE</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>CAMPAIGN.BUDGETED_COST</columns>
+    <columns>CAMPAIGN.ACTUAL_COST</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN.CAMPAIGN_TYPE</field>
+        <operation>equals</operation>
+        <value>Other</value>
+    </filters>
+    <filters>
+        <field>CAMPAIGN.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Campaign.Fundraising</value>
+    </filters>
+    <filters>
+        <field>Cost_Centre__c</field>
+        <operation>equals</operation>
+        <value>1330</value>
+    </filters>
+    <label>esCarpade Campaigns</label>
+</ListView>

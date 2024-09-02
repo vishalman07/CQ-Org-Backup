@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Logo_Letterhead</letterhead>
+    <name>Respite Booking confirmation</name>
+    <style>formalLetter</style>
+    <subject>Retreat Booking Confirmation</subject>
+    <textOnly>Dear {!Retreat_Booking__c.Contact_First_Name__c},
+
+You have been successful in securing a week’s stay for your family at our Camp Quality {!Retreat_Booking__c.Property__c} Retreat.
+
+Below are the dates we have your family ({!Retreat_Booking__c.Guests__c} guests) booked into the Retreat, which is located at {!Retreat_Booking__c.Property_Address__c}.
+
+Arriving: {!Retreat_Booking__c.Check_In_Date__c}
+
+Departing: {!Retreat_Booking__c.Check_Out_Date__c}
+
+Please complete the attached waiver and return to me as soon as possible.
+
+Should you need to change or cancel your booking, please contact Caitlyn Brine (Family Respite and Intake Coordinator) ASAP on
+08 0426 8091 or email caitlyn.brine@campquality.org.au
+
+If you have any questions leading up to your stay, please don&apos;t hesitate to give me a call.
+
+Kind Regards,
+
+Caitlyn Brine
+Family Respite and Intake Coordinator
+Camp Quality
+
+
+Phone 08 0426 8091
+
+www.campquality.org.au</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

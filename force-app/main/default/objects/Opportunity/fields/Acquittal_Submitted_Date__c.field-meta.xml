@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acquittal_Submitted_Date__c</fullName>
+    <description>Acquittal Submitted Date</description>
+    <inlineHelpText>Enter the date the Acquittal was submitted to the Organisation</inlineHelpText>
+    <label>Acquittal Submitted Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

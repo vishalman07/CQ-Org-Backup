@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NQLD_KICC_Families</fullName>
+    <booleanFilter>1 AND 2 AND 4 AND 3</booleanFilter>
+    <columns>Priority__c</columns>
+    <columns>Family_Camp_Prioirty__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Start_Date__c</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>Family_Type__c</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.ADDRESS1_ZIP</columns>
+    <columns>Programs_Attended__c</columns>
+    <columns>Last_Program_Attended__c</columns>
+    <columns>Family_Camp__c</columns>
+    <columns>Family_Camps_1_2__c</columns>
+    <columns>Family_Camps_2__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Family</value>
+    </filters>
+    <filters>
+        <field>Branch_Office__c</field>
+        <operation>equals</operation>
+        <value>Queensland</value>
+    </filters>
+    <filters>
+        <field>Family_Type__c</field>
+        <operation>equals</operation>
+        <value>Offspring Family,Offspring Bereaved Family</value>
+    </filters>
+    <filters>
+        <field>Regionv2__c</field>
+        <operation>equals</operation>
+        <value>QLD - Central West,QLD - Far North,QLD - Fitzroy,QLD - Mackay,QLD - Northern,QLD - North West</value>
+    </filters>
+    <label>NQLD KICC Families</label>
+</ListView>

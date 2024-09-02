@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Volunteer Lead</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Name</fieldNames>
+        <fieldNames>MobilePhone</fieldNames>
+        <fieldNames>Email</fieldNames>
+        <fieldNames>Office_Name__c</fieldNames>
+        <fieldNames>Volunteer_Interview_Scheduled_For__c</fieldNames>
+        <info>&lt;p&gt;The volunteer is ready to be contacted to book in their Volunteer Interview&lt;/p&gt;&lt;p&gt;ACTION: Once Volunteer Interview and time has been scheduled, change to Screening&lt;/p&gt;</info>
+        <picklistValueName>Contacting</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Name</fieldNames>
+        <fieldNames>Volunteer_Type__c</fieldNames>
+        <fieldNames>Email</fieldNames>
+        <fieldNames>Office_Name__c</fieldNames>
+        <fieldNames>LeadSource</fieldNames>
+        <info>&lt;p&gt;This is a new Volunteer Application. Send an email to confirm application is recieved and  outline next steps in induction process.&lt;/p&gt;&lt;p&gt;ACTION: Change to Contacting once email has been sent&lt;/p&gt;</info>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Lead_Valid__c</fieldNames>
+        <fieldNames>Status</fieldNames>
+        <fieldNames>LastModifiedById</fieldNames>
+        <info>&lt;p&gt;Your Lead has now completed all induction steps required in screening. Check that the lead is Valid, then Convert Application&lt;/p&gt;</info>
+        <picklistValueName>Successful</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Lead_Rejection_Reason__c</fieldNames>
+        <fieldNames>Description</fieldNames>
+        <fieldNames>LastModifiedById</fieldNames>
+        <info>&lt;p&gt;Your Lead is not successful, therefore will not proceed to the next steps in induction. Do not convert this Lead. Please Log a Call to make note of why this applicant is not successful&lt;/p&gt;</info>
+        <picklistValueName>Unsuccessful</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Description</fieldNames>
+        <fieldNames>Lead_Rejection_Reason__c</fieldNames>
+        <info>&lt;p&gt;This applicant has decided to withdraw their initial application and does not wish to proceed. Please log a call with the reason of the withdrawal in case they should apply again at a later date&lt;/p&gt;</info>
+        <picklistValueName>Withdrawn</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Volunteer</recordTypeName>
+</PathAssistant>

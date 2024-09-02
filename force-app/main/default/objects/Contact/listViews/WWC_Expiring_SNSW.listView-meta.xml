@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WWC_Expiring_SNSW</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>Volunteer_WWC_Expiry_Date__c</columns>
+    <columns>Volunteer_Eligible__c</columns>
+    <columns>Volunteer_Eligibility__c</columns>
+    <columns>Branch_Office__c</columns>
+    <columns>Volunteer_Types__c</columns>
+    <columns>CONTACT.ADDRESS2_STATE</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CONTACT.PHONE3</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Volunteer_Status__c</field>
+        <operation>equals</operation>
+        <value>Volunteer</value>
+    </filters>
+    <filters>
+        <field>Branch_Office__c</field>
+        <operation>equals</operation>
+        <value>SNSW</value>
+    </filters>
+    <filters>
+        <field>Volunteer_Eligible__c</field>
+        <operation>notContain</operation>
+        <value>Former</value>
+    </filters>
+    <filters>
+        <field>Volunteer_Eligible__c</field>
+        <operation>equals</operation>
+        <value>Pending</value>
+    </filters>
+    <filters>
+        <field>Volunteer_Types__c</field>
+        <operation>includes</operation>
+        <value>Companion/Rover</value>
+    </filters>
+    <label>SNSW Pending Rec Vollies</label>
+</ListView>

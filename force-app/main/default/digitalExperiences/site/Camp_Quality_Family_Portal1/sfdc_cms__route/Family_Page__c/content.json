@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Family Page",
+  "contentBody" : {
+    "activeViewId" : "Family_Page",
+    "configurationTags" : [ ],
+    "pageAccess" : "Public",
+    "routeType" : "custom-family-page",
+    "urlPrefix" : "family-page"
+  }
+}

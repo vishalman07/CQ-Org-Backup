@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Approval_to_Fundraise</fullName>
+    <active>true</active>
+    <errorConditionFormula>and (text( ATF_Status__c ) = &quot;Authorised&quot;,  ISCHANGED(ATF_Status__c) , text(PRIORVALUE(ATF_Status__c)) != &quot;Request Approval&quot; )</errorConditionFormula>
+    <errorMessage>Can&apos;t skip Request Approval Step</errorMessage>
+</ValidationRule>

@@ -1,0 +1,89 @@
+<messaging:emailTemplate subject="Important Information About {!relatedTo.Event__R.Portal_Title__c}" recipientType="Contact" relatedToType="Volunteer_Attendance__c">
+<messaging:htmlEmailBody >
+<c:EmailHeader />
+
+
+<div style="width:100%; max-width:600px;">
+<apex:image id="Image" value="https://campquality.my.salesforce.com/servlet/servlet.ImageServer?id=01528000002X5KD&oid=00D28000001e3zu" width="220" height="55"/>
+
+    <p>
+        Dear {!relatedTo.Volunteer__R.Preferred_First_Name__c},<br /><br />
+        
+        Thank you for volunteering your assistance for {!relatedTo.Event__R.Portal_Title__c}
+  <br />      
+The information you have been eagerly waiting for is below. 
+  <br />
+We are excited to confirm that you are coming along and will be assisting as a <b>{!relatedTo.PARTICIPATION_ROLE__C}</b>.
+
+
+</p>
+<apex:outputPanel id="childprebrief" rendered="{!relatedTo.IsCompanion__c}">
+<p>  <br />
+Please note that the child/ren you have been allocated has/have not been given any of your contact details, so you will need to call them. The family will be expecting a call from you within ten days so please be sure to contact them sooner rather than later, especially if you have a child you have never had before.
+</P>
+</apex:outputPanel>
+
+<H2>Camp Details</H2>     
+<h3>Venue</h3>
+<p>
+{!relatedTo.Event__R.Location_Venue__r.Name}<br />
+{!relatedTo.Event__R.Location_Venue__r.BillingStreet} <br />
+{!relatedTo.Event__R.Location_Venue__r.BillingCity}
+</p>
+
+      <h3>Camp Dates</h3> 
+      <p><apex:outputText value="{0, date, EEEE d MMMM yyyy}"><apex:param value="{!relatedTo.Event__R.StartDate}" /></apex:outputText> to <apex:outputText value="{0, date, EEEE d MMMM yyyy}"><apex:param value="{!relatedTo.Event__R.EndDate}" /></apex:outputText></p>
+<p><h3>Transport Details</h3>
+Please let the office know if these details need to be changed.
+</p>
+<h4>Getting to Camp</h4>
+<p>
+<b>When</b> {!relatedTo.Transport_Pick_Up_Time__c}  -  Please be there at least 15 mins prior
+<b>Where</b> {!relatedTo.Transport_Pick_Up_Location__c}
+ </p>
+ 
+<h4>Getting Home</h4>
+<p>
+<b>When</b> {!relatedTo.Transport_Drop_Off_Time__c} 
+<b>Where</b> {!relatedTo.Transport_Drop_Off_Location__c}
+</p>
+<apex:outputPanel id="childdetails" rendered="{!relatedTo.IsCompanion__c}">
+
+<h3>Child Details</h3>
+
+<p>Get excited!!! Here is the news you have been waiting for. You will be looking after:</p>
+        <c:VolunteerChildList VolunteerAttendanceId="{!relatedTo.id}" />
+<p>
+Some key points that should be included in your call:   <br />
+Phone conversations with family must begin and end with the parent/legal guardian   <br />
+Before starting the conversation be prepared; write down questions, important points or conversation topics e.g. theme.   <br />
+
+If you have any problems contacting the family, please let us know as soon as possible. Once you have made contact, it is important that you also let us know by phone or email.   
+</p>
+</apex:outputPanel>
+<p>Thank you so much for coming along to camp, we appreciate the time and effort you spend volunteering, and our camps would not be a success without you!   <br />
+
+
+</p>
+<p>        
+        Kind Regards,<br /><br />
+        {!relatedTo.Event__R.Owner.Name}
+        
+    </p>
+
+
+</div> <p> <i> Due to the nature of attending participants having compromised immune systems, Camp Quality has a strict policy that no person is to attend programs or events if they are unwell.  Please contact the office if you display symptoms or have been exposed to any infectious disease (including cold, flu and gastro) within two weeks of an event.
+<br  /> <br  />
+
+As a friendly reminder, whilst we understand connections and relationships are formed between our volunteers and family members during our Programs it is Camp Quality’s understanding that these connections and relationships start and end with each Program. </i> </p>
+
+<c:EmailFooter />
+
+<p style="Font-family:arial;Font-size:10px; color:red;">
+If you would like to unsubscribe from these program event invitations as you will not be attending future Camp Quality programs please email us on 
+<a href="mailto:programhelp@campquality.org.au?subject=UNSUBSCRIBE from Rec Programs Match Up Ltr VOL"> programhelp@campquality.org.au </a>
+</p>
+
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

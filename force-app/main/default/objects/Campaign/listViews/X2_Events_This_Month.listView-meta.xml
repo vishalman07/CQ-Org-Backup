@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2_Events_This_Month</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.END_DATE</columns>
+    <columns>Event_Type__c</columns>
+    <columns>CAMPAIGN.RECORDTYPE</columns>
+    <columns>Annotations__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN.START_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_MONTH</value>
+    </filters>
+    <label>2. Events This Month</label>
+</ListView>

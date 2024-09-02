@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Show_Date__c</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Show_Sub_Type__c</field>
+    </columns>
+    <description>Number of PSP School Shows in CY. As part of Summary Services &amp; Programs Dashboard and Puppet Program Dashboard.</description>
+    <filter>
+        <criteriaItems>
+            <column>PuppetShow__c.Show_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Metropolitan School Visit,Country School Visit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>PuppetShow__c.Show_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Performed</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>PuppetShow__c.Performance_Group__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>CY Number of Schools</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$PuppetShow__c@PuppetShow__c.Venue__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>PuppetShow__c.Show_Date__c</dateColumn>
+        <interval>INTERVAL_CURY</interval>
+    </timeFrameFilter>
+</Report>

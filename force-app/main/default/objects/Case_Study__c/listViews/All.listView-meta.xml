@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Family_State__c</columns>
+    <columns>Family_TownSuburb__c</columns>
+    <columns>Family_Post_Code__c</columns>
+    <columns>NAME</columns>
+    <columns>Case_Study_Description__c</columns>
+    <columns>Case_Study_Status__c</columns>
+    <columns>Case_Study_Type__c</columns>
+    <columns>Family__c</columns>
+    <columns>Family_Type__c</columns>
+    <columns>Featured_Programs_Areas__c</columns>
+    <columns>Diagnosis_Date__c</columns>
+    <columns>Number_of_Programs_Attended__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Family_State__c</field>
+        <operation>equals</operation>
+        <value>WA</value>
+    </filters>
+    <filters>
+        <field>Family_Type__c</field>
+        <operation>equals</operation>
+        <value>patient</value>
+    </filters>
+    <label>All</label>
+</ListView>

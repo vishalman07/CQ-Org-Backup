@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Puppet_Shows_This_Week</fullName>
+    <columns>Show_Date__c</columns>
+    <columns>Venue__c</columns>
+    <columns>NAME</columns>
+    <columns>Number_Of_Shows__c</columns>
+    <columns>Child_Requesting_Show__c</columns>
+    <columns>Show_Status__c</columns>
+    <columns>School_s_Email__c</columns>
+    <columns>Venue_State__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Show_Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_WEEK</value>
+    </filters>
+    <label>Puppet Shows This Week</label>
+</ListView>

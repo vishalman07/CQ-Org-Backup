@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer_Eligible__c</fullName>
+    <externalId>false</externalId>
+    <formula>if (ISBLANK( TEXT(Volunteer_Status__c)),&quot;Not a volunteer&quot; , 
+
+if(ISNULL(Date_To__c),
+  if (
+
+  OR(INCLUDES(Volunteer_Eligibility__c, &quot;Currently Eligible&quot;),
+AND (
+OR(
+INCLUDES(Volunteer_Eligibility__c, &quot;Health Practitioner Registration No &amp; Exp Date Missing&quot;),
+INCLUDES(Volunteer_Eligibility__c, &quot;Dr Indemnity Insurance Policy No/Expiry Missing&quot;),
+INCLUDES(Volunteer_Eligibility__c, &quot;First Aid Missing&quot;),
+INCLUDES(Volunteer_Eligibility__c, &quot;CPR Missing&quot;)),
+
+
+NOT(INCLUDES(Volunteer_Eligibility__c,&quot;Code of Conduct Form Missing&quot;)),
+NOT(INCLUDES(Volunteer_Eligibility__c,&quot;Photo ID Not Sighted&quot;)),
+NOT(INCLUDES(Volunteer_Eligibility__c,&quot;Volunteer Interview Missing&quot;)),
+NOT(INCLUDES(Volunteer_Eligibility__c,&quot;Volunteer References Missing&quot;)),
+NOT(INCLUDES(Volunteer_Eligibility__c,&quot;WWC Not Completed&quot;)),
+NOT(INCLUDES(Volunteer_Eligibility__c,&quot;WWC Expired&quot;)),
+NOT(INCLUDES(Volunteer_Eligibility__c,&quot;ACF Course Not Completed&quot;)))
+),
+
+
+    if(text(Volunteer_Status__c) = &quot;Volunteer&quot;, 
+      &quot;Eligible&quot;, 
+      text(Volunteer_Status__c)
+    ),                       
+    &quot;Pending&quot;
+  ),
+  &quot;Former&quot;
+
+))</formula>
+    <label>Volunteer Eligibility</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

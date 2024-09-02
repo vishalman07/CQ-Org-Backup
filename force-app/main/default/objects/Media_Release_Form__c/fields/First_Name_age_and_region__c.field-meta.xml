@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Name_age_and_region__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>publication of the first name and age of my child (not surname) and our region/State;</inlineHelpText>
+    <label>Publication first name age region</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

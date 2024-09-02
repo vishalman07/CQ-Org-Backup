@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Branch__c</fullName>
+    <description>Denotes which department owns the record</description>
+    <inlineHelpText>Denotes which department owns the record</inlineHelpText>
+    <label>Branch</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Constituent Type 1</fullName>
+                <default>false</default>
+                <label>Constituent Type 1</label>
+            </value>
+            <value>
+                <fullName>Constituent Type 2</fullName>
+                <default>false</default>
+                <label>Constituent Type 2</label>
+            </value>
+            <value>
+                <fullName>Constituent Type 3</fullName>
+                <default>false</default>
+                <label>Constituent Type 3</label>
+            </value>
+            <value>
+                <fullName>Constituent Type 4</fullName>
+                <default>false</default>
+                <label>Constituent Type 4</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

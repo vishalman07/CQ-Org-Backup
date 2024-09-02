@@ -1,0 +1,37 @@
+<apex:page >
+    <script>
+        function fetchImageData() {
+            // Get the img element by its ID
+            var imgElement = document.getElementById('theImage');
+
+            // Create a canvas element
+            var canvas = document.createElement('canvas');
+            canvas.width = imgElement.width;
+            canvas.height = imgElement.height;
+
+            // Draw the image on the canvas
+            var ctx = canvas.getContext('2d');
+            ctx.drawImage(imgElement, 0, 0, imgElement.width, imgElement.height);
+
+            // Get the pixel data from the canvas
+            var imageData = ctx.getImageData(0, 0, imgElement.width, imgElement.height);
+
+            // Create a Blob from the pixel data
+            var blob = new Blob([imageData.data], { type: 'image/png' }); // Adjust MIME type if needed
+
+            // Process the Blob data as needed
+            console.log('Image Data Blob:', blob);
+
+            // Example: Convert Blob to Data URL for display
+            var blobUrl = URL.createObjectURL(blob);
+            console.log('Blob URL:', blobUrl);
+        }
+
+        // Call the fetchImageData function when the page loads
+        window.onload = function () {
+            fetchImageData();
+        };
+    </script>
+
+    <img id="theImage" src="https://highcountryonline.com.au/wp-content/uploads/2016/08/HCO.-Baw-Baw.6.jpg" alt="Description of image here"/>
+</apex:page>

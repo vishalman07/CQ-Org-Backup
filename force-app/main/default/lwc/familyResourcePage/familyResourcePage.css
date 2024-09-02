@@ -1,0 +1,47 @@
+/* font */
+.font_orange{
+  font-family: Mr Orange;
+  /* font-size: 4rem; */
+}
+
+.font_popinsLight{
+  font-family: Poppins Light;
+}
+
+.font_poppinsSemiBold{
+  font-family: Poppins SemiBold;
+}
+.update-box{
+  width:80%;
+  margin:auto;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+.header {
+    color: rgb(0, 31, 52);
+    /* font-weight: bolder; */
+    font-size: 3rem;
+    margin-bottom: 1vw;
+    padding-left: 8rem;
+    padding-top: 3rem;
+}
+.head{
+    /* margin-top: 12vw; */
+    background-color: #fcdbcb;
+}
+.headerImg {
+  height: 100px;
+  width:  100%;
+}
+
+@media(max-width:1059px){
+  .header{
+     padding-left: 1rem;
+    padding-top: 5rem;
+    font-size: 3rem;
+  }
+
+  .head{
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FamilyType__c</fullName>
+    <label>FamilyType</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bereaved Family</fullName>
+                <default>false</default>
+                <label>Bereaved Family</label>
+            </value>
+            <value>
+                <fullName>Offspring Bereaved</fullName>
+                <default>false</default>
+                <label>Offspring Bereaved</label>
+            </value>
+            <value>
+                <fullName>Patient</fullName>
+                <default>false</default>
+                <label>Patient</label>
+            </value>
+            <value>
+                <fullName>Offspring Family</fullName>
+                <default>false</default>
+                <label>Offspring Family</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

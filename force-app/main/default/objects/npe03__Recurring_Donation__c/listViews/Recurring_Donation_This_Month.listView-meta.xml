@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recurring_Donation_This_Month</fullName>
+    <columns>NAME</columns>
+    <columns>npe03__Contact__c</columns>
+    <columns>npe03__Amount__c</columns>
+    <columns>npsp_plus__Acknowledgment_Date__c</columns>
+    <columns>npsp_plus__Acknowledgment_Status__c</columns>
+    <columns>npe03__Recurring_Donation_Campaign__c</columns>
+    <columns>npsp__PaymentMethod__c</columns>
+    <columns>npsp__Status__c</columns>
+    <columns>First_Successful_Gift_Date__c</columns>
+    <columns>npsp__StartDate__c</columns>
+    <columns>npe03__Date_Established__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>npsp__Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>npe03__Date_Established__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>4/1/2021</value>
+    </filters>
+    <label>Recurring Donation - This Month</label>
+</ListView>

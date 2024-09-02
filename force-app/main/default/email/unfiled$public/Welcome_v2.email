@@ -1,0 +1,19 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<br><br><table border="1" cellpadding="5" cellspacing="0" height="250" width="650"><tbody><tr><td class="previewCell" style="margin: auto; font-family: Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255); vertical-align: top; border-bottom: 0px none rgb(236, 236, 236); border-top-color: rgb(236, 236, 236); border-right-color: rgb(236, 236, 236); border-left-color: rgb(236, 236, 236);"><b>Do not use.</b><br>Hi {!Receiving_User.FirstName},&nbsp;<br><br>Welcome to your new My Camp Quality portal!&nbsp;<br><br>Through this portal you will be able to manage your registrations to Camp Quality programs and services, with just a few clicks on either your phone, tablet or PC.&nbsp;<br><br>To get started in navigating your way through this exciting portal, please click here:&nbsp;<a href="https://www.mycampquality.org.au/" target="_blank" style="color: rgb(0, 0, 0);">www.mycampquality.org.au</a><br><br>Your username is your email address: {!Receiving_User.Username}&nbsp;<br><br>Click on Password Help and follow the instructions to set your password.<br><br>Once you have activated your account you can access the portal by going to&nbsp;<a href="https://www.mycampquality.org.au/" target="_blank" style="color: rgb(0, 0, 0);">www.mycampquality.org.au</a>&nbsp;at any time.&nbsp;<br><br>Once logged in you can review your families details
+under the Profile tab, and you'll find useful links, policies and most commonly
+asked questions under our Resources and FAQ tabs.<br>
+<br>
+If you do have any issues with logging into your portal please contact us on
+1300 662 267.<br><br>Kind Regards,&nbsp;<br>Camp Quality</td></tr></tbody></table>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[<p class="MsoNormal" style="margin-bottom: 0.0001pt;"><o:p>You are receiving this email as you are a registered Camp Quality Family or Volunteer.&nbsp; To manage your invites update your profile at&nbsp;<a href="https://www.mycampquality.org.au/">www.mycampquality.org.au</a>.&nbsp;&nbsp;</o:p></p><div><o:p><br></o:p></div>]]></td>
+</tr>
+</table>

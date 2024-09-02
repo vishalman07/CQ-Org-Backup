@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.OpportunityContactRoles$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$FirstName</field>
+    </columns>
+    <columns>
+        <field>Contact$LastName</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact$Power_of_One__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact.OpportunityContactRoles$Amount</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Opportunity.Campaign_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>64km Dog Walk Challenge</value>
+        </criteriaItems>
+        <operation>without</operation>
+        <primaryTableColumn>Contact$Id</primaryTableColumn>
+        <relatedTable>OCR-Opportunity</relatedTable>
+        <relatedTableJoinColumn>Contact</relatedTableJoinColumn>
+    </crossFilters>
+    <description>Facebook Dog Walk Campaign 2023 Dashboard. Filtering to show only new contacts.</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles*Opportunity$Parent_Campaign_Name__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>64km Dog Walk Challenge</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <name>FB DW 23 - New Contacts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Contact$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Contact$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

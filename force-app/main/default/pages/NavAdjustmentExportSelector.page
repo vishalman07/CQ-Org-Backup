@@ -1,0 +1,2 @@
+<apex:page docType="html-5.0" controller="NavAdjustmentController" readOnly="true">
+</apex:page>

@@ -1,0 +1,37 @@
+<apex:component access="global">
+    <head>
+<style>
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+td {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+font-family: Arial, Helvetica, sans-serif;
+}
+h3 {
+font-family: Arial, Helvetica, sans-serif;
+}
+h4 {
+font-family: Arial, Helvetica, sans-serif;
+}
+h5 {
+font-family: Arial, Helvetica, sans-serif;
+}
+h6 {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+</style>
+</head>
+
+</apex:component>

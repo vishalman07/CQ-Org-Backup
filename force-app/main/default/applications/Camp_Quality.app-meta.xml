@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Camp Quality</label>
+    <logo>SharedDocuments/CQ_Logo_2022.png</logo>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Campaign</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>Family_Attendance__c</tabs>
+    <tabs>Volunteer_Skill__c</tabs>
+    <tabs>PuppetShow__c</tabs>
+    <tabs>Attribute__c</tabs>
+    <tabs>Special_Needs__c</tabs>
+    <tabs>Site__c</tabs>
+    <tabs>Page__c</tabs>
+    <tabs>Article__c</tabs>
+    <tabs>Portal</tabs>
+    <tabs>Family_Member_Attendance__c</tabs>
+    <tabs>Volunteer_Attendance__c</tabs>
+    <tabs>ActionPlanTemplate__c</tabs>
+    <tabs>Case_Study__c</tabs>
+    <tabs>Property__c</tabs>
+    <tabs>Retreat_Booking__c</tabs>
+    <tabs>Guest_Booking__c</tabs>
+    <tabs>Peak_Period__c</tabs>
+    <tabs>npsp_plus__Vertic_Async_Process__c</tabs>
+    <tabs>PSP_Show_Attendee__c</tabs>
+    <tabs>Incident__c</tabs>
+    <tabs>Attachment__c</tabs>
+    <tabs>Volunteer_Type__c</tabs>
+    <tabs>Raffle_Json_Log__c</tabs>
+    <tabs>JotForm_Log__c</tabs>
+    <tabs>Images_for_Portal__c</tabs>
+    <tabs>Volunteer_Compliance__c</tabs>
+    <tabs>Volunteer_Eligibility__c</tabs>
+    <tabs>Volunteer_Criteria__c</tabs>
+    <tabs>Interaction__c</tabs>
+    <tabs>Form_Conversion_Source__c</tabs>
+    <tabs>Puppet_Performance__c</tabs>
+</CustomApplication>

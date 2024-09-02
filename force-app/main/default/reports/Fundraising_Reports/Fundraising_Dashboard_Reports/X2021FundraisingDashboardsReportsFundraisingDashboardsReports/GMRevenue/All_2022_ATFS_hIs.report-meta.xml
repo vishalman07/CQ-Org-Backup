@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Request_To_Fundraise__c$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Request_To_Fundraise__c$ATF_Status__c</field>
+    </columns>
+    <columns>
+        <field>Request_To_Fundraise__c$Contact__c</field>
+    </columns>
+    <columns>
+        <field>Request_To_Fundraise__c$CQ_RTFManager__c</field>
+    </columns>
+    <description>Via created date</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Request_To_Fundraise__c$Campaign__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Request_To_Fundraise__c$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>All 2022 ATFS</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Request_to_Fundraise__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Request_To_Fundraise__c$CreatedDate</dateColumn>
+        <endDate>2022-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2022-01-01</startDate>
+    </timeFrameFilter>
+</Report>

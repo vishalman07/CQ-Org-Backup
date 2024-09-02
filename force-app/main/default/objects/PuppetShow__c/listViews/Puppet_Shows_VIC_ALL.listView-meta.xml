@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Puppet_Shows_VIC_ALL</fullName>
+    <booleanFilter>1 AND (2 OR 3 OR 4) AND 5 AND 6</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Request_Date__c</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <columns>Venue__c</columns>
+    <columns>Venue_Suburb__c</columns>
+    <columns>Show_Status__c</columns>
+    <columns>Show_Date__c</columns>
+    <columns>Show_Type__c</columns>
+    <columns>Show_Priority__c</columns>
+    <columns>Show_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Performance_Group__c</field>
+        <operation>equals</operation>
+        <value>VIC/TAS</value>
+    </filters>
+    <filters>
+        <field>Show_Status__c</field>
+        <operation>equals</operation>
+        <value>Requested</value>
+    </filters>
+    <filters>
+        <field>Show_Status__c</field>
+        <operation>equals</operation>
+        <value>In Progress</value>
+    </filters>
+    <filters>
+        <field>Show_Status__c</field>
+        <operation>equals</operation>
+        <value>On Hold</value>
+    </filters>
+    <filters>
+        <field>Show_Type__c</field>
+        <operation>notEqual</operation>
+        <value>Hospital Visit,Workshop,Brand Relations,Hospital Visit - No Puppets,Puppet Digital Playdate,Digital Content</value>
+    </filters>
+    <filters>
+        <field>Show_Type__c</field>
+        <operation>notEqual</operation>
+        <value>Hospital Visit,Workshop,Brand Relations,Hospital Visit - No Puppets,Puppet Digital Playdate</value>
+    </filters>
+    <label>Puppet Shows VIC - ALL</label>
+    <sharedTo>
+        <role>Primary_School_Programs</role>
+    </sharedTo>
+</ListView>

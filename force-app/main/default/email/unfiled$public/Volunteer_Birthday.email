@@ -1,0 +1,6 @@
+Hi {!Contact.Preferred_First_Name__c},
+
+Just a quick message to send you BIG Birthday wishes from all of us here at Camp Quality. We hope your day is as great as the ones you help make for our families.
+
+Cheers!
+{!Contact.Branch_Office__c} Team

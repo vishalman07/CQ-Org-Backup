@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Puppet_Show_Name__c</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Performance_Group__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CUST_LAST_UPDATE_NAME</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Requestor_First_Name__c</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Requestor_Last_Name__c</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Contact_Details__c</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.School_Main_Contact__c</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Main_Contact_Email__c</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.School_s_Email__c</field>
+    </columns>
+    <description>w/ contact information fields</description>
+    <format>Tabular</format>
+    <name>Puppet Shows</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$PuppetShow__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>PuppetShow__c.Main_Contact_Email__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>PuppetShow__c.Request_Date__c</dateColumn>
+        <interval>INTERVAL_CURY</interval>
+    </timeFrameFilter>
+</Report>

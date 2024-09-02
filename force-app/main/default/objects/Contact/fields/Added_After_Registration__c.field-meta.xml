@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Added_After_Registration__c</fullName>
+    <formula>if (  text(Family_Member_Type__c) = &apos;Patient&apos;, false, if(  DATEVALUE(CreatedDate) &lt; DATEVALUE(&apos;2016-11-14&apos;), False, if (AND(CreatedDate &gt;  Account.CreatedDate +90, Added_After_Registration_Override__c =FALSE), true, false)))</formula>
+    <label>Added After Registration</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

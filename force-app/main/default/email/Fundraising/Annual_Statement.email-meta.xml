@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Logo</letterhead>
+    <name>Annual Statement</name>
+    <style>freeForm</style>
+    <subject>Your annual donation statement for 2021/22</subject>
+    <textOnly>Hi {!Contact.Preferred_First_Name__c}
+
+
+I want to sincerely thank you for supporting Camp Quality with {!CampaignMember.Pack_Type__c} donations this year.
+
+
+The total value of your donations for the 2021/22 financial year is {!CampaignMember.RG_Ask_1__c}. Your donations are tax deductible, so please keep this letter for tax purposes.
+
+
+The last 12 months saw great optimism here at Camp Quality as we believed the worst of COVID-19 was behind us. Boy, were we wrong!
+
+
+But despite the evolving challenges of 2022, we learned a lot from the pandemic, and your generous support, along with our team’s can-do attitude, has allowed us to continue to expand our services and programs to achieve great outcomes for kids facing cancer and their families.
+
+
+Some of the highlights include:
+
+
+· More Camps. The past couple of years have left us with plenty of work to do to make up for the disruption to our face-to-face programs. We will run  a record-breaking number of camps for kids and families in 2022.
+
+· More Family Retreats, giving respite to families in dire need of a break from cancer as pandemic restrictions and cost-of-living increases made life even tougher. We currently have four retreats in operation and are in the process of setting up another six to meet the increase in demand.
+
+· Increase to Child Life Therapists as we fund more therapists in more children’s hospitals to help kids cope with scary or painful cancer treatments.
+
+· Redevelopment of the Camp Quality Puppet Programs, with a brand-new show and puppet family to deliver our Cancer Education Program to schools all over the country. We can’t wait to introduce you to our new characters in the coming months.
+
+· Formation of the Child and Youth Cancer Alliance in partnership with Canteen. By sharing resources, services and expertise we can provide better support to young people and their families throughout their cancer experience, with less duplication and better cost-efficiency.
+
+· The opening of the Hunter Cancer Hub. One of the difficulties for many newly diagnosed families is trying to navigate all of the different support available. The Cancer Hub is the first of its kind, and brings eight charities together under one roof to make access to services much easier.
+
+· The launch of more digital services, including Puppet Digital Playdates for kids in hospital or isolated at home, Virtual Camps, and the Parenting Through Cancer platform to allow parents to connect with other parents, access vital resources, and speak to specialist counsellors.
+
+
+On behalf of the entire Camp Quality family, and all of the kids and families whose lives you have improved, thank you for your kindness, generosity and compassion. We couldn’t do what we do without you.
+
+
+Warmest regards,
+
+
+&lt;Signature image&gt;
+
+
+Deborah Thomas
+CEO</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

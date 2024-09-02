@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_Children_Attended__c</fullName>
+    <inlineHelpText>children under 18 who attended the event</inlineHelpText>
+    <label>Number Children Attended</label>
+    <summarizedField>Family_Attendance__c.Children_Under_18_Attended__c</summarizedField>
+    <summaryForeignKey>Family_Attendance__c.Event__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

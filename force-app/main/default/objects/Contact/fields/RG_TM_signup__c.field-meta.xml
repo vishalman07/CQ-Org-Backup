@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RG_TM_signup__c</fullName>
+    <formula>MarketingProfileTest__r.RG_TM_signup__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>RG_TM_signup</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

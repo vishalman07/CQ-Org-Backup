@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <animationFrequency>sometimes</animationFrequency>
+    <developerName>Incident</developerName>
+    <isActive>true</isActive>
+    <masterLabel>Medication Incident</masterLabel>
+    <recordTypeContext>Custom</recordTypeContext>
+    <recordTypeName>Medication_Error</recordTypeName>
+    <sobjectType>Incident__c</sobjectType>
+    <targetField>Status__c</targetField>
+    <targetFieldChangeToValues>Closed- Resolved</targetFieldChangeToValues>
+</AnimationRule>

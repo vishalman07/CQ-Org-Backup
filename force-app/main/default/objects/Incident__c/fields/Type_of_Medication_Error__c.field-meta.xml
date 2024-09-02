@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Medication_Error__c</fullName>
+    <label>Type of Medication Error</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Medication spilt/dropped</fullName>
+                <default>true</default>
+                <label>Medication spilt/dropped</label>
+            </value>
+            <value>
+                <fullName>Medication given to the wrong person</fullName>
+                <default>false</default>
+                <label>Medication given to the wrong person</label>
+            </value>
+            <value>
+                <fullName>Client allergic to medication</fullName>
+                <default>false</default>
+                <label>Client allergic to medication</label>
+            </value>
+            <value>
+                <fullName>Medication not given at the right time</fullName>
+                <default>false</default>
+                <label>Medication not given at the right time</label>
+            </value>
+            <value>
+                <fullName>Shift to Shift count on controlled medication not accurate</fullName>
+                <default>false</default>
+                <label>Shift to Shift count on controlled medication not accurate</label>
+            </value>
+            <value>
+                <fullName>Incorrect supply of medication from pharmacy</fullName>
+                <default>false</default>
+                <label>Incorrect supply of medication from pharmacy</label>
+            </value>
+            <value>
+                <fullName>Wrong medication given</fullName>
+                <default>false</default>
+                <label>Wrong medication given</label>
+            </value>
+            <value>
+                <fullName>Medication not given</fullName>
+                <default>false</default>
+                <label>Medication not given</label>
+            </value>
+            <value>
+                <fullName>Medication refill not ordered timely</fullName>
+                <default>false</default>
+                <label>Medication refill not ordered timely</label>
+            </value>
+            <value>
+                <fullName>Person refused medication</fullName>
+                <default>false</default>
+                <label>Person refused medication</label>
+            </value>
+            <value>
+                <fullName>Wrong dose of medication given</fullName>
+                <default>false</default>
+                <label>Wrong dose of medication given</label>
+            </value>
+            <value>
+                <fullName>Newly prescribed order not initiated properly</fullName>
+                <default>false</default>
+                <label>Newly prescribed order not initiated properly</label>
+            </value>
+            <value>
+                <fullName>Missing medication</fullName>
+                <default>false</default>
+                <label>Missing medication</label>
+            </value>
+            <value>
+                <fullName>Medication administration record not accurately documented</fullName>
+                <default>false</default>
+                <label>Medication administration record not accurately documented</label>
+            </value>
+            <value>
+                <fullName>Incorrect Route</fullName>
+                <default>false</default>
+                <label>Incorrect Route</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

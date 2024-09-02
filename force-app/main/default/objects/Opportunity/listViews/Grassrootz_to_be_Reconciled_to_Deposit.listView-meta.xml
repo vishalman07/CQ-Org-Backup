@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grassrootz_to_be_Reconciled_to_Deposit</fullName>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>npsp__Primary_Contact__c</columns>
+    <columns>Campaign_Name__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>GST_Amount__c</columns>
+    <columns>Banking_Reference__c</columns>
+    <columns>Gift_Reference__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Banking_Reference__c</field>
+        <operation>equals</operation>
+        <value>grassrootz</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.npsp_plus_dres__Donation</value>
+    </filters>
+    <label>Grassrootz to be Reconciled to Deposit</label>
+</ListView>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Image_Permissions</fullName>
+    <active>true</active>
+    <description>Tracks image permissions for marketing purposes</description>
+    <label>Image Permissions</label>
+    <picklistValues>
+        <picklist>Media_Permissions__c</picklist>
+        <values>
+            <fullName>Opted-in to share images and media with camp participants</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opted-in to share images and media with corporate partners to use to promote Camp Quality and promote our partnership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opted-in to share images and media with the public</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opted_in__c</picklist>
+        <values>
+            <fullName>False</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>True</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opted_in_to_share_with_Corporates__c</picklist>
+        <values>
+            <fullName>False</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>True</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opted_in_to_share_with__c</picklist>
+        <values>
+            <fullName>False</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>True</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>High_Risk_Links__c</fullName>
+    <inlineHelpText>Is this activity linked to an organisation or existing event (e.g. Psychic Expo, Sexpo, Cigarette Brand, Alcohol Brand, Pharmaceutical, etc.) that may compromise our brand or our children and families?</inlineHelpText>
+    <label>High Risk Links</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

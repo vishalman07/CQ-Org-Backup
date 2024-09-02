@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Show_Date__c</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Show_Status__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Account.School_Code__c</field>
+    </columns>
+    <description>Number of PSP School Shows in 2018 &amp; 2019 performed by SA NT group for ELC&apos;s.</description>
+    <filter>
+        <criteriaItems>
+            <column>PuppetShow__c.Show_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Metropolitan School Visit,Country School Visit,Hospital Visit,Camp Quality Event - School Show,Camp Quality Event - Program,Workshop,Brand Relations,Hospital Visit - No Puppets,Puppet Digital Playdate,Digital Content</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>PuppetShow__c.Show_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Requested,In Progress,Booked,Performed,Cancelled,On Hold</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Account.School_Code__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Early Learning Centre</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>PuppetShow__c.Performance_Group__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>SA/NT</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>PuppetShow__c.Venue_State__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>PuppetShow__c.Show_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>ELC SA NT Puppet shows 18/19</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$PuppetShow__c@PuppetShow__c.Venue__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>PuppetShow__c.Show_Date__c</dateColumn>
+        <endDate>2019-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-01-01</startDate>
+    </timeFrameFilter>
+</Report>

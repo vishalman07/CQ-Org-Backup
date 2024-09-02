@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <name>pageNamesInOrder_Assignment</name>
+        <label>pageNamesInOrder_Assignment</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>pageNamesInOrder</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>welcome_page</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>pageNamesInOrder</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>p_1f391cc8_4bba_4e32_b481_e5bb92413fe3</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>pageNamesInOrder</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>p_79000c3d_711b_4cbf_ae6b_9881157af6b8</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>pageNamesInOrder</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>thank_you_page</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>welcome_page</targetReference>
+        </connector>
+    </assignments>
+    <choices>
+        <name>c_04dbe27a_aa5b_4114_a967_b81f02821b61</name>
+        <choiceText>No thanks, I&amp;rsquo;m not interested right now</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No thanks, I’m not interested right now</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_0c0cc860_b6c4_4463_b54f_725029bfc932</name>
+        <choiceText>I know someone who has benefitted from the work of Camp Quality</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>I know someone who has benefitted from the work of Camp Quality</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_0f2d0cc2_e5f0_4d22_ac26_34859c5250e2</name>
+        <choiceText>Email</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Email</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_1b780380_312f_4fd8_8347_0449f6db13f1</name>
+        <choiceText>Mail</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Mail</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_226c2418_d6cd_4872_b2e7_eef399ebd71e</name>
+        <choiceText>Purchase tickets in our prize raffle</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Purchase tickets in our prize raffle</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_27943ffa_f5c0_4144_8f7b_e6dd18c10bce</name>
+        <choiceText>I intend to include Camp Quality in my Will when I make or revise it.</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>I intend to include Camp Quality in my Will when I make or revise it.</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_298d20bc_8973_4adf_aed9_686e845f7331</name>
+        <choiceText>Please send me some information on leaving a gift in my Will</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Please send me some information on leaving a gift in my Will</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_2a8e960a_c548_4257_b078_f5795c9fe4b7</name>
+        <choiceText>Just right</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Just right</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_32a00ff1_19fc_472c_964e_3a3dc34c49d7</name>
+        <choiceText>I don&apos;t hear from you enough</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>I don&apos;t hear from you enough</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_3611c722_d9bf_4386_bb00_2d26187eca74</name>
+        <choiceText>I have already included Camp Quality in my Will</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>I have already included Camp Quality in my Will</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_36b90986_5ffa_4693_99be_edbe16f2af09</name>
+        <choiceText>Make a regular monthly donation to improve the lives of kids facing cancer</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Make a regular monthly donation to improve the lives of kids facing cancer</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_36d05c75_1156_4a3d_91ae_c8033853b05a</name>
+        <choiceText>A child that I know, or know of, has been diagnosed with cancer</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>A child that I know, or know of, has been diagnosed with cancer</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_40b4efc3_c2aa_4801_b9d9_1dfd59a36536</name>
+        <choiceText>I have seen the impact of cancer firsthand</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>I have seen the impact of cancer firsthand</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_43240876_8ac5_426a_a06e_198c56d7bc7c</name>
+        <choiceText>Take part in a fundraising event like a fun run, trek or bike ride</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Take part in a fundraising event like a fun run, trek or bike ride</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_43b3e92c_a254_42ba_a433_5e739fa4d58c</name>
+        <choiceText>During my working life I&amp;rsquo;ve dealt with children and/or cancer</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>During my working life I’ve dealt with children and/or cancer</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_5485b97a_3636_4fec_bfb8_65d40fe60670</name>
+        <choiceText>Phone</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Phone</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_5b11ff2e_871b_4494_a1e4_e36a5157b5ae</name>
+        <choiceText>I simply want to help children facing cancer</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>I simply want to help children facing cancer</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_5c85b55d_9c46_4f1b_af22_5518dd48e3bc</name>
+        <choiceText>Social Media</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Social Media</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_63ca101b_5069_4ccb_ae67_31b111fbedbe</name>
+        <choiceText>Volunteer in my local Camp Quality office</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Volunteer in my local Camp Quality office</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_64d59d7a_94f8_48d9_94fb_cfa00a93240b</name>
+        <choiceText>A little</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>A little</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_66c81e8e_29af_4aa8_8f86_574041cb46e1</name>
+        <choiceText>Twitter</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Twitter</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_6ee920e3_4d5e_4d1c_b4e6_707f53cb743b</name>
+        <choiceText>A Lot</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>A Lot</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_7748158b_46ab_4bbe_8430_bb2f31e533dd</name>
+        <choiceText>Linked IN</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Linked IN</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_77d3dac8_698e_4217_a352_f917f4d49f18</name>
+        <choiceText>Facebook</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Facebook</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_9691e894_9e8d_4456_a0ca_53305621b5a8</name>
+        <choiceText>I have been a Camp Quality volunteer and witnessed how wonderful this work is</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>I have been a Camp Quality volunteer and witnessed how wonderful this work is</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_96e63e35_ee47_4fd4_bd7f_191aeb73263c</name>
+        <choiceText>You contact me too often</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>You contact me too often</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_a64b8b67_b72f_499b_b0d6_dbecc001108d</name>
+        <choiceText>I&amp;rsquo;m considering leaving a gift to Camp Quality in my Will</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>I’m considering leaving a gift to Camp Quality in my Will</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_be43391d_eddd_4967_b425_5348af61654e</name>
+        <choiceText>I have no idea</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>I have no idea</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_cc0f4eaa_c97f_4cef_afea_769a880ae274</name>
+        <choiceText>My family was helped by Camp Quality and I want to give back</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>My family was helped by Camp Quality and I want to give back</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_d3f147f2_0293_4bd7_ae8e_b7b220de685b</name>
+        <choiceText>Give a significant donation as part of a matched giving day to help boost other donations</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Give a significant donation as part of a matched giving day to help boost other donations</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_dc547fa7_5f07_48f4_8776_666dc56c1095</name>
+        <choiceText>Tik Tok</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Tik Tok</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_eca8acff_09b3_4a2d_b929_5150b2c790df</name>
+        <choiceText>Organise a fundraising event at home or work</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Organise a fundraising event at home or work</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_ed2eb8ce_b64b_4bdb_b165_b987c7f99a2d</name>
+        <choiceText>Website</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Website</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_eed4e265_9fa9_4398_80e8_62933470d7c9</name>
+        <choiceText>Volunteer at a Camp Quality event</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Volunteer at a Camp Quality event</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>c_fc1b725b_4dd7_4dc4_af28_2e7e5647601b</name>
+        <choiceText>Instagram</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Instagram</stringValue>
+        </value>
+    </choices>
+    <interviewLabel>2022 Donor Care Survery</interviewLabel>
+    <label>2022 Donor Care Survery</label>
+    <processMetadataValues>
+        <name>advanceThankYouPageEnabled</name>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>autoProgressEnabled</name>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>hasWelcomePage</name>
+        <value>
+            <booleanValue>true</booleanValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>isSimpleSurvey</name>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>overrideActiveVersion</name>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </processMetadataValues>
+    <processType>Survey</processType>
+    <screens>
+        <name>p_1f391cc8_4bba_4e32_b481_e5bb92413fe3</name>
+        <label>Page 2</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>p_79000c3d_711b_4cbf_ae6b_9881157af6b8</targetReference>
+        </connector>
+        <fields>
+            <processMetadataValues>
+                <name>autoProgressAction</name>
+                <value>
+                    <stringValue>NONE</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>q_66ba57da_fd04_4d16_92f4_df1f18503a5d</name>
+            <dataType>String</dataType>
+            <extensionName>survey:runtimeShortText</extensionName>
+            <fieldText>&lt;p&gt;&lt;strong&gt;First Name&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>ComponentInput</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <processMetadataValues>
+                <name>autoProgressAction</name>
+                <value>
+                    <stringValue>NONE</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>q_c9a55d73_cf2f_4c0f_b1b8_bb4ed480fd5e</name>
+            <dataType>String</dataType>
+            <extensionName>survey:runtimeShortText</extensionName>
+            <fieldText>&lt;p&gt;&lt;strong&gt;Last Name&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>ComponentInput</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <processMetadataValues>
+                <name>autoProgressAction</name>
+                <value>
+                    <stringValue>NONE</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>q_4d221216_0f31_4c9a_97dc_acf104766ac7</name>
+            <dataType>String</dataType>
+            <extensionName>survey:runtimeShortText</extensionName>
+            <fieldText>&lt;p&gt;&lt;strong&gt;Contact ID&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>ComponentInput</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <processMetadataValues>
+                <name>autoProgressAction</name>
+                <value>
+                    <stringValue>NONE</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>q_662b22fe_6e41_4f1c_995f_dfee2cc67c1d</name>
+            <dataType>String</dataType>
+            <extensionName>survey:runtimeShortText</extensionName>
+            <fieldText>&lt;p&gt;&lt;strong&gt;Support ID&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>ComponentInput</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <processMetadataValues>
+                <name>autoProgressAction</name>
+                <value>
+                    <stringValue>NONE</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>q_ac609b2d_6a35_4378_bb6b_bc565c0f5421</name>
+            <dataType>String</dataType>
+            <extensionName>survey:runtimeShortText</extensionName>
+            <fieldText>&lt;p&gt;&lt;strong&gt;Email&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>ComponentInput</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <pausedText>To pick up where you left off, refresh this page, or open the survey again.</pausedText>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>p_79000c3d_711b_4cbf_ae6b_9881157af6b8</name>
+        <label>Page 1</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <processMetadataValues>
+                <name>autoProgressAction</name>
+                <value>
+                    <stringValue>NONE</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>q_43af5259_6344_4f36_8a46_b44f847dedd3</name>
+            <choiceReferences>c_40b4efc3_c2aa_4801_b9d9_1dfd59a36536</choiceReferences>
+            <choiceReferences>c_cc0f4eaa_c97f_4cef_afea_769a880ae274</choiceReferences>
+            <choiceReferences>c_0c0cc860_b6c4_4463_b54f_725029bfc932</choiceReferences>
+            <choiceReferences>c_36d05c75_1156_4a3d_91ae_c8033853b05a</choiceReferences>
+            <choiceReferences>c_9691e894_9e8d_4456_a0ca_53305621b5a8</choiceReferences>
+            <choiceReferences>c_43b3e92c_a254_42ba_a433_5e739fa4d58c</choiceReferences>
+            <choiceReferences>c_5b11ff2e_871b_4494_a1e4_e36a5157b5ae</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 32px; font-family: sans-serif;&quot;&gt;WHICH BEST DESCRIBES YOUR CONNECTION TO CAMP QUALITY?&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>MultiSelectCheckboxes</fieldType>
+            <helpText>SELECT ONE ONLY</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <processMetadataValues>
+                <name>autoProgressAction</name>
+                <value>
+                    <stringValue>NONE</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>q_f0b9d277_2521_4f11_ab32_b568dad97152</name>
+            <choiceReferences>c_1b780380_312f_4fd8_8347_0449f6db13f1</choiceReferences>
+            <choiceReferences>c_0f2d0cc2_e5f0_4d22_ac26_34859c5250e2</choiceReferences>
+            <choiceReferences>c_5485b97a_3636_4fec_bfb8_65d40fe60670</choiceReferences>
+            <choiceReferences>c_ed2eb8ce_b64b_4bdb_b165_b987c7f99a2d</choiceReferences>
+            <choiceReferences>c_5c85b55d_9c46_4f1b_af22_5518dd48e3bc</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>&lt;p&gt;&lt;span class=&quot;ql-cursor&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32px;&quot;&gt;HOW DO YOU PREFER TO RECEIVE UPDATES ABOUT THE IMPACT &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32px;&quot;&gt;OF YOUR SUPPORT?&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>MultiSelectCheckboxes</fieldType>
+            <helpText>(SELECT ALL THAT APPLY)</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <processMetadataValues>
+                <name>autoProgressAction</name>
+                <value>
+                    <stringValue>NONE</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>q_d2128198_8071_479a_b4f8_a0bae8f1d7db</name>
+            <choiceReferences>c_77d3dac8_698e_4217_a352_f917f4d49f18</choiceReferences>
+            <choiceReferences>c_66c81e8e_29af_4aa8_8f86_574041cb46e1</choiceReferences>
+            <choiceReferences>c_7748158b_46ab_4bbe_8430_bb2f31e533dd</choiceReferences>
+            <choiceReferences>c_fc1b725b_4dd7_4dc4_af28_2e7e5647601b</choiceReferences>
+            <choiceReferences>c_dc547fa7_5f07_48f4_8776_666dc56c1095</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>&lt;p&gt;&lt;span class=&quot;ql-cursor&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 26.6667px; font-family: sans-serif;&quot;&gt;IF E, WHICH SOCIAL MEDIA PLATFORMS DO YOU USE?&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>MultiSelectCheckboxes</fieldType>
+            <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <processMetadataValues>
+                        <name>inputDataType</name>
+                        <value>
+                            <stringValue>String</stringValue>
+                        </value>
+                    </processMetadataValues>
+                    <processMetadataValues>
+                        <name>leftHandSideType</name>
+                        <value>
+                            <stringValue>MultiChoice</stringValue>
+                        </value>
+                    </processMetadataValues>
+                    <processMetadataValues>
+                        <name>operatorDataType</name>
+                        <value>
+                            <stringValue>String</stringValue>
+                        </value>
+                    </processMetadataValues>
+                    <processMetadataValues>
+                        <name>rightHandSideType</name>
+                        <value>
+                            <stringValue>String</stringValue>
+                        </value>
+                    </processMetadataValues>
+                    <leftValueReference>q_f0b9d277_2521_4f11_ab32_b568dad97152</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <elementReference>c_5c85b55d_9c46_4f1b_af22_5518dd48e3bc</elementReference>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <processMetadataValues>
+                <name>autoProgressAction</name>
+                <value>
+                    <stringValue>NONE</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>q_c7fa61fe_371a_4c3b_9c3c_9a14ae139acb</name>
+            <choiceReferences>c_2a8e960a_c548_4257_b078_f5795c9fe4b7</choiceReferences>
+            <choiceReferences>c_96e63e35_ee47_4fd4_bd7f_191aeb73263c</choiceReferences>
+            <choiceReferences>c_32a00ff1_19fc_472c_964e_3a3dc34c49d7</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>&lt;p&gt;&lt;span class=&quot;ql-cursor&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32px;&quot;&gt;HOW HAPPY ARE YOU WITH THE FREQUENCY OF UPDATES YOU RECEIVE &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32px;&quot;&gt;FROM CAMP QUALITY?&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>MultiSelectCheckboxes</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <processMetadataValues>
+                <name>autoProgressAction</name>
+                <value>
+                    <stringValue>NONE</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>q_68885ed8_7583_4860_95a1_b86d7b5ccfe4</name>
+            <choiceReferences>c_64d59d7a_94f8_48d9_94fb_cfa00a93240b</choiceReferences>
+            <choiceReferences>c_6ee920e3_4d5e_4d1c_b4e6_707f53cb743b</choiceReferences>
+            <choiceReferences>c_be43391d_eddd_4967_b425_5348af61654e</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32px;&quot;&gt;HOW MUCH OF A DIFFERENCE DO YOU FEEL YOUR SUPPORT IS MAKING?&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>MultiSelectCheckboxes</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <processMetadataValues>
+                <name>autoProgressAction</name>
+                <value>
+                    <stringValue>NONE</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>q_d67d57b9_7c0e_4a94_931d_2442833dafe6</name>
+            <choiceReferences>c_43240876_8ac5_426a_a06e_198c56d7bc7c</choiceReferences>
+            <choiceReferences>c_eca8acff_09b3_4a2d_b929_5150b2c790df</choiceReferences>
+            <choiceReferences>c_eed4e265_9fa9_4398_80e8_62933470d7c9</choiceReferences>
+            <choiceReferences>c_63ca101b_5069_4ccb_ae67_31b111fbedbe</choiceReferences>
+            <choiceReferences>c_36b90986_5ffa_4693_99be_edbe16f2af09</choiceReferences>
+            <choiceReferences>c_226c2418_d6cd_4872_b2e7_eef399ebd71e</choiceReferences>
+            <choiceReferences>c_d3f147f2_0293_4bd7_ae8e_b7b220de685b</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>&lt;p&gt;&lt;span class=&quot;ql-cursor&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32px;&quot;&gt;YOUR DONATIONS ALREADY GIVE KIDS FACING CANCER THE CHANCE &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32px;&quot;&gt;TO JUST BE KIDS AGAIN. ARE THERE OTHER WAYS YOU’D CONSIDER &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32px;&quot;&gt;SUPPORTING THOSE CHILDREN AND THEIR FAMILIES?&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>MultiSelectCheckboxes</fieldType>
+            <helpText>(SELECT ALL THAT APPLY)</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <processMetadataValues>
+                <name>autoProgressAction</name>
+                <value>
+                    <stringValue>NONE</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>q_7bbc0b76_cb42_40f1_bdff_334c4fe6d557</name>
+            <choiceReferences>c_3611c722_d9bf_4386_bb00_2d26187eca74</choiceReferences>
+            <choiceReferences>c_27943ffa_f5c0_4144_8f7b_e6dd18c10bce</choiceReferences>
+            <choiceReferences>c_a64b8b67_b72f_499b_b0d6_dbecc001108d</choiceReferences>
+            <choiceReferences>c_298d20bc_8973_4adf_aed9_686e845f7331</choiceReferences>
+            <choiceReferences>c_04dbe27a_aa5b_4114_a967_b81f02821b61</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>&lt;p&gt;&lt;span class=&quot;ql-cursor&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32px;&quot;&gt;MANY SUPPORTERS CHOOSE TO LEAVE A GIFT IN THEIR WILL &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32px;&quot;&gt;TO CAMP QUALITY, AFTER THEY HAVE PROVIDED FOR THEIR FAMILY. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32px;&quot;&gt;IS THIS SOMETHING YOU WOULD LIKE TO DO?&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>MultiSelectCheckboxes</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <processMetadataValues>
+                <name>autoProgressAction</name>
+                <value>
+                    <stringValue>NONE</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>defaultValue</name>
+                <value>
+                    <elementReference>var_q_d87c7f7c_a706_4ec1_8dc3_7061c8a399f4_defaultValue</elementReference>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>max</name>
+                <value>
+                    <stringValue>5</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>min</name>
+                <value>
+                    <stringValue>0</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>q_d87c7f7c_a706_4ec1_8dc3_7061c8a399f4</name>
+            <dataType>Number</dataType>
+            <extensionName>survey:cmpInputRuntimeCsat</extensionName>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32px;&quot;&gt;ON A SCALE OF 1 TO 5, HOW LIKELY ARE YOU TO RECOMMEND CAMP &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32px;&quot;&gt;QUALITY TO FRIENDS, FAMILY OR COLLEAGUES WHO WANT TO SUPPORT A CHARITY? 5 WOULD BE ‘EXTREMELY LIKELY’&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>ComponentInput</fieldType>
+            <isRequired>false</isRequired>
+            <scale>0</scale>
+        </fields>
+        <fields>
+            <processMetadataValues>
+                <name>autoProgressAction</name>
+                <value>
+                    <stringValue>NONE</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>defaultValue</name>
+                <value>
+                    <elementReference>var_q_3c302837_3fcc_4df8_a5c9_c04216be6268_defaultValue</elementReference>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>max</name>
+                <value>
+                    <stringValue>5</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>min</name>
+                <value>
+                    <stringValue>0</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>q_3c302837_3fcc_4df8_a5c9_c04216be6268</name>
+            <dataType>Number</dataType>
+            <extensionName>survey:cmpInputRuntimeCsat</extensionName>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32px;&quot;&gt;ON A SCALE OF 1 TO 5, HOW LIKELY ARE YOU TO RECOMMEND CAMP &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32px;&quot;&gt;QUALITY TO SOMEONE WHOSE FAMILY MEMBER HAS BEEN DIAGNOSED WITH CANCER? 5 WOULD BE ‘EXTREMELY LIKELY’&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>ComponentInput</fieldType>
+            <isRequired>false</isRequired>
+            <scale>0</scale>
+        </fields>
+        <fields>
+            <processMetadataValues>
+                <name>autoProgressAction</name>
+                <value>
+                    <stringValue>NONE</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>q_e62e45a5_9859_4b8a_ac01_8ab98d7e84bf</name>
+            <dataType>String</dataType>
+            <fieldText>&lt;p&gt;&lt;span class=&quot;ql-cursor&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32px;&quot;&gt;DO YOU HAVE ANY OTHER QUESTIONS OR COMMENTS YOU’D LIKE TO &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32px;&quot;&gt;SHARE WITH US?&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <pausedText>To pick up where you left off, refresh this page, or open the survey again.</pausedText>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>welcome_page</name>
+        <label>Welcome Page</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>p_1f391cc8_4bba_4e32_b481_e5bb92413fe3</targetReference>
+        </connector>
+        <fields>
+            <name>welcome_question</name>
+            <extensionName>survey:runtimeWelcome</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>{!welcome_question_lref_tt}</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>description</name>
+                <value>
+                    <stringValue>{!welcome_question_dref_tt}</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>pageNamesInOrder_Assignment</startElementReference>
+    <status>Draft</status>
+    <textTemplates>
+        <name>thankYouDescriptionTextTemplate</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text></text>
+    </textTemplates>
+    <textTemplates>
+        <name>thankYouLabelTextTemplate</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;strong&gt;Thank you! :)&lt;/strong&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>welcome_question_dref_tt</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>2022 Donor Care Survery</text>
+    </textTemplates>
+    <textTemplates>
+        <name>welcome_question_lref_tt</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;strong&gt;Testing &lt;/strong&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>guestUserLang</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>invitationId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>pageNamesInOrder</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>previewMode</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <name>thankYouDescription</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>{!thankYouDescriptionTextTemplate}</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>thankYouLabel</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>{!thankYouLabelTextTemplate}</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_q_3c302837_3fcc_4df8_a5c9_c04216be6268_defaultValue</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <name>var_q_d87c7f7c_a706_4ec1_8dc3_7061c8a399f4_defaultValue</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+</Flow>

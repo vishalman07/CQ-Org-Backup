@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>New_bequest_email_alert</fullName>
+        <ccEmails>Bequests@campquality.org.au</ccEmails>
+        <description>New bequest email alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>bsmith@campquality.org.au</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>donorcare@campquality.org.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/New_Bequest_Enquiry</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Add_Date_to_Lead_Status_Date_Changed</fullName>
+        <description>Add date the Lead Status Date Changed Field</description>
+        <field>Lead_Status_Date_Change__c</field>
+        <formula>now()</formula>
+        <name>Add Date to Lead Status Date Changed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>LEASetFamilyApplication</fullName>
+        <field>Mapping_Definition_Name__c</field>
+        <formula>&quot;FamilyApplication&quot;</formula>
+        <name>LEASetFamilyApplication</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>LEA_Set_Family_Record_Type</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Family_Application</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>LEA_Set_Family_Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>LEA_Set_Volunteer_Record_Type</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Volunteer</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>LEA_Set_Volunteer_Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lead_Status_Successful</fullName>
+        <field>Status</field>
+        <literalValue>Successful</literalValue>
+        <name>Lead Status Successful</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Ref_Completed_Date</fullName>
+        <field>Reference_Checks_Completed_Date__c</field>
+        <formula>today()</formula>
+        <name>Ref Completed Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateLeadMapping</fullName>
+        <field>Mapping_Definition_Name__c</field>
+        <formula>&quot;FamilyApplication&quot;</formula>
+        <name>UpdateLeadMapping</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>fla_setleadmapvolunteer</fullName>
+        <field>Mapping_Definition_Name__c</field>
+        <formula>&quot;volunteerapplication&quot;</formula>
+        <name>fla_setleadmapvolunteer</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>LEA_Set_Family_Record Type</fullName>
+        <actions>
+            <name>LEASetFamilyApplication</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>LEA_Set_Family_Record_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Webform_Record_Type__c</field>
+            <operation>equals</operation>
+            <value>Family Application Form</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Family Application</value>
+        </criteriaItems>
+        <description>Using a hidden field from the Family Web-form - Update Lead Record Type to Family Record Type</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>LEA_Set_Volunteer_Record Type</fullName>
+        <actions>
+            <name>LEA_Set_Volunteer_Record_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>fla_setleadmapvolunteer</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Webform_Record_Type__c</field>
+            <operation>equals</operation>
+            <value>Volunteer Application Form</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Volunteer</value>
+        </criteriaItems>
+        <description>Using a hidden field from the Volunteer Web-form - Update Lead Record Type to Volunteer Record Type</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lead Ref Checks Date When Complete</fullName>
+        <actions>
+            <name>Ref_Completed_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Ref2_Complete__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Ref1_Complete__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Reference_Checks_Completed_Date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lead Status Date Update</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.Status</field>
+            <operation>notEqual</operation>
+            <value>New</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Lead_Status_Date_Change__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lead Status Date Update 2</fullName>
+        <actions>
+            <name>Add_Date_to_Lead_Status_Date_Changed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Status</field>
+            <operation>notEqual</operation>
+            <value>New</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Lead_Status_Date_Change__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lead Status Successful After Lead Mapping Processed</fullName>
+        <actions>
+            <name>Lead_Status_Successful</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Lead_Mapping_Processed__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Status</field>
+            <operation>notEqual</operation>
+            <value>Sucessful</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send SMS</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.Volunteer_Interview_Scheduled_For__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>SetMappingForInHospitalRecord</fullName>
+        <actions>
+            <name>UpdateLeadMapping</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>In Hospital Family</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Mapping_Definition_Name__c</field>
+            <operation>notEqual</operation>
+            <value>FamilyApplication</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Lead Status Date Changed</fullName>
+        <actions>
+            <name>Add_Date_to_Lead_Status_Date_Changed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.Lead_Status_Date_Change__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Status</field>
+            <operation>notEqual</operation>
+            <value>New</value>
+        </criteriaItems>
+        <description>Triggers a date do be added to the Lead Status Date Changed Field when the status is changed from New to Contacted/Contacting</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Lead_Interview_Reminder</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>{&quot;template&quot;:&quot;a0U2800000BDl4jEAD&quot;}</description>
+        <dueDateOffset>-1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Lead.Volunteer_Interview_Scheduled_For__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Lead Interview Reminder</subject>
+    </tasks>
+</Workflow>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <description>Migrated from the: AutoClosePuppetShow2 workflow rule
+Workflow rule description: &quot;</description>
+    <label>AutoClosePuppetShow2</label>
+    <migratedFromWorkflowRuleName>AutoClosePuppetShow2</migratedFromWorkflowRuleName>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>ScheduledPath1Update</name>
+        <label>ScheduledPath1Update</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Show_Status__c</field>
+            <value>
+                <stringValue>Performed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Show_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Booked</stringValue>
+            </value>
+        </filters>
+        <object>PuppetShow__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>ScheduledPath1</name>
+            <connector>
+                <targetReference>ScheduledPath1Update</targetReference>
+            </connector>
+            <label>ScheduledPath1</label>
+            <offsetNumber>2</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>Show_Date__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

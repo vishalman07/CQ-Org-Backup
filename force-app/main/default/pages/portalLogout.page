@@ -1,0 +1,49 @@
+<apex:page language="en_US" showHeader="false" cache="true" sidebar="false" standardStylesheets="false" applyHtmlTag="false">
+    
+    <apex:composition template="portalComposition">
+        <apex:define name="vars">
+            <apex:variable var="pageTitle" value="Portal" />
+        </apex:define>
+
+        <apex:define name="menu">
+            <apex:variable var="displayMenu" value="false" />
+            <apex:variable var="displayUser" value="false" />
+        </apex:define>
+        
+        <apex:define name="main">
+            <script type="text/javascript">
+               $(document).ready(function() {
+                    setTimeout(function() { location.href = '/members'; }, 3000);
+                });
+            </script>
+
+            <div class="pa-header">
+                
+                <div class="container">
+                    <h1>
+                        <apex:outputText value="Portal" />
+                    </h1>
+                </div>
+                
+            </div>
+            
+            <div class="container" style="margin-top:40px;position:relative;">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <apex:form styleClass="customForm form-horizontal">
+                          <div class="form-group">
+                            <p class="col-xs-12">Logged out.</p>
+                          </div>
+                            
+                          <apex:iframe src="{!$Site.Prefix}/secur/logout.jsp" height="1" width="1" />
+                            
+                        </apex:form> 
+                    </div>
+                </div>             
+            </div>
+                
+        </apex:define>
+        
+    </apex:composition>
+    
+</apex:page>

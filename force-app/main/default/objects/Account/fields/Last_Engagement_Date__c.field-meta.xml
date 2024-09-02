@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Engagement_Date__c</fullName>
+    <description>Most recent attended or puppet show</description>
+    <formula>if (ISBLANK(Last_Program_Attended__c), 
+  if (ISBLANK(Puppet_Show__c), Last_Voucher_Date__c, 
+    if (ISBLANK(Last_Voucher_Date__c), Puppet_Show__c, if(Puppet_Show__c &gt;= Last_Voucher_Date__c, Puppet_Show__c, 
+  Last_Voucher_Date__c))),
+  if (ISBLANK(Puppet_Show__c), 
+    IF (ISBLANK(Last_Voucher_Date__c),Last_Program_Attended__c, 
+       if ( Last_Program_Attended__c &gt;=  Last_Voucher_Date__c, Last_Program_Attended__c, Last_Voucher_Date__c)),
+           if (ISBLANK ( Last_Voucher_Date__c), if (Last_Program_Attended__c &gt;=  Puppet_Show__c, Last_Program_Attended__c ,Puppet_Show__c),
+
+if (AND(Last_Program_Attended__c &gt;=  Puppet_Show__c, Last_Program_Attended__c &gt;=  Last_Voucher_Date__c), Last_Program_Attended__c, if (AND(Puppet_Show__c &gt;= Last_Program_Attended__c, Puppet_Show__c &gt;=  Last_Voucher_Date__c), Puppet_Show__c, Last_Voucher_Date__c)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Most recent program attended or puppet show</inlineHelpText>
+    <label>Last Engagement Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

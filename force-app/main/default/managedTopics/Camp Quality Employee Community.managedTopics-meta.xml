@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedTopics xmlns="http://soap.sforce.com/2006/04/metadata">
+    <managedTopic>
+        <fullName>Camp Quality Employee Community.Featured:Families</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Families</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Camp Quality Employee Community.Featured:Fundraising</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Fundraising</name>
+        <parentName></parentName>
+        <position>4</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Camp Quality Employee Community.Featured:PSP</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>PSP</name>
+        <parentName></parentName>
+        <position>3</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Camp Quality Employee Community.Featured:Policies</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Policies</name>
+        <parentName></parentName>
+        <position>5</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Camp Quality Employee Community.Featured:Rec Programs</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Rec Programs</name>
+        <parentName></parentName>
+        <position>2</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Camp Quality Employee Community.Featured:Volunteers</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Volunteers</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Camp Quality Employee Community.Navigational:Families</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Families</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Camp Quality Employee Community.Navigational:Fundraising</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Fundraising</name>
+        <parentName></parentName>
+        <position>5</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Camp Quality Employee Community.Navigational:PSP</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>PSP</name>
+        <parentName></parentName>
+        <position>3</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Camp Quality Employee Community.Navigational:Policies</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Policies</name>
+        <parentName></parentName>
+        <position>4</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Camp Quality Employee Community.Navigational:Rec Programs</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Rec Programs</name>
+        <parentName></parentName>
+        <position>2</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Camp Quality Employee Community.Navigational:Volunteers</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Volunteers</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+</ManagedTopics>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Recurring_Donor_Status__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$HomePhone</field>
+    </columns>
+    <columns>
+        <field>Contact$MobilePhone</field>
+    </columns>
+    <columns>
+        <field>Contact$Email</field>
+    </columns>
+    <columns>
+        <field>Contact$npe01__Home_Address__c</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>2021 March - RG Update for Direct Debit - Phone</value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>Contact$Id</primaryTableColumn>
+        <relatedTable>CampaignMember-Campaign</relatedTable>
+        <relatedTableJoinColumn>Contact</relatedTableJoinColumn>
+    </crossFilters>
+    <crossFilters>
+        <criteriaItems>
+            <column>Subject</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Payment Gateway update</value>
+        </criteriaItems>
+        <operation>without</operation>
+        <primaryTableColumn>Contact$Id</primaryTableColumn>
+        <relatedTable>Activity</relatedTable>
+        <relatedTableJoinColumn>Who</relatedTableJoinColumn>
+    </crossFilters>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact$MailingState</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>2021 RG update - Phone List</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_recurring_payments__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Contact$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Contact$X2020_Camp_In_Join_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

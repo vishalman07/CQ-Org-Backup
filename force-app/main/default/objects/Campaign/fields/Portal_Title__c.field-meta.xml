@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portal_Title__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <externalId>false</externalId>
+    <inlineHelpText>This name will appear on the CQ Safe form and is used for the family &amp; volunteer portal. Choose a clear, friendly and unique name for easy recognition and to avoid confusion.</inlineHelpText>
+    <label>Portal Title</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

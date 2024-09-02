@@ -1,0 +1,677 @@
+<apex:page standardStylesheets="false" title="Retreat Booking" controller="portalRetreatBookingController"
+           docType="html-5.0" applyHtmlTag="false" applyBodyTag="false"
+           showHeader="false" sidebar="false">
+
+    <apex:stylesheet value="{!URLFOR($Resource.Calendar, '/fullcalendar.min.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Calendar, '/lib/moment.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Calendar, '/fullcalendar.min.js')}"/>
+    <!--<link href="css/bootstrap-year-calendar.css" rel="stylesheet"/>-->
+    <!--<script src="js/bootstrap-year-calendar.js"/>-->
+
+    <apex:outputPanel id="mainForm">
+        <script>
+
+            var getUrlParameter = function getUrlParameter(sParam) {
+                var sPageURL = window.location.search.substring(1),
+                    sURLVariables = sPageURL.split('&'),
+                    sParameterName,
+                    i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                    }
+                }
+            };
+
+            $(function () {
+
+                $('input[id$=checkInDate]').readOnly = true;
+
+                $('#calendar').fullCalendar({
+                    // put your options and callbacks here
+                    header: {
+                        left: '',
+                        center: 'title',
+                        right: 'today prev,next',
+                    },
+                    height: 375,
+                    contentHeight: 375,
+                    color: 'yellow',   // an option!
+                    textColor: 'black', // an option!
+                    selectable: true,
+                    dayRender: function( date, cell ) {
+
+                        //  2 week delay in being allowed to book
+                        if (date > moment() && date < moment().add(15, "days")){
+                              $(cell).css('background-color','#f3f3f3');
+                            $(cell).css('cursor','none');
+                            $(cell).css('pointer-events','none');
+                        }
+
+
+                        //Salamander Bay:
+                        //Sunday from 2.00 p.m. to Friday at 10.00 a.m.
+                        //    OR
+                       // Friday from 2.00 p.m. to Sunday at 10.00 a.m.
+                        // so we allow only Sunday or Friday to click
+                        //Update only Thursday from 10.00 a.m. to Tuesday at 4.00 p.m. with Wednesday being cleaning and maintenance day
+
+                        if('{! property.Type__c}' == 'Salamander'){
+
+                            if(date > moment().add(15, "days")){
+                                //if(moment(date).day() != 0 && moment(date).day() != 5){
+                                    if(moment(date).day() != 4){
+                                    
+                                    $(cell).css('background-color','#f3f3f3');
+                                    $(cell).css('cursor','none');
+                                    $(cell).css('pointer-events','none');
+                                }
+                            }
+                        }
+
+                        //if Not available on weekend are checked then we allow only monday to friday
+
+                       var noWeekend = {! property.Not_available_on_weekend__c } ;
+
+                        if(noWeekend == true){
+                            if(date > moment().add(15, "days")){
+                                if(moment(date).day() != 1){
+
+                                    $(cell).css('background-color','#f3f3f3');
+                                    $(cell).css('cursor','none');
+                                    $(cell).css('pointer-events','none');
+                                }
+                            }
+                        }
+
+                    },
+                    select:function (start, end) {
+
+                        if(start.isBefore(moment().add(15, "days"))) {
+                            $('#calendar').fullCalendar('unselect');
+                            return false;
+                        }
+
+                        if('{! property.Type__c}' == 'Salamander'){
+
+                            if(start > moment().add(15, "days")){
+                                //if(moment(start).day() != 0 && moment(start).day() != 5){
+                                    if(moment(start).day() != 4 ){
+                                //if(moment(date).day() != 4){
+                                    $('#calendar').fullCalendar('unselect');
+                                    return false;
+                                }
+                            }
+                        }
+
+                        var noWeekend = {! property.Not_available_on_weekend__c } ;
+
+                        if(noWeekend == true){
+                            if(start > moment().add(15, "days")){
+                                if(moment(start).day() != 1){
+
+                                    $('#calendar').fullCalendar('unselect');
+                                    return false;
+                                }
+                            }
+                        }
+
+
+                            $("span[id$='ajaxStatus.start']").css('display', 'block');
+                            var los_str = '';
+
+                            var startDate = moment(start).format('DD/MM/YYYY');
+                            portalRetreatBookingController.lengthOfStay(getUrlParameter('pid'), startDate, function (result) {
+                                console.log('length of stay result');
+                                console.log(result);
+                                los_str = result;
+
+                                $('#los').val(los_str);
+                                if (los_str != null && los_str != undefined && los_str != '') {
+                                    los_str = los_str.split(' ');
+                                    var los = parseInt(los_str[0]);
+
+                                    $('#calendar').fullCalendar('clientEvents', function (event) {
+                                        if (event.title == 'Requested') {
+                                            $('#calendar').fullCalendar('removeEvents', event._id);
+                                        }
+                                    });
+
+                                    var myDate = new Date();
+
+                                    //How many days to add from today?
+                                    var daysToAdd = 15;
+
+                                    myDate.setDate(myDate.getDate() + daysToAdd);
+
+                                    if (start < myDate) {
+                                        //TRUE Clicked date smaller than today + daysToadd
+                                        alert("You cannot book on this day!");
+                                    }
+                                    else {
+                                        //FLASE Clicked date larger than today + daysToadd
+                                        //  alert("Excellent choice! We can book today..");
+
+                                        end = moment(start).add(los, 'days');
+
+                                        $('#calendar').fullCalendar('renderEvent',
+                                            {
+                                                title: 'Requested',
+                                                start: start,
+                                                end: end
+                                            },
+                                            true // make the event "stick"
+                                        );
+
+
+                                        $('#calendar').fullCalendar('unselect');
+
+
+                                        var sDate = moment(start).format('YYYY-MM-DD');
+                                        var eDate = moment(end).format('YYYY-MM-DD');
+
+                                        $('input[id$=checkInDate]').val(sDate);
+                                        $('input[id$=checkOutDate]').val(eDate);
+
+                                        $('input[id$=checkInGuest]').trigger('change');
+
+                                    }
+                                }
+
+                            });
+
+                            $("span[id$='ajaxStatus.start']").css('display', 'none');
+
+
+                        },
+                    validRange: function (nowDate) {
+                        return {
+                            start: nowDate.clone().add(-1, 'days')
+                        };
+                    },
+                    events: function (start, end, timezone, callback) {
+                        portalRetreatBookingController.searchExistingBookings(getUrlParameter('pid'), function (result) {
+                            // console.log(result);
+                            callback(result);
+                        });
+                    },
+                    eventMouseover: function (event, element) {
+                        $(this).tooltip({title: event.description, html: true, container: "body"});
+                        $(this).tooltip('show');
+                    },
+                });
+            });
+
+
+            function ValidatePage1() {
+                validator = $('form[id$=retreatFrom]').validate();
+
+                if (!validator.form()) {
+                    $('html, body').animate({
+                        scrollTop: $(validator.errorList[0].element).offset().top
+                    }, 1000);
+
+                    throw new Error('cancel');
+                }
+            }
+
+        </script>
+
+        <style>
+            label.error {
+                margin: 1rem;
+            }
+
+            .datepicker.dropdown-menu {
+                z-index: 999999 !important;
+            }
+
+            .fc-bgevent {
+                background-color: #9f4294;
+            }
+
+            .btn-default.disabled, .btn-default.disabled.active,
+            .btn-default.disabled.focus, .btn-default.disabled:active,
+            .btn-default.disabled:focus, .btn-default.disabled:hover,
+            .btn-default[disabled], .btn-default[disabled].active,
+            .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled]:focus,
+            .btn-default[disabled]:hover, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default.active,
+            fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:hover {
+                color: #ccc;
+            }
+
+            body {
+                font-family: "Nunito", "Myriad Pro", "Helvetica", "sans-serif";
+            }
+
+            .hero_header {
+                padding: 2rem;
+            }
+
+            .hero {
+                background: rgba(255, 255, 255, 0.65);
+                background: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url('{!property.Image_URL__c}') center center no-repeat;
+                background-size: cover;
+                padding: 3rem 2rem 8rem 2rem;
+            }
+
+            .list-group-item {
+                background: rgba(255, 255, 255, 0.75);
+            }
+
+            .lockBooking {
+                font-weight: 600;
+                font-size: 15px;
+            }
+
+            .form-checkbox {
+                margin-right: 10px !important;
+            }
+
+            .btn.btn-sm {
+                padding: 5px 10px;
+                font-size: 12px;
+                line-height: 1.5;
+                border-radius: 3px;
+            }
+
+        </style>
+
+
+        <apex:outputPanel rendered="{!noId}" layout="block" styleClass="container-fluid">
+            <div class="alert alert-danger" role="alert">Invalid page, contact administrator.</div>
+        </apex:outputPanel>
+
+        <apex:outputPanel layout="block" rendered="{!not(noId == true)}">
+            <!--Jumbotron-->
+            <div class="jumbotron hero">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2 class="hero_header">{!property.Name}</h2>
+                        </div>
+                        <div class="col-md-12">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <b>{!$ObjectType.Property__c.fields.Address__c.Label}</b> -
+                                    {!IF(isblank(property.Address__c), 'N/A', property.Address__c)}
+                                </li>
+                                <li class="list-group-item">
+                                    <b>{!$ObjectType.Property__c.fields.State__c.Label}</b> -
+                                    {!IF(isblank(property.State__c), 'N/A', property.State__c)}
+                                </li>
+                                <li class="list-group-item">
+                                    <b>{!$ObjectType.Property__c.fields.Guests__c.Label}</b> -
+                                    {!IF(isblank(property.Guests__c), 'N/A', property.Guests__c)}
+                                </li>
+                                <li class="list-group-item">
+                                    <b>{!$ObjectType.Property__c.fields.Length_of_stay__c.Label}</b>
+                                    - {!IF(isblank(property.Length_of_stay__c), 'N/A',
+                                    property.Length_of_stay__c)}
+                                </li>
+                                <li class="list-group-item"><b>Description</b> <br/>
+                                    <!--<p style="height: 100px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">-->
+                                    <p class="block-with-text">
+                                        {!IF(isblank(property.Portal_Description__c), 'N/A', '')}
+                                        <apex:outputText value="{!property.Portal_Description__c}"
+                                                         rendered="{!!isblank(property.Portal_Description__c)}"
+                                                         escape="false" style="font-size: 14px !important;"/>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--form-->
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 style="color: #9f4294;">Booking Form</h4>
+                        <hr/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <apex:form id="retreatFrom">
+                            <apex:pageMessages id="msgIdTop"/>
+
+
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <input type="text" class="form-control" id="location" value="{!property.Name}"
+                                       disabled="disabled"/>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label for="los">Length of stay</label>
+                                                <input type="text" class="form-control" id="los"
+                                                       value="{!property.Length_of_stay__c}" disabled="disabled"/>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <apex:outputLabel for="checkInDate"
+                                                                  value="{!$ObjectType.Retreat_Booking__c.fields.Check_In_Date__c.Label}"/>
+                                                <apex:inputField type="date" id="checkInDate"
+                                                                 value="{!bw.booking.Check_In_Date__c}"
+                                                                 showDatePicker="false"
+                                                                 styleClass="form-control required"/>
+                                                <apex:inputField type="date" id="checkOutDate"
+                                                                 value="{!bw.booking.Check_Out_Date__c}"
+                                                                 showDatePicker="false" styleClass="form-control"
+                                                                 style="display:none;"/>
+                                                <!--<apex:inputText value="{!booking.Check_In_Date__c}" styleClass="form-control datepicker" html-readonly="true" />-->
+                                            </div>
+                                            <div class="col-md-12">
+                                                <apex:outputLabel for="checkInGuest"
+                                                                  value="{!$ObjectType.Retreat_Booking__c.fields.Guests__c.Label}"/>
+                                                <apex:inputField styleClass="form-control required" id="checkInGuest"
+                                                                 type="number" value="{!bw.booking.Guests__c}"
+                                                                 html-step="1" html-min="1"
+                                                                 html-max="{!property.Guests__c}">
+                                                    <apex:actionSupport event="onchange"
+                                                                        action="{!getFamily}"
+                                                                        reRender="guestformWrapper,msgIdBottom"
+                                                                        status="ajaxStatus"/>
+                                                </apex:inputField>
+                                                <p class="help-block">Number of guests: 1-{!property.Guests__c}</p>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <apex:outputPanel id="guestformWrapper" layout="block">
+                                                    <apex:actionRegion >
+                                                        <apex:outputPanel rendered="{! bw.booking.Guests__c != null}">
+                                                            <!--<apex:outputPanel id="guestform" layout="block">-->
+
+                                                                <!--<apex:inputCheckbox id="guestRegister"-->
+                                                                                    <!--value="{!bw.guestRegister}"-->
+                                                                                    <!--styleClass="form-checkbox">-->
+                                                                    <!--<apex:actionSupport event="onchange"-->
+                                                                                        <!--reRender="guestform, msgIdBottom"-->
+                                                                                        <!--action="{!getFamily}"-->
+                                                                                        <!--status="ajaxStatus"/>-->
+                                                                <!--</apex:inputCheckbox>-->
+                                                                <apex:outputLabel value="register family members"
+                                                                                  for="guestRegister"/>
+
+                                                                <!--<apex:outputPanel-->
+                                                                        <!--rendered="{! bw.guestRegister == true}">-->
+                                                                    <apex:outputPanel id="guestlist" layout="block">
+
+                                                                        <h4>Who is attending</h4>
+
+                                                                        <apex:repeat value="{!familyMap}" var="f">
+
+                                                                            <apex:outputPanel layout="block">
+                                                                                <apex:inputCheckbox id="gl"
+                                                                                                    value="{! familyChecked[f]}"
+                                                                                                    styleClass="form-checkbox"
+                                                                                                    disabled="{! AND( familyChecked[f] == false,sizeOfGuest >= bw.booking.Guests__c)}">
+                                                                                    <apex:actionSupport event="onchange"
+                                                                                                        reRender="guestlist,msgIdBottom"
+                                                                                                        status="ajaxStatus"
+                                                                                                        action="{! countFamilychecked }"/>
+                                                                                </apex:inputCheckbox>
+
+                                                                                <apex:outputLabel value="{! familyMap[f].FirstName +' '+ familyMap[f].LastName} "
+                                                                                        for="{!$Component.gl}"/>
+                                                                            </apex:outputPanel>
+
+                                                                        </apex:repeat>
+
+                                                                        <apex:variable var="i" value="{! 1 }"/>
+                                                                        <apex:repeat value="{!bw.extraGuest}" var="g">
+
+                                                                            <h4>Guest {! i }</h4>
+                                                                            <apex:outputPanel layout="block">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <apex:outputLabel for="{!$Component.gFirstName}"
+                                                                                                value="{!$ObjectType.Contact.fields.FirstName.Label}"/>
+                                                                                        <apex:inputField styleClass="form-control required"
+                                                                                                id="gFirstName"
+                                                                                                value="{!g.FirstName}"/>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <apex:outputLabel for="{!$Component.gLastName}"
+                                                                                                value="{!$ObjectType.Contact.fields.LastName.Label}"/>
+                                                                                        <apex:inputField styleClass="form-control required"
+                                                                                                id="gLastName"
+                                                                                                required="false"
+                                                                                                value="{!g.LastName}"/>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+
+                                                                                        <apex:outputLabel for="{!$Component.gBdate}"
+                                                                                                value="{!$ObjectType.Contact.fields.Birthdate.Label}"/>
+
+                                                                                        <apex:inputField styleClass="form-control required"
+                                                                                                id="gBdate" type="date"
+                                                                                                value="{!g.Birthdate}"/>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <apex:outputLabel for="{!$Component.gType}"
+                                                                                                value="{!$ObjectType.Contact.fields.Family_Member_Type__c.Label}"/>
+                                                                                        <apex:inputField styleClass="form-control required"
+                                                                                                id="gType"
+                                                                                                value="{!g.Family_Member_Type__c}"/>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <apex:commandButton value="remove Extra Guest"
+                                                                                        action="{! removeExtraGuest}"
+                                                                                        styleClass="btn btn-info btn-sm"
+                                                                                        reRender="guestlist,msgIdBottom"
+                                                                                        immediate="true"
+                                                                                        status="ajaxStatus">
+                                                                                    <apex:param name="index"
+                                                                                                value="{! i }"
+                                                                                                assignTo="{! removeGuestId}"/>
+                                                                                </apex:commandButton>
+                                                                            </apex:outputPanel>
+                                                                            <apex:variable var="i" value="{! i +1}"/>
+                                                                        </apex:repeat>
+
+                                                                        <apex:outputPanel rendered="{! sizeOfGuest < bw.booking.Guests__c }">
+
+                                                                            <!--<apex:actionRegion>-->
+                                                                            <apex:commandButton value="Add Extra Guest"
+                                                                                                action="{! addExtraGuest}"
+                                                                                                styleClass="btn btn-primary btn-sm"
+                                                                                                reRender="guestlist,msgIdBottom"
+                                                                                                status="ajaxStatus"/>
+                                                                            <!--</apex:actionRegion>-->
+
+                                                                        </apex:outputPanel>
+
+
+                                                                    </apex:outputPanel>
+                                                                <!--</apex:outputPanel>-->
+
+                                                            <!--</apex:outputPanel>-->
+
+
+                                                        </apex:outputPanel>
+                                                    </apex:actionRegion>
+                                                </apex:outputPanel>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <h4>Emergency Contact Not Going To Retreat</h4>
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <apex:outputLabel for="eName"
+                                                                          value="Name"/>
+                                                        <apex:inputField styleClass="form-control required" id="eName"
+                                                                         value="{!bw.booking.Emergency_Contact_Name__c}"/>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+
+                                                        <apex:outputLabel for="eRel"
+                                                                          value="Relationship"/>
+                                                        <apex:inputField styleClass="form-control required" id="eRel"
+                                                                         value="{!bw.booking.Emergency_Contact_RelationShip__c}"/>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <apex:outputLabel for="eMob"
+                                                                          value="Mobile"/>
+                                                        <apex:inputField styleClass="form-control required" id="eMob"
+                                                                         value="{!bw.booking.Emergency_Contact_Mobile__c}"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <h4>Special Requirement</h4>
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <apex:inputField styleClass="form-checkbox" id="ewheel"
+                                                                         value="{!bw.booking.Wheelchair_Access_Limited_Mobility__c	}"/>
+                                                        <apex:outputLabel for="ewheel"
+                                                                          value="{!$ObjectType.Retreat_Booking__c.fields.Wheelchair_Access_Limited_Mobility__c.Label}"/>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <apex:outputLabel for="eSpReq"
+                                                                          value="{!$ObjectType.Retreat_Booking__c.fields.Any_other_special_requirements__c.Label}"/>
+
+                                                        <apex:inputField styleClass="form-control" id="eSpReq"
+                                                                         value="{!bw.booking.Any_other_special_requirements__c	}"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <h4>Disclaimer</h4>
+                                                <!--<div class="row">
+                                                    <div class="col-md-12">
+                                                        <apex:inputField styleClass="form-checkbox required"
+                                                                         id="dutyofcare"
+                                                                         value="{!bw.booking.Duty_of_care__c}"/>
+                                                        <apex:outputLabel for="dutyofcare"
+                                                                          value="{!$ObjectType.Retreat_Booking__c.fields.Duty_of_care__c.Label}"/>
+                                                    </div>
+                                                </div>-->
+                                                 <apex:outputPanel rendered="{! property.Type__c == 'Salamander'}">
+                                        <p>
+                                            
+    <ol>
+        
+<li>I acknowledge that the Property  has been made available to me and my family for respite purposes by Camp Quality Ltd during the period booked. </li>
+<li>I represent that I am 18 years of age or older. If I am bringing a minor as a Guest, I acknowledge and agree that I am solely responsible for the supervision of that minor throughout the duration of the stay at the Property and have read this Guest Release and Waiver and agree to it on the minor’s behalf.</li>
+<li>I assume, on behalf of myself and the Minor(s) (if applicable), all risk of personal injury, death or disability to me and/or the Minor(s) (if applicable) that might result from staying at the Property. </li>
+<li>I acknowledge that I accept financial responsibility for any damage caused to the property during the period of our occupation</li>
+<li>I represent and warrant that I am over the age of 18 and have the capacity to agree to this release and waiver. Where I am signing on behalf of a Minor I represent and warrant that I am authorised to do so.</li>
+<li>To the extent permitted by law, I agree on behalf of myself and/or the Minor(s)and my/their personal representatives, successors, heirs, and assigns to release and hold Camp Quality, its officers, directors, agents and employees (collectively, the “Releasees”) harmless from any and all claims or causes of action arising out of my and/or the Minor(s) occupation and stay at the Property.</li>
+    <li>In consideration of Camp Quality allowing me and my family to temporarily occupy the Property I agree to indemnify  Camp Quality on a full indemnity basis for all direct and consequential loss, damage and liabilities whether monetary or capable of being converted into money suffered by Camp Quality as a result of, or caused by, or contributed by You or any person for whom You have legal responsibility for.</li>
+                                                         </ol>                                        
+                                                     </p>                            
+                                                        </apex:outputPanel>
+                                                        <apex:outputPanel rendered="{! property.Type__c!= 'Salamander'}"><p>
+                                                        
+                                                            <ol>
+                                                                
+<li>I acknowledge that the Property  has been made available to me and my family for respite purposes during the period requested. </li>
+<li>I acknowledge that the Property is:
+	a.	 solely provided by a Third Party and is not a Camp Quality Limited (Camp Quality) owned or administered Property; and 
+	b.	the role of Camp Quality is restricted to only providing an introduction for me and my family including any minor, to the owner of the Property.</li>
+                                                                <li>I represent that I am 18 years of age or older. If I am bringing a minor as a Guest, I acknowledge and agree that I am solely responsible for the supervision of that minor throughout the duration of the stay at the Property and have read this Guest Release and Waiver and agree to it on the minor’s behalf.</li>
+<li>I assume, on behalf of myself and the Minor(s) (if applicable), all risk of personal injury, death or disability to me and/or the Minor(s) (if applicable) that might result from staying at the Property. </li>
+<li>I acknowledge that I accept financial responsibility for any damage caused to the property during the period of our occupation</li>
+<li>I represent and warrant that I am over the age of 18 and have the capacity to agree to this release and waiver. Where I am signing on behalf of a Minor I represent and warrant that I am authorised to do so.</li>
+<li>To the extent permitted by law, I agree on behalf of myself and/or the Minor(s)and my/their personal representatives, successors, heirs, and assigns to release and hold Camp Quality, its officers, directors, agents and employees (collectively, the “Releasees”) harmless from any and all claims or causes of action arising out of my and/or the Minor(s) occupation and stay at the Property.
+                                                                </li>
+                                                                </ol>
+</p>
+                                                        
+                                                        </apex:outputPanel>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                       
+                                                        
+                                                        <apex:inputField styleClass="form-checkbox required"
+                                                                         id="indemnity"
+                                                                         value="{!bw.booking.Indemnity__c}"/>
+                                                        <apex:outputLabel for="indemnity"
+                                                                          value="I agree to the above conditions"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div id='calendar' style="padding: 1rem 0;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group text-center">
+                                <!--<button type="submit" class="btn btn-default" style="margin: 1rem auto; width: 90%">Submit</button>-->
+                                <apex:commandButton id="saveButton" rendered="{!lockBooking == false}"
+                                                    onClick="ValidatePage1()" reRender="msgIdTop,msgIdBottom,mainForm"
+                                                    value="Submit" styleClass="btn btn-default"
+                                                    style="margin: 1rem auto; width: 90%" action="{! save}"
+                                                    status="ajaxStatus"/>
+
+                                <apex:outputPanel rendered="{! lockBooking }">
+
+                                    <div class="lockBooking">
+                                        You have 1 pending requested booking.please Contact administrator to rebook
+                                        respite.
+                                    </div>
+
+                                </apex:outputPanel>
+
+                            </div>
+
+
+                            <apex:pageMessages id="msgIdBottom"/>
+
+                        </apex:form>
+
+                        <apex:actionStatus id="ajaxStatus">
+                            <apex:facet name="start">
+                                <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.25; z-index: 1000; background-color: black;">
+                                    &nbsp;
+                                </div>
+                                <div style="position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 1001; margin: 15% 50%">
+                                    <div style="display: inline-block; padding: 2px; background-color: #fff; width: 225px;">
+                                        <img src="{! $Resource.mercury__loader }" style="float: left; margin: 8px;"/>
+                                    </div>
+                                </div>
+                            </apex:facet>
+                        </apex:actionStatus>
+                    </div>
+                </div>
+            </div>
+
+        </apex:outputPanel>
+    </apex:outputPanel>
+</apex:page>

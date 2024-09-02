@@ -1,0 +1,92 @@
+<apex:page standardController="Campaign" title="Print Special Needs" extensions="PrintSpecialNeedController" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false" cache="false" >
+    <head>
+        <style>
+            @page {
+                size: A4;
+                margin: 5mm;
+                @top-center {
+                    content: "Dietary Needs Report";
+                }
+                @bottom-center {
+                    content: "Page " counter(page) " of " counter(pages);
+                }
+            }
+            .page-break {
+                display:block;
+                page-break-after:always;
+            }
+            body {
+                font-family: Arial Unicode MS;
+            }
+        </style>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900');
+            
+        html, body, form, input {
+            font-family: 'Poppins', sans-serif; 
+            color: #001f34
+        }
+            
+        h1, h2{
+            font-weight:400;
+        }
+        </style>
+    </head>
+    <body>
+        <button onclick="window.print()">Print this report</button>  
+        <table>
+            <tr> 
+                <td width = "80%">
+                    <h1>Dietary Needs Report</h1>
+                    <h1>Event: {!record.name}</h1>
+                    <h1>
+                        Printed: <apex:outputText value="{0, date, d/M/yyyy}">
+                        <apex:param value="{!now()}" /> 
+                      </apex:outputText>
+                    </h1>
+                </td>   
+                <td width = "20%">
+                    <apex:image url="{!URLFOR($Resource.CQYellowLogo)}" width="200" height="200" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <h2>Family Dietary Needs</h2>
+        <table style = "border: 1px solid black;border-spacing: 0px" width="725px">
+            <tr style="page-break-inside:avoid; page-break-after:auto">
+                <th style = "padding: 5px; border: 1px solid black;" width="100px">Name</th>
+                <th style = "padding: 5px; border: 1px solid black;" width="50px">Age</th>
+                <th style = "padding: 5px; border: 1px solid black;" width="100px">Family Member Type</th>
+                <th style = "padding: 5px; border: 1px solid black;" width="175px">Special Needs</th>
+                <th style = "padding: 5px; border: 1px solid black;" width="275px">Comments</th>    
+            </tr>
+            <apex:repeat value="{!FamDiet}" var="Family">
+                <tr style="page-break-inside:avoid; page-break-after:auto">
+                    <td style = "padding: 5px; border: 1px solid black;">{!Family.contact__r.Name}</td>
+                    <td style = "padding: 5px; border: 1px solid black;">{!Family.contact__r.Age__c}</td>
+                    <td style = "padding: 5px; border: 1px solid black;">{!Family.contact__r.Family_Member_Type__c}</td>
+                    <td style = "padding: 5px; border: 1px solid black;">{!Family.Long_Description__c}</td>
+                    <td style = "padding: 5px; border: 1px solid black;">{!Family.Comments__c}{!Family.Legacy_Comments_To_Be_Purged_June_2017__c}</td>
+                </tr>
+            </apex:repeat>        
+        </table>
+		<br />
+		<div class="page-break"></div>
+		<h2>Volunteer Dietary Needs</h2>
+
+        <table style = "border: 1px solid black;border-spacing: 0px" width="725px">
+            <tr style="page-break-inside:avoid; page-break-after:auto">
+                <th style = "padding: 5px; border: 1px solid black;" width="100px">Name</th>
+                <th style = "padding: 5px; border: 1px solid black;" width="125px">Special Needs</th>
+                <th style = "padding: 5px; border: 1px solid black;" width="425px">Comments</th>
+            </tr>
+            <apex:repeat value="{!VolDiet}" var="Volunteer">
+                <tr style="page-break-inside:avoid; page-break-after:auto">
+                    <td style = "padding: 5px; border: 1px solid black;">{!Volunteer.Contact__r.Name}</td>
+                    <td style = "padding: 5px; border: 1px solid black;"><apex:outputText value="{!Volunteer.Long_Description__c}"/></td>
+                    <td style = "padding: 5px; border: 1px solid black;"><apex:outputText value=" {!Volunteer.Comments__c}{!Volunteer.Legacy_Comments_To_Be_Purged_June_2017__c}"/></td>
+                </tr>
+            </apex:repeat>
+        </table>
+	</body>
+</apex:page>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Request_Date__c</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Show_Date__c</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Show_Status__c</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Number_Of_Shows__c</field>
+    </columns>
+    <columns>
+        <field>PuppetShow__c.Performance_Group__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>PuppetShow__c.Show_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>,Metropolitan School Visit,Country School Visit,Hospital Visit,Camp Quality Event - School Show,Camp Quality Event - Program,Brand Relations,Hospital Visit - No Puppets</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>PSP Requests &amp; Shows 2016-2018</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$PuppetShow__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>PuppetShow__c.Show_Date__c</dateColumn>
+        <endDate>2018-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-01-01</startDate>
+    </timeFrameFilter>
+</Report>

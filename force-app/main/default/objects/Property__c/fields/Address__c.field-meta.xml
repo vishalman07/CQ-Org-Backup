@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address__c</fullName>
+    <description>Complete address shown on the portal</description>
+    <inlineHelpText>Complete address shown on the portal</inlineHelpText>
+    <label>Address</label>
+    <length>2000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

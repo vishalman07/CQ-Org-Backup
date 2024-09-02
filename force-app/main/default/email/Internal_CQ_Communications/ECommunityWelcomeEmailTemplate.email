@@ -1,0 +1,15 @@
+Hi {!Receiving_User.FirstName},
+
+Welcome to the new employee portal! 
+
+Through this portal you will be able to ask questions of employees, raise cases with the PSO support team and suggest improvements to our systems and processes through IDS.  
+
+To get started in navigating your way through this exciting portal, please click here:    {!Community_Url}
+If you have an existing FAVES/Salesforce login go to https://campquality.my.salesforce.com/?ec=302&startURL=%2F5002800000kKqJO get started.
+
+Your username is your email address: {!Receiving_User.Username}
+
+Once you have activated your account you can access the portal by going to https://www.mycampquality.org.au/employees at any time.
+
+Kind Regards,
+{!Organization.Name}

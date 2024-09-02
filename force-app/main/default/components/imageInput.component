@@ -1,0 +1,456 @@
+<apex:component access="global" controller="imageInputController" allowDML="true" >
+
+	<apex:attribute access="global" type="String" assignTo="{!aType}" name="AttachmentType" description="The type of attachment." />
+	<apex:attribute access="global" type="String" assignTo="{!showPortal}" name="ShowInPortal" description="Which portal the upload should be visible in." />
+	<apex:attribute access="global" type="Boolean" assignTo="{!replace}" name="ReplaceAttachment" description="Whether the upload should replace existing attachments." required="true" />
+	<apex:attribute access="global" type="String" assignTo="{!conId}" name="ContactID" description="The ID of the contact to relate the Attachment to." />
+	<apex:attribute access="global" type="String" assignTo="{!eveId}" name="EventID" description="The ID of the event to relate the Attachment to." />
+
+    <apex:includeScript value="{!URLFOR($Resource.assets, '/assets/js/croppie.js')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.assets, '/assets/css/croppie.css')}" />
+
+    <script type="text/javascript">
+
+      var $uploadCrop;
+      var current_image;
+
+      $(function() {
+        initCroppie();
+      });
+
+      function reInitCroppie() {
+
+        $('#croppieContainer').croppie('destroy');
+        current_image = null;
+        initCroppie();
+
+      }
+
+      function readFile(input) {
+        if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                
+                reader.onload = function (e) {
+
+                  var img = new Image();
+                  img.src  = e.target.result;
+                  var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+                  var canvas = document.createElement( 'canvas' );
+                  var ctx;
+                  var mw = 400;
+                  var mh = 300; 
+
+                  /*if (mw > img.width && mh > img.height) {
+
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+
+                    ctx = canvas.getContext('2d');
+
+                    $('.hideWhenSmall').hide();
+
+                    ctx.drawImage(img, 0, 0);
+
+                  } else {
+
+                    ctx = canvas.getContext('2d');
+
+                    if (mw > img.width) {mw = img.width;}
+                    if (mh > img.height) {mh = img.height;}
+
+                    //console.log(img.width);
+                    //console.log(img.height);
+
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+
+                    //console.log(canvas.width);
+                    //console.log(canvas.height);
+
+                    ctx.drawImage(img, 0, 0);
+
+                    var scale = 1;
+
+                    if (img.width > 1024) {
+                      scale = 1024 / img.width;
+                    }
+
+                    if ((768 / img.height) < scale) {
+                      scale = 768 / img.height;
+                    }
+
+                    if (scale > 0 && scale < 1) {
+                      downScaleImage(img, scale, canvas);
+                    }
+
+                  }*/
+                  /*if(!iOS && (img.naturalHeight < 300 || img.naturalWidth < 400)) {
+                    
+                    $('#cropContiner').addClass('error');
+                    resetFormElement($(input));
+
+                  } else {*/
+
+                    /*console.log(img);
+                    console.log(canvas);
+                    console.log(canvas.toDataURL( 'image/png' ));*/
+                  
+                    $('#cropContiner').addClass('ready');
+
+                    $uploadCrop.croppie('bind', {
+                      url: e.target.result//canvas.toDataURL( 'image/jpeg' )///*,
+                      //orientation: 1*/
+                    }).then(function(){
+                      console.log('jQuery bind complete');
+                    });
+
+                  //}
+                    
+                }
+                
+                reader.readAsDataURL(input.files[0]);
+            }
+            else {
+              swal("Sorry - you're browser doesn't support the FileReader API");
+              alert("Sorry - you're browser doesn't support the FileReader API");
+          }
+      }
+
+      function initCroppie() {
+
+        var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+        $uploadCrop = $('#croppieContainer').croppie({
+          viewport: {
+            width: 400,
+            height: 300,
+            type: 'square'
+          },
+          boundary: {
+            width: 500,
+            height: 400
+          },
+          //enableExif: true,
+          enableOrientation: !iOS
+        });
+
+        $('body').on('change', '.cropInput', function (e) { 
+
+            readFile(this);  
+            current_image = $(this).attr('id'); 
+          
+        });
+
+        $('#saveCrop').on('click', function (ev) {
+          $uploadCrop.croppie('result', {
+            type: 'canvas',
+            size: 'viewport'
+          }).then(function (resp) {
+
+            $('#cropLoadingContainer').show();
+
+            var current = $('#' + current_image);
+
+            if (current.data('update-image') !== null && $('#' + current.data('update-image')).length > 0) {
+              $('#' + current.data('update-image')).attr('src', resp);
+            }
+
+            saveImageFn(resp, current_image);
+
+          });
+        });
+
+        $('.croppieRotate').on('click', function() {
+          $uploadCrop.croppie('rotate', $(this).data('deg'));
+        });
+
+        if(iOS) {
+          $('.croppieRotate').hide();
+        }
+
+        $('body').on('click', '.closeCrop', function (ev) {
+
+          $('#cropContiner').removeClass('ready');
+          $('#cropContiner').removeClass('error');
+
+        });
+      }
+
+      function resetFormElement(e) {
+        e.wrap('<form>').closest('form').get(0).reset();
+        e.unwrap();
+
+        // Prevent form submission
+        //e.stopPropagation();
+        //e.preventDefault();
+      }
+
+      // scales the image by (float) scale < 1
+        // returns a canvas containing the scaled image.
+        function downScaleImage(img, scale, canvas) {
+          var imgCV = document.createElement('canvas');
+          imgCV.width = img.width;
+          imgCV.height = img.height;
+          var imgCtx = imgCV.getContext('2d');
+          imgCtx.drawImage(img, 0, 0);
+          return downScaleCanvas(imgCV, scale, canvas);
+        }
+
+        // scales the canvas by (float) scale < 1
+        // returns a new canvas containing the scaled image.
+        function downScaleCanvas(cv, scale, canvas) {
+          if (!(scale < 1) || !(scale > 0)) {
+            throw new Error('scale must be a positive number <1');
+          }
+          var sqScale = scale * scale; // square scale = area of source pixel within target
+          var sw = cv.width; // source image width
+          var sh = cv.height; // source image height
+          var tw = Math.floor(sw * scale); // target image width
+          var th = Math.floor(sh * scale); // target image height
+          var sx = 0,
+            sy = 0,
+            sIndex = 0; // source x,y, index within source array
+          var tx = 0,
+            ty = 0,
+            yIndex = 0,
+            tIndex = 0; // target x,y, x,y index within target array
+          var tX = 0,
+            tY = 0; // rounded tx, ty
+          var w = 0,
+            nw = 0,
+            wx = 0,
+            nwx = 0,
+            wy = 0,
+            nwy = 0; // weight / next weight x / y
+          // weight is weight of current source point within target.
+          // next weight is weight of current source point within next target's point.
+          var crossX = false; // does scaled px cross its current px right border ?
+          var crossY = false; // does scaled px cross its current px bottom border ?
+          var sBuffer = cv.getContext('2d')
+          .getImageData(0, 0, sw, sh).data; // source buffer 8 bit rgba
+          var tBuffer = new Float32Array(3 * tw * th); // target buffer Float32 rgb
+          var sR = 0,
+            sG = 0,
+            sB = 0; // source's current point r,g,b
+          /* untested !
+          var sA = 0;  //source alpha  */
+
+          for (sy = 0; sy < sh; sy++) {
+            ty = sy * scale; // y src position within target
+            tY = 0 | ty; // rounded : target pixel's y
+            yIndex = 3 * tY * tw; // line index within target array
+            crossY = (tY !== (0 | ty + scale));
+            if (crossY) { // if pixel is crossing botton target pixel
+              wy = (tY + 1 - ty); // weight of point within target pixel
+              nwy = (ty + scale - tY - 1); // ... within y+1 target pixel
+            }
+            for (sx = 0; sx < sw; sx++, sIndex += 4) {
+              tx = sx * scale; // x src position within target
+              tX = 0 | tx; // rounded : target pixel's x
+              tIndex = yIndex + tX * 3; // target pixel index within target array
+              crossX = (tX !== (0 | tx + scale));
+              if (crossX) { // if pixel is crossing target pixel's right
+                wx = (tX + 1 - tx); // weight of point within target pixel
+                nwx = (tx + scale - tX - 1); // ... within x+1 target pixel
+              }
+              sR = sBuffer[sIndex]; // retrieving r,g,b for curr src px.
+              sG = sBuffer[sIndex + 1];
+              sB = sBuffer[sIndex + 2];
+
+              /* !! untested : handling alpha !!
+                 sA = sBuffer[sIndex + 3];
+                 if (!sA) continue;
+                 if (sA != 0xFF) {
+                     sR = (sR * sA) >> 8;  // or use /256 instead ??
+                     sG = (sG * sA) >> 8;
+                     sB = (sB * sA) >> 8;
+                 }
+              */
+              if (!crossX && !crossY) { // pixel does not cross
+                // just add components weighted by squared scale.
+                tBuffer[tIndex] += sR * sqScale;
+                tBuffer[tIndex + 1] += sG * sqScale;
+                tBuffer[tIndex + 2] += sB * sqScale;
+              } else if (crossX && !crossY) { // cross on X only
+                w = wx * scale;
+                // add weighted component for current px
+                tBuffer[tIndex] += sR * w;
+                tBuffer[tIndex + 1] += sG * w;
+                tBuffer[tIndex + 2] += sB * w;
+                // add weighted component for next (tX+1) px
+                nw = nwx * scale;
+                tBuffer[tIndex + 3] += sR * nw;
+                tBuffer[tIndex + 4] += sG * nw;
+                tBuffer[tIndex + 5] += sB * nw;
+              } else if (crossY && !crossX) { // cross on Y only
+                w = wy * scale;
+                // add weighted component for current px
+                tBuffer[tIndex] += sR * w;
+                tBuffer[tIndex + 1] += sG * w;
+                tBuffer[tIndex + 2] += sB * w;
+                // add weighted component for next (tY+1) px
+                nw = nwy * scale;
+                tBuffer[tIndex + 3 * tw] += sR * nw;
+                tBuffer[tIndex + 3 * tw + 1] += sG * nw;
+                tBuffer[tIndex + 3 * tw + 2] += sB * nw;
+              } else { // crosses both x and y : four target points involved
+                // add weighted component for current px
+                w = wx * wy;
+                tBuffer[tIndex] += sR * w;
+                tBuffer[tIndex + 1] += sG * w;
+                tBuffer[tIndex + 2] += sB * w;
+                // for tX + 1; tY px
+                nw = nwx * wy;
+                tBuffer[tIndex + 3] += sR * nw;
+                tBuffer[tIndex + 4] += sG * nw;
+                tBuffer[tIndex + 5] += sB * nw;
+                // for tX ; tY + 1 px
+                nw = wx * nwy;
+                tBuffer[tIndex + 3 * tw] += sR * nw;
+                tBuffer[tIndex + 3 * tw + 1] += sG * nw;
+                tBuffer[tIndex + 3 * tw + 2] += sB * nw;
+                // for tX + 1 ; tY +1 px
+                nw = nwx * nwy;
+                tBuffer[tIndex + 3 * tw + 3] += sR * nw;
+                tBuffer[tIndex + 3 * tw + 4] += sG * nw;
+                tBuffer[tIndex + 3 * tw + 5] += sB * nw;
+              }
+            } // end for sx
+          } // end for sy
+
+          // create result canvas
+          var resCV;
+          if (canvas !== null) {
+            resCV = canvas;
+          } else {
+            resCV = document.createElement('canvas');
+          }
+
+          resCV.width = tw;
+          resCV.height = th;
+          var resCtx = resCV.getContext('2d');
+          var imgRes = resCtx.getImageData(0, 0, tw, th);
+          var tByteBuffer = imgRes.data;
+          // convert float32 array into a UInt8Clamped Array
+          var pxIndex = 0; //
+          for (sIndex = 0, tIndex = 0; pxIndex < tw * th; sIndex += 3, tIndex += 4, pxIndex++) {
+            tByteBuffer[tIndex] = Math.ceil(tBuffer[sIndex]);
+            tByteBuffer[tIndex + 1] = Math.ceil(tBuffer[sIndex + 1]);
+            tByteBuffer[tIndex + 2] = Math.ceil(tBuffer[sIndex + 2]);
+            tByteBuffer[tIndex + 3] = 255;
+          }
+          // writing result to canvas.
+          resCtx.putImageData(imgRes, 0, 0);
+          return resCV;
+        }
+
+
+    </script>
+
+    <style>
+
+        canvas { border: 1px solid #ccc; }
+
+        #cropContiner {position: fixed; overflow:scroll; display:none; width: 100%; height: 100%; left: 0; top: 0; padding:0; text-align:center; background-color: rgba(150,150,150,0.8); z-index: 4999;}
+
+        #cropContiner.ready, #cropContiner.error { display: block; }
+
+        .cropError {
+          display: none;
+        }
+
+        #cropContiner.error .cropError { display: block; }
+
+        #cropContiner.error .cropBox { display: none; }
+
+        .cropHold { 
+          position: fixed;
+          left: 50%;
+          width: 600px;
+          margin-left: -300px;
+          margin-top: 10px;
+          background: white;
+          border-radius: 10px;
+          top: 5%;
+          padding: 20px 0;
+          -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+          -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+          box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75); 
+          max-height: calc( 90% - 20px );
+          overflow-y: scroll;
+        }
+
+        #cropContiner p { margin:auto; text-align:center; font-weight:bold;}
+
+        #cropLoadingContainer {position: fixed; display:none; width: 100%; height: 100%; left: 0; top: 0; text-align:center; background-color:rgba(255,255,255,0.8); z-index: 5001;}
+
+        .small-button.green {
+          background-color:#209000;
+        }
+
+        .small-button.green:hover {
+          background-color:#1a7300;
+        }
+
+        /* to fix the mask */
+        .croppie-container .cr-viewport {
+          box-shadow: 0 0 2000px 2000px rgba(0, 0, 0, 0.5);
+        }
+
+        /* for general performance improvements, specially on mobile devices*/
+        .croppie-container .cr-image,
+        .croppie-container .cr-overlay, 
+        .croppie-container .cr-viewport {
+          -webkit-transform: translateZ(0);
+          -moz-transform: translateZ(0);
+          -ms-transform: translateZ(0);
+          transform: translateZ(0);
+        }
+
+    </style>
+
+    <apex:outputPanel id="cropPanel">
+        <div id="cropContiner">
+
+            <div id="outputContainer" class="cropHold">
+
+              <div class="cropError">
+
+                <p>
+                  Error: Failed to upload image.
+                </p> 
+                <br />
+
+                <input id="closeCrop" type="button" value="Close" class="small-button closeCrop" />
+
+              </div>
+
+              <div class="cropBox">
+
+                <!--<canvas id="canvasOutput" />-->
+                <div id="croppieContainer"></div>
+                <br/>
+                <input id="rotateLeft" type="button" value="Rotate Left" class="btn btn-primary croppieRotate" data-deg="-90" />
+                <input id="saveCrop" type="button" value="Save" class="btn btn-success"/>
+                <input id="cancelCrop" type="button" value="Cancel" class="btn btn-warning closeCrop" />
+                <input id="rotateRight" type="button" value="Rotate Right" class="btn btn-primary croppieRotate" data-deg="90" />
+                <apex:actionFunction name="saveImageFn" id="saveImageFn" action="{!saveImageData}" status="imageLoading" reRender="cropPanel" oncomplete="reInitCroppie();">
+                    <apex:param id="siv" name="siv" value="" assignTo="{!saveImageValue}" />
+                    <apex:param id="ci" name="ci" value="" assignTo="{!currentImage}" />
+                </apex:actionFunction>
+                <div style="clear:both;"></div>
+
+              </div>
+
+            </div>
+
+            <div style="clear:both;"></div>
+            <div id="cropLoadingContainer" style="display:none;">
+                <h2>Saving...</h2>
+                <img src="{!URLFOR($Resource.assets, '/assets/img/loader.gif')}"/>
+            </div>
+        </div>
+    </apex:outputPanel>
+
+</apex:component>

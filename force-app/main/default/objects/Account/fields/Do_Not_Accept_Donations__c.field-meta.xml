@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_Not_Accept_Donations__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Created so we know not to accept donations from this account.
+Connects to flows and contacts to trigger warning</description>
+    <inlineHelpText>mark this box for accounts we do not want to receive donations from , please also put in the reason why in the &quot;Do Not Accept Donations Reasons&quot; box.</inlineHelpText>
+    <label>Do Not Accept Donations</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

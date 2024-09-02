@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign.Fundraising_Registrations__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Campaign.Fundraising_Registrations__r$ATF_Status__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Fundraising_Registrations__r$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>Campaign.Fundraising_Registrations__r$CQ_RTFManager__c</field>
+    </columns>
+    <description>ATF created date and Campaign created Date</description>
+    <filter>
+        <criteriaItems>
+            <column>Campaign$CreatedDate</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>11/1/2020 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>2020</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign.Fundraising_Registrations__r$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>2021 CAMPAIGNS with ATF</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Campaigns_with_Requests_to_Fundraise__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Campaign.Fundraising_Registrations__r$CreatedDate</dateColumn>
+        <endDate>2021-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2021-01-01</startDate>
+    </timeFrameFilter>
+</Report>

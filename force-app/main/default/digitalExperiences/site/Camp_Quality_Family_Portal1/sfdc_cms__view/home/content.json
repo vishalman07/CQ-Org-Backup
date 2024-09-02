@@ -1,0 +1,64 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Home",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : {
+              "isVisible" : true
+            },
+            "sectionConfig" : "{\"UUID\":\"520317ec-2ab4-4faf-a373-08df6bd07745\",\"columns\":[{\"UUID\":\"1698033d-8d5b-4b58-9006-c0c51e63b59d\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : { }
+              },
+              "definition" : "c:familyMainPage",
+              "id" : "ba07c078-d761-4747-9f0a-e7cadc911f05",
+              "type" : "component"
+            } ],
+            "id" : "1698033d-8d5b-4b58-9006-c0c51e63b59d",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "520317ec-2ab4-4faf-a373-08df6bd07745",
+          "type" : "component"
+        } ],
+        "id" : "92141574-fc21-4f1d-a853-e9c2cdd1f126",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "Home",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "2447df6f-4261-4899-86f1-a79921c7eae4",
+          "type" : "component"
+        } ],
+        "id" : "2d1219b2-a057-4b0d-b14b-f60894c1984d",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "cd400659-5167-42dd-91c9-a08cc9ec159b",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "home"
+  }
+}

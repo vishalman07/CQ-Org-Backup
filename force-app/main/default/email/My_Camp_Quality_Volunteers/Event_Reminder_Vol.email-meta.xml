@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Logo_Letterhead</letterhead>
+    <name>Event Reminder To Volunteers</name>
+    <style>freeForm</style>
+    <subject>Reminder {!Campaign.Portal_Title__c} is on {!Campaign.StartDate}</subject>
+    <textOnly>Dear {!Contact.Preferred_First_Name__c},
+
+Remember you are registered to come to {!Campaign.Portal_Title__c} on {!Campaign.StartDate}.  
+
+{!Campaign.Event_Acceptance_Note__c}
+
+For more information on this event and your registration go to {!Campaign.Volunteer_Portal_Event_URL__c} .
+
+Kind Regards,
+
+{!Campaign.Campaign_Owner_Name__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

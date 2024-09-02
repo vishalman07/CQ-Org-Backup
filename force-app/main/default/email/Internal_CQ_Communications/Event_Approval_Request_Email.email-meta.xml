@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>npsp__NPSP_Sample_Letterhead</letterhead>
+    <name>Event Approval Request Email</name>
+    <style>freeForm</style>
+    <subject>You have a CQ Event awaiting your approval</subject>
+    <textOnly>Hi {!User.FirstName},
+
+An event has been created by {!Campaign.CreatedBy} and is awaiting your approval:
+
+Event Name: {!Campaign.Name}
+
+Type: {!Campaign.RecordType}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

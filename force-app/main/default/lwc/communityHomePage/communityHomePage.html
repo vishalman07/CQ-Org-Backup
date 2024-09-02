@@ -1,0 +1,30 @@
+<template>
+
+	<div class="slds-grid homeDiv">
+		<!-- <div class = "custom_position"> -->
+		<div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 font_orange ">
+			<span class="home">{label.home}</span>
+		</div>
+		</div>
+
+		<img src={headerPinkImg} class="headerImg">
+		<div class = "contact-margin">
+		<div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 text font_popinsLight custom_padding">
+			<lightning-formatted-rich-text value = {homeContent.Content__c}></lightning-formatted-rich-text>
+			<p>We have a dedicated Volunteer Team to help you along the way, so please don&apos;t hesitate to contact us at <a href="mailto:volunteers@campquality.org.au" style="text-decoration: underline;">volunteers@campquality.org.au</a> or call <a href="tel:1300662267" style="text-decoration: underline;">1300 662 267</a>.</p>
+		</div>
+
+		<c-volunteer-eligibility></c-volunteer-eligibility>
+	
+
+		<!-- <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12  font_orange custom_padding">
+			<div class="slds-col video slds-size_1-of-1">
+				<iframe width="800px" height="350" src="https://www.youtube.com/embed/jVPfyaaGSdA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div> -->
+		<!-- </div> -->
+	</div>
+<c-site-footer> </c-site-footer>
+
+	
+</template>

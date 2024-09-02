@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.CampaignMembers$Id</field>
+    </columns>
+    <columns>
+        <field>Contact.CampaignMembers$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$Email</field>
+    </columns>
+    <columns>
+        <field>Contact$Id</field>
+    </columns>
+    <columns>
+        <field>Contact.CampaignMembers.CampaignMembers*CampaignMember$Pack_Type__c</field>
+    </columns>
+    <description>2021 Big Walk for little kids campaign EDM list with pack type</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact.CampaignMembers$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>2021 BWFLK - ACQ EDM 1</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>BWFLK Campaign list with Pack Type</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Campaigns_Campaign_Members__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

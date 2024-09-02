@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Receive_Birthday_Email__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Automatically checked on Contact Record.</description>
+    <inlineHelpText>Uncheck this box to opt out of receiving birthday cards or emails</inlineHelpText>
+    <label>Receive Birthday Email</label>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

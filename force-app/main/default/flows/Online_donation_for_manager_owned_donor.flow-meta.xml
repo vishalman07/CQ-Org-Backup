@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_online_donation_alert</name>
+        <label>Opportunity.Send_online_donation_alert</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>Opportunity.Send_online_donation_alert</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Opportunity.Send_online_donation_alert</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>61.0</apiVersion>
+    <description>Migrated from the: Online donation for manager owned donor workflow rule
+Workflow rule description: Sends an alert when a new online donation is received for an account or contact that is owned by a fundraising manager. Excludes Philanthropy who have a separate alert, and donor development&quot;</description>
+    <label>Online donation for manager owned donor</label>
+    <migratedFromWorkflowRuleName>Online donation for manager owned donor</migratedFromWorkflowRuleName>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Send_online_donation_alert</targetReference>
+        </connector>
+        <filterFormula>AND(
+ {!$Record.CreatedBy.FirstName} =&quot;Vertic&quot;,
+OR(
+	
+
+ {!$Record.Account.Owner.UserRole.Name} = &quot;Corporate Partnerships Manager&quot;, 
+  {!$Record.Account.Owner.UserRole.Name} = &quot;Events &amp; Community Fundraising Manager&quot;,
+  {!$Record.Account.Owner.UserRole.Name} = &quot;Head of Stakeholder &amp; Business Development &quot;,
+  {!$Record.Account.Owner.UserRole.Name} = &quot;GM Fundraising&quot;,
+  {!$Record.npsp__Primary_Contact__r.Owner.UserRole.Name}  = &quot;Corporate Partnerships Manager&quot;, 
+  {!$Record.npsp__Primary_Contact__r.Owner.UserRole.Name} = &quot;Events &amp; Community Fundraising Manager&quot;,
+  {!$Record.npsp__Primary_Contact__r.Owner.UserRole.Name} = &quot;Head of Stakeholder &amp; Business Development &quot;,
+  {!$Record.npsp__Primary_Contact__r.Owner.UserRole.Name} = &quot;GM Fundraising&quot;
+  )
+  )</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

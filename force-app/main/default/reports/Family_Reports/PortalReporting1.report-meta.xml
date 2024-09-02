@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <acrossGroupingContext>Network.NetworkMembers$Member.LastLoginDate</acrossGroupingContext>
+        <calculatedFormula>RowCount/ PARENTGROUPVAL(RowCount, NetworkMember_User.Member.Account.Branch_Office__c, COLUMN_GRAND_SUMMARY)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>Network.NetworkMembers$Member.Account.Branch_Office__c</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% Of Total</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <acrossGroupingContext>Network.NetworkMembers$Member.LastLoginDate</acrossGroupingContext>
+        <calculatedFormula>RowCount/PARENTGROUPVAL(RowCount, ROW_GRAND_SUMMARY, COLUMN_GRAND_SUMMARY)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <downGroupingContext>ROW_GRAND_SUMMARY</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% Of Grand Total</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBarGrouped</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Network.NetworkMembers$Member.Account.Branch_Office__c</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <secondaryGroupingColumn>Network.NetworkMembers$Member.LastLoginDate</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Network$Name</field>
+    </columns>
+    <columns>
+        <field>Network.NetworkMembers$Member.Account.Priority__c</field>
+    </columns>
+    <columns>
+        <field>Network.NetworkMembers$Member.Contact.Branch_Office__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Network.NetworkMembers$Member.Account.Family_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Patient,Bereaved Family,Offspring Family,Offspring Bereaved Family</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Month</dateGranularity>
+        <field>Network.NetworkMembers$Member.LastLoginDate</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Network.NetworkMembers$Member.Account.Branch_Office__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Portal Report Families</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Network_With_Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Network$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

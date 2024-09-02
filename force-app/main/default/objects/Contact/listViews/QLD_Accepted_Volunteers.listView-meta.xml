@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QLD_Accepted_Volunteers</fullName>
+    <booleanFilter>1 AND (2 OR 3 OR 4 OR 5) AND (5 OR 6) AND 7</booleanFilter>
+    <columns>FULL_NAME</columns>
+    <columns>Volunteer_Status__c</columns>
+    <columns>CONTACT.PHONE3</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Date_From__c</columns>
+    <columns>Volunteer_Eligible__c</columns>
+    <columns>Volunteer_Eligibility__c</columns>
+    <columns>Branch_Office__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Contact.Volunteer</value>
+    </filters>
+    <filters>
+        <field>Branch_Office__c</field>
+        <operation>equals</operation>
+        <value>South Queensland</value>
+    </filters>
+    <filters>
+        <field>Branch_Office__c</field>
+        <operation>equals</operation>
+        <value>Central Queensland</value>
+    </filters>
+    <filters>
+        <field>Branch_Office__c</field>
+        <operation>equals</operation>
+        <value>North Queensland</value>
+    </filters>
+    <filters>
+        <field>Volunteer_Status__c</field>
+        <operation>equals</operation>
+        <value>Accepted Volunteer</value>
+    </filters>
+    <filters>
+        <field>Volunteer_Status__c</field>
+        <operation>equals</operation>
+        <value>Prospective Volunteer</value>
+    </filters>
+    <filters>
+        <field>Date_To__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>QLD Accepted Volunteers</label>
+</ListView>

@@ -1,0 +1,83 @@
+<template>
+
+	<div if:true={waitForRes} class="exampleHolder">
+		<lightning-spinner alternative-text="Loading" variant="brand" size="large"></lightning-spinner>
+	</div>
+	<div class="slds-col logoSizing">
+		<img src={campQualityLogo} alt="Not Visible">
+	</div>
+		<div class="slds-grid slds-wrap custom_font">
+			<div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12">
+				<div class="slds-box slds-p-around_medium form">
+					<div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 font_orange">
+						<div class="">
+							<h1 class="header">{label.forgetPasswordTitle}</h1>
+						</div>
+					</div>
+					<div class="slds-col slds-size_1-of_1 slds-medium-size_12-of-12 text font_popinsLight">
+						{label.resetpasswordtext}
+					</div>
+					<!-- <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 font_popinsLight">
+						<label class="slds-form-element__label" for="horizontal-form-element-id-01">
+								<abbr class="slds-required" title="required">* </abbr>{label.userName}</label>
+						<input type="text" placeholder={label.userName} class="slds-input form_input"  onchange={emailChange} onfocusout = {emailtoFocus} required />
+					</div> -->
+					<div class="slds-form-row">
+					<div class="slds-form__item font_popinsLight" role="listitem">
+						<div class="slds-form-element slds-form-element_horizontal  slds-is-editing label-left font_popinsLight">
+							<label class="slds-form-element__label font_popinsLight" for="horizontal-form-element-id-01">
+								<abbr class="slds-required" title="required">*</abbr>{label.userName}</label>
+							<div class="slds-form-element__control">
+								<input type="text" id="horizontal-form-element-id-01" class="slds-input" 
+									onchange={emailChange} onfocusout={emailtoFocus} required />
+							</div>
+							<div class="slds-form-element__help alert" id="horizontal-form-element-error-id-01" if:true={isValidUser}>
+								<span if:true={uservalid} class="alert slds-form__item font_popinsLight"
+									role="listitem">{label.validEmailMsg}</span>
+							</div>
+							<div if:true = {forgrtPassVali} class="alert">
+								<p>Pleae enter the valid username</p>
+							</div>
+							<div if:true={noUser}
+								class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 font_popinsLight ">
+								<span  class="alert"> {label.noActiveUser} </span>
+							</div>
+						</div>
+					</div>
+					</div>
+
+					<div class="slds-form__row ">
+					<div class="slds-form__item slds-formClass font_popinsLight" role="listitem" >
+						<div>
+							<a href="/login">{label.cancel}</a>
+						</div>
+						<div>
+							<button value="Login" class="slds-button slds-button_brand form_btn sendBtn"
+								onclick={loginClick}>{label.send}</button>
+						</div>
+					</div>					
+				</div>
+					
+
+
+						<!-- <div if:true={isValidUser} class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 font_popinsLight">
+							<span  class="alert"> {label.validUserName} </span>
+						</div> -->
+						<!-- <div if:true={noUser}
+							class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 font_popinsLight ">
+							<span  class="alert"> {label.noActiveUser} </span>
+						</div> -->
+						<!-- <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 custom_inline">
+							<button value="Login" class="slds-button slds-button_brand form_btn_send font_popinsLight" onclick= {loginClick}>{label.send}</button>
+						</div>
+						<div class="slds-size_1-of-1 slds-medium-size_6-of-12 custom_inline">
+							<a class="slds-button slds-button_neutral form_btn_cancel font_popinsLight"
+								href="/login">{label.cancel}</a>
+						</div> -->
+					</div>
+				</div>
+			</div>
+
+
+			<c-site-footer> </c-site-footer>
+</template>

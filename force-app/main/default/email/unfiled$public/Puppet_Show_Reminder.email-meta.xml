@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sent to Main Contact on Schools before a Puppet Show</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Logo</letterhead>
+    <name>Puppet Show Reminder</name>
+    <style>freeForm</style>
+    <subject>Our Camp Quality Puppets can&apos;t wait to meet you tomorrow!</subject>
+    <textOnly>Hi {{{PuppetShow__c.School_Main_Contact__c}}}
+
+Our staff and puppets are super excited to meet you and can&apos;t wait to perform at {{{PuppetShow__c.Venue__c}}} tomorrow!
+
+
+
+If you have any last minute queries or need to rebook, please contact us as soon as possible on 1300 662 267.
+
+
+See you soon!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

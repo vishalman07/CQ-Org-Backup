@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Letterhead</letterhead>
+    <name>RTF assigned</name>
+    <style>freeForm</style>
+    <subject>A new request to fundraise has been assigned to you</subject>
+    <textOnly>Great news – you have a new request to fundraise assigned to you. Please give them a call to thank them for their generous support, find out why they have signed up raise funds and see what support you can offer. Once you have done this follow the Request to Fundraise process here https://campqualityaudemo.sharepoint.com/:w:/s/Documents/Fundraising/Ee75IrOStcxJqDTAz0eX_YUB8UwQXcT_PQh53kZKZiWFCg?e=bjhTrQ&amp;CID=d0b6ab5a-a9f8-3baf-7ec5-f62f816b95f4 to issue them with an ATF asap so they can begin fundraising for Camp Quality.
+
+Link: https://campquality.lightning.force.com/{!Request_To_Fundraise__c.Id}
+Campaign: {!Request_To_Fundraise__c.Campaign__c}
+Contact: {!Request_To_Fundraise__c.Contact__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.Branch_Office__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Regionv2__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Volunteer_Status__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Volunteer_Eligible__c</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>Contact.Volunteer_Types__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Volunteer_Eligibility__c</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>PHONE3</field>
+    </columns>
+    <description>2020 - Created for Mandie Hawley; shows eligible and pending vollies with leadership roles</description>
+    <filter>
+        <booleanFilter>(1 OR 4) AND 2 AND 3</booleanFilter>
+        <criteriaItems>
+            <column>Contact.Volunteer_Eligible__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Eligible</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Branch_Office__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>SNSW,Northern New South Wales,Newcastle</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Volunteer_Types__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>includes</operator>
+            <value>Camp Leader,Companion Support,Leadership Committee Member</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Volunteer_Eligible__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Pending</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>SNSW NNSW Leadership Vollies</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Contact.Branch_Office__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

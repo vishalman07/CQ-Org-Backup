@@ -1,0 +1,62 @@
+<apex:component controller="portalContactUsComponentController" allowDML="true">
+    
+    <apex:attribute name="CaseReason" description="The Reason for the Case" assignTo="{!reason}" type="String" required="false" />
+
+    <apex:attribute name="RecordTypeName" description="The Case Record Type" assignTo="{!rTypeName}" type="String" required="false" />
+    <apex:attribute name="pId" description="Respite Property" assignTo="{!proId}" type="String" required="false" />
+
+    <apex:outputPanel id="formPanel">
+        
+        <apex:form id="contactUsForm">
+            
+            <apex:outputPanel layout="block" rendered="{!hasError}" styleClass="alert alert-danger" html-role="alert">
+                <apex:messages />
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </apex:outputPanel>
+            
+            <apex:outputPanel layout="block" rendered="{!NOT(ISBLANK(successMsg))}" styleClass="alert alert-success" html-role="alert">
+                <apex:outputText value="{!successMsg}" />
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </apex:outputPanel>
+            
+            <div class="row well form-horizontal">
+                
+                <apex:actionStatus id="ContactUsLd" startStyleClass="loading" stopStyleClass="">
+                    <apex:facet name="start">
+                        <span class="glyphicon glyphicon-refresh spinning"></span>
+                    </apex:facet>
+                </apex:actionStatus>
+
+                    <div class="form-group">
+                        <label class="col-sm-2">Reason:</label>
+                        <div class="col-sm-10">
+                            <apex:inputField value="{!c.Reason}" styleClass="form-control" />
+                        </div>
+                    </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2">Subject:</label>
+                    <div class="col-sm-10">
+                        <apex:inputField value="{!c.Subject}" styleClass="form-control" />
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    
+                    <label class="col-xs-12">Details:</label>
+                    <div class="col-xs-12">
+                        <apex:inputField value="{!c.Description}" styleClass="form-control" html-rows="5" />
+                    </div>
+                </div>
+                <apex:commandButton action="{!save}" value="Submit Enquiry" reRender="formPanel" styleClass="btn btn-default pull-right" status="ContactUsLd" />
+            </div>
+            
+        </apex:form>
+        
+    </apex:outputPanel>
+    
+</apex:component>

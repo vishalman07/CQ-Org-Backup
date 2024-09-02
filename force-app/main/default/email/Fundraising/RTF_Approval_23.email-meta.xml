@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>With link to RTF</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>RTF Approval 23</name>
+    <style>none</style>
+    <subject>{!Request_To_Fundraise__c.Name} is ready for approval</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

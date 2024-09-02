@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fundraising_Branch_Code__c</fullName>
+    <label>Fundraising Branch Code</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>01 - Head Office</fullName>
+                <default>false</default>
+                <label>01 - Head Office</label>
+            </value>
+            <value>
+                <fullName>13 - Sydney SYD</fullName>
+                <default>false</default>
+                <label>13 - Sydney SYD</label>
+            </value>
+            <value>
+                <fullName>31 - Melbourne VIC</fullName>
+                <default>false</default>
+                <label>31 - Melbourne VIC</label>
+            </value>
+            <value>
+                <fullName>41 - Brisbane SQLD</fullName>
+                <default>false</default>
+                <label>41 - Brisbane SQLD</label>
+            </value>
+            <value>
+                <fullName>51 - Adelaide SA</fullName>
+                <default>false</default>
+                <label>51 - Adelaide SA</label>
+            </value>
+            <value>
+                <fullName>71 - Hobart TAS</fullName>
+                <default>false</default>
+                <label>71 - Hobart TAS</label>
+            </value>
+            <value>
+                <fullName>81 - Perth WA</fullName>
+                <default>false</default>
+                <label>81 - Perth WA</label>
+            </value>
+            <value>
+                <fullName>91 - Darwin NT</fullName>
+                <default>false</default>
+                <label>91 - Darwin NT</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

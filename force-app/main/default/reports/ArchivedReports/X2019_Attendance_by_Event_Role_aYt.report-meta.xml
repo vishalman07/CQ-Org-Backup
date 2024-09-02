@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_38628796</developerName>
+        <masterLabel>Event Type</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Campaign.Event_Type__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Family Camp</sourceValue>
+            </sourceValues>
+            <value>Family Camp</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Family Experience</sourceValue>
+            </sourceValues>
+            <value>Family Experience</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Family Fun Day</sourceValue>
+            </sourceValues>
+            <value>Family Fun Day</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Junior Camp</sourceValue>
+            </sourceValues>
+            <value>Junior Camp</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Mini Camp</sourceValue>
+            </sourceValues>
+            <value>Mini Camp</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Middle Camp</sourceValue>
+            </sourceValues>
+            <value>Middle Camp</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Multi Age Group Camp</sourceValue>
+            </sourceValues>
+            <value>Combo Camp</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Volunteer Recognition Event</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Volunteer Training Days</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Volunteer Leadership Induction</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Volunteer Oranges</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Volunteer Other Induction/Training</sourceValue>
+            </sourceValues>
+            <value>Training &amp; Recognition</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Office Volunteering</sourceValue>
+            </sourceValues>
+            <value>Office Admin</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Pilot - Age Camp Meet the Family</sourceValue>
+            </sourceValues>
+            <value>KICC Camp</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Family Respite</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Fundraising Event</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Hospital Program</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cancelled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Family Playgroup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Family Dinner/Pizza Night</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Puppet Tour</sourceValue>
+            </sourceValues>
+            <value>OTHER</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_89305389</developerName>
+        <masterLabel>Participant Roles</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Volunteer_Attendance__c.Participation_Role__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Camp Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Companion Support</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Leadership Committee Member</sourceValue>
+            </sourceValues>
+            <value>Leadership Team</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Doctor</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Endorsed Enrolled Nurse</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>First Aider</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Registered Nurse</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Paramedic</sourceValue>
+            </sourceValues>
+            <value>Medical Team</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Rover</sourceValue>
+            </sourceValues>
+            <value>Rovers</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Companion</sourceValue>
+            </sourceValues>
+            <value>Companions</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Guest</sourceValue>
+            </sourceValues>
+            <value>PO Extras</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Photographer</sourceValue>
+            </sourceValues>
+            <value>Photographer</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>START_DATE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>THIS_YEAR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Volunteer_Attendance__c.Attendance__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Attended</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Volunteer_Attendance__c.Participation_Role__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Camp Leader,Companion,Companion Support,Doctor,Endorsed Enrolled Nurse,First Aider,Guest,Leadership Committee Member,Paramedic,Participant,Photographer,Registered Nurse,Rover</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_89305389</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_38628796</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign.Event_Group__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>2019 Attendance by Event &amp; Role</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignCustomEntity$Volunteer_Attendance__c@Volunteer_Attendance__c.Volunteer__c</reportType>
+    <scope>orgAll</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+</Report>

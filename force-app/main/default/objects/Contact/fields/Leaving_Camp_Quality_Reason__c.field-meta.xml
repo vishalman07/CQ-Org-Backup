@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Leaving_Camp_Quality_Reason__c</fullName>
+    <label>Leaving Camp Quality Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cannot Contact</fullName>
+                <default>false</default>
+                <label>Cannot Contact</label>
+            </value>
+            <value>
+                <fullName>Volunteer Choice</fullName>
+                <default>false</default>
+                <label>Volunteer Choice</label>
+            </value>
+            <value>
+                <fullName>Not Compliant</fullName>
+                <default>false</default>
+                <label>Not Compliant</label>
+            </value>
+            <value>
+                <fullName>Camp Quality Choice</fullName>
+                <default>false</default>
+                <label>Camp Quality Choice</label>
+            </value>
+            <value>
+                <fullName>Bereaved</fullName>
+                <default>false</default>
+                <label>Bereaved</label>
+            </value>
+            <value>
+                <fullName>Disengaged</fullName>
+                <default>false</default>
+                <label>Disengaged</label>
+            </value>
+            <value>
+                <fullName>Health Limitations</fullName>
+                <default>false</default>
+                <label>Health Limitations</label>
+            </value>
+            <value>
+                <fullName>Left Country</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Left Country</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

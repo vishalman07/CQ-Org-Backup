@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Medical_Volunteers</fullName>
+    <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+    <columns>Branch_Office__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>CONTACT.PHONE3</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Volunteer_Eligible__c</columns>
+    <columns>Volunteer_Eligibility__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Volunteer_Eligibility__c</field>
+        <operation>includes</operation>
+        <value>Dr Indemnity Insurance Policy No/Expiry Missing</value>
+    </filters>
+    <filters>
+        <field>Volunteer_Eligibility__c</field>
+        <operation>includes</operation>
+        <value>Health Practitioner Registration No &amp; Exp Date Missing</value>
+    </filters>
+    <filters>
+        <field>Date_To__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Medical Volunteers Out Of Date</label>
+</ListView>

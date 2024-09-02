@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Marketing_Emails__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox to be ticked to stop all emails other than program invites</description>
+    <inlineHelpText>This checkbox means this account only wants to be sent program emails, no newsletters or general emails</inlineHelpText>
+    <label>No Marketing Emails</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

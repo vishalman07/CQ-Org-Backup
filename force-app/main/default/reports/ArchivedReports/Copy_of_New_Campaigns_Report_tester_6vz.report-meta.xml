@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_PARENT_NAME</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT_WON</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(AMOUNT_WON&gt;1,&apos;yes&apos;,&apos;no&apos;)</calculatedFormula>
+        <dataType>Text</dataType>
+        <developerName>CDF1</developerName>
+        <label>Yes/NO</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <description>Testing with Group Values</description>
+    <filter>
+        <booleanFilter>(1 OR 2) AND 3 AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <column>CAMPAIGN_PARENT_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>startsWith</operator>
+            <value>Big Ride for Little Kids 2023:</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_PARENT_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Big Ride for Little Kids 2023</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>TestingCampaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.md_npsp_pack__Platform_Key__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>team</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Big Ride for Little Kids 2023</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>CDF1</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign.Cost_Centre__c</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <name>Percentage of Active vs Inactive Indv</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+</Report>

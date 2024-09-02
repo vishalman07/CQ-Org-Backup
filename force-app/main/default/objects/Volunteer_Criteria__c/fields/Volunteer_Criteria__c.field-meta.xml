@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer_Criteria__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Criteria it was replaced by for version history.</inlineHelpText>
+    <label>Replaced by:</label>
+    <referenceTo>Volunteer_Criteria__c</referenceTo>
+    <relationshipLabel>Volunteer Criteria</relationshipLabel>
+    <relationshipName>Volunteer_Criteria</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

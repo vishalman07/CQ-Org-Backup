@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancer_Journey__c</fullName>
+    <label>Cancer Experience</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>On Treatment</fullName>
+                <default>false</default>
+                <label>On Treatment</label>
+            </value>
+            <value>
+                <fullName>Off Treatment</fullName>
+                <default>false</default>
+                <label>Off Treatment</label>
+            </value>
+            <value>
+                <fullName>Relapsed</fullName>
+                <default>false</default>
+                <label>Relapsed</label>
+            </value>
+            <value>
+                <fullName>Palliative</fullName>
+                <default>false</default>
+                <label>Palliative</label>
+            </value>
+            <value>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+                <label>Deceased</label>
+            </value>
+            <value>
+                <fullName>Transitioning</fullName>
+                <default>false</default>
+                <label>Transitioning</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

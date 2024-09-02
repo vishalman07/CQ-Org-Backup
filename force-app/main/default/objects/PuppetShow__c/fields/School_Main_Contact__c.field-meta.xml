@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>School_Main_Contact__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>School contacts from venue account field associate with the booking.</description>
+    <inlineHelpText>If no contacts appear, you may need to create a new contact and ensure that the primary affiliation field has been completed and/or is correct.</inlineHelpText>
+    <label>Main Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Puppet Shows (School Main Contact)</relationshipLabel>
+    <relationshipName>Puppet_Shows1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

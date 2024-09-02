@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Individual_Funds_Raised__c</fullName>
+    <description>How much did this individual raise on this event?</description>
+    <label>Individual Funds Raised</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Currency</type>
+</CustomField>

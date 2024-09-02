@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2021_QLD_2nd_Vollie_Recruitment_Cycle</fullName>
+    <columns>Lead_Rejection_Reason__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Volunteer_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.STATE</field>
+        <operation>equals</operation>
+        <value>QLD,NT</value>
+    </filters>
+    <filters>
+        <field>LEAD.COMPANY</field>
+        <operation>contains</operation>
+        <value>Volunteer</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Withdrawn</value>
+    </filters>
+    <filters>
+        <field>LEAD.CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2021 12:00 AM</value>
+    </filters>
+    <label>2021 QLD 2nd Vollie Recruitment Cycle</label>
+</ListView>

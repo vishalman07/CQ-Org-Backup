@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Conversion_Validation_Errors__c</fullName>
+    <externalId>false</externalId>
+    <formula>Diagnosis_Info_Errors__c  &amp; if( Has_Child_Under_14__c ,&apos;&apos;,&apos; No child &lt; 14&apos;)  &amp;  if(Family_Contact_Details_Provided__c,&apos;&apos;,&apos; required contact fields blank&apos;)
+&amp; if ( NoPatientSelected__c , &apos;No Patient Selected&apos;,&apos;&apos;)</formula>
+    <label>Lead Conversion Validation Errors</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

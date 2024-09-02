@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Camp_Quality_Employees</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>Constituent_Types__c</columns>
+    <columns>CONTACT.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Constituent_Types__c</field>
+        <operation>equals</operation>
+        <value>Camp Quality Employee</value>
+    </filters>
+    <label>Camp Quality Employees - Current</label>
+</ListView>

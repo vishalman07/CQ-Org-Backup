@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requests_No_Contact__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>For records who do not wish to receive all types of communication. This checkbox to be ticked before offboarding.</description>
+    <inlineHelpText>For records who do not wish to receive all types of communication. This checkbox to be ticked before offboarding.</inlineHelpText>
+    <label>Requests No Contact</label>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

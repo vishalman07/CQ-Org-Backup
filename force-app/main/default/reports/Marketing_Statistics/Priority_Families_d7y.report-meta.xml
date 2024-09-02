@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_61811870</developerName>
+        <masterLabel>English</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Account.Languages__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>n/a</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>None</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>English</sourceValue>
+            </sourceValues>
+            <value>English</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Afrikaans</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Arabic</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Arabic, Persian and English</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Auslan</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Bisaya - another language in Philippine</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cantonese</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Chinese (Mandarin), Hokkien (Dialect)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Dari</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>English, Hindi</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Farsi aka Persian</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>French</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Greek</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>HINDI</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Indian</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Indonesian</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Italian</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Japanese</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Korean</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Macedonian</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mandarin</sourceValue>
+            </sourceValues>
+            <value>Non-English1</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Mandarin, Cantonese</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mandarin ,Cantonese</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Other</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Other - Croatian</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Other - specify in comments</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Portuguese</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Punjabi</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Russian</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sinhalese</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Spanish</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Spanish (Beginner&apos;s)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Tagalog</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>tamil</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Thai</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Tongan</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Turkish</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Urdu</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Vietnamese</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Yes, Mandarin</sourceValue>
+            </sourceValues>
+            <value>Non-english2</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_77107494</developerName>
+        <masterLabel>Family Type</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Account.Family_Type__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Patient</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Graduating Patient Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Bereaved Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Graduating Bereaved Family</sourceValue>
+            </sourceValues>
+            <value>CP</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Graduating Offspring Bereaved Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Offspring Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Offspring Bereaved Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Graduating Offspring Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Former Offspring Family</sourceValue>
+            </sourceValues>
+            <value>AP</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_41455264</developerName>
+        <masterLabel>Priority Cat</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>Account.Priority__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>0</to>
+            </sourceValues>
+            <value>Negative Priority</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>0</from>
+                <to>201</to>
+            </sourceValues>
+            <value>Low priority</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>201</from>
+                <to>401</to>
+            </sourceValues>
+            <value>Medium priority</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>401</from>
+                <to>600</to>
+            </sourceValues>
+            <value>High Priority</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>600</from>
+            </sourceValues>
+            <value>Very High Priority</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Account.Diagnosis_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.Relapsed_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.On_Treatment__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+        <criteriaItems>
+            <column>Account.Family_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Former Patient,Patient,Bereaved Family,Former Offspring Family,Offspring Family,Offspring Bereaved Family,Graduating Patient Family,Graduating Offspring Family,Former Bereaved,Former Offspring Bereaved,Graduating Bereaved Family,Graduating Offspring Bereaved Family</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Start_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessThan</operator>
+            <value>1/1/2019</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.End_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.End_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>1/1/2019</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_77107494</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.ATSIC__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Priority Families</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

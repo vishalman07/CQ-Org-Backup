@@ -1,0 +1,42 @@
+<messaging:emailTemplate subject="You are going to  {!relatedTo.Event__R.Portal_Title__c} on {!relatedTo.Event__R.StartDate}" recipientType="Contact" relatedToType="Volunteer_Attendance__c">
+<messaging:htmlEmailBody >
+<c:EmailHeader />
+
+<div style="width:100%; max-width:600px;">
+<apex:image id="Image" value="https://campquality.my.salesforce.com/servlet/servlet.ImageServer?id=01528000002X5KD&oid=00D28000001e3zu" width="220" height="55"/>
+
+    <p>
+        Dear {!relatedTo.Volunteer__R.Preferred_First_Name__c},<br /><br />
+        
+        Your request to attend <b>{!relatedTo.Event__R.Portal_Title__c}</b> on <apex:outputText value="{0, date, EEEE d MMMM yyyy}"><apex:param value="{!relatedTo.Event__R.StartDate}" /></apex:outputText> has been accepted.
+</p><apex:image id="EventImage" height="200" value="{!relatedTo.Event__R.Banner_Image_URL__c}" /><br />
+<p>{!relatedTo.Event__R.Event_Acceptance_Note__c}
+</p>
+<p>We look forward to seeing you there.</p>
+
+<p>        
+        Kind Regards,<br /><br />
+        {!relatedTo.Event__R.Owner.Name}
+        
+
+
+<p>  <i> Before attending this program please ensure you view <a href="https://vimeo.com/campquality/volbrief2?share=copy"> Camp Quality's Volunteer Briefing video </a> , it contains important information about CQs code of conduct and policies relevant to this program. <br  /> <br  />
+ Due to the nature of attending participants having compromised immune systems, Camp Quality has a strict policy that no person is to attend programs or events if they are unwell. Please contact the office if you display symptoms or have been exposed to any infectious disease (including cold, flu and gastro) within two weeks of an event.
+<br  /> <br  />
+As a friendly reminder, whilst we understand connections and relationships are formed between our volunteers and family members during our Programs it is Camp Quality’s understanding that these connections and relationships start and end with each Program.
+ </i> </p>
+    </p>
+<c:EmailFooter />
+
+<p style="Font-family:arial;Font-size:10px; color:red;">
+If you would like to unsubscribe from these program event invitations as you will not be attending future Camp Quality programs please email us on 
+<a href="mailto:programhelp@campquality.org.au?subject=UNSUBSCRIBE from Rec Programs Acceptance VOL"> programhelp@campquality.org.au </a>
+</p>
+
+
+</div>
+
+
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

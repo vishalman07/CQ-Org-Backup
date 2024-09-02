@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Media_permission_Public_2019_Child__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>For children in my household, I allow photos/videos to be shared to promote Camp Quality&apos;s charitable purposes</inlineHelpText>
+    <label>Child Image Opt In Permission Public</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

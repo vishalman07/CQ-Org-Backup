@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Xmas_gifts_to_mark_acknowledged</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>npsp__Acknowledgment_Status__c</columns>
+    <columns>npsp__Acknowledgment_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.npsp_plus_dres__Donation</value>
+    </filters>
+    <filters>
+        <field>Campaign_Name__c</field>
+        <operation>contains</operation>
+        <value>2021 xmas appeal</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Closed Won</value>
+    </filters>
+    <filters>
+        <field>npsp__Acknowledgment_Status__c</field>
+        <operation>equals</operation>
+        <value>To Be Acknowledged</value>
+    </filters>
+    <label>Xmas gifts to mark acknowledged</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Donor_Development_Manager</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_CQ_Family_Attending__c</fullName>
+    <formula>or( No_Of_Attendees__c &gt; 0,  NOT(ISBLANK(Child_Requesting_Show__c  )))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Has CQ Family Attending</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

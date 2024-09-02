@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Funeral_Costs__c</fullName>
+    <inlineHelpText>The date the funeral costs where approved by Camp Quality.</inlineHelpText>
+    <label>Funeral Cost Approved</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Receipt that is sent to a person when they make a one-off donation. Active 2023.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>One Off Donation Receipt</name>
+    <relatedEntityType>Opportunity</relatedEntityType>
+    <style>none</style>
+    <subject>Thank you for your Donation!</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

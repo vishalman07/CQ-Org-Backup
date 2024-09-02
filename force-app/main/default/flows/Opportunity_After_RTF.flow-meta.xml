@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Activity_to_Pardo</name>
+        <label>Send Activity to Pardo</label>
+        <locationX>50</locationX>
+        <locationY>1631</locationY>
+        <actionName>PardotExternalActivityPublisher</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>email</name>
+            <value>
+                <elementReference>$Record.npsp__Primary_Contact__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>extension</name>
+            <value>
+                <stringValue>New_funraisin_registration_Zap</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>type</name>
+            <value>
+                <stringValue>Funraisin_Registration</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>value</name>
+            <value>
+                <stringValue>Test Value by Flow</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>PardotExternalActivityPublisher</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_online_donation_alert</name>
+        <label>Send online donation alert</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <actionName>Opportunity.Send_online_donation_alert</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Check_to_update_GST</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Opportunity.Send_online_donation_alert</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>Check_for_Online_donation_for_manager_owned_donor</name>
+        <label>Check for Online donation for manager owned donor</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Check_to_update_GST</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_yes</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4 OR 5 OR 6 OR 7 OR 8 OR 9)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.FirstName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Vertic</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Owner.UserRole.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Corporate Partnerships Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Owner.UserRole.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Events &amp; Community Fundraising Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Owner.UserRole.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Head of Stakeholder &amp; Business Development </stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Owner.UserRole.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>GM Fundraising</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.npsp__Primary_Contact__r.Owner.UserRole.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Corporate Partnerships Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.npsp__Primary_Contact__r.Owner.UserRole.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Events &amp; Community Fundraising Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Funraisin__Primary_Contact__r.Owner.UserRole.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Head of Stakeholder &amp; Business Development </stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Funraisin__Primary_Contact__r.Owner.UserRole.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>GM Fundraising</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_online_donation_alert</targetReference>
+            </connector>
+            <label>If yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_to_Remove_GST</name>
+        <label>Check to Remove GST</label>
+        <locationX>182</locationX>
+        <locationY>923</locationY>
+        <defaultConnector>
+            <targetReference>Fundraiser_attached_to_campaign</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_yes2</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.GST_Applies__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.GST_Amount__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.GST_Amount__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Remove_GST</targetReference>
+            </connector>
+            <label>If yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_to_update_GST</name>
+        <label>Check to update GST</label>
+        <locationX>182</locationX>
+        <locationY>623</locationY>
+        <defaultConnector>
+            <targetReference>Check_to_Remove_GST</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_yes1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.GST_Applies__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.GST_Amount__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>GSTAmount</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_GST</targetReference>
+            </connector>
+            <label>If yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Donation_Opportunity</name>
+        <label>Donation Opportunity</label>
+        <locationX>182</locationX>
+        <locationY>1523</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Donation_Opportunity_Created</name>
+            <conditionLogic>1 AND 2 AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Donation</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Event Ticket</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.npsp__Primary_Contact__r.Email</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Activity_to_Pardo</targetReference>
+            </connector>
+            <label>Donation Opportunity Created</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Fundraiser_attached_to_campaign</name>
+        <label>Fundraiser attached to campaign</label>
+        <locationX>182</locationX>
+        <locationY>1223</locationY>
+        <defaultConnector>
+            <targetReference>Donation_Opportunity</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Campaign_Fundraiser_does_not_match_opportunity_fundraiser</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Campaign.Contact_Fundraiser_Id__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Community_Fundraiser__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Opportunity</targetReference>
+            </connector>
+            <label>Campaign Fundraiser does not match opportunity fundraiser</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>GSTAmount</name>
+        <dataType>Currency</dataType>
+        <expression>{!$Record.Amount}/110*10</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>Opportunity After RTF {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity After RTF</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Remove_GST</name>
+        <label>Remove GST</label>
+        <locationX>50</locationX>
+        <locationY>1031</locationY>
+        <connector>
+            <targetReference>Fundraiser_attached_to_campaign</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>GST_Amount__c</field>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_GST</name>
+        <label>Update GST</label>
+        <locationX>50</locationX>
+        <locationY>731</locationY>
+        <connector>
+            <targetReference>Check_to_Remove_GST</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>GST_Amount__c</field>
+            <value>
+                <elementReference>GSTAmount</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Opportunity</name>
+        <label>Update Opportunity</label>
+        <locationX>50</locationX>
+        <locationY>1331</locationY>
+        <connector>
+            <targetReference>Donation_Opportunity</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Community_Fundraiser__c</field>
+            <value>
+                <elementReference>$Record.Campaign.Contact_Fundraiser_Id__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_for_Online_donation_for_manager_owned_donor</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

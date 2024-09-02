@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sent when an opportunity created by someone outside the philanthropy team creates a gift for a contact owned by the philanthropy team, OR a new gift of over $1000 is received</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Letterhead</letterhead>
+    <name>New MD Gift Received</name>
+    <style>freeForm</style>
+    <subject>New major gift received</subject>
+    <textOnly>Hello {!User.FirstName},
+
+The following gift has been received.
+
+Account: {!Opportunity.Account}
+Contact: {!Opportunity.npsp__Primary_Contact__c}
+Campaign: {!Opportunity.Campaign}
+Amount: {!Opportunity.Amount}
+Date: {!Opportunity.CloseDate}
+Opportunity URL: https://campquality.lightning.force.com/{!Opportunity.Id}
+
+This is an automated email. If you believe you have received it in error, please contact the Salesforce team.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

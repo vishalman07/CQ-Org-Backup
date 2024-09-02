@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_cannot_be_changed</fullName>
+    <active>true</active>
+    <description>Prevents campaign (and therefore financial coding) being changed on opportunities which have a related payment that has been uploaded to finance system</description>
+    <errorConditionFormula>AND(
+NOT(OR( $Profile.Name =&quot;Finance&quot;, $Profile.Name =&quot;System Administrator&quot;)),
+ Num_uploaded_payments__c &gt; 0,
+ISCHANGED( CampaignId )
+)</errorConditionFormula>
+    <errorDisplayField>CampaignId</errorDisplayField>
+    <errorMessage>This opportunity has payments that have been reconciled by finance. To adjust the campaign, please speak to the Finance team.</errorMessage>
+</ValidationRule>

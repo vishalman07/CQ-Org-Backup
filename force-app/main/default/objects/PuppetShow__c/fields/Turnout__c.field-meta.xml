@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Turnout__c</fullName>
+    <description>Description of show attendance (for hospital visits)</description>
+    <inlineHelpText>Description of show attendance (for hospital visits)</inlineHelpText>
+    <label>Show Turnout</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Busy</fullName>
+                <default>false</default>
+                <label>Busy</label>
+            </value>
+            <value>
+                <fullName>Quiet</fullName>
+                <default>false</default>
+                <label>Quiet</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>P2P_Page_ID__c</fullName>
+    <description>Used for P2P fundraising sites</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used for P2P fundraising sites</inlineHelpText>
+    <label>P2P Page ID</label>
+    <length>30</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

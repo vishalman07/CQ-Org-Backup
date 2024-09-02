@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Joining__c</fullName>
+    <label>Reason for Joining</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Child with cancer</fullName>
+                <default>false</default>
+                <label>Child with cancer</label>
+            </value>
+            <value>
+                <fullName>Child passed away due to cancer</fullName>
+                <default>false</default>
+                <label>Child passed away due to cancer</label>
+            </value>
+            <value>
+                <fullName>Parent passed away due to cancer</fullName>
+                <default>false</default>
+                <label>Parent passed away due to cancer</label>
+            </value>
+            <value>
+                <fullName>Parent or primary carer with cancer</fullName>
+                <default>false</default>
+                <label>Parent or primary carer with cancer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

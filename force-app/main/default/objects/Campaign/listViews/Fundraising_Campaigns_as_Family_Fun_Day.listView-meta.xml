@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fundraising_Campaigns_as_Family_Fun_Day</fullName>
+    <columns>CAMPAIGN.CREATED_DATE</columns>
+    <columns>Branch_Code__c</columns>
+    <columns>Fundraiser_Page_ID__c</columns>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.END_DATE</columns>
+    <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>Cost_Centre__c</columns>
+    <columns>Account_No__c</columns>
+    <columns>CAMPAIGN.ACTIVE</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>CAMPAIGN.BUDGETED_COST</columns>
+    <columns>CAMPAIGN.ACTUAL_COST</columns>
+    <columns>CAMPAIGN.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Campaign.Family_Fun_Day</value>
+    </filters>
+    <filters>
+        <field>Cost_Centre__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>CAMPAIGN.CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>6/1/2020 12:00 AM</value>
+    </filters>
+    <label>Fundraising Campaigns as Family Fun Day</label>
+</ListView>

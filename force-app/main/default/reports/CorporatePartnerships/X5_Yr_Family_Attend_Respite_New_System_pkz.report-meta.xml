@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_41806988</developerName>
+        <masterLabel>Family Type Rollup</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Retreat_Booking__c.Family_Type__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Bereaved</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Bereaved Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Child Patient</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>CP</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>2 Patient Family - dad relapsed and terminal</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Graduating Patient Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Palliative</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Patient</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Relapse</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Relapsed</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>5</sourceValue>
+            </sourceValues>
+            <value>Patient Families</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>KICC</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>KICC Household</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>KICC Palliative</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>KICC relapse/stage 4</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>KICC relapsed</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>KICC Terminal</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>KICC Trminal/Palliative</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Offspring</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Offspring Family</sourceValue>
+            </sourceValues>
+            <value>KICC</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Graduating Offspring Bereaved Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Patient (bereaved not patient child)</sourceValue>
+            </sourceValues>
+            <value>Bereaved Patient</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>KICC Bereaved</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Offspring Bereaved Family</sourceValue>
+            </sourceValues>
+            <value>Bereaved KICC</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_77472899</developerName>
+        <masterLabel>State Rollup</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>FK_$Account.Branch_Office__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>SNSW</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Northern New South Wales</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Newcastle</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>National</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sydney</sourceValue>
+            </sourceValues>
+            <value>NSW</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Queensland</sourceValue>
+            </sourceValues>
+            <value>QLD</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Victoria</sourceValue>
+            </sourceValues>
+            <value>VIC</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>South Australia</sourceValue>
+            </sourceValues>
+            <value>SA</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Tasmania</sourceValue>
+            </sourceValues>
+            <value>TAS</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Western Australia</sourceValue>
+            </sourceValues>
+            <value>WA</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Northern Territory</sourceValue>
+            </sourceValues>
+            <value>NT</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Retreat_Booking__c.Account__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Retreat_Booking__c.Guests__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Account.Branch_Office__c</field>
+    </columns>
+    <description>2016 to 2016 Family Attendance at respite facility using new Property System</description>
+    <filter>
+        <criteriaItems>
+            <column>FK_ACC_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Test</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_77472899</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_41806988</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>5 Yr Family Attend - Respite New System</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Retreat_Booking__c@Retreat_Booking__c.Contact__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Retreat_Booking__c.Check_In_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

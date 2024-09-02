@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "verifyCode",
+  "contentBody" : {
+    "activeViewId" : "verifyCode",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-verifycode",
+    "urlPrefix" : "verifycode"
+  }
+}

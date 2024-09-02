@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRegCompact</fullName>
+    <fields>Name</fields>
+    <fields>Contact__c</fields>
+    <fields>Campaign__c</fields>
+    <fields>CQ_RTFManager__c</fields>
+    <label>FRegCompact</label>
+</CompactLayout>

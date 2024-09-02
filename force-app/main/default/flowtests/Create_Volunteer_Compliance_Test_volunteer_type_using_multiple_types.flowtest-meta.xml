@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowTest xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowApiName>Create_Volunteer_Compliance</flowApiName>
+    <label>Test using multiple volunteer types</label>
+    <testPoints>
+        <elementApiName>Start</elementApiName>
+        <parameters>
+            <leftValueReference>$Record</leftValueReference>
+            <type>InputTriggeringRecordInitial</type>
+            <value>
+                <sobjectValue>{&quot;OwnerId&quot;:&quot;0052x000004MLq5AAG&quot;,&quot;Volunteer_Status__c&quot;:&quot;Active&quot;,&quot;Volunteer_Type__c&quot;:&quot;Camp Leader&quot;,&quot;Volunteer__c&quot;:&quot;0031y00000cpJgWAAU&quot;}</sobjectValue>
+            </value>
+        </parameters>
+    </testPoints>
+    <testPoints>
+        <assertions>
+            <conditions>
+                <leftValueReference>Get_Volunteer_Eligibility</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+        </assertions>
+        <assertions>
+            <conditions>
+                <leftValueReference>Filter_volunteer_status</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+        </assertions>
+        <elementApiName>Finish</elementApiName>
+    </testPoints>
+</FlowTest>

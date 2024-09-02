@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PSP_Last_Show__c</fullName>
+    <label>PSP Last Show</label>
+    <summarizedField>PSP_Show_Attendee__c.Show_Date2__c</summarizedField>
+    <summaryForeignKey>PSP_Show_Attendee__c.Contact__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

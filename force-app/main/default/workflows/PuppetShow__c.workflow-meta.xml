@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Playdate_request_acknowledgemenet</fullName>
+        <description>Playdate request acknowledgement</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Requestor_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>puppetplaydates@campquality.org.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Programs_and_Services/Puppet_Digital_Playdate_Request_Confirmation</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_new_show_alert</fullName>
+        <ccEmails>puppetplaydates@campquality.org.au</ccEmails>
+        <description>Send new show alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ameyrick@campquality.org.au</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>puppetplaydates@campquality.org.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Programs_and_Services/New_digital_playdate_request</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>ChangePuppetShowToPerformed</fullName>
+        <field>Show_Status__c</field>
+        <literalValue>Performed</literalValue>
+        <name>ChangePuppetShowToPerformed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Fundraising_Task_Create</fullName>
+        <field>Fundraising_Task_Created__c</field>
+        <literalValue>1</literalValue>
+        <name>Fundraising Task Created</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Date_Booked_to_today</fullName>
+        <field>Date_Booked__c</field>
+        <formula>now()</formula>
+        <name>Set Date Booked to today</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>AutoClosePuppetShow</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Status__c</field>
+            <operation>equals</operation>
+            <value>Booked</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>ChangePuppetShowToPerformed</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>PuppetShow__c.Show_Date__c</offsetFromField>
+            <timeLength>5</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>AutoClosePuppetShow2</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Status__c</field>
+            <operation>equals</operation>
+            <value>Booked</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>ChangePuppetShowToPerformed</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>PuppetShow__c.Show_Date__c</offsetFromField>
+            <timeLength>2</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>New Digital Playdate</fullName>
+        <actions>
+            <name>Playdate_request_acknowledgemenet</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Send_new_show_alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>PuppetShow__c.Requestor_First_Name__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Child_s_First_Name__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Requestor_Email__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Puppet Digital Playdate</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.CreatedById</field>
+            <operation>equals</operation>
+            <value>System User</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Puppet Show Family Contact Book SANT</fullName>
+        <active>false</active>
+        <booleanFilter>1 AND 2 AND 3 and (4 or 5)</booleanFilter>
+        <criteriaItems>
+            <field>PuppetShow__c.Performance_Group__c</field>
+            <operation>equals</operation>
+            <value>SA/NT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Status__c</field>
+            <operation>equals</operation>
+            <value>Booked</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Has_CQ_Family_Attending__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Metropolitan School Visit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Country School Visit</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Puppet Show Family Contact Book%2FCancelled WA</fullName>
+        <active>false</active>
+        <booleanFilter>1 AND 2 and 3 and (4 or 5)</booleanFilter>
+        <criteriaItems>
+            <field>PuppetShow__c.Performance_Group__c</field>
+            <operation>equals</operation>
+            <value>WA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Status__c</field>
+            <operation>equals</operation>
+            <value>Booked</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Has_CQ_Family_Attending__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Metropolitan School Visit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Country School Visit</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Puppet Show Family Contact Booked NSW</fullName>
+        <active>false</active>
+        <booleanFilter>1 AND 2 AND 3 and (4 or 5)</booleanFilter>
+        <criteriaItems>
+            <field>PuppetShow__c.Performance_Group__c</field>
+            <operation>equals</operation>
+            <value>NSW/ACT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Status__c</field>
+            <operation>equals</operation>
+            <value>Booked</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Has_CQ_Family_Attending__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Metropolitan School Visit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Country School Visit</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Puppet Show Family Contact Booked QLD</fullName>
+        <active>false</active>
+        <booleanFilter>1 AND 2 and 3 and (4 or 5)</booleanFilter>
+        <criteriaItems>
+            <field>PuppetShow__c.Performance_Group__c</field>
+            <operation>equals</operation>
+            <value>QLD</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Status__c</field>
+            <operation>equals</operation>
+            <value>Booked</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Has_CQ_Family_Attending__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Metropolitan School Visit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Country School Visit</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Puppet Show Family Contact Booked VIC</fullName>
+        <active>false</active>
+        <booleanFilter>1 AND 2 and 3 and (4 or 5)</booleanFilter>
+        <criteriaItems>
+            <field>PuppetShow__c.Performance_Group__c</field>
+            <operation>equals</operation>
+            <value>VIC/TAS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Status__c</field>
+            <operation>equals</operation>
+            <value>Booked</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Has_CQ_Family_Attending__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Metropolitan School Visit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Country School Visit</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Puppet Show Family Contact Cancelled NSW</fullName>
+        <active>false</active>
+        <booleanFilter>1 AND 2 AND 3 and (4 or 5)</booleanFilter>
+        <criteriaItems>
+            <field>PuppetShow__c.Performance_Group__c</field>
+            <operation>equals</operation>
+            <value>NSW/ACT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Status__c</field>
+            <operation>equals</operation>
+            <value>Cancelled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Has_CQ_Family_Attending__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Metropolitan School Visit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Country School Visit</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Puppet Show Family Contact Cancelled QLD</fullName>
+        <active>false</active>
+        <booleanFilter>1 AND 2 and 3 and (4 or 5)</booleanFilter>
+        <criteriaItems>
+            <field>PuppetShow__c.Performance_Group__c</field>
+            <operation>equals</operation>
+            <value>QLD</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Status__c</field>
+            <operation>equals</operation>
+            <value>Cancelled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Has_CQ_Family_Attending__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Metropolitan School Visit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Country School Visit</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Puppet Show Family Contact Cancelled SANT</fullName>
+        <active>false</active>
+        <booleanFilter>1 AND 2 AND 3 and (4 or 5)</booleanFilter>
+        <criteriaItems>
+            <field>PuppetShow__c.Performance_Group__c</field>
+            <operation>equals</operation>
+            <value>SA/NT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Status__c</field>
+            <operation>equals</operation>
+            <value>Cancelled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Has_CQ_Family_Attending__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Metropolitan School Visit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Country School Visit</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Puppet Show Family Contact Cancelled VIC</fullName>
+        <active>false</active>
+        <booleanFilter>1 AND 2 and 3 and (4 or 5)</booleanFilter>
+        <criteriaItems>
+            <field>PuppetShow__c.Performance_Group__c</field>
+            <operation>equals</operation>
+            <value>VIC/TAS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Status__c</field>
+            <operation>equals</operation>
+            <value>Cancelled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Has_CQ_Family_Attending__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Metropolitan School Visit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Country School Visit</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Puppet Show Family Contact Cancelled WA</fullName>
+        <active>false</active>
+        <booleanFilter>1 AND 2 and 3 and (4 or 5)</booleanFilter>
+        <criteriaItems>
+            <field>PuppetShow__c.Performance_Group__c</field>
+            <operation>equals</operation>
+            <value>WA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Status__c</field>
+            <operation>equals</operation>
+            <value>Cancelled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Has_CQ_Family_Attending__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Metropolitan School Visit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>equals</operation>
+            <value>Country School Visit</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Puppet Show Family Contact Date Changed  NSW%2FACT</fullName>
+        <active>false</active>
+        <formula>AND(ISCHANGED(Show_Date__c),
+   TEXT(Show_Status__c) = &apos;Booked&apos;, OR( TEXT (Show_Type__c) =&apos;Metropolitan School Visit&apos;,  TEXT(Show_Type__c) = &apos;Country School Visit&apos;),  text(Performance_Group__c)=&apos;NSW/ACT&apos;, Has_CQ_Family_Attending__c  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Puppet Show Family Contact Date Changed  SANT</fullName>
+        <active>false</active>
+        <formula>AND(ISCHANGED(Show_Date__c),
+   TEXT(Show_Status__c) = &apos;Booked&apos;, OR( TEXT (Show_Type__c) =&apos;Metropolitan School Visit&apos;,  TEXT(Show_Type__c) = &apos;Country School Visit&apos;),  text(Performance_Group__c)=&apos;SA/NT&apos;,Has_CQ_Family_Attending__c   )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Puppet Show Family Contact Date Changed  SQLD</fullName>
+        <active>false</active>
+        <formula>AND(ISCHANGED(Show_Date__c),
+   TEXT(Show_Status__c) = &apos;Booked&apos;, OR( TEXT (Show_Type__c) =&apos;Metropolitan School Visit&apos;,  TEXT(Show_Type__c) = &apos;Country School Visit&apos;),  text(Performance_Group__c)=&apos;QLD&apos; )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Puppet Show Family Contact Date Changed  VIC%2FTAS</fullName>
+        <active>false</active>
+        <formula>AND(ISCHANGED(Show_Date__c),
+   TEXT(Show_Status__c) = &apos;Booked&apos;, OR( TEXT (Show_Type__c) =&apos;Metropolitan School Visit&apos;,  TEXT(Show_Type__c) = &apos;Country School Visit&apos;),  text(Performance_Group__c)=&apos;VIC/TAS&apos; ,Has_CQ_Family_Attending__c  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Puppet Show Family Contact Date Changed  WA</fullName>
+        <active>false</active>
+        <formula>AND(ISCHANGED(Show_Date__c),
+   TEXT(Show_Status__c) = &apos;Booked&apos;, OR( TEXT (Show_Type__c) =&apos;Metropolitan School Visit&apos;,  TEXT(Show_Type__c) = &apos;Country School Visit&apos;),  text(Performance_Group__c)=&apos;WA&apos;,Has_CQ_Family_Attending__c   )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>School Fundraising</fullName>
+        <actions>
+            <name>Fundraising_Task_Create</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>ShowBooked</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>PuppetShow__c.Fundraising_Task_Created__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Status__c</field>
+            <operation>equals</operation>
+            <value>Booked</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>notEqual</operation>
+            <value>Hospital Visit,Workshop,Hospital Visit - No Puppets,Puppet Digital Playdate</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Opt_Out_Fundraising__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <failedMigrationToolVersion>250.15.1</failedMigrationToolVersion>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>School Fundraising QLD</fullName>
+        <actions>
+            <name>Fundraising_Task_Create</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>ShowBookedQLD</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7</booleanFilter>
+        <criteriaItems>
+            <field>PuppetShow__c.Performance_Group__c</field>
+            <operation>equals</operation>
+            <value>QLD</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Status__c</field>
+            <operation>equals</operation>
+            <value>Booked</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>notEqual</operation>
+            <value>Hospital Visit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>notEqual</operation>
+            <value>Hospital Visit - No Puppets</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>notEqual</operation>
+            <value>Workshop</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Opt_Out_Fundraising__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Fundraising_Task_Created__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>School Fundraising VICTASSA</fullName>
+        <actions>
+            <name>Fundraising_Task_Create</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>ShowBookedVICTAS</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>(1 OR 8) AND 2 AND 3 AND 4 AND 5 AND 6 AND 7</booleanFilter>
+        <criteriaItems>
+            <field>PuppetShow__c.Performance_Group__c</field>
+            <operation>equals</operation>
+            <value>VIC/TAS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Status__c</field>
+            <operation>equals</operation>
+            <value>Booked</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>notEqual</operation>
+            <value>Hospital Visit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>notEqual</operation>
+            <value>Hospital Visit - No Puppets</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>notEqual</operation>
+            <value>Workshop</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Opt_Out_Fundraising__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Fundraising_Task_Created__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Performance_Group__c</field>
+            <operation>equals</operation>
+            <value>SA/NT</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>School Fundraising WA</fullName>
+        <actions>
+            <name>Fundraising_Task_Create</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>ShowBookedWA</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7</booleanFilter>
+        <criteriaItems>
+            <field>PuppetShow__c.Performance_Group__c</field>
+            <operation>equals</operation>
+            <value>WA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Status__c</field>
+            <operation>equals</operation>
+            <value>Booked</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>notEqual</operation>
+            <value>Hospital Visit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>notEqual</operation>
+            <value>Hospital Visit - No Puppets</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Type__c</field>
+            <operation>notEqual</operation>
+            <value>Workshop</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Opt_Out_Fundraising__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PuppetShow__c.Fundraising_Task_Created__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Show Booked Date</fullName>
+        <actions>
+            <name>Set_Date_Booked_to_today</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>PuppetShow__c.Show_Status__c</field>
+            <operation>equals</operation>
+            <value>Booked</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>ShowBooked</fullName>
+        <assignedTo>jdavis@campquality.org.au</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>5</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>PuppetShow__c.Date_Booked__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Booked Puppet Show</subject>
+    </tasks>
+    <tasks>
+        <fullName>ShowBookedQLD</fullName>
+        <assignedTo>agreaves@campquality.org.au</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>5</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>PuppetShow__c.Date_Booked__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>QLD Booked Puppet Show</subject>
+    </tasks>
+    <tasks>
+        <fullName>ShowBookedVICTAS</fullName>
+        <assignedTo>adoyle@campquality.org.au</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>5</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>PuppetShow__c.Date_Booked__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>VIC Booked Puppet Show</subject>
+    </tasks>
+    <tasks>
+        <fullName>ShowBookedWA</fullName>
+        <assignedTo>cskinner@campquality.org.au</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>5</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>PuppetShow__c.Date_Booked__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>WA Booked Puppet Show</subject>
+    </tasks>
+</Workflow>

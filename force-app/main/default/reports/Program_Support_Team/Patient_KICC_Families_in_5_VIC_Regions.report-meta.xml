@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Email__c</field>
+    </columns>
+    <columns>
+        <field>Account.Family_Type__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Priority__c</field>
+    </columns>
+    <columns>
+        <field>ADDRESS1_CITY</field>
+    </columns>
+    <columns>
+        <field>ADDRESS1_STATE</field>
+    </columns>
+    <description>27/09/2021; E. Walls - Account report made for Nigel Dewar, requested to help identify rural VIC families to invite to upcoming Halls Gap family experience.</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Family_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Patient,Offspring Family</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Regionv2__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>VIC - Barwon,VIC - Central Highlands,VIC - Great South Coast,VIC - Loddon,VIC - Mallee,VIC - Southern Mallee</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Regionv2__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Patient &amp; KICC Families in 6 VIC Regions</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account.Priority__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

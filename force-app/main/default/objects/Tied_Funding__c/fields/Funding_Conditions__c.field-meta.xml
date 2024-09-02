@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Funding_Conditions__c</fullName>
+    <inlineHelpText>What type of funding is this?  How do we need to acquit this program</inlineHelpText>
+    <label>Funding Conditions</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Direct non-salary (direct program costs only)</fullName>
+                <default>false</default>
+                <label>Direct non-salary (direct program costs only)</label>
+            </value>
+            <value>
+                <fullName>Direct salary (program costs and salary)</fullName>
+                <default>false</default>
+                <label>Direct salary (program costs and salary)</label>
+            </value>
+            <value>
+                <fullName>Indirect Costs/Other</fullName>
+                <default>false</default>
+                <label>Indirect Costs/Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

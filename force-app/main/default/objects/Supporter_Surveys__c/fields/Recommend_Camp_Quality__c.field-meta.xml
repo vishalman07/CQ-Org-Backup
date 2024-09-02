@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recommend_Camp_Quality__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>6. On a scale of 0 – 10, how likely are you to recommend Camp Quality to a family member, friend or colleague who wants to support a charity? 10 would be ‘extremely likely’.</inlineHelpText>
+    <label>06. Recommend Camp Quality</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

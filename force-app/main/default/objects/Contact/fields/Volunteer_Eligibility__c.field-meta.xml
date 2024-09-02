@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer_Eligibility__c</fullName>
+    <description>Volunteer Eligibility reason describes what conditions of volunteering have not been meet by a volunteer.  CampQuality.volunteerEligibility code sets these values.  There is also VolunteerEligibilitySchedulable to update WWC fields</description>
+    <label>Volunteer Eligibility Reason</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Code of Conduct Form Missing</fullName>
+                <default>false</default>
+                <label>Code of Conduct Form Missing</label>
+            </value>
+            <value>
+                <fullName>Currently Eligible</fullName>
+                <default>false</default>
+                <label>Currently Eligible</label>
+            </value>
+            <value>
+                <fullName>Photo ID Not Sighted</fullName>
+                <default>false</default>
+                <label>Photo ID Not Sighted</label>
+            </value>
+            <value>
+                <fullName>Volunteer Interview Missing</fullName>
+                <default>false</default>
+                <label>Volunteer Interview Missing</label>
+            </value>
+            <value>
+                <fullName>Volunteer References Missing</fullName>
+                <default>false</default>
+                <label>Volunteer References Missing</label>
+            </value>
+            <value>
+                <fullName>WWC Not Completed</fullName>
+                <default>false</default>
+                <label>WWC Not Completed</label>
+            </value>
+            <value>
+                <fullName>ACF Course Not Completed</fullName>
+                <default>false</default>
+                <label>ACF Course Not Completed</label>
+            </value>
+            <value>
+                <fullName>Dr Indemnity Insurance Policy No/Expiry Missing</fullName>
+                <default>false</default>
+                <label>Dr Indemnity Insurance Policy No/Expiry Missing</label>
+            </value>
+            <value>
+                <fullName>Health Practitioner Registration No &amp; Exp Date Missing</fullName>
+                <default>false</default>
+                <label>Health Practitioner Registration No &amp; Exp Date Missing</label>
+            </value>
+            <value>
+                <fullName>Missing Safeguarding Children Guidelines</fullName>
+                <default>false</default>
+                <label>Missing Safeguarding Children Guidelines</label>
+            </value>
+            <value>
+                <fullName>WWC Expired</fullName>
+                <default>false</default>
+                <label>WWC Expired</label>
+            </value>
+            <value>
+                <fullName>Missing SC&amp;Y Policy</fullName>
+                <default>false</default>
+                <label>Missing SC&amp;Y Policy</label>
+            </value>
+            <value>
+                <fullName>Missing RSCA Policy</fullName>
+                <default>false</default>
+                <label>Missing RSCA Policy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

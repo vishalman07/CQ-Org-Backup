@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>New_Internal_Puppet_Show_Alert</name>
+        <label>New Internal Puppet Show Alert</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>PuppetShow__c.Send_new_show_alert</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>PuppetShow__c.Send_new_show_alert</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>New Internal Show Request Email Alert {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>New Internal Show Request Email Alert</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>New_Internal_Puppet_Show_Alert</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Show_Referral__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Internal CQ referral</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Show_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Requested</stringValue>
+            </value>
+        </filters>
+        <object>PuppetShow__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATSIC__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Do you identify as Aboriginal or Torres Strait Islander heritgage?</description>
+    <label>ATSIC</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Family_Media_Permissions__c</fullName>
+    <label>Account Name</label>
+    <referenceTo>Family_Media_Permissions__c</referenceTo>
+    <relationshipLabel>Media Permissions</relationshipLabel>
+    <relationshipName>F_Media_Permissions</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

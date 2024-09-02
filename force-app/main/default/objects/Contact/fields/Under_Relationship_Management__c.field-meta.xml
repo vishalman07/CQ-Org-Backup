@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Under_Relationship_Management__c</fullName>
+    <formula>if ( OR( INCLUDES(Constituent_Types__c, &quot;Board Member&quot;) , INCLUDES(Constituent_Types__c, &quot;Bequest Giver&quot;), INCLUDES(Constituent_Types__c, &quot;Philanthropy&quot;), INCLUDES(Constituent_Types__c, &quot;Foundation - Private&quot; ), INCLUDES(Constituent_Types__c, &quot;Ambassadors&quot;),    Owner.UserRole.Name  = &quot;CEO&quot;), True,false)</formula>
+    <inlineHelpText>This records constituent types indicate it&apos;s under active account management.</inlineHelpText>
+    <label>Under Relationship Management</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

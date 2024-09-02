@@ -1,0 +1,28 @@
+<apex:component controller="VolunteerChildListController" access="global" >
+        <apex:attribute name="VolunteerAttendanceId" assignTo="{!vaId}" description="The ID of the Volunteer Attendance record." type="String" />
+    
+        <apex:repeat value="{!fmas}" var="fma">
+            <apex:outputPanel >
+                <h2>
+                    {!fma.Contact__r.Preferred_First_Name__c} {!fma.Contact__r.LastName}
+                </h2>
+                <table>
+                    <tr><td>Gender</td><td>{!fma.Contact__r.Gender__c}</td></tr>
+                    <tr><td>Age</td><td>{!fma.Contact__r.Age__c}</td></tr>
+                    <tr><td>Child Role</td><td>{!fma.Contact__r.Family_Member_Type__c}</td></tr>
+                    <tr><td>Swimming Ability</td><td>{!fma.Contact__r.Swimming_Ability__c}</td></tr>
+                    <tr><td>Child On Medication</td><td>{!fma.Requires_Medication_or_Vitamins__c}</td></tr>
+                    <tr><td>Family Suburb</td><td>{!fma.Family_Attendance__r.Family__R.BILLINGCITY}</td></tr>
+                    <tr><td>Family Name(s)</td><td>{!fma.Family_Attendance__r.Family__R.Name}</td></tr>
+                    <tr><td>Parent Name</td><td>{!fma.Family_Attendance__r.Family__R.npe01__One2OneContact__r.Preferred_First_Name__c}</td></tr>
+                    <tr><td>Parent Mobile</td><td>{!fma.Family_Attendance__r.Family__R.npe01__One2OneContact__r.MOBILEPHONE}</td></tr>
+                    <tr><td>Parent Phone</td><td>{!fma.Family_Attendance__r.Family__R.npe01__One2OneContact__r.Phone}</td></tr>
+                </table>
+                
+                
+            </apex:outputPanel>
+                    <c:SpecialNeedsList ContactID="{!fma.Contact__c}" />
+
+        </apex:repeat>
+    
+</apex:component>

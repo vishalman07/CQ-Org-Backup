@@ -1,0 +1,375 @@
+.header {
+  color: rgb(0, 31, 52);
+  margin-top: 90px;
+  font-weight: bolder;
+  font-size: 40px;
+text-align: left;
+margin-bottom: 50px;
+}
+.footer{
+background-color: #001f34;
+height: 5vw;
+width: 100%;
+margin-top: 10vh;
+margin-left: 0;
+}
+.logoSizing{
+/* padding-top: 1vw; */
+text-align: center;
+} 
+
+.nextBtn{
+  margin-left: 32.5rem;
+  width: 90px;
+}
+
+.verifyText{
+font-size: 1.5rem;
+margin-bottom: 1.5rem;
+}
+
+/* .headerTittle{
+margin-left: 31px;
+} */
+
+.backBtn{
+font-size: 15px;
+text-decoration: underline;
+}
+.exampleHolder{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  height: 1110px;
+  width: 100%;
+  z-index: 30;
+}
+.form{
+display: block;
+margin: auto;
+width: 764px;
+  text-align: center;
+border : none;
+}
+.alert, .slds-required{
+color:#f37130;
+float: left;	
+}
+
+.radioBtnCls{
+text-align: left;
+}
+
+.form_input{
+  font-size: 1em;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  display: block;
+  min-width: 100%;
+  font-family: inherit;
+  height: 2.5em !important;
+  padding: 0 0.625em;
+  outline: 0;
+  margin: 0;
+  text-align: left;
+
+}
+
+.form_input:focus {
+border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
+
+
+.form_btn {
+font-family: Poppins Light;
+  height: 2.5rem;
+  border: 2px solid #001f34;
+  background-color: #001f34;
+  color: white;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+
+.label-left{
+text-align: left;
+}
+.register{
+text-decoration: none;
+font-family: Comic Sans MS;
+font-size: 16px;
+border: 2px solid #001f34;
+background-color: #001f34;
+border-radius: 10px;
+color: white;
+width:90%;
+margin-left: 10%;
+margin-top: 20px;
+}
+.custom_inline{
+/* float: right; */
+text-align: end;
+}
+.logoSizing img{
+width: 301px;
+  height: 85px;
+}
+
+.styleForSentence{
+ padding-top: 5rem;
+  padding-right: 5rem;
+}
+
+
+.header2 {
+color: rgb(0, 31, 52);
+text-align: left;
+margin-bottom: 1vw;
+padding-left: 8rem;
+padding-top: 3rem;
+font-size: 3rem;
+}
+.head{
+background-color: #edd4e5;
+}
+
+.logoSizing{
+text-align: center;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.headerImg {
+height: 100px;
+width:  100%;
+}
+
+.custom_width{
+width:60%;
+margin:auto;
+padding-top: 1.5vw;
+/* font-family: cursive,sans-serif; */
+}
+
+.custom_btn{
+height: 2.5rem;		
+background-color: #001f34;
+color: white;
+border-radius: 2.5rem;
+font-size: 18px;
+margin: 10px;
+border: none!important;
+float: right;
+}
+
+.logoSizing{
+  padding-top: 1vw;
+  text-align: center;
+}
+
+.logoAdjust{
+  padding: 8rem !important;
+}
+
+
+/*
+@font-face {
+  font-family: "Poppins Light";
+   src: url('/resource/CampQualityFonts/Poppins-Light.ttf') format('TrueType'); 
+}
+
+@font-face {
+  font-family: "Poppins SemiBold";
+   src: url('/resource/CampQualityFonts/Poppins-SemiBold.ttf') format('TrueType'); 
+}
+@font-face {
+  font-family: "Mr Orange";
+  src: url('/resource/CampQualityFonts/MrOrange.otf') format('OpenType');
+} 
+
+@font-face {
+font-family: 'Poppins Light';
+font-style: normal;
+font-weight: 300;
+font-display: swap;
+src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2) format('woff2');
+unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+font-family: 'Poppins SemiBold';
+font-style: normal;
+font-weight: 600;
+font-display: swap;
+src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2) format('woff2');
+unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+*/
+
+/* .imgAdjust{
+margin-top: -32px;
+} */
+
+.font_orange{
+font-family: Mr Orange;
+/* font-size: 4rem; */
+}
+
+.font_popinsLight{
+font-family: Poppins Light;
+align-items: baseline;
+}
+
+.font_poppinsSemiBold{
+font-family: Poppins SemiBold;
+}
+
+.slds-formClass{
+justify-content: flex-end;
+align-items: center;
+margin-right: 12px;
+}
+
+.loginBtn{
+margin-left: 20px;
+width: 82px;
+}
+
+.custom-input{
+  margin-top: 3vh;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+.form {
+  padding: 10px;
+  width: auto;
+}
+  .form_btn,
+.form_btn_help,
+.register {
+  padding: 8px;
+  font-size: 14px;
+display: block;
+/* width: 25%; */
+float:none;
+margin-left:15px;
+margin-right:0;
+}
+
+.logoAdjust{
+  padding: 3rem !important;
+}
+
+
+
+
+}
+
+@media (max-width: 480px) {
+.header {
+  font-size: 22px;
+}
+.form {
+  width: 100%;
+}
+/* .form_input {
+  padding: 8px;
+} */
+
+.form_btn,
+.form_btn_help,
+.register {
+  padding: 8px;
+  font-size: 14px;
+display: block;
+/* width:35%; */
+float:none;
+margin-left:8px;
+margin-right:0;
+}
+
+.logoSizing img {
+  position:none;
+  left:0;
+  width: 213px;
+  height: 60px;
+}
+
+.logoAdjust{
+  padding: 2rem !important;
+}
+
+.styleForSentence{
+  padding-top: 5rem;
+  padding-right: 0rem;
+}
+
+img{
+  width: 10rem;
+}
+}
+
+li{
+text-decoration: none;
+}
+
+/* Responsive styles for mobile */
+@media screen and (max-width: 1059px) {
+.custom_width {
+  padding: 4vh;
+  width: 100%;
+}
+
+.header2 {   
+  padding-left: 1rem;
+  padding-top: 5rem;
+  font-size: 3rem;
+}
+.head{
+ margin-top: 14vh;
+}
+.custom_inline {
+  float: right;
+  text-align: center;
+  width: fit-content;
+}
+.custom_btn{
+  width:100%;
+  float:none;
+  margin-left: 0px;
+}
+}
+
+/* Responsive styles for tablets */
+@media screen and (min-width: 1080px) and (max-width: 1024px) {
+.custom_width {
+  width: 80%;
+}
+
+.header2 {
+  font-size: 3rem;
+  text-align: left; 
+}
+
+.custom_inline {
+  float: right;
+  text-align: center;
+  width: fit-content;
+} 
+.alert{
+  color: red;
+}
+}
+
+@media (max-width: 365px) {
+  .logoAdjust {
+    padding: 1rem !important;
+  }
+}

@@ -1,0 +1,14 @@
+<apex:component controller="FamilyMemberAttendanceListController" access="global">
+    
+    <apex:attribute name="AttendanceStatus" assignTo="{!aStatus}" description="This is the status of the Family Members being displayed" type="String" />
+    <apex:attribute name="FamilyAttendanceId" assignTo="{!faId}" description="The ID of the Family Attendance record." type="String" />
+    
+    <ul>
+        <apex:repeat value="{!fmas}" var="fma">
+            <apex:outputPanel rendered="{!fma.Attendance__c == aStatus}">
+                <li>{!fma.Contact__r.FirstName} {!fma.Contact__r.LastName}</li>
+            </apex:outputPanel>
+        </apex:repeat>
+    </ul>
+    
+</apex:component>

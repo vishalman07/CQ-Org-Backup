@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SA_NT_Events</fullName>
+    <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.END_DATE</columns>
+    <columns>Event_Type__c</columns>
+    <columns>Registrations_Open__c</columns>
+    <columns>Family_Registrations_Available__c</columns>
+    <columns>Registrations_Remaining__c</columns>
+    <columns>Event_Group__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Event_Group__c</field>
+        <operation>equals</operation>
+        <value>SA</value>
+    </filters>
+    <filters>
+        <field>Event_Group__c</field>
+        <operation>equals</operation>
+        <value>NT</value>
+    </filters>
+    <filters>
+        <field>CAMPAIGN.ACTIVE</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>SA &amp; NT Events</label>
+    <sharedTo></sharedTo>
+</ListView>

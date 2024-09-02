@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer_Types_Training__c</fullName>
+    <label>Volunteer_Types_Training</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Camp Leader</fullName>
+                <default>false</default>
+                <label>Camp Leader</label>
+            </value>
+            <value>
+                <fullName>Companion Support</fullName>
+                <default>false</default>
+                <label>Companion Support</label>
+            </value>
+            <value>
+                <fullName>Companion/Rover</fullName>
+                <default>false</default>
+                <label>Companion/Rover</label>
+            </value>
+            <value>
+                <fullName>DoctorAround</fullName>
+                <default>false</default>
+                <label>DoctorAround</label>
+            </value>
+            <value>
+                <fullName>Endorsed Enrolled Nurse</fullName>
+                <default>false</default>
+                <label>Endorsed Enrolled Nurse</label>
+            </value>
+            <value>
+                <fullName>Events/Fundraising</fullName>
+                <default>false</default>
+                <label>Events/Fundraising</label>
+            </value>
+            <value>
+                <fullName>First AiderAround</fullName>
+                <default>false</default>
+                <label>First AiderAround</label>
+            </value>
+            <value>
+                <fullName>Fundraising Support Group</fullName>
+                <default>false</default>
+                <label>Fundraising Support Group</label>
+            </value>
+            <value>
+                <fullName>Leadership Committee Member</fullName>
+                <default>false</default>
+                <label>Leadership Committee Member</label>
+            </value>
+            <value>
+                <fullName>Local Team Leader</fullName>
+                <default>false</default>
+                <label>Local Team Leader</label>
+            </value>
+            <value>
+                <fullName>Office Administration</fullName>
+                <default>false</default>
+                <label>Office Administration</label>
+            </value>
+            <value>
+                <fullName>Paramedic</fullName>
+                <default>false</default>
+                <label>Paramedic</label>
+            </value>
+            <value>
+                <fullName>Photographer</fullName>
+                <default>false</default>
+                <label>Photographer</label>
+            </value>
+            <value>
+                <fullName>Puppeteer</fullName>
+                <default>false</default>
+                <label>Puppeteer</label>
+            </value>
+            <value>
+                <fullName>Registered Nurse</fullName>
+                <default>false</default>
+                <label>Registered Nurse</label>
+            </value>
+            <value>
+                <fullName>Volunteer Consultation Committee</fullName>
+                <default>false</default>
+                <label>Volunteer Consultation Committee</label>
+            </value>
+            <value>
+                <fullName>z Rover</fullName>
+                <default>false</default>
+                <label>z Rover</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

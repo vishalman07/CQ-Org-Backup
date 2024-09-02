@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Priority__c</fullName>
+    <description>PRIORITY = NEED – USE
+Family Need Score Factors:
+Cancer Diagnosis Date (&lt;24 Months) =	300
+Cancer Diagnosis Date (2-3 Years) =200
+Cancer Diagnosis Date (3-5 Years) =100
+Cancer Relapse (&lt;12 months) =	100
+Multiple Patients in family = 100
+Palliative Status in past 2 years = 200
+Bereaved status in past 2years = 100
+No of children under 13 in family * 50
+Family Usage Score Factors
+Type	&lt;12 Months	1-2 Years	2 Years +
+Family Camp	-50	-25	-15
+Aged Camp -25	-12.5	-5
+Family Experience -5	-2	-1
+Family Fun Day	-10	-5	-2</description>
+    <externalId>false</externalId>
+    <formula>(
+ IF( ISBLANK(Diagnosis_Date__c), 0, 
+  IF( (TODAY() - Diagnosis_Date__c) &lt; 730, 300,
+   IF( (TODAY() - Diagnosis_Date__c) &lt; 1125, 200,
+    IF( (TODAY() - Diagnosis_Date__c) &lt; 1825, 100, 0)
+   )
+  )
+ )
+) +
+( 
+ IF(AND(NOT(ISBLANK(Relapsed_Date__c)), (TODAY() - Relapsed_Date__c) &lt; 365), 100, 0)
+) +
+(
+ IF( Patients_in_Family__c &gt; 1, 100, 0)
+) +
+( 
+ IF(AND(NOT(ISBLANK( Pallative__c )), (TODAY() - Pallative__c) &lt; 730), 200, 0)
+) +
+( 
+ IF(AND(NOT(ISBLANK( Bereaved__c )), (TODAY() - Bereaved__c) &lt; 730), 100, 0)
+) +
+(
+ IF( NOT(ISBLANK( Children_under_13__c )), 
+IF (Children_under_13__c &gt; 3, 100, Children_under_13__c * 25), 0)
+) -
+(
+ (Family_Camps_12__c * 50) + (Family_Camps_1_2__c * 25) + (Family_Camps_2__c * 15)
+) -
+(
+ (Aged_Camps_12__c * 25) + (Aged_Camps_1_2__c * 12.5) + (Aged_Camps_2__c * 5)
+) -
+(
+ (Family_Experiences_12__c * 5) + (Family_Experiences_1_2__c * 2) + (Family_Experiences_2__c * 1)
+) -
+(
+ (Family_Fun_Days_12__c * 10) + (Family_Fun_Days_1_2__c * 5) + (Family_Fun_Days_2__c * 2)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Priority</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

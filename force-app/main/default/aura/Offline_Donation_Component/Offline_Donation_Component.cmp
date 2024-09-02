@@ -1,0 +1,73 @@
+<!-- 
+******************************************************************************
+  Author:       Noble CX
+  @Since:       27-July-2018
+  Description:  Offline Donation Lightning Component
+******************************************************************************
+-->
+<aura:component controller="OfflineDonationController" 
+                implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global" >
+	
+    <aura:attribute name="recordId" type="String" />  
+    <aura:attribute name="paymentTypeId" type="String" /> 
+    <aura:attribute name="paymentForms" type="Object[]" access="private" />  
+    <aura:attribute name="showErrorCampaign" type="Boolean" default="false" /> 
+    <aura:attribute name="showErrorPayForm" type="Boolean" default="false" />  
+
+    <aura:attribute name="selectedRecordId" type="String" />     
+    <aura:attribute name="selectedRecordName" type="String" />     
+    <aura:attribute name="matchingRecords" type="Object[]" access="private" />     
+
+    <aura:handler name="lookupSelect" event="c:OfflineDonation_LookupSelectEvent" action="{!c.handleLookupSelectEvent}" />
+ 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    
+    <fieldset class="slds-box slds-theme--default slds-container--large" style="max-width: 100%;">
+        <legend id="newform" class="slds-text-heading--medium">Offline Donation</legend>  
+                
+        <div class="slds-grid slds-m-top_large">
+            <div class="slds-col">
+                <div class="slds-form-element__control">
+                    <div class="slds-combobox_container slds-has-inline-listbox" style="border:none">
+                        <div aura:id="divLookup"
+                             class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-lookup"
+                             aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                             
+                            <div class="slds-combobox__form-element">                     
+                                <lightning:input type="search" class="dynamic"
+                                                 aura:id="searchinput" label="Campaign"
+                                                 value="{!v.selectedRecordName}"
+                                                 onchange="{!c.handleSearchRecords}" isLoading="false"
+                                                 onfocus="{!c.handleSearchRecords}" onblur="{!c.hideList}" />
+                            </div>
+                            <div id="listbox-unique-id" role="listbox">
+                                <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
+                                    <aura:iteration var="rec" items="{!v.matchingRecords}">
+                                        <c:Offline_Donation_LookupItem record="{!rec}" />
+                                    </aura:iteration>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <aura:if isTrue="{!v.showErrorCampaign}"><div style="color: rgb(194, 57, 52);">Complete this field.</div></aura:if>
+            </div>
+        </div>
+        
+        <div class="slds-grid slds-m-top_large">
+            <div class="slds-col">
+                <ui:inputSelect aura:id="selPayForm" label="Payment Form" class="dynamic" value="{!v.paymentTypeId}" /> 
+                <aura:if isTrue="{!v.showErrorPayForm}"><div style="color: rgb(194, 57, 52);">Complete this field.</div></aura:if>
+            </div>
+        </div>                        
+        
+        <div class="slds-grid slds-m-top_large" style="text-align: right">
+            <div class="slds-col">
+                <lightning:button variant="brand" label="Next" class="slds-button slds-button_brand" onclick="{!c.next}" />
+            </div>
+        </div>
+        
+    </fieldset>
+    
+</aura:component>

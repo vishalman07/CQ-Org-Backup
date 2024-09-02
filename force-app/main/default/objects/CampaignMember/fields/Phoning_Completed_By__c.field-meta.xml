@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phoning_Completed_By__c</fullName>
+    <description>Name of person who is allocated to make the call or made the call</description>
+    <externalId>false</externalId>
+    <label>Phoning Completed By</label>
+    <length>99</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

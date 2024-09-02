@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Family_Attendance__c$Name</field>
+    </columns>
+    <crossFilters>
+        <operation>without</operation>
+        <primaryTableColumn>Family_Attendance__c$Id</primaryTableColumn>
+        <relatedTable>CampaignMember</relatedTable>
+        <relatedTableJoinColumn>Family_Attendance__c</relatedTableJoinColumn>
+    </crossFilters>
+    <description>This report is used to find family attendances added manually as a duplicate and thus not having a campaign.</description>
+    <filter>
+        <criteriaItems>
+            <column>Family_Attendance__c$Event__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>NNSW1909 Combined Camp Sydney</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Matchup Troubleshoot FA missing Campaign</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Family_Attendance_Records__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Family_Attendance__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

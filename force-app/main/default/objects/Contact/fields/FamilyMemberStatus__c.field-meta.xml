@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FamilyMemberStatus__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( npsp__Deceased__c   = True , &quot;Deceased&quot;, 
+IF (  ISBLANK(  Year_Age__c ),   if(ISPICKVAL(Is_Patient__c, &quot;Yes&quot;) ,&quot;Adult Patient&quot;, &quot;Adult&quot;), 
+
+if (AND(Year_Age__c &lt; 14, Added_After_Registration__c = False),&quot;Eligible Child&quot;, 
+if (Year_Age__c &gt; 18, if(ISPICKVAL(Is_Patient__c, &quot;Yes&quot;) ,&quot;Adult Patient&quot;, &quot;Adult&quot;), &quot;Child&quot;))))</formula>
+    <label>Family Member Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

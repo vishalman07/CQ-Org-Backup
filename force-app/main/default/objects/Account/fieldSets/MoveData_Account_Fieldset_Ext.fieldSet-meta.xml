@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MoveData_Account_Fieldset_Ext</fullName>
+    <description>MoveData_Donation_Account_Mapping_Ext</description>
+    <displayedFields>
+        <field>Is_MoveData__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>[MoveData Extension] Account Fieldset</label>
+</FieldSet>

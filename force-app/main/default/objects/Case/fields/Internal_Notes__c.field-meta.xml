@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Internal_Notes__c</fullName>
+    <description>A rich text area for owners of the case/system administrators to attach internal notes regarding the case that only the owner or system admin can view</description>
+    <inlineHelpText>Add internal notes relating to the case here. These can be links, images, or general text</inlineHelpText>
+    <label>Internal Notes</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NSW_In_Progress_and_Requested</fullName>
+    <columns>NAME</columns>
+    <columns>Venue__c</columns>
+    <columns>Venue_Suburb__c</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <columns>Show_Status__c</columns>
+    <columns>Show_Priority__c</columns>
+    <columns>Show_Type__c</columns>
+    <columns>School_Main_Contact__c</columns>
+    <columns>Contact_Details__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Show_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Performance_Group__c</field>
+        <operation>equals</operation>
+        <value>NSW/ACT</value>
+    </filters>
+    <filters>
+        <field>Show_Status__c</field>
+        <operation>equals</operation>
+        <value>Requested,In Progress,Booked</value>
+    </filters>
+    <filters>
+        <field>Show_Type__c</field>
+        <operation>equals</operation>
+        <value>Metropolitan School Visit</value>
+    </filters>
+    <label>NSW - In Progress and Requested</label>
+    <sharedTo>
+        <role>System_Administrator</role>
+    </sharedTo>
+</ListView>

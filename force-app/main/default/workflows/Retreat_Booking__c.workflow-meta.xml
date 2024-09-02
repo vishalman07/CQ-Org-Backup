@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>New_Respite_Booking</fullName>
+        <description>New Respite Booking</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jenine.lewis@campquality.org.au</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>mycampquality@campquality.org.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Internal_CQ_Communications/New_Respite_Booking</template>
+    </alerts>
+    <alerts>
+        <fullName>Respite_Booking_Confirmation</fullName>
+        <ccEmails>jenine.lewis@campquality.org.au</ccEmails>
+        <description>Respite Booking Confirmation</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>mycampquality@campquality.org.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>My_Camp_Quality/Respite_Booking_confirmation</template>
+    </alerts>
+    <alerts>
+        <fullName>Respite_Booking_Confirmation_Salamander</fullName>
+        <ccEmails>jenine.lewis@campquality.org.au</ccEmails>
+        <description>Respite Booking Confirmation (Salamander)</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>mycampquality@campquality.org.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>My_Camp_Quality/Respite_Booking_confirmation_Salamander</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>RB_Completed_Booking_FU</fullName>
+        <field>Status__c</field>
+        <literalValue>Completed</literalValue>
+        <name>RB Completed Booking FU</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Family_Type_At_Rego</fullName>
+        <field>Family_Type__c</field>
+        <formula>Contact__r.Family_Type__c</formula>
+        <name>Set Family Type At Rego</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>send_notification_field_update</fullName>
+        <field>Send_confirmation_email__c</field>
+        <literalValue>Sent</literalValue>
+        <name>send confirmation email field update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Add Family Type</fullName>
+        <actions>
+            <name>Set_Family_Type_At_Rego</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISBLANK(Family_Type__c  )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>RB Completed Booking</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Retreat_Booking__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Confirmed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RB_Completed_Booking_FU</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Retreat_Booking__c.Check_Out_Date__c</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Respite Booking Confirmation to Family</fullName>
+        <actions>
+            <name>Respite_Booking_Confirmation</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>send_notification_field_update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Retreat_Booking__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Confirmed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Retreat_Booking__c.Send_confirmation_email__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Retreat_Booking__c.Booking_Long_Name__c</field>
+            <operation>notContain</operation>
+            <value>Salamander</value>
+        </criteriaItems>
+        <description>Booking confirmation email to family with waiver attached (not Salamander)</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Respite Booking Confirmation to Family %28Salamander%29</fullName>
+        <actions>
+            <name>Respite_Booking_Confirmation_Salamander</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>send_notification_field_update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Retreat_Booking__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Confirmed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Retreat_Booking__c.Send_confirmation_email__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Retreat_Booking__c.Booking_Long_Name__c</field>
+            <operation>contains</operation>
+            <value>Salamander</value>
+        </criteriaItems>
+        <description>Booking confirmation email to family with waiver attached for Salamander bookings</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Respite Booking Pending for Approval</fullName>
+        <actions>
+            <name>New_Respite_Booking</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Retreat_Booking__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Respite Booking Tasks %28All Properties%29</fullName>
+        <actions>
+            <name>Send_Reminder_SMS</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Retreat_Booking__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Confirmed</value>
+        </criteriaItems>
+        <description>Tasks are created for the Respite Coordinator once the booking is confirmed.</description>
+        <failedMigrationToolVersion>250.15.1</failedMigrationToolVersion>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Respite Booking Tasks %28Salamander Only%29</fullName>
+        <actions>
+            <name>Send_Activity_Dining_Information</name>
+            <type>Task</type>
+        </actions>
+        <actions>
+            <name>Send_Retreat_Reminder_Letter</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Retreat_Booking__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Confirmed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Retreat_Booking__c.Booking_Long_Name__c</field>
+            <operation>contains</operation>
+            <value>Salamander</value>
+        </criteriaItems>
+        <description>Tasks are created for the Respite Coordinator once the booking is confirmed (Salamander Bay property only).</description>
+        <failedMigrationToolVersion>250.15.1</failedMigrationToolVersion>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Send_Activity_Dining_Information</fullName>
+        <assignedTo>jenine.lewis@campquality.org.au</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Send Activity &amp; Dining Information</subject>
+    </tasks>
+    <tasks>
+        <fullName>Send_Reminder_SMS</fullName>
+        <assignedTo>jenine.lewis@campquality.org.au</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>-2</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Retreat_Booking__c.Check_In_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Send Reminder SMS</subject>
+    </tasks>
+    <tasks>
+        <fullName>Send_Retreat_Confirmation_Letter_Waiver</fullName>
+        <assignedTo>jenine.lewis@campquality.org.au</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Send Retreat Confirmation Letter &amp; Waiver</subject>
+    </tasks>
+    <tasks>
+        <fullName>Send_Retreat_Reminder_Letter</fullName>
+        <assignedTo>jenine.lewis@campquality.org.au</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>-14</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Retreat_Booking__c.Check_In_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Send Retreat Reminder Letter</subject>
+    </tasks>
+</Workflow>

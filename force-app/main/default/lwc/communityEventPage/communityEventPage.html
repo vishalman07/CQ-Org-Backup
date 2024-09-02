@@ -1,0 +1,565 @@
+<template>
+
+	<div if:true={waitForRes} class="exampleHolder">
+		<lightning-spinner alternative-text="Loading" size="large" variant="brand"></lightning-spinner>
+	</div>
+
+	<div class="head">
+		<div class="header font_orange">
+			<h1>{label.event}</h1>
+		</div>
+		<img src={headerSkyBlueImg} class="headerImg" >
+		</div>
+
+
+		<div if:false={eventDetails}>
+			<div if:false={hasEvent}>
+				<p class="noEventMess">{label.noevent}</p>
+			</div>
+			<div if:true={hasEvent}>
+				<p class="eventMess">{label.messageEvent}</p>
+				<template for:each={events} for:item="item">
+					<div key={item.id} class="custom-box slds-grid slds-wrap font_popinsLight">
+						<div class="box-header slds-col slds-size_12-of-12">
+							<span class="propName">{item.Portal_Title__c}</span>
+						</div>
+						<div class="slds-col  slds-medium-size_4-of-12"> 
+							<lightning-carousel if:true={item.bolbData} disable-auto-scroll style="height: 200px;">	
+								<template for:each={item.bolbData} for:item="blob">
+									<lightning-carousel-image
+										class="slds-carousel__content slds-scrollable_none slds-carousel__image  fixImg"
+										style="height:238px;" key={blob} src={blob} href="javascript:void(0);">
+									</lightning-carousel-image>
+									<!-- Image_Upload__c -->
+									<!-- <div>{item.Image_Upload__c}</div> -->
+									<!-- <lightning-formatted-rich-text value = {item.Image_Upload__c}></lightning-formatted-rich-text> -->
+									<!-- <img src={item.Image_Upload__c} alt="Event Image" style="max-width:100%; max-height:100%;"> -->
+
+								</template>
+							</lightning-carousel>
+						</div>
+
+						<div class="slds-col  slds-medium-size_4-of-12">
+							<!-- <div class="value"><span class="label">{label.eventType} </span>: {item.Event_Type__c}</div> -->
+							<div class="value"><span class="label">{label.startDate} </span>: {item.StartDate}</div>
+							<div class="value"><span class="label">{label.time} </span>: {item.Event_time__c}</div>
+							<div class="value"><span class="label">{label.finishDate} </span>: {item.EndDate}</div>
+							<div class="value"><span class="label">RSVP Date </span>: {item.RVSP__c}</div>
+							<!-- <div class="value"><span class="label">{label.des} </span>: {item.Description}</div> -->
+						</div>
+						<div class="slds-col slds-size_4-of-12">
+							<button class="form_btn" onclick={eventDetailsHandle} data-id={item.Id}>{label.eventDetails}</button>
+						</div>
+					</div>
+				</template>
+			</div>
+		</div>
+		<div if:true={eventDetails}>
+			<div class="custom-box slds-grid slds-wrap font_popinsLight">
+				<div class="box-header slds-col slds-size_12-of-12">
+					<span class="propName">{eventDetail.portleTittle}</span>
+				</div>
+
+				<div class="slds-col  slds-medium-size_5-of-12">
+					
+					<lightning-carousel  disable-auto-scroll style="height:200px;">
+						<template for:each={bolbData} for:item="blobData">
+						  <lightning-carousel-image
+							key={blobData}
+							src={blobData}
+							href="javascript:void(0);">
+						  </lightning-carousel-image>
+						</template>
+					  </lightning-carousel>
+				</div>
+
+				<div class="slds-col  slds-medium-size_7-of-12">
+					<table class="slds-table slds-table_cell-buffer"
+						aria-label="Example headless table of Opportunities">
+						<tbody>
+							<tr class="slds-hint-parent">
+								<td valign="top">
+									<div class="slds-truncate font_poppinsSemiBold" title="Cloudhub">{label.startDate}:
+									</div>
+								</td>
+								<td valign="top" class="">
+									<div class="slds-truncate" title="4/14/2015">{eventDetail.startDate}</div>
+								</td>
+							</tr>
+
+							<tr class="slds-hint-parent">
+								<td valign="top">
+									<div class="slds-truncate font_poppinsSemiBold" title="Cloudhub">{label.time} :
+									</div>
+								</td>
+								<td valign="top" class="">
+									<div class="slds-truncate" title="4/14/2015">{eventDetail.eventTime}</div>
+								</td>
+							</tr>
+
+							<tr class="slds-hint-parent">
+								<td valign="top">
+									<div class="slds-truncate font_poppinsSemiBold" title="Cloudhub">{label.finishDate}
+										:</div>
+								</td>
+								<td valign="top" class="">
+									<div class="slds-truncate" title="4/14/2015">{eventDetail.endDate}</div>
+								</td>
+							</tr>
+
+							<tr class="slds-hint-parent">
+								<td valign="top">
+									<div class="slds-truncate font_poppinsSemiBold" title="RSVP Date">RSVP Date :</div>
+								</td>
+								<td valign="top" class="">
+									<div class="slds-truncate" title="4/14/2015">{eventDetail.rvsp}</div>
+								</td>
+							</tr>
+
+							<tr class="slds-hint-parent">
+								<td valign="top">
+									<div class="slds-truncate font_poppinsSemiBold" title="Venue Address">Venue Address
+										:</div>
+								</td>
+								<td valign="top" >
+									<div class="slds-truncate venueSize" title="4/14/2015" >
+										{eventDetail.accName}<br>{eventDetail.addStreet}<br>{eventDetail.addCity}<br>{eventDetail.addState} {eventDetail.addPostalCode}<br>{eventDetail.addCountry}</div>
+								</td>
+							</tr>
+
+							<tr class="slds-hint-parent">
+								<td class="" valign="top">
+									<div class="slds-truncate font_poppinsSemiBold" title="Event Description">Event
+										Description :</div>
+								</td>
+								<td class="" valign="top" style="max-width: 10rem;">
+									<div class="slds-truncate wrapped-content" title="4/14/2015">
+										<lightning-formatted-rich-text value= {eventDetail.portalDescription} ></lightning-formatted-rich-text>
+									</div>
+								</td>
+							</tr>
+
+
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+			<div class="custom-box slds-box">
+				<table class="slds-table slds-table_cell-buffer slds-table_bordered "
+					aria-labelledby="element-with-table-label other-element-with-table-label">
+					<thead>
+						<tr class="slds-line-height_reset">
+							<th class="" scope="col">
+								<div class="slds-truncate" title="Invitation Description">Invitation Description</div>
+							</th>
+							<th class="" scope="col">
+								<div class="slds-truncate" title="Status">Status</div>
+							</th>
+							<th class="" scope="col">
+								<div class="slds-truncate" title="Registration">Registration</div>
+							</th>
+						</tr>
+					</thead>
+					<template for:each={eventDetail.childWrapper} for:item="inner">
+						<tr key={inner.regisId}>
+							<td class="rowheight">{inner.regisName}</td>
+							<td class="rowheight">{inner.volAtt}</td>
+							<td if:true={inner.requestToAttend} class="rowheight">
+								<div if:false={inner.showrequestToAttend}>
+									<button class="form_btn" data-id={inner.regisId} onclick={updateRegHandle}>Update</button>
+									<span if:true={cancelTrue}><button class="form_btn" data-id={inner.regisId} onclick={cancelHandle}>Cancel</button></span>
+								</div>
+
+								<div if:true={inner.showrequestToAttend}>
+									Please contact your Camp Quality office to cancel or update your information
+								</div>
+							</td>
+							<td if:true={inner.invited} class="rowheight">
+								<div if:true={inner.showInvitedBtn}>
+									Registration closed for this event. Please contact your local office for enquries
+								</div>
+								<div if:false={inner.showInvitedBtn}>
+									<!-- <button class="form_btn" data-id={inner.regisId} onclick={updateRegHandle}>Update Registration</button> -->
+									<button class="form_btn" data-id={inner.regisId} onclick={updateRegHandle} value = "Request to Attend">Request to Attend</button>
+									<button class="form_btn" data-id={inner.regisId} onclick={updateStatusDeclined} value = "Decline">Decline </button>
+								</div>
+							</td>
+
+							<td if:true={inner.declined} class="rowheight">
+								<div if:true={inner.showDeclinedBtn}>
+									Registration closed for this event. Please contact your local office for enquries
+								</div>
+								<div if:false={inner.showDeclinedBtn}>
+									<button class="form_btn" data-id={inner.regisId} onclick={updateRegHandle} value = "Request to Attend">Update</button>
+								</div>
+
+								<!-- <button class="form_btn" data-id={inner.regisId} onclick={updateRegHandle}>Request to Attend</button> -->
+								<!-- <button class="form_btn" data-id={inner.regisId} onclick={updateStatusDeclined} >Decline</button> -->
+
+							</td>
+
+							<td if:true={inner.accept} class="rowheight">
+								<div if:true={inner.regisAcceptText}>
+									Please contact your Camp Quality office to cancel or update your information.
+								</div>
+								<!-- <button class="form_btn" data-id={inner.regisId} onclick={cancelHandle}>Cancel Registration</button> -->
+
+							</td>
+
+						</tr>
+					</template>
+				</table>
+			</div>
+
+			<!--Use template if:true to display/hide popup based on isModalOpen value-->
+			<template if:true={customModalOpen}>
+				<!-- Modal/Popup Box LWC starts here -->
+				<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+					aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+					<div class="slds-modal__container">
+						<!-- Modal/Popup Box LWC header here -->
+						<header class="slds-modal__header">
+							<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+					title="Close" onclick={closeModal}>
+					<lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse"
+						size="small"></lightning-icon>
+					<span class="slds-assistive-text">Close</span>
+				</button>
+							<h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Event Cancellation
+							</h2>
+						</header>
+						<!-- Modal/Popup Box LWC body starts here -->
+						<div class="slds-card slds-scrollable modalSize">
+							<div class="slds-form-element slds-size_1-of-1">
+								<Label class="slds-form-element__label "><abbr class="astrickColor">*</abbr>Please let us know why you are cancelling your registration:</Label>
+								<div>
+									<input type="text" class="slds-input form_input" data-id="disable" required name="cancelResason"
+							onchange={handleModalInput}   />
+					</div>
+									<div if:true={customModalValidation} class="alert">
+										Please enter the cancellation reason.
+									</div>
+								</div>
+
+							</div>
+							<!-- Modal/Popup Box LWC footer starts here -->
+							<footer class="slds-modal__footer">
+								<button class="form_btn_cancel" onclick={closeModal}
+					title="Cancel">Cancel</button>
+								<button class="form_btn" onclick={handleModalOk} title="OK" >OK</button>
+							</footer>
+						</div>
+				</section>
+				<div class="slds-backdrop slds-backdrop_open"></div>
+			</template>
+
+		</div>
+
+		<div if:true={showUpdatePanel}>
+			<div class="update-box slds-box font_popinsLight">
+				<!-- <lightning-combobox label="Shirt Size" value={shirtSize} options={shirtOptions}
+					onchange={handleShirtSizeChange}>
+					</lightning-combobox> -->
+				<div class="slds-form-element slds-size_1-of-1">
+					<Label class="slds-form-element__label font_poppinsSemiBold">Emergency Contact Name</Label>
+					<div>
+						<input type="text" class="slds-input form_input" data-id="disable" required name="emergencyConName"
+								value={detailsData.emergencyConName} onchange= {changeDeatilsHandler} />
+						</div>
+						<div if:true={emergrncyConNameValidation} class="alert">
+							Emergency contact name field cannot be blank.
+						</div>
+
+					</div>
+					<div class="slds-form-element slds-size_1-of-1">
+						<Label class="slds-form-element__label font_poppinsSemiBold">Relationship</Label>
+						<div>
+							<input type="text" class="slds-input form_input" data-id="disable" required name="emergencyConRelation"
+								value={detailsData.emergencyConRelation} onchange= {changeDeatilsHandler}/>
+						</div>
+							<div if:true={emerRelationVali} class="alert">
+								Relationship field cannot be blank.
+							</div>
+
+						</div>
+						<div class="slds-form-element slds-size_1-of-1">
+							<Label class="slds-form-element__label font_poppinsSemiBold">Phone number</Label>
+							<div>
+								<input type="tel" class="slds-input form_input" data-id="disable" required name="emergencyConMobile"
+								value={detailsData.emergencyConMobile} onchange= {changeDeatilsHandler} pattern="[0-9]{4}-[0-9]{6}"/>
+						</div>
+								<div if:true={emerMobileVali} class="alert">
+									Phone number field cannot be blank.
+								</div>
+							</div>
+
+							
+							<!-- <div if:true= {emergrncyConValidation} class="alert">
+						Emergency contact fields cannot be blank
+					</div> -->
+							
+							<!-- <lightning-combobox class="font_poppinsSemiBold" label="Preferred Session"  if:false={hideSessionDropdown}
+								value={selectedSessionPickList} options={pickListValueSession}
+								onchange={handleSessionChange}>
+							</lightning-combobox> -->
+							<!-- <template if:false={hideSessionDropdown}>
+								<label class="reason slds-form-element__label font_poppinsSemiBold" for="reason"><abbr class="astrickColor">*</abbr>Preferred Session</label>
+								<select class="font_poppinsSemiBold form_input" onchange={handleSessionChange} value={selectedSessionPickList} >
+									<template for:each={pickListValueSession} for:item="option">
+										<option key={option.value} value={option.value} selected={option.selected}>{option.label}</option>
+									</template>
+								</select>
+								<span if:true={preferresSessVali} class="alert">Please choose a session.</span>
+							</template> -->
+
+							<template if:false={hideSessionDropdown}>
+								<label class="reason slds-form-element__label font_poppinsSemiBold" for="reason"><abbr class="astrickColor">*</abbr>Preferred Session</label>
+								<select class="font_poppinsSemiBold form_input" onchange={handleSessionChange} value={selectedSessionPickList}>
+									<template for:each={pickListValueSession} for:item="option">
+										<option key={option.value} value={option.value} selected={option.selected}>{option.label}</option>
+									</template>
+								</select>
+								<span if:true={preferresSessVali} class="alert">Please choose a session.</span>
+							</template>
+							
+
+							<lightning-combobox class="font_poppinsSemiBold" label="Shirt Size" value={shirtSize}
+								options={shirtOptions} onchange={handleShirtSizeChange}>
+							</lightning-combobox>
+
+
+							<div class="slds-form__row">
+								<div class="slds-form__item" role="listitem">
+									<div
+										class="slds-form-element slds-size_1-of-2 slds-medium-size_12-of-12 font_poppinsSemiBold custom_clslabel">
+										<Label class="slds-form-element__label"><b>{label.dietaryReq}</b></Label>
+
+										<div class=" font_poppinsSemiBold">
+											<div if:false={hideDietFields}>
+											<template iterator:item={itemListDiet}>
+												<div key={item.id}>
+													<!-- <Label class="slds-form-element__label"><b>{label.dietaryReq}</b></Label> -->
+													<div class="slds-form__row">
+														<div class="slds-form__item" role="listitem">
+															<div class=" slds-size_1-of-1">
+																<!-- <label class="slds-form-element__label"> {label.description} </label>								 -->
+																<div class="custom-combobox__form-element">
+																	<lightning-combobox label={label.des}
+																		name="dietName"
+																		value={item.value.dietDescription}
+																		placeholder="Select an Option" 
+																		options={diet}
+																		onchange={handleChangediet}
+																		data-id="disableComboId"
+																		data-recordid={item.value.id}>
+																	</lightning-combobox>
+																</div>
+															</div>
+														</div>
+
+														<div class="slds-form__item" role="listitem">
+															<div class=" slds-size_1-of-1 ">
+																<Label class="slds-form-element__label font_poppinsSemiBold">{label.comments}</Label>
+																<div
+																	class="font_popinsLight slds-form-element__control custom_manageWidth">
+																	<textarea class="slds-input form_inputtext" name="dietComment" required rows="2" cols="50" data-id="disabletextArea" onchange={handleChangediet} data-recordid={item.value.id}>{item.value.dietComment}</textarea>
+																</div>
+
+															</div>
+														</div>
+
+														<div class="slds-form__item" role="listitem">
+															<div if:false={editBtnforSave}
+																class="slds-size_1-of-1  icon">
+																<span if:true={item.last} class="addicon">
+																	<lightning-icon 
+																		icon-name="action:new" 
+																		access-key={item.value.id} 
+																		id={item.value.id}
+																		alternative-text="Add Row" 
+																		size="small" 
+																		title="Add Row" 
+																		onclick={addRowDiet} 
+																		class= "icon">
+																	</lightning-icon>
+																</span>
+																<!-- <span if:false={item.first}> -->
+																	<lightning-icon
+																		icon-name="action:delete"
+																		access-key={item.value.id}
+																		id={item.value.id}
+																		alternative-text="Delete Row"
+																		size="small"
+																		title="Delete Row"
+																		onclick={removeRowDiet}
+																		class= "icon">
+																	</lightning-icon>
+																<!-- </span> -->
+															</div>
+														</div>
+
+													</div>
+												</div>
+											</template>
+										</div>
+
+											<div if:true = {addButtonVisibleSp}>
+												<lightning-icon icon-name="action:new"							
+													alternative-text="Add Row" size="small" title="Add Row"
+													onclick={addRowDiet} class="icon">
+												</lightning-icon>
+											</div>
+											
+											<!-- <div if:true={dietDescNullError} class="alert">
+												Dietary Requirements description cannot be blank.
+											</div>
+											<div if:true={dietcommentNullError} class="alert">
+												Dietary Requirements comments cannot be blank.
+											</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="slds-form__row">
+								<div class="slds-form__item" role="listitem">
+									<div
+										class="slds-form-element slds-size_1-of-2 slds-medium-size_12-of-12 font_poppinsSemiBold custom_clslabel">
+										<Label class="slds-form-element__label"><b>{label.specNeeds}</b></Label>
+
+										<div class=" font_poppinsSemiBold">
+											<div if:false={hideSpecialNeedFields}>
+											<template iterator:item={itemList}>
+												<div key={item.id}>
+													<!-- <Label class="slds-form-element__label"><b>{label.specNeeds}</b></Label> -->
+													<div class="slds-form__row">
+														<div class="slds-form__item" role="listitem">
+															<div class=" slds-size_1-of-1">
+																<div>
+																	<!-- <label class="slds-form-element__label"> {label.description} </label>	-->
+																</div>
+																<div class="custom-combobox__form-element">
+																	<lightning-combobox data-recordid={item.value.id}
+																		label={label.des} name="speNeedDes"
+																		value={item.value.specNeedDescription}
+																		placeholder="Select an Option"
+																		options={specNeedsPick} onchange={handleChange}
+																		data-id="disableComboId">
+																	</lightning-combobox>
+																</div>
+
+															</div>
+														</div>
+
+														<div class="slds-form__item" role="listitem">
+															<div class=" slds-size_1-of-1">
+																<Label class="slds-form-element__label font_poppinsSemiBold">{label.comments}</Label>
+																<div
+																	class="font_popinsLight slds-form-element__control custom_manageWidth">
+																	<textarea  class="slds-input form_inputtext" rows = "2" cols = "10" name="speNeedCom" data-id="disabletextArea" data-recordid={item.value.id} onchange={handleChange}>{item.value.specNeedComment}</textarea>
+																</div>
+
+															</div>
+														</div>
+														<div class="slds-form__item" role="listitem">
+															<div if:false={editBtnforSave}
+																class=" slds-size_1-of-1  icon">
+																<span if:true={item.last} class="addicon">
+																	<lightning-icon 
+																		icon-name="action:new" 
+																		access-key={item.value.id} 
+																		id={item.value.id}
+																		alternative-text="Add Row" 
+																		size="small" 
+																		title="Add Row" 
+																		onclick={addRow} 
+																		class= "icon">
+																	</lightning-icon>
+																</span>
+																<!-- <span if:false={item.first}> -->
+																	<lightning-icon
+																		icon-name="action:delete"
+																		access-key={item.value.id}
+																		id={item.value.id}
+																		alternative-text="Delete Row"
+																		size="small"
+																		title="Delete Row"
+																		onclick={removeRow} class= "icon">
+																	</lightning-icon>
+																<!-- </span> -->
+															</div>
+														</div>
+
+													</div>
+												</div>
+											</template>
+										</div>
+
+											<div if:true = {addButtonVisible}>
+												<lightning-icon icon-name="action:new"							
+													alternative-text="Add Row" size="small" title="Add Row"
+													onclick={addRow} class="icon">
+												</lightning-icon>
+											</div>
+											
+											<!-- <div if:true={spNeedDescNullError} class="alert">
+												Special requirement description cannot be blank.
+											</div>
+											<div if:true={commentNullError} class="alert">
+												Special requirement comments cannot be blank.
+											</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="label font_poppinsSemiBold">Image Permissions</div>
+							<div class="font_poppinsSemiBold">
+								<input type="checkbox" name="imageSharing"  onchange={changeDeatilsHandler} checked ={detailsData.imageSharingOptionCheckBox} />
+								<span> I approve of photos and video footage being taken of me at the program I am attending <br>
+					If you do not approve of photos and video footage being taken, Camp Quality will take all reasonable endeavours to avoid this taking place.</span><br>
+								<div if:true={optionSharingShow}>
+									<div>Please select at least one image sharing option:</div>
+									<input type="checkbox" name="imagePhotoPart"  onchange={changeDeatilsHandler}  checked ={detailsData.imageSharedParticipantsCheckBox} />  I allow photos/video to be shared with participants from Camp Quality services and programs via a password protected photo gallery.
+					</div>
+									<div if:true={optionSharingShow}>
+										<input type="checkbox" name="imageSharedPromoteWithCharitable"  onchange={changeDeatilsHandler}  checked ={detailsData.imageSharedPromoteWithCharitable} />
+										<span> I allow Camp Quality to use photos/video to promote Camp Quality's charitable purposes.</span>
+									</div>
+									<div if:true={optionSharingShow}>
+										<input type="checkbox" name="imagepromoteCorporatePartners"  onchange={changeDeatilsHandler}  checked ={detailsData.imagepromoteCorporatePartners} />
+										<span> I allow Camp Quality to share the photo/video with its corporate partners and major donors, to be used to promote Camp Quality's charitable purposes and the partnership.</span>
+									</div>
+
+
+									<div> Our <a href="https://www.campquality.org.au/privacy-policy/" target="_blank"
+											class="linkStyle"><span class="hyperLink">privacy policy</span></a> contains
+										further information about how Camp Quality may collect, use and manage personal
+										information including photos and recordings and is available here.</div>
+									<!-- </div> -->
+									<!-- Please select at least one image sharing option: -->
+									<div class="font_poppinsSemiBold">
+										<input type="checkbox"  name="imageAgree"  onchange={changeDeatilsHandler}  />
+										<span>
+										<span class="alert font_poppinsSemiBold"> *</span> I have read, understood and accept the terms of the <a
+											href="https://www.campquality.org.au/volunteer-waiver" target="_blank"
+											class="linkStyle"><span class="hyperLink">volunteer waiver</span></a> I am
+										providing to Camp Quality.
+										</span>
+									</div>
+
+								</div>
+								<div>
+									<button class="form_btn align_btn form_btn1" data-id={detailsData.contactId} onclick={completeHandle} >Complete Registration</button>
+									<span class="backBtn" if:true={backBtn}>
+										<button class="form_btn" onclick={backHandle} >Back</button>
+									</span>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="backBtn" if:true={backBtn}>
+							<button class="form_btn" onclick={backHandle} >Back</button>
+						</div> -->
+						<c-site-footer> </c-site-footer>
+</template>

@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Bounced_Email_Alert</fullName>
+        <description>Bounced Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Fundraising/Email_Bounce</template>
+    </alerts>
+    <alerts>
+        <fullName>CQ_Address_Update_Request_RTS</fullName>
+        <description>CQ - Address Update Request (RTS)</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>donorcare@campquality.org.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Fundraising/CQ_Address_Update_Request_RTS</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Health_Professional_Created</fullName>
+        <description>New Health Professional Created</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>cbrine@campquality.org.au</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>mycampquality@campquality.org.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Health_Professional_Created</template>
+    </alerts>
+    <alerts>
+        <fullName>RG_RTS_Email</fullName>
+        <description>RG RTS Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Fundraising/RG_RTS_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Volunteer_Birthday_Email</fullName>
+        <description>Volunteer Birthday Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>mycampquality@campquality.org.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Volunteer_Birthday_HTML</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Activiation_Portal</fullName>
+        <field>Portal_Access__c</field>
+        <literalValue>Activate</literalValue>
+        <name>Activiation Portal</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Check_Reset_Birthday_Email_System_Box</fullName>
+        <description>Checks the rest birthday box required in workflow for volunteer email</description>
+        <field>Reset_Birthday_Email_System__c</field>
+        <literalValue>1</literalValue>
+        <name>Check Reset Birthday Email System Box</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>DefaultDeceasedDate</fullName>
+        <field>Deceased_Date__c</field>
+        <formula>if(isblank( Deceased_Date__c ), TODAY(), Deceased_Date__c )</formula>
+        <name>DefaultDeceasedDate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Disable_Birthday_Emails</fullName>
+        <field>Receive_Birthday_Email__c</field>
+        <literalValue>0</literalValue>
+        <name>Disable Birthday Emails</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>ExcludeFromHouseholdName</fullName>
+        <field>npsp__Exclude_from_Household_Name__c</field>
+        <literalValue>1</literalValue>
+        <name>ExcludeFromHouseholdName</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>ExcludeFromInformalName</fullName>
+        <field>npsp__Exclude_from_Household_Informal_Greeting__c</field>
+        <literalValue>1</literalValue>
+        <name>ExcludeFromInformalName</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>ExcludeFromNameFormal</fullName>
+        <field>npsp__Exclude_from_Household_Formal_Greeting__c</field>
+        <literalValue>1</literalValue>
+        <name>ExcludeFromNameFormal</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Make_Portal_Inactive</fullName>
+        <field>Portal_Access__c</field>
+        <literalValue>Deactivate</literalValue>
+        <name>Make Portal Inactive</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_Next_Birthday</fullName>
+        <description>Field update for workflow rule</description>
+        <field>Next_Birthday__c</field>
+        <formula>IF(DATE(YEAR(TODAY()),MONTH(Birthdate),DAY(Birthdate))&lt;=TODAY(), DATE(YEAR(TODAY())+1,MONTH(Birthdate),DAY(Birthdate)), DATE(YEAR(TODAY()),MONTH(Birthdate),DAY(Birthdate)))</formula>
+        <name>Reset Next Birthday</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_Next_Birthday_Time_trigger</fullName>
+        <description>Change after updating the Next Birthday Field</description>
+        <field>Reset_Birthday_Email_System__c</field>
+        <literalValue>0</literalValue>
+        <name>Reset Next Birthday Time trigger</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Date_To_Today</fullName>
+        <field>Date_To__c</field>
+        <formula>if  (isblank(Date_To__c), TODAY(),Date_To__c)</formula>
+        <name>Set Date To Today</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UPD_CON_Image_Opt_In_Participant_Sharing</fullName>
+        <description>Update Account field Image Opt In Participant Sharing</description>
+        <field>media_opt_in_share_participants__c</field>
+        <literalValue>1</literalValue>
+        <name>UPD CON Image Opt In Participant Sharing</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UPD_CON_Image_Opt_In_Permission_All</fullName>
+        <description>Update Account field Image Opt In Permission All</description>
+        <field>Media_Permission_All_2019__c</field>
+        <literalValue>0</literalValue>
+        <name>UPD CON Image Opt In Permission All</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UPD_CON_Image_Opt_In_Permission_All_TRUE</fullName>
+        <description>Update Account field Image Opt In Permission All to True</description>
+        <field>Media_Permission_All_2019__c</field>
+        <literalValue>1</literalValue>
+        <name>UPD CON Image Opt In Permission All TRUE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UPD_CON_Image_Opt_In_Permission_Corporat</fullName>
+        <description>Update Account field Image Opt In Permission Corporate</description>
+        <field>Media_permission_corporate_2019__c</field>
+        <literalValue>1</literalValue>
+        <name>UPD CON Image Opt In Permission Corporat</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UPD_CON_Image_Opt_In_Permission_Public</fullName>
+        <description>Update Account field Image Opt In Permission Public</description>
+        <field>Media_permission_Public_2019__c</field>
+        <literalValue>1</literalValue>
+        <name>UPD CON Image Opt In Permission Public</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Contact_Preferred_First_Name</fullName>
+        <field>Preferred_First_Name__c</field>
+        <formula>FirstName</formula>
+        <name>Update Contact Preferred First Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_to_Minor</fullName>
+        <field>Age_Status__c</field>
+        <literalValue>Minor</literalValue>
+        <name>Update to Minor</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Activate Portal Family</fullName>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND (3 or 4 OR 5 OR 6) and 7</booleanFilter>
+        <criteriaItems>
+            <field>Contact.npsp__Primary_Contact__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Portal_Access__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Family_Type__c</field>
+            <operation>equals</operation>
+            <value>Patient</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Family_Type__c</field>
+            <operation>equals</operation>
+            <value>Offspring Family</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Family_Type__c</field>
+            <operation>equals</operation>
+            <value>Bereaved Family</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Family_Type__c</field>
+            <operation>equals</operation>
+            <value>Offspring Bereaved Family</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Portal_Access_Type__c</field>
+            <operation>equals</operation>
+            <value>Family Portal</value>
+        </criteriaItems>
+        <failedMigrationToolVersion>250.15.1</failedMigrationToolVersion>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Activiation_Portal</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Activate Portal Volunteer</fullName>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Contact.Portal_Access__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Volunteer_Status__c</field>
+            <operation>equals</operation>
+            <value>Accepted Volunteer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Volunteer_Status__c</field>
+            <operation>equals</operation>
+            <value>Volunteer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Date_To__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Portal_Access_Type__c</field>
+            <operation>equals</operation>
+            <value>Volunteer Portal</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Activiation_Portal</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Birthday - Send Birthday Email</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Volunteer_Eligible__c</field>
+            <operation>equals</operation>
+            <value>Eligible</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Receive_Birthday_Email__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Reset_Birthday_Email_System__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Birthdate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>sends birthday email 1 day after birthday reset</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Volunteer_Birthday_Email</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Contact.Next_Birthday__c</offsetFromField>
+            <timeLength>12</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Check_Reset_Birthday_Email_System_Box</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Contact.Next_Birthday__c</offsetFromField>
+            <timeLength>30</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Birthday Change</fullName>
+        <actions>
+            <name>Check_Reset_Birthday_Email_System_Box</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>In case you have to change the date of a birthday</description>
+        <formula>(MONTH(Birthdate)&lt;&gt;MONTH(Next_Birthday__c)||DAY(Birthdate)&lt;&gt;DAY(Next_Birthday__c))&amp;&amp; Receive_Birthday_Email__c =TRUE</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Birthday Email Opt-Out</fullName>
+        <actions>
+            <name>Check_Reset_Birthday_Email_System_Box</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 OR (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Contact.Receive_Birthday_Email__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Volunteer_Eligible__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Volunteer_Eligible__c</field>
+            <operation>equals</operation>
+            <value>Former</value>
+        </criteriaItems>
+        <description>Checks reset checkbox when a user discontinues</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Birthday Reset Birthday Email</fullName>
+        <actions>
+            <name>Reset_Next_Birthday</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Volunteer_Eligible__c</field>
+            <operation>equals</operation>
+            <value>Eligible</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Receive_Birthday_Email__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Reset_Birthday_Email_System__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Resets birthday email for next year</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Reset_Next_Birthday_Time_trigger</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>CQ - Address Update Request</fullName>
+        <actions>
+            <name>CQ_Address_Update_Request_RTS</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Address_Update_Request_Sent_RTS</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.RTS__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Email</field>
+            <operation>notEqual</operation>
+            <value>NULL</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>CQ - Alert for bounced email</fullName>
+        <actions>
+            <name>Bounced_Email_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.IsEmailBounced</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>CQ - Contact Copy Constituent ID into Membership number</fullName>
+        <active>false</active>
+        <formula>TRUE</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>CQ - Regular Donor RTS Send Email</fullName>
+        <actions>
+            <name>RG_RTS_Email</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.RTS__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Recurring_Donor_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </criteriaItems>
+        <description>Email sent to contact asking to update details</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contact Preferred Name</fullName>
+        <actions>
+            <name>Update_Contact_Preferred_First_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Preferred_First_Name__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contact check all Image Permissions</fullName>
+        <actions>
+            <name>UPD_CON_Image_Opt_In_Permission_All_TRUE</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.media_opt_in_share_participants__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Media_permission_Public_2019__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Media_permission_corporate_2019__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>To fix an anomaly with the Workflow Rule - Contact check all Media Permissions
+On create it runs through the Field Updates which in turn remove the check from the Image Opt In Permission All field</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contact check all Media Permissions</fullName>
+        <actions>
+            <name>UPD_CON_Image_Opt_In_Participant_Sharing</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UPD_CON_Image_Opt_In_Permission_Corporat</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UPD_CON_Image_Opt_In_Permission_Public</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Media_Permission_All_2019__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>When Media_Permission_All_2019__c (Image Opt In Permission All) is checked then check all the relevant media permission check boxes</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contact uncheck Image Opt In Participant Sharing</fullName>
+        <actions>
+            <name>UPD_CON_Image_Opt_In_Permission_All</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.media_opt_in_share_participants__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>When media_opt_in_share_participants__c (Image Opt In Participant Sharing) is unchecked then uncheck Media_Permission_All_2019__c (Image Opt In Permission All)</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contact uncheck Image Opt In Permission Corporate</fullName>
+        <actions>
+            <name>UPD_CON_Image_Opt_In_Permission_All</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Media_permission_corporate_2019__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>When media_permission_corporate_2019__c (Image Opt In Permission Corporate) is unchecked then uncheck Media_Permission_All_2019__c (Image Opt In Permission All)</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contact uncheck Image Opt In Permission Public</fullName>
+        <actions>
+            <name>UPD_CON_Image_Opt_In_Permission_All</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Media_permission_Public_2019__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>When media_permission_Public_2019__c (Image Opt In Permission Public) is unchecked then uncheck Media_Permission_All_2019__c (Image Opt In Permission All)</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Deactivate Family Portal</fullName>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3 OR 6 OR 7) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Family</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Family_Type__c</field>
+            <operation>equals</operation>
+            <value>Former Patient</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Family_Type__c</field>
+            <operation>equals</operation>
+            <value>Former Offspring Family</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Portal_Access_Type__c</field>
+            <operation>equals</operation>
+            <value>Family Portal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Portal_Access__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Family_Type__c</field>
+            <operation>equals</operation>
+            <value>Former Bereaved</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Family_Type__c</field>
+            <operation>equals</operation>
+            <value>Former Offspring Bereaved</value>
+        </criteriaItems>
+        <failedMigrationToolVersion>250.15.1</failedMigrationToolVersion>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Make_Portal_Inactive</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Deceased With Portal</fullName>
+        <actions>
+            <name>Make_Portal_Inactive</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.npsp__Deceased__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Portal_Access__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>DeceasedRules</fullName>
+        <actions>
+            <name>DefaultDeceasedDate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Disable_Birthday_Emails</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>ExcludeFromHouseholdName</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>ExcludeFromInformalName</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>ExcludeFromNameFormal</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Date_To_Today</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 OR 2 OR 3 OR 5 OR  6 OR 7 ) AND( 4)</booleanFilter>
+        <criteriaItems>
+            <field>Contact.npsp__Exclude_from_Household_Formal_Greeting__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.npsp__Exclude_from_Household_Name__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.npsp__Exclude_from_Household_Informal_Greeting__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.npsp__Deceased__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Receive_Birthday_Email__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Date_To__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Deceased_Date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Exclude From Portal</fullName>
+        <actions>
+            <name>ExcludeFromHouseholdName</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>ExcludeFromInformalName</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>ExcludeFromNameFormal</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7</booleanFilter>
+        <criteriaItems>
+            <field>Contact.npsp__Exclude_from_Household_Formal_Greeting__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.npsp__Exclude_from_Household_Name__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.npsp__Exclude_from_Household_Informal_Greeting__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Exclude_From_Portal__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Family Member</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Family_Type__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Family_Type__c</field>
+            <operation>notContain</operation>
+            <value>Former</value>
+        </criteriaItems>
+        <failedMigrationToolVersion>250.15.1</failedMigrationToolVersion>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Former Volunteer Inactive Portal</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Date_To__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Volunteer_Status__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Portal_Access_Type__c</field>
+            <operation>equals</operation>
+            <value>Volunteer Portal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Portal_Access__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Make_Portal_Inactive</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Marketing Opt-Out</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.Requests_no_Marketing_Materials__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>New ACT Accepted Vol</fullName>
+        <actions>
+            <name>New_Accepted_Volunteer</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.Branch_Office__c</field>
+            <operation>equals</operation>
+            <value>Australian Capital Territory</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Volunteer_Status__c</field>
+            <operation>equals</operation>
+            <value>Accepted Volunteer</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Volunteer Reactivate</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.Date_To__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Portal_Access__c</field>
+            <operation>equals</operation>
+            <value>Inactive</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Volunteer Reactivate1</fullName>
+        <actions>
+            <name>Activiation_Portal</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Date_To__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Portal_Access__c</field>
+            <operation>equals</operation>
+            <value>Inactive</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Volunteer_Status__c</field>
+            <operation>equals</operation>
+            <value>Volunteer</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>WWC Expring</fullName>
+        <active>false</active>
+        <formula>AND( Volunteer_WWC_Expiry_Date__c &lt; Today()+42,  MailingState = &quot;NSW&quot;)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <timeLength>30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <tasks>
+        <fullName>Address_Update_Request_Sent_RTS</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Address Update Request Sent (RTS)</subject>
+    </tasks>
+    <tasks>
+        <fullName>New_Accepted_Volunteer</fullName>
+        <assignedTo>ewalls@campquality.org.au</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>New Accepted Volunteer</subject>
+    </tasks>
+</Workflow>

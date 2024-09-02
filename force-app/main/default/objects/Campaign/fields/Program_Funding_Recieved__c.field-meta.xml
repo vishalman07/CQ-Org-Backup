@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Funding_Recieved__c</fullName>
+    <inlineHelpText>The amount of funding that has been officially received, or been approved by foundations etc for payment.</inlineHelpText>
+    <label>Program Funding Recieved</label>
+    <precision>7</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

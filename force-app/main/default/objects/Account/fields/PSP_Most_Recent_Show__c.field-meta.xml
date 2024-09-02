@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PSP_Most_Recent_Show__c</fullName>
+    <description>Created by Rollup Helper</description>
+    <inlineHelpText>Most recent show performed at a venue/school/hospital</inlineHelpText>
+    <label>PSP Most Recent Show</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

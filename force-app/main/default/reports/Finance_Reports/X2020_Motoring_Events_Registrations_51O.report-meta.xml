@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign$Parent</field>
+    </columns>
+    <columns>
+        <field>Campaign$Name</field>
+    </columns>
+    <columns>
+        <field>Campaign$Cost_Centre__c</field>
+    </columns>
+    <columns>
+        <field>Campaign$Account_No__c</field>
+    </columns>
+    <columns>
+        <field>Campaign$Branch_Code__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>(1 AND 2) AND (3 OR 4)</booleanFilter>
+        <criteriaItems>
+            <column>Campaign$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,NAT20 esCarpade-Meal Money - GST,NAT20 Funx4-Registration - GST,NNSW2003 MOTOCYC - Registrations GST</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign$Parent</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>20Wesc - Master Campaign,NNSW2009 1000KS 4 KIDS,NNSW2009 1000KS 4 KIDS - funraisin,WA20 Wescarpade - Master Campaign</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>2020 Motoring Events - Registrations</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Campaigns_with_Payment_txns__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Campaign$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

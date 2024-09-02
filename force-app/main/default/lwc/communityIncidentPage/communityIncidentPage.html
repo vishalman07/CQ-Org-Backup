@@ -1,0 +1,275 @@
+<template>
+	<div if:true={waitForRes} class="exampleHolder">
+		<lightning-spinner alternative-text="Loading" size="large" variant="brand"></lightning-spinner>
+	</div>
+	<div>
+		<div class="head">
+			<div class="header font_orange">
+				<h1>{label.incidents}</h1>
+			</div>
+			<img src={headerblueImg} class="headerImg" >
+	</div>
+			<div if:true={showMessage} class="noIncitext">
+				No incident available.
+			</div>
+
+			<div class="slds-box">
+
+				<div>
+					<p class="custom_Tex"> Camp Quality takes safety extremely seriously and believes safety is
+						everyone’s responsibility. We ask our volunteers to report any incident or near miss as soon as
+						possible, no later than four hours after the incident occurs. If the incident is of a serious
+						nature or you require further advice, please call 1800 CQ SAFE.</p>
+				</div>
+				<div class="custom_btn font_popinsLight">
+
+					<a class="download" href={downloadIncidentUrl} target="_blank">
+						<button class="form_btn downloadIncident" >{label.downloadIncident}</button>
+					</a>
+					<a class="add" href={jotFormUrl} target="_blank">
+						<button class="form_btn addNewBtn" >{label.addNewBtn}</button>
+					</a>
+
+				</div>
+
+
+
+
+
+
+				<!-- <div class="custom_btn font_popinsLight">
+					<a href="https://campqualityaudemo.sharepoint.com/sites/Volunteers2/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FVolunteers2%2FShared%20Documents%2FGeneral%2FSafety%20%26%20Compliance%2FCQ%20Safe%20%2D%20Incident%20Management%20Guide%20%2D%20Volunteers%2Epdf&parent=%2Fsites%2FVolunteers2%2FShared%20Documents%2FGeneral%2FSafety%20%26%20Compliance&p=true&ga=1" target="_blank">
+						<button class="form_btn" >{label.downloadIncident}</button>
+					</a>
+				</div> -->
+
+
+				<div if:false={showMessage}>
+					<div if:false={openRecord} class="slds-scrollable">
+						<table
+							class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered  customTableDesign"
+							aria-label="Example table of Opportunities with no row hovers">
+							<thead>
+								<tr class="slds-line-height_reset font_poppinsSemiBold">
+									<th class="" scope="col">
+										<div class="slds-truncate">{label.incidentIdtableHeader}</div>
+									</th>
+									<th class="" scope="col">
+										<div class="slds-truncate">{label.incidentDateTimetableHeader}
+										</div>
+									</th>
+									<th class="" scope="col">
+										<div class="slds-truncate">{label.incidentTypeTableHeader}</div>
+									</th>
+									<th class="" scope="col">
+										<div class="slds-truncate">{label.severityTableHeader}</div>
+									</th>
+									<!-- <th class="" scope="col">
+										<div class="slds-truncate">{label.statusTableHeader}</div>
+									</th> -->
+									<!-- <th class="" scope="col">
+										<div class="slds-truncate">{label.reporternameTableheader}</div>
+									</th> -->
+									<th class="" scope="col">
+										<div class="slds-truncate">{label.actionTableHeader}</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody class="custom_border font_popinsLight">
+								<template for:each={incidentDataAccess} for:item="incident">
+
+									<tr class="slds-hint-parent " key={incident.Id} if:true={incident.hideIncidentType}>
+										<th data-label="Opportunity Name" scope="row">
+											<div class="slds-truncate">
+												{incident.Name}
+											</div>
+										</th>
+										<td data-label="Account Name">
+											<div class="slds-truncate">{incident.Incident_Date_Time__c}</div>
+										</td>
+
+										<td data-label="Account Name">
+											<div class="slds-truncate">{incident.Incident_Type__c}</div>
+										</td>
+										<td data-label="Close Date">
+											<div class="slds-truncate">{incident.Severity__c}</div>
+										</td>
+										<!-- <td data-label="Prospecting">
+											<div class="slds-truncate">{incident.Status__c}</div>
+										</td>
+										<td data-label="Confidence">
+											<div class="slds-truncate">{incident.Reporters_Name__c}</div>
+										</td> -->
+										<td data-label="Amount">
+											<div class="slds-truncate form_btn">
+												<span onclick={viewhandle} data-id = {incident.Id} >View</span>
+											</div>
+										</td>
+									</tr>
+								</template>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div if:true={openRecord}>
+
+					<lightning-card title="Incident Record Details" icon-name="standard:record">
+						<div class="slds-grid slds-wrap font_popinsLight">
+							<div class="slds-size_1-of-2 slds-p-horizontal_small">
+								<div class="slds-form-element">
+									<label class="slds-form-element__label" for="incidentDateTime">Incident Date/Time</label>
+									<input type="text" id="incidentDateTime" value={record.Incident_Date_Time__c} class="slds-input" disabled />
+								</div>
+
+									<div class="slds-form-element">
+										<label class="slds-form-element__label" for="recordType">Record Type</label>
+										<input type="text" id="recordType" value={record.RecordType.Name} class="slds-input" disabled />
+								</div>
+
+										<div class="slds-form-element">
+											<label class="slds-form-element__label" for="severity">Severity</label>
+											<input type="text" id="severity" value={record.Severity__c} class="slds-input" disabled />
+								</div>
+
+											<div class="slds-form-element">
+												<label class="slds-form-element__label" for="status">Status</label>
+												<input type="text" id="status" value={record.Status__c} class="slds-input" disabled />
+								</div>
+
+												<div class="slds-form-element">
+													<label class="slds-form-element__label" for="stakeholdersInvolved">Stakeholder/s Involved</label>
+													<input type="text" id="stakeholdersInvolved" value={record.Stakeholder_s_Involved__c} class="slds-input" disabled />
+								</div>
+
+													<div class="slds-form-element">
+														<label class="slds-form-element__label" for="stakeholdersOther">Stakeholder/s Other</label>
+														<input type="text" id="stakeholdersOther" value={record.Stakeholder_s_Other__c} class="slds-input" disabled />
+								</div>
+
+														<div class="slds-form-element">
+															<label class="slds-form-element__label" for="incidentLocation">Incident Location</label>
+															<input type="text" id="incidentLocation" value={record.Incident_Location__c} class="slds-input" disabled />
+								</div>
+
+															<div class="slds-form-element">
+																<label class="slds-form-element__label" for="incidentDescription">Incident Description</label>
+																<input type="text" id="incidentDescription" value={record.Incident_description__c} class="slds-input" disabled />
+								</div>
+
+																<div class="slds-form-element">
+																	<label class="slds-form-element__label" for="emergencyServicesRequired">Were emergency services required?</label>
+																	<input type="text" id="emergencyServicesRequired" value={record.Were_emergency_services_required__c} class="slds-input" disabled />
+								</div>
+
+																	<div class="slds-form-element">
+																		<label class="slds-form-element__label" for="firstAidRequired">Was first aid required?</label>
+																		<input type="text" id="firstAidRequired" value={record.Was_first_aid_required__c} class="slds-input" disabled />
+								</div>
+
+																		<div class="slds-form-element">
+																			<label class="slds-form-element__label" for="firstAidProvided">First Aid Provided</label>
+																			<input type="text" id="firstAidProvided" value={record.First_Aid_provided__c} class="slds-input" disabled />
+								</div>
+
+																			<div class="slds-form-element">
+																				<label class="slds-form-element__label" for="firstAider">First Aider</label>
+																				<input type="text" id="firstAider" value={record.First_Aider__c} class="slds-input" disabled />
+								</div>
+
+																				<div class="slds-form-element">
+																					<label class="slds-form-element__label" for="actionsTaken">Reporters name</label>
+																					<textarea class="slds-textarea" style="min-height: 100px;" disabled>{record.Reporters_Name__c}</textarea>
+																				</div>
+																			</div>
+
+																			<div
+																				class="slds-size_1-of-2 slds-p-horizontal_small">
+																				<div class="slds-form-element"
+																					if:false={hideIncidentTypeInDetail}>
+																					<label class="slds-form-element__label" for="incidentType">Incident Type</label>
+																					<input type="text" id="incidentType" value={record.Incident_Type__c} class="slds-input" disabled />
+								</div>
+
+																					<div class="slds-form-element">
+																						<label class="slds-form-element__label" for="typeOfBehaviour">Type of Behaviour</label>
+																						<input type="text" id="typeOfBehaviour" if:false={defaultBehaviour} value={record.Type_of_Behaviour__c} class="slds-input" disabled />
+																						<input type="text" id="typeOfBehaviour1" if:true={defaultBehaviour} value= {typeOfBeha} class="slds-input" disabled />
+																					</div>
+
+																						<div class="slds-form-element">
+																							<label class="slds-form-element__label" for="observedTriggers">Observed Triggers</label>
+																							<input type="text" id="observedTriggers" value={record.Observed_Triggers__c} class="slds-input" disabled />
+								</div>
+
+																							<div
+																								class="slds-form-element">
+																								<label class="slds-form-element__label" for="staffVolunteersInvolved">Staff/Volunteers Involved</label>
+																								<input type="text" id="staffVolunteersInvolved" value={record.Staff_Volunteers_Involved__c} class="slds-input" disabled />
+								</div>
+
+																								<div
+																									class="slds-form-element">
+																									<label class="slds-form-element__label" for="injuriesSustained">Injuries Sustained?</label>
+																									<input type="text" id="injuriesSustained" value={record.Injuries_sustained__c} class="slds-input" disabled />
+								</div>
+
+																									<div
+																										class="slds-form-element">
+																										<label class="slds-form-element__label" for="natureOfBodilyInjury">Nature of Bodily Injury</label>
+																										<input type="text" id="natureOfBodilyInjury" value={record.Nature_of_bodily_injury__c} class="slds-input" disabled />
+								</div>
+
+																										<div
+																											class="slds-form-element">
+																											<label class="slds-form-element__label" for="emergencyContactNotified">Emergency Contact Notified</label>
+																											<input type="text" id="emergencyContactNotified" value={record.Emergency_Contact_Notified__c} class="slds-input" disabled />
+								</div>
+
+																											<div
+																												class="slds-form-element">
+																												<label class="slds-form-element__label" for="callDetails">Call Details</label>
+																												<input type="text" id="callDetails" value={record.Call_Details__c} class="slds-input" disabled />
+								</div>
+
+																												<div
+																													class="slds-form-element">
+																													<label class="slds-form-element__label" for="supervisorName">Supervisor Name</label>
+																													<input type="text" id="supervisorName" value={record.Supervisor_Name__c} class="slds-input" disabled />
+								</div>
+
+																													<div
+																														class="slds-form-element">
+																														<label class="slds-form-element__label" for="supervisorNotifiedDate">Supervisor Notified Date</label>
+																														<input type="text" id="supervisorNotifiedDate" value={record.Supervisor_Notified_Date__c} class="slds-input" disabled />
+								</div>
+
+																														<div
+																															class="slds-form-element">
+																															<label class="slds-form-element__label" for="actionsTaken">Actions Taken</label>
+																															<input type="text" id="actionsTaken" value={record.Actions_taken__c} class="slds-input" disabled />
+								</div>
+
+																															<div
+																																class="slds-form-element">
+																																<label class="slds-form-element__label" for="volunteerComments">Volunteer Comments</label>
+																																<textarea class="slds-textarea" style="min-height: 200px;" disabled>{record.Volunteer_Comments__c}</textarea>
+																															</div>
+
+																															<div
+																																class="slds-form-element">
+																																<label class="slds-form-element__label" for="actionsTaken">Add Comments</label>
+																																<textarea class="slds-textarea" style="min-height: 100px;" onchange={changeCommentHandler}></textarea>
+																															</div>
+
+																														</div>
+																													</div>
+					</lightning-card>
+					<div class="custom_btn font_popinsLight">
+						<button class="form_btn_cancel" onclick={closedDetails} >Cancel</button>
+						<button class="form_btn" onclick={handleSave} >Save</button>
+					</div>
+				</div>
+			</div>
+			<c-site-footer> </c-site-footer>
+		</div>
+</template>

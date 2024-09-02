@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivation_for_supporting_Camp_Quality__c</fullName>
+    <inlineHelpText>Please select one statement.</inlineHelpText>
+    <label>03. Motivation for supporting</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I know a cancer diagnosis can steal childhoods from children and I&apos;d like to help give those things back.</fullName>
+                <default>false</default>
+                <label>a. I know a cancer diagnosis can steal childhoods from children and I&apos;d like to help give those things back.</label>
+            </value>
+            <value>
+                <fullName>If my child or grandchild was diagnosed with cancer, I know I&apos;d really appreciate Camp Quality being there.</fullName>
+                <default>false</default>
+                <label>b. If my child or grandchild was diagnosed with cancer, I know I&apos;d really appreciate Camp Quality being there.</label>
+            </value>
+            <value>
+                <fullName>I want to help entire families affected by a childhood cancer diagnosis.</fullName>
+                <default>false</default>
+                <label>c. I want to help entire families affected by a childhood cancer diagnosis.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Logo_Letterhead</letterhead>
+    <name>New internal puppet show request</name>
+    <style>freeForm</style>
+    <subject>Automated email: New digital playdate request</subject>
+    <textOnly>A new internal request for puppet shows has been created in Salesforce
+
+Link:   https://campquality.lightning.force.com/{!PuppetShow__c.Id}
+Requestor: {!PuppetShow__c.Requestor__c}
+
+This is an automated email. If it has been sent in error please email programhelp@campquality.org.au</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

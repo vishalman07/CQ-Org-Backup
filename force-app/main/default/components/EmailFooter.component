@@ -1,0 +1,5 @@
+<apex:component access="Global">
+    <p>You are receiving this email as you are a registered Camp Quality Family or Volunteer.  To manage your invites update your profile at www.mycampquality.org.au  
+</p>
+
+</apex:component>

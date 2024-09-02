@@ -1,0 +1,101 @@
+<template>
+	<div if:true={waitForRes} class="exampleHolder">
+		<lightning-spinner alternative-text="Loading" size="large" variant="brand"></lightning-spinner>
+	</div>
+	<div>
+		
+		<div class = "head">
+			<div class="header font_orange">
+				<h1>{label.contactus}</h1>
+			</div>
+			<img src={headerPurpalImg} class="headerImg">
+		</div>
+		<div class=" slds-form custom_width">
+			<div class="slds-form__row">
+				<div class="slds-form__item" role="listitem">
+					<div class="slds-form-element slds-form-element_horizontal slds-size_1-of-1 slds-medium-size_12-of-12 font_popinsLight">
+						<div class="phonenumber">
+							<p class="phonenum"><strong><b>Is your query is related to an upcoming event? To ensure we can respond to you in time please contact us on <a href="tel:+ 1300 662 267">1300 662 267</a> or email the Family Program Coordinator directly.</b></strong></p>
+							<p class="phonenumMsg"> <br>Or send us a general message via the form below: </p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="slds-form__row">
+				<div class="slds-form__item" role="listitem">
+				<div class="slds-box slds-form-element  slds-size_1-of-1 slds-medium-size_12-of-12 font_popinsLight">
+					<div class="custom-input">
+                        <label class="subject slds-form-element__label font_poppinsSemiBold" for="First Name"><abbr class="astrickColor">*</abbr>FirstName</label>
+                        <div class="subject slds-form-element__control">
+                            <input type = "text"  name="First Name" class="slds-input form_input" 
+                                 value={userFirstName} disabled></input>
+                        </div>
+                        <span if:true={checkReqFName} class="alert" style="color: #f37130">Please enter the FirstName.</span>
+                    </div>
+
+                    <div class="custom-input">
+                        <label class="subject slds-form-element__label font_poppinsSemiBold" for="Last Name "><abbr class="astrickColor">*</abbr>LastName</label>
+                        <div class="subject slds-form-element__control">
+                            <input type = "text"  name="Last Name" class="slds-input form_input" 
+                                 value={userLastname} disabled></input>
+                        </div>
+                        <span if:true={checkReqLName} class="alert" style="color:#f37130">Please enter the LastName.</span>
+                    </div>
+
+                    <div class="custom-input">
+                        <label class="subject slds-form-element__label font_poppinsSemiBold" for="Email"><abbr class="astrickColor">*</abbr>Email</label>
+                        <div class="subject slds-form-element__control">
+                            <input type = "text"  name="Email" class="slds-input form_input" 
+                                 value={userEmail} disabled></input>
+                        </div>
+                        <span if:true={checkReqEmail} class="alert" style="color:#f37130">Please enter the Email.</span>
+                    </div>
+
+					<div class="custom-input">
+						<label class="reason slds-form-element__label font_poppinsSemiBold" for="reason"><abbr class="astrickColor">*</abbr>Reason</label>
+						<div class="slds-form-element__control">
+							<select id="reason" name="reason" class="slds-select form_input" onchange={reasonHandler} value = {reason}>
+								<option value="--None--">None</option>
+								<option value="Request a call">Request a call</option>
+								<option value="Request help using My Camp Quality">Request help using My Camp Quality</option>
+                                <option value="Request help using My Camp Quality">Request primary school puppet show</option>
+								<option value="Question about upcoming event/experience">Question about upcoming event/experience</option>
+								<option value="Share some news with us">Share some news with us</option>
+								<option value="Update Family Details">Update Family Details</option>
+							</select>
+						</div>
+						<span if:true={checkReqReason} class="alert">Please select the reason.</span>
+					</div>
+					<div class="custom-input">
+						<label class="subject slds-form-element__label font_poppinsSemiBold" for="subject"><abbr class="astrickColor">*</abbr>Subject</label>
+						<div class="subject slds-form-element__control">
+							<input type = "text" id="subject" name="subject" class="slds-input form_input" 
+								onchange={subjectHandler} value={subject}></input>
+						</div>
+						<span if:true={checkReqSub} class="alert">Please enter the subject.</span>
+					</div>
+					<div class="custom-input">
+					    <label class="details input slds-form-element__label font_poppinsSemiBold" for="details"><abbr class="astrickColor">*</abbr>Details</label>
+                        <div class="detailsl slds-form-element__control">
+                            <textarea id="details" name="details" class="slds-textarea form_inputdetails" rows="3" cols="50"
+                                onchange={detailsHandler} value= {details}></textarea>
+                        </div>
+                        <span if:true={checkReqdetail} class="alert">Please enter the details.</span>
+					</div>
+					
+					<div class="slds-size_1-of-1 slds-medium-size_6-of-12 custom_inline font_poppinsSemiBold">
+						<button class="slds-button slds-button_neutral custom_btn "
+							onclick={submitHandler}>Submit Enquiry</button>
+					</div>
+
+				</div>
+				</div>
+			</div>
+
+		
+		</div>
+	<c-site-footer> </c-site-footer>
+	</div>
+
+</template>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Type__c</fullName>
+    <defaultValue>IF(
+
+  $RecordType.Name = &quot;Puppet Digital Playdate&quot;,
+&quot;Puppet Digital Playdate&quot;,&quot;&quot;)</defaultValue>
+    <label>Show Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Metropolitan School Visit</fullName>
+                <default>false</default>
+                <label>Metropolitan School Visit</label>
+            </value>
+            <value>
+                <fullName>Country School Visit</fullName>
+                <default>false</default>
+                <label>Country School Visit</label>
+            </value>
+            <value>
+                <fullName>Hospital Visit</fullName>
+                <default>false</default>
+                <label>Hospital Visit</label>
+            </value>
+            <value>
+                <fullName>Camp Quality Event - School Show</fullName>
+                <default>false</default>
+                <label>Camp Quality Event - School Show</label>
+            </value>
+            <value>
+                <fullName>Camp Quality Event - Program</fullName>
+                <default>false</default>
+                <label>Camp Quality Event - Program</label>
+            </value>
+            <value>
+                <fullName>Workshop</fullName>
+                <default>false</default>
+                <label>Workshop</label>
+            </value>
+            <value>
+                <fullName>Brand Relations</fullName>
+                <default>false</default>
+                <label>Brand Relations</label>
+            </value>
+            <value>
+                <fullName>Hospital Visit - No Puppets</fullName>
+                <default>false</default>
+                <label>Hospital Visit - No Puppets</label>
+            </value>
+            <value>
+                <fullName>Puppet Digital Playdate</fullName>
+                <default>false</default>
+                <label>Puppet Digital Playdate</label>
+            </value>
+            <value>
+                <fullName>Digital Content</fullName>
+                <default>false</default>
+                <label>Digital Content</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

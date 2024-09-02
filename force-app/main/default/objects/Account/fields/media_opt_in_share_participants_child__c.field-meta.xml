@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>media_opt_in_share_participants_child__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Image sharing permission with camp quality for child</inlineHelpText>
+    <label>Child Image Opt-In Participant Sharing</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

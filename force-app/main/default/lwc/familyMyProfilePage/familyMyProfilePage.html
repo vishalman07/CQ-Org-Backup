@@ -1,0 +1,473 @@
+<template>
+
+	<div if:true={waitForRes} class="exampleHolder">
+		<lightning-spinner alternative-text="Loading" size="large"  variant="brand"></lightning-spinner>
+	</div>
+
+	<div class="head">
+		<div class="header font_orange">
+			<h1>{label.myfamilyproHeading}</h1>
+		</div>
+		<img src={imgTopyellow} class="headerImg">
+	</div>
+
+	<!-- <div class="wholeform"> -->
+	<div class="slds-form wholeform">
+		<div class="slds-form__row">
+			<div class="slds-form__item" role="listitem">
+				<div class="slds-form-element slds-size_1-of-1  font_poppinsSemiBold custom_clslabel ">
+					<Label class="slds-form-element__label ">{label.emailAdd}
+					</Label>
+					<div class="font_popinsLight slds-form-element__control ">
+						<input type="email" class="slds-input form_input" data-id="disable" required name="email"
+							onchange={changeDeatilsHandler} value={familyData.email} />
+					</div>
+				</div>
+			</div>
+
+			<div class="slds-form__item" role="listitem">
+				<div class="slds-form-element slds-size_1-of-1  font_poppinsSemiBold custom_clslabel">
+					<label class="slds-form-element__label">{label.homePh}</Label>
+					<div class=" font_popinsLight slds-form-element__control ">
+						<input type="text" class="slds-input form_input" data-id="disable" required name="home"
+							onchange={changeDeatilsHandler} value={familyData.homePhone} />
+					</div>
+				</div>
+			</div>
+
+			<div class="slds-form__item" role="listitem">
+				<div class="slds-form-element slds-size_1-of-1 font_poppinsSemiBold custom_clslabel">
+					<label class="slds-form-element__label">{label.mobilePh}</Label>
+					<div class="font_popinsLight slds-form-element__control">
+						<input type="text" class="slds-input form_input" data-id="disable" required name="mobile"
+							onchange={changeDeatilsHandler} value={familyData.mobilePhone} />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="slds-form__row">
+
+			<div class="slds-form__item" role="listitem">
+				<div class="slds-form-element slds-size_1-of-1  font_poppinsSemiBold custom_clslabel">
+					<Label class="slds-form-element__label">{label.suburb}</Label>
+					<div class=" font_popinsLight slds-form-element__control">
+						<input type="text" class="slds-input form_input" data-id="disable" required name="suburb"
+							onchange={changeDeatilsHandler} value={familyData.city} />
+					</div>
+				</div>
+			</div>
+
+			<div class="slds-form__item" role="listitem">
+				<div class="slds-form-element slds-size_1-of-1  font_poppinsSemiBold custom_clslabel">
+					<Label class="slds-form-element__label">{label.state}</Label>
+					<div class=" font_popinsLight slds-form-element__control">
+						<input type="text" class="slds-input form_input" data-id="disable" required name="state"
+							onchange={changeDeatilsHandler} value={familyData.state} />
+					</div>
+				</div>
+			</div>
+
+			<div class="slds-form__item" role="listitem">
+				<div class="slds-form-element slds-size_1-of-1  font_poppinsSemiBold custom_clslabel">
+					<Label class="slds-form-element__label">{label.postCode}</Label>
+					<div class=" font_popinsLight slds-form-element__control">
+						<input type="text" class="slds-input form_input" data-id="disable" required name="postCode"
+							onchange={changeDeatilsHandler} value={familyData.postalCode} />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="slds-form__row">
+			<div class="slds-form__item" role="listitem">
+				<div class="slds-form-element slds-size_1-of-1  font_poppinsSemiBold custom_clslabel">
+					<Label class="slds-form-element__label">{label.address}</Label>
+					<div class="font_popinsLight slds-form-element__control">
+						<input type="text" class="slds-input form_input" data-id="disable" required name="address"
+							onchange={changeDeatilsHandler} value={familyData.street} />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="slds-form__row">
+			<div class="slds-form__item" role="listitem">
+				<div
+					class="slds-form-element slds-size_1-of-1 slds-medium-size_8-of-12 font_poppinsSemiBold custom_clslabel custom_manageWidth">
+					<Label class="slds-form-element__label"><b> Preferred Event Locations </b></Label>
+					<div class="font_popinsLight ">
+						<div>
+							<lightning-dual-listbox name="languages" source-label="Available" selected-label="Selected"
+								options={preferredLocation} onchange={handleMultiSelectLocation}
+								value={selectedPreferredLocations} data-id="disableDualListBoxId">
+							</lightning-dual-listbox>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="slds-form__item" role="listitem">
+				<div
+					class="slds-form-element slds-size_1-of-1 slds-medium-size_8-of-12 font_poppinsSemiBold custom_clslabel custom_manageWidth">
+					<Label class="slds-form-element__label"><b> Family Interests </b></Label>
+					<div class="font_popinsLight ">
+						<div>
+							<lightning-dual-listbox name="languages" source-label="Available" selected-label="Selected"
+								options={familyInterest} onchange={handleMultiSelectFamily}
+								value={selectedFamilyInterest} data-id="disableDualListBoxId">
+							</lightning-dual-listbox>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="slds-form__row">
+			<div class="slds-form__item" role="listitem">
+				<div
+					class="slds-form-element slds-size_1-of-1 slds-medium-size_8-of-12 font_poppinsSemiBold custom_clslabel">
+					<Label class="slds-form-element__label "><b>{label.imgPermission}:</b></Label>
+					<div class="slds-form-element__control custom_clslabel font_popinsLight">
+						<input type="checkbox" data-id="disable" required onchange={permissionChangeHandle}
+							checked={familyData.mediaOptInTakeVideoPhotos} /> &nbsp;
+						I approve of photos and video footage being taken of me and my children participating in Camp
+						Quality services and programs
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+		<div if:true={dependentCheckBox}>
+		<div class="slds-form__row">
+			<div class="slds-form__item" role="listitem">
+				<div
+					class="slds-form-element slds-size_1-of-1 slds-medium-size_8-of-12 font_poppinsSemiBold custom_clslabel">
+					<Label class="slds-form-element__label "><b>For the adults in my household, I allow photos/videos to
+							be shared:</b></Label>
+					<div class="slds-form-element__control custom_clslabel">
+						<div class="font_popinsLight">
+							<input type="checkbox" data-id="disableOr" required onchange={permissionChangeforAdultForParticipant}
+								checked={familyData.mediaOptInShareParticipants} /> &nbsp;
+							with Camp Quality families who attended the programs via our password protected photo
+							gallery
+						</div>
+
+						<div class="font_popinsLight">
+							<input type="checkbox" data-id="disableOr" required onchange={permissionChangeforAdultPublic}
+								checked={familyData.mediaPermissionPublic2019} /> &nbsp;
+							to promote Camp Quality's charitable purposes
+						</div>
+
+						<div class="font_popinsLight">
+							<input type="checkbox" data-id="disableOr" required onchange={permissionChangeforAdultCorporate}
+								checked={familyData.mediapermissioncorporate2019} /> &nbsp;
+								
+							with our corporate partners and major donors, to promote Camp Quality's charitable purposes
+							and
+							the partnership
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="slds-form__row">
+			<div class="slds-form__item" role="listitem">
+				<div
+					class="slds-form-element slds-size_1-of-1 slds-medium-size_8-of-12 font_poppinsSemiBold custom_clslabel">
+					<Label class="slds-form-element__label "><b>For children in my household, I allow photos/videos to
+							be shared:
+							For children in my household, I allow photos/videos to be shared:</b></Label>
+					<div class="slds-form-element__control custom_clslabel font_popinsLight">
+						<input type="checkbox" data-id="disableOr" required onchange={permissionChangeForChildParticipant} checked = {familyData.mediaOptInShareParticipantsChild} /> &nbsp;
+						with Camp Quality families who attended the programs via our password protected photo gallery
+					</div>
+					<div class="slds-form-element__control custom_clslabel font_popinsLight">
+						<input type="checkbox" data-id="disableOr" required onchange={permissionChangeForChildPublic} checked = {familyData.mediaPermissionPublic2019Child} /> &nbsp;
+						to promote Camp Quality's charitable purposes
+					</div>
+					<div class="slds-form-element__control custom_clslabel font_popinsLight">
+						<input type="checkbox" data-id="disableOr" required onchange={permissionChangeForChildCorporate} checked = {familyData.imageOptInPermissionCorporateChild} /> &nbsp;
+						with our corporate partners and major donors, to promote Camp Quality's charitable purposes and
+						the partnership
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="slds-form__item" role="listitem">
+			For more information please visit our <a href="https://www.campquality.org.au/Privacy-policy"><span class = "hyperLink"> &nbsp; Privacy Policy.</span></a>
+		</div>
+
+		<div class="slds-form__row">
+			<div class="slds-form__item" role="listitem">
+				<div class="slds-size_1-of-1 customhandleBtn font_popinsLight">
+					<div if:true={editBtnforSave}>
+						<button class="form_btn" onclick={handleEdit} form_btn> Update</button>
+					</div>
+					<div if:false={editBtnforSave}>
+						<button class="form_btn_cancel" onclick={handleCancel}>Cancel</button>
+						<button class="form_btn" onclick={handleSave}>Save</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<!-- Table below the form  -->
+	<div class="slds-scrollable">
+		<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped customTableDesign"
+			aria-label="Example table of Opportunities with striped rows">
+			<thead>
+				<tr class="slds-line-height_reset">
+					<th class="" scope="col">
+						<div class="slds-truncate">Name</div>
+					</th>
+					<!-- <th class="" scope="col">
+						<div class="slds-truncate">Relationship</div>
+					</th> -->
+					<th class="" scope="col">
+						<div class="slds-truncate">Birthday</div>
+					</th>
+					<th class="" scope="col">
+						<div class="slds-truncate">Edit Details</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<template for:each={conData} for:item="tableData">
+					<tr class="slds-hint-parent" key={tableData.Id}>
+						<th data-label="Opportunity Name" scope="row">
+							<div class="slds-truncate" title="Cloudhub">{tableData.Name}</div>
+						</th>
+						<!-- <td data-label="Account Name">
+							<div class="slds-truncate" title="Cloudhub">{tableData.Family_Member_Type__c}</div>
+						</td> -->
+						<td data-label="Close Date">
+							<div class="slds-truncate" title="4/14/2015">{tableData.Birthdate}</div>
+						</td>
+						<td data-label="Contact">
+							<div class="slds-truncate form_btn">
+								<span  data-id={tableData.Id} onclick={openModal}>
+									{label.editBtn}
+								</span>
+							</div>
+						</td>
+					</tr>
+				</template>
+			</tbody>
+		</table>
+	</div>
+
+	<div if:true={editBtncheck}>
+
+
+		<!--Use template if:true to display/hide popup based on isModalOpen value-->
+		<template if:true={isModalOpen}>
+			<!-- Modal/Popup Box LWC starts here -->
+			<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+				aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+				<div class="slds-modal__container">
+					<div if:true={waitForRes} class="exampleHolder">
+						<lightning-spinner alternative-text="Loading" size="large" variant="brand"></lightning-spinner>
+					</div>
+					<!-- Modal/Popup Box LWC header here -->
+					<header class="slds-modal__header">
+						<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+							title="Close" onclick={closeModal}>
+							<lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse"
+								size="small"></lightning-icon>
+							<span class="slds-assistive-text">Close</span>
+						</button>
+						<h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Edit Family Member
+						</h2>
+					</header>
+					<!-- Modal/Popup Box LWC body starts here -->
+					<div class="slds-card slds-scrollable modalSize">
+
+						<div
+							class="slds-form-element slds-size_1-of-2 slds-medium-size_12-of-12 font_poppinsSemiBold custom_clslabel ">
+							<Label class="slds-form-element__label"><b>{label.dietaryReq}</b></Label>
+
+							<div class=" font_poppinsSemiBold">
+								<div if:false={hideDietFields}>
+								<template iterator:item={dietForCon}>
+									<div key={item.id}>
+										<!-- <Label class="slds-form-element__label"><b>{label.dietaryReq}</b></Label> -->
+										<div class="slds-form__row sldsPadding">
+											<div class="slds-form__item" role="listitem">
+												<div class=" slds-size_1-of-1">
+													<!-- <label class="slds-form-element__label"> {label.description} </label>								 -->
+													<div class="custom-combobox__form-element">
+														<lightning-combobox label="Description" name="dietName"
+															value={item.value.dietDescription}
+															placeholder="Select an Option" options={diet}
+															onchange={handleChangediet} data-id="disableComboId"
+															data-recordid={item.value.id}>
+														</lightning-combobox>
+													</div>
+												</div>
+											</div>
+
+											<div class="slds-form__item" role="listitem">
+												<div class=" slds-size_1-of-1 ">
+													<Label
+														class="slds-form-element__label font_poppinsSemiBold">Comments</Label>
+													<div
+														class="font_popinsLight slds-form-element__control custom_manageWidth">
+														<textarea class="slds-input form_inputtext" name="dietComment"
+															required rows="2" cols="50" data-id="disabletextArea"
+															onchange={handleChangediet}
+															data-recordid={item.value.id}>{item.value.dietComment}</textarea>
+													</div>
+												</div>
+											</div>
+
+
+											<div class="slds-form__item" role="listitem" >
+												<div  class="slds-size_1-of-1  icon">
+													<!-- <span if:true={item.last} class="addicon"> -->
+													<span if:true={item.last} class="addicon">
+														<lightning-icon icon-name="action:new"
+															access-key={item.value.id} id={item.value.id}
+															alternative-text="Add Row" size="small" title="Add Row"
+															onclick={addRowDiet} class="icon">
+														</lightning-icon>
+													</span>
+													<!-- </span> -->
+													<!-- <span if:false={item.first}> -->
+														<lightning-icon icon-name="action:delete"
+															access-key={item.value.id} id={item.value.id}
+															alternative-text="Delete Row" size="small"
+															title="Delete Row" onclick={removeRowDiet} class="icon">
+														</lightning-icon>
+													<!-- </span> -->
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</template>
+							</div>
+
+								<div if:true = {addButtonVisibleSp}>
+									<lightning-icon icon-name="action:new"							
+										alternative-text="Add Row" size="small" title="Add Row"
+										onclick={addRowDiet} class="icon">
+									</lightning-icon>
+								</div>
+								
+							</div>
+						</div>
+
+						<div
+							class="slds-form-element slds-size_1-of-2 slds-medium-size_12-of-12 font_poppinsSemiBold custom_clslabel ">
+							<Label class="slds-form-element__label"><b>{label.specNeeds}</b></Label>
+
+							<div class=" font_poppinsSemiBold">
+								<div if:false={hideSpecialNeedFields}>
+								<template iterator:item={specialFOrCon}>
+									<div key={item.id}>
+										<!-- <Label class="slds-form-element__label"><b>{label.specNeeds}</b></Label> -->
+										<div class="slds-form__row sldsPadding">
+											<div class="slds-form__item" role="listitem">
+												<div class=" slds-size_1-of-1">
+													<div>
+														<!-- <label class="slds-form-element__label"> {label.description} </label>	-->
+													</div>
+													<div class="custom-combobox__form-element">
+														<lightning-combobox data-recordid={item.value.id}
+															label="Description" name="speNeedDes"
+															value={item.value.specNeedDescription}
+															placeholder="Select an Option" options={specNeedsPick}
+															onchange={handleChange} data-id="disableComboId">
+														</lightning-combobox>
+													</div>
+
+												</div>
+											</div>
+
+											<div class="slds-form__item" role="listitem">
+												<div class=" slds-size_1-of-1">
+													<Label
+														class="slds-form-element__label font_poppinsSemiBold">Comments</Label>
+													<div
+														class="font_popinsLight slds-form-element__control custom_manageWidth">
+														<textarea class="slds-input form_inputtext" rows="2" cols="10"
+															name="speNeedCom" data-id="disabletextArea"
+															data-recordid={item.value.id}
+															onchange={handleChange}>{item.value.specNeedComment}</textarea>
+													</div>
+												</div>
+											</div>
+											<div class="slds-form__item" role="listitem">
+												<div  class=" slds-size_1-of-1  icon">
+													<span if:true={item.last} class="addicon">
+														<lightning-icon icon-name="action:new"
+															access-key={item.value.id} id={item.value.id}
+															alternative-text="Add Row" size="small" title="Add Row"
+															onclick={addRow} class="icon">
+														</lightning-icon>
+													</span>
+													<!-- <span if:false={item.first}> -->
+														<lightning-icon icon-name="action:delete"
+															access-key={item.value.id} id={item.value.id}
+															alternative-text="Delete Row" size="small"
+															title="Delete Row" onclick={removeRow} class="icon">
+														</lightning-icon>
+													<!-- </span> -->
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</template>
+							</div>
+
+								<div if:true = {addButtonVisible}>
+									<lightning-icon icon-name="action:new"							
+										alternative-text="Add Row" size="small" title="Add Row"
+										onclick={addRow} class="icon">
+									</lightning-icon>
+								</div>
+								
+							</div>
+						</div>
+						
+						<div class="slds-form-element slds-size_1-of-1  font_poppinsSemiBold custom_clslabel ">
+						
+							<lightning-combobox label="Swimming ability" value={tableWrap.swimmingAbility} options={swimOptions}
+								onchange={handleSwimAbilityChange}>
+							</lightning-combobox>
+						</div>
+
+						<div class="slds-form-element slds-size_1-of-1  font_poppinsSemiBold custom_clslabel ">
+							<lightning-combobox label="Shirt Size" value={tableWrap.shirtSize} options={shirtOptions}
+								onchange={handleShirtSizeChange}>
+							</lightning-combobox>
+						</div>
+					</div>
+					<!-- Modal/Popup Box LWC footer starts here -->
+					<footer class="slds-modal__footer">
+						<button class="form_btn_cancel" onclick={closeModal}
+							title="Cancel">Cancel</button>
+						<button class="form_btn" onclick={submitDetails} title="OK">Save</button>
+					</footer>
+				</div>
+			</section>
+			<div class="slds-backdrop slds-backdrop_open"></div>
+		</template>
+
+	</div>
+	<c-site-footer> </c-site-footer>
+</template>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.OpportunityContactRoles$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.OpportunityContactRoles$CloseDate</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <aggregateTypes>Average</aggregateTypes>
+        <aggregateTypes>Maximum</aggregateTypes>
+        <field>Contact.OpportunityContactRoles$Amount</field>
+    </columns>
+    <description>For 2023 Tax Appeal Dashboard (MG only)</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles*Opportunity$Campaign_Name__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Matched Giving</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <field>Contact.OpportunityContactRoles$Campaign.Event_Start_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.OpportunityContactRoles$Campaign.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>2023 Tax Appeal - Matched Giving</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Contact.OpportunityContactRoles$Amount</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Contact.OpportunityContactRoles$CloseDate</dateColumn>
+        <endDate>2023-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2023-01-01</startDate>
+    </timeFrameFilter>
+</Report>

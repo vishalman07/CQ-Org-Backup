@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Composer_ATF_Letter</fullName>
+    <availability>online</availability>
+    <description>Originally created by Conga Solution Manager. Date of last use of Update Button from Conga Solution record: https://campquality--apxtconga4.vf.force.com/a0A0K00000hJhBUUA0
+07-Aug-2023 05:58:23 PM</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>false</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>660</height>
+    <isResizable>false</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>ATF Letter</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/apex/APXTConga4__Conga_Composer?SolMgr=1
+&amp;serverUrl={!API.Partner_Server_URL_520}
+&amp;Id={!Request_To_Fundraise__c.Id}
+
+&amp;QueryId=[atf]0Q_030EAA741858
+
+&amp;TemplateId=a0C0K00001HvxTW
+
+&amp;EmailLetterheadId=0Rn2x000000mYgWCAU</url>
+    <width>900</width>
+</WebLink>

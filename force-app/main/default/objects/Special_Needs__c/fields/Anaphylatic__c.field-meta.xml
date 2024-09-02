@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Anaphylatic__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>If checked they are anaphylactic to the specific allergy</inlineHelpText>
+    <label>Anaphylactic?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

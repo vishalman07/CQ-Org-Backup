@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>P2P_Platform__c</fullName>
+    <description>Platform that the campaign was run through e.g. Everyday Hero, Funraisin, Go Fundraise etc</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Platform that the campaign was run through</inlineHelpText>
+    <label>P2P Platform</label>
+    <length>100</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

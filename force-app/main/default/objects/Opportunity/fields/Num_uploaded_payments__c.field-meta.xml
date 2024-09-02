@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Num_uploaded_payments__c</fullName>
+    <description>Counts number of payments uploaded to finance system. Used in validation rules.</description>
+    <label>Num uploaded payments</label>
+    <summaryFilterItems>
+        <field>npe01__OppPayment__c.Loaded_to_Nav__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryForeignKey>npe01__OppPayment__c.npe01__Opportunity__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

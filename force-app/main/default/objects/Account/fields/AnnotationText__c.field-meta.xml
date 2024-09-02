@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AnnotationText__c</fullName>
+    <inlineHelpText>Update this text field to add information in the Important section above on a record. Please include date and name for relevance.</inlineHelpText>
+    <label>AnnotationText</label>
+    <length>20000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

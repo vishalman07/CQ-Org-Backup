@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>CUSTOM_payment_intent.succeeded</label>
+    <protected>false</protected>
+    <values>
+        <field>npsp_plus__Allow_Unauthenticated_Access__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>npsp_plus__Allowed_Attempts__c</field>
+        <value xsi:type="xsd:double">5.0</value>
+    </values>
+    <values>
+        <field>npsp_plus__Callout_Flow_API_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>npsp_plus__Callout_Output__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>npsp_plus__Description__c</field>
+        <value xsi:type="xsd:string">Occurs when a PaymentIntent has successfully completed payment.</value>
+    </values>
+    <values>
+        <field>npsp_plus__Flow_API_Name__c</field>
+        <value xsi:type="xsd:string">CUSTOM_payment_intent_succeeded</value>
+    </values>
+    <values>
+        <field>npsp_plus__Input__c</field>
+        <value xsi:type="xsd:string">{
+  &quot;npspPlusMetadata&quot;: &quot;data.object.metadata.npsp_plus_contact&quot;,
+  &quot;inputJSON&quot;: &quot;inputJSON&quot;,
+  &quot;formSubmissionId&quot;: &quot;metadata.payload.submissionId&quot;,
+  &quot;stripePaymentIntentId&quot;: &quot;data.object.id&quot;,
+  &quot;stripeEventId&quot;: &quot;id&quot;,
+  &quot;stripeInvoiceId&quot;: &quot;data.object.invoice&quot;,
+  &quot;stripePaymentIntentAmount&quot;: &quot;data.object.amount&quot;,
+  &quot;stripePaymentIntentCreatedAt&quot;: &quot;data.object.created&quot;,
+  &quot;stripePaymentIntentStatus&quot;: &quot;data.object.status&quot;,
+  &quot;SFRecordId&quot;: &quot;metadata.npsp_plus_SFRecordId&quot;,
+  &quot;contactVar&quot;: {
+    &quot;type&quot;: &quot;SObject&quot;,
+    &quot;path&quot;: &quot;metadata.npsp_plus_contact&quot;,
+    &quot;SObjectType&quot;: &quot;Contact&quot;
+  },
+  &quot;organisationVar&quot;: {
+    &quot;type&quot;: &quot;SObject&quot;,
+    &quot;path&quot;: &quot;metadata.npsp_plus_organisation&quot;,
+    &quot;SObjectType&quot;: &quot;Account&quot;
+  },
+  &quot;campaignVar&quot;: {
+    &quot;type&quot;: &quot;SObject&quot;,
+    &quot;path&quot;: &quot;metadata.npsp_plus_campaign&quot;,
+    &quot;SObjectType&quot;: &quot;Campaign&quot;
+  },
+  &quot;donationVar&quot;: {
+    &quot;type&quot;: &quot;SObject&quot;,
+    &quot;path&quot;: &quot;metadata.npsp_plus_donation&quot;,
+    &quot;SObjectType&quot;: &quot;Opportunity&quot;
+  },
+  &quot;paymentVar&quot;: {
+    &quot;type&quot;: &quot;SObject&quot;,
+    &quot;path&quot;: &quot;metadata.npsp_plus_payment&quot;,
+    &quot;SObjectType&quot;: &quot;npe01__OppPayment__c&quot;
+  }
+}</value>
+    </values>
+    <values>
+        <field>npsp_plus__Is_Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>npsp_plus__Output__c</field>
+        <value xsi:type="xsd:string">donationVar,contactVar,organisationVar,campaignVar,paymentVar</value>
+    </values>
+    <values>
+        <field>npsp_plus__Queueable_Flow_API_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>npsp_plus__Retry_Delay__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>npsp_plus__Save_Failure_Details__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>npsp_plus__Stripe_Event_Type__c</field>
+        <value xsi:type="xsd:string">payment_intent.succeeded</value>
+    </values>
+    <values>
+        <field>npsp_plus__Tags__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>npsp_plus__Type__c</field>
+        <value xsi:type="xsd:string">Stripe Webhook Handler</value>
+    </values>
+</CustomMetadata>

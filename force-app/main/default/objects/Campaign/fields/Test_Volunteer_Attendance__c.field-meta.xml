@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Volunteer_Attendance__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Test Volunteer Attendance</label>
+    <lookupFilter>
+        <active>false</active>
+        <filterItems>
+            <field>Volunteer_Attendance__c.Participation_Role__c</field>
+            <operation>equals</operation>
+            <value>Camp Leader, Staff</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Volunteer_Attendance__c</referenceTo>
+    <relationshipLabel>Campaigns</relationshipLabel>
+    <relationshipName>Campaigns1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

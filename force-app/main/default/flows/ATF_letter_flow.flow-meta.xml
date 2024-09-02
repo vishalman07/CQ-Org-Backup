@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>ATF_Letter</name>
+        <label>ATF Letter</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>AFTLetterTemplate</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Your request to fundraise has been approved</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>57.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>ATF letter flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>ATF letter flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>ATF_Letter</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ATF_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Authorised</stringValue>
+            </value>
+        </filters>
+        <object>Request_To_Fundraise__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>InvalidDraft</status>
+    <textTemplates>
+        <description>Email Template to be sent once approval has been given.</description>
+        <name>AFTLetterTemplate</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;Authority Number&lt;/strong&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;: {!$Record.Name}&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;Issued: {!$Flow.CurrentDate}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;	&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;{!$Record.Contact__r.Name}&lt;/p&gt;&lt;p&gt;{!$Record.Contact__r.MailingAddress}&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: black; font-family: Poppins; font-size: 9pt;&quot;&gt;{!$Record.Contact__r.MailingCity} {!$Record.Contact__r.MailingState} {!$Record.Contact__r.MailingPostalCode}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;	&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;Dear {!$Record.Contact__r.FirstName},&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;Thank you for your kind support of Camp Quality. This letter is confirmation of your registration and our consent for you to fundraise on our behalf through the following activity: &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;Registered Fundraiser:&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!$Record.Contact__r.Name}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;Event Name: &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{{!$Record.Campaign__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;Start Date: &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{!$Record.Fundraising_Start_Date__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;End Date:&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{!$Record.Fundraising_End_Date__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;Authority Number: &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: Poppins; font-size: 12px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!$Record.Name}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;Authorised Activity:&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; {!$Record.Application_Details__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;Please refer to your Authority number on all correspondence and remittance, including bank deposits. For any questions relating to this authority please call 1300 662 267 to speak with a team member closest to you.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;Please remember: &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: &amp;quot;Wingdings 2&amp;quot;; font-size: 9pt;&quot;&gt;£&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 7pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;ALL promotional materials that incorporate the Camp Quality name and/or logo must be sent to Camp Quality for approval prior to printing and distribution. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: &amp;quot;Wingdings 2&amp;quot;; font-size: 9pt;&quot;&gt;£&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 7pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;ALL funds raised at your event must be remitted within 4 weeks of the event.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;It may be a requirement in each State and/or territory to comply with specific fundraising legislation. For further information please speak with your local Camp Quality contact.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;Above all, make sure you have FUN on the day. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;Every dollar helps Camp Quality support children impacted by cancer – be that their own diagnosis or the diagnosis of someone they love. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;Kind regards, &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;//:0&quot; alt=&quot;Diagram
+
+Description automatically generated&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;Angela Ryan&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Poppins; font-size: 9pt;&quot;&gt;Community Fundraising Manager&lt;/span&gt;&lt;/p&gt;&lt;p&gt;{!$Flow.CurrentDate}&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>

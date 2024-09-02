@@ -1,0 +1,51 @@
+<messaging:emailTemplate subject="You are going to {!relatedTo.Event__R.Portal_Title__c} on {!relatedTo.Event__R.StartDate}" recipientType="Contact" relatedToType="Family_Attendance__c">
+<messaging:htmlEmailBody >
+<c:EmailHeader />
+
+<div style="width:100%; max-width:600px;">
+<apex:image id="Image" value="https://campquality.my.salesforce.com/servlet/servlet.ImageServer?id=01528000002X5KD&oid=00D28000001e3zu" width="220" height="55"/>
+
+    <p>
+        Dear {!relatedTo.Family__R.Name},<br /><br />
+
+<apex:image id="EventImage" height="200px;" value="{!relatedTo.Event__R.Banner_Image_URL__c}" /><br />
+            
+        Your request to attend <b>{!relatedTo.Event__R.Portal_Title__c}</b> on <apex:outputText value="{0, date, EEEE d MMMM yyyy}"><apex:param value="{!relatedTo.Event__R.StartDate}" /></apex:outputText> has been accepted for the following family members:
+        
+    </p>
+        
+        <c:FamilyMemberAttendanceList AttendanceStatus="Accepted" FamilyAttendanceId="{!relatedTo.id}" />
+        
+    <p>
+        
+        <apex:outputText value="{!relatedTo.Event__R.Event_Acceptance_Note__c}" escape="false" /><br /><br />
+        
+        At Camp Quality, we recognise everyone deserves to be treated equally, respectfully and with dignity. We are committed to building an inclusive community that supports all people affected by cancer, regardless of their race, gender, sexual orientation, ability, financial status, religion, culture, and life experience.<br/><br/>
+
+ 
+
+To support your child/ren to the best of our ability both physically and emotionally at our upcoming camp, could you please provide us with any current issues, injuries, emotionally distressing situations we need to be aware of? This can include medications, physical injuries, or potential emotional triggers regarding the cancer experience. This information will be treated with the utmost sensitivity and confidentiality and will only be shared with your permission or medically required.  We appreciate your support and cooperation with this.
+        
+<br/><br/>
+
+        Kind Regards,<br />
+        {!relatedTo.Event__R.Owner.Name}
+        
+    </p>
+
+
+<p> <i>Due to the nature of attending participants having compromised immune systems, Camp Quality has a strict policy that no person is to attend programs or events if they are unwell.  Please contact the office if you display symptoms or have been exposed to any infectious disease (including cold, flu and gastro) within two weeks of an event. 
+
+<br /> <br />As a friendly reminder, whilst we understand connections and relationships are formed between our volunteers and family members during our Programs it is Camp Quality’s understanding that these connections and relationships start and end with each Program. </i></p>
+
+
+</div> 
+<c:EmailFooter />
+
+<p style="Font-family:arial;Font-size:10px; color:red;">
+If you would like to unsubscribe from these program event invitations as you will not be attending future Camp Quality programs please email us on 
+<a href="mailto:programhelp@campquality.org.au?subject=UNSUBSCRIBE from Rec Programs Acceptance"> programhelp@campquality.org.au </a>
+</p>
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

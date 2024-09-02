@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When a new RG - Recurring donation is created</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Letterhead</letterhead>
+    <name>New RG Created</name>
+    <style>freeForm</style>
+    <subject>New Recurring Donation Created</subject>
+    <textOnly>Hello {!User.FirstName},
+
+The following recurring donation has been created.
+
+Contact: {!npe03__Recurring_Donation__c.npe03__Contact__c}
+Amount: {!npe03__Recurring_Donation__c.npe03__Amount__c}
+Installment Period:  {!npe03__Recurring_Donation__c.npe03__Installment_Period__c}
+Campaign: {!npe03__Recurring_Donation__c.npe03__Recurring_Donation_Campaign__c}
+URL: {!npe03__Recurring_Donation__c.Link}
+
+This is an automated email. If you believe you have received it in error, please contact the Salesforce team.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

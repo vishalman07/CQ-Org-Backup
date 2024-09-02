@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.Preferred_First_Name__c</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>ADDRESS2_STREET</field>
+    </columns>
+    <columns>
+        <field>ADDRESS2_CITY</field>
+    </columns>
+    <columns>
+        <field>ADDRESS2_STATE</field>
+    </columns>
+    <columns>
+        <field>ADDRESS2_ZIP</field>
+    </columns>
+    <columns>
+        <field>Contact.Branch_Office__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact.npsp__Do_Not_Contact__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact.Do_Not_Send_Mail__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Do_Not_Mail__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Do_Not_Contact__c</field>
+    </columns>
+    <description>List for Michelle NNSW</description>
+    <filter>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND (5 OR 6 OR 7 OR 8 OR 9 OR 10 OR 11 OR 12)</booleanFilter>
+        <criteriaItems>
+            <column>Contact.npsp__Deceased__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.RTS__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Recurring_Donor_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_STATE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>NSW</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_CITY</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Anna Bay,Balickera,Boat Harbour,Bobs Farm,Brandy Hill Butterwick,Campvale,Corlette,Duns Creek,Eagleton,East Seaham,Fern Bay,Ferodale,Fingal Bay,Fishermans Bay,Fullerton Cove,Glen Oak,Heatherbrae,Hinton,Karuah,Lemon Tree Passage,Mallabula,Medowie,Nelson Bay,Nelsons Plains,One Mile,Osterley,Oyster Cove,Raymond Terrace,Adamstown,Adamstown Heights,Bar Beach,Beresfield,Birmingham Gardens,Black Hill,Broadmeadow,Callaghan,Carrington,Cooks Hill,Elermore Vale,Fletcher,Georgetown,Hamilton,Hamilton East,Hamilton North,Hamilton South,Hexham,The Hill,Islington,Jesmond,The Junction,Kooragang,Kotara,Lambton,Lenaghan,Maryland,Maryville,Mayfield,Mayfield East,Mayfield North,Mayfield West,Merewether,Merewether Heights,Minmi,New Lambton,New Lambton Heights,Newcastle,Newcastle East,Newcastle West,North Lambton,Rankin Park,Sandgate,Shortland,Stockton,Tarro,Tighes Hill,Wallsend,Warabrook,Waratah,Waratah West,Wickham,Arcadia Vale,Argenton,Awaba,Balcolyn,Balmoral,Barnsley,Belmont,Belmont North,Belmont South,Bennetts Green,Blackalls Park,Blacksmiths,Bolton Point,Bonnells Bay,Boolaroo,Booragul,Brightwaters,Buttaba,Cameron Park,Cams Wharf,Cardiff,Cardiff Heights,Cardiff South,Carey Bay,Catherine Hill Bay</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_CITY</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Caves Beach,Charlestown,Coal Point,Cooranbong,Croudace Bay,Dora Creek,Dudley,Edgeworth,Eleebana,Eraring,Fassifern,Fennell Bay,Fishing Point,Floraville,Freemans Waterhole,Garden Suburb,Gateshead,Glendale,Highfields,Hillsborough,Holmesville,Jewells,Kahibah,Kilaben Bay,Killingworth,Kotara South,Lakelands,Little Pelican,Macquarie Hills,Mandalong,Marks Point,Marmong Point,Martinsville,Mirrabooka,Morisset,Morisset Park,Mount Hutton,Myuna Bay,New Lambton Heights,Nords Wharf,Pelican,Pinny Beach,Rankin Park,Rathmines,Redhead,Ryhope,Seahampton,Silverwater,Speers Point,Sunshine,Swansea,Swansea Heads</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_CITY</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Teralba,Tingira Heights,Toronto,Valentine,Wakefield,Wangi Wangi,Warners Bay,West Wallsend,Whitebridge,Windale,Windermere Park,Woodrising,Wyee,Wyee Point,Yarrawonga Park,Aberdare,Abermain,Abernethy,Allandale,Bellbird,Bellbird Heights,Big Yengo,Bishops Bridge,Black Hill,Boree,Branxton,Brunkerville,Buchanan,Buttai,Cedar Creek,Cessnock,Cessnock West,Cliftleigh,Congewai,East Branxton,Ellalong,Elrington,Greta,Heddon Greta,Kearsley,Keinbah,Kitchener,Kurri Kurri,Laguna,Lovedale,Loxford,Millfield,Moruben,Mount View,Mount Vincent,Mulbring,Neath,North Rothbury,Nulkaba,Paxton,Paynes Crossing,Pelaw Main,Pelton,Pokolbin,Quorrobolong,Richmond</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_CITY</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Richmond Vale,Rothbury,Sawyers Gully,Stanford Merthyr,Stockrington,Sweetmans Creek,Weston,Wollombi,Aberglasslyn,Allandale,Anambah,Ashtonfield,Berry Park,Bishops Bridge,Bolwarra,Bolwarra Heights,Buchanan,Chisholm,Dalwood,Duckenfield,East Maitland,Farley,Gillieston Heights,Gosforth,Greenhills,Greta,Harpers Hill,Hillsborough,Horseshoe Bend,Lambs Valley,Largs,Lochinvar,Lorn,Louth Park,Luskintyre,Maitland,Maitland North,Maitland Vale,Melville,Metford,Millers Forest,Mindaribba,Morpeth,Mount Dee,Oakhampton,Oakhampton Heights,Oswald,Phoenix Park,Pitnacree,Raworth,Rosebrook,Rutherford,South Maitland,Telarah,Tenambit,Thornton,Tocal,Windella,Windermere,Woodberry,Woodville,Salamander Bay,Salt Ash,Seaham,Shoal Bay,Soldiers Point,Swan Bay,Tanilba Bay,Taylors Beach,Tomago,Twelve Mile Creek,Wallalong,Williamtown</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_CITY</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Singleton,Broke,Bulga,Howes Valley,Putty,Warkworth,Jerrys Plains,Camberwell,Ravensworth,Mount Olive,Carrowbrook,Mirranie,Elderslie,Belford,Branxton,Muswellbrook,Denman,Baerami,McCullys Gap,Martindale,Muscle Creek,Sandy Hollow,Widden,Wybong,Lismore,Lindendale,Nimbin,Dunoon,Clunes,Tweed,Murwillumbah,Tyalgum,Uki,Kyogle,Bonalbo,Tabulam,Woodenbong,Tenterfield</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_CITY</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Tamworth,Attunga,Barraba,Bendemeer,Dungowan,Duri,Kootingal,Limbri,Manilla,Moonbi,Niangala,Nundle,Somerton,Upper Manilla,Woolbrook,Calala,Coledale,Daruka Estate,East Tamworth,Forest Hills,Hillvue,Kingswood,Nemingha,North Tamworth,Oxley Vale,South Tamworth,Taminda,Tamworth Central Business District,Westdale,West Tamworth,Armidale,Guyra,Ben Lomond,Black Mountain,Dangarsleigh,Ebor,Hillgrove,Kellys Plains,Llangothlin,Wollomombi</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_CITY</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Byron Bay,Bangalow,Broken Head,Coopers Shoot,Ewingsdale,Hayters Hill,McLeods Shoot,Newrybar,Skinners Shoot,Suffolk Park,Talofa,Tyagarah,Boambee,Toormina,Coffs Harbour City Centre,Coffs Harbour Jetty,North Boambee Valley,Diggers Beach,Korora,Moonee Beach,Park Beach,Red Hill,South Coffs,West Coffs,West Korora,Sapphire Beach,Bonville,taree,moree,wee waa,coonabarabran,bellata,walgett</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_CITY</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>TWEED HEADS SOUTH,SINGLETON HEIGHTS,NORTH RICHMOND</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>RG - XMAS Cards NNSW Sample list</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

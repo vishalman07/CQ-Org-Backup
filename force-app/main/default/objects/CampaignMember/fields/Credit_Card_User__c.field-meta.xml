@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Card_User__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked if a credit card has been used to make a prior donation</description>
+    <label>Credit Card User</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approximate_Monthly__c</fullName>
+    <description>Approx monthly vaue of gift as per frequency</description>
+    <formula>IF(ISPICKVAL(npe03__Installment_Period__c, &quot;Weekly&quot;),  npe03__Amount__c *4,
+IF(ISPICKVAL(npe03__Installment_Period__c, &quot;Yearly&quot;),  npe03__Amount__c /12,
+IF(ISPICKVAL(npe03__Installment_Period__c, &quot;Monthly&quot;), npe03__Amount__c,
+NULL)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Approximate Monthly Value</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

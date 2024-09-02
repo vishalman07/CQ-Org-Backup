@@ -1,0 +1,20 @@
+<template>
+
+    <div class="slds-grid homeDiv">
+        <!-- <div class = "custom_position"> -->
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 font_orange ">
+            <span class="home">{label.home}</span>
+        </div>
+        </div>
+
+        <img src={headerPinkImg} class="headerImg">
+        <div class = "contact-margin">
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 text font_popinsLight custom_padding">
+            <lightning-formatted-rich-text value = {homeContent.Content__c}></lightning-formatted-rich-text>
+        </div>
+    
+    </div>
+<c-site-footer> </c-site-footer>
+
+    
+</template>

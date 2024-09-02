@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mapping_Reference__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Mapping Reference</label>
+    <referenceTo>Mapping_Reference__c</referenceTo>
+    <relationshipLabel>Mapping Fields</relationshipLabel>
+    <relationshipName>Mapping_Fields</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

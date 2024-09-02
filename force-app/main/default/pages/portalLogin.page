@@ -1,0 +1,114 @@
+<apex:page docType="html-5.0" controller="portalLoginController" showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false">
+    <apex:composition template="portalNoAuthComposition">
+        <apex:define name="vars">
+            <apex:variable var="pageTitle" value="My Camp Quality" />
+            <apex:variable var="paHeaderTitle" value="My Camp Quality" />
+        </apex:define>
+
+        <apex:define name="main">
+            <apex:outputPanel layout="block" styleClass="alert alert-danger" rendered="{!hasPageMessages}">
+                <apex:pageMessages id="error" />
+            </apex:outputPanel>
+            <!-- login page does not use labels... only * for required field -->
+            <apex:variable var="labelCol" value="col-xs-0" />
+            <apex:variable var="inputCol" value="col-xs-12 col-sm-8 col-md-7" />
+            <apex:variable var="errorCol" value="col-xs-12 col-sm-8 col-md-7" />
+
+            <apex:variable var="formGroupSelector" value="div.form-group" />
+            
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    setValidation();
+                });
+                
+                function setValidation() {
+                    $('form[id$=aForm]').validate({
+                        errorPlacement: function(error, element) {
+                            $(element).closest('{!formGroupSelector}').append($('<div class="{!errorCol}"></div>').append(error));
+                        },
+                        highlight: function(element, errorClass, validClass) {
+                            $(element).addClass(errorClass).removeClass(validClass);
+                        },
+                        unhighlight: function(element, errorClass, validClass) {
+                            $(element).addClass(validClass).removeClass(errorClass);
+                        }
+                    });
+                }
+            </script>
+<script type="text/javascript"> 
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-26209686-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+            <style>
+                
+            </style>
+            
+            
+            <apex:form id="aForm">
+                <div class="form-horizontal customForm">
+                    <div class="form-group">
+                        <label class="control-label {!labelCol}" style="padding-top: 7px">
+                            <span class="sr-only">
+                                Username
+                            </span>
+                        </label>
+                        <div class="{!inputCol}">
+                            <apex:inputText value="{!username}" id="username" styleClass="form-control username required email" html-placeholder="Username" />
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="control-label {!labelCol}" style="padding-top: 7px">
+                            <span class="sr-only">
+                                Password
+                            </span>
+                        </label>
+                        <div class="{!inputCol}">
+                            <apex:inputSecret id="password" value="{!password}" styleClass="form-control password required" html-placeholder="Password" />
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="{!inputCol}">
+                            <div class="btn-row">
+                                <apex:commandButton action="{!login}" styleClass="btn btn-primary btn-block" value="Login" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="{!inputCol}">
+                            <div class="btn-row">
+                                <div class="col-sm-5">
+                                    <div class="row">
+                                        <apex:actionRegion >
+                                            <!--<apex:commandLink styleClass="btn btn-info btn-block" value="Sign Up" action="{!register}" rendered="{!$Site.RegistrationEnabled}" />-->
+                                        </apex:actionRegion>
+                                    </div>
+                                </div>
+                                <div class="col-sm-offset-2 col-sm-5">
+                                     <div class="row">
+                                         <apex:actionRegion >
+                                             <apex:commandLink styleClass="btn btn-info btn-block" value="Password Help" action="{!forgotPassword}" />
+                                        </apex:actionRegion>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </apex:form>
+                
+        </apex:define>
+        
+    </apex:composition>
+    
+</apex:page>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attended_Program_This_Year__c</fullName>
+    <externalId>false</externalId>
+    <formula>if (   ISBLANK(Last_Rec_Program_Attended__c ) , if(year(  Puppet_Show__c  ) == year(today()) , &quot;Attended&quot; ,&quot;Not Yet Attended&quot;),  
+if(year( Last_Rec_Program_Attended__c ) == year(today()) , &quot;Attended&quot; ,if(year(  Puppet_Show__c  ) == year(today()) , &quot;Attended&quot; ,&quot;Not Yet Attended&quot;))
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Attended Program This Year</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

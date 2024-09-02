@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Donor Development Manager</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Campaigns &amp; CX Manager</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>GM_Fundraising</parentRole>
+</Role>

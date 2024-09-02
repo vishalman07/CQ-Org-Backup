@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HH_Landscape_Group__c</fullName>
+    <description>DCA Enrichment</description>
+    <inlineHelpText>Household Landscape Group</inlineHelpText>
+    <label>HH Landscape Group</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Blue Collar Families</fullName>
+                <default>false</default>
+                <label>Blue Collar Families</label>
+            </value>
+            <value>
+                <fullName>Comfortable Seniors</fullName>
+                <default>false</default>
+                <label>Comfortable Seniors</label>
+            </value>
+            <value>
+                <fullName>Country Battlers</fullName>
+                <default>false</default>
+                <label>Country Battlers</label>
+            </value>
+            <value>
+                <fullName>Inner-City Professionals</fullName>
+                <default>false</default>
+                <label>Inner-City Professionals</label>
+            </value>
+            <value>
+                <fullName>New Arrivals</fullName>
+                <default>false</default>
+                <label>New Arrivals</label>
+            </value>
+            <value>
+                <fullName>Regional Centres</fullName>
+                <default>false</default>
+                <label>Regional Centres</label>
+            </value>
+            <value>
+                <fullName>Rural Heartland</fullName>
+                <default>false</default>
+                <label>Rural Heartland</label>
+            </value>
+            <value>
+                <fullName>Small Town and Beyond</fullName>
+                <default>false</default>
+                <label>Small Town and Beyond</label>
+            </value>
+            <value>
+                <fullName>Suburban Families</fullName>
+                <default>false</default>
+                <label>Suburban Families</label>
+            </value>
+            <value>
+                <fullName>Success Stories</fullName>
+                <default>false</default>
+                <label>Success Stories</label>
+            </value>
+            <value>
+                <fullName>Urban Survivors</fullName>
+                <default>false</default>
+                <label>Urban Survivors</label>
+            </value>
+            <value>
+                <fullName>Young Communities</fullName>
+                <default>false</default>
+                <label>Young Communities</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

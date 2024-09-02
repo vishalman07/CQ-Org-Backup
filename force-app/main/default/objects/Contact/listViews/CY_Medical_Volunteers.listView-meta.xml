@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CY_Medical_Volunteers</fullName>
+    <columns>Date_From__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>Volunteer_Types__c</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Volunteer_Types__c</field>
+        <operation>includes</operation>
+        <value>Doctor,Endorsed Enrolled Nurse,First Aider,Registered Nurse</value>
+    </filters>
+    <label>CY Medical Volunteers</label>
+</ListView>

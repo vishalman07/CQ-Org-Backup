@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "ChangePassword",
+  "contentBody" : {
+    "activeViewId" : "ChangePassword",
+    "configurationTags" : [ ],
+    "pageAccess" : "Public",
+    "routeType" : "custom-changepassword",
+    "urlPrefix" : "changepassword"
+  }
+}

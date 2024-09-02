@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <description>This flow schedule update Activate portal after 1h</description>
+    <environments>Default</environments>
+    <interviewLabel>RTF-CON01-ScheduleActivatePortalFamily {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>RTF-CON09-ScheduleActivatePortalFamily</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>UpdatePortalAccess</name>
+        <label>UpdatePortalAccess</label>
+        <locationX>308</locationX>
+        <locationY>276</locationY>
+        <inputAssignments>
+            <field>Portal_Access__c</field>
+            <value>
+                <stringValue>Activate</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>1 AND 2 AND (3 OR 4 OR 5 OR 6) AND 7</filterLogic>
+        <filters>
+            <field>npsp__Primary_Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Portal_Access__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Family_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Patient</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Family_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Offspring Family</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Family_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Bereaved Family</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Family_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Offspring Bereaved Family</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Portal_Access_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Family Portal</stringValue>
+            </value>
+        </filters>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>X1_Hour_After_Rule_Trigger_Date</name>
+            <connector>
+                <targetReference>UpdatePortalAccess</targetReference>
+            </connector>
+            <label>1 Hour After Rule Trigger Date</label>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>Activate_Portal__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

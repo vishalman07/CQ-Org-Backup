@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kids_Agreement__c</fullName>
+    <label>Kids Agreement</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Middle Camp</fullName>
+                <default>false</default>
+                <label>Middle Camp</label>
+            </value>
+            <value>
+                <fullName>Mini Camp</fullName>
+                <default>false</default>
+                <label>Mini Camp</label>
+            </value>
+            <value>
+                <fullName>Junior Camp</fullName>
+                <default>false</default>
+                <label>Junior Camp</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

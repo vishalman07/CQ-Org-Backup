@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exclude_from_2022_Annual_Report__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Form stack link to checkboc for yes/no into 2022 AR Report:
+GIK, WPG, Corporate Accounts</description>
+    <label>Exclude from 2022 Annual Report</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

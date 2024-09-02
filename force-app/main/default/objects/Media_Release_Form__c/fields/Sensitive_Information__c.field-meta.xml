@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sensitive_Information__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>sensitive information about my child, in particular, the type of cancer diagnosis and age at diagnosis</inlineHelpText>
+    <label>Sensitive Information</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

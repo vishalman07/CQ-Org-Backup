@@ -1,0 +1,38 @@
+<apex:component controller="NewsArticleController">
+    
+    <style>
+    
+    	img.media-object {
+        	border-radius: 10px;
+        	max-width: 100%;
+        }
+        
+    </style>
+    
+    <apex:attribute name="PortalType" assignTo="{!pType}" required="true" type="String" description="The type of portal the component is being display in (Family or Volunteer)" />
+    
+    <ul class="media-list">
+        <apex:repeat value="{!articles}" var="art">
+            <li class="media">
+                <apex:outputPanel rendered="{!NOT(ISBLANK(art.Image_URL__c))}">
+                <div class="media-left col-md-3">
+                    <a href="{!art.Article_Link_URL__c}" target="__blank">
+                        <img class="media-object" src="{!art.Image_URL__c}"/>
+                    </a>
+                </div>
+                </apex:outputPanel>
+                <div class="media-body">
+                    <h4 class="media-heading">{!art.Title__c}</h4>
+                    <em>
+                        <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                            <apex:param value="{!art.Article_Date__c}" /> 
+                        </apex:outputText>
+                    </em>
+                    <br />
+                    <apex:outputText value="{!art.Body_Text__c}" escape="false" />
+                </div>
+            </li>
+        </apex:repeat>
+    </ul>
+    
+</apex:component>

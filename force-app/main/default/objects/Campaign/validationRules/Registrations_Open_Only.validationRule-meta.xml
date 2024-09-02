@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Registrations_Open_Only</fullName>
+    <active>false</active>
+    <errorConditionFormula>if( ISNULL(Registrations_Open__c), false,
+if( (DATETIMEVALUE(StartDate) - Registrations_Open__c &gt; 91),true,false))</errorConditionFormula>
+    <errorMessage>Timelines for events are that invites go out no more than 12 weeks out.</errorMessage>
+</ValidationRule>

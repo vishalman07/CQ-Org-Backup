@@ -1,0 +1,41 @@
+<messaging:emailTemplate subject="You are invited to {!relatedTo.Event__R.Portal_Title__c} on {!relatedTo.Event__R.StartDate}" recipientType="Contact" relatedToType="Volunteer_Attendance__c">
+<messaging:htmlEmailBody >
+<c:EmailHeader />
+<div style="width:100%; max-width:600px;">
+<apex:image id="Image" value="https://campquality.my.salesforce.com/servlet/servlet.ImageServer?id=01528000002X5KD&oid=00D28000001e3zu" width="220" height="55"/>
+
+    <p>
+        Dear {!relatedTo.Volunteer__R.Preferred_First_Name__c},<br /><br />
+We would like to invite you to
+        </P>
+                <h2>{!relatedTo.Event__R.Portal_Title__c}</h2> 
+<apex:image id="EventImage" height="200" value="{!relatedTo.Event__R.Banner_Image_URL__c}" /><br />
+        <p>
+{!relatedTo.Event__R.Volunteer_Invite_Description__c}</P>
+      <p><b>When</b> <apex:outputText value="{0, date, EEEE d MMMM yyyy}"><apex:param value="{!relatedTo.Event__R.StartDate}" /></apex:outputText> to <apex:outputText value="{0, date, EEEE d MMMM yyyy}"><apex:param value="{!relatedTo.Event__R.EndDate}" /></apex:outputText></p>
+<p><b>Time</b> {!relatedTo.Event__R.Event_time__c}</p>
+
+<p><b>Where</b><br />
+{!relatedTo.Event__R.Location_Venue__r.Name}<br />
+{!relatedTo.Event__R.Location_Venue__r.BillingStreet} <br />
+{!relatedTo.Event__R.Location_Venue__r.BillingCity}</p>
+<p><b>RSVP By</b> {!relatedTo.Event__R.RVSP__c}</p>
+<p>Click <a href="{!relatedTo.Event__R.Volunteer_Portal_Event_URL__c}">here</a> to respond</p>
+<p>        
+        Kind Regards,<br /><br />
+        {!relatedTo.Event__R.Owner.Name}
+</p>
+<p>You are receiving this email as you are a registered Camp Quality Family or Volunteer.  To manage your invites update your profile at www.mycampquality.org.au  
+</p>
+
+
+<p style="Font-family:arial;Font-size:10px; color:red;">
+If you would like to unsubscribe from these program event invitations as you will not be attending future Camp Quality programs please email us on 
+<a href="mailto:programhelp@campquality.org.au?subject=UNSUBSCRIBE from Rec Programs Invitation VOL"> programhelp@campquality.org.au </a>
+</p>
+
+
+</div>
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

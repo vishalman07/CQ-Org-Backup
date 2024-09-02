@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Family_Attendance__c$Name</field>
+    </columns>
+    <columns>
+        <field>Family_Attendance__c.Family_Member_Attendance__r$Name</field>
+    </columns>
+    <columns>
+        <field>Family_Attendance__c$Registration_Type__c</field>
+    </columns>
+    <columns>
+        <field>Family_Attendance__c.Family_Member_Attendance__r$Contact__c</field>
+    </columns>
+    <columns>
+        <field>Family_Attendance__c$FA_00000__c</field>
+    </columns>
+    <columns>
+        <field>Family_Attendance__c.Family_Member_Attendance__r$Age__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Family_Attendance__c$CreatedBy</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Amy Meyrick</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Family_Attendance__c$Event_Name__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>TO DELETE: Fam attendance created by AM</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Family_Attendance_with_Family_Member_Attendance__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Family_Attendance__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

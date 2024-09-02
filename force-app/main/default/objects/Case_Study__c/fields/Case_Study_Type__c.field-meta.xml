@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Study_Type__c</fullName>
+    <label>Case Study Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Media</fullName>
+                <default>false</default>
+                <label>Media</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Both</fullName>
+                <default>false</default>
+                <label>Media and Marketing</label>
+            </value>
+            <value>
+                <fullName>Appeals</fullName>
+                <default>false</default>
+                <label>Appeals</label>
+            </value>
+            <value>
+                <fullName>Partnerships</fullName>
+                <default>false</default>
+                <label>Partnerships</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

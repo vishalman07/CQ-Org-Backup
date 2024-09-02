@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Owner</field>
+    </columns>
+    <columns>
+        <field>Account$Id</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$npe01__One2OneContact__c</field>
+    </columns>
+    <columns>
+        <field>Account$Primary_Contact_Supporter_ID__c</field>
+    </columns>
+    <columns>
+        <field>Account$Phone</field>
+    </columns>
+    <columns>
+        <field>Account$Mobile_Phone__c</field>
+    </columns>
+    <columns>
+        <field>Account$Email__c</field>
+    </columns>
+    <columns>
+        <field>Account$BillingCity</field>
+    </columns>
+    <columns>
+        <field>Account$BillingState</field>
+    </columns>
+    <description>Payment txn&apos;s with Donation By an Organisation, greater or equal to $500 from 01/01/2019.</description>
+    <filter>
+        <criteriaItems>
+            <column>Account$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Camp Quality,estate of,foundation,trust,rotary club,lions club</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Constituent_Types__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>excludes</operator>
+            <value>All School List</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <name>Primary Contact - SME Org Donors &gt;$500</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_Payment_txns__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$Aged_Camp__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

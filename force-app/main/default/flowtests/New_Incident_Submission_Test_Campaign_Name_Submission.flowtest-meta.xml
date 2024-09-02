@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowTest xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowApiName>New_Incident_Submission</flowApiName>
+    <label>Test Campaign Name Submission</label>
+    <testPoints>
+        <elementApiName>Start</elementApiName>
+        <parameters>
+            <leftValueReference>$Record</leftValueReference>
+            <type>InputTriggeringRecordInitial</type>
+            <value>
+                <sobjectValue>{&quot;Department__c&quot;:&quot;CPEP&quot;,&quot;Emergency_Contact_Notified__c&quot;:&quot;No&quot;,&quot;Event_Program_Name_Submission__c&quot;:&quot;Camp Quality FUNx4&quot;,&quot;First_Aid_provided__c&quot;:&quot;Harrys left heel was check to ensure no sting, area was cleaned and singos applied. Antihistamine was give - 1/2 tablet claryntine (60mg) as per Harrys weight.\r\nNo swelling or signs if reaction&quot;,&quot;First_Aider__c&quot;:&quot;Maddison See&quot;,&quot;Incident_Date_Time__c&quot;:&quot;2023-11-22T03:39:00.000Z&quot;,&quot;Incident_Location__c&quot;:&quot;351 Progress Dr, Bibra Lake WA 6163, Australia&quot;,&quot;Incident_Type__c&quot;:&quot;Injury&quot;,&quot;Incident_description__c&quot;:&quot;Harry stood on a bee, resulting in a bee stick to his left foot heel. Harry was able to pull the sting out but went to seek medical attention just incase.&quot;,&quot;Injuries_sustained__c&quot;:&quot;No&quot;,&quot;OwnerId&quot;:&quot;0052x000004MLq5AAG&quot;,&quot;RecordTypeId&quot;:&quot;0121y0000037sPLAAY&quot;,&quot;Reporters_Name__c&quot;:&quot;Maddison  See&quot;,&quot;Severity__c&quot;:&quot;Minor&quot;,&quot;Stakeholder_s_Involved__c&quot;:&quot;Child&quot;,&quot;Status__c&quot;:&quot;New&quot;,&quot;Type_of_Behaviour__c&quot;:&quot;Bullying or Harassment&quot;,&quot;Type_of_Medication_Error__c&quot;:&quot;Medication spilt/dropped&quot;,&quot;Was_first_aid_required__c&quot;:&quot;Yes&quot;,&quot;Were_emergency_services_required__c&quot;:&quot;NO&quot;}</sobjectValue>
+            </value>
+        </parameters>
+    </testPoints>
+    <testPoints>
+        <assertions>
+            <conditions>
+                <leftValueReference>Program_Provided</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+        </assertions>
+        <elementApiName>Finish</elementApiName>
+    </testPoints>
+</FlowTest>

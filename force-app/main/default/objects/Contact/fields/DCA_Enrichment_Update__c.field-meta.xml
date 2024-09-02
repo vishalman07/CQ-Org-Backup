@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DCA_Enrichment_Update__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>DCA Enrichment Update</description>
+    <inlineHelpText>Did this contact have their details updated from the DCA Enrichment Data Project?</inlineHelpText>
+    <label>DCA Enrichment Update</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

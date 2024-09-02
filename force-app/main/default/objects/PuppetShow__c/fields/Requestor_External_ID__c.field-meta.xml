@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requestor_External_ID__c</fullName>
+    <externalId>false</externalId>
+    <formula>Requestor_First_Name__c + Requestor_Last_Name__c + Requestor_Email__c</formula>
+    <label>Requestor External ID</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

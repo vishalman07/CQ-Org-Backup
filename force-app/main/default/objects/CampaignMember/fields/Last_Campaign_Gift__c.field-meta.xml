@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Campaign_Gift__c</fullName>
+    <description>last Direct Marketing Campaign where a gift was made</description>
+    <label>Last Campaign with Gift</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

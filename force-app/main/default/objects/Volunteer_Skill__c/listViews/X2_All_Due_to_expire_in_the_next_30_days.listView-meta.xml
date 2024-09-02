@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2_All_Due_to_expire_in_the_next_30_days</fullName>
+    <columns>NAME</columns>
+    <columns>Volunteer__c</columns>
+    <columns>License__c</columns>
+    <columns>Expires__c</columns>
+    <columns>Skill_Description__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Expires__c</field>
+        <operation>equals</operation>
+        <value>THIS_MONTH</value>
+    </filters>
+    <label>2. All Due to Expire in the Next 30 Days</label>
+</ListView>

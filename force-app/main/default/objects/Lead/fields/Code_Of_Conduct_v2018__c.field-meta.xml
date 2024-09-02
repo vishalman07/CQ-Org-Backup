@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Code_Of_Conduct_v2018__c</fullName>
+    <inlineHelpText>This shows signing of the 2018 version of the Volunteer code of conduct.</inlineHelpText>
+    <label>Code Of Conduct v2018</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

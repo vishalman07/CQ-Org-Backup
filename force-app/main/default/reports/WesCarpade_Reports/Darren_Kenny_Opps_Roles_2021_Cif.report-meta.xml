@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.OpportunityContactRoles$Role</field>
+    </columns>
+    <columns>
+        <field>Contact.OpportunityContactRoles$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact.OpportunityContactRoles$Amount</field>
+    </columns>
+    <columns>
+        <field>Contact.OpportunityContactRoles$CloseDate</field>
+    </columns>
+    <columns>
+        <field>Contact.OpportunityContactRoles*Opportunity$Campaign_Name__c</field>
+    </columns>
+    <columns>
+        <field>Contact.OpportunityContactRoles*Opportunity$npsp__Primary_Contact__c</field>
+    </columns>
+    <description>Darren Kenny Related Opps and its roles,
+CY 2021 - Wescarpade</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles$CloseDate</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>1/1/2021</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles$CloseDate</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>12/31/2021</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Darren Kenny</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact$Id</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Darren Kenny Opps  &amp; Roles 2021</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

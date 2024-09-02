@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delivery_Method__c</fullName>
+    <inlineHelpText>Method of providing tickets to the allocated Family Groups</inlineHelpText>
+    <label>Delivery Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Picked up from Box Office by the Family Group</fullName>
+                <default>false</default>
+                <label>Picked up from Box Office by the Family Group</label>
+            </value>
+            <value>
+                <fullName>Delivered by Camp Quality (Standard Mail or Express Mail)</fullName>
+                <default>false</default>
+                <label>Delivered by Camp Quality (Standard Mail or Express Mail)</label>
+            </value>
+            <value>
+                <fullName>Collected by the Family Group from Camp Quality or another Location</fullName>
+                <default>false</default>
+                <label>Collected by the Family Group from Camp Quality or another Location</label>
+            </value>
+            <value>
+                <fullName>To be emailed (as a PDF attachment)</fullName>
+                <default>false</default>
+                <label>To be emailed (as a PDF attachment)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

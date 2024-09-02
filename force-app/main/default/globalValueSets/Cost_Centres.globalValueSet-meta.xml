@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>1010</fullName>
+        <default>false</default>
+        <label>1010 - Merchandise Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>1020</fullName>
+        <default>false</default>
+        <label>1020 - Other Campaigns</label>
+    </customValue>
+    <customValue>
+        <fullName>1025</fullName>
+        <default>false</default>
+        <label>1025 - 24 Hour Giving</label>
+    </customValue>
+    <customValue>
+        <fullName>1026</fullName>
+        <default>false</default>
+        <label>1026 - Facebook Fundraiser</label>
+    </customValue>
+    <customValue>
+        <fullName>1030</fullName>
+        <default>false</default>
+        <label>1030 - School Campaigns</label>
+    </customValue>
+    <customValue>
+        <fullName>1110</fullName>
+        <default>false</default>
+        <label>1110 - Corporate Partnerships</label>
+    </customValue>
+    <customValue>
+        <fullName>1120</fullName>
+        <default>false</default>
+        <label>1120 - Corporate Grant</label>
+    </customValue>
+    <customValue>
+        <fullName>1130</fullName>
+        <default>false</default>
+        <label>1130 - Government Grants</label>
+    </customValue>
+    <customValue>
+        <fullName>1210</fullName>
+        <default>false</default>
+        <label>1210 - Major Gifts</label>
+    </customValue>
+    <customValue>
+        <fullName>1220</fullName>
+        <default>false</default>
+        <label>1220 - Private Trusts &amp; Foundations</label>
+    </customValue>
+    <customValue>
+        <fullName>1230</fullName>
+        <default>false</default>
+        <label>1230 - Alumni</label>
+    </customValue>
+    <customValue>
+        <fullName>1310</fullName>
+        <default>false</default>
+        <label>1310 - Supper Club</label>
+    </customValue>
+    <customValue>
+        <fullName>1320</fullName>
+        <default>false</default>
+        <label>1320 - Dine at Mine</label>
+    </customValue>
+    <customValue>
+        <fullName>1330</fullName>
+        <default>false</default>
+        <label>1330 - Escarpade</label>
+    </customValue>
+    <customValue>
+        <fullName>1331</fullName>
+        <default>false</default>
+        <label>1331 - Classic Cruise</label>
+    </customValue>
+    <customValue>
+        <fullName>1340</fullName>
+        <default>false</default>
+        <label>1340 - Convoy</label>
+    </customValue>
+    <customValue>
+        <fullName>1345</fullName>
+        <default>false</default>
+        <label>1345 - Cycling Campaign</label>
+    </customValue>
+    <customValue>
+        <fullName>1350</fullName>
+        <default>false</default>
+        <label>1350 - 1000 Kms for Kids</label>
+    </customValue>
+    <customValue>
+        <fullName>1351</fullName>
+        <default>false</default>
+        <label>1351 – Motocyc</label>
+    </customValue>
+    <customValue>
+        <fullName>1352</fullName>
+        <default>false</default>
+        <label>1352 - The Trek</label>
+    </customValue>
+    <customValue>
+        <fullName>1355</fullName>
+        <default>false</default>
+        <label>1355 - Big Walk</label>
+    </customValue>
+    <customValue>
+        <fullName>1360</fullName>
+        <default>false</default>
+        <label>1360 - WesCarpade</label>
+    </customValue>
+    <customValue>
+        <fullName>1370</fullName>
+        <default>false</default>
+        <label>1370 - Funx4</label>
+    </customValue>
+    <customValue>
+        <fullName>1375</fullName>
+        <default>false</default>
+        <label>1375 - Car Raffle</label>
+    </customValue>
+    <customValue>
+        <fullName>1380</fullName>
+        <default>false</default>
+        <label>1380 - Camp In</label>
+    </customValue>
+    <customValue>
+        <fullName>1405</fullName>
+        <default>false</default>
+        <label>1405 - Regular Giving Acquisition</label>
+    </customValue>
+    <customValue>
+        <fullName>1420</fullName>
+        <default>false</default>
+        <label>1420 - Telemarketing</label>
+    </customValue>
+    <customValue>
+        <fullName>1430</fullName>
+        <default>false</default>
+        <label>1430 - Regular Giving Ongoing</label>
+    </customValue>
+    <customValue>
+        <fullName>1502</fullName>
+        <default>false</default>
+        <label>1502 - Appeal Program</label>
+    </customValue>
+    <customValue>
+        <fullName>1605</fullName>
+        <default>false</default>
+        <label>1605 - Other Digital Campaigns</label>
+    </customValue>
+    <customValue>
+        <fullName>1700</fullName>
+        <default>false</default>
+        <label>1700 - Unsolicited Donations</label>
+    </customValue>
+    <customValue>
+        <fullName>1801</fullName>
+        <default>false</default>
+        <label>1801 - Bequests</label>
+    </customValue>
+    <customValue>
+        <fullName>1910</fullName>
+        <default>false</default>
+        <label>1910 - Community Fundraising</label>
+    </customValue>
+    <customValue>
+        <fullName>19201</fullName>
+        <default>false</default>
+        <label>19201 - Cherry Ball</label>
+    </customValue>
+    <customValue>
+        <fullName>19202</fullName>
+        <default>false</default>
+        <label>19202 - Giggle Ball</label>
+    </customValue>
+    <customValue>
+        <fullName>19203</fullName>
+        <default>false</default>
+        <label>19203 - Off the Menu</label>
+    </customValue>
+    <customValue>
+        <fullName>19299</fullName>
+        <default>false</default>
+        <label>19299 - Other Special Events</label>
+    </customValue>
+    <customValue>
+        <fullName>1930</fullName>
+        <default>false</default>
+        <label>1930 - Support / Activity Group</label>
+    </customValue>
+    <customValue>
+        <fullName>1940</fullName>
+        <default>false</default>
+        <label>1940 - Local Corporate Fundraising</label>
+    </customValue>
+    <customValue>
+        <fullName>1945</fullName>
+        <default>false</default>
+        <label>1945 - Grants Local Corporate</label>
+    </customValue>
+    <customValue>
+        <fullName>1950</fullName>
+        <default>false</default>
+        <label>1950 - Grants Clubs &amp; Community</label>
+    </customValue>
+    <customValue>
+        <fullName>2110 - Mini Camp</fullName>
+        <default>false</default>
+        <label>2110 - Mini Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>2120 - Junior Camp</fullName>
+        <default>false</default>
+        <label>2120 - Junior Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>2130 - Middle Camp</fullName>
+        <default>false</default>
+        <label>2130 - Middle Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>2135 - KICC Middle Camp</fullName>
+        <default>false</default>
+        <label>2135 - KICC Middle Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>2140 - Family Camp</fullName>
+        <default>false</default>
+        <label>2140 - Family Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>2145 - KICC Family Camp</fullName>
+        <default>false</default>
+        <label>2145 - KICC Family Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>2150 - Combo Camp</fullName>
+        <default>false</default>
+        <label>2150 - Combo Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>2155 - KICC Combo Camp</fullName>
+        <default>false</default>
+        <label>2155 - KICC Combo Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>2160 - Grad Camp</fullName>
+        <default>false</default>
+        <label>2160 - Grad Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>2165 – Virtual Camps</fullName>
+        <default>false</default>
+        <label>2165 - Virtual Camps</label>
+    </customValue>
+    <customValue>
+        <fullName>2170 - Bereaved Camps</fullName>
+        <default>false</default>
+        <label>2170 - Bereaved Camps</label>
+    </customValue>
+    <customValue>
+        <fullName>2180 - Family Fun Days</fullName>
+        <default>false</default>
+        <label>2180 - Family Fun Days</label>
+    </customValue>
+    <customValue>
+        <fullName>2185 - KICC Family Fun Days</fullName>
+        <default>false</default>
+        <label>2185 - KICC Family Fun Days</label>
+    </customValue>
+    <customValue>
+        <fullName>2210 - Primary School</fullName>
+        <default>false</default>
+        <label>2210 - Primary School</label>
+    </customValue>
+    <customValue>
+        <fullName>2310 - Hospital Program</fullName>
+        <default>false</default>
+        <label>2310 - Hospital Program</label>
+    </customValue>
+    <customValue>
+        <fullName>2320 - Child Life Therapy</fullName>
+        <default>false</default>
+        <label>2320 - Child Life Therapy</label>
+    </customValue>
+    <customValue>
+        <fullName>2410 - Holiday House</fullName>
+        <default>false</default>
+        <label>2410 - Holiday House</label>
+    </customValue>
+    <customValue>
+        <fullName>2415 - Salamander Bay</fullName>
+        <default>false</default>
+        <label>2415 - Salamander Bay</label>
+    </customValue>
+    <customValue>
+        <fullName>2430 - Other Family Support</fullName>
+        <default>false</default>
+        <label>2430 - Other Family Support</label>
+    </customValue>
+    <customValue>
+        <fullName>2450 - Family Experience</fullName>
+        <default>false</default>
+        <label>2450 - Family Experience</label>
+    </customValue>
+    <customValue>
+        <fullName>2510 - Kids App</fullName>
+        <default>false</default>
+        <label>2510 - Kids App</label>
+    </customValue>
+    <customValue>
+        <fullName>2701 - Volunteer Programs</fullName>
+        <default>false</default>
+        <label>2701 - Volunteer Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>2710 - Volunteer - Induction &amp; Training</fullName>
+        <default>false</default>
+        <label>2710 - Volunteer - Induction &amp; Training</label>
+    </customValue>
+    <customValue>
+        <fullName>2720 - Volunteer - Oranges</fullName>
+        <default>false</default>
+        <label>2720 - Volunteer - Oranges</label>
+    </customValue>
+    <customValue>
+        <fullName>2810 - Program Promotion &amp; Awareness</fullName>
+        <default>false</default>
+        <label>2810 - Program Promotion &amp; Awareness</label>
+    </customValue>
+    <customValue>
+        <fullName>2830 - Program Development</fullName>
+        <default>false</default>
+        <label>2830 - Program Development</label>
+    </customValue>
+    <customValue>
+        <fullName>2840 - Program Evaluation</fullName>
+        <default>false</default>
+        <label>2840 - Program Evaluation</label>
+    </customValue>
+    <customValue>
+        <fullName>3100 - Marketing - Media</fullName>
+        <default>false</default>
+        <label>3100 - Marketing - Media</label>
+    </customValue>
+    <customValue>
+        <fullName>3200 - Marketing - Brand</fullName>
+        <default>false</default>
+        <label>3200 - Marketing - Brand</label>
+    </customValue>
+    <customValue>
+        <fullName>3400 - Marketing - Website</fullName>
+        <default>false</default>
+        <label>3400 - Marketing - Website</label>
+    </customValue>
+    <customValue>
+        <fullName>4100 - General P&amp;C</fullName>
+        <default>false</default>
+        <label>4100 - General P&amp;C</label>
+    </customValue>
+    <customValue>
+        <fullName>4200 - Learning &amp; Development</fullName>
+        <default>false</default>
+        <label>4200 - Learning &amp; Development</label>
+    </customValue>
+    <customValue>
+        <fullName>4300 - Conference</fullName>
+        <default>false</default>
+        <label>4300 - Conference</label>
+    </customValue>
+    <customValue>
+        <fullName>4400 - Oranges - Staff</fullName>
+        <default>false</default>
+        <label>4400 - Oranges - Staff</label>
+    </customValue>
+    <customValue>
+        <fullName>5300 - Facilities</fullName>
+        <default>false</default>
+        <label>5300 - Facilities</label>
+    </customValue>
+    <customValue>
+        <fullName>6000 - CEO</fullName>
+        <default>false</default>
+        <label>6000 - CEO</label>
+    </customValue>
+    <customValue>
+        <fullName>No Cost Centre Allocated</fullName>
+        <default>true</default>
+        <label>No Cost Centre Allocated</label>
+    </customValue>
+    <customValue>
+        <fullName>Grants</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Grants</label>
+    </customValue>
+    <customValue>
+        <fullName>Local Corporate Fundraising</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Local Corporate Fundraising</label>
+    </customValue>
+    <customValue>
+        <fullName>Major Gifts</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Major Gifts</label>
+    </customValue>
+    <customValue>
+        <fullName>Merchandise Sales</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1010 - Merchandise Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Income</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Income</label>
+    </customValue>
+    <customValue>
+        <fullName>Foundations / Trust Donation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Foundations / Trust Donation</label>
+    </customValue>
+    <customValue>
+        <fullName>Recurring Gifts</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Recurring Gifts</label>
+    </customValue>
+    <customValue>
+        <fullName>1470 - Acquisition Tax Appeal</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1470 - Acquisition Tax Appeal</label>
+    </customValue>
+    <customValue>
+        <fullName>5200 - Finance</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>5200 - Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>2898 - Programs - General</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>2898 - Programs - General</label>
+    </customValue>
+    <customValue>
+        <fullName>1440 - RG DM</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1440 - RG DM</label>
+    </customValue>
+    <customValue>
+        <fullName>1220 - Private Trusts</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1220 - Private Trusts</label>
+    </customValue>
+    <customValue>
+        <fullName>7000 - Board</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>7000 - Board</label>
+    </customValue>
+    <customValue>
+        <fullName>2210 - Primary School Program</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>2210 - Primary School Program</label>
+    </customValue>
+    <customValue>
+        <fullName>1945 - Local Corporate Grants</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1945 - Local Corporate Grants</label>
+    </customValue>
+    <customValue>
+        <fullName>Single Gift</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Single Gift</label>
+    </customValue>
+    <customValue>
+        <fullName>Support / Activity Group</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Support / Activity Group</label>
+    </customValue>
+    <customValue>
+        <fullName>Unsolicited Gift</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Unsolicited Gift</label>
+    </customValue>
+    <customValue>
+        <fullName>Workplace Giving</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Workplace Giving</label>
+    </customValue>
+    <customValue>
+        <fullName>Registrations</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Registrations</label>
+    </customValue>
+    <customValue>
+        <fullName>Auction Revenue</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Auction Revenue</label>
+    </customValue>
+    <customValue>
+        <fullName>Raffle</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Raffle</label>
+    </customValue>
+    <customValue>
+        <fullName>Event Income</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Event Income</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Income</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Marketing Income</label>
+    </customValue>
+    <customValue>
+        <fullName>Distribution Income</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Distribution Income</label>
+    </customValue>
+    <customValue>
+        <fullName>Franking Credits</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Franking Credits</label>
+    </customValue>
+    <customValue>
+        <fullName>Profit/Loss on Redemption</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Profit/Loss on Redemption</label>
+    </customValue>
+    <customValue>
+        <fullName>Fair Value Movement - Unrealised Investment</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fair Value Movement - Unrealised Investment</label>
+    </customValue>
+    <customValue>
+        <fullName>Interest Income</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Interest Income</label>
+    </customValue>
+    <customValue>
+        <fullName>Interest Income - Investment Account</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Interest Income - Investment Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Membership Dues</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Membership Dues</label>
+    </customValue>
+    <customValue>
+        <fullName>Profit on sale of fixed assets</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Profit on sale of fixed assets</label>
+    </customValue>
+    <customValue>
+        <fullName>1400 - Donor Relations</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1400 - Donor Relations</label>
+    </customValue>
+    <customValue>
+        <fullName>1610 - Digital Campaign Tight</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1610 - Digital Campaign Tight</label>
+    </customValue>
+    <customValue>
+        <fullName>1420 - RG Telemarketing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1420 - RG Telemarketing</label>
+    </customValue>
+    <customValue>
+        <fullName>1997 - Community Fundraising -</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1997 - Community Fundraising -</label>
+    </customValue>
+    <customValue>
+        <fullName>1398 - Event - Other</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1398 - Event - Other</label>
+    </customValue>
+    <customValue>
+        <fullName>1920 - Special Events</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1920 - Special Events</label>
+    </customValue>
+    <customValue>
+        <fullName>1001 - Fundraising General DO</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1001 - Fundraising General DO</label>
+    </customValue>
+    <customValue>
+        <fullName>1520 - Renewal Tax Appeal</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1520 - Renewal Tax Appeal</label>
+    </customValue>
+    <customValue>
+        <fullName>1510 - Renewal Christmas Appea</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1510 - Renewal Christmas Appea</label>
+    </customValue>
+    <customValue>
+        <fullName>1540 - Renewal Autumn</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1540 - Renewal Autumn</label>
+    </customValue>
+    <customValue>
+        <fullName>1460 - Acquisition Christmas A</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1460 - Acquisition Christmas A</label>
+    </customValue>
+    <customValue>
+        <fullName>3000 - Marketing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>3000 - Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>1505</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1505 - Single Gift Renewal</label>
+    </customValue>
+    <customValue>
+        <fullName>1455</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1455 - Single Gift Acquisition</label>
+    </customValue>
+    <customValue>
+        <fullName>1630 - Digital Campaign - Autu</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1630 - Digital Campaign - Autu</label>
+    </customValue>
+    <customValue>
+        <fullName>1620 - Digital Campaign Tax Ap</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1620 - Digital Campaign Tax Ap</label>
+    </customValue>
+    <customValue>
+        <fullName>1530 - Renewal Spring Appeal</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1530 - Renewal Spring Appeal</label>
+    </customValue>
+    <customValue>
+        <fullName>4110</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4110 - Registrations</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Partnership</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Corporate Partnership</label>
+    </customValue>
+    <customValue>
+        <fullName>1550 - Renewal Newsletter</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1550 - Renewal Newsletter</label>
+    </customValue>
+    <customValue>
+        <fullName>Community Fundraising</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Community Fundraising</label>
+    </customValue>
+    <masterLabel>Cost Centres</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

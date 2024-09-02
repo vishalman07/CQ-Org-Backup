@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Corporate Partnership</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Active Pursuit</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Won</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Considerer</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Considering</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Contracting</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Qualification</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Research</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Verbal Commit</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

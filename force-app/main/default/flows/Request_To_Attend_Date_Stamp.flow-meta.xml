@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <description>Migrated from the: Request To Attend - Date Stamp workflow rule
+Workflow rule description: &quot;</description>
+    <formulas>
+        <name>DateStampRequestToAttendFormula</name>
+        <dataType>DateTime</dataType>
+        <expression>now()</expression>
+    </formulas>
+    <label>Request To Attend - Date Stamp</label>
+    <migratedFromWorkflowRuleName>Request To Attend - Date Stamp</migratedFromWorkflowRuleName>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>mainUpdate</name>
+        <label>mainUpdate</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Family_Request_To_Attend_Date__c</field>
+            <value>
+                <elementReference>DateStampRequestToAttendFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>mainUpdate</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>FA_00000__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Request to Attend</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Family_Request_To_Attend_Date__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Family_Attendance__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

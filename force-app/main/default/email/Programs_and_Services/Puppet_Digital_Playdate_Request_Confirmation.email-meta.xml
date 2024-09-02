@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sent to requestor when a puppet digital playdate form is submitted online.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Letterhead</letterhead>
+    <name>Puppet Digital Playdate Request Confirmation</name>
+    <style>freeForm</style>
+    <subject>We can&apos;t wait to meet you!</subject>
+    <textOnly>Hi {!PuppetShow__c.Requestor_First_Name__c},
+
+
+Thanks for booking a Puppet Digital Playdate, we can’t wait to hang out with {!PuppetShow__c.Child_s_First_Name__c}!
+
+
+
+A Camp Quality team member will be in touch in the next 3 business days to finalise your booking. If you need to get hold of us you can phone us on 1300 662 267 or email puppetplaydates@campquality.org.au.
+
+
+From,
+
+
+
+Kylie, Dean and Mel
+
+VIPs (Very Important Puppets)</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$ContactFullID__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Id</field>
+    </columns>
+    <columns>
+        <field>Contact.CampaignMembers.CampaignMembers*CampaignMember$Pack_Type__c</field>
+    </columns>
+    <columns>
+        <field>Contact.CampaignMembers.CampaignMembers$Status</field>
+    </columns>
+    <description>Raffle Conversion Members</description>
+    <filter>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <column>Contact.CampaignMembers$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>2022 RG Telemarketing – RAFFLE CONVERSION</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.CampaignMembers*CampaignMember$Segment_Code__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>22 Xmas Appeal - Mail - RAFFLE Conv</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Campaigns_Campaign_Members__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

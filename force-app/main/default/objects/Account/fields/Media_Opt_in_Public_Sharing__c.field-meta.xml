@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Media_Opt_in_Public_Sharing__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>I allow photo/video to be shared by Camp Quality on their social media pages and website - Legacy, not needed</description>
+    <inlineHelpText>I allow photo/video to be shared by Camp Quality on their social media pages and website - Legacy, not needed</inlineHelpText>
+    <label>Image Opt-in Public Sharing (LEGACY)</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

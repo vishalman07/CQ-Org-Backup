@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Puppet_Shows_ALL_SR</fullName>
+    <columns>Performance_Group__c</columns>
+    <columns>Venue_State__c</columns>
+    <columns>NAME</columns>
+    <columns>Request_Date__c</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <columns>Venue__c</columns>
+    <columns>Venue_Suburb__c</columns>
+    <columns>Child_Requesting_Show__c</columns>
+    <columns>Age_Of_Child__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Show_Status__c</columns>
+    <columns>Show_Type__c</columns>
+    <columns>Booking_Request_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Performance_Group__c</field>
+        <operation>equals</operation>
+        <value>NSW/ACT,QLD,SA/NT,WA,VIC/TAS,National</value>
+    </filters>
+    <filters>
+        <field>Show_Status__c</field>
+        <operation>equals</operation>
+        <value>Requested,In Progress,Booked,On Hold</value>
+    </filters>
+    <filters>
+        <field>Show_Type__c</field>
+        <operation>notEqual</operation>
+        <value>Hospital Visit,Camp Quality Event - Program,Workshop,Brand Relations,Hospital Visit - No Puppets,Puppet Digital Playdate,Digital Content</value>
+    </filters>
+    <label>Puppet Shows - ALL - SR</label>
+</ListView>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer_Status__c</fullName>
+    <label>Volunteer Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Volunteer</fullName>
+                <default>false</default>
+                <label>Volunteer</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+                <label>Withdrawn</label>
+            </value>
+            <value>
+                <fullName>Onboarding</fullName>
+                <default>false</default>
+                <label>Onboarding</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Constituent_Types__c</fullName>
+    <label>Constituent Types</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ambassadors</fullName>
+                <default>false</default>
+                <label>Ambassadors</label>
+            </value>
+            <value>
+                <fullName>Bequest Giver</fullName>
+                <default>false</default>
+                <label>Bequest Giver</label>
+            </value>
+            <value>
+                <fullName>Board Member</fullName>
+                <default>false</default>
+                <label>Board Member</label>
+            </value>
+            <value>
+                <fullName>Camp Quality Employee</fullName>
+                <default>false</default>
+                <label>Camp Quality Employee</label>
+            </value>
+            <value>
+                <fullName>Camp Quality Membership - Financial</fullName>
+                <default>false</default>
+                <label>Camp Quality Membership - Financial</label>
+            </value>
+            <value>
+                <fullName>Camp Quality Membership - Family</fullName>
+                <default>false</default>
+                <label>Camp Quality Membership - Non Financial</label>
+            </value>
+            <value>
+                <fullName>Community Fundraising Volunteer</fullName>
+                <default>false</default>
+                <label>Community Fundraising Volunteer</label>
+            </value>
+            <value>
+                <fullName>Corporate Volunteer</fullName>
+                <default>false</default>
+                <label>Corporate Volunteer</label>
+            </value>
+            <value>
+                <fullName>Former Camp Quality Board Member</fullName>
+                <default>false</default>
+                <label>Former Camp Quality Board Member</label>
+            </value>
+            <value>
+                <fullName>Former Camp Quality Employee</fullName>
+                <default>false</default>
+                <label>Former Camp Quality Employee</label>
+            </value>
+            <value>
+                <fullName>Health Professional</fullName>
+                <default>false</default>
+                <label>Health Professional</label>
+            </value>
+            <value>
+                <fullName>Inactive Regular Giver</fullName>
+                <default>false</default>
+                <label>Inactive Regular Giver</label>
+            </value>
+            <value>
+                <fullName>Lapsed Camp Quality Membership - Financial</fullName>
+                <default>false</default>
+                <label>Lapsed Camp Quality Membership - Financial</label>
+            </value>
+            <value>
+                <fullName>Lapsed Camp Quality Membership - Non Financial</fullName>
+                <default>false</default>
+                <label>Lapsed Camp Quality Membership - Non Financial</label>
+            </value>
+            <value>
+                <fullName>National Corporate Partner</fullName>
+                <default>false</default>
+                <label>National Corporate Partner</label>
+            </value>
+            <value>
+                <fullName>Camp Quality Ambassador</fullName>
+                <default>false</default>
+                <label>Past CQ Ambassador</label>
+            </value>
+            <value>
+                <fullName>Philanthropy</fullName>
+                <default>false</default>
+                <label>Philanthropy</label>
+            </value>
+            <value>
+                <fullName>Regular Giver</fullName>
+                <default>false</default>
+                <label>Regular Giver</label>
+            </value>
+            <value>
+                <fullName>School Contact</fullName>
+                <default>false</default>
+                <label>School Contact</label>
+            </value>
+            <value>
+                <fullName>State Revenue Committee</fullName>
+                <default>false</default>
+                <label>State Revenue Committee</label>
+            </value>
+            <value>
+                <fullName>Supplier</fullName>
+                <default>false</default>
+                <label>Supplier</label>
+            </value>
+            <value>
+                <fullName>Work Place Giving</fullName>
+                <default>false</default>
+                <label>Work Place Giving</label>
+            </value>
+            <value>
+                <fullName>Not For Profit</fullName>
+                <default>false</default>
+                <label>Not For Profit</label>
+            </value>
+            <value>
+                <fullName>Influencer</fullName>
+                <default>false</default>
+                <label>Influencer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HH_Landscape_Segment__c</fullName>
+    <description>DCA Enrichment</description>
+    <label>HH Landscape Segment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ambitious New Arrivals</fullName>
+                <default>false</default>
+                <label>Ambitious New Arrivals</label>
+            </value>
+            <value>
+                <fullName>Aspiring Executives</fullName>
+                <default>false</default>
+                <label>Aspiring Executives</label>
+            </value>
+            <value>
+                <fullName>Blue Collar Labourers</fullName>
+                <default>false</default>
+                <label>Blue Collar Labourers</label>
+            </value>
+            <value>
+                <fullName>Blue Collar Rural Families</fullName>
+                <default>false</default>
+                <label>Blue Collar Rural Families</label>
+            </value>
+            <value>
+                <fullName>Blue Collar Seniors</fullName>
+                <default>false</default>
+                <label>Blue Collar Seniors</label>
+            </value>
+            <value>
+                <fullName>City Fringe Survivors</fullName>
+                <default>false</default>
+                <label>City Fringe Survivors</label>
+            </value>
+            <value>
+                <fullName>Comfortable Families</fullName>
+                <default>false</default>
+                <label>Comfortable Families</label>
+            </value>
+            <value>
+                <fullName>Comfortable Older Couples</fullName>
+                <default>false</default>
+                <label>Comfortable Older Couples</label>
+            </value>
+            <value>
+                <fullName>Comfortable Suburban Labourers</fullName>
+                <default>false</default>
+                <label>Comfortable Suburban Labourers</label>
+            </value>
+            <value>
+                <fullName>Comfortable Urban Living</fullName>
+                <default>false</default>
+                <label>Comfortable Urban Living</label>
+            </value>
+            <value>
+                <fullName>Content Small Town Seniors</fullName>
+                <default>false</default>
+                <label>Content Small Town Seniors</label>
+            </value>
+            <value>
+                <fullName>Driven Young Professionals</fullName>
+                <default>false</default>
+                <label>Driven Young Professionals</label>
+            </value>
+            <value>
+                <fullName>Extended Families</fullName>
+                <default>false</default>
+                <label>Extended Families</label>
+            </value>
+            <value>
+                <fullName>Farming Families</fullName>
+                <default>false</default>
+                <label>Farming Families</label>
+            </value>
+            <value>
+                <fullName>Flying Solo Seniors</fullName>
+                <default>false</default>
+                <label>Flying Solo Seniors</label>
+            </value>
+            <value>
+                <fullName>Fresh Start Families</fullName>
+                <default>false</default>
+                <label>Fresh Start Families</label>
+            </value>
+            <value>
+                <fullName>Frugal Farmers</fullName>
+                <default>false</default>
+                <label>Frugal Farmers</label>
+            </value>
+            <value>
+                <fullName>High-spending Young Families</fullName>
+                <default>false</default>
+                <label>High-spending Young Families</label>
+            </value>
+            <value>
+                <fullName>Lonely Seniors</fullName>
+                <default>false</default>
+                <label>Lonely Seniors</label>
+            </value>
+            <value>
+                <fullName>Lonely Strugglers</fullName>
+                <default>false</default>
+                <label>Lonely Strugglers</label>
+            </value>
+            <value>
+                <fullName>Mining Workers</fullName>
+                <default>false</default>
+                <label>Mining Workers</label>
+            </value>
+            <value>
+                <fullName>Part-time Professionals</fullName>
+                <default>false</default>
+                <label>Part-time Professionals</label>
+            </value>
+            <value>
+                <fullName>Professional families</fullName>
+                <default>false</default>
+                <label>Professional families</label>
+            </value>
+            <value>
+                <fullName>Regional Professionals</fullName>
+                <default>false</default>
+                <label>Regional Professionals</label>
+            </value>
+            <value>
+                <fullName>Rural Seniors</fullName>
+                <default>false</default>
+                <label>Rural Seniors</label>
+            </value>
+            <value>
+                <fullName>Sensible Small Town</fullName>
+                <default>false</default>
+                <label>Sensible Small Town</label>
+            </value>
+            <value>
+                <fullName>Sophisticated Urban Living</fullName>
+                <default>false</default>
+                <label>Sophisticated Urban Living</label>
+            </value>
+            <value>
+                <fullName>Struggling Migrants</fullName>
+                <default>false</default>
+                <label>Struggling Migrants</label>
+            </value>
+            <value>
+                <fullName>Suburban Renewal</fullName>
+                <default>false</default>
+                <label>Suburban Renewal</label>
+            </value>
+            <value>
+                <fullName>Successful Executives</fullName>
+                <default>false</default>
+                <label>Successful Executives</label>
+            </value>
+            <value>
+                <fullName>Traditional Families</fullName>
+                <default>false</default>
+                <label>Traditional Families</label>
+            </value>
+            <value>
+                <fullName>Transitioning Retirees</fullName>
+                <default>false</default>
+                <label>Transitioning Retirees</label>
+            </value>
+            <value>
+                <fullName>Trendy Youngsters</fullName>
+                <default>false</default>
+                <label>Trendy Youngsters</label>
+            </value>
+            <value>
+                <fullName>True Blue Retirees</fullName>
+                <default>false</default>
+                <label>True Blue Retirees</label>
+            </value>
+            <value>
+                <fullName>Welfare Communities</fullName>
+                <default>false</default>
+                <label>Welfare Communities</label>
+            </value>
+            <value>
+                <fullName>Winding-down Workers</fullName>
+                <default>false</default>
+                <label>Winding-down Workers</label>
+            </value>
+            <value>
+                <fullName>World-weary Seniors</fullName>
+                <default>false</default>
+                <label>World-weary Seniors</label>
+            </value>
+            <value>
+                <fullName>Young Indigenous</fullName>
+                <default>false</default>
+                <label>Young Indigenous</label>
+            </value>
+            <value>
+                <fullName>Young Migrant families</fullName>
+                <default>false</default>
+                <label>Young Migrant families</label>
+            </value>
+            <value>
+                <fullName>Young Regional families</fullName>
+                <default>false</default>
+                <label>Young Regional families</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

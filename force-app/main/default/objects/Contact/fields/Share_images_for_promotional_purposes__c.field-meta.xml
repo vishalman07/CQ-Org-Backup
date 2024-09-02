@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Share_images_for_promotional_purposes__c</fullName>
+    <inlineHelpText>Whether we can share images of the family for CQ promotional purposes</inlineHelpText>
+    <label>Share Images for Promotional Purposes</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Yes_No_Field</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_Payment_Source</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Payment_Source__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Banking_Reference__c</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>Campaign_Name__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Payment_Source__c</field>
+        <operation>notEqual</operation>
+        <value>Bank Transfer,BPay,Cash,Cheque,Online Payment,Recurring Payment,Shopify,In-Kind Donation</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>khuan</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSE_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>7/1/2021</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Closed Won</value>
+    </filters>
+    <label>Missing Payment Source</label>
+</ListView>

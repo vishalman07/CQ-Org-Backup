@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer_Type__c</fullName>
+    <label>Volunteer Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Companion/Rover</fullName>
+                <default>false</default>
+                <label>Companion/Rover</label>
+            </value>
+            <value>
+                <fullName>Medical Volunteer</fullName>
+                <default>false</default>
+                <label>Medical Volunteer</label>
+            </value>
+            <value>
+                <fullName>Casual Event &amp; Office Volunteer</fullName>
+                <default>false</default>
+                <label>Casual Event &amp; Office Volunteer</label>
+            </value>
+            <value>
+                <fullName>Doctor</fullName>
+                <default>false</default>
+                <label>Doctor</label>
+            </value>
+            <value>
+                <fullName>Endorsed Enrolled Nurse</fullName>
+                <default>false</default>
+                <label>Endorsed Enrolled Nurse</label>
+            </value>
+            <value>
+                <fullName>Events/Fundraising</fullName>
+                <default>false</default>
+                <label>Events/Fundraising</label>
+            </value>
+            <value>
+                <fullName>Office Administration</fullName>
+                <default>false</default>
+                <label>Office Administration</label>
+            </value>
+            <value>
+                <fullName>Registered Nurse</fullName>
+                <default>false</default>
+                <label>Registered Nurse</label>
+            </value>
+            <value>
+                <fullName>Fundraising Volunteer</fullName>
+                <default>false</default>
+                <label>Fundraising Volunteer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

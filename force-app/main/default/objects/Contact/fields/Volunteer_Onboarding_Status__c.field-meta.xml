@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer_Onboarding_Status__c</fullName>
+    <label>Volunteer Onboarding Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Online Learning</fullName>
+                <default>false</default>
+                <label>Online Learning</label>
+            </value>
+            <value>
+                <fullName>Interview</fullName>
+                <default>false</default>
+                <label>Interview</label>
+            </value>
+            <value>
+                <fullName>Reference Checks</fullName>
+                <default>false</default>
+                <label>Reference Checks</label>
+            </value>
+            <value>
+                <fullName>ACF Training &amp; Certification</fullName>
+                <default>false</default>
+                <label>ACF Training &amp; Certification</label>
+            </value>
+            <value>
+                <fullName>Induction</fullName>
+                <default>false</default>
+                <label>Induction</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

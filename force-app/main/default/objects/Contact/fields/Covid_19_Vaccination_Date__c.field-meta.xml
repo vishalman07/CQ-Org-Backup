@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Covid_19_Vaccination_Date__c</fullName>
+    <description>Date that this person was fully vaccinated against Covid-19</description>
+    <inlineHelpText>Date that this person was fully vaccinated against Covid-19</inlineHelpText>
+    <label>Covid-19 Vaccination Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

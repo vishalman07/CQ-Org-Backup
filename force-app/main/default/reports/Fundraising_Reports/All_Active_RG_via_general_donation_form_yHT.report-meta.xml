@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>npe03__Recurring_Donation__c$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>npe03__Recurring_Donation__c$npe03__Amount__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>npe03__Recurring_Donation__c.npsp_plus__Form_Submissions__r$npsp_plus__Form__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>General Donation Form</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>npe03__Recurring_Donation__c$npsp__Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>All Active RG via general donation form</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Recurring_Donations_with_form_submissions__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>npe03__Recurring_Donation__c$npsp_plus__Acknowledgment_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

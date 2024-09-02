@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Which_aspects_of_Camp_Quality_s_work_are__c</fullName>
+    <description>Which aspects of Camp Quality&apos;s work are you most interested in?</description>
+    <inlineHelpText>Select up to three</inlineHelpText>
+    <label>02. Which aspects of Camp Quality’s work</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Recreation programs</fullName>
+                <default>false</default>
+                <label>a. Recreation programs</label>
+            </value>
+            <value>
+                <fullName>Education programs</fullName>
+                <default>false</default>
+                <label>b. Education programs</label>
+            </value>
+            <value>
+                <fullName>Hospital programs</fullName>
+                <default>false</default>
+                <label>c. Hospital programs</label>
+            </value>
+            <value>
+                <fullName>Digital programs - Apps</fullName>
+                <default>false</default>
+                <label>d. Digital programs - Apps</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

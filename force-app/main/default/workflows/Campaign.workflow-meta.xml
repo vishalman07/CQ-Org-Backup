@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Campaign_missing_financial_coding</fullName>
+        <ccEmails>programhelp@campquality.org.au</ccEmails>
+        <description>Campaign missing financial coding</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <recipient>mdavis@campquality.org.au</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mhadfield@campquality.org.au</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>mycampquality@campquality.org.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Missing_Financial_Coding</template>
+    </alerts>
+    <alerts>
+        <fullName>Incident_Reports_To_Review</fullName>
+        <description>Incident Reports To Review</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>GM_Programs_Services</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Incident_Reports_To_Review</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Awaiting_Approval_2</fullName>
+        <field>Status</field>
+        <literalValue>Awaiting Approval 2</literalValue>
+        <name>Awaiting Approval 2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CampaignEndDate</fullName>
+        <field>EndDate</field>
+        <formula>IF(
+NOT(ISBLANK(DATEVALUE( Event_End_Date__c) )),
+DATEVALUE(Event_End_Date__c ),
+NULL)</formula>
+        <name>CampaignEndDate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CampaignStartDate</fullName>
+        <field>StartDate</field>
+        <formula>IF(
+NOT(ISBLANK(DATEVALUE(Event_Start_Date__c))),
+DATEVALUE(Event_Start_Date__c),
+NULL
+)</formula>
+        <name>CampaignStartDate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Status_to_Awaiting_Approval_1</fullName>
+        <field>Status</field>
+        <literalValue>Awaiting Approval 1</literalValue>
+        <name>Change Status to Awaiting Approval 1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>End_date</fullName>
+        <field>EndDate</field>
+        <formula>DATEVALUE(Event_End_Date__c)</formula>
+        <name>End date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Make_Campaign_Inactive</fullName>
+        <field>IsActive</field>
+        <literalValue>0</literalValue>
+        <name>Make Campaign Inactive</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Start_date</fullName>
+        <field>StartDate</field>
+        <formula>DATEVALUE(Event_Start_Date__c)</formula>
+        <name>Start date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Cancelled</fullName>
+        <field>Status</field>
+        <literalValue>Cancelled</literalValue>
+        <name>Status: Cancelled</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>CompletedToInactive</fullName>
+        <actions>
+            <name>Make_Campaign_Inactive</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Campaign.Status</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.IsActive</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Mark Campaign&apos;s that have status completed to be inactive.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Incident Report Review</fullName>
+        <actions>
+            <name>Incident_Reports_To_Review</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <criteriaItems>
+            <field>Campaign.No_Of_Incidents_Reported__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.No_of_NIT__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Incident_Signoff_Date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update end date</fullName>
+        <actions>
+            <name>End_date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Campaign.Event_End_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.EndDate</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <description>Takes date value from the date/time field</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update start date</fullName>
+        <actions>
+            <name>CampaignEndDate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>CampaignStartDate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Campaign.Event_Start_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Event_End_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Takes date value from the date/time field</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

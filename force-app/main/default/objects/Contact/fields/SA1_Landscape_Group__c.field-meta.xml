@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SA1_Landscape_Group__c</fullName>
+    <description>DCA Enrichment</description>
+    <inlineHelpText>SA1 Classification: SA1s generally have a population of 200 to 800 persons, and an average population of about 400 persons. SA1s in remote and regional areas generally have smaller populations than those in urban areas.</inlineHelpText>
+    <label>SA1 Landscape Group</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Blue Collar Families</fullName>
+                <default>false</default>
+                <label>Blue Collar Families</label>
+            </value>
+            <value>
+                <fullName>City Seniors</fullName>
+                <default>false</default>
+                <label>City Seniors</label>
+            </value>
+            <value>
+                <fullName>Farming Heartland</fullName>
+                <default>false</default>
+                <label>Farming Heartland</label>
+            </value>
+            <value>
+                <fullName>Inner City Professionals</fullName>
+                <default>false</default>
+                <label>Inner City Professionals</label>
+            </value>
+            <value>
+                <fullName>New Arrivals</fullName>
+                <default>false</default>
+                <label>New Arrivals</label>
+            </value>
+            <value>
+                <fullName>Regional Centres</fullName>
+                <default>false</default>
+                <label>Regional Centres</label>
+            </value>
+            <value>
+                <fullName>Small Towns &amp; Beyond</fullName>
+                <default>false</default>
+                <label>Small Towns &amp; Beyond</label>
+            </value>
+            <value>
+                <fullName>Student Communities</fullName>
+                <default>false</default>
+                <label>Student Communities</label>
+            </value>
+            <value>
+                <fullName>Suburban Families</fullName>
+                <default>false</default>
+                <label>Suburban Families</label>
+            </value>
+            <value>
+                <fullName>Success Stories</fullName>
+                <default>false</default>
+                <label>Success Stories</label>
+            </value>
+            <value>
+                <fullName>Unknown - Commercial Address</fullName>
+                <default>false</default>
+                <label>Unknown - Commercial Address</label>
+            </value>
+            <value>
+                <fullName>Urban Change</fullName>
+                <default>false</default>
+                <label>Urban Change</label>
+            </value>
+            <value>
+                <fullName>Urban Survivors</fullName>
+                <default>false</default>
+                <label>Urban Survivors</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

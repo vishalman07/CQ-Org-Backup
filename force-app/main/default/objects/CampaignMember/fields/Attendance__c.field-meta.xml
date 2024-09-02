@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attendance__c</fullName>
+    <label>Attendance</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Invited</fullName>
+                <default>false</default>
+                <label>Invited</label>
+            </value>
+            <value>
+                <fullName>Request to Attend</fullName>
+                <default>false</default>
+                <label>Request to Attend</label>
+            </value>
+            <value>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+                <label>Accepted</label>
+            </value>
+            <value>
+                <fullName>Attended</fullName>
+                <default>false</default>
+                <label>Attended</label>
+            </value>
+            <value>
+                <fullName>Declined</fullName>
+                <default>false</default>
+                <label>Declined</label>
+            </value>
+            <value>
+                <fullName>Unsuccessful</fullName>
+                <default>false</default>
+                <label>Unsuccessful</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

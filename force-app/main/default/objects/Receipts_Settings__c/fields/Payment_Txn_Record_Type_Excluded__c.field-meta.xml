@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Txn_Record_Type_Excluded__c</fullName>
+    <description>Developer Name of Payment Txn Record Type to be excluded from search</description>
+    <inlineHelpText>Developer Name of Payment Txn Record Type to be excluded from search</inlineHelpText>
+    <label>Payment Txn Record Type Excluded</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

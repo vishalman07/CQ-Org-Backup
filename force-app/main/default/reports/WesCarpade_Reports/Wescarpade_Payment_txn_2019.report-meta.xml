@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign$Description</field>
+    </columns>
+    <columns>
+        <field>Campaign$Branch_Code__c</field>
+    </columns>
+    <columns>
+        <field>Campaign$Cost_Centre__c</field>
+    </columns>
+    <columns>
+        <field>Campaign$Account_No__c</field>
+    </columns>
+    <description>2019 wescarpade campaigns with Payment txn&apos;s. Filter applied is Parent Campaign</description>
+    <filter>
+        <criteriaItems>
+            <column>Campaign$Cost_Centre__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1360</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>startsWith</operator>
+            <value>wa1908 wescarpade,19wes,wa1902</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Wescarpade - Payment txn 2019</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Campaigns_with_Payment_txns__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Campaign$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_77107494</developerName>
+        <masterLabel>Family Type</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Account.Family_Type__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Patient</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Graduating Patient Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Bereaved Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Graduating Bereaved Family</sourceValue>
+            </sourceValues>
+            <value>CP</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Graduating Offspring Bereaved Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Offspring Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Offspring Bereaved Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Graduating Offspring Family</sourceValue>
+            </sourceValues>
+            <value>AP</value>
+        </values>
+    </buckets>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.npsp__Number_of_Household_Members__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.Family_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Patient,Bereaved Family,Offspring Family,Offspring Bereaved Family,Graduating Patient Family,Graduating Offspring Family,Graduating Bereaved Family,Graduating Offspring Bereaved Family</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_77107494</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Household Size</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

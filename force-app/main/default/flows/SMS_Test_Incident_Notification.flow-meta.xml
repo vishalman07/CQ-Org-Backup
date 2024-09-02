@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Incident_Alert</name>
+        <label>Incident Alert</label>
+        <locationX>656</locationX>
+        <locationY>371</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>New Incident Alert</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>IncidentAlertBody</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>IncidentAlertBody</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>SMS Test Incident Notification {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SMS Test Incident Notification</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>530</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Incident_Alert</targetReference>
+        </connector>
+        <object>IncidentNotification__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+    <textTemplates>
+        <name>IncidentAlertBody</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;At {!$Record.Incident__r.Incident_Date_Time__c} at {!$Record.Incident__r.Event_Program_Name__r.Name} {!$Record.Incident__r.Id} {!$Record.Incident__r.RecordType.DeveloperName} with a {!$Record.Incident__r.Severity__c} severity occured where {!$Record.Incident__r.Incident_description__c}. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;For further information access the incident {!$Record.Id}&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>

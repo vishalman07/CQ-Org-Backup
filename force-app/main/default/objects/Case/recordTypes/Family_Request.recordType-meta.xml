@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Family_Request</fullName>
+    <active>true</active>
+    <businessProcess>Case Support Process</businessProcess>
+    <label>Family Request</label>
+    <picklistValues>
+        <picklist>Impact__c</picklist>
+        <values>
+            <fullName>Family%2Fdonors%2Fvolunteers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal users only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Question about upcoming event%2Fexperience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request a call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request help using My Camp Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request primary school puppet show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Share some news with us</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Family Details</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Salesforce_Request_Type__c</picklist>
+        <values>
+            <fullName>Admin task</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Idea</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

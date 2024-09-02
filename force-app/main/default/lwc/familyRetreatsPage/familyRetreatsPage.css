@@ -1,0 +1,202 @@
+/* font */
+.font_orange{
+  font-family: Mr Orange;
+}
+
+.font_popinsLight{
+  font-family: Poppins Light;
+}
+
+.font_poppinsSemiBold{
+  font-family: Poppins SemiBold;
+}
+
+.header {
+    color: rgb(0, 31, 52);
+    /* font-weight: bolder; */
+    font-size: 3rem;
+    margin-bottom: 1vw;
+    padding-left: 8rem;
+    padding-top: 3rem;
+}
+.head{
+    /* margin-top: 12vw; */
+    background-color: #bfe4f3;
+}
+.headerImg {
+  height: 100px;
+  width:  100%;
+}
+
+.box-header{
+  background-color: rgb(0, 31, 52);
+  /* height: 10px; */
+  /* border-radius: 15px; */
+  margin-bottom: 1rem;
+  text-align: left;
+  padding: 5px;
+}
+
+.propName{
+  /* text-align: left; */
+  color: white;
+}
+
+.enquiryTextSize{
+  font-size: 1.17em;
+  margin-bottom: 3vw;
+}
+
+.custom-box{
+  width:70%;
+  margin:auto;
+  text-align: right;
+  margin-top: 1rem;
+  border: 1px solid #e5e5e5;
+  padding-bottom: 1rem;
+  border-radius: 15px; 
+}
+
+.innercustom-box{
+  margin-top: 1rem;
+  margin-left: 3rem;
+}
+
+.backBtn{
+  margin: auto;
+  width: 70%;
+}
+
+.innerCustomText{
+  text-align: left;
+  margin: 5px;
+}
+
+.value{
+  border-bottom: 1px solid #e5e5e5;
+  padding: 5px;
+
+}
+
+.custom-input{
+  margin-top: 3vh;
+
+}
+
+.form_btn {
+  width: fit-content;
+  height: 2.5rem;
+  border: 2px solid #001f34;
+  background-color: #001f34;
+  color: white;
+  border-radius: 4px;
+  font-size: 18px;
+  margin: 5px;
+}
+
+.custom_btn{
+  height: 2.5rem;
+  background-color: #001f34;
+  color: white;
+  border-radius: 2.5rem;
+  font-size: 18px;
+  margin: 10px;
+  border: none!important;
+  float: right;
+}
+
+.astrickColor{
+  color: #f37130;
+}
+
+.custom_width{
+  width:60%;
+  margin:auto;
+  padding-top: 1.5vw;
+}
+
+
+.form_input{
+  font-size: 1em;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  display: block;
+  min-width: 100%;
+  font-family: inherit;
+  height: 2.5em !important;
+  padding: 0 0.625em;
+  outline: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.form_inputdetails{
+  font-size: 1em;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  display: block;
+  min-width: 100%;
+  font-family: inherit;
+  padding: 0.625em;
+  outline: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.exampleHolder{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  height: 1110px;
+  width: 100%;
+  z-index: 30;
+}
+
+.alert{
+  color:#f37130;
+	display: block;
+	margin-top:5px;
+
+}
+
+@media(max-width:1059px){
+  .header{
+     padding-left: 1rem;
+    padding-top: 5rem;
+    font-size: 3rem;
+  }
+
+  .head{
+    margin-top: 14vh;
+  }
+
+  .custom_width {
+    padding: 4vh;
+    width: 100%;
+  }
+  
+}
+
+
+@media screen and (min-width: 1080px) and (max-width: 1024px){
+  .custom_width {
+    width: 80%;
+  }
+
+  .header {
+    font-size: 3rem;
+    text-align: left;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .innercustom-box{
+    margin-top: 0rem;
+    margin-left: 0rem;
+  }
+}

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>4010</fullName>
+        <default>false</default>
+        <label>4010 - Corporate Partners</label>
+    </customValue>
+    <customValue>
+        <fullName>4025</fullName>
+        <default>false</default>
+        <label>4025 - Grants</label>
+    </customValue>
+    <customValue>
+        <fullName>4028</fullName>
+        <default>false</default>
+        <label>4028 - Local Corporate Fundraising</label>
+    </customValue>
+    <customValue>
+        <fullName>4030</fullName>
+        <default>false</default>
+        <label>4030 - Unsolicited Gift</label>
+    </customValue>
+    <customValue>
+        <fullName>4040</fullName>
+        <default>false</default>
+        <label>4040 - Workplace Giving</label>
+    </customValue>
+    <customValue>
+        <fullName>4050</fullName>
+        <default>false</default>
+        <label>4050 - Foundation/Trust Donation</label>
+    </customValue>
+    <customValue>
+        <fullName>4070</fullName>
+        <default>false</default>
+        <label>4070 - Major Gift</label>
+    </customValue>
+    <customValue>
+        <fullName>4080</fullName>
+        <default>false</default>
+        <label>4080 - Single Gift</label>
+    </customValue>
+    <customValue>
+        <fullName>4090</fullName>
+        <default>false</default>
+        <label>4090 - Recurring Gifts</label>
+    </customValue>
+    <customValue>
+        <fullName>4100</fullName>
+        <default>false</default>
+        <label>4100 - Community Fundraising</label>
+    </customValue>
+    <customValue>
+        <fullName>4110</fullName>
+        <default>false</default>
+        <label>4110 - Registrations</label>
+    </customValue>
+    <customValue>
+        <fullName>4115</fullName>
+        <default>false</default>
+        <label>4115 - Merchandise</label>
+    </customValue>
+    <customValue>
+        <fullName>4120</fullName>
+        <default>false</default>
+        <label>4120 - Auction Revenue</label>
+    </customValue>
+    <customValue>
+        <fullName>4125</fullName>
+        <default>false</default>
+        <label>4125 - Raffle</label>
+    </customValue>
+    <customValue>
+        <fullName>4150</fullName>
+        <default>false</default>
+        <label>4150 - Support/Activity Group</label>
+    </customValue>
+    <customValue>
+        <fullName>4240</fullName>
+        <default>false</default>
+        <label>4240 - Marketing Income</label>
+    </customValue>
+    <customValue>
+        <fullName>4300</fullName>
+        <default>false</default>
+        <label>4300 - Bequest</label>
+    </customValue>
+    <customValue>
+        <fullName>4340 - Other Income</fullName>
+        <default>false</default>
+        <label>4340 - Other Income</label>
+    </customValue>
+    <customValue>
+        <fullName>4520</fullName>
+        <default>false</default>
+        <label>4520 - Membership Dues</label>
+    </customValue>
+    <customValue>
+        <fullName>4998</fullName>
+        <default>false</default>
+        <label>4998 - In Kind Donation</label>
+    </customValue>
+    <customValue>
+        <fullName>4129</fullName>
+        <default>false</default>
+        <label>4129 – Ticket Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>4130 - Event Income</fullName>
+        <default>false</default>
+        <label>4130 - Event Income</label>
+    </customValue>
+    <customValue>
+        <fullName>4130</fullName>
+        <default>false</default>
+        <label>4130 - Event Income</label>
+    </customValue>
+    <customValue>
+        <fullName>No GL Allocated</fullName>
+        <default>true</default>
+        <label>No GL Allocated</label>
+    </customValue>
+    <customValue>
+        <fullName>1910 - Community Fundraising</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1910 - Community Fundraising</label>
+    </customValue>
+    <customValue>
+        <fullName>4115 - Merchandise</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4115 - Merchandise</label>
+    </customValue>
+    <customValue>
+        <fullName>4240 - Marketing Income</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4240 - Marketing Income</label>
+    </customValue>
+    <customValue>
+        <fullName>4080 - Single Gift</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4080 - Single Gift</label>
+    </customValue>
+    <customValue>
+        <fullName>4125 - Raffle</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4125 - Raffle</label>
+    </customValue>
+    <customValue>
+        <fullName>4090 - Recurring Gifts</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4090 - Recurring Gifts</label>
+    </customValue>
+    <customValue>
+        <fullName>Local Corporate Fundraising</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Local Corporate Fundraising</label>
+    </customValue>
+    <customValue>
+        <fullName>4050 - Foundation/Trust Donation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4050 - Foundation/Trust Donation</label>
+    </customValue>
+    <customValue>
+        <fullName>4070 - Major Gift</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4070 - Major Gift</label>
+    </customValue>
+    <customValue>
+        <fullName>4025 - Grants</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4025 - Grants</label>
+    </customValue>
+    <customValue>
+        <fullName>4150 - Support/Activity Group</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4150 - Support/Activity Group</label>
+    </customValue>
+    <customValue>
+        <fullName>4010 - Corporate Partners</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4010 - Corporate Partners</label>
+    </customValue>
+    <customValue>
+        <fullName>4028 - Local Corporate Fundraising</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4028 - Local Corporate Fundraising</label>
+    </customValue>
+    <customValue>
+        <fullName>4100 - Community Fundraising</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4100 - Community Fundraising</label>
+    </customValue>
+    <customValue>
+        <fullName>94130 - Event Income</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>94130 - Event Income</label>
+    </customValue>
+    <customValue>
+        <fullName>4130x</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4130x</label>
+    </customValue>
+    <customValue>
+        <fullName>4540</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4540</label>
+    </customValue>
+    <customValue>
+        <fullName>4470</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4470</label>
+    </customValue>
+    <customValue>
+        <fullName>4460</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4460</label>
+    </customValue>
+    <customValue>
+        <fullName>4450</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4450</label>
+    </customValue>
+    <customValue>
+        <fullName>4440</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4440</label>
+    </customValue>
+    <customValue>
+        <fullName>4420</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4420</label>
+    </customValue>
+    <customValue>
+        <fullName>4400</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4400</label>
+    </customValue>
+    <customValue>
+        <fullName>4340</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4340</label>
+    </customValue>
+    <customValue>
+        <fullName>4060</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4060</label>
+    </customValue>
+    <customValue>
+        <fullName>4250</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4250</label>
+    </customValue>
+    <masterLabel>GL Codes</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

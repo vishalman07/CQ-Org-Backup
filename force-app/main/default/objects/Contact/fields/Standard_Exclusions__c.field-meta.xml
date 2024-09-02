@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard_Exclusions__c</fullName>
+    <description>Do not contact
+Do not email, sms, phone as relevant
+Deceased
+Overseas
+Under 18 yo
+Over 75 yo
+Managed contacts (sent for approvals)</description>
+    <formula>OR (
+
+	npsp__Do_Not_Contact__c=True,
+        npsp__Deceased__c=True,
+
+MailingCountry != &quot;Australia&quot;,
+MailingCountry != &quot;&quot;,
+MailingCountry != &quot;Aus&quot;,
+
+Age__c&gt;18, Age__c &lt;75, NOT(ISBLANK(Age__c)),
+	Under_Relationship_Management__c=True
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Standard Exclusions</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Value_Created_Date__c</fullName>
+    <description>Gives the date value only of the campaign member record created date. Used for Pardot segmentation</description>
+    <formula>DATEVALUE(CreatedDate)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Gives the date value only of the campaign member record created date</inlineHelpText>
+    <label>Date Value: Created Date</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

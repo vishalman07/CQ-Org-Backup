@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Leads_Family_Intake_For</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>For Puppeteers in hospital doing intake forms on tablets</description>
+        <label>Leads - Family Intake For,</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Primary_School_Program_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Family Application</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

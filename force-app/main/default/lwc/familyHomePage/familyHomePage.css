@@ -1,0 +1,127 @@
+/* @font-face {
+  font-family: "Poppins Light";
+  src: url('/resource/CampQualityFonts/Poppins-Light.ttf') format('TrueType');
+}
+@font-face {
+  font-family: "Poppins SemiBold";
+  src: url('/resource/CampQualityFonts/Poppins-SemiBold.ttf') format('TrueType');
+}
+@font-face {
+  font-family: "Mr Orange";
+  src: url('/resource/CampQualityFonts/MrOrange.otf') format('OpenType');
+} */
+
+
+
+.font_orange{
+font-family: Mr Orange;
+}
+
+.font_popinsLight{
+font-family: Poppins Light;
+}
+
+.font_poppinsSemiBold{
+font-family: Poppins SemiBold;
+}
+
+
+.headerImg {
+  height: 100px;
+  width:  100%;
+}
+
+.homeDiv{
+  background-color: #fcdbcb;
+  /* margin-top: 13vw; */
+  padding-top: 3rem;
+}
+
+.home{   
+  font-weight: inherit;
+  font-size: 3em;
+  margin-bottom: 1vw;
+  margin-left: 8rem;
+}
+
+.contact-margin{
+margin-left: 19vw;
+padding-left: 5vh;
+}
+
+.custom_padding{
+  max-width: 57rem;
+  margin-top: 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1059px) {
+  .navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+    font-size: 3.9rem;
+  }
+  iframe{
+    width: 100%;
+  }
+  .dropdown {
+    display: inline-block;
+}
+.navigation{
+  display: none;
+}
+
+ .home{
+    margin-bottom: 1vw;
+    margin-left: 2vw;
+    /* padding-left: 1rem; */
+    /* margin-left: 2rem; */
+}
+.homeDiv{
+  margin-top: 1rem;
+  padding-top: 5rem;
+} 
+
+.custom_padding{
+  margin-top: 20px;
+}
+
+
+.position-content{
+   /* margin-left: 0px; */
+    margin-top: 25%; 
+   /* margin-left:0px; */
+    /* margin-right: 46vh; */
+
+}
+.contact-margin{
+  margin-left:0px;
+  padding: 2vw;
+}
+
+.video {
+    /* width: fit-content; */
+    margin: auto;
+    width: auto;
+}
+}
+
+
+
+ @media screen and (min-width: 1060px) and (max-width: 1245px) {
+  
+  /* .position-content{
+  
+   margin-top: 10%;
+   margin-left: 0;
+ 
+
+}  */
+
+.contact-margin{
+  margin-left: 0;
+  padding-left: 5vh;
+} 
+
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remoteness_Indicator__c</fullName>
+    <inlineHelpText>ABS 2014 Remoteness Indicator used to classify geographical need of family.</inlineHelpText>
+    <label>Remoteness Indicator</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Remoteness_Indicators</valueSetName>
+    </valueSet>
+</CustomField>

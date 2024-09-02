@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>START_DATE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>LAST_YEAR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Family_Attendance__c.FA_00000__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Attended</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Event_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Family Camp,Family Experience,Family Fun Day,Family Respite,Fundraising Event,Hospital Program,Junior Camp,Middle Camp,Mini Camp,Volunteer Recognition Event,Volunteer Training Days,Multi Age Group Camp,Cancelled,Office Volunteering,Family Playgroup,Family Dinner/Pizza Night,Pilot - Age Camp Meet the Family,Volunteer Leadership Induction,Volunteer Oranges,Volunteer Other Induction/Training,Puppet Tour,Grad Camp,Virtual Camp,Fundraising/Corporate</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Account.Family_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Offspring Family,Offspring Bereaved Family,Graduating Offspring Family,Graduating Offspring Bereaved Family,Former Offspring Family,Former Offspring Bereaved Family</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign.Event_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_$Account.Family_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>2021 KICC Family Attendance</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignCustomEntity$Family_Attendance__c@Family_Attendance__c.Family__c</reportType>
+    <scope>orgAll</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+</Report>

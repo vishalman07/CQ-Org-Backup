@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Family_Fun_Day_Prioirty__c</fullName>
+    <externalId>false</externalId>
+    <formula>if ( Today() - Diagnosis_Date__c &gt;= 365, if(isblank(Last_Engagement_Date__c), 400, if(Today() - Last_Engagement_Date__c &gt;= 1095, 200,0)),0 ) +
+if (  ISNULL(Family_Fun_Day__c ),0, if (Today() - Family_Fun_Day__c &lt;= 365, -200, if(today() - Family_Fun_Day__c &lt;= 1095, -100, 0)))
++ Priority__c</formula>
+    <label>Family Fun Day Priority</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

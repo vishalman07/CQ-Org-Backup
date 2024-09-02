@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Donor_Caseload_Status__c</fullName>
+    <inlineHelpText>Used for tracking the current case load status of philanthropy/major donor records.  Please note that just because someone is removed from the pool it does not mean that they can be treated as a regular donor.</inlineHelpText>
+    <label>Donor Caseload Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Unqualified</fullName>
+                <default>false</default>
+                <label>Unqualified</label>
+            </value>
+            <value>
+                <fullName>Qualified</fullName>
+                <default>false</default>
+                <label>Qualified</label>
+            </value>
+            <value>
+                <fullName>Removed</fullName>
+                <default>false</default>
+                <label>Removed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VA_Compact</fullName>
+    <fields>Name</fields>
+    <fields>Volunteer__c</fields>
+    <fields>Participation_Role__c</fields>
+    <fields>Event__c</fields>
+    <label>VA Compact</label>
+</CompactLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_has_been_reconciled</fullName>
+    <active>true</active>
+    <description>Prevents changes to payments that have been reconciled by finance by anyone other than finance or admins</description>
+    <errorConditionFormula>AND(
+NOT(OR( $Profile.Name = &quot;System Administrator&quot;,  $Profile.Name = &quot;Finance&quot;)),
+ Loaded_to_Nav__c = TRUE)</errorConditionFormula>
+    <errorMessage>This payment has been reconciled and can only be adjusted by the finance team</errorMessage>
+</ValidationRule>

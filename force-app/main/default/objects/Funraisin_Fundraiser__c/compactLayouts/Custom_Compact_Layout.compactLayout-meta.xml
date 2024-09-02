@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>Member_member_id__c</fields>
+    <fields>Member_charity_id__c</fields>
+    <fields>Member_member_hash__c</fields>
+    <fields>Member_related_member_id__c</fields>
+    <fields>Member_m_rego_number__c</fields>
+    <fields>Member_m_fname__c</fields>
+    <fields>Member_m_lname__c</fields>
+    <fields>Member_m_email__c</fields>
+    <fields>Member_m_username__c</fields>
+    <label>Custom Compact Layout</label>
+</CompactLayout>

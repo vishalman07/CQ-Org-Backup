@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.npsp__Number_of_Household_Members__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Children_under_13__c</field>
+    </columns>
+    <description>Report created for Julie Redfern/Deb to show number of families both KICC and Patient in Illawarra (of ILLA Local, ILLA Shoalhaven, ILLA Southern Highlands and ILLA Far South Coast)</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Family_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Patient,Restricted Family,Bereaved Family,Offspring Family,Offspring Bereaved Family</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Branch_Office__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>SNSW</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Regionv2__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>ILLA - Far South Coast,ILLA - Local,ILLA - Out of Area,ILLA - Shoalhaven,ILLA - Southern Highlands</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Family_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Regionv2__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SNSW Families ILLA Regions</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

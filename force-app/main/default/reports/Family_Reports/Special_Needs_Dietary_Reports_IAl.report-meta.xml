@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$FirstName</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$LastName</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts.Special_Needs__r$Long_Description__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts.Special_Needs__r$Comments__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts.Special_Needs__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Contacts$Age__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$Family_Member_Type__c</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Event_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>WA2305 KICC Middle</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FA_00000__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Accepted</value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>Account$Id</primaryTableColumn>
+        <relatedTable>Family_Attendance__c</relatedTable>
+        <relatedTableJoinColumn>Family__c</relatedTableJoinColumn>
+    </crossFilters>
+    <description>Families attending a specific campaign with attendances and their special needs and dietary information.</description>
+    <format>Tabular</format>
+    <name>Special Needs &amp; Dietary Reports</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Special__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

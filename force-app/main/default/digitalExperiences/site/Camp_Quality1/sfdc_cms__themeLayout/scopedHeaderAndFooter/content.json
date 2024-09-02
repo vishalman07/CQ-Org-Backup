@@ -1,0 +1,72 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Scoped Header and Footer",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : {
+              "isVisible" : false,
+              "margin" : {
+                "bottom" : "",
+                "left" : "",
+                "right" : "",
+                "top" : ""
+              }
+            },
+            "sectionConfig" : "{\"UUID\":\"f1de6c62-422c-476c-a081-4614f0b4dde0\",\"columns\":[{\"UUID\":\"4867b96e-8c5f-4a48-8d7c-20656523cc96\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "4867b96e-8c5f-4a48-8d7c-20656523cc96",
+            "name" : "headerSection",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "f1de6c62-422c-476c-a081-4614f0b4dde0",
+          "type" : "component"
+        } ],
+        "id" : "ab241838-0ac9-401c-948c-86fc86e2327c",
+        "name" : "header",
+        "title" : "Theme Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : {
+              "isVisible" : false
+            },
+            "sectionConfig" : "{\"UUID\":\"559bd70c-b01a-4fb0-87b1-025bf92aba6c\",\"columns\":[{\"UUID\":\"f9debe89-3361-4d3b-b728-e67a8f682422\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "f9debe89-3361-4d3b-b728-e67a8f682422",
+            "name" : "footerSection",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "559bd70c-b01a-4fb0-87b1-025bf92aba6c",
+          "scopedBrandingSetId" : "Color",
+          "type" : "component"
+        } ],
+        "id" : "ad93e49d-1616-44e2-aacb-990c6d7b4a2f",
+        "name" : "footer",
+        "title" : "Theme Footer",
+        "type" : "region"
+      }, {
+        "id" : "263eff8a-044c-499e-982e-e0c62e621bdb",
+        "name" : "default",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:simpleThemeLayout",
+      "id" : "fde44ded-d1f6-47d4-baec-040f74146c83",
+      "type" : "component"
+    }
+  }
+}

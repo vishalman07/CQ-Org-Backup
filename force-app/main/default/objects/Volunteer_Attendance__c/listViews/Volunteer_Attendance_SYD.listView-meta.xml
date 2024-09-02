@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer_Attendance_SYD</fullName>
+    <columns>NAME</columns>
+    <columns>Event__c</columns>
+    <columns>Volunteer__c</columns>
+    <columns>Participation_Role__c</columns>
+    <columns>IsCompanion__c</columns>
+    <columns>Transport_Pick_Up_Location__c</columns>
+    <columns>Transport_Pick_Up_Time__c</columns>
+    <columns>Transport_Drop_Off_Location__c</columns>
+    <columns>Transport_Drop_Off_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Attendance__c</field>
+        <operation>equals</operation>
+        <value>Request to Attend</value>
+    </filters>
+    <filters>
+        <field>Event__c</field>
+        <operation>equals</operation>
+        <value>NNSW2207 KICC Combo</value>
+    </filters>
+    <label>Volunteer Attendance SYD</label>
+</ListView>

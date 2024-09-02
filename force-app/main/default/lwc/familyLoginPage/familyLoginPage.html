@@ -1,0 +1,320 @@
+<template>
+    <div>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JTK2JC" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </div>
+
+    <div if:true={waitForRes} class="exampleHolder">
+        <lightning-spinner alternative-text="Loading" variant="brand" size="large"></lightning-spinner>
+    </div>
+
+    
+    <div if:false={showContactUsPage}>
+        <div class="slds-form" style="display: block; margin: auto; text-align: center; border: none;">
+            <span if:true={visibleBackBtn} class="backBtn font_popinsLight"><a onclick={backBtn}>&lt; Back to Login</a></span>
+            <span class="logoAdjust"> <a href=""><img src= {campQualityLogo}></a></span>
+        </div>
+
+
+        <div class="slds-form" role="list">
+            <div class="slds-box  form">
+                <div class="slds-form__row">
+                    <div class="slds-form__item " role="listitem">
+                        <div class="">
+                            <!-- <span><a onclick={backBtn}>Back to Login</a></span> -->
+                            <h1 class="header font_orange"><span class="headerTittle">FAMILY PORTAL</span></h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div if:false={showLoginPage}>
+                    <div class="slds-form-row">
+                        <div class="slds-form__item" role="listitem">
+                            <div
+                                class="slds-form-element slds-form-element_horizontal  slds-is-editing label-left font_popinsLight">
+                                <label class="slds-form-element__label" for="horizontal-form-element-id-01">
+                                    <abbr class="slds-required" title="required">* </abbr>Email Address
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <input type="email" id="horizontal-form-element-id-01" class="slds-input"
+                                        value={userEmail} onchange={handleInputEmail} onfocusout={usernameHandler} />
+                                </div>
+                                <div class="slds-form-element__help" id="horizontal-form-element-error-id-01">
+                                    <span if:true={uservalid}
+                                        class="alert slds-form__item font_popinsLight astrickColor" role="listitem"
+                                        style="color: #f37130;">Email address is not valid, please try again.</span>
+                                </div>
+                                <div class="slds-form-element__help" id="horizontal-form-element-error-id-02">
+                                    <span if:true={errorInloginUserByOtp}
+                                        class="alert slds-form__item font_popinsLight astrickColor " role="listitem"
+                                        style="color: #f37130;">Email address is not valid, please try again.</span>
+                                </div>
+
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+
+                <div if:true={showEmailPage}>
+                    <div class="slds-form-row">
+                        <div class="slds-form__item" role="listitem">
+                            <h1 class="verifyText">Enter the one-time 6 digit code sent to your email:</h1>
+                        </div>
+                    </div>
+
+                    <div class="slds-form-row">
+                        <div class="slds-form__item" role="listitem">
+                            <div
+                                class="slds-form-element slds-form-element_horizontal  slds-is-editing label-left font_popinsLight">
+                                <label class="slds-form-element__label" for="horizontal-form-element-id-01">
+                                    <abbr class="slds-required" title="required">* </abbr>Code</label>
+                                <div class="slds-form-element__control">
+                                    <input type="text" inputmode="numeric" id="horizontal-form-element-id-02" class="slds-input"
+                                        onchange={handleOtp} />
+                                </div>
+                                <div class="slds-form-element__help" id="horizontal-form-element-error-id-04">
+                                    <span if:true={incorrectOtp}
+                                        class="alert slds-form__item font_popinsLight astrickColor " role="listitem"
+                                        style="color: #f37130;"><span class="astrickColor">Code entered is
+                                            incorrect.</span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slds-form__item" role="listitem">
+                            <a onclick={handleResendOtp}>Resend Code</a>
+                            <div class="">
+                                <button value="Next" class="slds-button slds-button_brand form_btn nextBtn"
+                                    onclick={emailNext}>Next</button>
+                            </div>
+                        </div>
+
+                        <div if:true={resendCode} class="slds-form__item" role="listitem">
+                            Code successfully sent.
+                        </div>
+
+                        <div class="slds-form-row">
+                            <div class="slds-form__item slds-formClass" role="listitem">
+                                <div class="styleForSentence">
+                                    If you haven't received the code, check your junk
+                                    mail folder or get in touch with us&nbsp; <a
+                                        onclick={handleLinkToContactus}>here</a>
+                                </div>
+                                <!-- <div class="styleForSentence">
+                                    If you haven't received the code, check your junk
+                                    mail folder or get in touch with us&nbsp;<a
+                                        href="https://form.jotform.com/240728386974067" target="_self">here</a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div if:true={showRadioBtnScreen}>
+                    <div class="slds-form-row">                       
+                        <div>
+                            <lightning-radio-group name="radioGroup" class="radioBtnCls"
+                                label="To Login, get one time 6 digit code via email or SMS" options={options}
+                                value={radioValue} onchange={handleRadioChange} required type="radio">
+                            </lightning-radio-group>
+                        </div>
+
+                        <div class="slds-form__item" role="listitem">
+                            <div class="">
+                                <button value="Next" class="slds-button slds-button_brand form_btn nextBtn"
+                                    onclick={mobileNext}>Next</button>
+                            </div>
+                        </div>
+
+                        <div if:true={resendCode} class="slds-form__item" role="listitem">
+                            Code successfully sent.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div if:true={showMobilePage}>
+                    <div class="slds-form-row">
+                        <div class="slds-form__item" role="listitem">
+                            <h1 class="verifyText">Enter the one-time 6 digit code sent to your Mobile:</h1>
+                        </div>
+                    </div>
+
+                    <div class="slds-form-row">
+                        <div class="slds-form__item" role="listitem">
+                            <div
+                                class="slds-form-element slds-form-element_horizontal  slds-is-editing label-left font_popinsLight">
+                                <label class="slds-form-element__label" for="horizontal-form-element-id-01">
+                                    <abbr class="slds-required" title="required">* </abbr>Code</label>
+                                <div class="slds-form-element__control">
+                                    <input type="text" inputmode="numeric" autocomplete="one-time-code" id="horizontal-form-element-id-03" class="slds-input"
+                                        onchange={handleOtp} />
+                                </div>
+                                <div class="slds-form-element__help" id="horizontal-form-element-error-id-03">
+                                    <span if:true={incorrectOtp}
+                                        class="alert slds-form__item font_popinsLight astrickColor " role="listitem"
+                                        style="color: #f37130;"><span class="astrickColor">Code entered is
+                                            incorrect.</span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slds-form__item" role="listitem">
+                            <a onclick={handleResendOtp}>Resend Code</a>
+                            <div class="">
+                                <button value="Next" class="slds-button slds-button_brand form_btn nextBtn"
+                                    onclick={mobileLastScreenPage}>Next</button>
+                            </div>
+                        </div>
+
+                        <div if:true={resendCode} class="slds-form__item" role="listitem">
+                            Code successfully sent.
+                        </div>
+
+                        <div class="slds-form-row">
+                            <div class="slds-form__item slds-formClass" role="listitem">
+                                <div class="styleForSentence">
+                                    If you haven't received the code, get in touch with us&nbsp;
+                                    <a href="https://form.asana.com/?k=yS5nhbeDW08ZTt8rjzfA4Q&d=112573413508138">here </a>
+                                    <!-- <a onclick={handleLinkToContactus}>here</a>  -->
+                                    or login with your email address <a
+                                        href="/family/"
+                                        target="_self">here.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div if:false={showLoginPage}>
+                    <div class="slds-form__row ">
+                        <div class="slds-form__item slds-formClass" role="listitem">
+                            <div>
+                                <button value="Login" class="slds-button slds-button_brand form_btn loginBtn"
+                                    onclick={loginClick}>Login</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="slds-form-row">
+                        <div class="slds-form__item slds-formClass" role="listitem">
+                            <div class="styleForSentence">
+                              
+                        If you're a volunteer, login to the portal&nbsp;
+                                <a href="/volunteer/login">here</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div if:true={showContactUsPage}>	
+        <div class='slds-col logoSizing '>
+            <img src= {campQualityLogo} >
+        </div>	
+        <div class = "head">
+            <div class="header2 font_orange">
+                <h1>Contact Us</h1>
+            </div>
+            <img src={headerPurpalImg} class="headerImg" style="width:100%">
+        </div>
+        <div class=" slds-form custom_width">
+            <div class="slds-form__row">
+                <div class="slds-form__item" role="listitem">
+                    <div class="slds-form-element slds-form-element_horizontal slds-size_1-of-1 slds-medium-size_12-of-12 font_popinsLight">
+                        <div class="phonenumber">
+                            <p class="phonenum"><strong><b>Is your query is related to an upcoming event? To ensure we can respond to you in time please contact us on <a href="tel:+ 1300 662 267">1300 662 267</a> or email the Family Program Coordinator directly.</b></strong></p>
+                            <p class="phonenumMsg"> <br>Or send us a general message via the form below: </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="slds-form__row" >
+                <div class="slds-form__item" role="listitem">
+                <div class="slds-box slds-form-element  slds-size_1-of-1 slds-medium-size_12-of-12 font_popinsLight">
+                    <div class="custom-input">
+                        <label class="subject slds-form-element__label font_poppinsSemiBold" for="First Name"><abbr class="astrickColor">*</abbr>FirstName</label>
+                        <div class="subject slds-form-element__control">
+                            <input type = "text"  name="First Name" class="slds-input form_input" 
+                                onchange={firstNameHandler} value={firstname}></input>
+                        </div>
+                        <span if:true={checkReqFName} class="alert" style="color: red">Please enter the FirstName.</span>
+                    </div>
+
+                    <div class="custom-input">
+                        <label class="subject slds-form-element__label font_poppinsSemiBold" for="Last Name "><abbr class="astrickColor">*</abbr>LastName</label>
+                        <div class="subject slds-form-element__control">
+                            <input type = "text"  name="Last Name" class="slds-input form_input" 
+                                onchange={lastNameHandler} value={lastname}></input>
+                        </div>
+                        <span if:true={checkReqLName} class="alert" style="color:#f37130">Please enter the LastName.</span>
+                    </div>
+
+                    <div class="custom-input">
+                        <label class="subject slds-form-element__label font_poppinsSemiBold" for="Email"><abbr class="astrickColor">*</abbr>Email</label>
+                        <div class="subject slds-form-element__control">
+                            <input type = "text"  name="Email" class="slds-input form_input" 
+                                onchange={emailHandler} value={email}></input>
+                        </div>
+                        <span if:true={checkReqEmail} class="alert" style="color:#f37130">Please enter the Email.</span>
+                    </div>
+                    <div class="custom-input">
+                        <label class="reason slds-form-element__label font_poppinsSemiBold" for="reason"><abbr class="astrickColor">*</abbr>Reason</label>
+                        <div class="slds-form-element__control">
+                            <select id="reason" name="reason" class="slds-select form_input" onchange={reasonHandler} value = {reason}>
+                                <option value="--None--">None</option>
+                                <option value="Request a call">Request a call</option>
+                                <option value="Request help using My Camp Quality">Request help using My Camp Quality</option>
+                                <option value="Request help using My Camp Quality">Request primary school puppet show</option>
+                                <option value="Question about upcoming event/experience">Question about upcoming event/experience</option>
+                                <option value="Share some news with us">Share some news with us</option>
+                                <option value="Update Family Details">Update Family Details</option>
+                            </select>
+                        </div>
+                        <span if:true={checkReqReason} class="alert">Please select the reason.</span>
+                    </div>
+                    <div class="custom-input">
+                        <label class="subject slds-form-element__label font_poppinsSemiBold" for="subject"><abbr class="astrickColor">*</abbr>Subject</label>
+                        <div class="subject slds-form-element__control">
+                            <input type = "text" id="subject" name="subject" class="slds-input form_input" 
+                                onchange={subjectHandler} value={subject}></input>
+                        </div>
+                        <span if:true={checkReqSub} class="alert">Please enter the subject.</span>
+                    </div>
+                    <div class="custom-input">
+                        <label class="details input slds-form-element__label font_poppinsSemiBold" for="details"><abbr class="astrickColor">*</abbr>Details</label>
+                        <div class="detailsl slds-form-element__control">
+                            <textarea id="details" name="details" class="slds-textarea form_inputdetails" rows="3" cols="50"
+                                onchange={detailsHandler} value= {details}></textarea>
+                        </div>
+                        <span if:true={checkReqdetail} class="alert">Please enter the details.</span>
+                    </div>
+                    
+                    <div class="slds-size_1-of-1 slds-medium-size_12-of-12 custom_inline font_poppinsSemiBold">
+                        <button class="slds-button slds-button_neutral form_btn "
+                            onclick={submitHandler}>Submit Enquiry</button>   
+                            
+                        <button value="Next" class="slds-button slds-button_brand form_btn contactusBtn"
+                        onclick={backTologinPg}>Back</button>    
+                    </div>
+
+                    <!-- <div class="slds-size_1-of-1 slds-medium-size_6-of-12 custom_inline font_poppinsSemiBold">
+                        <button value="Next" class="slds-button slds-button_brand form_btn nextBtn"
+                        onclick={backTologinPg}>Back</button>    
+                    </div>  -->
+                </div>
+                </div>
+            </div>        
+        </div>
+    </div>
+    <c-site-footer> </c-site-footer>
+</template>

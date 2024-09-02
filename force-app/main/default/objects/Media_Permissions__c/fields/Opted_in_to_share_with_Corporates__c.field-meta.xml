@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opted_in_to_share_with_Corporates__c</fullName>
+    <description>Shows whether an individual has opted in for corporate partners to share media or images of them.</description>
+    <inlineHelpText>Shows whether an individual has opted in for corporate partners to share media or images of them.</inlineHelpText>
+    <label>Opted-in to share with Corporates</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Yes_No_Field</valueSetName>
+    </valueSet>
+</CustomField>

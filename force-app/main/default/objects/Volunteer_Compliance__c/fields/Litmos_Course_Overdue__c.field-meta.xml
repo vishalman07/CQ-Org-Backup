@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Litmos_Course_Overdue__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Checks against Litmos Due Date</inlineHelpText>
+    <label>Litmos Course Overdue</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

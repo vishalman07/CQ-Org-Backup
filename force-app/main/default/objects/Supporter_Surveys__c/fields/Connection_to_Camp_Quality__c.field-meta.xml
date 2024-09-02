@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Connection_to_Camp_Quality__c</fullName>
+    <label>01. Connection to Camp Quality</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I have seen the impact of cancer firsthand.</fullName>
+                <default>false</default>
+                <label>a. I have seen the impact of cancer firsthand.</label>
+            </value>
+            <value>
+                <fullName>My family was helped by Camp Quality, and I want to give back.</fullName>
+                <default>false</default>
+                <label>b. My family was helped by Camp Quality, and I want to give back.</label>
+            </value>
+            <value>
+                <fullName>I know someone who has benefited from Camp Quality’s work.</fullName>
+                <default>false</default>
+                <label>c. I know someone who has benefited from Camp Quality’s work.</label>
+            </value>
+            <value>
+                <fullName>A child that I know, or know of, has been diagnosed with cancer.</fullName>
+                <default>false</default>
+                <label>d. A child that I know, or know of, has been diagnosed with cancer.</label>
+            </value>
+            <value>
+                <fullName>I have been a Camp Quality volunteer and witnessed how wonderful this work is.</fullName>
+                <default>false</default>
+                <label>e. I have been a Camp Quality volunteer and witnessed how wonderful this work is.</label>
+            </value>
+            <value>
+                <fullName>During my working life I’ve dealt with children and/or cancer.</fullName>
+                <default>false</default>
+                <label>f. During my working life I’ve dealt with children and/or cancer.</label>
+            </value>
+            <value>
+                <fullName>I simply want to help children facing cancer and their families.</fullName>
+                <default>false</default>
+                <label>g. I simply want to help children facing cancer and their families.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

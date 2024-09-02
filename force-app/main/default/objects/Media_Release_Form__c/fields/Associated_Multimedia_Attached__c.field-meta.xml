@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Associated_Multimedia_Attached__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Please ensure you upload the photo/video associated with this permission form.</inlineHelpText>
+    <label>Associated Multimedia Attached</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

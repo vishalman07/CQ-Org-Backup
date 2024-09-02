@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>PuppetShow__c</entityName>
+    <fieldName>Show_Status__c</fieldName>
+    <masterLabel>Puppet Show</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Show_Date__c</fieldNames>
+        <fieldNames>Show_Notes__c</fieldNames>
+        <picklistValueName>Booked</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Show_Type__c</fieldNames>
+        <fieldNames>Venue__c</fieldNames>
+        <fieldNames>Venue_Suburb__c</fieldNames>
+        <fieldNames>Show_Date__c</fieldNames>
+        <fieldNames>Booking_Request_Notes__c</fieldNames>
+        <picklistValueName>In Progress</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Child_Requesting_Show__c</fieldNames>
+        <fieldNames>Booking_Request_Notes__c</fieldNames>
+        <picklistValueName>Requested</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

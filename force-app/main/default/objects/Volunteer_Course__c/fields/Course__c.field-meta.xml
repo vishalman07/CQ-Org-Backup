@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Course__c</fullName>
+    <label>Course</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACF Refresh</fullName>
+                <default>false</default>
+                <label>ACF Refresh</label>
+            </value>
+            <value>
+                <fullName>ACF Safeguarding Children</fullName>
+                <default>false</default>
+                <label>ACF Safeguarding Children</label>
+            </value>
+            <value>
+                <fullName>A day in the life of an employee</fullName>
+                <default>false</default>
+                <label>A day in the life of an employee</label>
+            </value>
+            <value>
+                <fullName>Being a fundraising Vollie</fullName>
+                <default>false</default>
+                <label>Being a fundraising Vollie</label>
+            </value>
+            <value>
+                <fullName>Being a Rec Vollie</fullName>
+                <default>false</default>
+                <label>Being a Rec Vollie</label>
+            </value>
+            <value>
+                <fullName>Camp Leader Induction</fullName>
+                <default>false</default>
+                <label>Camp Leader Induction</label>
+            </value>
+            <value>
+                <fullName>Camp Quality Orientation</fullName>
+                <default>false</default>
+                <label>Camp Quality Orientation</label>
+            </value>
+            <value>
+                <fullName>Child Protection Briefing</fullName>
+                <default>false</default>
+                <label>Child Protection Briefing</label>
+            </value>
+            <value>
+                <fullName>Compliance Essentials Work Health and Safety</fullName>
+                <default>false</default>
+                <label>Compliance Essentials Work Health and Safety</label>
+            </value>
+            <value>
+                <fullName>Culture Tools</fullName>
+                <default>false</default>
+                <label>Culture Tools</label>
+            </value>
+            <value>
+                <fullName>Engaging our Volunteers</fullName>
+                <default>false</default>
+                <label>Engaging our Volunteers</label>
+            </value>
+            <value>
+                <fullName>First Aid and Medical Management</fullName>
+                <default>false</default>
+                <label>First Aid and Medical Management</label>
+            </value>
+            <value>
+                <fullName>Fundraising 101</fullName>
+                <default>false</default>
+                <label>Fundraising 101</label>
+            </value>
+            <value>
+                <fullName>LB16: Helping you on your Fundraising Adventure</fullName>
+                <default>false</default>
+                <label>LB16: Helping you on your Fundraising Adventure</label>
+            </value>
+            <value>
+                <fullName>LB21: Helping you on your Recreation Adventure</fullName>
+                <default>false</default>
+                <label>LB21: Helping you on your Recreation Adventure</label>
+            </value>
+            <value>
+                <fullName>LB8: Helping you on your employee adventure</fullName>
+                <default>false</default>
+                <label>LB8: Helping you on your employee adventure</label>
+            </value>
+            <value>
+                <fullName>Manual Handling</fullName>
+                <default>false</default>
+                <label>Manual Handling</label>
+            </value>
+            <value>
+                <fullName>Medical Volunteer Induction</fullName>
+                <default>false</default>
+                <label>Medical Volunteer Induction</label>
+            </value>
+            <value>
+                <fullName>Meet the Vollie Team</fullName>
+                <default>false</default>
+                <label>Meet the Vollie Team</label>
+            </value>
+            <value>
+                <fullName>One Team</fullName>
+                <default>false</default>
+                <label>One Team</label>
+            </value>
+            <value>
+                <fullName>Oranges</fullName>
+                <default>false</default>
+                <label>Oranges</label>
+            </value>
+            <value>
+                <fullName>Our Values</fullName>
+                <default>false</default>
+                <label>Our Values</label>
+            </value>
+            <value>
+                <fullName>Rec Programs 101</fullName>
+                <default>false</default>
+                <label>Rec Programs 101</label>
+            </value>
+            <value>
+                <fullName>Recreation Volunteer Induction</fullName>
+                <default>false</default>
+                <label>Recreation Volunteer Induction</label>
+            </value>
+            <value>
+                <fullName>Running Rec Programs</fullName>
+                <default>false</default>
+                <label>Running Rec Programs</label>
+            </value>
+            <value>
+                <fullName>Safety</fullName>
+                <default>false</default>
+                <label>Safety</label>
+            </value>
+            <value>
+                <fullName>The SAFE Files Workplace Bullying</fullName>
+                <default>false</default>
+                <label>The SAFE Files Workplace Bullying</label>
+            </value>
+            <value>
+                <fullName>Volunteer Induction - Rec Programs</fullName>
+                <default>false</default>
+                <label>Volunteer Induction - Rec Programs</label>
+            </value>
+            <value>
+                <fullName>Volunteering at Camp Quality</fullName>
+                <default>false</default>
+                <label>Volunteering at Camp Quality</label>
+            </value>
+            <value>
+                <fullName>What If</fullName>
+                <default>false</default>
+                <label>What If</label>
+            </value>
+            <value>
+                <fullName>Wills Journey</fullName>
+                <default>false</default>
+                <label>Wills Journey</label>
+            </value>
+            <value>
+                <fullName>ySafe Training</fullName>
+                <default>false</default>
+                <label>ySafe Training</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

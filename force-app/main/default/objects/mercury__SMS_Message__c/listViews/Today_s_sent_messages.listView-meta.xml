@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Today_s_sent_messages</fullName>
+    <columns>NAME</columns>
+    <columns>mercury__Destination_Number__c</columns>
+    <columns>mercury__Object_Type__c</columns>
+    <columns>mercury__Original_Text__c</columns>
+    <columns>mercury__Status__c</columns>
+    <columns>mercury__Who_Id__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Today&apos;s sent messages</label>
+</ListView>

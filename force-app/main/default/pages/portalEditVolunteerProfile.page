@@ -1,0 +1,468 @@
+<apex:page controller="portalEditVolunteerProfileController" standardStylesheets="false" title="My Events">
+    <apex:outputPanel >
+
+          <p>
+
+         <!--<apex:outputText value="Your last volunteer training date was
+                                     {0,date, dd MMM yyyy}.  Please be reminded you need to attend a training every two years.">
+       <apex:param value="{!userContact.Volunteer_Last_Training_Date__c  }" />
+   </apex:outputText>-->
+ </p>
+        <p>
+            <apex:outputText value="Your working with children card expires on
+                                     {0,date, dd MMM yyyy}.">
+       <apex:param value="{!wwc.Expires__c}" />
+   </apex:outputText>
+
+        </p>
+
+
+     </apex:outputPanel>
+    <apex:outputPanel id="alertPanel">
+        <apex:outputPanel rendered="{!hasError}" layout="block" styleClass="alert alert-danger fade in" html-role="alert">
+            <apex:outputText value="{!errorMsg}" />
+            <apex:messages />
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!hasSuccess}" layout="block" styleClass="alert alert-success fade in" html-role="alert">
+            <apex:outputText value="{!successMsg}" />
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </apex:outputPanel>
+    </apex:outputPanel>
+
+    <apex:form id="familyProfileForm">
+        <apex:outputPanel id="familyProfilePanel" layout="block" styleClass="row well">
+
+            <apex:actionStatus id="familyProfileLd" startStyleClass="loading" stopStyleClass="">
+                <apex:facet name="start">
+                    <span class="glyphicon glyphicon-refresh spinning"></span>
+                </apex:facet>
+            </apex:actionStatus>
+
+            <div class="col-md-12">
+
+                <div class="row">
+
+                    <div class="col-md-4 col-md-offset-4" style="text-align:center;">
+
+                        <apex:commandButton action="{!editContact}" rendered="{!NOT(isEditing)}" value="Edit" status="familyProfileLd" styleClass="btn btn-primary" reRender="familyProfilePanel,alertPanel" oncomplete="initPlugins();" />
+                        <!--<apex:commandButton action="{!saveContact}" rendered="{!isEditing}" value="Save" status="familyProfileLd" styleClass="btn btn-success" reRender="familyProfilePanel,alertPanel" oncomplete="initPlugins();" />-->
+                        <apex:outputPanel rendered="{!isEditing}">
+                            <input type="submit" value="Save" class="btn btn-success" />
+                        </apex:outputPanel>
+                        <apex:commandButton action="{!cancelContact}" rendered="{!isEditing}" value="Cancel" status="familyProfileLd" styleClass="btn btn-default" reRender="familyProfilePanel,alertPanel" oncomplete="initPlugins();" />
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <br />
+                    <div class="col-md-4 col-md-offset-4" style="text-align:center;">
+                        <apex:outputPanel rendered="{!OR(ISNULL(profileImage),ISBLANK(profileImage.AttachmentID__c))}">
+                            <img id="volunteerImage" src="{!URLFOR($Resource.assets, '/assets/img/avatar.jpg')}" style="max-width:100%;" />
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{!AND(NOT(ISNULL(profileImage)),NOT(ISBLANK(profileImage.AttachmentID__c)))}">
+                            <img id="volunteerImage" src="{!IF(profileImage.Content_Type__c = 'File', 'sfc/servlet.shepherd/version/download/' + profileImage.AttachmentID__c, URLFOR($Action.Attachment.Download, profileImage.AttachmentID__c))}" style="max-width:100%;" />
+                        </apex:outputPanel>
+
+                        <apex:outputPanel rendered="{!isEditing}" styleClass="form-group" layout="block">
+                            <label for="volunteerPhoto">Your Photo</label>
+                            <input type="file" id="volunteerPhoto" data-update-image="volunteerImage" class="cropInput" accept="image/*" />
+                        </apex:outputPanel>
+
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <apex:inputField rendered="{!isEditing}" value="{!userContact.Email}" styleClass="form-control" />
+                            <apex:outputText rendered="{!NOT(isEditing)}" value="{!userContact.Email}" styleClass="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <apex:inputField rendered="{!isEditing}" value="{!userContact.MailingStreet}" styleClass="form-control" />
+                            <apex:outputText rendered="{!NOT(isEditing)}" value="{!userContact.MailingStreet}" styleClass="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Suburb</label>
+                            <apex:inputField rendered="{!isEditing}" value="{!userContact.MailingCity}" styleClass="form-control" />
+                            <apex:outputText rendered="{!NOT(isEditing)}" value="{!userContact.MailingCity}" styleClass="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>State</label>
+                            <apex:inputField rendered="{!isEditing}" value="{!userContact.MailingState}" styleClass="form-control" />
+                            <apex:outputText rendered="{!NOT(isEditing)}" value="{!userContact.MailingState}" styleClass="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Postcode</label>
+                            <apex:inputField rendered="{!isEditing}" value="{!userContact.MailingPostalCode}" styleClass="form-control" />
+                            <apex:outputText rendered="{!NOT(isEditing)}" value="{!userContact.MailingPostalCode}" styleClass="form-control" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Home Phone</label>
+                            <apex:inputField rendered="{!isEditing}" value="{!userContact.HomePhone}" styleClass="form-control" />
+                            <apex:outputText rendered="{!NOT(isEditing)}" value="{!userContact.HomePhone}" styleClass="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Mobile Phone</label>
+                            <apex:inputField rendered="{!isEditing}" value="{!userContact.MobilePhone}" styleClass="form-control" />
+                            <apex:outputText rendered="{!NOT(isEditing)}" value="{!userContact.MobilePhone}" styleClass="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Preferred Event Locations</label>
+                            <apex:inputField rendered="{!isEditing}" value="{!userContact.Preferred_Event_Locations__c}" styleClass="form-control jqueryMultiselect" />
+                            <apex:outputText rendered="{!NOT(isEditing)}" value="{!userContact.Preferred_Event_Locations__c}" style="display:block;" />
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <div class="form-group">
+                            <label>Swimming Ability</label>
+                            <apex:inputField rendered="{!isEditing}" value="{!userContact.Swimming_Ability__c}" styleClass="form-control" />
+                            <apex:outputText rendered="{!NOT(isEditing)}" value="{!userContact.Swimming_Ability__c}" styleClass="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Shirt Size</label>
+                            <apex:inputField rendered="{!isEditing}" value="{!userContact.Shirt_Size__c}" styleClass="form-control" />
+                            <apex:outputText rendered="{!NOT(isEditing)}" value="{!userContact.Shirt_Size__c}" styleClass="form-control" />
+                        </div>
+
+                       <!-- <label>Media Permissions</label>
+
+                        <apex:outputPanel id="mediaPermissionsPanel">
+                            <apex:outputPanel >
+
+
+                                <div class="checkbox">
+                                    <label>
+                                        <apex:inputField rendered="{!isEditing}" value="{!userContact.Media_Permission_Interviews__c}" styleClass="media-group" />
+                                        <apex:inputField rendered="{!NOT(isEditing)}" value="{!userContact.Media_Permission_Interviews__c}" html-disabled="disabled"/>
+                                        I am willing to participate in media interviews.
+                                    </label>
+                                </div>
+
+                                <div class="checkbox">
+                                    <label>
+                                        <apex:inputField rendered="{!isEditing}" value="{!userContact.Media_Permission_Photo_Share__c}" styleClass="media-group" />
+                                        <apex:inputField rendered="{!NOT(isEditing)}" value="{!userContact.Media_Permission_Photo_Share__c}" html-disabled="disabled"/>
+                                        I approve of photos and video footage being taken and shared <b>only</b> with families and volunteers <b>on the program I am attending</b>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <apex:inputField rendered="{!isEditing}" value="{!userContact.Media_Permission_Pub__c}" styleClass="media-group" />
+                                        <apex:inputField rendered="{!NOT(isEditing)}" value="{!userContact.Media_Permission_Pub__c}" html-disabled="disabled"/>
+                                        I approve of photos being taken and used to promote Camp Quality (online/print/ads etc).
+                                    </label>
+                                </div>
+                                <hr />
+                                <div class="checkbox">
+                                    <label>
+                                        <apex:inputField rendered="{!isEditing}" value="{!userContact.Media_Permission_Denied__c}" styleClass="media-group">
+                                            <apex:actionSupport event="onchange" reRender="mediaPermissionsPanel" status="familyProfileLd" />
+                                        </apex:inputField>
+                                        <apex:inputField rendered="{!NOT(isEditing)}" value="{!userContact.Media_Permission_Denied__c}" html-disabled="disabled"/>
+                                        Please do not share any images or stories about me even with families and volunteers on programs I attend.
+                                    </label>
+                                </div>
+                                Our privacy policy contains further information about how Camp Quality may collect, use and manage personal information including photos and recordings and is available <a href="https://www.campquality.org.au/privacy-policy-footer">here</a>.<br />
+                            </apex:outputPanel>
+                        </apex:outputPanel>!-->
+
+                        <label>Image Permissions</label>
+                        <apex:outputPanel id="mediaPermissionsPanel">
+
+                                <div class="checkbox">
+                                <label>
+                                    <apex:inputField rendered="{!isEditing}" value="{!family.media_opt_in_take_video_photos__c}" styleClass="media-group">
+                                        <apex:actionSupport event="onchange" reRender="mediaPermissionsPanel" status="familyProfileLd" />
+                                    </apex:inputField>
+                                    <apex:inputField rendered="{!NOT(isEditing)}" value="{!family.media_opt_in_take_video_photos__c}" html-disabled="disabled"/>
+                                    I approve of photos and video footage being taken of me whilst attending Camp Quality services and programs</label>
+                                </div>
+
+                                <apex:outputPanel rendered="{!NOT(family.media_opt_in_take_video_photos__c)}">
+                                <p>
+                                   If you do not approve of photos and video footage being taken, Camp Quality will take all reasonable endeavours to avoid this taking place.
+                                </p>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!(family.media_opt_in_take_video_photos__c)}">
+                                <div>
+
+                                        <p>
+                                        <b>Please select at least one image sharing option: </b>
+                                    </p>
+                                    </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <apex:inputField rendered="{!isEditing}" value="{!family.Media_Permission_All_2019__c}" styleClass="media-group">
+                                            <apex:actionSupport event="onchange" reRender="mediaPermissionsPanel" status="familyProfileLd" action="{!changeAllMediaOpt}" />
+                                        </apex:inputField>
+                                        <apex:inputField rendered="{!NOT(isEditing)}" value="{!family.Media_Permission_All_2019__c}" html-disabled="disabled" />
+                                        I allow photos/video to be shared by Camp Quality in all the below ways
+                                    </label>
+                                </div>
+                                <p>
+                                        <b>OR (tick one or more of the below)</b>
+                                    </p>
+                                <div class="checkbox">
+                                <label>
+                                    <apex:inputField rendered="{!AND(isEditing, NOT(family.Media_Permission_All_2019__c))}" value="{!family.media_opt_in_share_participants__c}" styleClass="media-group">
+                                    </apex:inputField>
+                                    <apex:inputField rendered="{!OR(NOT(isEditing), family.Media_Permission_All_2019__c)}" value="{!family.media_opt_in_share_participants__c}" html-disabled="disabled"/>
+                                    I allow photos/video to be shared with participants from Camp Quality services and programs via a password protected photo gallery</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                    <apex:inputField rendered="{!AND(isEditing, NOT(family.Media_Permission_All_2019__c))}" value="{!family.Media_permission_Public_2019__c}" styleClass="media-group">
+                                    </apex:inputField>
+                                    <apex:inputField rendered="{!OR(NOT(isEditing), family.Media_Permission_All_2019__c)}" value="{!family.Media_permission_Public_2019__c}" html-disabled="disabled"/>
+                                    I allow Camp Quality to use photos/video to promote Camp Quality’s charitable purposes</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <apex:inputField rendered="{!AND(isEditing, NOT(family.Media_Permission_All_2019__c))}" value="{!family.Media_permission_corporate_2019__c}" styleClass="media-group" />
+                                        <apex:inputField rendered="{!OR(NOT(isEditing), family.Media_Permission_All_2019__c)}" value="{!family.Media_permission_corporate_2019__c}" html-disabled="disabled" />
+                                        I allow Camp Quality to share the photo/video with its corporate partners and major donors, to be used to promote Camp Quality’s charitable purposes and the partnership
+                                    </label>
+                                </div>
+                               </apex:outputPanel>
+                            For more information please visit our <a href="https://www.campquality.org.au/Privacy-policy" target="_blank">Privacy Collection Statement</a>.<br />
+                        </apex:outputPanel>
+
+
+
+<!--                                    <label>Communications Preferences</label>-->
+
+<!--                        <apex:outputPanel id="CommunicationsPreferences">-->
+<!--                             <apex:outputPanel >-->
+
+
+<!--                            <div class="checkbox">-->
+<!--                                <label>-->
+<!--                                    <apex:inputField rendered="{!isEditing}" value="{!userContact.Requests_no_Marketing_Materials__c}" styleClass="media-group">-->
+<!--                                    </apex:inputField>-->
+<!--                                    <apex:inputField rendered="{!NOT(isEditing)}" value="{!userContact.Requests_no_Marketing_Materials__c}" html-disabled="disabled"/>-->
+<!--                                    Please do not send me marketing materials.-->
+<!--                                </label>-->
+<!--                                </div>-->
+<!--                             <div class="checkbox">-->
+<!--                                <label>-->
+<!--                                    <apex:inputField rendered="{!isEditing}" value="{!userContact.Requests_No_Newsletter__c}" styleClass="media-group">-->
+<!--                                    </apex:inputField>-->
+<!--                                    <apex:inputField rendered="{!NOT(isEditing)}" value="{!userContact.Requests_No_Newsletter__c}" html-disabled="disabled"/>-->
+<!--                                    Please do not send me newsletters.-->
+<!--                                </label>-->
+<!--                            </div>-->
+
+<!--                            </apex:outputPanel>-->
+<!--                            </apex:outputPanel>-->
+                    </div>
+
+                </div>
+
+                <apex:outputPanel id="specialNeedsPanel" styleClass="row" layout="block">
+
+                    <div class="col-md-6">
+                        <label>Dietary Requirements</label>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th>Comments</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!currentNeeds}" var="key1">
+                                        <apex:outputPanel layout="none" rendered="{!currentNeeds[key1].AttributeType__c = 'DietryNeeds'}">
+                                            <tr class="something">
+                                                <td>
+                                                    <apex:inputField rendered="{!isEditing}" value="{!currentNeeds[key1].Long_Description__c}" styleClass="form-control" />
+                                                    <apex:outputText rendered="{!NOT(isEditing)}" value="{!currentNeeds[key1].Long_Description__c}" styleClass="form-control" />
+                                                </td>
+                                                <td>
+                                                    <apex:inputField rendered="{!isEditing}" value="{!currentNeeds[key1].Comments__c}" styleClass="form-control" />
+                                                    <apex:outputText rendered="{!NOT(isEditing)}" value="{!currentNeeds[key1].Comments__c}" styleClass="form-control" />
+                                                </td>
+                                                <td>
+                                                    <apex:commandButton rendered="{!isEditing}" action="{!removeSpecialNeed}" styleClass="btn btn-danger" value="-" reRender="specialNeedsPanel,alertPanel" status="familyProfileLd">
+                                                        <apex:param name="removeNeedId" value="{!key1}" assignTo="{!removeNeedId}" />
+                                                    </apex:commandButton>
+                                                </td>
+                                            </tr>
+                                        </apex:outputPanel>
+                                    </apex:repeat>
+                                </tbody>
+                            </table>
+                        </div>
+                        <apex:commandButton rendered="{!isEditing}" action="{!addSpecialNeed}" styleClass="btn btn-primary pull-right" value="Add Dietary Requirement" reRender="specialNeedsPanel,alertPanel" status="familyProfileLd">
+                            <apex:param name="addType" value="{!'DietryNeeds'}" assignTo="{!addType}" />
+                        </apex:commandButton>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Special Needs</label>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th>Comments</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!currentNeeds}" var="key2">
+                                        <apex:outputPanel layout="none" rendered="{!currentNeeds[key2].AttributeType__c = 'SpecialNeeds'}">
+                                            <tr>
+                                                <td>
+                                                    <apex:inputField rendered="{!isEditing}" value="{!currentNeeds[key2].Long_Description__c}" styleClass="form-control" />
+                                                    <apex:outputText rendered="{!NOT(isEditing)}" value="{!currentNeeds[key2].Long_Description__c}" styleClass="form-control" />
+                                                </td>
+                                                <td>
+                                                    <apex:inputField rendered="{!isEditing}" value="{!currentNeeds[key2].Comments__c}" styleClass="form-control" />
+                                                    <apex:outputText rendered="{!NOT(isEditing)}" value="{!currentNeeds[key2].Comments__c}" styleClass="form-control" />
+                                                </td>
+                                                <td>
+                                                    <apex:commandButton rendered="{!isEditing}" action="{!removeSpecialNeed}" styleClass="btn btn-danger" value="-" reRender="specialNeedsPanel,alertPanel" status="familyProfileLd">
+                                                        <apex:param name="removeNeedId" value="{!key2}" assignTo="{!removeNeedId}" />
+                                                    </apex:commandButton>
+                                                </td>
+                                            </tr>
+                                        </apex:outputPanel>
+                                    </apex:repeat>
+                                </tbody>
+                            </table>
+                        </div>
+                        <apex:commandButton rendered="{!isEditing}" action="{!addSpecialNeed}" styleClass="btn btn-primary pull-right" value="Add Special Need" reRender="specialNeedsPanel,alertPanel" status="familyProfileLd">
+                            <apex:param name="addType" value="{!'SpecialNeeds'}" assignTo="{!addType}" />
+                        </apex:commandButton>
+                    </div>
+                </apex:outputPanel>
+
+                <div class="row">
+
+                    <div class="col-md-4 col-md-offset-4" style="text-align:center;">
+
+                        <apex:commandButton action="{!editContact}" rendered="{!NOT(isEditing)}" value="Edit" status="familyProfileLd" styleClass="btn btn-primary" reRender="familyProfilePanel,alertPanel" oncomplete="initPlugins();" />
+                        <!--<apex:commandButton action="{!saveContact}" rendered="{!isEditing}" value="Save" status="familyProfileLd" styleClass="btn btn-success" reRender="familyProfilePanel,alertPanel" oncomplete="initPlugins();" />-->
+                        <apex:outputPanel rendered="{!isEditing}">
+                            <input type="submit" value="Save" class="btn btn-success" />
+                        </apex:outputPanel>
+                        <apex:actionFunction name="saveFamily" action="{!saveContact}" status="familyProfileLd" reRender="familyProfilePanel,alertPanel" oncomplete="initPlugins();" />
+                        <apex:commandButton action="{!cancelContact}" rendered="{!isEditing}" value="Cancel" status="familyProfileLd" styleClass="btn btn-default" reRender="familyProfilePanel,alertPanel" oncomplete="initPlugins();" />
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </apex:outputPanel>
+
+        <apex:outputPanel id="volunteerTypePanel" layout="block" styleClass="row well">
+
+            <apex:actionStatus id="volunteerTypeLd" startStyleClass="loading" stopStyleClass="">
+                <apex:facet name="start">
+                    <span class="glyphicon glyphicon-refresh spinning"></span>
+                </apex:facet>
+            </apex:actionStatus>
+
+            <div class="col-md-12">
+
+                <div class="row">
+
+                    <!-- <div class="col-md-4">
+<label>Request New Volunteer Type</label>
+<div class="form-group">
+<label>Requested Type</label>
+<apex:inputField styleClass="form-control" value="{!newVType.Volunteer_Type__c}" />
+</div>
+<apex:commandButton action="{!addVolunteerType}" styleClass="btn btn-primary pull-right" value="Request" reRender="volunteerTypePanel,alertPanel" status="volunteerTypeLd" />
+</div> -->
+
+                    <div class="col-md-8">
+                        <label>Current Volunteer Types</label>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Status</th>
+
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!vTypes}" var="vt">
+                                        <tr class="something">
+                                            <td>
+                                                <apex:outputText value="{!vTypes[vt].Volunteer_Type__c}" />
+                                            </td>
+                                            <td>
+                                                <apex:outputText value="{!vTypes[vt].Volunteer_Status__c}" />
+                                            </td>
+                                            <!-- Removed DJA 6/12/2016 Due to volunteer confussion
+<td>
+<apex:outputText value=" {!vTypes[vt].Start_Date__c}" />
+</td>
+-->
+                                            <!-- <td>
+<apex:commandButton action="{!removeVolunteerType}" styleClass="btn btn-danger" value="-" reRender="volunteerTypePanel,alertPanel" status="volunteerTypeLd">
+<apex:param name="removeVTypeId" value="{!vt}" assignTo="{!removeVTypeId}" />
+</apex:commandButton>
+</td>-->
+                                        </tr>
+                                    </apex:repeat>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </apex:outputPanel>
+
+        <c:imageInput ReplaceAttachment="true" ShowInPortal="Volunteer" AttachmentType="Profile Image" ContactID="{!userContact.Id}" />
+
+    </apex:form>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <h3>
+                To save your changes click the save button above.   <br /> 
+                      
+            <br /> 
+             <br /> 
+              <br /> 
+               <br /> 
+             <br /> 
+             <br /> 
+                To update any other details, please contact us:
+            </h3>
+            <c:portalContactUsComponent CaseReason="Update Volunteer Details" RecordTypeName="Volunteer_Request" />
+
+        </div>
+
+    </div>
+
+
+</apex:page>

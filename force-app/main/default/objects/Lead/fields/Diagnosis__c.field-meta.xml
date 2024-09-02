@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Diagnosis__c</fullName>
+    <label>Diagnosis</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ALL</fullName>
+                <default>false</default>
+                <label>ALL</label>
+            </value>
+            <value>
+                <fullName>AML</fullName>
+                <default>false</default>
+                <label>AML</label>
+            </value>
+            <value>
+                <fullName>APML</fullName>
+                <default>false</default>
+                <label>APML</label>
+            </value>
+            <value>
+                <fullName>Astrocytoma</fullName>
+                <default>false</default>
+                <label>Astrocytoma</label>
+            </value>
+            <value>
+                <fullName>Bowel Cancer</fullName>
+                <default>false</default>
+                <label>Bowel Cancer</label>
+            </value>
+            <value>
+                <fullName>Brain Tumour</fullName>
+                <default>false</default>
+                <label>Brain Tumour</label>
+            </value>
+            <value>
+                <fullName>Breast Cancer</fullName>
+                <default>false</default>
+                <label>Breast Cancer</label>
+            </value>
+            <value>
+                <fullName>Cervical Cancer</fullName>
+                <default>false</default>
+                <label>Cervical Cancer</label>
+            </value>
+            <value>
+                <fullName>CML</fullName>
+                <default>false</default>
+                <label>CML</label>
+            </value>
+            <value>
+                <fullName>Congenital Leukemia</fullName>
+                <default>false</default>
+                <label>Congenital Leukemia</label>
+            </value>
+            <value>
+                <fullName>Ependymoma</fullName>
+                <default>false</default>
+                <label>Ependymoma</label>
+            </value>
+            <value>
+                <fullName>Ewings Sarcoma</fullName>
+                <default>false</default>
+                <label>Ewings Sarcoma</label>
+            </value>
+            <value>
+                <fullName>Germ Cell Tumour</fullName>
+                <default>false</default>
+                <label>Germ Cell Tumour</label>
+            </value>
+            <value>
+                <fullName>Glioma</fullName>
+                <default>false</default>
+                <label>Glioma</label>
+            </value>
+            <value>
+                <fullName>Haemophagystic Syndrome</fullName>
+                <default>false</default>
+                <label>Haemophagystic Syndrome</label>
+            </value>
+            <value>
+                <fullName>Hepatoblastoma</fullName>
+                <default>false</default>
+                <label>Hepatoblastoma</label>
+            </value>
+            <value>
+                <fullName>Hodgkins Lymphoma</fullName>
+                <default>false</default>
+                <label>Hodgkins Lymphoma</label>
+            </value>
+            <value>
+                <fullName>JMML</fullName>
+                <default>false</default>
+                <label>JMML</label>
+            </value>
+            <value>
+                <fullName>Juvenile MLD</fullName>
+                <default>false</default>
+                <label>Juvenile MLD</label>
+            </value>
+            <value>
+                <fullName>Langerhans Cell Histio</fullName>
+                <default>false</default>
+                <label>Langerhans Cell Histio</label>
+            </value>
+            <value>
+                <fullName>Lymphoma</fullName>
+                <default>false</default>
+                <label>Lymphoma</label>
+            </value>
+            <value>
+                <fullName>Medulloblastoma</fullName>
+                <default>false</default>
+                <label>Medulloblastoma</label>
+            </value>
+            <value>
+                <fullName>Melanoma</fullName>
+                <default>false</default>
+                <label>Melanoma</label>
+            </value>
+            <value>
+                <fullName>Mixed phenotype acute leukemia (MPAL)</fullName>
+                <default>false</default>
+                <label>Mixed phenotype acute leukemia (MPAL)</label>
+            </value>
+            <value>
+                <fullName>Myeldomyplasta</fullName>
+                <default>false</default>
+                <label>Myeldomyplasta</label>
+            </value>
+            <value>
+                <fullName>Neuroblastoma</fullName>
+                <default>false</default>
+                <label>Neuroblastoma</label>
+            </value>
+            <value>
+                <fullName>Neuro ectodermal tumour</fullName>
+                <default>false</default>
+                <label>Neuro ectodermal tumour</label>
+            </value>
+            <value>
+                <fullName>Non-Hodgkin&apos;s Lymphoma</fullName>
+                <default>false</default>
+                <label>Non-Hodgkin&apos;s Lymphoma</label>
+            </value>
+            <value>
+                <fullName>Osteogenic Sarcoma</fullName>
+                <default>false</default>
+                <label>Osteogenic Sarcoma</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other - Adult Cancer Diagnosis</fullName>
+                <default>false</default>
+                <label>Other - Adult Cancer Diagnosis</label>
+            </value>
+            <value>
+                <fullName>Ovarian Cancer</fullName>
+                <default>false</default>
+                <label>Ovarian Cancer</label>
+            </value>
+            <value>
+                <fullName>Pancreatic/Pancreas Cancer</fullName>
+                <default>false</default>
+                <label>Pancreatic/Pancreas Cancer</label>
+            </value>
+            <value>
+                <fullName>Pilocytic Astrocytoma/Optic Glioma</fullName>
+                <default>false</default>
+                <label>Pilocytic Astrocytoma/Optic Glioma</label>
+            </value>
+            <value>
+                <fullName>Renal Cancer</fullName>
+                <default>false</default>
+                <label>Renal Cancer</label>
+            </value>
+            <value>
+                <fullName>Retinoblastoma</fullName>
+                <default>false</default>
+                <label>Retinoblastoma</label>
+            </value>
+            <value>
+                <fullName>Rhabdomyosarcoma</fullName>
+                <default>false</default>
+                <label>Rhabdomyosarcoma</label>
+            </value>
+            <value>
+                <fullName>Sarcoma</fullName>
+                <default>false</default>
+                <label>Sarcoma</label>
+            </value>
+            <value>
+                <fullName>Spinal Tumour</fullName>
+                <default>false</default>
+                <label>Spinal Tumour</label>
+            </value>
+            <value>
+                <fullName>Testicular cancer</fullName>
+                <default>false</default>
+                <label>Testicular cancer</label>
+            </value>
+            <value>
+                <fullName>Thyroid Cancer</fullName>
+                <default>false</default>
+                <label>Thyroid Cancer</label>
+            </value>
+            <value>
+                <fullName>Wilms Tumour</fullName>
+                <default>false</default>
+                <label>Wilms Tumour</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

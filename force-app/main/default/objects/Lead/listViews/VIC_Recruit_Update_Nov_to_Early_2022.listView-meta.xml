@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VIC_Recruit_Update_Nov_to_Early_2022</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>Lead_Rejection_Reason__c</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Volunteer_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.COMPANY</field>
+        <operation>contains</operation>
+        <value>Volunteer</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATE</field>
+        <operation>equals</operation>
+        <value>Victoria,VIC</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Withdrawn</value>
+    </filters>
+    <filters>
+        <field>LEAD.CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>6/1/2021 12:00 AM</value>
+    </filters>
+    <label>VIC Recruit. Update - Nov to Early 2022</label>
+</ListView>

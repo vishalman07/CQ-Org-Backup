@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_Transaction</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Record Transaction</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/apex/aakpay__checkoutM?=a3DN00000018L5n&amp;payMType=a3FN0000000ZrGq&amp;&amp;cid={!Opportunity.npsp__Primary_ContactId__c}&amp;aid={!Opportunity.AccountId}&amp;oppId={!Opportunity.Id}&amp;camId={!Opportunity.CampaignId}</url>
+</WebLink>

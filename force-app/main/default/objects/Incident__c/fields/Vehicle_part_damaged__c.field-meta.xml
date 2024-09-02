@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vehicle_part_damaged__c</fullName>
+    <label>Vehicle part damaged</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Bonnet</fullName>
+                <default>false</default>
+                <label>Bonnet</label>
+            </value>
+            <value>
+                <fullName>Boot</fullName>
+                <default>false</default>
+                <label>Boot</label>
+            </value>
+            <value>
+                <fullName>Exhaust engine</fullName>
+                <default>false</default>
+                <label>Exhaust engine</label>
+            </value>
+            <value>
+                <fullName>Front bumper bar</fullName>
+                <default>false</default>
+                <label>Front bumper bar</label>
+            </value>
+            <value>
+                <fullName>Front left panel</fullName>
+                <default>false</default>
+                <label>Front left panel</label>
+            </value>
+            <value>
+                <fullName>Front left tyre</fullName>
+                <default>false</default>
+                <label>Front left tyre</label>
+            </value>
+            <value>
+                <fullName>Front right panel (driver side)</fullName>
+                <default>false</default>
+                <label>Front right panel (driver side)</label>
+            </value>
+            <value>
+                <fullName>Front right tyre</fullName>
+                <default>false</default>
+                <label>Front right tyre</label>
+            </value>
+            <value>
+                <fullName>Interior</fullName>
+                <default>false</default>
+                <label>Interior</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Radiator</fullName>
+                <default>false</default>
+                <label>Radiator</label>
+            </value>
+            <value>
+                <fullName>Rear bumper bar</fullName>
+                <default>false</default>
+                <label>Rear bumper bar</label>
+            </value>
+            <value>
+                <fullName>Rear left panel</fullName>
+                <default>false</default>
+                <label>Rear left panel</label>
+            </value>
+            <value>
+                <fullName>Rear left tyre</fullName>
+                <default>false</default>
+                <label>Rear left tyre</label>
+            </value>
+            <value>
+                <fullName>Rear right panel</fullName>
+                <default>false</default>
+                <label>Rear right panel</label>
+            </value>
+            <value>
+                <fullName>Rear right tyre</fullName>
+                <default>false</default>
+                <label>Rear right tyre</label>
+            </value>
+            <value>
+                <fullName>Roof</fullName>
+                <default>false</default>
+                <label>Roof</label>
+            </value>
+            <value>
+                <fullName>Side left panel</fullName>
+                <default>false</default>
+                <label>Side left panel</label>
+            </value>
+            <value>
+                <fullName>Side right panel</fullName>
+                <default>false</default>
+                <label>Side right panel</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

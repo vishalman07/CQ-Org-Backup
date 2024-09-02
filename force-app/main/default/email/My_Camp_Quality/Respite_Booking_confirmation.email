@@ -1,0 +1,124 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU">Dear
+{!Retreat_Booking__c.Contact_First_Name__c},</span><o:p></o:p></p>]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU">You have been
+successful in securing a week’s stay for your family at our Camp Quality&nbsp;{!Retreat_Booking__c.Property__c}&nbsp;Retreat.&nbsp;</span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black;mso-ansi-language:EN-AU;
+mso-fareast-language:EN-AU"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU">Below are the
+dates we have your family&nbsp;({!Retreat_Booking__c.Guests__c} guests)&nbsp;booked
+into the Retreat, which is located at&nbsp;{!Retreat_Booking__c.Property_Address__c}.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><b><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU">Arriving</span></b><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-ansi-language:EN-AU;mso-fareast-language:EN-AU">:&nbsp;{!Retreat_Booking__c.Check_In_Date__c}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><b><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU">Departing</span></b><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-ansi-language:EN-AU;mso-fareast-language:EN-AU">:&nbsp;{!Retreat_Booking__c.Check_Out_Date__c}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU">Please complete
+the attached waiver and return to me as soon as possible.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU">Should you need
+to change or cancel your booking, please contact&nbsp;Caitlyn Brine&nbsp;(Family
+Respite and Intake Coordinator) ASAP on&nbsp;<br>
+08 0426 8091 or email&nbsp;<a href="mailto:caitlyn.brine@campquality.org.au"><span style="color:black;text-decoration:none;text-underline:none">caitlyn.brine@campquality.org.au</span></a><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU">If you have any
+questions leading up to your stay, please don't hesitate to give me a call.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU">Kind Regards,<o:p></o:p></span></p><br>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[<p class="MsoNormal" style="margin-bottom: 0.0001pt;"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white"><b><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU">Caitlyn Brine&nbsp;<br>
+Family Respite and Intake Coordinator &nbsp;<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white"><b><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU">Camp Quality<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU"><br>
+Phone 08 0426 8091 <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-AU;mso-fareast-language:EN-AU"><a href="http://www.campquality.org.au">www.campquality.org.au</a><o:p></o:p></span></p><br></p>]]></td>
+</tr>
+</table>

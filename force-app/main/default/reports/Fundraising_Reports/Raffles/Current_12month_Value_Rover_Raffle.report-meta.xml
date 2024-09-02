@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.OpportunityContactRoles$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.OpportunityContactRoles$CloseDate</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>Contact.OpportunityContactRoles$Amount</field>
+    </columns>
+    <columns>
+        <field>Contact.OpportunityContactRoles$Campaign.Cost_Centre__c</field>
+    </columns>
+    <columns>
+        <field>Contact.OpportunityContactRoles$Campaign.Account_No__c</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Opportunity.Campaign_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>RAF23Q3 - Land Rover Raffle 2023 - Ticket Sales</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>StageName</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>Contact$Id</primaryTableColumn>
+        <relatedTable>OCR-Opportunity</relatedTable>
+        <relatedTableJoinColumn>Contact</relatedTableJoinColumn>
+    </crossFilters>
+    <description>Average Amount of Closed Won Opps for Contacts with a 2023 Land Rover Raffle Ticket 
+Opps within the last 12 months</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles$StageName</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.OpportunityContactRoles$CloseDate</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>LAST_N_MONTHS:12</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Current  12month Value - Rover Raffle</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

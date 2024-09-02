@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Convoy_Adelaide_EmailPref__c</fullName>
+    <description>Convoy Adelaide Email Preference Centre</description>
+    <label>Convoy_Adelaide_EmailPref</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Email_Preference_Centre</valueSetName>
+    </valueSet>
+</CustomField>

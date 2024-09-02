@@ -1,0 +1,2285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>NSW - Auburn</fullName>
+        <default>false</default>
+        <label>NSW - Auburn</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Blacktown</fullName>
+        <default>false</default>
+        <label>NSW - Blacktown</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Blue Mountains</fullName>
+        <default>false</default>
+        <label>NSW - Blue Mountains</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Botany Bay</fullName>
+        <default>false</default>
+        <label>NSW - Botany Bay</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Burwood</fullName>
+        <default>false</default>
+        <label>NSW - Burwood</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Camden</fullName>
+        <default>false</default>
+        <label>NSW - Camden</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Campbelltown</fullName>
+        <default>false</default>
+        <label>NSW - Campbelltown</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Canada Bay</fullName>
+        <default>false</default>
+        <label>NSW - Canada Bay</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Canterbury</fullName>
+        <default>false</default>
+        <label>NSW - Canterbury</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - City of Sydney</fullName>
+        <default>false</default>
+        <label>NSW - City of Sydney</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Fairfield</fullName>
+        <default>false</default>
+        <label>NSW - Fairfield</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Hawkesbury</fullName>
+        <default>false</default>
+        <label>NSW - Hawkesbury</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Hills</fullName>
+        <default>false</default>
+        <label>NSW - Hills</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Holroyd</fullName>
+        <default>false</default>
+        <label>NSW - Holroyd</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Hornsby</fullName>
+        <default>false</default>
+        <label>NSW - Hornsby</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Hurstville</fullName>
+        <default>false</default>
+        <label>NSW - Hurstville</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Kogarah</fullName>
+        <default>false</default>
+        <label>NSW - Kogarah</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Lithgow</fullName>
+        <default>false</default>
+        <label>NSW - Lithgow</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Liverpool</fullName>
+        <default>false</default>
+        <label>NSW - Liverpool</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Manly</fullName>
+        <default>false</default>
+        <label>NSW - Manly</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Marrickville</fullName>
+        <default>false</default>
+        <label>NSW - Marrickville</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Mosman</fullName>
+        <default>false</default>
+        <label>NSW - Mosman</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - North Sydney</fullName>
+        <default>false</default>
+        <label>NSW - North Sydney</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Parramatta</fullName>
+        <default>false</default>
+        <label>NSW - Parramatta</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Penrith</fullName>
+        <default>false</default>
+        <label>NSW - Penrith</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Pittwater</fullName>
+        <default>false</default>
+        <label>NSW - Pittwater</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Randwick</fullName>
+        <default>false</default>
+        <label>NSW - Randwick</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Rockdale</fullName>
+        <default>false</default>
+        <label>NSW - Rockdale</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Ryde</fullName>
+        <default>false</default>
+        <label>NSW - Ryde</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Sutherland</fullName>
+        <default>false</default>
+        <label>NSW - Sutherland</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Sydney</fullName>
+        <default>false</default>
+        <label>NSW - Sydney</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Warringah</fullName>
+        <default>false</default>
+        <label>NSW - Warringah</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Waverly</fullName>
+        <default>false</default>
+        <label>NSW - Waverly</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Willoughby</fullName>
+        <default>false</default>
+        <label>NSW - Willoughby</label>
+    </customValue>
+    <customValue>
+        <fullName>NSW - Woollahra</fullName>
+        <default>false</default>
+        <label>NSW - Woollahra</label>
+    </customValue>
+    <customValue>
+        <fullName>SQLD - Gold Coast</fullName>
+        <default>false</default>
+        <label>SQLD - Gold Coast</label>
+    </customValue>
+    <customValue>
+        <fullName>SQLD - Gympie</fullName>
+        <default>false</default>
+        <label>SQLD - Gympie</label>
+    </customValue>
+    <customValue>
+        <fullName>SQLD - Ipswich</fullName>
+        <default>false</default>
+        <label>SQLD - Ipswich</label>
+    </customValue>
+    <customValue>
+        <fullName>SQLD - Sunshine Coast</fullName>
+        <default>false</default>
+        <label>SQLD - Sunshine Coast</label>
+    </customValue>
+    <customValue>
+        <fullName>VIC - Moreland</fullName>
+        <default>false</default>
+        <label>VIC - Moreland</label>
+    </customValue>
+    <customValue>
+        <fullName>VIC - Moonee Valley</fullName>
+        <default>false</default>
+        <label>VIC - Moonee Valley</label>
+    </customValue>
+    <customValue>
+        <fullName>VIC - Port Phillip</fullName>
+        <default>false</default>
+        <label>VIC - Port Phillip</label>
+    </customValue>
+    <customValue>
+        <fullName>VIC - Melbourne</fullName>
+        <default>false</default>
+        <label>VIC - Melbourne</label>
+    </customValue>
+    <customValue>
+        <fullName>Vic - Boroondara</fullName>
+        <default>false</default>
+        <label>Vic - Boroondara</label>
+    </customValue>
+    <customValue>
+        <fullName>Vic - Stonnington</fullName>
+        <default>false</default>
+        <label>Vic - Stonnington</label>
+    </customValue>
+    <customValue>
+        <fullName>VIC - Yarra</fullName>
+        <default>false</default>
+        <label>VIC - Yarra</label>
+    </customValue>
+    <customValue>
+        <fullName>Albury (C)</fullName>
+        <default>false</default>
+        <label>Albury (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Armidale Regional (A)</fullName>
+        <default>false</default>
+        <label>Armidale Regional (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Ballina (A)</fullName>
+        <default>false</default>
+        <label>Ballina (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Balranald (A)</fullName>
+        <default>false</default>
+        <label>Balranald (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Bathurst Regional (A)</fullName>
+        <default>false</default>
+        <label>Bathurst Regional (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Bega Valley (A)</fullName>
+        <default>false</default>
+        <label>Bega Valley (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Bellingen (A)</fullName>
+        <default>false</default>
+        <label>Bellingen (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Berrigan (A)</fullName>
+        <default>false</default>
+        <label>Berrigan (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Blacktown (C)</fullName>
+        <default>false</default>
+        <label>Blacktown (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Bland (A)</fullName>
+        <default>false</default>
+        <label>Bland (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Blayney (A)</fullName>
+        <default>false</default>
+        <label>Blayney (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Blue Mountains (C)</fullName>
+        <default>false</default>
+        <label>Blue Mountains (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Bogan (A)</fullName>
+        <default>false</default>
+        <label>Bogan (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Botany Bay (C)</fullName>
+        <default>false</default>
+        <label>Botany Bay (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Bourke (A)</fullName>
+        <default>false</default>
+        <label>Bourke (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Broken Hill (C)</fullName>
+        <default>false</default>
+        <label>Broken Hill (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Burwood (A)</fullName>
+        <default>false</default>
+        <label>Burwood (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Byron (A)</fullName>
+        <default>false</default>
+        <label>Byron (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Camden (A)</fullName>
+        <default>false</default>
+        <label>Camden (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Campbelltown (C) (NSW)</fullName>
+        <default>false</default>
+        <label>Campbelltown (C) (NSW)</label>
+    </customValue>
+    <customValue>
+        <fullName>Canada Bay (A)</fullName>
+        <default>false</default>
+        <label>Canada Bay (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Canterbury-Bankstown (A)</fullName>
+        <default>false</default>
+        <label>Canterbury-Bankstown (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Carrathool (A)</fullName>
+        <default>false</default>
+        <label>Carrathool (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Central Coast (C) (NSW)</fullName>
+        <default>false</default>
+        <label>Central Coast (C) (NSW)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cessnock (C)</fullName>
+        <default>false</default>
+        <label>Cessnock (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Clarence Valley (A)</fullName>
+        <default>false</default>
+        <label>Clarence Valley (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cobar (A)</fullName>
+        <default>false</default>
+        <label>Cobar (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Coffs Harbour (C)</fullName>
+        <default>false</default>
+        <label>Coffs Harbour (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Coolamon (A)</fullName>
+        <default>false</default>
+        <label>Coolamon (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cowra (A)</fullName>
+        <default>false</default>
+        <label>Cowra (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cumberland (A)</fullName>
+        <default>false</default>
+        <label>Cumberland (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Dungog (A)</fullName>
+        <default>false</default>
+        <label>Dungog (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Edward River (A)</fullName>
+        <default>false</default>
+        <label>Edward River (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Eurobodalla (A)</fullName>
+        <default>false</default>
+        <label>Eurobodalla (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Fairfield (C)</fullName>
+        <default>false</default>
+        <label>Fairfield (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Federation (A)</fullName>
+        <default>false</default>
+        <label>Federation (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Forbes (A)</fullName>
+        <default>false</default>
+        <label>Forbes (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Georges River (A)</fullName>
+        <default>false</default>
+        <label>Georges River (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Gilgandra (A)</fullName>
+        <default>false</default>
+        <label>Gilgandra (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Glen Innes Severn (A)</fullName>
+        <default>false</default>
+        <label>Glen Innes Severn (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Goulburn Mulwaree (A)</fullName>
+        <default>false</default>
+        <label>Goulburn Mulwaree (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Greater Hume Shire (A)</fullName>
+        <default>false</default>
+        <label>Greater Hume Shire (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Griffith (C)</fullName>
+        <default>false</default>
+        <label>Griffith (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Gundagai (A)</fullName>
+        <default>false</default>
+        <label>Gundagai (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Gunnedah (A)</fullName>
+        <default>false</default>
+        <label>Gunnedah (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Gwydir (A)</fullName>
+        <default>false</default>
+        <label>Gwydir (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Hawkesbury (C)</fullName>
+        <default>false</default>
+        <label>Hawkesbury (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Hay (A)</fullName>
+        <default>false</default>
+        <label>Hay (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Hilltops (A)</fullName>
+        <default>false</default>
+        <label>Hilltops (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Hornsby (A)</fullName>
+        <default>false</default>
+        <label>Hornsby (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Hunters Hill (A)</fullName>
+        <default>false</default>
+        <label>Hunters Hill (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Inner West (A)</fullName>
+        <default>false</default>
+        <label>Inner West (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Inverell (A)</fullName>
+        <default>false</default>
+        <label>Inverell (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Junee (A)</fullName>
+        <default>false</default>
+        <label>Junee (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Kempsey (A)</fullName>
+        <default>false</default>
+        <label>Kempsey (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Kiama (A)</fullName>
+        <default>false</default>
+        <label>Kiama (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Ku-ring-gai (A)</fullName>
+        <default>false</default>
+        <label>Ku-ring-gai (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Kyogle (A)</fullName>
+        <default>false</default>
+        <label>Kyogle (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Lachlan (A)</fullName>
+        <default>false</default>
+        <label>Lachlan (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Lake Macquarie (C)</fullName>
+        <default>false</default>
+        <label>Lake Macquarie (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Lane Cove (A)</fullName>
+        <default>false</default>
+        <label>Lane Cove (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Leeton (A)</fullName>
+        <default>false</default>
+        <label>Leeton (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Lismore (C)</fullName>
+        <default>false</default>
+        <label>Lismore (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Lithgow (C)</fullName>
+        <default>false</default>
+        <label>Lithgow (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Liverpool (C)</fullName>
+        <default>false</default>
+        <label>Liverpool (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Liverpool Plains (A)</fullName>
+        <default>false</default>
+        <label>Liverpool Plains (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Maitland (C)</fullName>
+        <default>false</default>
+        <label>Maitland (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mid-Coast (A)</fullName>
+        <default>false</default>
+        <label>Mid-Coast (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mid-Western Regional (A)</fullName>
+        <default>false</default>
+        <label>Mid-Western Regional (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Moree Plains (A)</fullName>
+        <default>false</default>
+        <label>Moree Plains (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mosman (A)</fullName>
+        <default>false</default>
+        <label>Mosman (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Murray River (A)</fullName>
+        <default>false</default>
+        <label>Murray River (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Murrumbidgee (A)</fullName>
+        <default>false</default>
+        <label>Murrumbidgee (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Muswellbrook (A)</fullName>
+        <default>false</default>
+        <label>Muswellbrook (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Nambucca (A)</fullName>
+        <default>false</default>
+        <label>Nambucca (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Narrabri (A)</fullName>
+        <default>false</default>
+        <label>Narrabri (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Narromine (A)</fullName>
+        <default>false</default>
+        <label>Narromine (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Newcastle (C)</fullName>
+        <default>false</default>
+        <label>Newcastle (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>North Sydney (A)</fullName>
+        <default>false</default>
+        <label>North Sydney (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Northern Beaches (A)</fullName>
+        <default>false</default>
+        <label>Northern Beaches (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Oberon (A)</fullName>
+        <default>false</default>
+        <label>Oberon (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Orange (C)</fullName>
+        <default>false</default>
+        <label>Orange (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Parkes (A)</fullName>
+        <default>false</default>
+        <label>Parkes (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Parramatta (C)</fullName>
+        <default>false</default>
+        <label>Parramatta (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Penrith (C)</fullName>
+        <default>false</default>
+        <label>Penrith (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Port Macquarie-Hastings (A)</fullName>
+        <default>false</default>
+        <label>Port Macquarie-Hastings (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Port Stephens (A)</fullName>
+        <default>false</default>
+        <label>Port Stephens (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Queanbeyan-Palerang Regional (A)</fullName>
+        <default>false</default>
+        <label>Queanbeyan-Palerang Regional (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Randwick (C)</fullName>
+        <default>false</default>
+        <label>Randwick (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Richmond Valley (A)</fullName>
+        <default>false</default>
+        <label>Richmond Valley (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Rockdale (C)</fullName>
+        <default>false</default>
+        <label>Rockdale (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Ryde (C)</fullName>
+        <default>false</default>
+        <label>Ryde (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Shellharbour (C)</fullName>
+        <default>false</default>
+        <label>Shellharbour (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Shoalhaven (C)</fullName>
+        <default>false</default>
+        <label>Shoalhaven (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Singleton (A)</fullName>
+        <default>false</default>
+        <label>Singleton (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Snowy Monaro Regional (A)</fullName>
+        <default>false</default>
+        <label>Snowy Monaro Regional (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Snowy Valleys (A)</fullName>
+        <default>false</default>
+        <label>Snowy Valleys (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Strathfield (A)</fullName>
+        <default>false</default>
+        <label>Strathfield (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Sutherland Shire (A)</fullName>
+        <default>false</default>
+        <label>Sutherland Shire (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Sydney (C)</fullName>
+        <default>false</default>
+        <label>Sydney (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tamworth Regional (A)</fullName>
+        <default>false</default>
+        <label>Tamworth Regional (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tenterfield (A)</fullName>
+        <default>false</default>
+        <label>Tenterfield (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>The Hills Shire (A)</fullName>
+        <default>false</default>
+        <label>The Hills Shire (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tweed (A)</fullName>
+        <default>false</default>
+        <label>Tweed (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Upper Hunter Shire (A)</fullName>
+        <default>false</default>
+        <label>Upper Hunter Shire (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Upper Lachlan Shire (A)</fullName>
+        <default>false</default>
+        <label>Upper Lachlan Shire (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Uralla (A)</fullName>
+        <default>false</default>
+        <label>Uralla (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Wagga Wagga (C)</fullName>
+        <default>false</default>
+        <label>Wagga Wagga (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Walcha (A)</fullName>
+        <default>false</default>
+        <label>Walcha (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Walgett (A)</fullName>
+        <default>false</default>
+        <label>Walgett (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Warrumbungle Shire (A)</fullName>
+        <default>false</default>
+        <label>Warrumbungle Shire (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Waverley (A)</fullName>
+        <default>false</default>
+        <label>Waverley (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Weddin (A)</fullName>
+        <default>false</default>
+        <label>Weddin (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Wentworth (A)</fullName>
+        <default>false</default>
+        <label>Wentworth (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Western Plains Regional (A)</fullName>
+        <default>false</default>
+        <label>Western Plains Regional (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Willoughby (C)</fullName>
+        <default>false</default>
+        <label>Willoughby (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Wingecarribee (A)</fullName>
+        <default>false</default>
+        <label>Wingecarribee (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Wollondilly (A)</fullName>
+        <default>false</default>
+        <label>Wollondilly (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Wollongong (C)</fullName>
+        <default>false</default>
+        <label>Wollongong (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Woollahra (A)</fullName>
+        <default>false</default>
+        <label>Woollahra (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Yass Valley (A)</fullName>
+        <default>false</default>
+        <label>Yass Valley (A)</label>
+    </customValue>
+    <customValue>
+        <fullName>Alpine (S)</fullName>
+        <default>false</default>
+        <label>Alpine (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Ararat (RC)</fullName>
+        <default>false</default>
+        <label>Ararat (RC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Ballarat (C)</fullName>
+        <default>false</default>
+        <label>Ballarat (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Banyule (C)</fullName>
+        <default>false</default>
+        <label>Banyule (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Bass Coast (S)</fullName>
+        <default>false</default>
+        <label>Bass Coast (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Baw Baw (S)</fullName>
+        <default>false</default>
+        <label>Baw Baw (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Bayside (C)</fullName>
+        <default>false</default>
+        <label>Bayside (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Benalla (RC)</fullName>
+        <default>false</default>
+        <label>Benalla (RC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Boroondara (C)</fullName>
+        <default>false</default>
+        <label>Boroondara (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Brimbank (C)</fullName>
+        <default>false</default>
+        <label>Brimbank (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Campaspe (S)</fullName>
+        <default>false</default>
+        <label>Campaspe (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cardinia (S)</fullName>
+        <default>false</default>
+        <label>Cardinia (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Casey (C)</fullName>
+        <default>false</default>
+        <label>Casey (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Central Goldfields (S)</fullName>
+        <default>false</default>
+        <label>Central Goldfields (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Colac-Otway (S)</fullName>
+        <default>false</default>
+        <label>Colac-Otway (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Corangamite (S)</fullName>
+        <default>false</default>
+        <label>Corangamite (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Darebin (C)</fullName>
+        <default>false</default>
+        <label>Darebin (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>East Gippsland (S)</fullName>
+        <default>false</default>
+        <label>East Gippsland (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Frankston (C)</fullName>
+        <default>false</default>
+        <label>Frankston (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Gannawarra (S)</fullName>
+        <default>false</default>
+        <label>Gannawarra (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Glen Eira (C)</fullName>
+        <default>false</default>
+        <label>Glen Eira (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Glenelg (S)</fullName>
+        <default>false</default>
+        <label>Glenelg (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Golden Plains (S)</fullName>
+        <default>false</default>
+        <label>Golden Plains (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Greater Bendigo (C)</fullName>
+        <default>false</default>
+        <label>Greater Bendigo (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Greater Dandenong (C)</fullName>
+        <default>false</default>
+        <label>Greater Dandenong (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Greater Geelong (C)</fullName>
+        <default>false</default>
+        <label>Greater Geelong (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Greater Shepparton (C)</fullName>
+        <default>false</default>
+        <label>Greater Shepparton (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Hepburn (S)</fullName>
+        <default>false</default>
+        <label>Hepburn (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Hindmarsh (S)</fullName>
+        <default>false</default>
+        <label>Hindmarsh (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Hobsons Bay (C)</fullName>
+        <default>false</default>
+        <label>Hobsons Bay (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Horsham (RC)</fullName>
+        <default>false</default>
+        <label>Horsham (RC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Hume (C)</fullName>
+        <default>false</default>
+        <label>Hume (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Indigo (S)</fullName>
+        <default>false</default>
+        <label>Indigo (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Kingston (C) (Vic.)</fullName>
+        <default>false</default>
+        <label>Kingston (C) (Vic.)</label>
+    </customValue>
+    <customValue>
+        <fullName>Knox (C)</fullName>
+        <default>false</default>
+        <label>Knox (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Latrobe (C) (Vic.)</fullName>
+        <default>false</default>
+        <label>Latrobe (C) (Vic.)</label>
+    </customValue>
+    <customValue>
+        <fullName>Macedon Ranges (S)</fullName>
+        <default>false</default>
+        <label>Macedon Ranges (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Manningham (C)</fullName>
+        <default>false</default>
+        <label>Manningham (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mansfield (S)</fullName>
+        <default>false</default>
+        <label>Mansfield (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Maribyrnong (C)</fullName>
+        <default>false</default>
+        <label>Maribyrnong (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Maroondah (C)</fullName>
+        <default>false</default>
+        <label>Maroondah (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Melbourne (C)</fullName>
+        <default>false</default>
+        <label>Melbourne (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Melton (C)</fullName>
+        <default>false</default>
+        <label>Melton (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mildura (RC)</fullName>
+        <default>false</default>
+        <label>Mildura (RC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mitchell (S)</fullName>
+        <default>false</default>
+        <label>Mitchell (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Moira (S)</fullName>
+        <default>false</default>
+        <label>Moira (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Monash (C)</fullName>
+        <default>false</default>
+        <label>Monash (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Moonee Valley (C)</fullName>
+        <default>false</default>
+        <label>Moonee Valley (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Moorabool (S)</fullName>
+        <default>false</default>
+        <label>Moorabool (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Moreland (C)</fullName>
+        <default>false</default>
+        <label>Moreland (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mornington Peninsula (S)</fullName>
+        <default>false</default>
+        <label>Mornington Peninsula (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mount Alexander (S)</fullName>
+        <default>false</default>
+        <label>Mount Alexander (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Moyne (S)</fullName>
+        <default>false</default>
+        <label>Moyne (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Murrindindi (S)</fullName>
+        <default>false</default>
+        <label>Murrindindi (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Nillumbik (S)</fullName>
+        <default>false</default>
+        <label>Nillumbik (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Northern Grampians (S)</fullName>
+        <default>false</default>
+        <label>Northern Grampians (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Port Phillip (C)</fullName>
+        <default>false</default>
+        <label>Port Phillip (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Pyrenees (S)</fullName>
+        <default>false</default>
+        <label>Pyrenees (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Queenscliffe (B)</fullName>
+        <default>false</default>
+        <label>Queenscliffe (B)</label>
+    </customValue>
+    <customValue>
+        <fullName>South Gippsland (S)</fullName>
+        <default>false</default>
+        <label>South Gippsland (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Southern Grampians (S)</fullName>
+        <default>false</default>
+        <label>Southern Grampians (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Stonnington (C)</fullName>
+        <default>false</default>
+        <label>Stonnington (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Strathbogie (S)</fullName>
+        <default>false</default>
+        <label>Strathbogie (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Surf Coast (S)</fullName>
+        <default>false</default>
+        <label>Surf Coast (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Swan Hill (RC)</fullName>
+        <default>false</default>
+        <label>Swan Hill (RC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Wangaratta (RC)</fullName>
+        <default>false</default>
+        <label>Wangaratta (RC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Warrnambool (C)</fullName>
+        <default>false</default>
+        <label>Warrnambool (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Wellington (S)</fullName>
+        <default>false</default>
+        <label>Wellington (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>West Wimmera (S)</fullName>
+        <default>false</default>
+        <label>West Wimmera (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Whitehorse (C)</fullName>
+        <default>false</default>
+        <label>Whitehorse (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Whittlesea (C)</fullName>
+        <default>false</default>
+        <label>Whittlesea (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Wodonga (C)</fullName>
+        <default>false</default>
+        <label>Wodonga (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Wyndham (C)</fullName>
+        <default>false</default>
+        <label>Wyndham (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Yarra (C)</fullName>
+        <default>false</default>
+        <label>Yarra (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Yarra Ranges (S)</fullName>
+        <default>false</default>
+        <label>Yarra Ranges (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Yarriambiack (S)</fullName>
+        <default>false</default>
+        <label>Yarriambiack (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Balonne (S)</fullName>
+        <default>false</default>
+        <label>Balonne (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Banana (S)</fullName>
+        <default>false</default>
+        <label>Banana (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Barcaldine (R)</fullName>
+        <default>false</default>
+        <label>Barcaldine (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Brisbane (C)</fullName>
+        <default>false</default>
+        <label>Brisbane (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Bundaberg (R)</fullName>
+        <default>false</default>
+        <label>Bundaberg (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cairns (R)</fullName>
+        <default>false</default>
+        <label>Cairns (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cassowary Coast (R)</fullName>
+        <default>false</default>
+        <label>Cassowary Coast (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Central Highlands (R) (Qld)</fullName>
+        <default>false</default>
+        <label>Central Highlands (R) (Qld)</label>
+    </customValue>
+    <customValue>
+        <fullName>Charters Towers (R)</fullName>
+        <default>false</default>
+        <label>Charters Towers (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cook (S)</fullName>
+        <default>false</default>
+        <label>Cook (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Croydon (S)</fullName>
+        <default>false</default>
+        <label>Croydon (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Douglas (S)</fullName>
+        <default>false</default>
+        <label>Douglas (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Flinders (S) (Qld)</fullName>
+        <default>false</default>
+        <label>Flinders (S) (Qld)</label>
+    </customValue>
+    <customValue>
+        <fullName>Fraser Coast (R)</fullName>
+        <default>false</default>
+        <label>Fraser Coast (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Gladstone (R)</fullName>
+        <default>false</default>
+        <label>Gladstone (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Gold Coast (C)</fullName>
+        <default>false</default>
+        <label>Gold Coast (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Goondiwindi (R)</fullName>
+        <default>false</default>
+        <label>Goondiwindi (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Gympie (R)</fullName>
+        <default>false</default>
+        <label>Gympie (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Hinchinbrook (S)</fullName>
+        <default>false</default>
+        <label>Hinchinbrook (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Ipswich (C)</fullName>
+        <default>false</default>
+        <label>Ipswich (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Isaac (R)</fullName>
+        <default>false</default>
+        <label>Isaac (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Livingstone (S)</fullName>
+        <default>false</default>
+        <label>Livingstone (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Lockyer Valley (R)</fullName>
+        <default>false</default>
+        <label>Lockyer Valley (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Logan (C)</fullName>
+        <default>false</default>
+        <label>Logan (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mackay (R)</fullName>
+        <default>false</default>
+        <label>Mackay (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Maranoa (R)</fullName>
+        <default>false</default>
+        <label>Maranoa (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mareeba (S)</fullName>
+        <default>false</default>
+        <label>Mareeba (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Moreton Bay (R)</fullName>
+        <default>false</default>
+        <label>Moreton Bay (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mount Isa (C)</fullName>
+        <default>false</default>
+        <label>Mount Isa (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Murweh (S)</fullName>
+        <default>false</default>
+        <label>Murweh (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Noosa (S)</fullName>
+        <default>false</default>
+        <label>Noosa (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>North Burnett (R)</fullName>
+        <default>false</default>
+        <label>North Burnett (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Redland (C)</fullName>
+        <default>false</default>
+        <label>Redland (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Rockhampton (R)</fullName>
+        <default>false</default>
+        <label>Rockhampton (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Scenic Rim (R)</fullName>
+        <default>false</default>
+        <label>Scenic Rim (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Somerset (R)</fullName>
+        <default>false</default>
+        <label>Somerset (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>South Burnett (R)</fullName>
+        <default>false</default>
+        <label>South Burnett (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Southern Downs (R)</fullName>
+        <default>false</default>
+        <label>Southern Downs (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Sunshine Coast (R)</fullName>
+        <default>false</default>
+        <label>Sunshine Coast (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tablelands (R)</fullName>
+        <default>false</default>
+        <label>Tablelands (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Toowoomba (R)</fullName>
+        <default>false</default>
+        <label>Toowoomba (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Torres (S)</fullName>
+        <default>false</default>
+        <label>Torres (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Townsville (C)</fullName>
+        <default>false</default>
+        <label>Townsville (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Western Downs (R)</fullName>
+        <default>false</default>
+        <label>Western Downs (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Whitsunday (R)</fullName>
+        <default>false</default>
+        <label>Whitsunday (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Adelaide (C)</fullName>
+        <default>false</default>
+        <label>Adelaide (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Adelaide Hills (DC)</fullName>
+        <default>false</default>
+        <label>Adelaide Hills (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Alexandrina (DC)</fullName>
+        <default>false</default>
+        <label>Alexandrina (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Barossa (DC)</fullName>
+        <default>false</default>
+        <label>Barossa (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Berri and Barmera (DC)</fullName>
+        <default>false</default>
+        <label>Berri and Barmera (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Burnside (C)</fullName>
+        <default>false</default>
+        <label>Burnside (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Campbelltown (C) (SA)</fullName>
+        <default>false</default>
+        <label>Campbelltown (C) (SA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Charles Sturt (C)</fullName>
+        <default>false</default>
+        <label>Charles Sturt (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Clare and Gilbert Valleys (DC)</fullName>
+        <default>false</default>
+        <label>Clare and Gilbert Valleys (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Copper Coast (DC)</fullName>
+        <default>false</default>
+        <label>Copper Coast (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Gawler (T)</fullName>
+        <default>false</default>
+        <label>Gawler (T)</label>
+    </customValue>
+    <customValue>
+        <fullName>Goyder (DC)</fullName>
+        <default>false</default>
+        <label>Goyder (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Grant (DC)</fullName>
+        <default>false</default>
+        <label>Grant (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Holdfast Bay (C)</fullName>
+        <default>false</default>
+        <label>Holdfast Bay (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Kangaroo Island (DC)</fullName>
+        <default>false</default>
+        <label>Kangaroo Island (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Light (RegC)</fullName>
+        <default>false</default>
+        <label>Light (RegC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Lower Eyre Peninsula (DC)</fullName>
+        <default>false</default>
+        <label>Lower Eyre Peninsula (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Loxton Waikerie (DC)</fullName>
+        <default>false</default>
+        <label>Loxton Waikerie (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mallala (DC)</fullName>
+        <default>false</default>
+        <label>Mallala (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Marion (C)</fullName>
+        <default>false</default>
+        <label>Marion (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mid Murray (DC)</fullName>
+        <default>false</default>
+        <label>Mid Murray (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mitcham (C)</fullName>
+        <default>false</default>
+        <label>Mitcham (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mount Barker (DC)</fullName>
+        <default>false</default>
+        <label>Mount Barker (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mount Gambier (C)</fullName>
+        <default>false</default>
+        <label>Mount Gambier (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mount Remarkable (DC)</fullName>
+        <default>false</default>
+        <label>Mount Remarkable (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Murray Bridge (RC)</fullName>
+        <default>false</default>
+        <label>Murray Bridge (RC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Naracoorte and Lucindale (DC)</fullName>
+        <default>false</default>
+        <label>Naracoorte and Lucindale (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Northern Areas (DC)</fullName>
+        <default>false</default>
+        <label>Northern Areas (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Norwood Payneham St Peters (C)</fullName>
+        <default>false</default>
+        <label>Norwood Payneham St Peters (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Onkaparinga (C)</fullName>
+        <default>false</default>
+        <label>Onkaparinga (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Playford (C)</fullName>
+        <default>false</default>
+        <label>Playford (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Port Adelaide Enfield (C)</fullName>
+        <default>false</default>
+        <label>Port Adelaide Enfield (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Port Augusta (C)</fullName>
+        <default>false</default>
+        <label>Port Augusta (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Port Lincoln (C)</fullName>
+        <default>false</default>
+        <label>Port Lincoln (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Port Pirie City and Dists (M)</fullName>
+        <default>false</default>
+        <label>Port Pirie City and Dists (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>Prospect (C)</fullName>
+        <default>false</default>
+        <label>Prospect (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Renmark Paringa (DC)</fullName>
+        <default>false</default>
+        <label>Renmark Paringa (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Roxby Downs (M)</fullName>
+        <default>false</default>
+        <label>Roxby Downs (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>Salisbury (C)</fullName>
+        <default>false</default>
+        <label>Salisbury (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Southern Mallee (DC)</fullName>
+        <default>false</default>
+        <label>Southern Mallee (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tatiara (DC)</fullName>
+        <default>false</default>
+        <label>Tatiara (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tea Tree Gully (C)</fullName>
+        <default>false</default>
+        <label>Tea Tree Gully (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>The Coorong (DC)</fullName>
+        <default>false</default>
+        <label>The Coorong (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Unley (C)</fullName>
+        <default>false</default>
+        <label>Unley (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Victor Harbor (C)</fullName>
+        <default>false</default>
+        <label>Victor Harbor (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Wakefield (DC)</fullName>
+        <default>false</default>
+        <label>Wakefield (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Walkerville (M)</fullName>
+        <default>false</default>
+        <label>Walkerville (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>Wattle Range (DC)</fullName>
+        <default>false</default>
+        <label>Wattle Range (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>West Torrens (C)</fullName>
+        <default>false</default>
+        <label>West Torrens (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Whyalla (C)</fullName>
+        <default>false</default>
+        <label>Whyalla (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Yankalilla (DC)</fullName>
+        <default>false</default>
+        <label>Yankalilla (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Yorke Peninsula (DC)</fullName>
+        <default>false</default>
+        <label>Yorke Peninsula (DC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Unincorporated SA</fullName>
+        <default>false</default>
+        <label>Unincorporated SA</label>
+    </customValue>
+    <customValue>
+        <fullName>Albany (C)</fullName>
+        <default>false</default>
+        <label>Albany (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Armadale (C)</fullName>
+        <default>false</default>
+        <label>Armadale (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Ashburton (S)</fullName>
+        <default>false</default>
+        <label>Ashburton (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Augusta-Margaret River (S)</fullName>
+        <default>false</default>
+        <label>Augusta-Margaret River (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Bassendean (T)</fullName>
+        <default>false</default>
+        <label>Bassendean (T)</label>
+    </customValue>
+    <customValue>
+        <fullName>Bayswater (C)</fullName>
+        <default>false</default>
+        <label>Bayswater (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Belmont (C)</fullName>
+        <default>false</default>
+        <label>Belmont (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Beverley (S)</fullName>
+        <default>false</default>
+        <label>Beverley (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Boddington (S)</fullName>
+        <default>false</default>
+        <label>Boddington (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Boyup Brook (S)</fullName>
+        <default>false</default>
+        <label>Boyup Brook (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Bridgetown-Greenbushes (S)</fullName>
+        <default>false</default>
+        <label>Bridgetown-Greenbushes (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Broome (S)</fullName>
+        <default>false</default>
+        <label>Broome (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Bunbury (C)</fullName>
+        <default>false</default>
+        <label>Bunbury (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Busselton (C)</fullName>
+        <default>false</default>
+        <label>Busselton (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cambridge (T)</fullName>
+        <default>false</default>
+        <label>Cambridge (T)</label>
+    </customValue>
+    <customValue>
+        <fullName>Canning (C)</fullName>
+        <default>false</default>
+        <label>Canning (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Capel (S)</fullName>
+        <default>false</default>
+        <label>Capel (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Carnarvon (S)</fullName>
+        <default>false</default>
+        <label>Carnarvon (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Chapman Valley (S)</fullName>
+        <default>false</default>
+        <label>Chapman Valley (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Chittering (S)</fullName>
+        <default>false</default>
+        <label>Chittering (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Claremont (T)</fullName>
+        <default>false</default>
+        <label>Claremont (T)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cockburn (C)</fullName>
+        <default>false</default>
+        <label>Cockburn (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Collie (S)</fullName>
+        <default>false</default>
+        <label>Collie (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Coolgardie (S)</fullName>
+        <default>false</default>
+        <label>Coolgardie (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Corrigin (S)</fullName>
+        <default>false</default>
+        <label>Corrigin (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cottesloe (T)</fullName>
+        <default>false</default>
+        <label>Cottesloe (T)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cuballing (S)</fullName>
+        <default>false</default>
+        <label>Cuballing (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cunderdin (S)</fullName>
+        <default>false</default>
+        <label>Cunderdin (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Dandaragan (S)</fullName>
+        <default>false</default>
+        <label>Dandaragan (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Dardanup (S)</fullName>
+        <default>false</default>
+        <label>Dardanup (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Derby-West Kimberley (S)</fullName>
+        <default>false</default>
+        <label>Derby-West Kimberley (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>East Fremantle (T)</fullName>
+        <default>false</default>
+        <label>East Fremantle (T)</label>
+    </customValue>
+    <customValue>
+        <fullName>East Pilbara (S)</fullName>
+        <default>false</default>
+        <label>East Pilbara (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Esperance (S)</fullName>
+        <default>false</default>
+        <label>Esperance (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Exmouth (S)</fullName>
+        <default>false</default>
+        <label>Exmouth (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Fremantle (C)</fullName>
+        <default>false</default>
+        <label>Fremantle (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Gingin (S)</fullName>
+        <default>false</default>
+        <label>Gingin (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Goomalling (S)</fullName>
+        <default>false</default>
+        <label>Goomalling (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Gosnells (C)</fullName>
+        <default>false</default>
+        <label>Gosnells (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Greater Geraldton (C)</fullName>
+        <default>false</default>
+        <label>Greater Geraldton (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Harvey (S)</fullName>
+        <default>false</default>
+        <label>Harvey (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Irwin (S)</fullName>
+        <default>false</default>
+        <label>Irwin (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Jerramungup (S)</fullName>
+        <default>false</default>
+        <label>Jerramungup (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Joondalup (C)</fullName>
+        <default>false</default>
+        <label>Joondalup (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Kalamunda (S)</fullName>
+        <default>false</default>
+        <label>Kalamunda (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Kalgoorlie/Boulder (C)</fullName>
+        <default>false</default>
+        <label>Kalgoorlie/Boulder (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Karratha (C)</fullName>
+        <default>false</default>
+        <label>Karratha (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Kellerberrin (S)</fullName>
+        <default>false</default>
+        <label>Kellerberrin (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Kwinana (C)</fullName>
+        <default>false</default>
+        <label>Kwinana (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mandurah (C)</fullName>
+        <default>false</default>
+        <label>Mandurah (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Manjimup (S)</fullName>
+        <default>false</default>
+        <label>Manjimup (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Melville (C)</fullName>
+        <default>false</default>
+        <label>Melville (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Moora (S)</fullName>
+        <default>false</default>
+        <label>Moora (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mount Marshall (S)</fullName>
+        <default>false</default>
+        <label>Mount Marshall (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mundaring (S)</fullName>
+        <default>false</default>
+        <label>Mundaring (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Murray (S)</fullName>
+        <default>false</default>
+        <label>Murray (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Nedlands (C)</fullName>
+        <default>false</default>
+        <label>Nedlands (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Northam (S)</fullName>
+        <default>false</default>
+        <label>Northam (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Perth (C)</fullName>
+        <default>false</default>
+        <label>Perth (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Pingelly (S)</fullName>
+        <default>false</default>
+        <label>Pingelly (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Plantagenet (S)</fullName>
+        <default>false</default>
+        <label>Plantagenet (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Port Hedland (T)</fullName>
+        <default>false</default>
+        <label>Port Hedland (T)</label>
+    </customValue>
+    <customValue>
+        <fullName>Rockingham (C)</fullName>
+        <default>false</default>
+        <label>Rockingham (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Serpentine-Jarrahdale (S)</fullName>
+        <default>false</default>
+        <label>Serpentine-Jarrahdale (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>South Perth (C)</fullName>
+        <default>false</default>
+        <label>South Perth (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Stirling (C)</fullName>
+        <default>false</default>
+        <label>Stirling (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Subiaco (C)</fullName>
+        <default>false</default>
+        <label>Subiaco (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Swan (C)</fullName>
+        <default>false</default>
+        <label>Swan (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Victoria Park (T)</fullName>
+        <default>false</default>
+        <label>Victoria Park (T)</label>
+    </customValue>
+    <customValue>
+        <fullName>Victoria Plains (S)</fullName>
+        <default>false</default>
+        <label>Victoria Plains (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Vincent (C)</fullName>
+        <default>false</default>
+        <label>Vincent (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Wagin (S)</fullName>
+        <default>false</default>
+        <label>Wagin (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Wanneroo (C)</fullName>
+        <default>false</default>
+        <label>Wanneroo (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Waroona (S)</fullName>
+        <default>false</default>
+        <label>Waroona (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Westonia (S)</fullName>
+        <default>false</default>
+        <label>Westonia (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Wickepin (S)</fullName>
+        <default>false</default>
+        <label>Wickepin (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Williams (S)</fullName>
+        <default>false</default>
+        <label>Williams (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Wongan-Ballidu (S)</fullName>
+        <default>false</default>
+        <label>Wongan-Ballidu (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>York (S)</fullName>
+        <default>false</default>
+        <label>York (S)</label>
+    </customValue>
+    <customValue>
+        <fullName>Break O&apos;Day (M)</fullName>
+        <default>false</default>
+        <label>Break O&apos;Day (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>Brighton (M)</fullName>
+        <default>false</default>
+        <label>Brighton (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>Burnie (C)</fullName>
+        <default>false</default>
+        <label>Burnie (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Central Coast (M) (Tas.)</fullName>
+        <default>false</default>
+        <label>Central Coast (M) (Tas.)</label>
+    </customValue>
+    <customValue>
+        <fullName>Central Highlands (M) (Tas.)</fullName>
+        <default>false</default>
+        <label>Central Highlands (M) (Tas.)</label>
+    </customValue>
+    <customValue>
+        <fullName>Circular Head (M)</fullName>
+        <default>false</default>
+        <label>Circular Head (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>Clarence (C)</fullName>
+        <default>false</default>
+        <label>Clarence (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Derwent Valley (M)</fullName>
+        <default>false</default>
+        <label>Derwent Valley (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>Devonport (C)</fullName>
+        <default>false</default>
+        <label>Devonport (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Dorset (M)</fullName>
+        <default>false</default>
+        <label>Dorset (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>George Town (M)</fullName>
+        <default>false</default>
+        <label>George Town (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>Glamorgan/Spring Bay (M)</fullName>
+        <default>false</default>
+        <label>Glamorgan/Spring Bay (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>Glenorchy (C)</fullName>
+        <default>false</default>
+        <label>Glenorchy (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Hobart (C)</fullName>
+        <default>false</default>
+        <label>Hobart (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Huon Valley (M)</fullName>
+        <default>false</default>
+        <label>Huon Valley (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>Kentish (M)</fullName>
+        <default>false</default>
+        <label>Kentish (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>King Island (M)</fullName>
+        <default>false</default>
+        <label>King Island (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>Kingborough (M)</fullName>
+        <default>false</default>
+        <label>Kingborough (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>Latrobe (M) (Tas.)</fullName>
+        <default>false</default>
+        <label>Latrobe (M) (Tas.)</label>
+    </customValue>
+    <customValue>
+        <fullName>Launceston (C)</fullName>
+        <default>false</default>
+        <label>Launceston (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Meander Valley (M)</fullName>
+        <default>false</default>
+        <label>Meander Valley (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>Northern Midlands (M)</fullName>
+        <default>false</default>
+        <label>Northern Midlands (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>Sorell (M)</fullName>
+        <default>false</default>
+        <label>Sorell (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>Southern Midlands (M)</fullName>
+        <default>false</default>
+        <label>Southern Midlands (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>Waratah/Wynyard (M)</fullName>
+        <default>false</default>
+        <label>Waratah/Wynyard (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>West Tamar (M)</fullName>
+        <default>false</default>
+        <label>West Tamar (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>Alice Springs (T)</fullName>
+        <default>false</default>
+        <label>Alice Springs (T)</label>
+    </customValue>
+    <customValue>
+        <fullName>Barkly (R)</fullName>
+        <default>false</default>
+        <label>Barkly (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Darwin (C)</fullName>
+        <default>false</default>
+        <label>Darwin (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Katherine (T)</fullName>
+        <default>false</default>
+        <label>Katherine (T)</label>
+    </customValue>
+    <customValue>
+        <fullName>Litchfield (M)</fullName>
+        <default>false</default>
+        <label>Litchfield (M)</label>
+    </customValue>
+    <customValue>
+        <fullName>MacDonnell (R)</fullName>
+        <default>false</default>
+        <label>MacDonnell (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Palmerston (C)</fullName>
+        <default>false</default>
+        <label>Palmerston (C)</label>
+    </customValue>
+    <customValue>
+        <fullName>West Daly (R)</fullName>
+        <default>false</default>
+        <label>West Daly (R)</label>
+    </customValue>
+    <customValue>
+        <fullName>Unincorporated ACT</fullName>
+        <default>false</default>
+        <label>Unincorporated ACT</label>
+    </customValue>
+    <customValue>
+        <fullName>Unincorp. Other Territories</fullName>
+        <default>false</default>
+        <label>Unincorp. Other Territories</label>
+    </customValue>
+    <masterLabel>Local Government Areas</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

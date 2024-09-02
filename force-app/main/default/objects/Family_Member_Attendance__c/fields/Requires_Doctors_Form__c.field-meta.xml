@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requires_Doctors_Form__c</fullName>
+    <description>Calculated field that determines if someone needs a med form</description>
+    <formula>if( text(Currently_on_Treatment__c) = &quot;Yes&quot;,True,if ( text(Medication_and_Vitamins__c)=&quot;Original Packaging&quot;, True,False ))</formula>
+    <inlineHelpText>This field shows whether a child needs a med form based on rego information</inlineHelpText>
+    <label>Requires Doctors Form</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

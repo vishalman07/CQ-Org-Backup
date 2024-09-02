@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.Family_Member_Type__c</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact.Age__c</field>
+    </columns>
+    <columns>
+        <field>ADDRESS2_CITY</field>
+    </columns>
+    <description>Pt Macquarie, Nth Haven, Laurieton, Bonny Hills, Kew</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Branch_Office__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Northern New South Wales,Newcastle</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Family_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Former Patient,Former Offspring Family,Test Family</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_CITY</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Port Macquarie,Bagnoo,Bago,Ballengarra,Banda Banda,Batar,Beechwood,Bellangry,Birdwood,Black Creek,Blackmans Point,Bobs Creek,Bonny Hills,Boorganna,Bril Bril,Brombin,Byabarra,Camden Haven,Camden Head,Comboyne,Cooperabung,Crosslands,Deauville,Debenham,Diamond Head,Dondingalong,Doyles River,Dunbogan,Ellenborough,Fernbank Creek,Forbes River,Frazers Creek,Gearys Flat,Grants Beach,Gum Scrub,Hacks Ferry,Hartys Plains,Herons Creek,Hollisdale,Huntingdon,Hyndmans Creek,Innes View,Jolly Nose,Kendall,Kerewong,Kew,Kindee,Kings Creek,Kippara,Lake Cathie,Lake Innes,Laurieton,Limeburners Creek,Logans Crossing,Long Flat,Lorne,Lower Pappinbarra,Marlo Merrican,Middle Brother,Mortons Creek,Mount Seaview,North Brother,North Haven,North Shore,Pappinbarra,Pembrooke,Pipeclay,Rawdon Island,Redbank,Riverside,Rollands Plains,Rosewood,Rossglen,Sancrox,Swans Crossing,Telegraph Point,The Hatch,Thrumster,Toms Creek,Upper Pappinbarra,Upper Rollands Plains,Upsalls Creek,Wauchope,Werrikimbe,West Haven,Yarras,Yippin Creek</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Family_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Pt Mac/Hastings LGA fam mem and age</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <sortColumn>Contact.Age__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

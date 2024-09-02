@@ -1,0 +1,5 @@
+<apex:page standardController="Family_Attendance__c" >
+
+            <c:FamilyMemberAttendanceChildList FamilyAttendanceId="{!Family_Attendance__c.id}" AttendanceStatus="Accepted" />
+
+</apex:page>

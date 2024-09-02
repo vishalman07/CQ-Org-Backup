@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NAT_Active_RTF_s</fullName>
+    <columns>NAME</columns>
+    <columns>CQ_RTFManager__c</columns>
+    <columns>ATF_Status__c</columns>
+    <columns>Page_ID__c</columns>
+    <columns>Campaign__c</columns>
+    <columns>Branch__c</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Legacy_CQ_Contact__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Fundraising_Start_Date__c</columns>
+    <columns>Contact__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ATF_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Closed,Authority To Fundraise Declined</value>
+    </filters>
+    <filters>
+        <field>Campaign__c</field>
+        <operation>notEqual</operation>
+        <value>DECLINED</value>
+    </filters>
+    <filters>
+        <field>Branch__c</field>
+        <operation>equals</operation>
+        <value>National</value>
+    </filters>
+    <label>NAT Active RTF&apos;s</label>
+</ListView>

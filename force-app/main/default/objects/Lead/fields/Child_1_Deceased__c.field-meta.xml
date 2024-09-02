@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_1_Deceased__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>For when Patient Bereaved families sign up and patient has already passed.</description>
+    <label>Child 1 Deceased?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

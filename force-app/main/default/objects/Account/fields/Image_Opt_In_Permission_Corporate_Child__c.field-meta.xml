@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Image_Opt_In_Permission_Corporate_Child__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>For children in my household, I allow photos/videos to be shared with our corporate partners and major donors, to promote Camp Quality&apos;s charitable purposes and the partnership.</inlineHelpText>
+    <label>Child Image Opt-In Permission Corporate</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

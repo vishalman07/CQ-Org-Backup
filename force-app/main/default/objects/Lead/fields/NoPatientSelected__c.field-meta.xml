@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NoPatientSelected__c</fullName>
+    <formula>not(OR( Child_1_Has_Cancer__c , Child_2_Has_Cancer__c , Child_3_Has_Cancer__c , Child_4_Has_Cancer__c , Parent_1_Has_Cancer__c, Parent_2_Has_Cancer__c))</formula>
+    <label>No Patient Selected</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

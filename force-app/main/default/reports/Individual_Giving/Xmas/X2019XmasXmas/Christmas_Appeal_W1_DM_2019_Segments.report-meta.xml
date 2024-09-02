@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>TOTAL_ACTUAL_COST:SUM / TOTAL_NUM_WON_OPPORTUNITIES:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Cost Per Gift</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>NUM_OPPORTUNITIES</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>AMOUNT_WON</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_PARENT_NAME</field>
+    </columns>
+    <description>breakdown</description>
+    <filter>
+        <criteriaItems>
+            <column>CAMPAIGN_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>NAT1911 Xmas Appeal W1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>NAT1911 Xmas Appeal W1 - 01BQ,NAT1911 Xmas Appeal W1 - 02HV,NAT1911 Xmas Appeal W1 - 03MV,NAT1911 Xmas Appeal W1 - 04RG,NAT1911 Xmas Appeal W1 - 05RGC,NAT1911 Xmas Appeal W1 - 06NCD,NAT1911 Xmas Appeal W1 - 07ACD,NAT1911 Xmas Appeal W1 - 08CDL,NAT1911 Xmas Appeal W1 - 09LCD,NAT1911 Xmas Appeal W1 - 10SDS</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CAMPAIGN_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Christmas Appeal W1 DM 2019 Segments</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+</Report>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_21234623</developerName>
+        <masterLabel>Adult vs Child</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Campaign.Family_Attendances__r.Family_Member_Attendance__r$Contact__c.FamilyMemberStatus__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Adult</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adult Patient</sourceValue>
+            </sourceValues>
+            <value>Adult</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Child</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Eligible Child</sourceValue>
+            </sourceValues>
+            <value>Child</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_71094759</developerName>
+        <masterLabel>Programs</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Campaign$Event_Type__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Junior Camp</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Middle Camp</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mini Camp</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Multi Age Group Camp</sourceValue>
+            </sourceValues>
+            <value>Aged Camp</value>
+        </values>
+    </buckets>
+    <columns>
+        <aggregateTypes>Unique</aggregateTypes>
+        <field>Campaign.Family_Attendances__r.Family_Member_Attendance__r$Contact__c.Id</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Unique</aggregateTypes>
+        <field>Campaign.Family_Attendances__r$Family__c.Id</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Campaign$Event_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Family Camp,Family Fun Day,Family Respite,Junior Camp,Middle Camp,Mini Camp,Multi Age Group Camp</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Family_Attendances__r$FA_00000__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Attended</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>test,cancelled</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_71094759</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign.Family_Attendances__r$Family__c.Family_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_21234623</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Programs Attendance for Aldi 2018</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Campaigns_with_Family_Attendances_with_Family_Memb__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Campaign.Family_Attendances__r.Family_Member_Attendance__r$Contact__c.Id</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Campaign$StartDate</dateColumn>
+        <endDate>2018-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-01-01</startDate>
+    </timeFrameFilter>
+</Report>

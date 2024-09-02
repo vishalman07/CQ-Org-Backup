@@ -1,0 +1,1 @@
+<apex:page standardController="Contact" recordSetVar="cons" extensions="VolunteerLMSCSV" contentType="text/csv#VolunteerLmsExport.csv" applyHtmlTag="false" showHeader="false" sidebar="false">{!csvString}</apex:page>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer</fullName>
+    <active>true</active>
+    <description>Volunteer Registration</description>
+    <label>Volunteer</label>
+    <picklistValues>
+        <picklist>Delivery_Method__c</picklist>
+        <values>
+            <fullName>Collected by the Family Group from Camp Quality or another Location</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivered by Camp Quality %28Standard Mail or Express Mail%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Picked up from Box Office by the Family Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To be emailed %28as a PDF attachment%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>First_in_first_served__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Internally_Allocated__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ticket_Format__c</picklist>
+        <values>
+            <fullName>Electronic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ticket_Type__c</picklist>
+        <values>
+            <fullName>Family</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Individual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

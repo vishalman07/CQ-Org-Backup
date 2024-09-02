@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Puppet_Show</fullName>
+    <active>true</active>
+    <label>Puppet Show</label>
+    <picklistValues>
+        <picklist>Child_has_cancer_diagnosis__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Child_has_met_puppets__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Child_has_sight_or_hearing_impairment__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Child_has_used_video_conferencing__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Child_s_Gender__c</picklist>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Male</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prefer not to answer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cost_Centre_To_Bill_To__c</picklist>
+        <values>
+            <fullName>1010 - Corporate Partnerships</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1910 - Community Fundraising</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cost_Centre__c</picklist>
+        <values>
+            <fullName>1110 - Corporate Partnerships</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1120 - Corporate Grant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1130 - Government Grants</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1210 - Major Gifts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1220 - Private Trusts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1310 - Supper Club</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1320 - Dine at Mine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1330 - Escarpade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1340 - Convoy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1350 - 1000 Kms for Kids</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1360 - WesCarpade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1398 - Event - Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1400 - Donor Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1410 - RG Face to Face</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1420 - RG Telemarketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1430 - RG Other Appeal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1440 - RG DM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1460 - Acquisition Christmas Appeal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1470 - Acquisition Tax Appeal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1510 - Renewal Christmas Appeal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1520 - Renewal Tax Appeal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1530 - Renewal Spring Appeal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1540 - Renewal Autumn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1550 - Renewal Newsletter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1610 - Digital Campaign Tight Hairdo %2F Shout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1620 - Digital Campaign Tax Appeal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1630 - Digital Campaign - Autumn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1640 - Change%2EOrg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1700 - Supporter Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1801 - Bequests</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1910 - Community Fundraising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1920 - Special Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19201 - Cherry Ball</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19202 - Giggle Ball</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19299 - Other Special Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1930 - Support %2F Activity Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1940 - Local Corporate Fundraising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1950 - Clubs %26 Community</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1997 - Community Fundraising - General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2110 - Mini Camp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2120 - Junior Camp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2130 - Middle Camp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2140 - Family Camp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2145 - KICC Family Camp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2150 - Combo Camp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2155 - KICC Combo Camp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2170 - Bereaved Camps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2180 - Family Fun Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2185 - KICC Family Fun Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2210 - Primary School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2310 - Hospital Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2320 - Child Life Therapy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2410 - Holiday House</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2415 - Salamander Bay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2430 - Other Family Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2450 - Family Experience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2510 - Kids App</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2701 - Volunteer Programs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2710 - Volunteer - Induction %26 Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2720 - Volunteer - Oranges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2810 - Program Promotion %26 Awareness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2830 - Program Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2840 - Program Evaluation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2898 - Programs - General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3100 - Marketing - Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3200 - Marketing - Brand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3400 - Marketing - Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4100 - General P%26C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5200 - Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6000 - CEO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7000 - Board</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Family_registered_with_CQ__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_the_school_open_to_doing_media__c</picklist>
+        <values>
+            <fullName>Maybe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_your_family_registered_with_CQ__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Parent_with_cancer_diagnosis__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Performance_Group__c</picklist>
+        <values>
+            <fullName>NSW%2FACT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>National</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA%2FNT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC%2FTAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Show_Duration__c</picklist>
+        <values>
+            <fullName>Long</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Short</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Show_Priority__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Show_Referral__c</picklist>
+        <values>
+            <fullName>Cancer Hub</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal CQ referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other NFP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Staff</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Show_Status__c</picklist>
+        <values>
+            <fullName>Booked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Performed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Show_Sub_Type__c</picklist>
+        <values>
+            <fullName>Digital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puppet Live Q%26A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puppet Live Roving Appearance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puppet Live Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puppet Video</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Show_Type__c</picklist>
+        <values>
+            <fullName>Brand Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Camp Quality Event - Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Camp Quality Event - School Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Country School Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital Content</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital Visit - No Puppets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metropolitan School Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puppet Digital Playdate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workshop</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Siblings_with_cancer_diagnosis__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Turnout__c</picklist>
+        <values>
+            <fullName>Busy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quiet</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Granted_Authority_Summary__c</fullName>
+    <inlineHelpText>Give a clear description of the fundraising that is being approved. Include details of the date/venue &amp; approved fundraising mechanisms. This information is a merge field on the ATF letter</inlineHelpText>
+    <label>Granted Authority Summary</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

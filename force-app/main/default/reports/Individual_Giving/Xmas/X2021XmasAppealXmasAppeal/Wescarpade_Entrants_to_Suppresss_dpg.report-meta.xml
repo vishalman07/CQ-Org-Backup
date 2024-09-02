@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$Id</field>
+    </columns>
+    <columns>
+        <field>Contact$Email</field>
+    </columns>
+    <columns>
+        <field>Contact$Solicit_Code__c</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Parent</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>WA20 Wescarpade,Camp Quality WesCarpade 2021 PARENT,WA21 wesCarpade Bunbury GD</value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>Contact$Id</primaryTableColumn>
+        <relatedTable>CampaignMember-Campaign</relatedTable>
+        <relatedTableJoinColumn>Contact</relatedTableJoinColumn>
+    </crossFilters>
+    <filter>
+        <criteriaItems>
+            <column>Contact.CampaignMembers$Parent</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>2021 Xmas Appeal - Parent,2021 Spring Appeal - Parent Campaign</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.CampaignMembers$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Wescarpade Entrants to Suppresss</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Campaigns_Campaign_Members__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

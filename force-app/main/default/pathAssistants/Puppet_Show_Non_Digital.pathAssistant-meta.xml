@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>PuppetShow__c</entityName>
+    <fieldName>Show_Status__c</fieldName>
+    <masterLabel>Puppet Show - Non Digital</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Puppet_Show_Name__c</fieldNames>
+        <fieldNames>Confirmation_Sent__c</fieldNames>
+        <fieldNames>Family_Contacted__c</fieldNames>
+        <fieldNames>Interested_in_donating_fundraising__c</fieldNames>
+        <fieldNames>Is_the_school_open_to_doing_media__c</fieldNames>
+        <info>&lt;ol&gt;&lt;li&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;Ensure Puppet Show Name naming convention is STATE YYMM School name &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;Send confirmation email to school &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;Contact any CQ families to confirm show details &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;Create Outlook calendar invitation and invite performance team as well as National PSP Calendar &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;Add record to KPI Tracker spreadsheet &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;If school showed enthusiasm for fundraising or media opportunities, email respective CQ staff to &lt;/span&gt;&lt;span style=&quot;font-size: 14.6667px;&quot;&gt;prioritise&lt;/span&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt; them (notifications will be sent to the team automatically)&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;</info>
+        <picklistValueName>Booked</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Child_Requesting_Show__c</fieldNames>
+        <info>&lt;ol&gt;&lt;li&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;Advise relevant CQ families, if required  &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;Add cancelled record to KPI Tracker spreadsheet &lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Cancelled</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>School_Main_Contact__c</fieldNames>
+        <fieldNames>Family_Contacted__c</fieldNames>
+        <info>&lt;p&gt;&lt;strong&gt;Adding a main contact:&lt;/strong&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;In the &lt;strong&gt;Main Contact&lt;/strong&gt; field, type the name of the contact to see if they are in the system already&lt;/li&gt;&lt;li&gt;If yes, click on the name and it will be added to the field. &lt;/li&gt;&lt;li&gt;The email will be auto populated if it is on the Contact. &lt;ol&gt;&lt;li&gt;If this is inaccurate, you will need to click on the Contact name to open the record and edit the email address field in the contact and save. It will auto-populate once updated. &lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;strong&gt;New Contact&lt;/strong&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;If when you type the name and no records appear, you will need to create a new contact. &lt;ol&gt;&lt;li&gt;In the field Main Contact select &lt;strong&gt;+New Contact&lt;/strong&gt; &amp;amp; choose &lt;strong&gt;General Contact&lt;/strong&gt; and add in these fields:&lt;ol&gt;&lt;li&gt;Full name&lt;/li&gt;&lt;li&gt;Role&lt;/li&gt;&lt;li&gt;Email&lt;/li&gt;&lt;li&gt;Primary Affiliation- this should be the school/org they work for.&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;li&gt;Save &amp;amp; it will add to your booking automatically.&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;/ol&gt;</info>
+        <picklistValueName>In Progress</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Child_Requesting_Show__c</fieldNames>
+        <info>&lt;ol&gt;&lt;li&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;Set reminder to contact school at appropriate agreed time &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;Advise relevant CQ families, if required &lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>On Hold</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Thank_You_Sent__c</fieldNames>
+        <info>&lt;ol&gt;&lt;li&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;Send thank you email to school  &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;Set reminder to call school again in 18 months &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;Process any fundraising money received, if required  &lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;</info>
+        <picklistValueName>Performed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Child_Requesting_Show__c</fieldNames>
+        <fieldNames>Family_Have_Informed_School_About_Cancer__c</fieldNames>
+        <fieldNames>Family_Contacted__c</fieldNames>
+        <fieldNames>Venue__c</fieldNames>
+        <info>&lt;ol&gt;&lt;li&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;Check if ‘family have informed school about cancer’ before contacting school  &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;If required, contact family to discuss booking &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;Add request as a lead into the KPI Tracker document  &lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;</info>
+        <picklistValueName>Requested</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Puppet_Show</recordTypeName>
+</PathAssistant>

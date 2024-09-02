@@ -1,0 +1,32 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif" size="4"><div>Hi {!Lead.FirstName},<br><br></div><div><p class="MsoNormal" style="margin-bottom:13.5pt"><span style="font-size: 13.5pt;">We are so excited that you made the
+first step in helping us level the playing field and become a volunteer for
+Camp Quality through our Bro Up campaign. <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size: 13.5pt;">We
+are holding volunteer interviews near you soon and would love to meet you. If
+you are still interested in joining us, please
+finalise your application by clicking<span class="apple-converted-space">&nbsp;</span><a href="https://www.campquality.org.au/article/524-register-broup-2017?First_Name={!Lead.FirstName}&amp;Last_Name={!Lead.LastName}&amp;EOIID={!Lead.ExternalID__c}">here</a>.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size: 13.5pt;"><br>
+</span><span style="font-size: 13.5pt;">If you have any questions,
+please don’t hesitate to contact me or to check out our&nbsp;<u><a href="https://www.campquality.org.au/ways-you-can-help/become-a-volunteer">Become
+A Volunteer</a></u>&nbsp;page. If you decide not to proceed with your
+application, we would love to hear from you as to why.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:11.0pt">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size: 13.5pt;">We </span><span style="font-size: 13.5pt;">look
+forward to hearing from you and can't wait to have
+you along for a camp - it's going to be an experience you'll always
+remember&nbsp;</span><span style="font-family: Wingdings;">J</span><span style="font-size: 13.5pt;"><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size: 13.5pt;">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size: 13.5pt;">Kind Regards,<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size: 13.5pt;"><br></span></p><p class="MsoNormal"><span style="font-size: 13.5pt;">{!User.FirstName}</span><span style="font-size:11.0pt"><o:p></o:p></span></p></div></font><font face="Arial, sans-serif" size="4"><div><br></div></font></div>]]></td>
+</tr>
+</table>

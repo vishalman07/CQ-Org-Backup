@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>media_opt_in_share_participants__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>I allow photos/video to be shared with participants from Camp Quality services and programs via a password protected photo gallery</inlineHelpText>
+    <label>Image Opt-in Participant Sharing</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

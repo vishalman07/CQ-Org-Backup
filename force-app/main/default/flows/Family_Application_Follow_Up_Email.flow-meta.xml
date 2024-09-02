@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>When family does not answer phone, send follow up email</description>
+        <name>Send_email_to_new_family</name>
+        <label>Send email to new family</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>NewFamilyFollowUpEmailTemplate</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>$User.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Camp Quality Registration Information</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <description>Sends emails to families when unable to contact them.</description>
+    <environments>Default</environments>
+    <interviewLabel>Family Application Follow Up Email {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Family Application Follow Up Email</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Send_email_to_new_family</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Contacted</stringValue>
+            </value>
+        </filters>
+        <object>Lead</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>InvalidDraft</status>
+    <textTemplates>
+        <name>NewFamilyFollowUpEmailTemplate</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Thank you for registering with Camp Quality. I tried to call you but didn’t manage to get through. I understand you must have a lot going on at the moment.&lt;/p&gt;&lt;p&gt; &lt;/p&gt;&lt;p&gt; Whenever you are ready, &lt;span style=&quot;color: black;&quot;&gt;can you &lt;/span&gt;please provide us with some more information about your family. &lt;span style=&quot;color: black;&quot;&gt;It should only take a couple of minutes and this &lt;/span&gt;information will help us to understand your family’s needs and finalise your registration so we can match you with the most appropriate services and programs &lt;span style=&quot;color: black;&quot;&gt;and you can start accessing them immediately. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;1.&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 7pt;&quot;&gt; &lt;/span&gt;Names of any other parents or carers in your household&lt;/p&gt;&lt;p&gt;2.&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 7pt;&quot;&gt; &lt;/span&gt;Name of the person in your family who has been diagnosed with cancer&lt;/p&gt;&lt;p&gt;3.&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 7pt;&quot;&gt; &lt;/span&gt;What type of cancer have they been diagnosed with?&lt;/p&gt;&lt;p&gt;4.&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 7pt;&quot;&gt; &lt;/span&gt;If they are still having treatment, what hospital are they being treated at?&lt;/p&gt;&lt;p&gt;5.&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 7pt;&quot;&gt; &lt;/span&gt;Your full address&lt;/p&gt;&lt;p&gt;6.&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 7pt;&quot;&gt; &lt;/span&gt;Would you be interested in Camp Quality’s puppets performing their cancer education show at your child/ren’s school?&lt;/p&gt;&lt;p&gt;7.&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 7pt;&quot;&gt; &lt;/span&gt;If yes, what is your child/ren’s school?&amp;nbsp;&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>

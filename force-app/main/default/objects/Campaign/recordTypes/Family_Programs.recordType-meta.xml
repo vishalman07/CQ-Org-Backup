@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Family_Programs</fullName>
+    <active>true</active>
+    <label>Family Programs And Puppet Tours</label>
+    <picklistValues>
+        <picklist>Account_No__c</picklist>
+        <values>
+            <fullName>4010</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4028</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4030</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4040</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4050</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4070</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4080</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4090</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4100</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4110</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4115</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4120</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4125</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4129</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4130 - Event Income</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4150</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4240</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4300</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4520</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4998</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No GL Allocated</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Approved__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Available_Getting_Home_Locations__c</picklist>
+        <values>
+            <fullName>ACT - McDonalds %28Majura Road%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Albion Park - Train Station</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armidale - McDonalds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ballina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burleigh Heads - Stockland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Distance - I live more than 2 hrs from transport stop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gundagai Visitors Centre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lismore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Muswellbrook - McDonalds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nabiac - Caltex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nabiac Hotel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singleton - McDonalds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sydney - Location TBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Townsville - Reef HQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Wallsend</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Available_Getting_to_Camp_Locations__c</picklist>
+        <values>
+            <fullName>ACT - McDonalds %28Majura Road%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Albion Park - Train Station</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armidale - McDonalds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ballina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burleigh Heads - Stockland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Distance - I live more than 2 hrs from transport stop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gundagai Visitors Centre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lismore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Muswellbrook - McDonalds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nabiac - Caltex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nabiac Hotel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singleton - McDonalds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sydney - Location TBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Townsville - Reef HQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Wallsend</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Branch_Code__c</picklist>
+        <values>
+            <fullName>%3D%2201%22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>31</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>41</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>51</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>71</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>81</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>91</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cost_Centre__c</picklist>
+        <values>
+            <fullName>1010</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1026</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1130</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1220</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1230</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1310</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1331</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1345</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1351</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1352</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1370</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1420</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1502</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1605</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1945</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2110 - Mini Camp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2120 - Junior Camp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2130 - Middle Camp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2135 - KICC Middle Camp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2140 - Family Camp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2145 - KICC Family Camp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2150 - Combo Camp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2155 - KICC Combo Camp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2170 - Bereaved Camps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2180 - Family Fun Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2185 - KICC Family Fun Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2210 - Primary School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2310 - Hospital Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2320 - Child Life Therapy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2410 - Holiday House</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2415 - Salamander Bay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2430 - Other Family Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2450 - Family Experience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2510 - Kids App</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2701 - Volunteer Programs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2710 - Volunteer - Induction %26 Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2720 - Volunteer - Oranges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2810 - Program Promotion %26 Awareness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2830 - Program Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2840 - Program Evaluation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3100 - Marketing - Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3200 - Marketing - Brand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3400 - Marketing - Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4100 - General P%26C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4200 - Learning %26 Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4300 - Conference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4400 - Oranges - Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Cost Centre Allocated</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Group__c</picklist>
+        <values>
+            <fullName>ACT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ACT%2FILLA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CQLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ILLA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NNSW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NQLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA%2FNT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNSW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SYD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Type__c</picklist>
+        <values>
+            <fullName>Family Dinner%2FPizza Night</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family Playgroup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family Respite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live Performance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puppet Tour</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Overall_Level_of_Risk_for_the_Event__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Source__c</picklist>
+        <values>
+            <fullName>Donation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchase</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Approved for portal and invites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Do Not Publish To Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planned</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Snapshot Approved</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Waitlist__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

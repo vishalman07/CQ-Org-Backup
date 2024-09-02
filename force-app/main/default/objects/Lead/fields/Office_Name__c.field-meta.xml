@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Office_Name__c</fullName>
+    <externalId>false</externalId>
+    <formula>if (text( Office__c ) = &quot;Adelaide&quot;,&quot;South Australia&quot;,
+if(text(Office__c) = &quot;Darwin&quot;,&quot;Northern Territory&quot;,
+if (text(Office__c) = &quot;Perth&quot;,&quot;Western Australia&quot;,
+if (text(Office__c) = &quot;Hobart&quot;,&quot;Tasmania&quot;,
+if (text(Office__c) = &quot;Melbourne&quot;,&quot;Victoria&quot;,
+if (text(Office__c) = &quot;Canberra&quot;,&quot;SNSW&quot;,
+if (text(Office__c) = &quot;Newcastle&quot;,&quot;Newcastle&quot;,
+if (text(Office__c) = &quot;Coffs Harbour&quot;,&quot;Northern New South Wales&quot;,
+if (text(Office__c) = &quot;Sydney&quot;,&quot;Sydney&quot;,
+if (text(Office__c) = &quot;Brisbane&quot;,&quot;Queensland&quot;,
+if (text(Office__c) = &quot;Illawarra&quot;, &quot;SNSW&quot;,
+if (text(Office__c) = &quot;Rockhampton&quot;,&quot;Queensland&quot;,
+if (text(Office__c) = &quot;Cairns&quot;,&quot;North Queensland&quot;,
+if (text(Office__c) = &quot;Townsville&quot;,&quot;Queensland&quot;,
+if (text(Office__c) = &quot;National Office&quot;,&quot;Sydney&quot;,
+SUBSTITUTE(text(Office__c),&quot; Office&quot;, &quot;&quot;)  )))))))))))))))</formula>
+    <label>Office Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

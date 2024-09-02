@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PSP_Declined_On__c</fullName>
+    <inlineHelpText>Family/School offered show but decline it.  Use this field to show this, and do follow up reports in the future.</inlineHelpText>
+    <label>PSP Declined On</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Composer_Contact_LFY_RG_Total</fullName>
+    <availability>online</availability>
+    <description>Originally created by Conga Solution Manager. Date of last use of Update Button from Conga Solution record: https://campquality--apxtconga4.visualforce.com/a0A2x00000El9H3EAJ
+03-Aug-2022 04:19:07 PM</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>false</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>660</height>
+    <isResizable>false</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Contact LFY RG Total</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/apex/APXTConga4__Conga_Composer?SolMgr=1
+&amp;serverUrl={!API.Partner_Server_URL_370}
+&amp;Id={!APXTConga4__Composer_QuickMerge__c.Id}
+
+&amp;QueryId=[ConLFYRG]a042x00000kp2eg
+
+&amp;TemplateId=a0C2x00000XXcT3
+
+&amp;AC0=1
+&amp;AC1=2021/2022+Tax+Receipt+Created</url>
+    <width>900</width>
+</WebLink>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_81277369</developerName>
+        <masterLabel>Branch Office</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>CAMPAIGN_NAME</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>VIC2102FC Phillip Island</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VIC2103 FE Secrets of the Sky</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VIC2103 FFD FunFields</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VIC2104 KICC Combo Camp</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VIC2105 FFD Camp Marysville</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VIC2105 Mini Camp</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VIC210607 PSCEP Tour - Northern Victoria</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VIC2106 FC Mornington</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VIC2107 FC KICC Ballarat</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VIC2108 FC 1</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VIC2108 FC 2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VIC2108 FFD Scienceworks</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VIC2109 Combo Camp</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VIC2110 FC Halls Gap</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VIC2110 FFD Echuca</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VIC2111 FFD KICC Melbourne Zoo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VIC2111 FFD Melbourne Aquarium</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VIC2112 FC Anglesea</sourceValue>
+            </sourceValues>
+            <value>VIC</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>SNSW2102 FFD Jamberoo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SNSW2103 FC Huskisson</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SNSW2104 Combo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SNSW2105 Mini Camp ILLA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SNSW2108 FC Greenhills</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SNSW2110 FFD ACT National Zoo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SNSW2112 FFD Big Splash</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SNSW2112 FFD Symbio</sourceValue>
+            </sourceValues>
+            <value>SNSW</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>Donut</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>CAMPAIGN_NAME</groupingColumn>
+        <legendPosition>Bottom</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>true</showPercentage>
+        <showTotal>true</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Family_Attendance__c.Family_Name__c</field>
+    </columns>
+    <columns>
+        <field>START_DATE</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>START_DATE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>THIS_YEAR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Family_Attendance__c.FA_00000__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Attended</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Campaign.Age_Camp,Campaign.Family_Camp,Campaign.Family_Programs,Campaign.Family_Experience,Campaign.Family_Fun_Day</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>kicc</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>RECORDTYPE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CAMPAIGN_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>CY KICC Family attendances</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignCustomEntity$Family_Attendance__c</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+</Report>

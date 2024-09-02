@@ -1,0 +1,714 @@
+<apex:page standardController="Campaign" title="Manage Invitations" extensions="FamilyInvitationsController" sidebar="false" cache="false" >
+    
+    <apex:includeLightning />
+    
+    <apex:includeScript value="{!URLFOR($Resource.assets, '/assets/js/jquery.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.OneStarter,'jquery.onestarter.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.assets, '/assets/js/jquery.validate.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.assets, '/assets/js/additional-methods.js')}" />
+    
+    <apex:stylesheet value="{!$Resource.LightningDesign}"/>
+    
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS201, '/assets/styles/salesforce-lightning-design-system.min.css')}" />
+    
+    <apex:stylesheet value="{!URLFOR($Resource.OneStarter,'icons.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.OneStarter,'styles.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.OneStarter,'OneStarter.css')}"/>
+    
+    <script type="text/javascript"> 
+    (function(){try{var a=navigator.userAgent; 
+                    if((a.indexOf('Salesforce')!=-1)&&(a.indexOf('iPhone')!=-1||a.indexOf('iPad')!=-1)&&(a.indexOf('OS/8')!=-1||a.indexOf('OS 8')!=-1)&&(a.indexOf('Safari')==-1)){ 
+                        var s=document.createElement('style'); 
+                        s.innerHTML="html,html body{overflow: auto;-webkit-overflow-scrolling:touch;}body{position:absolute;left:0;right:0;top:0;bottom:0;}"; 
+                        document.getElementsByTagName('head')[0].appendChild(s);}}catch(e){}})(); 
+    </script>
+    
+    <script>
+    
+    $(function() {
+        
+        $('form[id$=iForm]').on('submit', function() {
+            $('div.loadingDiv').parent().show();
+        });
+        
+        
+        init();
+    });
+    
+    function init() {
+        
+        lightning();
+        
+        $('form[id$=iForm]').validate({
+            invalidHandler: function(form, validator) {
+                $('div.loadingDiv').parent().hide();
+            }
+        });
+        
+        $('input.required,select.required').each(function() {
+            
+            if(!$(this).parent().hasClass("requiredBlock")) {
+                $(this).parent().children().wrapAll('<div class="requiredInput"></div>');
+                $(this).before('<div class="requiredBlock"></div>');
+            }
+            
+        });
+        
+        $('div.loadingDiv').parent().hide();
+        
+        $('table.slds-table')
+        .removeClass("list")
+        .find('thead>tr')
+        .addClass("slds-text-heading--label")
+        .removeClass("headerRow");
+        
+        $('.slds-button').removeClass('btn bg-secondary-btn btn--secondary pvs size-full brm border border--2 text-color-4 f3 fw-semibold');
+        
+        $("[id$=filterBlock]").find('select').each(function(){
+            var obj = $(this);
+            obj.change(function() {
+                var arr = obj.val();
+                $.each( arr, function( index, value ){
+                    console.log(value);
+                    console.log(value==="");    
+                    if(value==="") {
+                        obj.val([""]);
+                    }
+                });
+            });
+        });
+        
+        
+    }
+    
+    function lightning() {
+        
+        if( (typeof sforce != 'undefined') && (sforce != null) ) {
+            $('body').addClass('sfone');
+            $('div[id*="iForm"]').oneStarter('app');
+            
+            $('body').css('margin', '0');
+            
+            $('td.pbTitle').css('width', '40%');
+        }
+        
+    }
+    </script>
+    
+    <style>
+        
+        span.dateFormat {
+        display:none;
+        }
+        
+        td.dataCol, td.dataCol span {
+        vertical-align: top;
+        font-size:1.1em;
+        }
+        
+        td.dataCell, td.dataCell span {
+        font-size:1.1em;
+        }
+        
+        h1.pageType {
+        display: inline;
+        margin-left: 2px;
+        }
+        
+        .sfone th { vertical-align: top; }
+        
+        .sfone .uiButton--default.removeLineItem,
+        .bEditBlock .uiButton--default.removeLineItem {
+        background: url('/resource/SLDS201/assets/icons/utility/close_60.png') center center no-repeat;
+        background-size: contain;
+        }
+        
+        .bEditBlock .uiButton--default.removeLineItem {
+        width:21px;
+        }
+        
+        .bPageBlock .detailList label.error {
+        display:block;
+        }
+        
+        div#AppBodyHeader td.left>div>img {
+        max-width:none;
+        }
+        
+        .loadingDiv {
+        background: rgba(255,255,255,0.8);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+        }
+        
+        .slds-table td, .slds-table th {
+        white-space: normal;
+        }
+        
+        table.detailList,
+        table.slds-table {
+        table-layout: fixed;
+        }
+        
+        
+    </style>
+    
+    <apex:form id="iForm">
+        
+        <apex:outputPanel id="formPanel" layout="block">
+            
+            <apex:sectionHeader title="{!cam.Name}" subtitle="Manage Invitations" />
+            
+            <apex:pageMessages />
+            
+            <apex:pageBlock >
+                
+                <apex:pageBlockButtons >
+                    <apex:commandButton value="Save" action="{!save}" disabled="{!r == null}" reRender="regTypePanel, inviteBlock" styleClass="uiButton--default uiButton--brand" status="loading" />
+                    <apex:commandButton value="Save & Close" action="{!saveClose}" disabled="{!r == null}" styleClass="uiButton--default uiButton--brand" status="loading" />
+                    <apex:commandButton value="Cancel" action="{!cancel}" styleClass="cancel uiButton--default uiButton--neutral" status="loading" />
+                </apex:pageBlockButtons>
+                
+                
+                <apex:pageBlockSection >
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel for="regSelect" >Registration Type</apex:outputLabel>
+                        <apex:selectList id="regSelect" value="{!selectedRegistration}" size="1" multiselect="false">
+                            <apex:selectOptions value="{!RegistrationTypes}" />
+                            <apex:actionSupport event="onchange" action="{!registrationSelected}" status="loading" oncomplete="init()" />
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    
+                </apex:pageBlockSection>
+                
+               <apex:outputPanel id="typeDisplay">
+                    <apex:outputPanel rendered="{!AND(r != null, r.RecordType.DeveloperName == 'Ticket')}">
+                        
+                        <!--<apex:pageBlockSection id="regTypePanel" columns="2" title="Registration Type Details">
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="regType" >Type</apex:outputLabel>
+                                <apex:outputField id="regType" value="{!r.RecordType.Name}" />
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="ticketType" >Initial Allocation</apex:outputLabel>
+                                <apex:outputField value="{!r.Initial_Allocation__c}" />
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="ticketType" >Ticket Type</apex:outputLabel>
+                                <apex:outputField id="ticketType" value="{!r.Ticket_Type__c}" />
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="regDesc" >Description</apex:outputLabel>
+                                <apex:outputField id="regDesc" value="{!r.Description__c}" />
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="tnaOutput">Total Number Available</apex:outputLabel>
+                                <apex:outputField id="tnaOutput" value="{!r.Number_Available__c}" />
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="ftsOutput">Family Ticket Size</apex:outputLabel>
+                                <apex:outputField id="ftsOutput" value="{!r.Family_Ticket_Size__c}" />
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="assignedOutput" >Assigned</apex:outputLabel>
+                                <apex:outputText id="assignedOutput" >{!assigned}</apex:outputText>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="remainingOutput" >Remaining</apex:outputLabel>
+                                <apex:outputText id="remainingOutput" >{!remaining}</apex:outputText>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="invitedOutput" >Invited</apex:outputLabel>
+                                <apex:outputText id="invitedOutput" >{!invited}</apex:outputText>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="irOutput" >Invitations Remaining</apex:outputLabel>
+                                <apex:outputText id="irOutput" >{!invitationsRemaining}</apex:outputText>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                            
+                        </apex:pageBlockSection>-->
+                        
+                        <apex:pageBlockSection title="Filter Families" columns="2" id="filterBlock">
+                            
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="familyType">Family Type</apex:outputLabel>
+                                <apex:selectList id="familyType" value="{!selectedFamilyType}" multiselect="true" size="6">
+                                    <apex:selectOptions value="{!FamilyTypes}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="regionSelect">Region</apex:outputLabel>
+                                <apex:selectList id="regionSelect" value="{!selectedRegion}" multiselect="true" size="6">
+                                    <apex:selectOptions value="{!Regions}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="locationSelect">Preferred Event Location</apex:outputLabel>
+                                <apex:selectList id="locationSelect" value="{!selectedLocation}" multiselect="true" size="6">
+                                    <apex:selectOptions value="{!Locations}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="interestsSelect" styleClass="resetOnBlank">Interests</apex:outputLabel>
+                                <apex:selectList id="interestsSelect" value="{!selectedInterest}" multiselect="true" size="6">
+                                    <apex:selectOptions value="{!Interests}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="attendanceSelect">Attendance</apex:outputLabel>
+                                <apex:selectList id="attendanceSelect" value="{!selectedAttendance}" multiselect="true" size="6">
+                                    <apex:selectOption itemLabel="" itemValue="" />
+                                    <apex:selectOptions value="{!AttendanceValues}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel ></apex:outputLabel>
+                                <apex:outputText >
+                                    <apex:commandButton value="filter" reRender="inviteBlock" action="{!filterQuery}"  oncomplete="init()" status="loading" styleClass="uiButton--default uiButton--brand" />
+                                    <apex:commandLink value="clear filter" reRender="inviteBlock, filterBlock" action="{!clearFilter}"  oncomplete="init()" status="loading" />
+                                </apex:outputText>               
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                            
+                        </apex:pageBlockSection>
+                        
+                        <apex:pageBlockSection title="Select Attendance Value">
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="avSelect" >Set Attendance As</apex:outputLabel>
+                                <apex:selectList id="avSelect" value="{!selectedAttendanceValue}" size="1" multiselect="false">
+                                    <apex:selectOptions value="{!AttendanceValues}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel ></apex:outputLabel>
+                                <apex:commandButton value="apply" action="{!process}" oncomplete="init()" reRender="inviteBlock, regTypePanel" status="loading" styleClass="uiButton--default uiButton--brand" />
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                            
+                        </apex:pageBlockSection>
+                        
+                        <apex:pageBlockSection title="Families & Attendance" columns="1"  id="inviteBlock">
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputText rendered="{!familyAttendance.size < 1000}" >
+                                    Currently viewing {!familyAttendance.size} records.
+                                </apex:outputText>
+                                <apex:outputText rendered="{!familyAttendance.size > 999}" >
+                                    The list below has been limited to 1000 results.
+                                </apex:outputText>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockTable value="{!familyAttendance}" var="fa" styleClass="slds-table slds-table--bordered slds-table--cell-buffer">
+                                
+                                <apex:column headerValue="Family" value="{!fa.family.Name}" />
+                                
+                                <apex:column headerValue="Family Members"  value="{!fa.family.Contacts.size}" />
+                                
+                                <apex:column headerValue="Region" value="{!fa.family.Regionv2__c}" />
+                                <!-- DJA 2/12/2016 Switched from interests to preferred locations -->
+                                <apex:column headerValue="Preferred Locations" value="{!fa.family.Preferred_Event_Locations__c}" />
+                                
+                                <apex:column value="{!fa.family.Priority__c}" />
+                                
+                                <apex:column headerValue="Attendance">
+                                    <apex:inputField value="{!fa.attendance.FA_00000__c}" />
+                                </apex:column>
+                                
+                            </apex:pageBlockTable>
+                        </apex:pageBlockSection>
+                        
+                    </apex:outputPanel>
+                    
+                    <apex:outputPanel rendered="{!AND(r != null, r.RecordType.DeveloperName == 'Aged_Camp')}">
+                        
+                       <apex:pageBlockSection id="regTypePanelAge" columns="2" title="Registration Type Details">
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="regType" >Type</apex:outputLabel>
+                                <apex:outputField id="regType" value="{!r.RecordType.Name}" />
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="ticketType" >Initial Allocation</apex:outputLabel>
+                                <apex:outputField value="{!r.Initial_Allocation__c}" />
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="ticketType" >Ticket Type</apex:outputLabel>
+                                <apex:outputField id="ticketType" value="{!r.Ticket_Type__c}" />
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="regDesc" >Description</apex:outputLabel>
+                                <apex:outputField id="regDesc" value="{!r.Description__c}" />
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="tnaOutput">Total Number Available</apex:outputLabel>
+                                <apex:outputField id="tnaOutput" value="{!r.Number_Available__c}" />
+                            </apex:pageBlockSectionItem>
+                            
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="assignedOutput" >Assigned</apex:outputLabel>
+                                <apex:outputText id="assignedOutput" >{!assigned}</apex:outputText>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="remainingOutput" >Remaining</apex:outputLabel>
+                                <apex:outputText id="remainingOutput" >{!remaining}</apex:outputText>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="invitedOutput" >Invited</apex:outputLabel>
+                                <apex:outputText id="invitedOutput" >{!invited}</apex:outputText>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="irOutput" >Invitations Remaining</apex:outputLabel>
+                                <apex:outputText id="irOutput" >{!invitationsRemaining}</apex:outputText>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                            
+                        </apex:pageBlockSection>
+                        
+                        <apex:pageBlockSection title="Filter Families" columns="2" id="filterBlockAge">
+                            
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="familyType">Family Type</apex:outputLabel>
+                                <apex:selectList id="familyType" value="{!selectedFamilyType}" multiselect="true" size="6">
+                                    <apex:selectOptions value="{!FamilyTypes}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="regionSelect">Region</apex:outputLabel>
+                                <apex:selectList id="regionSelect" value="{!selectedRegion}" multiselect="true" size="6">
+                                    <apex:selectOptions value="{!Regions}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="locationSelect">Preferred Event Location</apex:outputLabel>
+                                <apex:selectList id="locationSelect" value="{!selectedLocation}" multiselect="true" size="6">
+                                    <apex:selectOptions value="{!Locations}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="interestsSelect">Interests</apex:outputLabel>
+                                <apex:selectList id="interestsSelect" value="{!selectedInterest}" multiselect="true" size="6" styleClass="clearOnBlank">
+                                    <apex:selectOptions value="{!Interests}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="attendanceSelect">Attendance</apex:outputLabel>
+                                <apex:selectList id="attendanceSelect" value="{!selectedAttendance}" multiselect="true" size="6">
+                                    <apex:selectOption itemLabel="" itemValue="" />
+                                    <apex:selectOptions value="{!AttendanceValues}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel ></apex:outputLabel>
+                                <apex:outputText >
+                                    <apex:commandButton value="filter" reRender="inviteBlockAge" action="{!filterQuery}"  oncomplete="init()" status="loading" styleClass="uiButton--default uiButton--brand" />
+                                    <apex:commandLink value="clear filter" reRender="inviteBlockAge, filterBlockAge" action="{!clearFilter}"  oncomplete="init()" status="loading" />
+                                </apex:outputText>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                            
+                        </apex:pageBlockSection>
+                        
+                        <apex:pageBlockSection title="Select Attendance Value">
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="avSelect" >Set Attendance As</apex:outputLabel>
+                                <apex:selectList id="avSelect" value="{!selectedAttendanceValue}" size="1" multiselect="false">
+                                    <apex:selectOptions value="{!AttendanceValues}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel ></apex:outputLabel>
+                                <apex:commandButton value="apply" action="{!process}" oncomplete="init()" reRender="inviteBlockAge, regTypePanelAge" status="loading" styleClass="uiButton--default uiButton--brand" />
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                            
+                        </apex:pageBlockSection>
+                        
+                        <apex:pageBlockSection title="Familiy Members & Attendance" columns="1" id="inviteBlockAge">
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputText rendered="{!familyAttendance.size < 500}" >
+                                    Currently viewing {!familyAttendance.size} records.
+                                </apex:outputText>
+                                <apex:outputText rendered="{!familyAttendance.size > 499}" >
+                                    The list below has been limited to 500 results.
+                                </apex:outputText>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockTable value="{!familyAttendance}" var="fa" styleClass="slds-table slds-table--bordered slds-table--cell-buffer">
+                                
+                                <apex:column headerValue="Family" value="{!fa.family.Name}" />
+                                
+                                <apex:column headerValue="Family Members"  value="{!fa.family.Contacts.size}" />
+                                
+                                <apex:column headerValue="Region" value="{!fa.family.Regionv2__c}" />v
+                                <!-- DJA 2/12/2016 Switched from interests to preferred locations -->                        
+                                <apex:column headerValue="Preferred Locations" value="{!fa.family.Preferred_Event_Locations__c}" />
+                                
+                                <apex:column value="{!fa.family.Priority__c}" />
+                                
+                                <apex:column headerValue="Attendance">
+                                    <apex:inputField value="{!fa.attendance.FA_00000__c}" />
+                                </apex:column>
+                                
+                                <apex:column breakBefore="true" colspan="4">
+                                    
+                                    <apex:pageBlockTable value="{!fa.family.Contacts}" var="c" >
+                                        
+                                        <apex:column headerValue="Name" value="{!c.FirstName}" />
+                                        <apex:column headerValue="Family Member Type" value="{!c.Family_Member_Type__c}" />
+                                        <apex:column headerValue="Age" value="{!c.Year_Age__c}" />
+                                        
+                                    </apex:pageBlockTable>
+                                    
+                                </apex:column>
+                            </apex:pageBlockTable>
+                        </apex:pageBlockSection>
+                        
+                    </apex:outputPanel>
+                    
+                    <apex:outputPanel rendered="{!AND(r != null, OR(r.RecordType.DeveloperName == 'Volunteer', r.RecordType.DeveloperName == 'Volunteer_Training', r.RecordType.DeveloperName == 'Corporate_Volunteer'))}">
+                        
+                     <!--<apex:pageBlockSection id="regTypePanelVol" columns="2" title="Registration Type Details">
+                            
+                            <apex:pageBlockSectionItem rendered="{!AND(NOT(ISBLANK(r.Corporate_Partner__c)), r.RecordType.DeveloperName == 'Corporate_Volunteer')}">
+                                <apex:outputLabel for="regType" >Corporate Partner</apex:outputLabel>
+                                <apex:outputField id="regType" value="{!r.Corporate_Partner__r.Name}" />
+                            </apex:pageBlockSectionItem>
+                            <apex:pageBlockSectionItem rendered="{!AND(NOT(ISBLANK(r.Corporate_Partner__c)), r.RecordType.DeveloperName == 'Corporate_Volunteer')}" />
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="regTypeVol" >Type</apex:outputLabel>
+                                <apex:outputField id="regTypeVol" value="{!r.RecordType.Name}" />
+                            </apex:pageBlockSectionItem>         
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="regDescVol" >Description</apex:outputLabel>
+                                <apex:outputField id="regDescVol" value="{!r.Description__c}" />
+                            </apex:pageBlockSectionItem>         
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="ticketTypeVol" >Initial Allocation</apex:outputLabel>
+                                <apex:outputField value="{!r.Initial_Allocation__c}" />
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="tnaOutputVol">Total Number Available</apex:outputLabel>
+                                <apex:outputField id="tnaOutputVol" value="{!r.Number_Available__c}" />
+                            </apex:pageBlockSectionItem>
+                            
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="assignedOutputVol" >Assigned</apex:outputLabel>
+                                <apex:outputText id="assignedOutputVol" >{!assigned}</apex:outputText>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="remainingOutputVol" >Remaining</apex:outputLabel>
+                                <apex:outputText id="remainingOutputVol" >{!remaining}</apex:outputText>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="invitedOutputVol" >Invited</apex:outputLabel>
+                                <apex:outputText id="invitedOutputVol" >{!invited}</apex:outputText>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="irOutputVol" >Invitations Remaining</apex:outputLabel>
+                                <apex:outputText id="irOutputVol" >{!invitationsRemaining}</apex:outputText>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                            
+                        </apex:pageBlockSection>-->
+                        
+                        <!-- filter -->
+                        <apex:pageBlockSection title="Filter" id="filterBlockVol">
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="skillsSelect">Skills</apex:outputLabel>
+                                <apex:selectList id="skillsSelect" value="{!selectedSkills}" multiselect="true" size="6">
+                                    <apex:selectOptions value="{!Skills}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="typeSelect">Type</apex:outputLabel>
+                                <apex:selectList id="typeSelect" value="{!selectedType}" multiselect="true" size="6">
+                                    <apex:selectOptions value="{!Types}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem rendered="{!r.RecordType.DeveloperName == 'Volunteer_Training'}" >
+                                <apex:outputLabel for="statusSelect">Status</apex:outputLabel>
+                                <apex:selectList id="statusSelect" value="{!selectedVolStatus}" multiselect="false" size="4">
+                                    <apex:selectOptions value="{!Status}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="regionSelect">Region</apex:outputLabel>
+                                <apex:selectList id="regionSelect" value="{!selectedRegion}" multiselect="true" size="6">
+                                    <apex:selectOptions value="{!Regions}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <!--<apex:pageBlockSectionItem >
+                                <apex:outputLabel for="branchSelect">Branch Office</apex:outputLabel>
+                                <apex:selectList id="branchSelect" value="{!selectedBranch}" multiselect="true" size="6">
+                                    <apex:selectOptions value="{!Branches}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>-->
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="preferredLocationSelect">Preferred Event Locations</apex:outputLabel>
+                                <apex:selectList id="preferredLocationSelect" value="{!preferredLocation}" multiselect="true" size="6">
+                                    <apex:selectOptions value="{!PreferredLocations}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="attendanceSelect">Attendance</apex:outputLabel>
+                                <apex:selectList id="attendanceSelect" value="{!selectedAttendance}" multiselect="true" size="6">
+                                    <apex:selectOption itemLabel="" itemValue="" />
+                                    <apex:selectOptions value="{!AttendanceValues}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel ></apex:outputLabel>
+                                <apex:outputText >
+                                    <apex:commandButton value="filter" reRender="inviteBlockVol" action="{!filterQuery}"  oncomplete="init()" status="loading" styleClass="uiButton--default uiButton--brand" />
+                                    <apex:commandLink value="clear filter" reRender="inviteBlockVol, filterBlockAge" action="{!clearFilter}"  oncomplete="init()" status="loading" />
+                                </apex:outputText>
+                            </apex:pageBlockSectionItem>
+                            
+                        </apex:pageBlockSection>
+                        
+                        <apex:pageBlockSection title="Select Registration Value">
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel for="avSelect" >Set Registration As</apex:outputLabel>
+                                <apex:selectList id="avSelect" value="{!selectedRegisterValue}" size="1" multiselect="false">
+                                    <apex:selectOptions value="{!RegisterValues}" />
+                                </apex:selectList>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel ></apex:outputLabel>
+                                <apex:commandButton value="apply" action="{!process}" oncomplete="init()" reRender="inviteBlockVol, regTypePanelVol" status="loading" styleClass="uiButton--default uiButton--brand" />
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                            
+                        </apex:pageBlockSection>
+                        
+                        <apex:pageBlockSection title="Volunteer Registration" columns="1"  id="inviteBlockVol">
+                            
+                            <apex:pageBlockSectionItem >
+                                <apex:outputText rendered="{!volunteerAttendance.size < 1000}" >
+                                    Currently viewing {!volunteerAttendance.size} records.
+                                </apex:outputText>
+                                <apex:outputText rendered="{!volunteerAttendance.size > 999}" >
+                                    The list below has been limited to 1000 results.
+                                </apex:outputText>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockTable value="{!volunteerAttendance}" var="va" styleClass="slds-table slds-table--bordered slds-table--cell-buffer">
+                                
+                                <apex:column headerValue="Volunteer" value="{!va.contact.Name}" />
+                                
+                                <apex:column headerValue="Region" value="{!va.contact.Regionv2__c}" />
+                                
+                                <apex:column headerValue="Types" value="{!va.contact.Volunteer_Types__c}" />
+                                <apex:column rendered="{!r.RecordType.DeveloperName == 'Volunteer_Training'}" headerValue="Status" value="{!va.contact.Volunteer_Status__c}" />
+                                
+                                <!-- <apex:column headerValue="Skills">
+                                    <apex:repeat value="{!va.contact.Volunteer_Skills__r}" var="s">
+                                        {!s.Skill_Description__c}<br/>
+                                    </apex:repeat>
+                                </apex:column>-->
+                                
+                                <apex:column headerValue="Preferred Locations" value="{!va.contact.Preferred_Event_Locations__c}" />
+                                <apex:column headerValue="WWC Expiry" value="{!va.contact.Volunteer_WWC_Expiry_Date__c}" />
+                                <apex:column rendered="{!r.RecordType.DeveloperName == 'Volunteer_Training'}" headerValue="Last Trained" value="{!va.contact.Volunteer_Last_Training_Date__c}" />
+                                
+                                <apex:column headerValue="Registration">
+                                    <apex:inputField value="{!va.attendance.Attendance__c}" />
+                                </apex:column>
+                                
+                            </apex:pageBlockTable>
+                        </apex:pageBlockSection>
+                        
+                    </apex:outputPanel>
+                    
+                </apex:outputPanel>    
+                
+            </apex:pageBlock>
+            
+        </apex:outputPanel>
+        
+    </apex:form>
+    
+    <apex:actionStatus id="loading">
+        <apex:facet name="start">
+            <div class="loadingDiv">
+                <div style="margin-top:100px; text-align:center;">
+                    <div class="slds-spinner_container">
+                        <div class="slds-spinner slds-spinner--medium" aria-hidden="false" role="alert">
+                            <div class="slds-spinner__dot-a"></div>
+                            <div class="slds-spinner__dot-b"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </apex:facet>
+    </apex:actionStatus>
+    
+</apex:page>

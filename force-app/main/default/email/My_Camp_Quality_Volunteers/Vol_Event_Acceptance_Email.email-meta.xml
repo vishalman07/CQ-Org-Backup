@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Logo_Letterhead</letterhead>
+    <name>Vol Event Acceptance Email</name>
+    <style>freeForm</style>
+    <subject>You are going to {!Campaign.Portal_Title__c} on {!Campaign.StartDate}</subject>
+    <textOnly>Dear {!Contact.Preferred_First_Name__c},
+           
+Your request to attend {!Campaign.Portal_Title__c} on {!Campaign.StartDate} has been accepted.
+
+{!Campaign.Event_Acceptance_Note__c}
+
+We look forward to seeing you there.
+
+Kind Regards,
+
+{!Campaign.Campaign_Owner_Name__c}
+
+You are receiving this email as you are a registered Camp Quality Family or Volunteer.  To manage your invites update your profile at www.mycampquality.org.au.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

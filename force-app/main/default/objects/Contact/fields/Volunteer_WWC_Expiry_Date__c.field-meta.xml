@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer_WWC_Expiry_Date__c</fullName>
+    <inlineHelpText>Gets the most recent WWC expiry date.</inlineHelpText>
+    <label>Volunteer WWC Expiry Date</label>
+    <summarizedField>Volunteer_Skill__c.Expires__c</summarizedField>
+    <summaryFilterItems>
+        <field>Volunteer_Skill__c.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>Working With Children Check</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Volunteer_Skill__c.Volunteer__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

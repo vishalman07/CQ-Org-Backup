@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Household_Composition__c</fullName>
+    <description>DCA Enrichment</description>
+    <label>Household Composition</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Couple</fullName>
+                <default>false</default>
+                <label>Couple</label>
+            </value>
+            <value>
+                <fullName>Couple - Other</fullName>
+                <default>false</default>
+                <label>Couple - Other</label>
+            </value>
+            <value>
+                <fullName>Group - Females</fullName>
+                <default>false</default>
+                <label>Group - Females</label>
+            </value>
+            <value>
+                <fullName>Group - Males</fullName>
+                <default>false</default>
+                <label>Group - Males</label>
+            </value>
+            <value>
+                <fullName>Group - Mixed</fullName>
+                <default>false</default>
+                <label>Group - Mixed</label>
+            </value>
+            <value>
+                <fullName>Single - Female</fullName>
+                <default>false</default>
+                <label>Single - Female</label>
+            </value>
+            <value>
+                <fullName>Single - Male</fullName>
+                <default>false</default>
+                <label>Single - Male</label>
+            </value>
+            <value>
+                <fullName>Single - Unknown Gender</fullName>
+                <default>false</default>
+                <label>Single - Unknown Gender</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

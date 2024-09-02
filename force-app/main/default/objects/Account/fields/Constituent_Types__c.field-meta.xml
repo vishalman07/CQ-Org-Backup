@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Constituent_Types__c</fullName>
+    <label>Constituent Types</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bequest Administrator</fullName>
+                <default>false</default>
+                <label>Bequest Administrator</label>
+            </value>
+            <value>
+                <fullName>Bequest Giver</fullName>
+                <default>false</default>
+                <label>Bequest Giver</label>
+            </value>
+            <value>
+                <fullName>Club</fullName>
+                <default>false</default>
+                <label>Club</label>
+            </value>
+            <value>
+                <fullName>Foundation</fullName>
+                <default>false</default>
+                <label>Foundation</label>
+            </value>
+            <value>
+                <fullName>Foundation - Private</fullName>
+                <default>false</default>
+                <label>Foundation - Private</label>
+            </value>
+            <value>
+                <fullName>Fundraising</fullName>
+                <default>false</default>
+                <label>Fundraising</label>
+            </value>
+            <value>
+                <fullName>Grant</fullName>
+                <default>false</default>
+                <label>Grant</label>
+            </value>
+            <value>
+                <fullName>Hospital</fullName>
+                <default>false</default>
+                <label>Hospital</label>
+            </value>
+            <value>
+                <fullName>National Corporate Partner</fullName>
+                <default>false</default>
+                <label>National Corporate Partner</label>
+            </value>
+            <value>
+                <fullName>Philanthropy</fullName>
+                <default>false</default>
+                <label>Philanthropy</label>
+            </value>
+            <value>
+                <fullName>Primary School</fullName>
+                <default>false</default>
+                <label>Primary School</label>
+            </value>
+            <value>
+                <fullName>Supplier</fullName>
+                <default>false</default>
+                <label>Supplier</label>
+            </value>
+            <value>
+                <fullName>WorkPlaceGiving</fullName>
+                <default>false</default>
+                <label>WorkPlaceGiving</label>
+            </value>
+            <value>
+                <fullName>Former WorkPlaceGiving</fullName>
+                <default>false</default>
+                <label>Former WorkPlaceGiving</label>
+            </value>
+            <value>
+                <fullName>Not For Profit</fullName>
+                <default>false</default>
+                <label>Not For Profit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

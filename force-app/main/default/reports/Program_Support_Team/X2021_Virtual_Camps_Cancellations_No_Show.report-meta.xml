@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_CNTC_FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Attendance__c.Attendance__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Attendance__c.Cancellation_Reason__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Contact.Branch_Office__c</field>
+    </columns>
+    <description>25/11/2021; T. Sweatman - prepared for Michelle Youngberry</description>
+    <filter>
+        <criteriaItems>
+            <column>CAMPAIGN_ID</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>7012x000000HuFx,7012x000000YUiI,7012x000000YUqb,7012x000000I0l1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Volunteer_Attendance__c.Attendance__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>No Show,Cancelled</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CAMPAIGN_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>2021 Virtual Camps Cancellations/No Show</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignCustomEntity$Volunteer_Attendance__c@Volunteer_Attendance__c.Volunteer__c</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+</Report>

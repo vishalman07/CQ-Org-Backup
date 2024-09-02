@@ -1,0 +1,62 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Login",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"944ed2de-33ca-4524-ac93-8c0f8aa5d4d6\",\"columns\":[{\"UUID\":\"573b94f5-067f-46ad-80ef-1312f8da6a7c\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : { }
+              },
+              "definition" : "c:communityLoginPage",
+              "id" : "47090f96-57ad-460d-a56f-c93006e93ab3",
+              "type" : "component"
+            } ],
+            "id" : "573b94f5-067f-46ad-80ef-1312f8da6a7c",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "944ed2de-33ca-4524-ac93-8c0f8aa5d4d6",
+          "type" : "component"
+        } ],
+        "id" : "d67f290e-fb56-4ce3-bc00-94792021b2b0",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "Login",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "b41fbb3f-9d85-4e1b-a716-8fb3a7b9beb6",
+          "type" : "component"
+        } ],
+        "id" : "31f9bf7c-fc55-4d3f-8672-729b4b08cb66",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "92335913-6dbc-4b19-bffe-ba21d7def879",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "login-main"
+  }
+}

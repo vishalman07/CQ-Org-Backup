@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vic_Otway_Fly_FE</fullName>
+    <columns>Event__c</columns>
+    <columns>NAME</columns>
+    <columns>Contact__c</columns>
+    <columns>Age__c</columns>
+    <columns>Participant_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Event__c</field>
+        <operation>equals</operation>
+        <value>VIC1705-12 Otway Fly Family Experience</value>
+    </filters>
+    <filters>
+        <field>Attendance__c</field>
+        <operation>equals</operation>
+        <value>Request to Attend,Accepted,Attended</value>
+    </filters>
+    <label>Vic Otway Fly FE</label>
+    <sharedTo></sharedTo>
+</ListView>

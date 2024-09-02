@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Invoice_Uncollectible_At__c</fullName>
+    <description>Date/Time the invoice (Recurring Donation Payment) was deemed uncollectible.</description>
+    <inlineHelpText>The Date&amp;Time the invoice (Recurring Donation Payment) was deemed uncollectible.</inlineHelpText>
+    <label>Last Invoice Uncollectible At</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Address__c</fullName>
+    <externalId>false</externalId>
+    <formula>Venue__r.BillingStreet &amp; &apos; &apos; &amp; Venue__r.BillingCity &amp; &apos; &apos; &amp; Venue__r.BillingState &amp; &apos; &apos; &amp; Venue__r.BillingPostalCode</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Show Address</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Revenue_Contract</fullName>
+    <active>true</active>
+    <label>Revenue Contract</label>
+    <picklistValues>
+        <picklist>CQ_Department__c</picklist>
+        <values>
+            <fullName>Corporate Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fundraising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office of the CEO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>People %26 Culture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Programs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Type__c</picklist>
+        <values>
+            <fullName>Admin%2FManagement Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fundraising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offices%2FPremises</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Programs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suppliers</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Activated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Approval Process</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

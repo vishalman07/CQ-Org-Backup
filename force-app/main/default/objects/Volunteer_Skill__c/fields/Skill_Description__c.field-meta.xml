@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skill_Description__c</fullName>
+    <label>Skill Description</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anaphalaxis Training</fullName>
+                <default>false</default>
+                <label>Anaphalaxis Training</label>
+            </value>
+            <value>
+                <fullName>Blue Card (QLD) Registration No &amp; Exp Date</fullName>
+                <default>false</default>
+                <label>Blue Card (QLD) Registration No &amp; Exp Date</label>
+            </value>
+            <value>
+                <fullName>Dr Indemnity Insurance Policy No/Expiry</fullName>
+                <default>false</default>
+                <label>Dr Indemnity Insurance Policy No/Expiry</label>
+            </value>
+            <value>
+                <fullName>First Aid</fullName>
+                <default>false</default>
+                <label>First Aid</label>
+            </value>
+            <value>
+                <fullName>CPR</fullName>
+                <default>false</default>
+                <label>CPR</label>
+            </value>
+            <value>
+                <fullName>Food Handling Training</fullName>
+                <default>false</default>
+                <label>Food Handling Training</label>
+            </value>
+            <value>
+                <fullName>Health Practitioner Registration No &amp; Exp Date</fullName>
+                <default>false</default>
+                <label>Health Practitioner Registration No &amp; Exp Date</label>
+            </value>
+            <value>
+                <fullName>Lifeguard</fullName>
+                <default>false</default>
+                <label>Lifeguard</label>
+            </value>
+            <value>
+                <fullName>Ochre Card (NT) Registration Number &amp; Exp Date</fullName>
+                <default>false</default>
+                <label>Ochre Card (NT) Registration Number &amp; Exp Date</label>
+            </value>
+            <value>
+                <fullName>Police Check (SA) Releasable Record &amp; Exp Date</fullName>
+                <default>false</default>
+                <label>Police Check (SA) Releasable Record &amp; Exp Date</label>
+            </value>
+            <value>
+                <fullName>RSA</fullName>
+                <default>false</default>
+                <label>RSA</label>
+            </value>
+            <value>
+                <fullName>WWCC/Police Check</fullName>
+                <default>false</default>
+                <label>WWCC/Police Check</label>
+            </value>
+            <value>
+                <fullName>WWCC (NSW) Validation No &amp; Exp Date</fullName>
+                <default>false</default>
+                <label>WWCC (NSW) Validation No &amp; Exp Date</label>
+            </value>
+            <value>
+                <fullName>WWCC (TAS/WA/VIC/ACT) Card No &amp; Exp Date</fullName>
+                <default>false</default>
+                <label>WWCC (TAS/WA/VIC/ACT) Card No &amp; Exp Date</label>
+            </value>
+            <value>
+                <fullName>WWC Stat Dec (JPNo, NextCheck)</fullName>
+                <default>false</default>
+                <label>WWC Stat Dec (JPNo, NextCheck)</label>
+            </value>
+            <value>
+                <fullName>Driver&apos;s License</fullName>
+                <default>false</default>
+                <label>Driver&apos;s License</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

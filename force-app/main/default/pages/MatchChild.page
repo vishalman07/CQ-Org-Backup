@@ -1,0 +1,201 @@
+<apex:page standardController="Campaign" extensions="MatchChildController" sidebar="false" cache="false">
+    
+    <apex:includeLightning />
+    
+    <apex:includeScript value="{!URLFOR($Resource.assets, '/assets/js/jquery.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.OneStarter,'jquery.onestarter.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.assets, '/assets/js/jquery.validate.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.assets, '/assets/js/additional-methods.js')}" />
+    <apex:includeScript value="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.js" />
+    
+    <apex:stylesheet value="{!$Resource.LightningDesign}"/>
+    
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS201, '/assets/styles/salesforce-lightning-design-system.min.css')}" />
+    
+    <apex:stylesheet value="{!URLFOR($Resource.OneStarter,'icons.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.OneStarter,'styles.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.OneStarter,'OneStarter.css')}" />
+
+    <apex:stylesheet value="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.css" />
+ 
+
+    
+    <script type="text/javascript"> 
+    (function(){try{var a=navigator.userAgent; 
+                    if((a.indexOf('Salesforce')!=-1)&&(a.indexOf('iPhone')!=-1||a.indexOf('iPad')!=-1)&&(a.indexOf('OS/8')!=-1||a.indexOf('OS 8')!=-1)&&(a.indexOf('Safari')==-1)){ 
+                        var s=document.createElement('style'); 
+                        s.innerHTML="html,html body{overflow: auto;-webkit-overflow-scrolling:touch;}body{position:absolute;left:0;right:0;top:0;bottom:0;}"; 
+                        document.getElementsByTagName('head')[0].appendChild(s);}}catch(e){}})(); 
+    </script>
+    
+    <script>
+    
+    $(function() {
+        
+        $('form[id$=iForm]').on('submit', function() {
+            $('div.loadingDiv').parent().show();
+        });
+        
+        
+        init();
+    });
+    
+    function init() {
+        
+        lightning();
+        
+        $('form[id$=iForm]').validate({
+            invalidHandler: function(form, validator) {
+                $('div.loadingDiv').parent().hide();
+            }
+        });
+        
+        $('input.required,select.required').each(function() {
+            
+            if(!$(this).parent().hasClass("requiredBlock")) {
+                $(this).parent().children().wrapAll('<div class="requiredInput"></div>');
+                $(this).before('<div class="requiredBlock"></div>');
+            }
+            
+        });
+        
+        $('div.loadingDiv').parent().hide();
+        
+        $('table.slds-table')
+        .removeClass("list")
+        .find('thead>tr')
+        .addClass("slds-text-heading--label")
+        .removeClass("headerRow");
+        
+        $('.slds-button').removeClass('btn bg-secondary-btn btn--secondary pvs size-full brm border border--2 text-color-4 f3 fw-semibold');
+
+    }
+    
+    function lightning() {
+        
+        if( (typeof sforce != 'undefined') && (sforce != null) ) {
+            $('body').addClass('sfone');
+            $('div[id*="iForm"]').oneStarter('app');
+            
+            $('body').css('margin', '0');
+            
+            $('td.pbTitle').css('width', '40%');
+        }
+
+        $('table[id$=attendanceBlock]').DataTable();
+        
+    }
+    </script>
+    
+    <style>
+        
+        span.dateFormat {
+        display:none;
+        }
+        
+        td.dataCol, td.dataCol span {
+        vertical-align: top;
+        font-size:1.1em;
+        }
+        
+        td.dataCell, td.dataCell span {
+        font-size:1.1em;
+        }
+        
+        h1.pageType {
+        display: inline;
+        margin-left: 2px;
+        }
+        
+        .sfone th { vertical-align: top; }
+        
+        .sfone .uiButton--default.removeLineItem,
+        .bEditBlock .uiButton--default.removeLineItem {
+        background: url('/resource/SLDS201/assets/icons/utility/close_60.png') center center no-repeat;
+        background-size: contain;
+        }
+        
+        .bEditBlock .uiButton--default.removeLineItem {
+        width:21px;
+        }
+        
+        .bPageBlock .detailList label.error {
+        display:block;
+        }
+        
+        div#AppBodyHeader td.left>div>img {
+        max-width:none;
+        }
+        
+        .loadingDiv {
+        background: rgba(255,255,255,0.8);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top:0;setAttendeds
+        left:0;
+        }
+        
+    </style>
+    
+    <apex:form id="iForm">
+        
+        <apex:outputPanel id="formPanel" layout="block">
+            
+            <apex:sectionHeader title="{!Campaign.Name}" subtitle="Match Child" />
+            
+            <apex:pageMessages />
+            
+            <apex:pageBlock >
+                
+                
+                <apex:outputPanel id="attendancePanel">
+                    <apex:pageBlockSection title="Match Child" columns="1" >
+                        
+                        <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                        
+                        <apex:pageBlockTable id="attendanceBlock" value="{!fmas}" var="fa" styleClass="slds-table slds-table--bordered slds-table--cell-buffer">
+                            
+                            <apex:column headerValue="Name" value="{!fmas[fa].Contact__r.FirstName} {!fmas[fa].Contact__r.LastName}" />
+ 							<apex:column headerValue="Age This Year" value="{!fmas[fa].Contact__r.year_age__C}" />
+                            <apex:column headerValue="Gender" value="{!fmas[fa].Contact__r.Gender__C}" />
+                            <apex:column headerValue="Region" value="{!fmas[fa].Contact__r.account.regionv2__C}" />
+                            <apex:column headerValue="Address" value="{!fmas[fa].Contact__r.MailingCity}, {!fmas[fa].Contact__r.MailingState} {!fmas[fa].Contact__r.MailingPostalCode}" />
+                                
+                            <apex:column headerValue="Current Match" value="{!fmas[fa].Companion_Name__c}"/>
+
+                            <!--<apex:column headerValue="Family Member Type"  value="{!fa.family.Contacts.size}" />-->
+                            <apex:column headerValue="New Match">
+                                <apex:outputPanel id="Match1">
+                                 
+                                 <apex:selectList value="{!fmaVol[fa]}" size="1" multiselect="false"  >
+                                          <apex:selectOptions value="{!ListOfVolunteers}" />
+                                     		<apex:actionSupport event="onchange" action="{!matchVolunteer}"  reRender="matchdummy" status="loading">
+                                                <apex:param name="attendId" assignTo="{!attendId}" value="{!fa}" />
+                                            </apex:actionSupport> 
+                                 </apex:selectList>
+                                </apex:outputPanel>
+                            </apex:column>
+                            <apex:outputPanel id="matchdummy"></apex:outputPanel>
+                            
+                       </apex:pageBlockTable>    
+
+                        
+                        
+                    </apex:pageBlockSection>
+                    
+
+                    
+
+                    
+                </apex:outputPanel>
+                
+            </apex:pageBlock>
+            
+        </apex:outputPanel>
+        
+        <apex:outputPanel id="dummyPanel"></apex:outputPanel>
+        
+    </apex:form>
+    
+</apex:page>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <block>
+        <blockInfo>
+            <blockId>B0</blockId>
+            <joinTable>Contact</joinTable>
+        </blockInfo>
+        <columns>
+            <aggregateTypes>Unique</aggregateTypes>
+            <field>Contact$Id</field>
+        </columns>
+        <columns>
+            <field>Contact$Name</field>
+        </columns>
+        <format>Tabular</format>
+        <name>2019 Gifts</name>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>Contacts_with_or_without_Payment_txns__c</reportType>
+        <scope>organization</scope>
+        <showGrandTotal>true</showGrandTotal>
+        <showSubTotals>true</showSubTotals>
+        <timeFrameFilter>
+            <dateColumn>Contact$Birthdate</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+        </timeFrameFilter>
+    </block>
+    <block>
+        <blockInfo>
+            <blockId>B1</blockId>
+            <joinTable>Contact</joinTable>
+        </blockInfo>
+        <columns>
+            <aggregateTypes>Unique</aggregateTypes>
+            <field>Contact$Id</field>
+        </columns>
+        <columns>
+            <field>Contact$Name</field>
+        </columns>
+        <format>Tabular</format>
+        <name>2020 Gifts</name>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>Contacts_with_or_without_Payment_txns__c</reportType>
+        <scope>organization</scope>
+        <showGrandTotal>true</showGrandTotal>
+        <showSubTotals>true</showSubTotals>
+        <timeFrameFilter>
+            <dateColumn>Contact$Birthdate</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+        </timeFrameFilter>
+    </block>
+    <blockInfo>
+        <blockId xsi:nil="true"/>
+        <joinTable>Contact</joinTable>
+    </blockInfo>
+    <description>Enter the date range to see the number of Gifts to the Cost Centre of Community Fundraising</description>
+    <format>MultiBlock</format>
+    <name>Community Fundraising Gift Comparison</name>
+    <params>
+        <name>lsk</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_or_without_Payment_txns__c</reportType>
+    <showDetails>true</showDetails>
+</Report>

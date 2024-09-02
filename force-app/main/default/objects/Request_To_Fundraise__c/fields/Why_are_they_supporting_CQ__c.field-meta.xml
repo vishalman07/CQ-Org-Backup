@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Why_are_they_supporting_CQ__c</fullName>
+    <inlineHelpText>This provides valuable information about how our digital marketing is working</inlineHelpText>
+    <label>Registration motivated from?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Facebook Post</fullName>
+                <default>false</default>
+                <label>Facebook Post</label>
+            </value>
+            <value>
+                <fullName>Instagram Post</fullName>
+                <default>false</default>
+                <label>Instagram Post</label>
+            </value>
+            <value>
+                <fullName>Fundraising Event</fullName>
+                <default>false</default>
+                <label>Fundraising Event</label>
+            </value>
+            <value>
+                <fullName>Program</fullName>
+                <default>false</default>
+                <label>Program</label>
+            </value>
+            <value>
+                <fullName>Other (please give details)</fullName>
+                <default>false</default>
+                <label>Other (please give details)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

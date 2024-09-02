@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsOverNightAgeCamp__c</fullName>
+    <formula>OR( text(Event_Type__c) = &apos;Junior Camp&apos;, text(Event_Type__c) = &apos;Middle Camp&apos;,text(Event_Type__c) = &apos;Multi Age Group Camp&apos;, text(Event_Type__c) = &apos;Graduation Camp&apos;, text(Event_Type__c) = &apos;Senior Camp&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>IsOverNightAgeCamp</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

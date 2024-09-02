@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Family_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>if( text(Reason_for_Joining__c) = &quot;Child with Cancer&quot;, &quot;Patient&quot;,
+if( OR(text(Reason_for_Joining__c) = &quot;Parent or primary carer with cancer&quot;, text(Reason_for_Joining__c) = &quot;Parent with Cancer&quot;), &quot;Offspring Family&quot;,
+if( text(Reason_for_Joining__c) = &quot;Child passed away due to cancer&quot;, &quot;Bereaved Family&quot;,
+if( text(Reason_for_Joining__c) = &quot;Parent passed away due to cancer&quot;, &quot;Offspring Bereaved Family&quot;,
+&quot;Patient&quot;
+
+))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Family Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

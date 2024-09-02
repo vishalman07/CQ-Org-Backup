@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Id</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$BillingCity</field>
+    </columns>
+    <columns>
+        <field>Account$BillingPostalCode</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$CloseDate</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Opportunities$Amount</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$Campaign_Name__c</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$Campaign_Financial_Coding__c</field>
+    </columns>
+    <description>Accounts with an Opp against  1130 - Govt Grants, 1220 Private Trusts &amp; Foundations, 1945 Grants Local Corp, 1950 - Grants Clubs &amp; Community</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Opportunities$Campaign_Financial_Coding__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>1130,1220,1945,1950</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Opportunities$StageName</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>DCA - Grant T F Data - Donor Transaction</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_Opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

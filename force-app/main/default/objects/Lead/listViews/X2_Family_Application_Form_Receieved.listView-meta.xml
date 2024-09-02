@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2_Family_Application_Form_Receieved</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.LAST_NAME</columns>
+    <columns>LEAD.FIRST_NAME</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.RECORDTYPE</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>Lead_Mapping_Processed__c</columns>
+    <columns>How_did_you_Hear_about_Camp_Quality__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Family_Application</value>
+    </filters>
+    <label>2. Family Application Form - All</label>
+</ListView>

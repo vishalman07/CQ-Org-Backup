@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Family_Attendance__c.Registration_Type__c</field>
+    </columns>
+    <description>all retreats including original and sal bay for 2023</description>
+    <filter>
+        <criteriaItems>
+            <column>CAMPAIGN_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>NT2301-2312 Darwin free Spirit Resort,WA2301-2312 Discovery Parks Woodman point,NSW2301-2312 NRMA Merimbula,VIC2301-2312 NRMA Phillip Island,QLD2301-2312 NRMA Treasure Island,QLD2301-2312 NRMA Airlie Beach,SA2301-2312 NRMA Victor Harbour,TAS2301-2312 NRMA Port Arthur,SA2301-2312 West Beach Caravan,VIC2301-2312 Warrnambool Cabin,NCLE2301-2312 Coffs Harbour Cabin,NCLE2301-2312 Salamander Bay Retreat,NSW2301-23112 NRMA Umina Beach</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Family_Attendance__c.FA_00000__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Accepted,Attended,Cancelled</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CAMPAIGN_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Family_Attendance__c.FA_00000__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>2023 family retreats including original</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignCustomEntity$Family_Attendance__c</reportType>
+    <scope>orgAll</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+</Report>

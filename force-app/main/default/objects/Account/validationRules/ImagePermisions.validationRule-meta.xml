@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ImagePermisions</fullName>
+    <active>false</active>
+    <errorConditionFormula>if( media_opt_in_take_video_photos__c , 
+if ( 
+OR(media_opt_in_share_participants__c , Media_Opt_in_Public_Sharing__c,  Media_permission_Public_2019__c,  Media_permission_corporate_2019__c ),false,true)
+, false)</errorConditionFormula>
+    <errorMessage>Please select at least one image sharing option.</errorMessage>
+</ValidationRule>

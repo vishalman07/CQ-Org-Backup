@@ -1,0 +1,216 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="slds-grid slds-wrap" style="scroll-behavior: smooth;">
+        <div class="slds-col slds-small-size_4-of-12 slds-medium-size_4-of-12 slds-large-size_4-of-12 ">
+            <Div class="boxStyle slds-p-horizontal_medium slds-p-vertical_medium slds-m-bottom_medium font_poppinsSemiBold"><strong>Volunteer
+                    Status :</strong> <span class="font_popinsLight"> {volunteerStatus}</span></Div>
+            <div class="divStyle">
+                <h3 class="textSize font_poppinsSemiBold">UPCOMING EVENT</h3>
+                <div>
+                    <p if:false={showEvent} class="font_popinsLight">There are no upcoming events in your region but make sure to checkback soon!</p>
+                    <ul style="list-style: disc;margin-left: 13px;" class="font_popinsLight">
+                        <div if:true={showEvent}>
+                        <template for:each={eventDetails} for:item="event">
+                            <li key={event.Id}>
+                                <a href={clickEventUrl}>{event.eventTitle}</a> - <br> {event.eventDate}
+                            </li>
+                        </template>      
+                    </div>    
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div
+            class="slds-col slds-small-size_7-of-12 slds-medium-size_7-of-12 slds-large-size_6-of-12 slds-m-left_medium">
+            <h3 class="textSize font_poppinsSemiBold">ELIGIBILITY CHECKLIST</h3>
+            <span if:false={refreshProgress}>Click <a onclick={handleRefreshBtn} class="btnDecoration">refresh</a> to update. <span if:true={showCalloutError} style="color:red;"> Please try after 1 or 2 minute </span></span>
+            <span if:true={refreshProgress}>Refreshing... </span>
+            <div class="boxDesign">
+                <div class="font_popinsLight">
+                    <button
+                        class=" boxColour slds-button btnBorder slds-p-horizontal_medium slds-p-vertical_small font_popinsLight slds-size_6-of-6 "
+                        onclick={onAppliClick}>Application</button>
+                </div>
+                <div if:true={openAppliCationBox} class="slds-box slds-box_y-small font_popinsLight"
+                    style="border-radius: 6px;">
+                    <span> Congratulations! You've taken the first step to becoming a Camp Quality volunteer and we're so excited to start this journey with you.</span><br><br>
+                        <div>We have received your application and would love to get some more details and hear a bit more about you.</div>
+                </div>
+            </div>
+
+            <ul class="slds-accordion">
+            <div class="font_popinsLight">
+                <button
+                    class=" boxColour slds-button btnBorder slds-p-horizontal_medium slds-p-vertical_small font_popinsLight slds-size_6-of-6"
+                    onclick={onLearning} > Online Learning <span class="pending"> ({learnAssigncount} pending)</span></button>
+            </div>
+           
+            <div if:true={openLearning} class="slds-size_6-of-6 slds-box slds-box_y-small font_popinsLight" style="border-radius: 6px;">
+                <div> Please complete the online learning modules below. If you have any difficulties, please reach out to us at <a href="mailto: volunteers@campquality.org.au" style="
+                    text-decoration: underline;">volunteers@campquality.org.au</a>.</div>
+                <div class="tableAdjust ">
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered "
+                        aria-label="Example table of Opportunities with striped rows" >
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th class="tableHead" scope="col">
+                                    <div class = "columnText font_poppinsSemiBold" title="Opportunity Name">Learning Module</div>
+                                </th>
+                                <th class="" scope="col">
+                                    <div class = "columnText font_poppinsSemiBold" title="Account Name">Status</div>
+                                </th>
+                                <th class="" scope="col">
+                                    <div class = "columnText font_poppinsSemiBold" title="Account Name">Action</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={onlineLearningVar} for:item="item">
+                                <tr class="slds-hint-parent" key={item.Id}>
+                                    <td data-label="Account Name" style="padding-left: 1.5rem;">
+                                        <div class = "columnText" title="Learning Module" if:true={item.showLaunchBtn}>{item.item.Volunteer_Criteria__r.Name}</div>
+                                        <div class = "columnText" title="Learning Module" if:false={item.showLaunchBtn}>{item.Volunteer_Criteria__r.Name}</div>
+                                    </td>
+                                    <td data-label="Close Date">
+                                        <div class = "columnText" title="Status" if:true={item.showLaunchBtn}>{item.item.Status__c}</div>
+                                        <div class = "columnText" title="Status" if:false={item.showLaunchBtn}>{item.Status__c}</div>
+                                    </td>
+                                    <td data-label="Account Name">
+                                        <div class = "columnText" title="Action" if:true={item.showLaunchBtn} ><a onclick={handleLearnLaunch} class="btnDecoration" data-id={item.item.Litmos_Course_ID__c}>Launch</a></div>
+                                    </td>
+                                </tr>
+                            </template>
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="font_popinsLight">
+                <button
+                    class="boxColour slds-button btnBorder  slds-p-horizontal_medium slds-p-vertical_small font_popinsLight slds-size_6-of-6"
+                    onclick={onBoarding}>Onboarding</button>
+            </div>
+            <div if:true={openBoarding} class="slds-size_6-of-6 slds-box slds-box_y-small font_popinsLight " style="border-radius: 6px;">
+                <div>Follow your volunteer onboarding journey here. Once you have completed the above Online Learning, we will contact you to arrange an interview.</div>
+                <template if:true={hideOnBoardignRecord}>
+                <table class="slds-table slds-table_bordered "
+                    aria-label="Example table of Opportunities with striped rows" >
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="tableHead " scope="col">
+                                <div class = "columnText font_poppinsSemiBold" title="Opportunity Name">Item</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class = "columnText font_poppinsSemiBold" title="Account Name">Status</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={onBoardingVar} for:item="bordItem">
+
+                        
+                        <tr class="slds-hint-parent" key={bordItem}>
+                            <td data-label="Account Name">
+                                <div class = "columnText" title="">{bordItem.Volunteer_Criteria__r.Name}</div>
+                            </td>
+                            <td data-label="Close Date">
+                                <div class = "columnText" title="">{bordItem.Status__c}</div>
+                            </td>
+                        </tr>
+                    </template>
+                    </tbody>
+                </table>
+            </template>
+            </div>
+
+            <div class="font_popinsLight">
+                <button
+                    class="boxColour slds-button btnBorder slds-p-horizontal_medium slds-p-vertical_small  font_popinsLight slds-size_6-of-6"
+                    onclick={onCertificate}> Certifications <span class="pending"> ({certAssigncount} pending)</span></button>
+            </div>
+            <div if:true={openCertficate} class="slds-box slds-box_y-small font_popinsLight" style="border-radius: 6px;">Please provide
+                certification documents below. These documents are safely stored and deleted when not needed. See our <a
+                    href="https://www.campquality.org.au/privacy-policy/" class="btnDecoration">privacy policy</a>.
+                <table class="slds-table slds-table_bordered "
+                    aria-label="Example table of Opportunities with striped rows" >
+                    <thead>
+                        <tr class="slds-line-height_reset ">
+                            <th class="tableHead" scope="col">
+                                <div class = "columnText font_poppinsSemiBold" title="Item">Item</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class = "columnText font_poppinsSemiBold" title="Account Name">Status</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class = "columnText font_poppinsSemiBold" title="Account Name">Expiry date</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class = "columnText font_poppinsSemiBold" title="Account Name">Action</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={onCertficationVar} for:item="certItem">
+
+                        
+                        <tr class="slds-hint-parent" key={certItem.Id}>
+
+                            <td data-label="Account Name">
+                                <div class = "columnText" title="Certifications">{certItem.item.Volunteer_Criteria__r.Name}</div>
+                            </td>
+                            <td data-label="Close Date">
+                                <div class = "columnText" title="">{certItem.item.Status__c}</div>
+                            </td>
+                            <td data-label="Close Date">
+                                <div class = "columnText" title="">{certItem.expiryDate}</div>
+                            </td>
+                            <td data-label="Account Name">
+                                <div class = "columnText " title="Action" if:true={certItem.showUploadBtn} ><a onclick={handleUploadBtn} data-id={certItem.item.Id} data-title={certItem.item.Volunteer_Criteria__r.Name} class="btnDecoration">Upload</a></div>
+                            </td>                    
+                        </tr>
+                    </template>
+
+              
+
+                    </tbody>
+                </table>
+            </div>
+        </ul>
+
+            <div if:true={uploadBox}>
+                <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                      <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+                        <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Cancel and close</span>
+                      </button>
+                      <div class="slds-modal__header">
+                        <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Certification Upload: {mytitle}</h1>
+                      </div>
+                      <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <p>Please provide your certification document. These documents are safely stored and deleted when not needed. See our privacy policy.</p>
+                        <div class="slds-m-around_medium">
+                            <lightning-input type="file" 
+                            accept=".xlsx, .xls, .csv, .png, .doc, .docx, .pdf"
+                            label="Attachment" onchange={openfileUpload}></lightning-input>
+                        </div>
+                        <template if:true={fileData}>
+                            <p>{fileData.filename}</p>
+                        </template>
+                         
+                      </div>
+                      <div class="slds-modal__footer ">
+                        <button class="slds-button slds-button_neutral cancelBtnStyle" aria-label="Cancel and close" onclick={handlecancelModal}>Cancel</button>
+                        <button class="slds-button slds-button_brand uploadBtnStyle" onclick={handleUploadBtnSave}>Upload</button>
+                      </div>
+                    </div>
+                  </section>
+                  <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+            </div>
+
+        </div>
+    </div>
+</template>

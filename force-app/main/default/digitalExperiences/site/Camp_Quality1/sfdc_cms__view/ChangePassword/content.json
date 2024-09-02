@@ -1,0 +1,32 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "ChangePassword",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "ChangePassword",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "0b08fc9d-3eed-4e45-ad23-6a411a1f5169",
+          "type" : "component"
+        } ],
+        "id" : "c71be5f9-364b-4dc8-a481-b2c6db0995fe",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "c:communityChangePassword",
+      "id" : "c5a32737-e799-43ab-8aac-a134dd559c7b",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-changepassword"
+  }
+}

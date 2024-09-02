@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_ways_of_supporting__c</fullName>
+    <inlineHelpText>Please select any that apply</inlineHelpText>
+    <label>04. Other ways of supporting</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Taking part in a fundraising event like a fun run, cycle or swim.</fullName>
+                <default>false</default>
+                <label>a. Taking part in a fundraising event like a fun run, cycle or swim.</label>
+            </value>
+            <value>
+                <fullName>Volunteering in my local Camp Quality Office - helping with events, for example.</fullName>
+                <default>false</default>
+                <label>d. Volunteering in my local Camp Quality Office - helping with events, for example.</label>
+            </value>
+            <value>
+                <fullName>Volunteering at a Camp Quality Camp.</fullName>
+                <default>false</default>
+                <label>c. Volunteering at a Camp Quality Camp.</label>
+            </value>
+            <value>
+                <fullName>Organising a fundraising event at home or work.</fullName>
+                <default>false</default>
+                <label>b. Organising a fundraising event at home or work.</label>
+            </value>
+            <value>
+                <fullName>Dramatically boosting funds and impact by agreeing to match the donations raised at an event or through an appeal.</fullName>
+                <default>false</default>
+                <label>e. Dramatically boosting funds and impact by agreeing to match the donations raised at an event or through an appeal.</label>
+            </value>
+            <value>
+                <fullName>Making a regular monthly donation so every day is a better day for children facing cancer.</fullName>
+                <default>false</default>
+                <label>f. Making a regular monthly donation so every day is a better day for children facing cancer.</label>
+            </value>
+            <value>
+                <fullName>Dramatically boosting funds and impact by agreeing to match the donations raised at an event or through an appeal</fullName>
+                <default>false</default>
+                <label>g. Dramatically boosting funds and impact by agreeing to match the donations raised at an event or through an appeal</label>
+            </value>
+            <value>
+                <fullName>h. Making an extraordinary one-off gift of $1000 or more to fund a specific project or program.</fullName>
+                <default>false</default>
+                <label>h. Making an extraordinary one-off gift of $1000 or more to fund a specific project or program.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

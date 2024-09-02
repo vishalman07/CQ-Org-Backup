@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_First_Aid__c</fullName>
+    <description>Do you have current First Aid/CPR certification?</description>
+    <inlineHelpText>Do you have current First Aid/CPR certification?</inlineHelpText>
+    <label>Current First Aid/CPR</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Yes_No_Field</valueSetName>
+    </valueSet>
+</CustomField>

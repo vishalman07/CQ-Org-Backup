@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationVisibilities>
+        <application>Salesforce_Admin</application>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <description>Gives access to Salesforce Admin  app in lightning</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>SAdmin app</label>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewEncryptedData</name>
+    </userPermissions>
+</PermissionSet>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Type__c</fullName>
+    <label>Event Type</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Family Camp</fullName>
+                <default>false</default>
+                <label>Family Camp</label>
+            </value>
+            <value>
+                <fullName>Family Experience</fullName>
+                <default>false</default>
+                <label>Family Experience</label>
+            </value>
+            <value>
+                <fullName>Family Fun Day</fullName>
+                <default>false</default>
+                <label>Family Fun Day</label>
+            </value>
+            <value>
+                <fullName>Family Respite</fullName>
+                <default>false</default>
+                <label>Family Respite</label>
+            </value>
+            <value>
+                <fullName>Fundraising Event</fullName>
+                <default>false</default>
+                <label>Fundraising Event</label>
+            </value>
+            <value>
+                <fullName>Hospital Program</fullName>
+                <default>false</default>
+                <label>Hospital Program</label>
+            </value>
+            <value>
+                <fullName>Junior Camp</fullName>
+                <default>false</default>
+                <label>Junior Camp</label>
+            </value>
+            <value>
+                <fullName>Middle Camp</fullName>
+                <default>false</default>
+                <label>Middle Camp</label>
+            </value>
+            <value>
+                <fullName>Mini Camp</fullName>
+                <default>false</default>
+                <label>Mini Camp</label>
+            </value>
+            <value>
+                <fullName>Volunteer Recognition Event</fullName>
+                <default>false</default>
+                <label>Volunteer Recognition Event</label>
+            </value>
+            <value>
+                <fullName>Volunteer Training Days</fullName>
+                <default>false</default>
+                <label>Volunteer Training Days</label>
+            </value>
+            <value>
+                <fullName>Multi Age Group Camp</fullName>
+                <default>false</default>
+                <label>Multi Age Group Camp</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+            <value>
+                <fullName>Office Volunteering</fullName>
+                <default>false</default>
+                <label>Office Volunteering</label>
+            </value>
+            <value>
+                <fullName>Family Playgroup</fullName>
+                <default>false</default>
+                <label>Family Playgroup</label>
+            </value>
+            <value>
+                <fullName>Family Dinner/Pizza Night</fullName>
+                <default>false</default>
+                <label>Family Dinner/Pizza Night</label>
+            </value>
+            <value>
+                <fullName>Pilot - Age Camp Meet the Family</fullName>
+                <default>false</default>
+                <label>Pilot - Age Camp Meet the Family</label>
+            </value>
+            <value>
+                <fullName>Volunteer Leadership Induction</fullName>
+                <default>false</default>
+                <label>Volunteer Leadership Induction</label>
+            </value>
+            <value>
+                <fullName>Volunteer Oranges</fullName>
+                <default>false</default>
+                <label>Volunteer Oranges</label>
+            </value>
+            <value>
+                <fullName>Volunteer Other Induction/Training</fullName>
+                <default>false</default>
+                <label>Volunteer Other Induction/Training</label>
+            </value>
+            <value>
+                <fullName>Puppet Tour</fullName>
+                <default>false</default>
+                <label>Puppet Tour</label>
+            </value>
+            <value>
+                <fullName>Grad Camp</fullName>
+                <default>false</default>
+                <label>Grad Camp</label>
+            </value>
+            <value>
+                <fullName>Virtual Camp</fullName>
+                <default>false</default>
+                <label>Virtual Camp</label>
+            </value>
+            <value>
+                <fullName>Fundraising/Corporate</fullName>
+                <default>false</default>
+                <label>Fundraising/Corporate</label>
+            </value>
+            <value>
+                <fullName>Live Performance</fullName>
+                <default>false</default>
+                <label>Live Performance</label>
+            </value>
+            <value>
+                <fullName>Raffle</fullName>
+                <default>false</default>
+                <label>Raffle</label>
+            </value>
+            <value>
+                <fullName>P2P Fundraising</fullName>
+                <default>false</default>
+                <label>P2P Fundraising</label>
+            </value>
+            <value>
+                <fullName>Community Fundraising</fullName>
+                <default>false</default>
+                <label>Community Fundraising</label>
+            </value>
+            <value>
+                <fullName>Regular Giving</fullName>
+                <default>false</default>
+                <label>Regular Giving</label>
+            </value>
+            <value>
+                <fullName>Single Gift</fullName>
+                <default>false</default>
+                <label>Single Gift</label>
+            </value>
+            <value>
+                <fullName>Motoring Event - wesCarpade</fullName>
+                <default>false</default>
+                <label>Motoring Event - wesCarpade</label>
+            </value>
+            <value>
+                <fullName>Motoring Event - esCarpade</fullName>
+                <default>false</default>
+                <label>Motoring Event - esCarpade</label>
+            </value>
+            <value>
+                <fullName>Motoring Event - FUNx4</fullName>
+                <default>false</default>
+                <label>Motoring Event - FUNx4</label>
+            </value>
+            <value>
+                <fullName>Motoring Event - Motocyc</fullName>
+                <default>false</default>
+                <label>Motoring Event - Motocyc</label>
+            </value>
+            <value>
+                <fullName>Motoring Event - Convoy Geelong</fullName>
+                <default>false</default>
+                <label>Motoring Event - Convoy Geelong</label>
+            </value>
+            <value>
+                <fullName>Motoring Event - Convoy Perth</fullName>
+                <default>false</default>
+                <label>Motoring Event - Convoy Perth</label>
+            </value>
+            <value>
+                <fullName>Motoring Event - Convoy Adelaide</fullName>
+                <default>false</default>
+                <label>Motoring Event - Convoy Adelaide</label>
+            </value>
+            <value>
+                <fullName>Motoring Event - Convoy Newcastle</fullName>
+                <default>false</default>
+                <label>Motoring Event - Convoy Newcastle</label>
+            </value>
+            <value>
+                <fullName>Bequest</fullName>
+                <default>false</default>
+                <label>Bequest</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

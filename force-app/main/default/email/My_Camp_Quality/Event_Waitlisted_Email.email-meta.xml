@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Logo_Letterhead</letterhead>
+    <name>Event Waitlisted</name>
+    <style>freeForm</style>
+    <subject>{!Campaign.Portal_Title__c}</subject>
+    <textOnly>Dear {!Account.Name} ,
+
+
+
+Thank you so much for registering your interest to attend {!Campaign.Portal_Title__c}.
+
+
+
+We&apos;ve been overwhelmed with expressions of interest for this event and at this stage, we unfortunately don&apos;t have any places available.
+
+However, we will keep you on the waitlist and if any families are no longer able to attend, we&apos;ll be sure to notify you as soon as possible.
+
+We hope to see your family on one of our fun-filled resilience building programs soon.
+
+
+Kind Regards,</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

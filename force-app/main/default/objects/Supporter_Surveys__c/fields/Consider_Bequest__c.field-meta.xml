@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consider_Bequest__c</fullName>
+    <inlineHelpText>Please select one statement</inlineHelpText>
+    <label>05. Consider Bequest?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I have already included Camp Quality in my Will.</fullName>
+                <default>false</default>
+                <label>a. I have already included Camp Quality in my Will.</label>
+            </value>
+            <value>
+                <fullName>I intend to include Camp Quality in my Will when I make or revise my Will.</fullName>
+                <default>false</default>
+                <label>b. I intend to include Camp Quality in my Will when I make or revise my Will.</label>
+            </value>
+            <value>
+                <fullName>I’m considering leaving a gift to Camp Quality in my Will.</fullName>
+                <default>false</default>
+                <label>c. I’m considering leaving a gift to Camp Quality in my Will.</label>
+            </value>
+            <value>
+                <fullName>I would like you to send me some information, please.</fullName>
+                <default>false</default>
+                <label>d. I would like you to send me some information, please.</label>
+            </value>
+            <value>
+                <fullName>It’s not for me, thank you.</fullName>
+                <default>false</default>
+                <label>e. It’s not for me, thank you.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

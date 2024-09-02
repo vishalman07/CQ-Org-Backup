@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Eligibility_Active__c</fullName>
+    <defaultValue>true</defaultValue>
+    <inlineHelpText>Check if this eligibility criteria is still in use</inlineHelpText>
+    <label>Eligibility Active</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

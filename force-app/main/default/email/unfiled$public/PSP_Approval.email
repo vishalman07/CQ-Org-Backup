@@ -1,0 +1,4 @@
+Hi,
+The Puppet Show Request {!PuppetShow__c.Name} is read for approval. Please approve this request.
+Thank you.
+{!PuppetShow__c.CreatedBy}

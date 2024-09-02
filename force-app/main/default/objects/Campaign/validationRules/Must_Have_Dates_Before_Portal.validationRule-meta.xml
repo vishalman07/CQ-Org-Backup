@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Must_Have_Dates_Before_Portal</fullName>
+    <active>true</active>
+    <errorConditionFormula>if(  ISPICKVAL(Status, &quot;Approved for portal and invites&quot;), 
+ OR(ISNULL( Registrations_Open__c ) ,ISNULL( Registrations_Closed__c), ISNULL( Registrations_Cancellation__c ) , ISNULL( Portal_Description__c ))
+,false)</errorConditionFormula>
+    <errorMessage>You must complete all fields in My Camp Quality Section before publishing to Portal.</errorMessage>
+</ValidationRule>

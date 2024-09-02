@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>49.0</apiVersion>
+    <dynamicChoiceSets>
+        <name>CostCentre</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Cost_Centre__c</picklistField>
+        <picklistObject>PuppetShow__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>PerformanceTeam</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Performance_Group__c</picklistField>
+        <picklistObject>PuppetShow__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>PerformanceType</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Show_Sub_Type__c</picklistField>
+        <picklistObject>PuppetShow__c</picklistObject>
+    </dynamicChoiceSets>
+    <interviewLabel>Puppet Show Request {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Puppet Show Request</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_Puppet_Shows</name>
+        <label>Create Puppet Shows</label>
+        <locationX>624</locationX>
+        <locationY>320</locationY>
+        <inputAssignments>
+            <field>Booking_Request_Notes__c</field>
+            <value>
+                <elementReference>Event_Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Contact_Details__c</field>
+            <value>
+                <elementReference>Contact_Person_On_the_Day</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cost_Centre__c</field>
+            <value>
+                <elementReference>Cost_Centre</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Extra_fundraising_event_info__c</field>
+            <value>
+                <elementReference>Any_further_info_about_the_event_Any_questions</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Parking_access_details__c</field>
+            <value>
+                <elementReference>Parking_access_details</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Performance_Group__c</field>
+            <value>
+                <elementReference>Puppet_Show_Team</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Show_1_Attendence__c</field>
+            <value>
+                <elementReference>Number_of_event_attendees</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Show_1_Time__c</field>
+            <value>
+                <elementReference>Start_Time</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Show_2_Time__c</field>
+            <value>
+                <elementReference>End_Time</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Show_Date__c</field>
+            <value>
+                <elementReference>Event_Date</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Show_Notes__c</field>
+            <value>
+                <elementReference>Why_do_you_want_the_Puppets_at_your_event</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Show_Status__c</field>
+            <value>
+                <stringValue>Requested</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Show_Sub_Type__c</field>
+            <value>
+                <elementReference>ShowSubType</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Show_Type__c</field>
+            <value>
+                <stringValue>Brand Relations</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Sound_equipment_required__c</field>
+            <value>
+                <elementReference>Sound_equipment_required</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Venue_Details__c</field>
+            <value>
+                <elementReference>Venue_details</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Venue__c</field>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>PuppetShow__c</object>
+    </recordCreates>
+    <recordLookups>
+        <name>GetAccount</name>
+        <label>GetAccount</label>
+        <locationX>156</locationX>
+        <locationY>172</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>About_Your_Event</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <object>Account</object>
+        <outputReference>Account</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Name</queriedFields>
+        <queriedFields>BillingAddress</queriedFields>
+    </recordLookups>
+    <screens>
+        <name>About_Your_Event</name>
+        <label>About Your Event</label>
+        <locationX>293</locationX>
+        <locationY>355</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Create_Puppet_Shows</targetReference>
+        </connector>
+        <fields>
+            <name>Form</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;Thanks for using our &lt;/span&gt;PSP Internal Booking Request Form&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;!&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;This form is used by the PSP Manager to assess the appropriate use of the puppets at an event that is outside of the core business of the Primary School Education Program.&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;Please complete this form &lt;/span&gt;&lt;b style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;no later than 4 weeks &lt;/b&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;before your event date. Shannon will reply within 2 working days.&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;Some important things to consider before submitting your request:&lt;/b&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;You can submit a request for the following: Puppet Live Show, Puppet Live Roving Appearance, Puppet Live Q&amp;amp;A, Puppet Video&lt;/span&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;Authorisation will come from the PSP Manager. Not all events are appropriate for the puppets to attend. If a request is not approved the PSP Manager will discuss the reasons with you&lt;/span&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;If your request is approved, you may be required to cover the cost of a casual performer for a minimum 3-hour shift, please ensure you factor this cost into your event budget. Casual performers are paid at a rate of $35.60 (Level 1 puppeteer) or $37.40 (Level 2 puppeteer).&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;There must always be two puppeteers at any live event&lt;/span&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>AccountName</name>
+            <fieldText>&lt;p&gt;Booking show for:&lt;/p&gt;&lt;p&gt;{!Account.Name}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Cost_Centre</name>
+            <choiceReferences>CostCentre</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Cost Centre/Department Requesting</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Puppet_Show_Team</name>
+            <choiceReferences>PerformanceTeam</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Puppet Show Team</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Event_Name</name>
+            <dataType>String</dataType>
+            <fieldText>Event Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Event_Date</name>
+            <dataType>Date</dataType>
+            <fieldText>Event Date</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Why_do_you_want_the_Puppets_at_your_event</name>
+            <dataType>String</dataType>
+            <fieldText>Why do you want the Puppets at your event?</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>ShowSubType</name>
+            <choiceReferences>PerformanceType</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Performance Type (Click i for description of types)</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <helpText>&lt;p&gt;&lt;b style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;Performance Options&lt;/b&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;Here’s some more information about what the puppets can offer at your event.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;u style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;Puppet Live Show&lt;/u&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;This is a 5 - 10 minute scripted show. The script involves 2-3 puppets. The purpose is to provide information about programs and services provided by Camp Quality from a child’s perspective. It is a fun and unique way to engage with external stakeholders.&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;A Puppet Live Show requires the following to be available:&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;A space for the puppets to perform (approx. 5m x 4 m)&lt;/span&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;A private area for the puppeteers to warm up (e.g. side room)&lt;/span&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;Access to a working power socket (we’ll provide our headset mics and portable speaker for show music)&lt;/span&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;u style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;Puppet Live Roving Appearance&amp;nbsp;&lt;/u&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;The duration of this appearance is flexible. It takes the form of improvised, free roaming interactions between puppets and event attendees. This works well for welcoming parties (e.g. a ball or luncheon). Roving puppets are great for a media wall, photos with guests, directing guests to seating, or even running a fun therapy!&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;Please note, puppeteers are only allowed to puppeteer for a maximum of 30 minutes when roving before taking a short break to stretch and switch arms where necessary. Break times are at the discretion of the puppeteers at the event.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;A Puppet Live Roving appearance requires the following to be available:&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;A private area for the puppeteers to warm up and take breaks (e.g. side room)&lt;/span&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;u style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;Puppet Live Q&amp;amp;A&lt;/u&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;This is a 10 minute Q&amp;amp;A. It involves 3-4 people (1 interviewer, 1 PSP Coordinator/Puppeteer and 1-2 puppets). It’s a fun and interactive Q&amp;amp;A session whereby the interviewer asks questions of both a puppeteer and the puppet(s). The purpose is to provide detailed information about the Primary School Program and, potentially, other programs and services provided by Camp Quality.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;A Puppet Live Q&amp;amp;A appearance requires the following to be available:&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;A space for the Q&amp;amp;A to take place (stage or focus area of some sort)&lt;/span&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;A private area for the puppeteers to warm up (e.g. side room)&lt;/span&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;u style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;Puppet Video&lt;/u&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;There is a suite of puppet videos available for all staff to download and share with stakeholders from our Sharepoint &lt;/span&gt;&lt;a href=&quot;https://campqualityaudemo.sharepoint.com/portals/hub/_layouts/15/PointPublishing.aspx?app=video&amp;amp;p=c&amp;amp;chid=66346427-0bb7-4848-84d4-a5b92a8cf6f1&amp;amp;s=0&amp;amp;t=pfb&quot; target=&quot;_blank&quot; style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit; color: rgb(0, 0, 255);&quot;&gt;&lt;u&gt;HERE&lt;/u&gt;&lt;/a&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;The videos include:&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;Welcome to the Camp Quality family&lt;/span&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;Thank you&lt;/span&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;Happy Birthday&lt;/span&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;Happy Anniversary&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt; background-color: inherit;&quot;&gt;Camp Quality – Puppet Interview&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; background-color: inherit;&quot;&gt;Please use these videos where appropriate, or submit a request for any personalised video content (for example, a Thank You video for a major donor).&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 10pt; font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;</helpText>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Start_Time</name>
+            <dataType>String</dataType>
+            <fieldText>Performance Start Time (Including 30 min warm up time)</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>End_Time</name>
+            <dataType>String</dataType>
+            <fieldText>Performance End Time (Including 20 min cool down time)</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Contact_Person_On_the_Day</name>
+            <dataType>String</dataType>
+            <fieldText>Contact Person On the Day (Name, mobile &amp; email )</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Number_of_event_attendees</name>
+            <dataType>Number</dataType>
+            <fieldText>Number of event attendees (Approximation is fine if you’re unsure)</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+            <scale>0</scale>
+        </fields>
+        <fields>
+            <name>Parking_access_details</name>
+            <dataType>String</dataType>
+            <fieldText>Parking/access details</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Venue_details</name>
+            <dataType>String</dataType>
+            <fieldText>Venue details (i.e. ballroom? conference room? outdoors? )</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Sound_equipment_required</name>
+            <dataType>String</dataType>
+            <fieldText>Sound equipment required (We can supply microphones and or/music)</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Any_further_info_about_the_event_Any_questions</name>
+            <dataType>String</dataType>
+            <fieldText>Any further info about the event? Any questions?</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Thanks</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;i style=&quot;font-size: 9pt;&quot;&gt;Thanks for taking the time to fill out this request; we’ll be in touch soon.&lt;/i&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>GetAccount</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>Account</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

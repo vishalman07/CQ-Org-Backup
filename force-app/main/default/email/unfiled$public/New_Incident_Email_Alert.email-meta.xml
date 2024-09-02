@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Letterhead</letterhead>
+    <name>New Incident Email Alert</name>
+    <style>formalLetter</style>
+    <subject>New Incident Alert</subject>
+    <textOnly>NEW INCIDENT ALERT {!Incident__c.Name}
+ew {!Incident__c.RecordType} incident occurred at {!Incident__c.Incident_Date_Time__c} with a {!Incident__c.Severity__c} severity level.
+
+
+Event: {!Incident__c.Event_Program_Name__c}
+
+Address: {!Incident__c.Incident_Location__c}.
+
+
+
+
+
+For further information access the incident at {!Incident__c.CreatedDate}
+
+
+
+This is an automated email, please do not respond.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

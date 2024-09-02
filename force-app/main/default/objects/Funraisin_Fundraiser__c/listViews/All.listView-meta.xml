@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Member_member_id__c</columns>
+    <columns>Member_charity_id__c</columns>
+    <columns>Member_member_hash__c</columns>
+    <columns>Member_related_member_id__c</columns>
+    <columns>Member_m_rego_number__c</columns>
+    <columns>Member_m_fname__c</columns>
+    <columns>Member_m_lname__c</columns>
+    <columns>Member_m_email__c</columns>
+    <columns>Member_m_username__c</columns>
+    <columns>Member_m_dob__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Records</label>
+</ListView>

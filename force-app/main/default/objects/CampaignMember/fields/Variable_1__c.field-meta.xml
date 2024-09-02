@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Variable_1__c</fullName>
+    <description>Variable text for EDM</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Variable text for EDM</inlineHelpText>
+    <label>Variable 1</label>
+    <length>99</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Impacted_By_Cancer__c</fullName>
+    <externalId>false</externalId>
+    <formula>Attendees_Living_With_Cancer__c + Attendees_with_Parent_Living_With_Cancer__c + Attendees_with_Sibling_with_cancer__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>No Impacted By Cancer</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

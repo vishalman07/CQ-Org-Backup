@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Age_Band__c</fullName>
+    <description>DCA Enrichment Field</description>
+    <externalId>false</externalId>
+    <formula>IF (AND(Age__c &lt;= 18, Age__c &lt;= 18), &quot;Under 18&quot;,
+IF (AND(Age__c &gt;= 18, Age__c &lt;= 24), &quot;18-24&quot;,
+IF (AND(Age__c &gt;= 25, Age__c &lt;= 34), &quot;25-34&quot;,
+IF (AND(Age__c &gt;= 35, Age__c &lt;= 44), &quot;35-44&quot;,
+IF (AND(Age__c &gt;= 45, Age__c &lt;= 54), &quot;45-54&quot;,
+IF (AND(Age__c &gt;= 55, Age__c &lt;= 64), &quot;55-64&quot;,
+IF (AND(Age__c &gt;= 65, Age__c &lt;= 74), &quot;65-74&quot;,
+IF (Age__c&gt; 84, &quot;75+&quot;,
+&quot;&quot;))))))))</formula>
+    <label>Age Band</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

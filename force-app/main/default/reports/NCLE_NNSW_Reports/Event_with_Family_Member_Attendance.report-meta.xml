@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign$Name</field>
+    </columns>
+    <columns>
+        <field>Campaign.Family_Attendances__r.Family_Member_Attendance__r$Contact__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Family_Attendances__r.Family_Member_Attendance__r$Age__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Family_Attendances__r$Family__c.Regionv2__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Family_Attendances__r.Family_Member_Attendance__r$Attendance__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Campaign$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>NCLE1710 Middle Camp</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Family_Attendances__r.Family_Member_Attendance__r$Attendance__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Request to Attend,Accepted</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Event with Family Member Attendance</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Campaigns_with_Family_Attendances_with_Family_Memb__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Campaign$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

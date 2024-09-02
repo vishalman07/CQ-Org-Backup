@@ -1,0 +1,193 @@
+<template>
+	<template if:true={showRecordDetails}>
+		<lightning-card  variant="Narrow"  title="Log Details" icon-name="standard:logging">
+		<table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_fixed-layout">
+			<tbody>
+				<template for:each={showRecordDetails} for:item="log">
+					<tr key={log.jobId} data-id={log.JobId}>
+						<th>Status</th>
+						<td data-label="Status">
+							<div class="slds-truncate">{log.status}</div>
+						</td>
+					</tr>
+					<tr key={log.jobId} data-id={log.JobId}>
+						<th>File Type</th>
+						<td data-label="File Type">
+							<div class="slds-truncate">{log.fileType}</div>
+						</td>
+					</tr>
+					<tr key={log.jobId} data-id={log.JobId}>
+						<th>Status Details</th>
+						<td data-label="Status Details">
+							<div class="custom-cell-content">{log.extendedStatus}</div>
+						</td>
+					</tr>
+					<tr key={log.jobId} data-id={log.JobId}>
+						<th>Uploaded By</th>
+						<td data-label="Uploaded By">
+							<div class="slds-truncate">{log.uploadedBy}</div>
+						</td>
+					</tr>
+					<tr key={log.jobId} data-id={log.JobId}>
+						<th>Total Jobs</th>
+						<td data-label="Total Jobs">
+							<div class="slds-truncate">{log.totalJobs}</div>
+						</td>
+					</tr>
+					<tr key={log.jobId} data-id={log.JobId}>
+						<th>Processed Jobs</th>
+						<td data-label="Processed Jobs">
+							<div class="slds-truncate">{log.successJobs}</div>
+						</td>
+					</tr>
+					<tr key={log.jobId} data-id={log.JobId}>
+						<th>Error Jobs</th>
+						<td data-label="Error Jobs">
+							<div class="slds-truncate">{log.errorJobs}</div>
+						</td>
+					</tr>
+					<tr key={log.jobId} data-id={log.JobId}>
+						<th>Created Date</th>
+						<td data-label="Created Date">
+							<div class="slds-truncate">{log.createdDate}</div>
+						</td>
+					</tr>
+					<tr key={log.jobId} data-id={log.JobId}>
+						<th>Job Percentage</th>
+						<td data-label="Job Percentage">
+							<div class="slds-truncate">
+								<lightning-progress-bar value={log.jobPer} size="large" variant="circular">
+								</lightning-progress-bar>
+							</div>
+						</td>
+					</tr>
+				</template>
+			</tbody>
+		</table>
+		<div class="slds-align_absolute-center" style="padding-top:20px;">
+      <lightning-button label="Cancel" variant="destructive" onclick={cancelShowdetails}></lightning-button>
+    </div>
+		</lightning-card>
+	</template>
+	<template if:false={showRecordDetails}>
+		<template if:true={jobList}>
+			<lightning-card title="CSV Upload Log">
+				<div class="slds-scrollable_y" style="max-height: 300px;">
+					<table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_fixed-layout">
+						<thead>
+							<tr class="slds-text-title_caps">
+								<th scope="col">
+									<div class="slds-truncate" title="Status">Status</div>
+								</th>
+								<th scope="col">
+									<div class="slds-truncate" title="File Type">File Type</div>
+								</th>
+								<th scope="col">
+									<div class="slds-truncate" title="Status Details">Status Details</div>
+								</th>
+								<th scope="col">
+									<div class="slds-truncate" title="Uploaded By">Uploaded By</div>
+								</th>
+								<th scope="col">
+									<div class="slds-truncate" title="Total Jobs">Total Jobs</div>
+								</th>
+								<th scope="col">
+									<div class="slds-truncate" title="Processed Jobs">Processed Jobs</div>
+								</th>
+								<th scope="col">
+									<div class="slds-truncate" title="Error Jobs">Error Jobs</div>
+								</th>
+								<th scope="col">
+									<div class="slds-truncate" title="Created Date">Created Date</div>
+								</th>
+								<th scope="col">
+									<div class="slds-truncate" title="Job Percentage">Job Percentage</div>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<template for:each={jobList} for:item="log">
+								<tr key={log.jobId} onclick={showLogDetails} data-index={log.jobId}>
+									<td data-label="Status">
+										<div class="slds-truncate">{log.status}</div>
+									</td>
+									<td data-label="File Type">
+										<div class="slds-truncate">{log.fileType}</div>
+									</td>
+									<td data-label="Status Details">
+										<div class="slds-truncate">{log.extendedStatus}</div>
+									</td>
+									<td data-label="Uploaded By">
+										<div class="slds-truncate">{log.uploadedBy}</div>
+									</td>
+									<td data-label="Total Jobs">
+										<div class="slds-truncate">{log.totalJobs}</div>
+									</td>
+									<td data-label="Processed Jobs">
+										<div class="slds-truncate">{log.successJobs}</div>
+									</td>
+									<td data-label="Error Jobs">
+										<div class="slds-truncate">{log.errorJobs}</div>
+									</td>
+									<td data-label="Job ID">
+										<div class="slds-truncate">{log.createdDate}</div>
+									</td>
+									<td data-label="Job Percentage">
+										<lightning-progress-bar value={log.jobPer} size="large" variant="circular">
+										</lightning-progress-bar>
+										<!--<div class="slds-truncate">{log.jobPer}%</div>-->
+									</td>
+								</tr>
+							</template>
+						</tbody>
+					</table>
+				</div>
+			</lightning-card>
+		</template>
+		<template if:true={isLoaded} class="slds-is-relative">
+			<lightning-spinner alternative-text="Loading..." variant="brand">
+			</lightning-spinner>
+		</template>
+		<template if:false={isLoaded}>
+			<lightning-card variant="Narrow" title="Upload Good2give and Paypal CSV File" icon-name="standard:account">
+				<lightning-button variant="brand" label="Upload" title="Primary action" onclick={handleClick}
+					class="slds-m-left_x-small btn"></lightning-button>
+				<div class="container">
+					<lightning-combobox name="progress" class="combo" label="Select File Type"
+						placeholder="Select CSV Type" options={options} onchange={handleChange} required>
+					</lightning-combobox>
+					<br><br>
+					<input type="file" accept=".csv" name="fileupload" onchange={fileUploadHandler}></input><br><br>
+					<tamplate if:true={g2gMapColumn}>
+						<div class="mapping">
+							<div class="slds-grid slds-wrap ">
+								<template iterator:g2g={staticColumnForG2g}>
+									<div key={g2g.value.label} class="slds-col slds-size_4-of-12 inside-mapping">
+										<lightning-combobox class="combo" name="progress" label={g2g.value.label}
+											value={g2g.value.value} options={columns} onchange={handleMappingChange}
+											required>
+										</lightning-combobox>
+									</div>
+								</template>
+							</div>
+						</div>
+					</tamplate>
+					<tamplate if:true={ppffMapColumn}>
+						<div class="mapping">
+							<div class="slds-grid slds-wrap">
+								<template iterator:ppff={staticColumnForPpff}>
+									<div key={ppff.value.label} class="slds-col slds-size_4-of-12 inside-mapping">
+										<lightning-combobox class="combo" name="progress" label={ppff.value.label}
+											value={ppff.value.value} options={columns} onchange={handleMappingChange}
+											required>
+										</lightning-combobox>
+									</div>
+								</template>
+							</div>
+						</div>
+					</tamplate> <br><br>
+		</div>
+			</lightning-card>
+		</template>
+	</template>
+</template>

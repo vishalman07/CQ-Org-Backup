@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>FA_00000__c</columns>
+    <columns>Event__c</columns>
+    <columns>Family__c</columns>
+    <columns>Accepted_Members__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Event__c</field>
+        <operation>equals</operation>
+        <value>NCLE1611 FAMILY CAMP</value>
+    </filters>
+    <label>All</label>
+</ListView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Staff_Camp_Attendee_TEST__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Pulling volunteer staff member attendance role</description>
+    <inlineHelpText>Pulling volunteer staff member attendance role</inlineHelpText>
+    <label>Staff Camp Attendee TEST</label>
+    <referenceTo>Volunteer_Attendance__c</referenceTo>
+    <relationshipLabel>Volunteer Attendance</relationshipLabel>
+    <relationshipName>Volunteer_Attendance</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

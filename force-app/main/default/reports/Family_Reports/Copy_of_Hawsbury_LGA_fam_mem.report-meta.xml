@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.Family_Member_Type__c</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact.Age__c</field>
+    </columns>
+    <columns>
+        <field>ADDRESS2_CITY</field>
+    </columns>
+    <description>Hawksbury LGA families and members and age</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Branch_Office__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Illawarra,Australian Capital Territory,National,Sydney</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Family_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Test Family,Graduating Patient Family,Graduating Restricted Family,Graduating Bereaved Family,Graduating Offspring Family,Graduating Offspring Bereaved Family,Former Patient Family,Former Bereaved Family,Former Offspring Family,Former Offspring Bereaved Family</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_CITY</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Agnes Banks,Berambing,Bilpin,Blaxlands Ridge,Bligh Park,Bowen Mountain,Bucketty,Cattai,Central Colo,Central Macdonald,Clarendon,Colo,Colo Heights,Cornwallis,Cumberland Reach,East Kurrajong,Ebenezer,Fernances,Freemans Reach,Glossodia,Grose Vale,Grose Wold,Higher Macdonald,Hobartville,Kurmond,Kurrajong,Kurrajong Heights,Kurrajong Hills,Leets Vale,Lower Macdonald,Lower Portland,Maraylya,Mcgraths Hill,Mellong,Mogo Creek,Mountain Lagoon,Mulgrave,North Richmond,Oakville,Perrys Crossing,Pitt Town,Pitt Town Bottoms,Putty,Richmond,Richmond Lowlands,Riverstone,Sackville,Scheyville,South Windsor,St Albans,Ten Mile Hollow,Tennyson,The Devils Wilderness,The Slopes,Upper Colo,Upper Macdonald,Vineyard Webbs Creek,Wheeny Creek,Wilberforce,Windsor,Windsor Downs,Wisemans Ferry,Womerah,Wrights Creek,Yarramundi</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Age__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessThan</operator>
+            <value>14</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Family_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Hawsbury - LGA fam mem</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

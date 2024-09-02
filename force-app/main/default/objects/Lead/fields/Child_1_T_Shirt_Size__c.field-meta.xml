@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_1_T_Shirt_Size__c</fullName>
+    <label>Child 1 T-Shirt Size</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Kids 2</fullName>
+                <default>false</default>
+                <label>Kids 2</label>
+            </value>
+            <value>
+                <fullName>Kids 4</fullName>
+                <default>false</default>
+                <label>Kids 4</label>
+            </value>
+            <value>
+                <fullName>Kids 6</fullName>
+                <default>false</default>
+                <label>Kids 6</label>
+            </value>
+            <value>
+                <fullName>Kids 8</fullName>
+                <default>false</default>
+                <label>Kids 8</label>
+            </value>
+            <value>
+                <fullName>Kids 10</fullName>
+                <default>false</default>
+                <label>Kids 10</label>
+            </value>
+            <value>
+                <fullName>Kids 12</fullName>
+                <default>false</default>
+                <label>Kids 12</label>
+            </value>
+            <value>
+                <fullName>Kids 14</fullName>
+                <default>false</default>
+                <label>Kids 14</label>
+            </value>
+            <value>
+                <fullName>Adult S</fullName>
+                <default>false</default>
+                <label>Adult S</label>
+            </value>
+            <value>
+                <fullName>Adult M</fullName>
+                <default>false</default>
+                <label>Adult M</label>
+            </value>
+            <value>
+                <fullName>Adult L</fullName>
+                <default>false</default>
+                <label>Adult L</label>
+            </value>
+            <value>
+                <fullName>Adult XL</fullName>
+                <default>false</default>
+                <label>Adult XL</label>
+            </value>
+            <value>
+                <fullName>Adult 2XL</fullName>
+                <default>false</default>
+                <label>Adult 2XL</label>
+            </value>
+            <value>
+                <fullName>Adult 3XL</fullName>
+                <default>false</default>
+                <label>Adult 3XL</label>
+            </value>
+            <value>
+                <fullName>Adult 4XL</fullName>
+                <default>false</default>
+                <label>Adult 4XL</label>
+            </value>
+            <value>
+                <fullName>Adult 5XL</fullName>
+                <default>false</default>
+                <label>Adult 5XL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email alert when a campaign is created with missing financial coding</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Letterhead</letterhead>
+    <name>Campaign Missing Financial Coding</name>
+    <style>formalLetter</style>
+    <subject>Campaign missing finance coding- please review</subject>
+    <textOnly>Campaign Missing Financial Coding
+New Campaign created {!Campaign.Link}
+
+
+
+Campaign {!Campaign.Name} was created by {!Campaign.CreatedBy}.
+
+
+
+{!Campaign.Branch_Code__c}
+
+{!Campaign.Cost_Centre__c}
+
+{!Campaign.Account_No__c}
+
+
+
+
+
+This is an automated email, please do not respond.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

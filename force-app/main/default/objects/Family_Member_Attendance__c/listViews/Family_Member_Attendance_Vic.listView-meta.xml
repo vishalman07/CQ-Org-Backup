@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Family_Member_Attendance_Vic</fullName>
+    <columns>NAME</columns>
+    <columns>Contact__c</columns>
+    <columns>Family_Member_Type__c</columns>
+    <columns>Companion__c</columns>
+    <columns>Companion_Name__c</columns>
+    <columns>Transport_Pick_Up_Location__c</columns>
+    <columns>Transport_Pick_Up_Time__c</columns>
+    <columns>Transport_Drop_Off_Location__c</columns>
+    <columns>Transport_Drop_Off_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Event__c</field>
+        <operation>equals</operation>
+        <value>VIC2309 Middle Camp</value>
+    </filters>
+    <filters>
+        <field>Attendance__c</field>
+        <operation>equals</operation>
+        <value>Accepted</value>
+    </filters>
+    <label>Family Member Attendance Vic</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>GM_Programs_Services</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

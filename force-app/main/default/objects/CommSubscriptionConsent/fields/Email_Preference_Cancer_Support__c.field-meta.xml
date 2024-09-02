@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Preference_Cancer_Support__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>Email Preference Cancer Support</label>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Salesforce_Request_Type__c</fullName>
+    <inlineHelpText>What kind of request is this? Admin task is to be used for things that require administrative access e.g. merging duplicate records.</inlineHelpText>
+    <label>Salesforce Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Error</fullName>
+                <default>false</default>
+                <label>Bug or Error</label>
+            </value>
+            <value>
+                <fullName>Change</fullName>
+                <default>false</default>
+                <label>Change Request</label>
+            </value>
+            <value>
+                <fullName>Idea</fullName>
+                <default>false</default>
+                <label>Idea/Feedback</label>
+            </value>
+            <value>
+                <fullName>Admin task</fullName>
+                <default>false</default>
+                <label>Admin task</label>
+            </value>
+            <value>
+                <fullName>Login Issues</fullName>
+                <default>false</default>
+                <label>Login Issues</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

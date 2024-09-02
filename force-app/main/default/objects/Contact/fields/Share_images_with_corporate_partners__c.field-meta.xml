@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Share_images_with_corporate_partners__c</fullName>
+    <inlineHelpText>Whether we can share images of the family with our corporate partners</inlineHelpText>
+    <label>Share images with corporate partners</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Yes_No_Field</valueSetName>
+    </valueSet>
+</CustomField>

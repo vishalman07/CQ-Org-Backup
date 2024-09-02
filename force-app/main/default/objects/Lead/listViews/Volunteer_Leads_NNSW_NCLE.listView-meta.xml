@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer_Leads_NNSW_NCLE</fullName>
+    <booleanFilter>1 AND (2 OR 3 OR 7 OR 8) AND (4 OR 5 OR 6) AND 9</booleanFilter>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>Lead_Mapping_Processed__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>Office_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Volunteer</value>
+    </filters>
+    <filters>
+        <field>Office__c</field>
+        <operation>equals</operation>
+        <value>Coffs Harbour</value>
+    </filters>
+    <filters>
+        <field>Office__c</field>
+        <operation>equals</operation>
+        <value>Newcastle</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>New</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Contacting</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Screening</value>
+    </filters>
+    <filters>
+        <field>Office__c</field>
+        <operation>equals</operation>
+        <value>Northern New South Wales Office</value>
+    </filters>
+    <filters>
+        <field>Office__c</field>
+        <operation>equals</operation>
+        <value>Newcastle Office</value>
+    </filters>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>notEqual</operation>
+        <value>Website - Volunteer Application EOI Form</value>
+    </filters>
+    <label>Volunteer Leads - NNSW &amp; NCLE</label>
+    <sharedTo></sharedTo>
+</ListView>

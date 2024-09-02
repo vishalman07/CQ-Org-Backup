@@ -1,0 +1,5 @@
+Hi {!Contact.FirstName}
+
+We are sorry to see you go,
+
+You have cancelled your donation of  {!npe03__Recurring_Donation__c.npe03__Amount__c} per month

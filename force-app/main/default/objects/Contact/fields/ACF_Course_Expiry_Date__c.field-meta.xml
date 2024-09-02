@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACF_Course_Expiry_Date__c</fullName>
+    <description>Pulls latest course date from ACF Course Expiry (hidden field) for ACF Refresh and ACF Safeguarding Children.</description>
+    <label>ACF Course Expiry Date</label>
+    <summarizedField>Volunteer_Course__c.ACF_Course_Expiry_Date__c</summarizedField>
+    <summaryFilterItems>
+        <field>Volunteer_Course__c.Course__c</field>
+        <operation>equals</operation>
+        <value>ACF Refresh, ACF Safeguarding Children</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Volunteer_Course__c.Volunteer__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

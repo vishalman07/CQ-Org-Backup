@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Family_Member_Attendance__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Family Member Attendance</label>
+    <referenceTo>Family_Member_Attendance__c</referenceTo>
+    <relationshipLabel>Transport Participants</relationshipLabel>
+    <relationshipName>Transport_Participants</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

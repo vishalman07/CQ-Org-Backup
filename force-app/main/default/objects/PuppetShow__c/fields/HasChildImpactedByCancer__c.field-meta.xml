@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HasChildImpactedByCancer__c</fullName>
+    <formula>if( Attendees_Living_With_Cancer__c + Attendees_with_Parent_Living_With_Cancer__c + Attendees_with_Sibling_with_cancer__c&gt;0, True,False)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>HasChildImpactedByCancer</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Request_To_Fundraise__c</entityName>
+    <fieldName>ATF_Status__c</fieldName>
+    <masterLabel>ATF Process</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;The approval process is finished, mark this stage as complete&lt;/p&gt;</info>
+        <picklistValueName>Authorised</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;A formal letter must now be sent to the applicant advising them they can not fundraise for Camp Quality. &lt;/p&gt;&lt;p&gt;A copy of the letter must be uploaded to the notes &amp;amp; attachments tab&lt;/p&gt;</info>
+        <picklistValueName>Authority To Fundraise Declined</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Finalise the Campaign by unchecking the Active check box within &lt;b&gt;4 weeks&lt;/b&gt; of the ATF expiry date&lt;/p&gt;&lt;p&gt;Ensure all online fundraising pages are closed by the ATF expiry date&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Closed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Log a call each time you attempt to make contact&lt;/p&gt;&lt;p&gt;Complete all fields within the RTF form from your conversation with the applicant&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;Mark this stage as complete to move to the next stage&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Contacted</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Create a New Task to check in with the Contact &lt;b&gt;1 week&lt;/b&gt; before the event or a series of Tasks for regular check ins if the authority runs over a number of months.&lt;/p&gt;&lt;p&gt;Create a New Task to check in with the Contact&lt;b&gt; 1 week &lt;/b&gt;post event&lt;/p&gt;&lt;p&gt;Create a New Task to review the received funds via the Campaign &lt;b&gt;1 week&lt;/b&gt; before the ATF expires&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Funds Received</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Online Request – must be contacted within 3 working day to complete the application details&lt;/p&gt;&lt;p&gt;Manual Request – complete all the relevant details on the form&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;Mark this stage as complete to move to the next stage&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>New Request/Registration</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;After ensuring all the details have been entered correctly, mark this stage as complete. &lt;/p&gt;&lt;p&gt;Your manager will receive a notification to review the application.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;You will receive a notification either approving or declining the application&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Request Approval</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Thank the Contact appropriately and record it as a Task &lt;/p&gt;</info>
+        <picklistValueName>Thanked</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

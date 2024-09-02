@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Medication_and_Vitamins__c</fullName>
+    <label>Medication and Vitamins</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Webster Pack</fullName>
+                <default>false</default>
+                <label>Webster Pack or Signed Management Plan</label>
+            </value>
+            <value>
+                <fullName>Original Packaging</fullName>
+                <default>false</default>
+                <label>Original Packaging</label>
+            </value>
+            <value>
+                <fullName>Webster Pack or Signed Management Plan</fullName>
+                <default>false</default>
+                <label>Webster Pack or Signed Management Plan</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

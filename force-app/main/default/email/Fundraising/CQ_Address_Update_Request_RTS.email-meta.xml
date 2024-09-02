@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email sent to contacts when CQ receive a RTS</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CQ_Letterhead_for_classic_tempates</letterhead>
+    <name>CQ Address Update Request (RTS)</name>
+    <style>freeForm</style>
+    <subject>Please let us know if you have changed address</subject>
+    <textOnly>Hi {!Contact.FirstName}
+
+We recently sent you something in the post but it has been returned to us. We may have an old address for you.
+
+So that we can keep you up to date on all news, events and how your support is helping children and families impacted by cancer the opportunity to thrive, please contact us on 02 9876 0500 or complete the form to update your details by clicking here.
+
+Thank you,
+
+Camp Quality</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

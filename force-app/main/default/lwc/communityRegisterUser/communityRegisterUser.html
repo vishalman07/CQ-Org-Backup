@@ -1,0 +1,105 @@
+<template>
+<div class="slds-grid slds-wrap custom_font">
+		<div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12">
+			<div class="slds-box slds-p-around_medium form">
+				<div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12">
+					<div class="">
+						<h1 class="header">Portal Registration</h1>
+					</div>
+				</div>
+                <h2 class="header2">Sign up to Volunteer for Camp Quality</h2>
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline label">
+                    Organisation Name :
+                </div>
+                <div class="slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline">
+					<input type="text" placeholder="Enter Your Organization Name" class="slds-input form_input" required />
+                </div>
+					<div class="slds-col slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline label">
+                       First Name :     </div>
+                         <div class="slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline">
+						<input type="text" placeholder="Enter Your FirstName" class="slds-input form_input" required />
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline label">
+                       Last Name :     </div>
+                         <div class="slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline">
+						<input type="text" placeholder="Enter Your LastName" class="slds-input form_input" required />
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline label">
+                       Email :     </div>
+                         <div class="slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline">
+						<input type="text" placeholder="Enter Your Email" class="slds-input form_input" required />
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline label">
+                       Password must be at least 8 characters and include letters and numbers :     </div>
+                         <div class="slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline">
+						<input type="password" placeholder="Enter Your Password" class="slds-input form_input" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required />
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline label">
+                      Confirm Password :     </div>
+                         <div class="slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline">
+						<input type="password" placeholder="Enter Your Confirm Password" class="slds-input form_input" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required />
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline label">
+                      Home Phone :  </div>
+                         <div class="slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline">
+						<input type="text" placeholder="Enter Your Home Phone" class="slds-input form_input" required />
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline label">
+                     Work Phone :  </div>
+                         <div class="slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline">
+						<input type="text" placeholder="Enter Your Work Phone" class="slds-input form_input" required />
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline label">
+                      Mobile Phone : </div>
+                         <div class="slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline">
+						<input type="text" placeholder="Enter Your Mobile Phone" class="slds-input form_input" required />
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline label">
+                      Other Phone : </div>
+                         <div class="slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline">
+						<input type="text" placeholder="Enter Your Other Phone" class="slds-input form_input" required />
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline label">
+                      Preferred Phone : </div>
+                         <div class="slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline custom_color">
+						<lightning-combobox
+                                name="Perferred Phone"
+                                value={value}
+                                placeholder="--None--"
+                                options={options}
+                                onchange={handleChange} >
+                        </lightning-combobox>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline label">
+                      Address : </div>
+                         <div class="slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline">
+						<textarea class="slds-input form_input" rows="2" cols="5" ></textarea>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline label">
+                      City : </div>
+                         <div class="slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline">
+						<input type="text" placeholder="Enter Your City" class="slds-input form_input" required />
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline label">
+                      State : </div>
+                         <div class="slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline">
+						<input type="text" placeholder="Enter Your State" class="slds-input form_input" required />
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline label">
+                      Postcode : </div>
+                         <div class="slds-size_1-of-2 slds-medium-size_6-of-12 custom_inline">
+						<input type="text" placeholder="Enter Your Postcode" class="slds-input form_input" required />
+                    </div>
+                     <div class="slds-size_1-of-1 slds-medium-size_12-of-12 custom_color">
+						<input type="checkbox"  required /> I acknowledge that I have read and agree to the Camp Quality Code of Conduct.
+                    </div>
+					<div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 custom_inline">
+						<button value="Register" class="slds-button slds-button_brand form_btn_send">Register</button>
+					</div>
+					<div class="slds-size_1-of-1 slds-medium-size_6-of-12 custom_inline">
+						<a class="slds-button slds-button_neutral form_btn_cancel" href="/login">Cancel</a>
+					</div>
+					</div>
+				</div>
+			</div>
+</template>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.CampaignMembers$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$Email</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact$npsp__Primary_Contact__c</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Family_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Patient,Patient - Alternate Household,Bereaved Family,Offspring Family,Offspring Bereaved Family,Graduating Patient Family,Graduating Bereaved Family,Graduating Offspring Family,Graduating Offspring Bereaved Family</value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>Contact$Id</primaryTableColumn>
+        <relatedTable>Account</relatedTable>
+        <relatedTableJoinColumn>npe01__One2OneContact__c</relatedTableJoinColumn>
+    </crossFilters>
+    <crossFilters>
+        <criteriaItems>
+            <column>Children_under_13__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>Contact$Id</primaryTableColumn>
+        <relatedTable>Account</relatedTable>
+        <relatedTableJoinColumn>npe01__One2OneContact__c</relatedTableJoinColumn>
+    </crossFilters>
+    <description>Primary Contact of families who have attended Virtual Camp with children under 13.</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact.CampaignMembers*Campaign$Event_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Virtual Camp</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.CampaignMembers*CampaignMember$Attendance__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Accepted,Attended</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Virtual Camp Attendees</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_campaign_history_with_related_fields__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

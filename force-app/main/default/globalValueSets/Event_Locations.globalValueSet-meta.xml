@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Australian Capital Territory</fullName>
+        <default>false</default>
+        <label>Australian Capital Territory</label>
+    </customValue>
+    <customValue>
+        <fullName>Central Queensland</fullName>
+        <default>false</default>
+        <label>Central Queensland</label>
+    </customValue>
+    <customValue>
+        <fullName>Illawarra</fullName>
+        <default>false</default>
+        <label>Illawarra</label>
+    </customValue>
+    <customValue>
+        <fullName>National</fullName>
+        <default>false</default>
+        <label>National</label>
+    </customValue>
+    <customValue>
+        <fullName>National Office</fullName>
+        <default>false</default>
+        <label>National Office</label>
+    </customValue>
+    <customValue>
+        <fullName>Newcastle</fullName>
+        <default>false</default>
+        <label>Newcastle</label>
+    </customValue>
+    <customValue>
+        <fullName>Northern New South Wales</fullName>
+        <default>false</default>
+        <label>Northern New South Wales</label>
+    </customValue>
+    <customValue>
+        <fullName>Northern Territory</fullName>
+        <default>false</default>
+        <label>Northern Territory</label>
+    </customValue>
+    <customValue>
+        <fullName>North Queensland</fullName>
+        <default>false</default>
+        <label>North Queensland</label>
+    </customValue>
+    <customValue>
+        <fullName>Queensland</fullName>
+        <default>false</default>
+        <label>Queensland</label>
+    </customValue>
+    <customValue>
+        <fullName>South Australia</fullName>
+        <default>false</default>
+        <label>South Australia</label>
+    </customValue>
+    <customValue>
+        <fullName>South Queensland</fullName>
+        <default>false</default>
+        <label>South Queensland</label>
+    </customValue>
+    <customValue>
+        <fullName>Sydney</fullName>
+        <default>false</default>
+        <label>Sydney</label>
+    </customValue>
+    <customValue>
+        <fullName>Tasmania</fullName>
+        <default>false</default>
+        <label>Tasmania</label>
+    </customValue>
+    <customValue>
+        <fullName>Victoria</fullName>
+        <default>false</default>
+        <label>Victoria</label>
+    </customValue>
+    <customValue>
+        <fullName>Western Australia</fullName>
+        <default>false</default>
+        <label>Western Australia</label>
+    </customValue>
+    <masterLabel>Event Locations</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

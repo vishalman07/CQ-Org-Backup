@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.Family_Member_Type__c</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact.Age__c</field>
+    </columns>
+    <columns>
+        <field>ADDRESS2_CITY</field>
+    </columns>
+    <description>Cessnock LGA families and members and age</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Branch_Office__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Northern New South Wales,Newcastle</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Family_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Former Patient,Former Offspring Family,Test Family</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_CITY</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Alison,Avoca Beach,Bar Point,Bateau Bay,Bensville,Berkeley Vale,Blackwall,Blue Bay,Blue Haven,Booker Bay,Bouddi,Box Head,Budgewoi,Budgewoi Peninsula,Buff Point,Calga,Canton Beach,Cedar Brush,Central Mangrove,Chain Valley Bay,Charmhaven,Cheero Point,Chittaway Bay,Chittaway Point,Cogra Bay,Colongra,Copacabana,Daleys Point,Davistown,Dooralong,Doyalson,East Gosford,Empire Bay,Erina,Erina Heights,Ettalong Beach,Forresters Beach,Fountaindale,Glenning Valley,Glenworth Valley,Gorokan,Gosford,Green Point,Greengrove,Gunderman,Gwandalan,Halekulani,Hamlyn Terrace,Hardys Bay,Holgate,Horsfield Bay,Jilliby,Kangy Angy,Kanwal,Kariong,Killarney Vale,Killcare,Killcare Heights,Kincumber,Kincumber South,Koolewong,Kulnura,Lake Haven,Lake Munmorah,Lemon Tree,Little Jilliby,Lisarow,Little Wobby,Long Jetty,Lower Mangrove,MacMasters Beach,Magenta,Mangrove Creek,Mangrove Mountain,Mannering Park,Mardi,Marlow,Matcham,Mooney Mooney,Mooney Mooney Creek,Mount Elliot,Mount White,Narara,Niagara Park,Norah Head,Noraville,North Avoca,North Gosford,Ourimbah,Palm Grove,Palmdale,Patonga,Pearl Beach,Peats Ridge,Phegans Bay,Picketts Valley,Point Clare,Point Frederick,Pretty Beach,Ravensdale,Rocky Point,St Huberts Island,San Remo,Saratoga,Shelly Beach</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Family_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Central Coast LGA fam mem and age</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

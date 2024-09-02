@@ -1,0 +1,103 @@
+<template>
+
+    <div if:true={waitForRes} class="exampleHolder">
+		<lightning-spinner alternative-text="Loading" size="large" variant="brand"></lightning-spinner>
+	</div>
+    
+    <div class="head">
+        <div class="header font_orange">
+            <h1>{label.retreatHeading}</h1>
+        </div>
+        <img src={headerOliveGreenImg} class="headerImg">
+    </div>
+
+
+    <div if:false={openContact}>
+        <template for:each={retreatProp} for:item="item">
+            <div class="custom-box slds-grid slds-wrap font_popinsLight" key={item.id}>
+                <div class="box-header slds-col slds-size_12-of-12"> <span class="propName">{item.Name}</span></div>
+                <!-- <div class="value"><span class="label font_poppinsSemiBold">Property Name</span>: {item.propName}</div> -->
+                <div class="slds-col  slds-medium-size_4-of-12" style="height:200px; overflow:hidden">
+                    <lightning-carousel if:true={item.blobData} disable-auto-scroll>
+                        <template for:each={item.blobData} for:item="blob">
+                            <lightning-carousel-image height="80%" key={blob} src={blob} href="javascript:void(0);">
+                            </lightning-carousel-image>                           
+                        </template>
+                    </lightning-carousel>
+                </div>
+                <div class="slds-col slds-medium-size_6-of-12">
+                    <div class="innercustom-box">
+                        <div class="innerCustomText">
+                            <div class="value"><span class="label font_poppinsSemiBold">Address  </span>: {item.Address__c}</div>
+                            <div class="value"><span class="label font_poppinsSemiBold">State  </span>: {item.State__c}</div>
+                            <div class="value"><span class="label font_poppinsSemiBold">Guests  </span>: {item.Guests__c}</div>
+                            <div class="value"><span class="label font_poppinsSemiBold">Length of stay  </span>: {item.Length_of_stay__c}</div>
+                            <div class="value"><span class="label font_poppinsSemiBold">Description </span>: <lightning-formatted-rich-text style="display: inline-flex;" value={item.Portal_Description__c}></lightning-formatted-rich-text></div>
+                            <!-- <div class="value"><span class="label font_poppinsSemiBold">Description </span>:<lightning-formatted-rich-text value= {item.Property__r.Portal_Description__c}></lightning-formatted-rich-text></div> -->
+                            <!-- <div class="value"><span class="label font_poppinsSemiBold">Property Name</span>: {item.propName}</div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slds-col slds-size_10-of-12">
+                        <button class="form_btn" onclick={handleContactUs} data-id={item.Id} data-name={item.Name}>Contact Us</button>
+                 </div>
+                
+                 
+                
+            </div>	
+        </template>
+    </div>
+
+
+    <div if:true={openContact} >
+        <div class="slds-form__row custom_width">
+            
+        <div class = "enquiryTextSize font_poppinsSemiBold">Please submit your retreat enquiry below.<br><br>
+        If you are interested in booking in retreat, please provide us with 3 preferred sets of dates to stay at the accommodation and our Family Support Team will contact you to discuss your booking.
+        </div>
+        
+            <div class="slds-form__item" role="listitem">
+                <div class="slds-box slds-form-element  slds-size_1-of-1 slds-medium-size_12-of-12 font_popinsLight">
+                    <div class="custom-input">
+						<label class="reason slds-form-element__label font_poppinsSemiBold" for="reason"><abbr class="astrickColor">*</abbr>Reason:</label>
+						<div class="slds-form-element__control">
+							<select id="reason" name="reason" class="slds-select form_input" onchange={reasonHandler} value = {reason}>
+								<!-- <option value="None">None</option> -->
+								<option value="Enquiry for Respite">Enquiry for Respite</option>								
+							</select>
+						</div>
+						<!-- <span if:true={checkReqReason} class="alert">Please select the reason.</span> -->
+					</div>
+
+                    <div class="custom-input">
+						<label class="subject slds-form-element__label font_poppinsSemiBold" for="subject"><abbr class="astrickColor">*</abbr>Subject:</label>
+						<div class="subject slds-form-element__control">
+							<input type = "text" id="subject" name="subject" class="slds-input form_input" 
+								onchange={subjectHandler} value={subject}  disabled></input>
+						</div>
+						<span if:true={checkReqSub} class="alert">Please enter the subject.</span>
+					</div>
+
+					<div class="custom-input">
+                        <label class="details input slds-form-element__label font_poppinsSemiBold" for="details"><abbr class="astrickColor">*</abbr>Details:</label>
+                        <div class="detailsl slds-form-element__control">
+                            <textarea id="details" name="details" class="slds-textarea form_inputdetails" rows="3" cols="50"
+                                onchange={detailsHandler} value={details}></textarea>
+                        </div>
+                        <span if:true={checkReqdetail} class="alert">Please enter the details.</span>
+					</div>
+                    <div class="slds-size_1-of-1 slds-medium-size_12-of-12 custom_inline font_poppinsSemiBold">
+						<button class="slds-button slds-button_neutral custom_btn "
+							onclick={submitHandler}>Submit Enquiry</button>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="backBtn" if:true={backBtn}>
+        <button class="form_btn" onclick={backHandle}>Back</button>
+    </div>
+    <c-site-footer> </c-site-footer>
+</template>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referred_to_Cancer_Hub__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Information brought from Lead, when family has been referred to Cancer Hub alliance.</description>
+    <label>Referred to Cancer Hub</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

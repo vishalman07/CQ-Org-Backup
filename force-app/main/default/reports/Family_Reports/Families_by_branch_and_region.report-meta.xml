@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.Cancer_Type__c</field>
+    </columns>
+    <columns>
+        <field>Account.Diagnosis_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.Cancer_Type_Comment__c</field>
+    </columns>
+    <columns>
+        <field>Account.Email__c</field>
+    </columns>
+    <description>This report provides the list of all registered families (inc KICC) and the branches that they reside for CY. As part of Summary Services &amp; Programs Dashboard.</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Family_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Offspring Family,Offspring Bereaved Family</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Branch_Office__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>South Australia</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Branch_Office__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Family_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Families by branch and region</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2023-05-01</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2022-05-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <description>Acquisition list
+Community Fundraisers since 1/01/2018</description>
+    <filter>
+        <criteriaItems>
+            <column>FK_$Campaign.Cost_Centre__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1030,1910</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>c2s,city2surf,city 2 surf,blackmores</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Campaign.Branch_Code__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>=&quot;01&quot;,01 - Head Office,13,13 - Sydney SYD,16,16 - Northern NSW,17,17 - Southern NSW</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>3Past Community Fundraisers 1/01/18+</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactCustomEntity$Request_To_Fundraise__c@Request_To_Fundraise__c.Campaign__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Request_To_Fundraise__c.Fundraising_Start_Date__c</dateColumn>
+        <endDate>2020-03-10</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-01-01</startDate>
+    </timeFrameFilter>
+</Report>

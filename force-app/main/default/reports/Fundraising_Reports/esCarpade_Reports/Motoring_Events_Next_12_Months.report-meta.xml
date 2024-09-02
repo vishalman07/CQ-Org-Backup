@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>START_DATE</field>
+    </columns>
+    <columns>
+        <field>END_DATE</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_TYPE</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT_WON</field>
+    </columns>
+    <description>All Motoring Events upcoming over the next 12 Months</description>
+    <filter>
+        <criteriaItems>
+            <column>START_DATE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>NEXT_N_MONTHS:12</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Account_No__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>4130 - Event Income,4130</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Cost_Centre__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>1020</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Motoring Events Next 12 Months</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>START_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+</Report>

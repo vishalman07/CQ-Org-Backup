@@ -1,0 +1,14 @@
+Hi {!GetUserRecord.FirstName},
+
+Logging into My Camp Quality Portal
+
+To complete the sign in, enter the verification code below into the login screen. 
+
+Verification Code: {!$Record.Email_send_OTP__c}
+
+If you did not attempt to sign into your account, your password may be compromised. Please reset your password via the login page www.mycampquality.org.au 
+
+If you have any questions or having issues logging in, please contact us on 1300 662 267 so our friendly staff can assist. 
+
+Kind Regards,
+Camp Quality

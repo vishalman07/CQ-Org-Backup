@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Leaving_Camp_Quality_Reason__c</fullName>
+    <label>Leaving Camp Quality Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Unengaged Family</fullName>
+                <default>false</default>
+                <label>Unengaged Family</label>
+            </value>
+            <value>
+                <fullName>Aged Out</fullName>
+                <default>false</default>
+                <label>Aged Out</label>
+            </value>
+            <value>
+                <fullName>Attended Graduation Camp</fullName>
+                <default>false</default>
+                <label>Attended Graduation Camp</label>
+            </value>
+            <value>
+                <fullName>Family Choice</fullName>
+                <default>false</default>
+                <label>Family Choice</label>
+            </value>
+            <value>
+                <fullName>Camp Quality Choice</fullName>
+                <default>false</default>
+                <label>Camp Quality Choice</label>
+            </value>
+            <value>
+                <fullName>Cannot Contact</fullName>
+                <default>false</default>
+                <label>Cannot Contact</label>
+            </value>
+            <value>
+                <fullName>Left Country</fullName>
+                <default>false</default>
+                <label>Left Country</label>
+            </value>
+            <value>
+                <fullName>Beareaved</fullName>
+                <default>false</default>
+                <label>Bereaved</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

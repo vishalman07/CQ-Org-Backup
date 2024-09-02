@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Daily_routine_support__c</fullName>
+    <inlineHelpText>What support does the child need in daily routines</inlineHelpText>
+    <label>Daily routine support</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Meal Time</fullName>
+                <default>false</default>
+                <label>Meal Time</label>
+            </value>
+            <value>
+                <fullName>Bedtime</fullName>
+                <default>false</default>
+                <label>Bedtime</label>
+            </value>
+            <value>
+                <fullName>Hygiene</fullName>
+                <default>false</default>
+                <label>Hygiene</label>
+            </value>
+            <value>
+                <fullName>Activities</fullName>
+                <default>false</default>
+                <label>Activities</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

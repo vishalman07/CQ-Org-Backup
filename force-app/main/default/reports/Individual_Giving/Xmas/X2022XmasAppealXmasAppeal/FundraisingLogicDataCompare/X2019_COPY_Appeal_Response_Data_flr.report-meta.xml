@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <block>
+        <blockInfo>
+            <blockId>B0</blockId>
+            <joinTable>Contact</joinTable>
+        </blockInfo>
+        <columns>
+            <field>Contact$Id</field>
+        </columns>
+        <columns>
+            <field>Contact.OpportunityContactRoles*Opportunity$Campaign_Name__c</field>
+        </columns>
+        <columns>
+            <field>Contact$FirstName</field>
+        </columns>
+        <columns>
+            <field>Contact$LastName</field>
+        </columns>
+        <columns>
+            <aggregateTypes>Sum</aggregateTypes>
+            <field>Contact.OpportunityContactRoles$Amount</field>
+        </columns>
+        <columns>
+            <field>Contact.OpportunityContactRoles$CloseDate</field>
+        </columns>
+        <filter>
+            <criteriaItems>
+                <column>Contact.OpportunityContactRoles*Opportunity$Campaign_Name__c</column>
+                <columnToColumn>false</columnToColumn>
+                <isUnlocked>true</isUnlocked>
+                <operator>startsWith</operator>
+                <value>2019,Nat19</value>
+            </criteriaItems>
+            <criteriaItems>
+                <column>Contact.OpportunityContactRoles$Campaign.Account_No__c</column>
+                <columnToColumn>false</columnToColumn>
+                <isUnlocked>true</isUnlocked>
+                <operator>equals</operator>
+                <value>4030,4080,4080 - Single Gift</value>
+            </criteriaItems>
+        </filter>
+        <format>Tabular</format>
+        <name>Contacts with opportunities block 1</name>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>Contacts_with_opportunities__c</reportType>
+        <scope>organization</scope>
+        <showGrandTotal>true</showGrandTotal>
+        <showSubTotals>true</showSubTotals>
+        <timeFrameFilter>
+            <dateColumn>Contact$CreatedDate</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+        </timeFrameFilter>
+    </block>
+    <block>
+        <blockInfo>
+            <blockId>B1</blockId>
+            <joinTable>Contact</joinTable>
+        </blockInfo>
+        <columns>
+            <field>Contact$Id</field>
+        </columns>
+        <columns>
+            <field>Contact.CampaignMembers$Name</field>
+        </columns>
+        <columns>
+            <field>Contact$FirstName</field>
+        </columns>
+        <columns>
+            <field>Contact$LastName</field>
+        </columns>
+        <columns>
+            <field>Contact.CampaignMembers.CampaignMembers*CampaignMember$Segment_Code__c</field>
+        </columns>
+        <columns>
+            <field>Contact.CampaignMembers.CampaignMembers*CampaignMember$Pack_Type__c</field>
+        </columns>
+        <filter>
+            <criteriaItems>
+                <column>Contact.CampaignMembers$Name</column>
+                <columnToColumn>false</columnToColumn>
+                <isUnlocked>true</isUnlocked>
+                <operator>startsWith</operator>
+                <value>2019. Nat19</value>
+            </criteriaItems>
+            <criteriaItems>
+                <column>Contact.CampaignMembers*Campaign$Account_No__c</column>
+                <columnToColumn>false</columnToColumn>
+                <isUnlocked>true</isUnlocked>
+                <operator>equals</operator>
+                <value>4030,4080,4080 - Single Gift</value>
+            </criteriaItems>
+        </filter>
+        <format>Tabular</format>
+        <name>Contacts with Campaigns &amp; Campai block 1</name>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>Contacts_with_Campaigns_Campaign_Members__c</reportType>
+        <scope>organization</scope>
+        <showGrandTotal>true</showGrandTotal>
+        <showSubTotals>true</showSubTotals>
+        <timeFrameFilter>
+            <dateColumn>Contact$CreatedDate</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+        </timeFrameFilter>
+    </block>
+    <blockInfo>
+        <blockId xsi:nil="true"/>
+        <joinTable>Contact</joinTable>
+    </blockInfo>
+    <description>Data for Fundraising Logic/Mark, to compare on data response for appeals</description>
+    <format>MultiBlock</format>
+    <name>2019 COPY Appeal Response Data</name>
+    <params>
+        <name>lsk</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_opportunities__c</reportType>
+    <showDetails>true</showDetails>
+</Report>

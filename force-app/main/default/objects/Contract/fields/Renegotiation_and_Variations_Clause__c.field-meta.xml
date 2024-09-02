@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renegotiation_and_Variations_Clause__c</fullName>
+    <inlineHelpText>When, and how can we vary this contract.</inlineHelpText>
+    <label>Renegotiation and Variations Clause</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

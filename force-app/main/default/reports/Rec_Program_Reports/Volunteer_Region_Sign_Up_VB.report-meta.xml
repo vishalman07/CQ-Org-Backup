@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CNTC_FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$Contact.Regionv2__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Attendance__c.Attendance__c</field>
+    </columns>
+    <columns>
+        <field>START_DATE</field>
+    </columns>
+    <description>Use to work out sign up rate for own regions (filters to exclude vols from other regions)</description>
+    <filter>
+        <criteriaItems>
+            <column>CAMPAIGN_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>WA2106 Mini Camp,VIC2105 Mini Camp,QLD2105 Mini Camp,SA2103 Mini Camp,SYD2105 Mini Camp,NNSW2106 Mini camp NCLE,NQLD2107 Combo. WA2107 KICC Combo Camp,VIC2109 Combo Camp,SYD2109 Combo Camp,QLD2109 Combo,NNSW2109 Combo,WA2110 Combo Camp,SA2110 Combo Camp,NT2110 Combo Camp,SA2112 KICC Combo Camp,QLD2112 Combo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Volunteer_Attendance__c.Attendance__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Invited,Request to Attend,Accepted,Attended,Declined,Unsuccessful,No Show,Cancelled,Medical Withdrawal</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Volunteer Region Sign Up - VB</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignCustomEntity$Volunteer_Attendance__c@Volunteer_Attendance__c.Volunteer__c</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>START_DATE</sortColumn>
+    <sortOrder>Desc</sortOrder>
+</Report>

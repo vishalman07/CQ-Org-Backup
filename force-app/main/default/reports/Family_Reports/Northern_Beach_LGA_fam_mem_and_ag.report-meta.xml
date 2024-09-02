@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.Family_Member_Type__c</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact.Age__c</field>
+    </columns>
+    <columns>
+        <field>ADDRESS2_CITY</field>
+    </columns>
+    <description>Northern LGA families and members and age</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Branch_Office__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Northern New South Wales,Newcastle</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Family_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Former Patient,Former Offspring Family,Test Family</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ADDRESS2_CITY</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Allambie Heights,Avalon Beach,Balgowlah,Balgowlah Heights,Bayview,Beacon Hill,Belrose,Bilgola Beach,Bilgola Plateau,Brookvale,Church Point,Clareville,Clontarf,Coasters Retreat,Collaroy,Collaroy Plateau,Cottage Point,Cromer,Curl Curl,Currawong Beach,Davidson,Dee Why,Duffys Forest,Elanora Heights,Elvina Bay,Fairlight,Forestville,Frenchs Forest,Freshwater,Great Mackerel Beach,Ingleside,Killarney Heights,Lovett Bay,Manly,Manly Vale,McCarrs Creek,Mona Vale,Morning Bay,Narrabeen,Narraweena,Newport,North Balgowlah,North Curl Curl,North Manly,North Narrabeen,Oxford Falls,Palm Beach,Queenscliff,Salt Pan Cove,Scotland Island,Seaforth,Terrey Hills,Warriewood,Whale Beach,Wheeler Heights,Akuna Bay,Allambie,Avalon North,Bantry Bay,Barrenjoey,Bungan Beach,Bungan Head,Bungaroo,Careel Bay,Careel Head,Clareville Beach,Collaroy Beach,Cromer Heights,Curl Curl Beach,Dee Why Beach,Fishermans Beach,Foleys Hill,Freshwater Beach,Gooseberry Flat,Ingleside Heights,Long Reef Beach,Loquat Valley,Narrabeen Beach,Narrabeen Peninsula,North Curl Curl Beach,North Narrabeen Beach,Paradise Beach,Peach Trees,Sand Point,Sorlie,South Warriewood,Stokes Point,Taylors Point,The Basin,Towlers Bay,Tumbledown Dick,Turimetta,Warriewood Beach,Wingala</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Family_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Northern Beach LGA fam mem and ag</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

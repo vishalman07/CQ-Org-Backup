@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <description>Migrated from the: Account.Cancer_Journey.On_Treatment workflow rule
+Workflow rule description: Updates dates of status change&quot;</description>
+    <formulas>
+        <name>Account_Cancer_Journey_On_TreatmentFormula</name>
+        <dataType>Date</dataType>
+        <expression>Today()</expression>
+    </formulas>
+    <label>Account.Cancer_Journey.On_Treatment</label>
+    <migratedFromWorkflowRuleName>Account.Cancer_Journey.On_Treatment</migratedFromWorkflowRuleName>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>mainUpdate</name>
+        <label>mainUpdate</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>On_Treatment__c</field>
+            <value>
+                <elementReference>Account_Cancer_Journey_On_TreatmentFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>mainUpdate</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Family</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Cancer_Journey__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>On Treatment</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>On_Treatment__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

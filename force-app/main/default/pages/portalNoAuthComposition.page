@@ -1,0 +1,196 @@
+<apex:page showHeader="false" standardStylesheets="false" applyHTMLTag="false" language="en-AU">
+    
+    <apex:variable var="pageTitle" value="Membership Portal" />
+    <apex:variable var="paHeaderTitle" value="Membership Portal" />
+    
+    <apex:insert name="vars" />
+    
+    <html lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <!-- scrolling viewport
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+-->
+            <!-- no scrolling viewport -->
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+              <!-- DJA 15/12/2016 No tracking -->
+            <meta name="robots" content="noindex,nofollow"/>
+            <title>{!pageTitle}</title>
+            
+            <apex:includeScript value="{!URLFOR($Resource.assets, '/assets/js/jquery.js')}"/>
+            <apex:includeScript value="{!URLFOR($Resource.assets, '/assets/js/jquery.validate.js')}"/>
+            <apex:includeScript value="{!URLFOR($Resource.assets, '/assets/js/additional-methods.js')}" />
+            <apex:includeScript value="{!URLFOR($Resource.assets, '/assets/bootstrap/js/bootstrap.min.js')}"/>
+            
+            <apex:stylesheet value="{!URLFOR($Resource.assets, '/assets/bootstrap/css/bootstrap.min.css')}" />
+            
+            <!-- WebFont CSS
+<apex:stylesheet value="{!$Resource.GothamFontCSS}" />
+-->
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rokkitt:400,700" type="text/css"/>
+            
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
+            <apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js" />
+            
+            <!-- FavIcon
+<link rel="shortcut icon" type="image/x-icon" href="{!URLFOR($Resource.FaviconLarge)}" />
+-->
+            
+            <apex:stylesheet value="{!$Resource.PortalCSS}" />
+        </head>
+        
+        <!-- Google Analytics tracking...
+<apex:outputPanel layout="none" rendered="{!NOT(ISBLANK($Setup.Membership_Settings__c.Google_Analytics_Tracking_Code__c))}">
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', '{!$Setup.Membership_Settings__c.Google_Analytics_Tracking_Code__c}', 'auto');
+ga('send', 'pageview');
+</script>
+</apex:outputPanel>
+-->
+        
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $.fn.datepicker.defaults.format = "dd/mm/yyyy";
+            $('input.datepicker').datepicker();
+            
+            
+            /*jQuery.validator.addMethod('setcountry', function(value, element) {
+                    return this.optional(element) || false;
+                }, 'Select country first');
+
+                jQuery.validator.addMethod('phoneformat', function(value, element) {
+                    return this.optional(element) || !!value.match(/^[0-9]{2,2} [0-9]{4,4} [0-9]{4,4}$/)
+                }, "Enter your phone in XX XXXX XXXX format.");
+
+                jQuery.validator.addMethod('mobileformat', function(value, element) {
+                    return this.optional(element) || !!value.match(/^[0-9]{4,4} [0-9]{3,3} [0-9]{3,3}$/)
+                }, "Enter your mobile in XXXX XXX XXX format.");
+
+                jQuery.validator.addMethod('phonemobileformat', function(value, element) {
+                    return this.optional(element) || !!value.match(/^([0-9]{2,2} [0-9]{4,4} [0-9]{4,4}|[0-9]{4,4} [0-9]{3,3} [0-9]{3,3})$/)
+                }, "Enter your number in XX XXXX XXXX or XXXX XXX XXX format");
+
+                jQuery.validator.addMethod("intphone", function(value, element) {
+                    return this.optional(element) || /^[0-9\s]+$/g.test(value);
+                }, "Please enter a number.");
+                
+                jQuery.validator.addMethod("aupostcode", function(value, element) {
+                    return this.optional(element) || /^[0-9]{4,4}$/.test(value);
+                }, "Enter 4 digit postcode.");
+
+                jQuery.validator.addMethod('urlwithoutprotocol', function(value, element) {
+                    return this.optional(element) || /^(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test(value);
+
+                }, "Enter a valid url.");
+
+                jQuery.validator.addMethod("integer", function(value, element) {
+                    return this.optional(element) || /^[0-9]+$/g.test(value);
+                }, "Please enter an integer.");
+
+                $.validator.messages.email = 'Enter an email address.';
+
+                // Scrolls first div.alert-* into view.
+                if ($('div.alert-danger, div.alert-warning, div.alert-success').size() > 0) {
+                   $('html, body').animate({scrollTop: $('div.alert-danger, div.alert-warning, div.alert-success').first().offset().top}, 500);
+                }*/
+            });
+        </script>
+        
+        <body>
+            
+            <div class="wrapper"> 
+                
+                <div class="logo-header">
+                    <div class="container">
+                        <img src="https://campquality--c.documentforce.com/servlet/servlet.ImageServer?id=0152x000000RjQg&oid=00D28000001e3zu" />
+                    </div>
+                </div>    
+                
+                <nav id="main-nav-container" class="navbar navbar-custom navbar-top" style="margin-bottom:0px;border-radius: 0;">
+                    <div class="container" style="position:relative;">
+                        <div class="navbar-header">
+                            <!--<apex:outputText >
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</apex:outputText>-->
+                            <!--<a class="navbar-brand" href="/members">
+                                <img width="128" height="128" alt="Nav Logo" />
+                            </a>-->
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                
+                            </ul>
+                            
+                            <p class="navbar-text navbar-right"></p>
+                        </div>
+                    </div>
+                </nav>
+                
+                <div style="padding-bottom:100px;min-height:100%;">
+                    
+                    <div class="page-title">
+                        
+                        <div class="container">
+                            <h1>
+                                <apex:outputText value="{!paHeaderTitle}" />
+                            </h1>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="container" style="margin-top:40px;position:relative;">
+                                         
+                        <div class="row">
+                            
+                            <div class="col-sm-12 col-xs-12">
+                                
+                                <!-- Page Content Rich Text was here 
+<apex:outputField value="" />
+-->
+                                   <div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+                                <apex:insert name="main" />
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="push"></div>
+            </div>
+            <div id="main-footer-container" class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <!-- social icons was here -->
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <ul class="nav nav-pills">
+                                <li>test</li>
+                                <!--<li><a href="#">Footer Link 1</a></li>
+                                <li><a href="#">Footer Link 2</a></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </body>
+    </html>
+</apex:page>

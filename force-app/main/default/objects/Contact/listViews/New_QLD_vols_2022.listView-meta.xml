@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_QLD_vols_2022</fullName>
+    <booleanFilter>3 AND 2 AND 1 AND 4</booleanFilter>
+    <columns>FULL_NAME</columns>
+    <columns>Volunteer_Eligible__c</columns>
+    <columns>Volunteer_Eligibility__c</columns>
+    <columns>Regionv2__c</columns>
+    <columns>Date_From__c</columns>
+    <columns>Volunteer_Total_Events__c</columns>
+    <columns>Volunteer_Engagement__c</columns>
+    <columns>Volunteer_Attendance__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Volunteer_Status__c</field>
+        <operation>equals</operation>
+        <value>Volunteer</value>
+    </filters>
+    <filters>
+        <field>Volunteer_Eligible__c</field>
+        <operation>notEqual</operation>
+        <value>Former</value>
+    </filters>
+    <filters>
+        <field>Branch_Office__c</field>
+        <operation>equals</operation>
+        <value>Queensland</value>
+    </filters>
+    <filters>
+        <field>Date_From__c</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2022</value>
+    </filters>
+    <label>New QLD vols 2022</label>
+</ListView>

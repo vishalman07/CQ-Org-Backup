@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Respite_Case</fullName>
+    <active>true</active>
+    <businessProcess>Case Support Process</businessProcess>
+    <label>Respite Case</label>
+    <picklistValues>
+        <picklist>Assistance_Type__c</picklist>
+        <values>
+            <fullName>Fundraising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Volunteering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skilled Volunteering</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Impact__c</picklist>
+        <values>
+            <fullName>Family%2Fdonors%2Fvolunteers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal users only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Enquiry for Respite</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Salesforce_Request_Type__c</picklist>
+        <values>
+            <fullName>Admin task</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Idea</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request a Booking</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Volunteering_Type__c</picklist>
+        <values>
+            <fullName>Camp Volunteering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community Fundraising%2FEvent Volunteering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Volunteering</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

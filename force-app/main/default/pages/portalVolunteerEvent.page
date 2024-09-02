@@ -1,0 +1,463 @@
+<apex:page controller="portalVolunteerEventController" showHeader="false" standardStylesheets="false" action="{!autoRegister}">
+
+    <script type="text/javascript">
+        var validator;
+
+        $(document).ready(function() {
+            initPlugins();
+        });
+          
+          
+        function initPlugins() {
+            validator = $('form[id$=eventForm]').validate({
+                /*errorPlacement: function(error, element) {
+                    $(element).closest('{formGroupSelector}').append($('<div class="{errorCol}"></div>').append(error));
+                },*/
+                highlight: function(element, errorClass, validClass) {
+                    $(element).addClass(errorClass).removeClass(validClass);
+                },
+                unhighlight: function(element, errorClass, validClass) {
+                    $(element).addClass(validClass).removeClass(errorClass);
+                },
+                submitHandler: function (form) {
+                  doSubmit();
+                }                
+            });                    
+
+            $('body').on('click', 'input.completeRegistration', function() {
+                validator.validate();
+            });
+        }
+
+
+
+    </script>
+    
+    <apex:outputPanel id="alertPanel">
+        <apex:outputPanel rendered="{!hasError}" layout="block" styleClass="alert alert-danger fade in" html-role="alert">
+            <apex:outputText value="{!errorMsg}" />
+            <apex:messages />
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!hasSuccess}" layout="block" styleClass="alert alert-success fade in" html-role="alert">
+            <apex:outputText value="{!successMsg}" />
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </apex:outputPanel>
+    </apex:outputPanel>
+    
+    <apex:form id="eventForm">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{!event['Portal_Title__c'].Value}</h3>
+            </div>
+            
+            <div class="panel-body">
+                
+                <apex:actionStatus id="eventLd" startStyleClass="loading" stopStyleClass="">
+                    <apex:facet name="start">
+                        <span class="glyphicon glyphicon-refresh spinning"></span>
+                    </apex:facet>
+                </apex:actionStatus>
+                
+                <div class="row">
+                    
+                    <div class="col-xs-12 col-md-4">
+                        <img style="max-width:100%;border-radius:10px;" src="{!event['Banner_Image_URL__c'].Value}" />
+                    </div>
+                    
+                    <div class="col-xs-12 col-md-5">
+                        
+                        <table class="table borderless table-horizontal">
+                            <tr>
+                                <th>Event Type</th>
+                                <td>
+                                    <apex:outputText value=" {!event['Event_Type__c'].Value}" />
+                                </td>
+                            </tr>
+                            <!--<tr>
+                                <th>Status</th>
+                                <td>
+                                    <apex:outputText value=" {!booking['FA_00000__c'].Value}" />
+                                </td>
+                            </tr>-->
+                            
+                            <!--<tr>
+                                <th>Venue</th>
+                                <td>
+                                    <apex:outputText value=" {!event['Location_Venue__c'].Value}" />
+                                </td>
+                            </tr>-->
+                            
+                            <tr>
+                                <th>Start Date</th>
+                                <td>
+                                    <apex:outputText value=" {!event['StartDate'].Value}" />
+                                </td>
+                            </tr>
+                                <tr>
+                                <th>Time</th>
+                                <td>
+                                    <apex:outputText value=" {!event['Event_time__c'].Value}" />
+                                </td>
+                            </tr>
+                                            
+                            <tr>
+                                <th>End Date</th>
+                                <td>
+                                    <apex:outputText value=" {!event['EndDate'].Value}" />
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <th>Venue</th>
+                                <td>
+                                    <apex:outputPanel rendered="{!NOT(ISNULL(venue))}">
+                                        <apex:outputText rendered="{!NOT(ISBLANK(venue.Name))}" value="{!venue.Name}<br />" escape="false" />
+                                        <apex:outputText rendered="{!NOT(ISBLANK(venue.BillingStreet))}" value="{!venue.BillingStreet}<br />" escape="false" />
+                                        <apex:outputText rendered="{!OR(NOT(ISBLANK(venue.BillingCity)), NOT(ISBLANK(venue.BillingState)), NOT(ISBLANK(venue.BillingPostalCode)))}" value="{!venue.BillingCity}, {!venue.BillingState} {!venue.BillingPostalCode}<br />" escape="false" />
+                                        {!venue.BillingCountry}
+                                    </apex:outputPanel>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <th>Event Description</th>
+                                <td>
+                                    <apex:outputText value=" {!event['Portal_Description__c'].Value}" />
+                                </td>
+                            </tr>
+                            
+                        </table>
+                        
+                    </div>
+                    
+                </div>   
+                
+                
+            </div>
+        </div>
+
+        <apex:outputPanel id="eventAttachments" styleClass="col-md-12" layout="block" rendered="{!AND(NOT(ISNULL(attachments)), attachments.size > 0)}">
+            <div class="row well">
+                <div class="col-md-12">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Attachment Title</th>
+                                <th>Attachment Description</th>
+                                <th>Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!attachments}" var="attach">
+                                <tr>
+                                    <td>
+                                        {!attach.Portal_Title__c}
+                                    </td>
+                                    <td>
+                                        {!attach.Portal_Description__c}
+                                    </td>  
+                                    <td>
+                                        <a href="{!IF(attach.Content_Type__c = 'File', 'sfc/servlet.shepherd/version/download/' + attach.AttachmentID__c, URLFOR($Action.Attachment.Download, attach.AttachmentID__c))}" target="_blank" class="btn btn-primary">Download</a>
+                                        <!--<apex:outputPanel rendered="{!attach.Content_Type__c = 'File'}">
+                                            <a href="{!contentDists[attach.AttachmentID__c].DistributionPublicUrl}" target="_blank" class="btn btn-primary">Download</a>
+                                        </apex:outputPanel>-->
+                                    </td>
+                                </tr>
+                            </apex:repeat> 
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </apex:outputPanel>
+
+        <apex:outputPanel id="volTypesPanel" styleClass="col-md-12" layout="block">
+            <div class="row well">
+                
+                <div class="col-md-12">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Volunteer Type</th>
+                                <th>Status</th>
+                                <th>Registration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!bookings}" var="j">
+                                <tr>
+                                    <td>
+                                        {!regTypes[bookings[j]['Registration_Type__c'].Value]['Name'].Value}
+                                    </td>
+                                    <td>
+                                        {!bookings[j]['Attendance__c'].Value}
+                                    </td>
+                                    <td>
+                                        <apex:outputPanel rendered="{!registrationAvailable=False && bookings[j]['Attendance__c'].Value = 'Invited'}">
+                                            Registrations closed for this event. Please contact your local office for enquiries. 
+                                        </apex:outputPanel>
+                                        <apex:outputPanel rendered="{!registrationAvailable && bookings[j]['Attendance__c'].Value = 'Invited'}">
+                                            <apex:commandButton action="{!beginRegistration}" value="Request To Attend" styleClass="btn btn-primary btn-lg" reRender="registerPanel" status="eventLd" oncomplete="initPlugins();">
+                                                <apex:param name="bookingId" assignTo="{!registerBookingId}" value="{!j}" />
+                                            </apex:commandButton>
+                                            &nbsp; <apex:commandButton action="{!declined}" styleClass="btn btn-danger" value="Decline" reRender="cancellationModalPanel,alertPanel,volTypesPanel" status="eventLd" html-data-dismiss="modal">
+                                                <apex:param name="bookingId" assignTo="{!cancelBookingId}" value="{!j}" />
+                                            </apex:commandButton>
+                                        </apex:outputPanel>
+                            
+                                        <apex:outputPanel rendered="{!bookings[j]['Attendance__c'].Value = 'Request to Attend'}">
+                                            <apex:commandButton action="{!beginRegistration}" value="Update Registration" styleClass="btn btn-primary btn-lg" reRender="registerPanel" status="eventLd" oncomplete="initPlugins();">
+                                                <apex:param name="bookingId" assignTo="{!registerBookingId}" value="{!j}" />
+                                            </apex:commandButton>
+                                        </apex:outputPanel>
+                                        
+                                        <apex:outputPanel rendered="{!cancellationAvailable && (bookings[j]['Attendance__c'].Value = 'Request to Attend' || bookings[j]['Attendance__c'].Value = 'Accepted')}">
+                                            <apex:commandButton value="Cancel Registration" styleClass="btn btn-danger btn-lg"  html-data-toggle="modal" html-data-target="#eventCancellationModal" reRender="cancellationModalPanel,volTypesPanel" status="cancellationLd" oncomplete="initPlugins();">
+                                                <apex:param name="bookingId" assignTo="{!cancelBookingId}" value="{!j}" />
+                                            </apex:commandButton>
+                                        </apex:outputPanel>
+                                           <apex:outputPanel rendered="{!cancellationAvailable=False && (bookings[j]['Attendance__c'].Value = 'Request to Attend' || bookings[j]['Attendance__c'].Value = 'Accepted')}">
+                                            Please contact your Camp Quality office to cancel or update your information.
+                                        </apex:outputPanel>
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </apex:outputPanel>
+
+
+        
+        <apex:outputPanel id="registerPanel">
+            <apex:outputPanel rendered="{!isRegistering}">
+                <div class="col-md-12">
+                    <div class="row well">
+                        
+                        <apex:actionStatus id="registrationLd" startStyleClass="loading" stopStyleClass="">
+                            <apex:facet name="start">
+                                <span class="glyphicon glyphicon-refresh spinning"></span>
+                            </apex:facet>
+                        </apex:actionStatus>
+                        
+                        <div class="col-md-12">
+                            
+                            <apex:outputPanel rendered="{!hasRegPeriods}">
+                                <div class="form-group">
+                                    <label>Preferred Date</label>
+                                    <apex:selectList value="{!regPeriodId}" styleClass="required form-control" multiselect="false" size="1">
+                                        <apex:selectOptions value="{!registrationPeriods}" />
+                                    </apex:selectList>
+                                </div>
+                            </apex:outputPanel>
+                            <!-- DJA 8/8/2017 remove swiming ability 
+                            <div class="form-group">
+                                <label>Swimming Ability</label>
+                                <apex:inputField value="{!member.Swimming_Ability__c}" styleClass="form-control required" />
+                            </div>--> 
+                            <apex:outputpanel rendered="{!bookings[registerBookingId]['Participation_Role__c'].Value
+                                                        <> 'Corporate Volunteer'}" > 
+                                
+                                <div class="form-group">
+                                <label>Shirt Size</label>
+                                <apex:inputField value="{!member.Shirt_Size__c}" styleClass="form-control required" />
+                            </div>
+                            </apex:outputpanel>
+                            <div class="row">
+
+                                <div class="col-md-12">
+                            
+                                    <apex:outputPanel rendered="{! (eventType = 'Age_Camp' || eventType = 'Family_Camp')}">
+                                        
+                                        <h3>
+                                            Emergency Contact
+                                        </h3>
+                                        
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <apex:inputField value="{!member.Emergency_Contact__c}" styleClass="form-control required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Phone</label>
+                                            <apex:inputField value="{!member.Emergency_Contact_Phone__c}" styleClass="form-control required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Mobile</label>
+                                            <apex:inputField value="{!member.Emergency_Contact_Mobile__c}" styleClass="form-control required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Relationship</label>
+                                            <apex:inputField value="{!member.Emergency_Contact_Relationship__c}" styleClass="form-control required" />
+                                        </div>
+                                        
+                                    </apex:outputPanel>
+                                      <apex:outputPanel id="mediaPermissionsPanel"> 
+                           <label>Image Permissions</label>
+                        <div class="checkbox">
+                                <label class="bigCheckboxLabel">
+                                    <apex:inputField value="{!member.media_opt_in_take_video_photos__c}" styleClass="bigCheckbox">
+                                        <apex:actionSupport event="onchange" reRender="mediaPermissionsPanel" status="familyProfileLd" />
+                                    </apex:inputField>
+                                    <span></span>
+                                    I approve of photos and video footage being taken of me at the program I am attending</label>
+                            </div>
+                            
+                                <apex:outputPanel rendered="{!NOT(member.media_opt_in_take_video_photos__c)}">
+                                    
+                                <p>
+                                   If you do not approve of photos and video footage being taken, Camp Quality will take all reasonable endeavours to avoid this taking place.
+                                </p>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!(member.media_opt_in_take_video_photos__c)}">
+                                                                        <p>
+                                        <b>Please select at least one image sharing option: </b>
+                                    </p>
+
+                                <div class="checkbox">
+                                <label class="bigCheckboxLabel">
+                                    <apex:inputField value="{!member.media_opt_in_share_participants__c}" styleClass="bigCheckbox">                              
+                                    </apex:inputField>
+                                    <span></span>
+                                    I allow photos/video to be shared with participants from this program via a password protected photo gallery</label>
+                                </div>
+                                <div class="checkbox">                                        
+                                    <label class="bigCheckboxLabel">
+                                    <apex:inputField value="{!member.Media_Opt_in_Public_Sharing__c}" styleClass="bigCheckbox">
+                                    </apex:inputField>
+                                    <span></span>
+                                    I allow photo/video to be shared by Camp Quality on their social media pages and website</label>
+                                </div>
+                               </apex:outputPanel>
+                            Our privacy policy contains further information about how Camp Quality may collect, use and manage personal information including photos and recordings and is available <a href="https://www.campquality.org.au/privacy-policy/">here</a>.<br />
+                        </apex:outputPanel>
+
+                                    <div class="checkbox">
+                                        <label class="bigCheckboxLabel">
+                                            <apex:inputCheckbox styleClass="bigCheckbox" value="{!agreeToParticipate}" />
+                                            <span></span>
+                                            I have read, understood and accept the terms of the <a href="https://www.campquality.org.au/volunteer-waiver">volunteer waiver</a> I am providing to Camp Quality
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-12">
+                                    <h3>Dietary Requirements</h3>
+                                  <apex:outputpanel rendered="{!bookings[registerBookingId]['Participation_Role__c'].Value
+                                                        = 'Corporate Volunteer'}" ><p>
+                                      Please view your event invite to see if catering is included. 
+                                      </p>
+                                    </apex:outputpanel>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Description</th>
+                                                    <th>Comments</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <apex:repeat value="{!currentNeeds}" var="key1">
+                                                    <apex:outputPanel layout="none" rendered="{!currentNeeds[key1].AttributeType__c = 'DietryNeeds'}">
+                                                        <tr class="something">
+                                                            <td><apex:inputField value="{!currentNeeds[key1].Long_Description__c}" styleClass="form-control" /></td>
+                                                            <td><apex:inputText value="{!currentNeeds[key1].Comments__c}" styleClass="form-control" /></td>
+                                                            <td>
+                                                                <apex:commandButton action="{!removeSpecialNeed}" styleClass="btn btn-danger" value="-" reRender="registerModalPanel,alertPanel" status="registrationLd">
+                                                                    <apex:param name="removeNeedId" value="{!key1}" assignTo="{!removeNeedId}" />
+                                                                </apex:commandButton>
+                                                            </td>
+                                                        </tr>
+                                                    </apex:outputPanel>
+                                                </apex:repeat>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <apex:commandButton action="{!addSpecialNeed}" styleClass="btn btn-primary pull-right" value="Add Dietary Requirement" reRender="registerPanel,alertPanel" status="registrationLd">
+                                        <apex:param name="addType" value="{!'DietryNeeds'}" assignTo="{!addType}" />
+                                    </apex:commandButton>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>Special Needs</h3>
+                                    
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Description</th>
+                                                    <th>Comments</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <apex:repeat value="{!currentNeeds}" var="key2">
+                                                    <apex:outputPanel layout="none" rendered="{!currentNeeds[key2].AttributeType__c = 'SpecialNeeds'}">
+                                                        <tr>
+                                                            <td><apex:inputField value="{!currentNeeds[key2].Long_Description__c}" styleClass="form-control" /></td>
+                                                            <td><apex:inputText value="{!currentNeeds[key2].Comments__c}" styleClass="form-control" /></td>
+                                                            <td>
+                                                                <apex:commandButton action="{!removeSpecialNeed}" styleClass="btn btn-danger" value="-" reRender="registerModalPanel,alertPanel" status="registrationLd">
+                                                                    <apex:param name="removeNeedId" value="{!key2}" assignTo="{!removeNeedId}" />
+                                                                </apex:commandButton>
+                                                            </td>
+                                                        </tr>
+                                                    </apex:outputPanel>
+                                                </apex:repeat>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <apex:commandButton action="{!addSpecialNeed}" styleClass="btn btn-primary pull-right" value="Add Special Need" reRender="registerPanel,alertPanel" status="registrationLd">
+                                        <apex:param name="addType" value="{!'SpecialNeeds'}" assignTo="{!addType}" />
+                                    </apex:commandButton>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="submit" value="Complete Registration" class="btn btn-success pull-right completeRegistration"  />
+                            <apex:actionFunction name="doSubmit" action="{!register}" reRender="registerPanel,alertPanel,volTypesPanel" status="registrationLd" />
+                        </div>
+                    </div>
+                    
+                </div>
+            </apex:outputPanel>
+        </apex:outputPanel>
+        
+        <div class="modal fade" id="eventCancellationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <apex:outputPanel id="cancellationModalPanel" styleClass="modal-content" layout="block">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Event Cancellation</h4>
+                    </div>
+                    <div class="modal-body clearfix">
+                        <apex:actionStatus id="cancellationLd" startStyleClass="loading" stopStyleClass="">
+                            <apex:facet name="start">
+                                <span class="glyphicon glyphicon-refresh spinning"></span>
+                            </apex:facet>
+                        </apex:actionStatus>
+                        <div class="form-group">
+                            <label>Please briefly explain why you are cancelling your registration</label>
+                            <apex:inputText rendered="{!NOT(ISBLANK(cancelBookingId))}" value="{!bookings[cancelBookingId]['Cancellation_Reason__c'].Value}" styleClass="form-control" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <apex:commandButton styleClass="btn btn-default" html-data-dismiss="modal" value="Close" /> 
+                        <apex:commandButton action="{!cancel}" styleClass="btn btn-danger" value="Cancel Registration" reRender="cancellationModalPanel,alertPanel,volTypesPanel" status="eventLd" html-data-dismiss="modal" />
+                    </div>
+                </apex:outputPanel>
+            </div>
+        </div>
+                
+    </apex:form>  
+    
+</apex:page>

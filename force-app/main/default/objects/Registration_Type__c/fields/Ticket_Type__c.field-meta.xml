@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ticket_Type__c</fullName>
+    <label>Ticket Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Family</fullName>
+                <default>false</default>
+                <label>Family</label>
+            </value>
+            <value>
+                <fullName>Individual</fullName>
+                <default>false</default>
+                <label>Individual</label>
+            </value>
+            <value>
+                <fullName>Mini Camp</fullName>
+                <default>false</default>
+                <label>Mini Camp</label>
+            </value>
+            <value>
+                <fullName>Jnr Camp</fullName>
+                <default>false</default>
+                <label>Jnr Camp</label>
+            </value>
+            <value>
+                <fullName>Middle Camp</fullName>
+                <default>false</default>
+                <label>Middle Camp</label>
+            </value>
+            <value>
+                <fullName>Joint Junior and Middle Camp</fullName>
+                <default>false</default>
+                <label>Joint Junior and Middle Camp</label>
+            </value>
+            <value>
+                <fullName>Joint Mini Jun and Middle</fullName>
+                <default>false</default>
+                <label>Joint Mini Jun and Middle</label>
+            </value>
+            <value>
+                <fullName>Virtual Camp</fullName>
+                <default>false</default>
+                <label>Virtual Camp</label>
+            </value>
+            <value>
+                <fullName>Leadership 15-17</fullName>
+                <default>false</default>
+                <label>Leadership 15-17</label>
+            </value>
+            <value>
+                <fullName>Teens 13- 15</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Teens 13- 15</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

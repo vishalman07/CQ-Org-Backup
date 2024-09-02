@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDP_SA_NT_NEW_REQUESTS</fullName>
+    <columns>NAME</columns>
+    <columns>Puppet_Show_Name__c</columns>
+    <columns>Child_Requesting_Show__c</columns>
+    <columns>Age_Of_Child__c</columns>
+    <columns>Type_Of_Child__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Show_Date__c</columns>
+    <columns>Requestor__c</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>PuppetShow__c.Puppet_Digital_Playdate</value>
+    </filters>
+    <filters>
+        <field>Performance_Group__c</field>
+        <operation>equals</operation>
+        <value>SA/NT</value>
+    </filters>
+    <filters>
+        <field>Show_Status__c</field>
+        <operation>equals</operation>
+        <value>Requested</value>
+    </filters>
+    <label>PDP - SA/NT - NEW REQUESTS</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Primary_School_Program_Manager</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

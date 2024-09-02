@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Internal Puppet Show Booking Form {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Internal Puppet Show Booking Form</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <description>This form is used by the GM Services &amp; Programs, National Education &amp; Puppet Programs Manager and Puppet Programs Team Leader to assess the appropriate use of the puppets at a Camp Quality event outside of regular school and hospital visits. Please email this form to robbie.greenwell@campquality.org.au no later than 3 weeks prior to your event date. You will receive a reply within 3 working days. Some important things to consider before submitting your request: 
+
+ 
+
+Authorisation for the puppets to attend your event will come from GM Services &amp; Programs, National Education &amp; Puppet Programs Manager and Puppet Programs Team Leader 
+
+Not all events are appropriate for the puppets to attend. If your request is not approved the National Education &amp; Puppet Programs Manager will explain the reasons 
+
+If the request is approved, you may be required to cover the cost of casual performers hours (including rehearsal, where necessary). The rate is $41 per hour and minimum three-hour shifts are paid. You may also be required to cover travel expenses. Please ensure you factor this cost into your event budget 
+
+Please fill out all fields below and provide as much information as possible 
+
+The puppets offer 3 performance options; puppet live show, puppet live roving, puppet video. Please note that development of script, line learning and rehearsal takes time and resources. Please give us as much advanced notice of your request as possible to increase our chances of being able to deliver</description>
+        <name>Internal_Puppet_Show_Booking_Form</name>
+        <label>Internal Puppet Show Booking Form</label>
+        <locationX>1054</locationX>
+        <locationY>82</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Requestor_Details</targetReference>
+        </connector>
+        <fields>
+            <name>InternalPuppetShowsBlurb</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_EmbeddedFont&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; font-size: 10pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_EmbeddedFont&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; font-size: 9pt;&quot;&gt;This form is used by the GM Services &amp;amp; Programs, National Education &amp;amp; Puppet Programs Manager and Puppet Programs Team Leader to assess the appropriate use of the puppets at a Camp Quality event outside of regular school and hospital visits.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_EmbeddedFont&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; font-size: 9pt;&quot;&gt;﻿Please complete this form &lt;/span&gt;&lt;strong style=&quot;font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_EmbeddedFont&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; font-size: 9pt;&quot;&gt;no later than 3 weeks &lt;/strong&gt;&lt;span style=&quot;font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_EmbeddedFont&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; font-size: 9pt;&quot;&gt;prior to your event date. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_EmbeddedFont&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; font-size: 9pt;&quot;&gt;&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;You will receive a reply within 3 working days. Some important things to consider before submitting your request:&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_EmbeddedFont&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; font-size: 9pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_EmbeddedFont&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; font-size: 9pt;&quot;&gt;Authorisation for the puppets to attend your event will come from GM Services &amp;amp; Programs, National Education &amp;amp; Puppet Programs Manager and Puppet Programs Team Leader&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_EmbeddedFont&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; font-size: 9pt;&quot;&gt;Not all events are appropriate for the puppets to attend. If your request is not approved the National Education &amp;amp; Puppet Programs Manager will explain the reasons&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_EmbeddedFont&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; font-size: 9pt;&quot;&gt;If the request is approved, you may be required to cover the cost of casual performers hours (including rehearsal, where necessary). The rate is $41 per hour and minimum three-hour shifts are paid. You may also be required to cover travel expenses. Please ensure you factor this cost into your event budget&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_EmbeddedFont&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; font-size: 9pt;&quot;&gt;Please fill out all fields below and provide as much information as possible&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;quot;Century Gothic&amp;quot;, &amp;quot;Century Gothic_EmbeddedFont&amp;quot;, &amp;quot;Century Gothic_MSFontService&amp;quot;, sans-serif; font-size: 9pt;&quot;&gt;The puppets offer 3 performance options; puppet live show, puppet live roving, puppet video. Please note that development of script, line learning and rehearsal takes time and resources. Please give us as much advanced notice of your request as possible to increase our chances of being able to deliver&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Requestor_Details</name>
+        <label>Requestor Details</label>
+        <locationX>1055</locationX>
+        <locationY>337</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Venue_Information</targetReference>
+        </connector>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>PuppetShowInternalBookingForm.Requestor__c</objectFieldReference>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>PuppetShowInternalBookingForm.Requestor_First_Name__c</objectFieldReference>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>PuppetShowInternalBookingForm.Requestor_Last_Name__c</objectFieldReference>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>PuppetShowInternalBookingForm.Requestor_Email__c</objectFieldReference>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>PuppetShowInternalBookingForm.Request_Date__c</objectFieldReference>
+        </fields>
+        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Show_Information</name>
+        <label>Show Information</label>
+        <locationX>633</locationX>
+        <locationY>538</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Why_do_you_want_the_puppets_at_your_event</name>
+            <dataType>String</dataType>
+            <fieldText>Why do you want the puppets at your event?</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>PuppetShowInternalBookingForm.Cost_Centre_To_Bill_To__c</objectFieldReference>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>PuppetShowInternalBookingForm.Show_Type__c</objectFieldReference>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>PuppetShowInternalBookingForm.Show_Sub_Type__c</objectFieldReference>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>PuppetShowInternalBookingForm.Show_Date__c</objectFieldReference>
+        </fields>
+        <fields>
+            <name>ShowDurationBlurb</name>
+            <fieldText>&lt;p&gt;Please factor in 30 minutes before your preferred start time and 20 minutes after the show for warm up and cool down of staff.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>PuppetShowInternalBookingForm.Show_Duration__c</objectFieldReference>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>PuppetShowInternalBookingForm.Turnout__c</objectFieldReference>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>PuppetShowInternalBookingForm.Performance_Group__c</objectFieldReference>
+        </fields>
+        <fields>
+            <name>Show_Information_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Show_Information_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>BookingNotes</name>
+            <fieldText>&lt;p&gt;Please include further information for the show below such as:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Contact person on the day &amp;amp; their details (if not you)&lt;/li&gt;&lt;li&gt;How many puppets do you want at your event?&lt;/li&gt;&lt;li&gt;Any questions you may have on this booking.&lt;/li&gt;&lt;/ul&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>PuppetShowInternalBookingForm.Booking_Request_Notes__c</objectFieldReference>
+        </fields>
+        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Venue_Information</name>
+        <label>Venue Information</label>
+        <locationX>1061</locationX>
+        <locationY>537</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Show_Information</targetReference>
+        </connector>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>PuppetShowInternalBookingForm.Venue__c</objectFieldReference>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>PuppetShowInternalBookingForm.Venue_Details__c</objectFieldReference>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>PuppetShowInternalBookingForm.Sound_equipment_required__c</objectFieldReference>
+        </fields>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>PuppetShowInternalBookingForm.Parking_access_details__c</objectFieldReference>
+        </fields>
+        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>530</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Internal_Puppet_Show_Booking_Form</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <name>PuppetShowInternalBookingForm</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>PuppetShow__c</objectType>
+    </variables>
+</Flow>

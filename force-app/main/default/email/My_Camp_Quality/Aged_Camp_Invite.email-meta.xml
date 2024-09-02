@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Logo_Letterhead</letterhead>
+    <name>Aged Camp Invite</name>
+    <style>freeForm</style>
+    <subject>Your child is invited to {!Campaign.Portal_Title__c} on {!Campaign.StartDate}</subject>
+    <textOnly>Dear {!Account.Name},
+ 
+We would like to invite your child to
+
+{!Campaign.Portal_Title__c}
+
+{!Campaign.Portal_Description__c}
+ 
+When: {!Campaign.StartDate} at {!Campaign.Event_time__c}
+
+Where: {!Campaign.Location_Venue__c}
+ 
+RSVP By: {!Campaign.RVSP__c}
+ 
+
+Go to  {!Campaign.Family_Portal_Event_URL__c}
+
+Kind Regards,
+
+{!Campaign.Campaign_Owner_Name__c}
+
+You are receiving this email as you are a registered Camp Quality Family or Volunteer.  To manage your invites update your profile at www.mycampquality.org.au</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Family Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Email</fieldNames>
+        <fieldNames>Address</fieldNames>
+        <info>&lt;p&gt;Contact Family to Welcome them to Camp Quality and send welcome pack&lt;/p&gt;&lt;p&gt;ACTION: Change to Successful&lt;/p&gt;</info>
+        <picklistValueName>Contacted</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Diagnosis__c</fieldNames>
+        <fieldNames>Diagnosis_Other__c</fieldNames>
+        <fieldNames>Has_Child_Under_14__c</fieldNames>
+        <fieldNames>Lead_Rejection_Reason__c</fieldNames>
+        <info>&lt;p&gt;This is a brand new Family Registration&lt;/p&gt;&lt;p&gt;Refer to Family Sign Up Policy &lt;/p&gt;&lt;ul&gt;&lt;li&gt;Patient (adult or child) needs a Cancer Diagnosis&lt;/li&gt;&lt;li&gt;Must be a child in the family under the age of 13&lt;/li&gt;&lt;li&gt;If the Patient (adult or child) has passed away from cancer in the last 2 years&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;ACTION 1: If the family is eligible for CQ programs, change to Contacted and start welcome process&lt;/p&gt;&lt;p&gt;ACTION 2: If the family is not eligible mark as Unsuccessful and refer if applicable&lt;/p&gt;</info>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Lead_Mapping_Processed__c</fieldNames>
+        <info>&lt;p&gt;Now the family is Successful you can Convert Application to create a Household Record&lt;/p&gt;</info>
+        <picklistValueName>Successful</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Family_Application</recordTypeName>
+</PathAssistant>

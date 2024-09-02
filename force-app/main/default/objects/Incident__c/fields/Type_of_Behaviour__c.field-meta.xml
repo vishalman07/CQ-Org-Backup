@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Behaviour__c</fullName>
+    <label>Type of Behaviour</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Harm to Self</fullName>
+                <default>false</default>
+                <label>Harm to Self</label>
+            </value>
+            <value>
+                <fullName>Drugs or Alcohol</fullName>
+                <default>false</default>
+                <label>Drugs or Alcohol</label>
+            </value>
+            <value>
+                <fullName>Non-compliance with direction(s)</fullName>
+                <default>false</default>
+                <label>Non-compliance with direction(s)</label>
+            </value>
+            <value>
+                <fullName>Verbal altercation/abuse</fullName>
+                <default>false</default>
+                <label>Verbal altercation/abuse</label>
+            </value>
+            <value>
+                <fullName>Property Damage</fullName>
+                <default>false</default>
+                <label>Property Damage</label>
+            </value>
+            <value>
+                <fullName>Harm to others</fullName>
+                <default>false</default>
+                <label>Harm to others</label>
+            </value>
+            <value>
+                <fullName>Inappropriate Language</fullName>
+                <default>false</default>
+                <label>Inappropriate Language</label>
+            </value>
+            <value>
+                <fullName>Absconding</fullName>
+                <default>false</default>
+                <label>Absconding</label>
+            </value>
+            <value>
+                <fullName>Physical Threat</fullName>
+                <default>false</default>
+                <label>Physical Threat</label>
+            </value>
+            <value>
+                <fullName>Theft</fullName>
+                <default>false</default>
+                <label>Theft</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Bullying or Harassment</fullName>
+                <default>false</default>
+                <label>Bullying or Harassment</label>
+            </value>
+            <value>
+                <fullName>all of the above</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>all of the above</label>
+            </value>
+            <value>
+                <fullName>other behaviour</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>other behaviour</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

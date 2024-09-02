@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Org_Campaign_Hierarchy</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.END_DATE</columns>
+    <columns>CAMPAIGN.ACTIVE</columns>
+    <columns>Branch_Code__c</columns>
+    <columns>Cost_Centre__c</columns>
+    <columns>Account_No__c</columns>
+    <columns>TOT_AMOUNT_WON</columns>
+    <columns>CAMPAIGN.NUM_WON_OPPORTUNITIES</columns>
+    <filterScope>Everything</filterScope>
+    <label>Org_Campaign_Hierarchy</label>
+</ListView>

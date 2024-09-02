@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>National_eCommunication_List__c</fullName>
+    <label>National eCommunication List</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>Invalid Email</fullName>
+                <default>false</default>
+                <label>Invalid Email</label>
+            </value>
+            <value>
+                <fullName>Unsubscribed</fullName>
+                <default>false</default>
+                <label>Unsubscribed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

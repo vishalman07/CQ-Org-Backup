@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Fleet Vehicals</label>
+    <protected>false</protected>
+    <values>
+        <field>Field_Name__c</field>
+        <value xsi:type="xsd:string">Name</value>
+    </values>
+    <values>
+        <field>Form_ID__c</field>
+        <value xsi:type="xsd:string">233199066573869</value>
+    </values>
+    <values>
+        <field>Object_Name__c</field>
+        <value xsi:type="xsd:string">Asset</value>
+    </values>
+    <values>
+        <field>Query__c</field>
+        <value xsi:type="xsd:string">SELECT ID, Name, Status, RecordTypeID FROM Asset WHERE RecordTypeID = &apos;0121y000002uLAXAA2&apos; And Status = &apos;Registered&apos;</value>
+    </values>
+    <values>
+        <field>Question_ID__c</field>
+        <value xsi:type="xsd:string">91</value>
+    </values>
+</CustomMetadata>

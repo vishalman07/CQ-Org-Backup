@@ -1,0 +1,30 @@
+<messaging:emailTemplate subject="You are going to {!relatedTo.Campaign.Portal_Title__c} on {!relatedTo.Campaign.StartDate}" recipientType="Contact" relatedToType="CampaignMember">
+<messaging:htmlEmailBody >
+
+<div style="width:100%; max-width:600px;">
+<apex:image id="theImage" value="/servlet/servlet.ImageServer?id=015p0000000ABAi&oid=00Dp00000008iZg" width="220" height="55"/>
+
+    <p>
+        Dear {!relatedTo.CompanyOrAccount},<br /><br />
+
+        <img style="max-width:100%;" src="{!relatedTo.Campaign.Event_Image__c}" /><br />
+            
+        Your request to attend {!relatedTo.Campaign.Portal_Title__c} on <apex:outputText value=" {!relatedTo.Campaign.StartDate}" /> has been accepted for the following family members:
+        
+    </p>
+        
+        <c:FamilyMemberAttendanceList AttendanceStatus="Accepted" FamilyAttendanceId="{!relatedTo.Family_Attendance__c}" />
+        
+    <p>
+       
+        <apex:outputText value="{!relatedTo.Campaign.Event_Acceptance_Note__c}" escape="false" /><br /><br />
+        
+        Kind Regards,<br />
+        {!relatedTo.Campaign.Owner.Name}
+        
+    </p>
+
+</div>
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

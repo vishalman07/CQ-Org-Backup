@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign.Event_Group__c</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>Campaign.Event_Type__c</field>
+    </columns>
+    <columns>
+        <field>START_DATE</field>
+    </columns>
+    <columns>
+        <field>END_DATE</field>
+    </columns>
+    <description>All Rec programs upcoming for 2021</description>
+    <filter>
+        <criteriaItems>
+            <column>START_DATE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>NEXT_N_MONTHS:12</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Event_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Family Camp,Family Fun Day,Junior Camp,Middle Camp,Mini Camp,Multi Age Group Camp,Grad Camp,Virtual Camp</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>2021 Programs</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>START_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+</Report>

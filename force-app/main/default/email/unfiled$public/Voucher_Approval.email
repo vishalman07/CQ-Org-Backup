@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<span style="font-family: Arial, Helvetica, sans-serif; font-size: 11.36px; background-color: rgb(255, 255, 255);">A new voucher has been entered in Salesforce and requires your approval.</span><br style="font-family: Arial, Helvetica, sans-serif; font-size: 11.36px;"><br style="font-family: Arial, Helvetica, sans-serif; font-size: 11.36px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 11.36px; background-color: rgb(255, 255, 255);">The voucher was created by {!Voucher__c.CreatedBy} on {!Voucher__c.CreatedDate} for this event {!Voucher__c.Campaign__c}.</span><br style="font-family: Arial, Helvetica, sans-serif; font-size: 11.36px;"><br style="font-family: Arial, Helvetica, sans-serif; font-size: 11.36px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 11.36px; background-color: rgb(255, 255, 255);">Please see more information here {!Voucher__c.Link}</span>]]></td>
+</tr>
+</table>

@@ -1,0 +1,165 @@
+<apex:page standardStylesheets="false" controller="portalCorporateVolunteerEOIController" title="Corporate Volunteering EOI">
+    
+    <script type="text/javascript">
+    $(document).ready(function() {
+        initPlugins();
+    });
+    
+    function initPlugins() {
+        var validator = $('form[id$=contactUsForm]').validate({
+             submitHandler: function (form) {
+                 doSubmit();
+             }                
+         });      
+        
+        $('.datepicker').datepicker({
+            format: 'dd/mm/yyyy'
+        }); 
+        
+        $('.datepicker').each(function() {
+            $(this).val($(this).val().trim());
+        });
+    }
+    </script>
+    
+    <div class="row">
+        
+        <div class="col-md-12">
+            
+            <apex:outputPanel id="formPanel">
+                
+                <apex:form id="contactUsForm">
+                    
+                    <apex:outputPanel layout="block" rendered="{!hasError}" styleClass="alert alert-danger" html-role="alert">
+                        <apex:messages />
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </apex:outputPanel>
+                    
+                    <apex:outputPanel layout="block" rendered="{!NOT(ISBLANK(successMsg))}" styleClass="alert alert-success" html-role="alert">
+                        <apex:outputText value="{!successMsg}" />
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </apex:outputPanel>
+                    
+                    <div class="row well form-horizontal">
+                        
+                        <apex:actionStatus id="ContactUsLd" startStyleClass="loading" stopStyleClass="">
+                            <apex:facet name="start">
+                                <span class="glyphicon glyphicon-refresh spinning"></span>
+                            </apex:facet>
+                        </apex:actionStatus>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-2">Your Position/Role:</label>
+                            <div class="col-sm-10">
+                                <apex:inputField value="{!c.Position__c}" styleClass="form-control required" />
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-2">Your Team:</label>
+                            <div class="col-sm-10">
+                                <apex:inputField value="{!c.Team__c}" styleClass="form-control required" />
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-2">How you can help:</label>
+                            <div class="col-sm-10">
+                                <apex:actionRegion >
+                                    <apex:inputField value="{!c.Assistance_Type__c}" styleClass="form-control required">
+                                        <apex:actionSupport event="onchange" reRender="assistanceType" status="ContactUsLd" />
+                                    </apex:inputField>
+                                </apex:actionRegion>
+                            </div>
+                        </div>
+                        
+                        <apex:outputPanel id="assistanceType">
+                            <apex:outputPanel rendered="{!c.Assistance_Type__c = 'General Volunteering'}">
+                                <p>
+                                    There are 3 different kinds of General Volunteering available, with different requirements and time commitments involved:
+                                </p>
+                                <ol>
+                                    <li><strong>Corporate Volunteering</strong> - 1 Day CQ office/admin volunteering</li>
+                                    <li><strong>Community Fundraising/Event Volunteering</strong> - 1 Day event/fundraiser volunteering</li>
+                                    <li><strong>Camp Volunteering</strong> - Weekends only; subject to Working with Children Compliance and availability</li>
+                                </ol>
+                                <div class="form-group">
+                                    <label class="col-sm-2">Type of Volunteering:</label>
+                                    <div class="col-sm-10">
+                                        <apex:inputField value="{!c.Volunteering_Type__c}" styleClass="form-control required" />
+                                    </div>
+                                </div>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!c.Assistance_Type__c = 'Skilled Volunteering'}">
+                                <div class="form-group">      
+                                    <label class="col-xs-12">Skilled Volunteering:</label>
+                                    <div class="col-xs-12">
+                                        <apex:inputField value="{!c.Skilled_Volunteering__c}" styleClass="form-control required" />
+                                    </div>
+                                </div>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!c.Assistance_Type__c = 'Fundraising'}">
+                                <div class="form-group">
+                                    <label class="col-xs-12">Fundraising Description:</label>
+                                    <div class="col-xs-12">
+                                        <apex:inputField value="{!c.Fundraising_Description__c}" styleClass="form-control required" />
+                                    </div>
+                                </div>
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                        
+                        
+                        
+                        <h5>
+                            Available Date Range
+                        </h5>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-2">Start Date:</label>
+                            <div class="col-sm-10">
+                                <apex:inputText value=" {!c.Availability_Start_Date__c}" styleClass="form-control required datepicker" />
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-2">End Date:</label>
+                            <div class="col-sm-10">
+                                <apex:inputText value=" {!c.Availability_End_Date__c}" styleClass="form-control required datepicker" />
+                            </div>
+                        </div>
+                        
+                        <h5>
+                            Alternative Available Date Range
+                        </h5>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-2">Start Date:</label>
+                            <div class="col-sm-10">
+                                <apex:inputText value=" {!c.Alternative_Availability_Start_Date__c}" styleClass="form-control required datepicker" />
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-2">End Date:</label>
+                            <div class="col-sm-10">
+                                <apex:inputText value=" {!c.Alternative_Availability_End_Date__c}" styleClass="form-control required datepicker" />
+                            </div>
+                        </div>
+                        
+                        <input type="submit" value="submit" class="btn btn-default pull-right"  />
+                        <apex:actionFunction name="doSubmit" action="{!save}" reRender="formPanel" status="ContactUsLd" />
+                    </div>
+                    
+                </apex:form>
+                
+            </apex:outputPanel>
+            
+        </div>
+        
+    </div>
+    
+</apex:page>

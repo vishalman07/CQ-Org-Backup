@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>School_Affiliation__c</fullName>
+    <label>School Affiliation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GOVERNMENT</fullName>
+                <default>false</default>
+                <label>GOVERNMENT</label>
+            </value>
+            <value>
+                <fullName>STEINER</fullName>
+                <default>false</default>
+                <label>STEINER</label>
+            </value>
+            <value>
+                <fullName>ISLAMIC</fullName>
+                <default>false</default>
+                <label>ISLAMIC</label>
+            </value>
+            <value>
+                <fullName>BAPTIST</fullName>
+                <default>false</default>
+                <label>BAPTIST</label>
+            </value>
+            <value>
+                <fullName>JEWISH</fullName>
+                <default>false</default>
+                <label>JEWISH</label>
+            </value>
+            <value>
+                <fullName>CATHOLIC SYSTEMIC</fullName>
+                <default>false</default>
+                <label>CATHOLIC SYSTEMIC</label>
+            </value>
+            <value>
+                <fullName>LUTHERAN</fullName>
+                <default>false</default>
+                <label>LUTHERAN</label>
+            </value>
+            <value>
+                <fullName>UNITING CHURCH</fullName>
+                <default>false</default>
+                <label>UNITING CHURCH</label>
+            </value>
+            <value>
+                <fullName>NON-DENOMINATIONAL</fullName>
+                <default>false</default>
+                <label>NON-DENOMINATIONAL</label>
+            </value>
+            <value>
+                <fullName>MONTESSORI</fullName>
+                <default>false</default>
+                <label>MONTESSORI</label>
+            </value>
+            <value>
+                <fullName>SDA</fullName>
+                <default>false</default>
+                <label>SDA</label>
+            </value>
+            <value>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+                <label>OTHER</label>
+            </value>
+            <value>
+                <fullName>CHRISTIAN</fullName>
+                <default>false</default>
+                <label>CHRISTIAN</label>
+            </value>
+            <value>
+                <fullName>FREE REFORMED</fullName>
+                <default>false</default>
+                <label>FREE REFORMED</label>
+            </value>
+            <value>
+                <fullName>GREEK ORTHODOX</fullName>
+                <default>false</default>
+                <label>GREEK ORTHODOX</label>
+            </value>
+            <value>
+                <fullName>ANGLICAN</fullName>
+                <default>false</default>
+                <label>ANGLICAN</label>
+            </value>
+            <value>
+                <fullName>NON DENOMINATIONAL</fullName>
+                <default>false</default>
+                <label>NON DENOMINATIONAL</label>
+            </value>
+            <value>
+                <fullName>CHRISTADELPHIAN</fullName>
+                <default>false</default>
+                <label>CHRISTADELPHIAN</label>
+            </value>
+            <value>
+                <fullName>CATHOLIC INDEPENDENT</fullName>
+                <default>false</default>
+                <label>CATHOLIC INDEPENDENT</label>
+            </value>
+            <value>
+                <fullName>BRETHREN</fullName>
+                <default>false</default>
+                <label>BRETHREN</label>
+            </value>
+            <value>
+                <fullName>BUDDHIST</fullName>
+                <default>false</default>
+                <label>BUDDHIST</label>
+            </value>
+            <value>
+                <fullName>CATHOLIC</fullName>
+                <default>false</default>
+                <label>CATHOLIC</label>
+            </value>
+            <value>
+                <fullName>INDEPENDENT</fullName>
+                <default>false</default>
+                <label>INDEPENDENT</label>
+            </value>
+            <value>
+                <fullName>APOSTOLIC CHURCH</fullName>
+                <default>false</default>
+                <label>APOSTOLIC CHURCH</label>
+            </value>
+            <value>
+                <fullName>MULTI-DENOMINATIONAL</fullName>
+                <default>false</default>
+                <label>MULTI-DENOMINATIONAL</label>
+            </value>
+            <value>
+                <fullName>PRESBYTERIAN</fullName>
+                <default>false</default>
+                <label>PRESBYTERIAN</label>
+            </value>
+            <value>
+                <fullName>INTER-DENOMINATIONAL</fullName>
+                <default>false</default>
+                <label>INTER-DENOMINATIONAL</label>
+            </value>
+            <value>
+                <fullName>ASSEMBLIES OF GOD</fullName>
+                <default>false</default>
+                <label>ASSEMBLIES OF GOD</label>
+            </value>
+            <value>
+                <fullName>CHRISTIAN OUTREACH</fullName>
+                <default>false</default>
+                <label>CHRISTIAN OUTREACH</label>
+            </value>
+            <value>
+                <fullName>PROTESTANT</fullName>
+                <default>false</default>
+                <label>PROTESTANT</label>
+            </value>
+            <value>
+                <fullName>JEWISH ORTHODOX</fullName>
+                <default>false</default>
+                <label>JEWISH ORTHODOX</label>
+            </value>
+            <value>
+                <fullName>RIDBC</fullName>
+                <default>false</default>
+                <label>RIDBC</label>
+            </value>
+            <value>
+                <fullName>ASSYRIAN</fullName>
+                <default>false</default>
+                <label>ASSYRIAN</label>
+            </value>
+            <value>
+                <fullName>PENTECOSTAL</fullName>
+                <default>false</default>
+                <label>PENTECOSTAL</label>
+            </value>
+            <value>
+                <fullName>COPTIC ORTHODOX</fullName>
+                <default>false</default>
+                <label>COPTIC ORTHODOX</label>
+            </value>
+            <value>
+                <fullName>ECUMENICAL</fullName>
+                <default>false</default>
+                <label>ECUMENICAL</label>
+            </value>
+            <value>
+                <fullName>SWAN CHRISTIAN ED ASSC</fullName>
+                <default>false</default>
+                <label>SWAN CHRISTIAN ED ASSC</label>
+            </value>
+            <value>
+                <fullName>ANGLICAN INDEPENDENT</fullName>
+                <default>false</default>
+                <label>ANGLICAN INDEPENDENT</label>
+            </value>
+            <value>
+                <fullName>ALTERNATIVE</fullName>
+                <default>false</default>
+                <label>ALTERNATIVE</label>
+            </value>
+            <value>
+                <fullName>BAPTIST INDEPENDENT</fullName>
+                <default>false</default>
+                <label>BAPTIST INDEPENDENT</label>
+            </value>
+            <value>
+                <fullName>CONGREGATIONAL CHURCH</fullName>
+                <default>false</default>
+                <label>CONGREGATIONAL CHURCH</label>
+            </value>
+            <value>
+                <fullName>CATHOLIC &amp; ANGLICAN</fullName>
+                <default>false</default>
+                <label>CATHOLIC &amp; ANGLICAN</label>
+            </value>
+            <value>
+                <fullName>SCIENTOLOGY</fullName>
+                <default>false</default>
+                <label>SCIENTOLOGY</label>
+            </value>
+            <value>
+                <fullName>PARED</fullName>
+                <default>false</default>
+                <label>PARED</label>
+            </value>
+            <value>
+                <fullName>CHRISTIAN (ACE)</fullName>
+                <default>false</default>
+                <label>CHRISTIAN (ACE)</label>
+            </value>
+            <value>
+                <fullName>QUAKER</fullName>
+                <default>false</default>
+                <label>QUAKER</label>
+            </value>
+            <value>
+                <fullName>CHURCHES OF CHRIST</fullName>
+                <default>false</default>
+                <label>CHURCHES OF CHRIST</label>
+            </value>
+            <value>
+                <fullName>UNITING &amp; CATHOLIC</fullName>
+                <default>false</default>
+                <label>UNITING &amp; CATHOLIC</label>
+            </value>
+            <value>
+                <fullName>PRESBYTERIAN METHODIST</fullName>
+                <default>false</default>
+                <label>PRESBYTERIAN METHODIST</label>
+            </value>
+            <value>
+                <fullName>ABORIGINAL</fullName>
+                <default>false</default>
+                <label>ABORIGINAL</label>
+            </value>
+            <value>
+                <fullName>ANANDA MARGA</fullName>
+                <default>false</default>
+                <label>ANANDA MARGA</label>
+            </value>
+            <value>
+                <fullName>CHRISTIAN MONTESSORI</fullName>
+                <default>false</default>
+                <label>CHRISTIAN MONTESSORI</label>
+            </value>
+            <value>
+                <fullName>PRIVATE</fullName>
+                <default>false</default>
+                <label>PRIVATE</label>
+            </value>
+            <value>
+                <fullName>ANGLICAN AND UNITING</fullName>
+                <default>false</default>
+                <label>ANGLICAN AND UNITING</label>
+            </value>
+            <value>
+                <fullName>CHURCH OF ENGLAND</fullName>
+                <default>false</default>
+                <label>CHURCH OF ENGLAND</label>
+            </value>
+            <value>
+                <fullName>HARE KRISHNA</fullName>
+                <default>false</default>
+                <label>HARE KRISHNA</label>
+            </value>
+            <value>
+                <fullName>ARMENIAN ORTHODOX</fullName>
+                <default>false</default>
+                <label>ARMENIAN ORTHODOX</label>
+            </value>
+            <value>
+                <fullName>CO AS IT</fullName>
+                <default>false</default>
+                <label>CO AS IT</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,2939 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>School_Local_Government_Area__c</fullName>
+    <label>School Local Government Area</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACT GOVERNMENT</fullName>
+                <default>false</default>
+                <label>ACT GOVERNMENT</label>
+            </value>
+            <value>
+                <fullName>ADELAIDE (C)</fullName>
+                <default>false</default>
+                <label>ADELAIDE (C)</label>
+            </value>
+            <value>
+                <fullName>ADELAIDE HILLS (DC)</fullName>
+                <default>false</default>
+                <label>ADELAIDE HILLS (DC)</label>
+            </value>
+            <value>
+                <fullName>ALBANY (C)</fullName>
+                <default>false</default>
+                <label>ALBANY (C)</label>
+            </value>
+            <value>
+                <fullName>ALBURY (C)</fullName>
+                <default>false</default>
+                <label>ALBURY (C)</label>
+            </value>
+            <value>
+                <fullName>ALEXANDRINA (DC)</fullName>
+                <default>false</default>
+                <label>ALEXANDRINA (DC)</label>
+            </value>
+            <value>
+                <fullName>ALICE SPRINGS (T)</fullName>
+                <default>false</default>
+                <label>ALICE SPRINGS (T)</label>
+            </value>
+            <value>
+                <fullName>ALPINE (S)</fullName>
+                <default>false</default>
+                <label>ALPINE (S)</label>
+            </value>
+            <value>
+                <fullName>ANANGU PITJANTJATJARA (AC)</fullName>
+                <default>false</default>
+                <label>ANANGU PITJANTJATJARA (AC)</label>
+            </value>
+            <value>
+                <fullName>ARARAT (RC)</fullName>
+                <default>false</default>
+                <label>ARARAT (RC)</label>
+            </value>
+            <value>
+                <fullName>ARMADALE (C)</fullName>
+                <default>false</default>
+                <label>ARMADALE (C)</label>
+            </value>
+            <value>
+                <fullName>ARMIDALE DUMARESQ (A)</fullName>
+                <default>false</default>
+                <label>ARMIDALE DUMARESQ (A)</label>
+            </value>
+            <value>
+                <fullName>ASHBURTON (S)</fullName>
+                <default>false</default>
+                <label>ASHBURTON (S)</label>
+            </value>
+            <value>
+                <fullName>ASHFIELD (A)</fullName>
+                <default>false</default>
+                <label>ASHFIELD (A)</label>
+            </value>
+            <value>
+                <fullName>AUBURN (A)</fullName>
+                <default>false</default>
+                <label>AUBURN (A)</label>
+            </value>
+            <value>
+                <fullName>AUGUSTA-MARGARET RIVER (S)</fullName>
+                <default>false</default>
+                <label>AUGUSTA-MARGARET RIVER (S)</label>
+            </value>
+            <value>
+                <fullName>AURUKUN (S)</fullName>
+                <default>false</default>
+                <label>AURUKUN (S)</label>
+            </value>
+            <value>
+                <fullName>Ballarat</fullName>
+                <default>false</default>
+                <label>Ballarat</label>
+            </value>
+            <value>
+                <fullName>BALLARAT (C)</fullName>
+                <default>false</default>
+                <label>BALLARAT (C)</label>
+            </value>
+            <value>
+                <fullName>BALLINA (A)</fullName>
+                <default>false</default>
+                <label>BALLINA (A)</label>
+            </value>
+            <value>
+                <fullName>BALONNE (S)</fullName>
+                <default>false</default>
+                <label>BALONNE (S)</label>
+            </value>
+            <value>
+                <fullName>BALRANALD (A)</fullName>
+                <default>false</default>
+                <label>BALRANALD (A)</label>
+            </value>
+            <value>
+                <fullName>BANANA (S)</fullName>
+                <default>false</default>
+                <label>BANANA (S)</label>
+            </value>
+            <value>
+                <fullName>BANKSTOWN (C)</fullName>
+                <default>false</default>
+                <label>BANKSTOWN (C)</label>
+            </value>
+            <value>
+                <fullName>BANYULE (C)</fullName>
+                <default>false</default>
+                <label>BANYULE (C)</label>
+            </value>
+            <value>
+                <fullName>BARCALDINE (RSC)</fullName>
+                <default>false</default>
+                <label>BARCALDINE (RSC)</label>
+            </value>
+            <value>
+                <fullName>BARCOO (S)</fullName>
+                <default>false</default>
+                <label>BARCOO (S)</label>
+            </value>
+            <value>
+                <fullName>BARCOO (SC)</fullName>
+                <default>false</default>
+                <label>BARCOO (SC)</label>
+            </value>
+            <value>
+                <fullName>BAROSSA (DC)</fullName>
+                <default>false</default>
+                <label>BAROSSA (DC)</label>
+            </value>
+            <value>
+                <fullName>BARUNGA WEST (DC)</fullName>
+                <default>false</default>
+                <label>BARUNGA WEST (DC)</label>
+            </value>
+            <value>
+                <fullName>BASS COAST (S)</fullName>
+                <default>false</default>
+                <label>BASS COAST (S)</label>
+            </value>
+            <value>
+                <fullName>BASSENDEAN (T)</fullName>
+                <default>false</default>
+                <label>BASSENDEAN (T)</label>
+            </value>
+            <value>
+                <fullName>BATHURST REGIONAL (A)</fullName>
+                <default>false</default>
+                <label>BATHURST REGIONAL (A)</label>
+            </value>
+            <value>
+                <fullName>BAULKHAM HILLS (A)</fullName>
+                <default>false</default>
+                <label>BAULKHAM HILLS (A)</label>
+            </value>
+            <value>
+                <fullName>BAW BAW (S)</fullName>
+                <default>false</default>
+                <label>BAW BAW (S)</label>
+            </value>
+            <value>
+                <fullName>BAYSIDE (C)</fullName>
+                <default>false</default>
+                <label>BAYSIDE (C)</label>
+            </value>
+            <value>
+                <fullName>BAYSWATER (C)</fullName>
+                <default>false</default>
+                <label>BAYSWATER (C)</label>
+            </value>
+            <value>
+                <fullName>BEGA VALLEY (A)</fullName>
+                <default>false</default>
+                <label>BEGA VALLEY (A)</label>
+            </value>
+            <value>
+                <fullName>BELLINGEN (A)</fullName>
+                <default>false</default>
+                <label>BELLINGEN (A)</label>
+            </value>
+            <value>
+                <fullName>BELMONT (C)</fullName>
+                <default>false</default>
+                <label>BELMONT (C)</label>
+            </value>
+            <value>
+                <fullName>BENALLA (RC)</fullName>
+                <default>false</default>
+                <label>BENALLA (RC)</label>
+            </value>
+            <value>
+                <fullName>BERRI &amp; BARMERA (DC)</fullName>
+                <default>false</default>
+                <label>BERRI &amp; BARMERA (DC)</label>
+            </value>
+            <value>
+                <fullName>BERRIGAN (A)</fullName>
+                <default>false</default>
+                <label>BERRIGAN (A)</label>
+            </value>
+            <value>
+                <fullName>BEVERLEY (S)</fullName>
+                <default>false</default>
+                <label>BEVERLEY (S)</label>
+            </value>
+            <value>
+                <fullName>BEXLEY</fullName>
+                <default>false</default>
+                <label>BEXLEY</label>
+            </value>
+            <value>
+                <fullName>BLACKALL-TAMBO (RC)</fullName>
+                <default>false</default>
+                <label>BLACKALL-TAMBO (RC)</label>
+            </value>
+            <value>
+                <fullName>BLACKTOWN (C)</fullName>
+                <default>false</default>
+                <label>BLACKTOWN (C)</label>
+            </value>
+            <value>
+                <fullName>BLAND (A)</fullName>
+                <default>false</default>
+                <label>BLAND (A)</label>
+            </value>
+            <value>
+                <fullName>BLAYNEY (A)</fullName>
+                <default>false</default>
+                <label>BLAYNEY (A)</label>
+            </value>
+            <value>
+                <fullName>BLUE MOUNTAINS (C)</fullName>
+                <default>false</default>
+                <label>BLUE MOUNTAINS (C)</label>
+            </value>
+            <value>
+                <fullName>BODDINGTON (S)</fullName>
+                <default>false</default>
+                <label>BODDINGTON (S)</label>
+            </value>
+            <value>
+                <fullName>BOGAN (A)</fullName>
+                <default>false</default>
+                <label>BOGAN (A)</label>
+            </value>
+            <value>
+                <fullName>BOMBALA (A)</fullName>
+                <default>false</default>
+                <label>BOMBALA (A)</label>
+            </value>
+            <value>
+                <fullName>BOOROWA (A)</fullName>
+                <default>false</default>
+                <label>BOOROWA (A)</label>
+            </value>
+            <value>
+                <fullName>BOROONDARA (C)</fullName>
+                <default>false</default>
+                <label>BOROONDARA (C)</label>
+            </value>
+            <value>
+                <fullName>BOTANY BAY (C)</fullName>
+                <default>false</default>
+                <label>BOTANY BAY (C)</label>
+            </value>
+            <value>
+                <fullName>BOULIA (S)</fullName>
+                <default>false</default>
+                <label>BOULIA (S)</label>
+            </value>
+            <value>
+                <fullName>BOURKE (A)</fullName>
+                <default>false</default>
+                <label>BOURKE (A)</label>
+            </value>
+            <value>
+                <fullName>BOYUP BROOK (S)</fullName>
+                <default>false</default>
+                <label>BOYUP BROOK (S)</label>
+            </value>
+            <value>
+                <fullName>BREAK O&apos;DAY (M)</fullName>
+                <default>false</default>
+                <label>BREAK O&apos;DAY (M)</label>
+            </value>
+            <value>
+                <fullName>BREWARRINA (A)</fullName>
+                <default>false</default>
+                <label>BREWARRINA (A)</label>
+            </value>
+            <value>
+                <fullName>BRIDGETOWN-GREENBUSHES (S)</fullName>
+                <default>false</default>
+                <label>BRIDGETOWN-GREENBUSHES (S)</label>
+            </value>
+            <value>
+                <fullName>BRIGHTON (M)</fullName>
+                <default>false</default>
+                <label>BRIGHTON (M)</label>
+            </value>
+            <value>
+                <fullName>BRIMBANK (C)</fullName>
+                <default>false</default>
+                <label>BRIMBANK (C)</label>
+            </value>
+            <value>
+                <fullName>BRISBANE (C)</fullName>
+                <default>false</default>
+                <label>BRISBANE (C)</label>
+            </value>
+            <value>
+                <fullName>BROKEN HILL (C)</fullName>
+                <default>false</default>
+                <label>BROKEN HILL (C)</label>
+            </value>
+            <value>
+                <fullName>BROOKTON (S)</fullName>
+                <default>false</default>
+                <label>BROOKTON (S)</label>
+            </value>
+            <value>
+                <fullName>BROOME (S)</fullName>
+                <default>false</default>
+                <label>BROOME (S)</label>
+            </value>
+            <value>
+                <fullName>BROOMEHILL (S)</fullName>
+                <default>false</default>
+                <label>BROOMEHILL (S)</label>
+            </value>
+            <value>
+                <fullName>BRUCE ROCK (S)</fullName>
+                <default>false</default>
+                <label>BRUCE ROCK (S)</label>
+            </value>
+            <value>
+                <fullName>BULLOO (S)</fullName>
+                <default>false</default>
+                <label>BULLOO (S)</label>
+            </value>
+            <value>
+                <fullName>BULOKE (S)</fullName>
+                <default>false</default>
+                <label>BULOKE (S)</label>
+            </value>
+            <value>
+                <fullName>BUNBURY (C)</fullName>
+                <default>false</default>
+                <label>BUNBURY (C)</label>
+            </value>
+            <value>
+                <fullName>BUNDABERG (RC)</fullName>
+                <default>false</default>
+                <label>BUNDABERG (RC)</label>
+            </value>
+            <value>
+                <fullName>BURDEKIN (S)</fullName>
+                <default>false</default>
+                <label>BURDEKIN (S)</label>
+            </value>
+            <value>
+                <fullName>BURKE (S)</fullName>
+                <default>false</default>
+                <label>BURKE (S)</label>
+            </value>
+            <value>
+                <fullName>BURNIE (C)</fullName>
+                <default>false</default>
+                <label>BURNIE (C)</label>
+            </value>
+            <value>
+                <fullName>BURNSIDE (C)</fullName>
+                <default>false</default>
+                <label>BURNSIDE (C)</label>
+            </value>
+            <value>
+                <fullName>BURWOOD (A)</fullName>
+                <default>false</default>
+                <label>BURWOOD (A)</label>
+            </value>
+            <value>
+                <fullName>BUSSELTON (S)</fullName>
+                <default>false</default>
+                <label>BUSSELTON (S)</label>
+            </value>
+            <value>
+                <fullName>BYRON (A)</fullName>
+                <default>false</default>
+                <label>BYRON (A)</label>
+            </value>
+            <value>
+                <fullName>CABONNE (A)</fullName>
+                <default>false</default>
+                <label>CABONNE (A)</label>
+            </value>
+            <value>
+                <fullName>CAIRNS (RC)</fullName>
+                <default>false</default>
+                <label>CAIRNS (RC)</label>
+            </value>
+            <value>
+                <fullName>CAMBRIDGE (T)</fullName>
+                <default>false</default>
+                <label>CAMBRIDGE (T)</label>
+            </value>
+            <value>
+                <fullName>CAMDEN (A)</fullName>
+                <default>false</default>
+                <label>CAMDEN (A)</label>
+            </value>
+            <value>
+                <fullName>Camden Council</fullName>
+                <default>false</default>
+                <label>Camden Council</label>
+            </value>
+            <value>
+                <fullName>CAMPASPE (S)</fullName>
+                <default>false</default>
+                <label>CAMPASPE (S)</label>
+            </value>
+            <value>
+                <fullName>CAMPBELLTOWN (C)</fullName>
+                <default>false</default>
+                <label>CAMPBELLTOWN (C)</label>
+            </value>
+            <value>
+                <fullName>CANADA BAY (A)</fullName>
+                <default>false</default>
+                <label>CANADA BAY (A)</label>
+            </value>
+            <value>
+                <fullName>CANNING (C)</fullName>
+                <default>false</default>
+                <label>CANNING (C)</label>
+            </value>
+            <value>
+                <fullName>CANTERBURY (C)</fullName>
+                <default>false</default>
+                <label>CANTERBURY (C)</label>
+            </value>
+            <value>
+                <fullName>CAPEL (S)</fullName>
+                <default>false</default>
+                <label>CAPEL (S)</label>
+            </value>
+            <value>
+                <fullName>CARDINIA (S)</fullName>
+                <default>false</default>
+                <label>CARDINIA (S)</label>
+            </value>
+            <value>
+                <fullName>CARNAMAH (S)</fullName>
+                <default>false</default>
+                <label>CARNAMAH (S)</label>
+            </value>
+            <value>
+                <fullName>CARNARVON (S)</fullName>
+                <default>false</default>
+                <label>CARNARVON (S)</label>
+            </value>
+            <value>
+                <fullName>CARPENTARIA (S)</fullName>
+                <default>false</default>
+                <label>CARPENTARIA (S)</label>
+            </value>
+            <value>
+                <fullName>CARRATHOOL (A)</fullName>
+                <default>false</default>
+                <label>CARRATHOOL (A)</label>
+            </value>
+            <value>
+                <fullName>CASEY (C)</fullName>
+                <default>false</default>
+                <label>CASEY (C)</label>
+            </value>
+            <value>
+                <fullName>CASEY (S)</fullName>
+                <default>false</default>
+                <label>CASEY (S)</label>
+            </value>
+            <value>
+                <fullName>CASSOWARY COAST (RC)</fullName>
+                <default>false</default>
+                <label>CASSOWARY COAST (RC)</label>
+            </value>
+            <value>
+                <fullName>CEDUNA (DC)</fullName>
+                <default>false</default>
+                <label>CEDUNA (DC)</label>
+            </value>
+            <value>
+                <fullName>CENTRAL COAST (M)</fullName>
+                <default>false</default>
+                <label>CENTRAL COAST (M)</label>
+            </value>
+            <value>
+                <fullName>CENTRAL DARLING (A)</fullName>
+                <default>false</default>
+                <label>CENTRAL DARLING (A)</label>
+            </value>
+            <value>
+                <fullName>CENTRAL GOLDFIELDS (S)</fullName>
+                <default>false</default>
+                <label>CENTRAL GOLDFIELDS (S)</label>
+            </value>
+            <value>
+                <fullName>CENTRAL HIGHLANDS (M)</fullName>
+                <default>false</default>
+                <label>CENTRAL HIGHLANDS (M)</label>
+            </value>
+            <value>
+                <fullName>CENTRAL HIGHLANDS (RC)</fullName>
+                <default>false</default>
+                <label>CENTRAL HIGHLANDS (RC)</label>
+            </value>
+            <value>
+                <fullName>CESSNOCK (C)</fullName>
+                <default>false</default>
+                <label>CESSNOCK (C)</label>
+            </value>
+            <value>
+                <fullName>CHAPMAN VALLEY (S)</fullName>
+                <default>false</default>
+                <label>CHAPMAN VALLEY (S)</label>
+            </value>
+            <value>
+                <fullName>CHARLES STURT (C)</fullName>
+                <default>false</default>
+                <label>CHARLES STURT (C)</label>
+            </value>
+            <value>
+                <fullName>CHARTERS TOWERS (RC)</fullName>
+                <default>false</default>
+                <label>CHARTERS TOWERS (RC)</label>
+            </value>
+            <value>
+                <fullName>CHERBOURG (ASC)</fullName>
+                <default>false</default>
+                <label>CHERBOURG (ASC)</label>
+            </value>
+            <value>
+                <fullName>CHITTERING (S)</fullName>
+                <default>false</default>
+                <label>CHITTERING (S)</label>
+            </value>
+            <value>
+                <fullName>CIRCULAR HEAD (M)</fullName>
+                <default>false</default>
+                <label>CIRCULAR HEAD (M)</label>
+            </value>
+            <value>
+                <fullName>CLARE &amp; GILBERT VALLEYS (DC)</fullName>
+                <default>false</default>
+                <label>CLARE &amp; GILBERT VALLEYS (DC)</label>
+            </value>
+            <value>
+                <fullName>CLAREMONT (T)</fullName>
+                <default>false</default>
+                <label>CLAREMONT (T)</label>
+            </value>
+            <value>
+                <fullName>CLARENCE (C)</fullName>
+                <default>false</default>
+                <label>CLARENCE (C)</label>
+            </value>
+            <value>
+                <fullName>CLARENCE VALLEY (A)</fullName>
+                <default>false</default>
+                <label>CLARENCE VALLEY (A)</label>
+            </value>
+            <value>
+                <fullName>CLEVE (DC)</fullName>
+                <default>false</default>
+                <label>CLEVE (DC)</label>
+            </value>
+            <value>
+                <fullName>CLONCURRY (S)</fullName>
+                <default>false</default>
+                <label>CLONCURRY (S)</label>
+            </value>
+            <value>
+                <fullName>COBAR (A)</fullName>
+                <default>false</default>
+                <label>COBAR (A)</label>
+            </value>
+            <value>
+                <fullName>COCKBURN (C)</fullName>
+                <default>false</default>
+                <label>COCKBURN (C)</label>
+            </value>
+            <value>
+                <fullName>COFFS HARBOUR (C)</fullName>
+                <default>false</default>
+                <label>COFFS HARBOUR (C)</label>
+            </value>
+            <value>
+                <fullName>COLAC-OTWAY (S)</fullName>
+                <default>false</default>
+                <label>COLAC-OTWAY (S)</label>
+            </value>
+            <value>
+                <fullName>COLLIE (S)</fullName>
+                <default>false</default>
+                <label>COLLIE (S)</label>
+            </value>
+            <value>
+                <fullName>CONARGO (A)</fullName>
+                <default>false</default>
+                <label>CONARGO (A)</label>
+            </value>
+            <value>
+                <fullName>COOBER PEDY (DC)</fullName>
+                <default>false</default>
+                <label>COOBER PEDY (DC)</label>
+            </value>
+            <value>
+                <fullName>COOK (S)</fullName>
+                <default>false</default>
+                <label>COOK (S)</label>
+            </value>
+            <value>
+                <fullName>COOLAMON (A)</fullName>
+                <default>false</default>
+                <label>COOLAMON (A)</label>
+            </value>
+            <value>
+                <fullName>COOLGARDIE (S)</fullName>
+                <default>false</default>
+                <label>COOLGARDIE (S)</label>
+            </value>
+            <value>
+                <fullName>COOMALIE (CGC)</fullName>
+                <default>false</default>
+                <label>COOMALIE (CGC)</label>
+            </value>
+            <value>
+                <fullName>COOMA-MONARO (A)</fullName>
+                <default>false</default>
+                <label>COOMA-MONARO (A)</label>
+            </value>
+            <value>
+                <fullName>COONAMBLE (A)</fullName>
+                <default>false</default>
+                <label>COONAMBLE (A)</label>
+            </value>
+            <value>
+                <fullName>COOROW (S)</fullName>
+                <default>false</default>
+                <label>COOROW (S)</label>
+            </value>
+            <value>
+                <fullName>COOTAMUNDRA (A)</fullName>
+                <default>false</default>
+                <label>COOTAMUNDRA (A)</label>
+            </value>
+            <value>
+                <fullName>COPPER COAST (DC)</fullName>
+                <default>false</default>
+                <label>COPPER COAST (DC)</label>
+            </value>
+            <value>
+                <fullName>CORANGAMITE (S)</fullName>
+                <default>false</default>
+                <label>CORANGAMITE (S)</label>
+            </value>
+            <value>
+                <fullName>COROWA SHIRE (A)</fullName>
+                <default>false</default>
+                <label>COROWA SHIRE (A)</label>
+            </value>
+            <value>
+                <fullName>CORRIGIN (S)</fullName>
+                <default>false</default>
+                <label>CORRIGIN (S)</label>
+            </value>
+            <value>
+                <fullName>COTTESLOE (T)</fullName>
+                <default>false</default>
+                <label>COTTESLOE (T)</label>
+            </value>
+            <value>
+                <fullName>COWRA (A)</fullName>
+                <default>false</default>
+                <label>COWRA (A)</label>
+            </value>
+            <value>
+                <fullName>CRANBROOK (S)</fullName>
+                <default>false</default>
+                <label>CRANBROOK (S)</label>
+            </value>
+            <value>
+                <fullName>CROYDON (S)</fullName>
+                <default>false</default>
+                <label>CROYDON (S)</label>
+            </value>
+            <value>
+                <fullName>CUE (S)</fullName>
+                <default>false</default>
+                <label>CUE (S)</label>
+            </value>
+            <value>
+                <fullName>CUNDERDIN (S)</fullName>
+                <default>false</default>
+                <label>CUNDERDIN (S)</label>
+            </value>
+            <value>
+                <fullName>DALBY (RSC)</fullName>
+                <default>false</default>
+                <label>DALBY (RSC)</label>
+            </value>
+            <value>
+                <fullName>DALEY (RSC)</fullName>
+                <default>false</default>
+                <label>DALEY (RSC)</label>
+            </value>
+            <value>
+                <fullName>DALWALLINU (S)</fullName>
+                <default>false</default>
+                <label>DALWALLINU (S)</label>
+            </value>
+            <value>
+                <fullName>DANDARAGAN (S)</fullName>
+                <default>false</default>
+                <label>DANDARAGAN (S)</label>
+            </value>
+            <value>
+                <fullName>DARDANUP (S)</fullName>
+                <default>false</default>
+                <label>DARDANUP (S)</label>
+            </value>
+            <value>
+                <fullName>DAREBIN (C)</fullName>
+                <default>false</default>
+                <label>DAREBIN (C)</label>
+            </value>
+            <value>
+                <fullName>DARWIN (C)</fullName>
+                <default>false</default>
+                <label>DARWIN (C)</label>
+            </value>
+            <value>
+                <fullName>DECONPORT (C)</fullName>
+                <default>false</default>
+                <label>DECONPORT (C)</label>
+            </value>
+            <value>
+                <fullName>DENILIQUIN (A)</fullName>
+                <default>false</default>
+                <label>DENILIQUIN (A)</label>
+            </value>
+            <value>
+                <fullName>DENMARK (S)</fullName>
+                <default>false</default>
+                <label>DENMARK (S)</label>
+            </value>
+            <value>
+                <fullName>DERBY-WEST KIMBERLEY (S)</fullName>
+                <default>false</default>
+                <label>DERBY-WEST KIMBERLEY (S)</label>
+            </value>
+            <value>
+                <fullName>DERWENT VALLEY (M)</fullName>
+                <default>false</default>
+                <label>DERWENT VALLEY (M)</label>
+            </value>
+            <value>
+                <fullName>DEVONPORT (C)</fullName>
+                <default>false</default>
+                <label>DEVONPORT (C)</label>
+            </value>
+            <value>
+                <fullName>DIAMANTINA (S)</fullName>
+                <default>false</default>
+                <label>DIAMANTINA (S)</label>
+            </value>
+            <value>
+                <fullName>DONNYBROOK-BALINGUP (S)</fullName>
+                <default>false</default>
+                <label>DONNYBROOK-BALINGUP (S)</label>
+            </value>
+            <value>
+                <fullName>DOOMADGEE (ASC)</fullName>
+                <default>false</default>
+                <label>DOOMADGEE (ASC)</label>
+            </value>
+            <value>
+                <fullName>DORSET (M)</fullName>
+                <default>false</default>
+                <label>DORSET (M)</label>
+            </value>
+            <value>
+                <fullName>DOWERIN (S)</fullName>
+                <default>false</default>
+                <label>DOWERIN (S)</label>
+            </value>
+            <value>
+                <fullName>DUBBO (C)</fullName>
+                <default>false</default>
+                <label>DUBBO (C)</label>
+            </value>
+            <value>
+                <fullName>DUMBLEYUNG (S)</fullName>
+                <default>false</default>
+                <label>DUMBLEYUNG (S)</label>
+            </value>
+            <value>
+                <fullName>DUNDAS (S)</fullName>
+                <default>false</default>
+                <label>DUNDAS (S)</label>
+            </value>
+            <value>
+                <fullName>DUNGOG (A)</fullName>
+                <default>false</default>
+                <label>DUNGOG (A)</label>
+            </value>
+            <value>
+                <fullName>EAST FREMANTLE (T)</fullName>
+                <default>false</default>
+                <label>EAST FREMANTLE (T)</label>
+            </value>
+            <value>
+                <fullName>EAST GIPPSLAND (S)</fullName>
+                <default>false</default>
+                <label>EAST GIPPSLAND (S)</label>
+            </value>
+            <value>
+                <fullName>EAST PILBARA (S)</fullName>
+                <default>false</default>
+                <label>EAST PILBARA (S)</label>
+            </value>
+            <value>
+                <fullName>ELLISTON (DC)</fullName>
+                <default>false</default>
+                <label>ELLISTON (DC)</label>
+            </value>
+            <value>
+                <fullName>ESPERANCE (S)</fullName>
+                <default>false</default>
+                <label>ESPERANCE (S)</label>
+            </value>
+            <value>
+                <fullName>ETHERIDGE (SC)</fullName>
+                <default>false</default>
+                <label>ETHERIDGE (SC)</label>
+            </value>
+            <value>
+                <fullName>EUROBODALLA (A)</fullName>
+                <default>false</default>
+                <label>EUROBODALLA (A)</label>
+            </value>
+            <value>
+                <fullName>EVANS (S)</fullName>
+                <default>false</default>
+                <label>EVANS (S)</label>
+            </value>
+            <value>
+                <fullName>EXMOUTH (S)</fullName>
+                <default>false</default>
+                <label>EXMOUTH (S)</label>
+            </value>
+            <value>
+                <fullName>FAIRFIELD (C)</fullName>
+                <default>false</default>
+                <label>FAIRFIELD (C)</label>
+            </value>
+            <value>
+                <fullName>FALLS CREEK ALPINE RESORT</fullName>
+                <default>false</default>
+                <label>FALLS CREEK ALPINE RESORT</label>
+            </value>
+            <value>
+                <fullName>FLINDERS (M)</fullName>
+                <default>false</default>
+                <label>FLINDERS (M)</label>
+            </value>
+            <value>
+                <fullName>FLINDERS (S)</fullName>
+                <default>false</default>
+                <label>FLINDERS (S)</label>
+            </value>
+            <value>
+                <fullName>FLINDERS RANGES (DC)</fullName>
+                <default>false</default>
+                <label>FLINDERS RANGES (DC)</label>
+            </value>
+            <value>
+                <fullName>FORBES (A)</fullName>
+                <default>false</default>
+                <label>FORBES (A)</label>
+            </value>
+            <value>
+                <fullName>FRANKLIN HARBOUR (DC)</fullName>
+                <default>false</default>
+                <label>FRANKLIN HARBOUR (DC)</label>
+            </value>
+            <value>
+                <fullName>FRANKSTON (C)</fullName>
+                <default>false</default>
+                <label>FRANKSTON (C)</label>
+            </value>
+            <value>
+                <fullName>FRANKSTONE (C)</fullName>
+                <default>false</default>
+                <label>FRANKSTONE (C)</label>
+            </value>
+            <value>
+                <fullName>FRASER COAST (RC)</fullName>
+                <default>false</default>
+                <label>FRASER COAST (RC)</label>
+            </value>
+            <value>
+                <fullName>FREMANTLE (C)</fullName>
+                <default>false</default>
+                <label>FREMANTLE (C)</label>
+            </value>
+            <value>
+                <fullName>GANNAWARRA (S)</fullName>
+                <default>false</default>
+                <label>GANNAWARRA (S)</label>
+            </value>
+            <value>
+                <fullName>GAPUWIYAK COMMUNITY</fullName>
+                <default>false</default>
+                <label>GAPUWIYAK COMMUNITY</label>
+            </value>
+            <value>
+                <fullName>GAWLER (T)</fullName>
+                <default>false</default>
+                <label>GAWLER (T)</label>
+            </value>
+            <value>
+                <fullName>geelong</fullName>
+                <default>false</default>
+                <label>geelong</label>
+            </value>
+            <value>
+                <fullName>GEORGE TOWN (M)</fullName>
+                <default>false</default>
+                <label>GEORGE TOWN (M)</label>
+            </value>
+            <value>
+                <fullName>GERALDTON (C)</fullName>
+                <default>false</default>
+                <label>GERALDTON (C)</label>
+            </value>
+            <value>
+                <fullName>GILGANDRA (A)</fullName>
+                <default>false</default>
+                <label>GILGANDRA (A)</label>
+            </value>
+            <value>
+                <fullName>GINGIN (S)</fullName>
+                <default>false</default>
+                <label>GINGIN (S)</label>
+            </value>
+            <value>
+                <fullName>GLADSTONE (RC)</fullName>
+                <default>false</default>
+                <label>GLADSTONE (RC)</label>
+            </value>
+            <value>
+                <fullName>GLAMORGAN/SPRING BAY (M)</fullName>
+                <default>false</default>
+                <label>GLAMORGAN/SPRING BAY (M)</label>
+            </value>
+            <value>
+                <fullName>GLEN EIRA (C)</fullName>
+                <default>false</default>
+                <label>GLEN EIRA (C)</label>
+            </value>
+            <value>
+                <fullName>GLENELG (S)</fullName>
+                <default>false</default>
+                <label>GLENELG (S)</label>
+            </value>
+            <value>
+                <fullName>GLEN INNES SEVERN (A)</fullName>
+                <default>false</default>
+                <label>GLEN INNES SEVERN (A)</label>
+            </value>
+            <value>
+                <fullName>GLENORCHY (C)</fullName>
+                <default>false</default>
+                <label>GLENORCHY (C)</label>
+            </value>
+            <value>
+                <fullName>GLOUCESTER (A)</fullName>
+                <default>false</default>
+                <label>GLOUCESTER (A)</label>
+            </value>
+            <value>
+                <fullName>GNOWANGERUP (S)</fullName>
+                <default>false</default>
+                <label>GNOWANGERUP (S)</label>
+            </value>
+            <value>
+                <fullName>GOLD COAST (CC)</fullName>
+                <default>false</default>
+                <label>GOLD COAST (CC)</label>
+            </value>
+            <value>
+                <fullName>GOLDEN PLAINS (S)</fullName>
+                <default>false</default>
+                <label>GOLDEN PLAINS (S)</label>
+            </value>
+            <value>
+                <fullName>GOOMALLING (S)</fullName>
+                <default>false</default>
+                <label>GOOMALLING (S)</label>
+            </value>
+            <value>
+                <fullName>GOONDIWINDI (RC)</fullName>
+                <default>false</default>
+                <label>GOONDIWINDI (RC)</label>
+            </value>
+            <value>
+                <fullName>GOSFORD (C)</fullName>
+                <default>false</default>
+                <label>GOSFORD (C)</label>
+            </value>
+            <value>
+                <fullName>GOSNELLS (C)</fullName>
+                <default>false</default>
+                <label>GOSNELLS (C)</label>
+            </value>
+            <value>
+                <fullName>GOULBURN MULWAREE (A)</fullName>
+                <default>false</default>
+                <label>GOULBURN MULWAREE (A)</label>
+            </value>
+            <value>
+                <fullName>GOYDER (DC)</fullName>
+                <default>false</default>
+                <label>GOYDER (DC)</label>
+            </value>
+            <value>
+                <fullName>GRANT (DC)</fullName>
+                <default>false</default>
+                <label>GRANT (DC)</label>
+            </value>
+            <value>
+                <fullName>GREATER BENDIGO (C)</fullName>
+                <default>false</default>
+                <label>GREATER BENDIGO (C)</label>
+            </value>
+            <value>
+                <fullName>GREATER DANDENONG (C)</fullName>
+                <default>false</default>
+                <label>GREATER DANDENONG (C)</label>
+            </value>
+            <value>
+                <fullName>GREATER GEELONG (C)</fullName>
+                <default>false</default>
+                <label>GREATER GEELONG (C)</label>
+            </value>
+            <value>
+                <fullName>GREATER HUME SHIRE (A)</fullName>
+                <default>false</default>
+                <label>GREATER HUME SHIRE (A)</label>
+            </value>
+            <value>
+                <fullName>GREATER SHEPPARTON (C)</fullName>
+                <default>false</default>
+                <label>GREATER SHEPPARTON (C)</label>
+            </value>
+            <value>
+                <fullName>GREATER TAREE (C)</fullName>
+                <default>false</default>
+                <label>GREATER TAREE (C)</label>
+            </value>
+            <value>
+                <fullName>GREAT LAKES (A)</fullName>
+                <default>false</default>
+                <label>GREAT LAKES (A)</label>
+            </value>
+            <value>
+                <fullName>GREENOUGH (S)</fullName>
+                <default>false</default>
+                <label>GREENOUGH (S)</label>
+            </value>
+            <value>
+                <fullName>GRIFFITH (C)</fullName>
+                <default>false</default>
+                <label>GRIFFITH (C)</label>
+            </value>
+            <value>
+                <fullName>GUNDAGAI (A)</fullName>
+                <default>false</default>
+                <label>GUNDAGAI (A)</label>
+            </value>
+            <value>
+                <fullName>GUNNEDAH (A)</fullName>
+                <default>false</default>
+                <label>GUNNEDAH (A)</label>
+            </value>
+            <value>
+                <fullName>GUYRA (A)</fullName>
+                <default>false</default>
+                <label>GUYRA (A)</label>
+            </value>
+            <value>
+                <fullName>GWYDIR (A)</fullName>
+                <default>false</default>
+                <label>GWYDIR (A)</label>
+            </value>
+            <value>
+                <fullName>GYMPIE (RC)</fullName>
+                <default>false</default>
+                <label>GYMPIE (RC)</label>
+            </value>
+            <value>
+                <fullName>HALLS CREEK (S)</fullName>
+                <default>false</default>
+                <label>HALLS CREEK (S)</label>
+            </value>
+            <value>
+                <fullName>HARDEN (A)</fullName>
+                <default>false</default>
+                <label>HARDEN (A)</label>
+            </value>
+            <value>
+                <fullName>HARVEY (S)</fullName>
+                <default>false</default>
+                <label>HARVEY (S)</label>
+            </value>
+            <value>
+                <fullName>HAWKESBURY (C)</fullName>
+                <default>false</default>
+                <label>HAWKESBURY (C)</label>
+            </value>
+            <value>
+                <fullName>HAY (A)</fullName>
+                <default>false</default>
+                <label>HAY (A)</label>
+            </value>
+            <value>
+                <fullName>HEPBURN (S)</fullName>
+                <default>false</default>
+                <label>HEPBURN (S)</label>
+            </value>
+            <value>
+                <fullName>HINCHINBROOK (S)</fullName>
+                <default>false</default>
+                <label>HINCHINBROOK (S)</label>
+            </value>
+            <value>
+                <fullName>HINDMARSH (S)</fullName>
+                <default>false</default>
+                <label>HINDMARSH (S)</label>
+            </value>
+            <value>
+                <fullName>HOBART (C)</fullName>
+                <default>false</default>
+                <label>HOBART (C)</label>
+            </value>
+            <value>
+                <fullName>HOBSONS BAY (C)</fullName>
+                <default>false</default>
+                <label>HOBSONS BAY (C)</label>
+            </value>
+            <value>
+                <fullName>HOLDFAST BAY (C)</fullName>
+                <default>false</default>
+                <label>HOLDFAST BAY (C)</label>
+            </value>
+            <value>
+                <fullName>HOLROYD (C)</fullName>
+                <default>false</default>
+                <label>HOLROYD (C)</label>
+            </value>
+            <value>
+                <fullName>HOPE VALE (ASC)</fullName>
+                <default>false</default>
+                <label>HOPE VALE (ASC)</label>
+            </value>
+            <value>
+                <fullName>HORNSBY (A)</fullName>
+                <default>false</default>
+                <label>HORNSBY (A)</label>
+            </value>
+            <value>
+                <fullName>HORSHAM (RC)</fullName>
+                <default>false</default>
+                <label>HORSHAM (RC)</label>
+            </value>
+            <value>
+                <fullName>HUME (C)</fullName>
+                <default>false</default>
+                <label>HUME (C)</label>
+            </value>
+            <value>
+                <fullName>HUNTERS HILL (A)</fullName>
+                <default>false</default>
+                <label>HUNTERS HILL (A)</label>
+            </value>
+            <value>
+                <fullName>HUON VALLEY (M)</fullName>
+                <default>false</default>
+                <label>HUON VALLEY (M)</label>
+            </value>
+            <value>
+                <fullName>HURSTVILLE (C)</fullName>
+                <default>false</default>
+                <label>HURSTVILLE (C)</label>
+            </value>
+            <value>
+                <fullName>INDIGO (S)</fullName>
+                <default>false</default>
+                <label>INDIGO (S)</label>
+            </value>
+            <value>
+                <fullName>INVERELL (A)</fullName>
+                <default>false</default>
+                <label>INVERELL (A)</label>
+            </value>
+            <value>
+                <fullName>IPSWICH (CC)</fullName>
+                <default>false</default>
+                <label>IPSWICH (CC)</label>
+            </value>
+            <value>
+                <fullName>IRWIN (S)</fullName>
+                <default>false</default>
+                <label>IRWIN (S)</label>
+            </value>
+            <value>
+                <fullName>ISAAC (RC)</fullName>
+                <default>false</default>
+                <label>ISAAC (RC)</label>
+            </value>
+            <value>
+                <fullName>JABIRU (T)</fullName>
+                <default>false</default>
+                <label>JABIRU (T)</label>
+            </value>
+            <value>
+                <fullName>JERILDERIE (A)</fullName>
+                <default>false</default>
+                <label>JERILDERIE (A)</label>
+            </value>
+            <value>
+                <fullName>JERRAMUNGUP (S)</fullName>
+                <default>false</default>
+                <label>JERRAMUNGUP (S)</label>
+            </value>
+            <value>
+                <fullName>JERVIS BAY TERRITORY</fullName>
+                <default>false</default>
+                <label>JERVIS BAY TERRITORY</label>
+            </value>
+            <value>
+                <fullName>JOHNSTONE (S)</fullName>
+                <default>false</default>
+                <label>JOHNSTONE (S)</label>
+            </value>
+            <value>
+                <fullName>JOONDALUP (C)</fullName>
+                <default>false</default>
+                <label>JOONDALUP (C)</label>
+            </value>
+            <value>
+                <fullName>JUNEE (A)</fullName>
+                <default>false</default>
+                <label>JUNEE (A)</label>
+            </value>
+            <value>
+                <fullName>KALAMUNDA (S)</fullName>
+                <default>false</default>
+                <label>KALAMUNDA (S)</label>
+            </value>
+            <value>
+                <fullName>KALGOORLIE/BOULDER (C)</fullName>
+                <default>false</default>
+                <label>KALGOORLIE/BOULDER (C)</label>
+            </value>
+            <value>
+                <fullName>KANGAROO ISLAND (DC)</fullName>
+                <default>false</default>
+                <label>KANGAROO ISLAND (DC)</label>
+            </value>
+            <value>
+                <fullName>KAROONDA EAST MURRAY (DC)</fullName>
+                <default>false</default>
+                <label>KAROONDA EAST MURRAY (DC)</label>
+            </value>
+            <value>
+                <fullName>KATANNING (S)</fullName>
+                <default>false</default>
+                <label>KATANNING (S)</label>
+            </value>
+            <value>
+                <fullName>KATHERINE (T)</fullName>
+                <default>false</default>
+                <label>KATHERINE (T)</label>
+            </value>
+            <value>
+                <fullName>KELLERBERRIN (S)</fullName>
+                <default>false</default>
+                <label>KELLERBERRIN (S)</label>
+            </value>
+            <value>
+                <fullName>KEMPSEY (A)</fullName>
+                <default>false</default>
+                <label>KEMPSEY (A)</label>
+            </value>
+            <value>
+                <fullName>KENT (S)</fullName>
+                <default>false</default>
+                <label>KENT (S)</label>
+            </value>
+            <value>
+                <fullName>KENTISH (M)</fullName>
+                <default>false</default>
+                <label>KENTISH (M)</label>
+            </value>
+            <value>
+                <fullName>KIAMA (A)</fullName>
+                <default>false</default>
+                <label>KIAMA (A)</label>
+            </value>
+            <value>
+                <fullName>KIMBA (DC)</fullName>
+                <default>false</default>
+                <label>KIMBA (DC)</label>
+            </value>
+            <value>
+                <fullName>KINGBOROUCH (M)</fullName>
+                <default>false</default>
+                <label>KINGBOROUCH (M)</label>
+            </value>
+            <value>
+                <fullName>KINGBOROUGH (M)</fullName>
+                <default>false</default>
+                <label>KINGBOROUGH (M)</label>
+            </value>
+            <value>
+                <fullName>KING ISLAND (M)</fullName>
+                <default>false</default>
+                <label>KING ISLAND (M)</label>
+            </value>
+            <value>
+                <fullName>KINGSBOROUGH (M)</fullName>
+                <default>false</default>
+                <label>KINGSBOROUGH (M)</label>
+            </value>
+            <value>
+                <fullName>KINGSTON (C)</fullName>
+                <default>false</default>
+                <label>KINGSTON (C)</label>
+            </value>
+            <value>
+                <fullName>KNOX (C)</fullName>
+                <default>false</default>
+                <label>KNOX (C)</label>
+            </value>
+            <value>
+                <fullName>KOGARAH (A)</fullName>
+                <default>false</default>
+                <label>KOGARAH (A)</label>
+            </value>
+            <value>
+                <fullName>KOJONUP (S)</fullName>
+                <default>false</default>
+                <label>KOJONUP (S)</label>
+            </value>
+            <value>
+                <fullName>KONDININ (S)</fullName>
+                <default>false</default>
+                <label>KONDININ (S)</label>
+            </value>
+            <value>
+                <fullName>KOORDA (S)</fullName>
+                <default>false</default>
+                <label>KOORDA (S)</label>
+            </value>
+            <value>
+                <fullName>KOWANYAMA (ASC)</fullName>
+                <default>false</default>
+                <label>KOWANYAMA (ASC)</label>
+            </value>
+            <value>
+                <fullName>KULIN (S)</fullName>
+                <default>false</default>
+                <label>KULIN (S)</label>
+            </value>
+            <value>
+                <fullName>KU-RING-GAI (A)</fullName>
+                <default>false</default>
+                <label>KU-RING-GAI (A)</label>
+            </value>
+            <value>
+                <fullName>KWINANA (T)</fullName>
+                <default>false</default>
+                <label>KWINANA (T)</label>
+            </value>
+            <value>
+                <fullName>KYOGLE (A)</fullName>
+                <default>false</default>
+                <label>KYOGLE (A)</label>
+            </value>
+            <value>
+                <fullName>LACHLAN (A)</fullName>
+                <default>false</default>
+                <label>LACHLAN (A)</label>
+            </value>
+            <value>
+                <fullName>LAKE GRACE (S)</fullName>
+                <default>false</default>
+                <label>LAKE GRACE (S)</label>
+            </value>
+            <value>
+                <fullName>LAKE MACQUARIE (C)</fullName>
+                <default>false</default>
+                <label>LAKE MACQUARIE (C)</label>
+            </value>
+            <value>
+                <fullName>LANE COVE (A)</fullName>
+                <default>false</default>
+                <label>LANE COVE (A)</label>
+            </value>
+            <value>
+                <fullName>LATROBE (C)</fullName>
+                <default>false</default>
+                <label>LATROBE (C)</label>
+            </value>
+            <value>
+                <fullName>LATROBE (M)</fullName>
+                <default>false</default>
+                <label>LATROBE (M)</label>
+            </value>
+            <value>
+                <fullName>LAUNCESTON (C)</fullName>
+                <default>false</default>
+                <label>LAUNCESTON (C)</label>
+            </value>
+            <value>
+                <fullName>LAVERTON (S)</fullName>
+                <default>false</default>
+                <label>LAVERTON (S)</label>
+            </value>
+            <value>
+                <fullName>LEETON (A)</fullName>
+                <default>false</default>
+                <label>LEETON (A)</label>
+            </value>
+            <value>
+                <fullName>LE HUNTE (DC)</fullName>
+                <default>false</default>
+                <label>LE HUNTE (DC)</label>
+            </value>
+            <value>
+                <fullName>LEICHHARDT (A)</fullName>
+                <default>false</default>
+                <label>LEICHHARDT (A)</label>
+            </value>
+            <value>
+                <fullName>LEONORA (S)</fullName>
+                <default>false</default>
+                <label>LEONORA (S)</label>
+            </value>
+            <value>
+                <fullName>LIGHT (REGC)</fullName>
+                <default>false</default>
+                <label>LIGHT (REGC)</label>
+            </value>
+            <value>
+                <fullName>LISMORE (C)</fullName>
+                <default>false</default>
+                <label>LISMORE (C)</label>
+            </value>
+            <value>
+                <fullName>LITCHFIELD (S)</fullName>
+                <default>false</default>
+                <label>LITCHFIELD (S)</label>
+            </value>
+            <value>
+                <fullName>LITHGOW (C)</fullName>
+                <default>false</default>
+                <label>LITHGOW (C)</label>
+            </value>
+            <value>
+                <fullName>LIVERPOOL (C)</fullName>
+                <default>false</default>
+                <label>LIVERPOOL (C)</label>
+            </value>
+            <value>
+                <fullName>LIVERPOOL PLAINS (A)</fullName>
+                <default>false</default>
+                <label>LIVERPOOL PLAINS (A)</label>
+            </value>
+            <value>
+                <fullName>LOCKHART (A)</fullName>
+                <default>false</default>
+                <label>LOCKHART (A)</label>
+            </value>
+            <value>
+                <fullName>LOCKHART RIVER (ASC)</fullName>
+                <default>false</default>
+                <label>LOCKHART RIVER (ASC)</label>
+            </value>
+            <value>
+                <fullName>LOCKYER VALLEY (RC)</fullName>
+                <default>false</default>
+                <label>LOCKYER VALLEY (RC)</label>
+            </value>
+            <value>
+                <fullName>LODDON (S)</fullName>
+                <default>false</default>
+                <label>LODDON (S)</label>
+            </value>
+            <value>
+                <fullName>LOGAN (CC)</fullName>
+                <default>false</default>
+                <label>LOGAN (CC)</label>
+            </value>
+            <value>
+                <fullName>LONGREACH (RC)</fullName>
+                <default>false</default>
+                <label>LONGREACH (RC)</label>
+            </value>
+            <value>
+                <fullName>LORD HOWE ISLAND</fullName>
+                <default>false</default>
+                <label>LORD HOWE ISLAND</label>
+            </value>
+            <value>
+                <fullName>LOWER EYRE PENINSULA (DC)</fullName>
+                <default>false</default>
+                <label>LOWER EYRE PENINSULA (DC)</label>
+            </value>
+            <value>
+                <fullName>LOXTON WAIKERIE (DC)</fullName>
+                <default>false</default>
+                <label>LOXTON WAIKERIE (DC)</label>
+            </value>
+            <value>
+                <fullName>MACEDON RANGES (S)</fullName>
+                <default>false</default>
+                <label>MACEDON RANGES (S)</label>
+            </value>
+            <value>
+                <fullName>MACKAY (RC)</fullName>
+                <default>false</default>
+                <label>MACKAY (RC)</label>
+            </value>
+            <value>
+                <fullName>MAITLAND (C)</fullName>
+                <default>false</default>
+                <label>MAITLAND (C)</label>
+            </value>
+            <value>
+                <fullName>MALLALA (DC)</fullName>
+                <default>false</default>
+                <label>MALLALA (DC)</label>
+            </value>
+            <value>
+                <fullName>MANDURAH (C)</fullName>
+                <default>false</default>
+                <label>MANDURAH (C)</label>
+            </value>
+            <value>
+                <fullName>MANJIMUP (S)</fullName>
+                <default>false</default>
+                <label>MANJIMUP (S)</label>
+            </value>
+            <value>
+                <fullName>MANLY (A)</fullName>
+                <default>false</default>
+                <label>MANLY (A)</label>
+            </value>
+            <value>
+                <fullName>MANNINGHAM (C)</fullName>
+                <default>false</default>
+                <label>MANNINGHAM (C)</label>
+            </value>
+            <value>
+                <fullName>MANSFIELD (S)</fullName>
+                <default>false</default>
+                <label>MANSFIELD (S)</label>
+            </value>
+            <value>
+                <fullName>MAPOON (ASC)</fullName>
+                <default>false</default>
+                <label>MAPOON (ASC)</label>
+            </value>
+            <value>
+                <fullName>MARALINGA TJARUTJA (AC)</fullName>
+                <default>false</default>
+                <label>MARALINGA TJARUTJA (AC)</label>
+            </value>
+            <value>
+                <fullName>MARIBYRNONG (C)</fullName>
+                <default>false</default>
+                <label>MARIBYRNONG (C)</label>
+            </value>
+            <value>
+                <fullName>MARION (C)</fullName>
+                <default>false</default>
+                <label>MARION (C)</label>
+            </value>
+            <value>
+                <fullName>MAROONDAH (C)</fullName>
+                <default>false</default>
+                <label>MAROONDAH (C)</label>
+            </value>
+            <value>
+                <fullName>MARRICKVILLE (A)</fullName>
+                <default>false</default>
+                <label>MARRICKVILLE (A)</label>
+            </value>
+            <value>
+                <fullName>MCDOWALL</fullName>
+                <default>false</default>
+                <label>MCDOWALL</label>
+            </value>
+            <value>
+                <fullName>MCKINLAY (S)</fullName>
+                <default>false</default>
+                <label>MCKINLAY (S)</label>
+            </value>
+            <value>
+                <fullName>MEANDER VALLEY (M)</fullName>
+                <default>false</default>
+                <label>MEANDER VALLEY (M)</label>
+            </value>
+            <value>
+                <fullName>MEEKATHARRA (S)</fullName>
+                <default>false</default>
+                <label>MEEKATHARRA (S)</label>
+            </value>
+            <value>
+                <fullName>MELBOURNE (C)</fullName>
+                <default>false</default>
+                <label>MELBOURNE (C)</label>
+            </value>
+            <value>
+                <fullName>MELTON (S)</fullName>
+                <default>false</default>
+                <label>MELTON (S)</label>
+            </value>
+            <value>
+                <fullName>MELVILLE (C)</fullName>
+                <default>false</default>
+                <label>MELVILLE (C)</label>
+            </value>
+            <value>
+                <fullName>MENZIES (S)</fullName>
+                <default>false</default>
+                <label>MENZIES (S)</label>
+            </value>
+            <value>
+                <fullName>MERREDIN (S)</fullName>
+                <default>false</default>
+                <label>MERREDIN (S)</label>
+            </value>
+            <value>
+                <fullName>MID MURRAY (DC)</fullName>
+                <default>false</default>
+                <label>MID MURRAY (DC)</label>
+            </value>
+            <value>
+                <fullName>MID-WESTERN REGIONAL (A)</fullName>
+                <default>false</default>
+                <label>MID-WESTERN REGIONAL (A)</label>
+            </value>
+            <value>
+                <fullName>MILDURA (RC)</fullName>
+                <default>false</default>
+                <label>MILDURA (RC)</label>
+            </value>
+            <value>
+                <fullName>MINGENEW (S)</fullName>
+                <default>false</default>
+                <label>MINGENEW (S)</label>
+            </value>
+            <value>
+                <fullName>MITCHAM (C)</fullName>
+                <default>false</default>
+                <label>MITCHAM (C)</label>
+            </value>
+            <value>
+                <fullName>MITCHELL (S)</fullName>
+                <default>false</default>
+                <label>MITCHELL (S)</label>
+            </value>
+            <value>
+                <fullName>MOIRA (S)</fullName>
+                <default>false</default>
+                <label>MOIRA (S)</label>
+            </value>
+            <value>
+                <fullName>MONASH (C)</fullName>
+                <default>false</default>
+                <label>MONASH (C)</label>
+            </value>
+            <value>
+                <fullName>MOONEE VALLEY (C)</fullName>
+                <default>false</default>
+                <label>MOONEE VALLEY (C)</label>
+            </value>
+            <value>
+                <fullName>MOORA (S)</fullName>
+                <default>false</default>
+                <label>MOORA (S)</label>
+            </value>
+            <value>
+                <fullName>MOORABOOL (S)</fullName>
+                <default>false</default>
+                <label>MOORABOOL (S)</label>
+            </value>
+            <value>
+                <fullName>MORAWA (S)</fullName>
+                <default>false</default>
+                <label>MORAWA (S)</label>
+            </value>
+            <value>
+                <fullName>MOREE PLAINS (A)</fullName>
+                <default>false</default>
+                <label>MOREE PLAINS (A)</label>
+            </value>
+            <value>
+                <fullName>MORELAND (C)</fullName>
+                <default>false</default>
+                <label>MORELAND (C)</label>
+            </value>
+            <value>
+                <fullName>MORETON BAY (RC)</fullName>
+                <default>false</default>
+                <label>MORETON BAY (RC)</label>
+            </value>
+            <value>
+                <fullName>MORNINGTON (S)</fullName>
+                <default>false</default>
+                <label>MORNINGTON (S)</label>
+            </value>
+            <value>
+                <fullName>MORNINGTON PENINSULA (S)</fullName>
+                <default>false</default>
+                <label>MORNINGTON PENINSULA (S)</label>
+            </value>
+            <value>
+                <fullName>MOSMAN (A)</fullName>
+                <default>false</default>
+                <label>MOSMAN (A)</label>
+            </value>
+            <value>
+                <fullName>MOSMAN PARK (T)</fullName>
+                <default>false</default>
+                <label>MOSMAN PARK (T)</label>
+            </value>
+            <value>
+                <fullName>MOUNT ALEXANDER (S)</fullName>
+                <default>false</default>
+                <label>MOUNT ALEXANDER (S)</label>
+            </value>
+            <value>
+                <fullName>MOUNT BARKER (DC)</fullName>
+                <default>false</default>
+                <label>MOUNT BARKER (DC)</label>
+            </value>
+            <value>
+                <fullName>MOUNT GAMBIER (C)</fullName>
+                <default>false</default>
+                <label>MOUNT GAMBIER (C)</label>
+            </value>
+            <value>
+                <fullName>MOUNT MAGNET (S)</fullName>
+                <default>false</default>
+                <label>MOUNT MAGNET (S)</label>
+            </value>
+            <value>
+                <fullName>MOUNT MARSHALL (S)</fullName>
+                <default>false</default>
+                <label>MOUNT MARSHALL (S)</label>
+            </value>
+            <value>
+                <fullName>MOUNT REMARKABLE (DC)</fullName>
+                <default>false</default>
+                <label>MOUNT REMARKABLE (DC)</label>
+            </value>
+            <value>
+                <fullName>MOYNE (S)</fullName>
+                <default>false</default>
+                <label>MOYNE (S)</label>
+            </value>
+            <value>
+                <fullName>MT ISA (C)</fullName>
+                <default>false</default>
+                <label>MT ISA (C)</label>
+            </value>
+            <value>
+                <fullName>MUKINBUDIN (S)</fullName>
+                <default>false</default>
+                <label>MUKINBUDIN (S)</label>
+            </value>
+            <value>
+                <fullName>MULLEWA (S)</fullName>
+                <default>false</default>
+                <label>MULLEWA (S)</label>
+            </value>
+            <value>
+                <fullName>MUNDARING (S)</fullName>
+                <default>false</default>
+                <label>MUNDARING (S)</label>
+            </value>
+            <value>
+                <fullName>Murray</fullName>
+                <default>false</default>
+                <label>Murray</label>
+            </value>
+            <value>
+                <fullName>MURRAY (A)</fullName>
+                <default>false</default>
+                <label>MURRAY (A)</label>
+            </value>
+            <value>
+                <fullName>MURRAY (S)</fullName>
+                <default>false</default>
+                <label>MURRAY (S)</label>
+            </value>
+            <value>
+                <fullName>MURRAY BRIDGE (RC)</fullName>
+                <default>false</default>
+                <label>MURRAY BRIDGE (RC)</label>
+            </value>
+            <value>
+                <fullName>MURRINDINDI (S)</fullName>
+                <default>false</default>
+                <label>MURRINDINDI (S)</label>
+            </value>
+            <value>
+                <fullName>MURRUMBIDGEE (A)</fullName>
+                <default>false</default>
+                <label>MURRUMBIDGEE (A)</label>
+            </value>
+            <value>
+                <fullName>MURWEH (S)</fullName>
+                <default>false</default>
+                <label>MURWEH (S)</label>
+            </value>
+            <value>
+                <fullName>MUSWELLBROOK (A)</fullName>
+                <default>false</default>
+                <label>MUSWELLBROOK (A)</label>
+            </value>
+            <value>
+                <fullName>NAMBUCCA (A)</fullName>
+                <default>false</default>
+                <label>NAMBUCCA (A)</label>
+            </value>
+            <value>
+                <fullName>NANNUP (S)</fullName>
+                <default>false</default>
+                <label>NANNUP (S)</label>
+            </value>
+            <value>
+                <fullName>NARACOORTE &amp; LUCINDALE (DC)</fullName>
+                <default>false</default>
+                <label>NARACOORTE &amp; LUCINDALE (DC)</label>
+            </value>
+            <value>
+                <fullName>NAREMBEEN (S)</fullName>
+                <default>false</default>
+                <label>NAREMBEEN (S)</label>
+            </value>
+            <value>
+                <fullName>NARRABRI (A)</fullName>
+                <default>false</default>
+                <label>NARRABRI (A)</label>
+            </value>
+            <value>
+                <fullName>NARRANDERA (A)</fullName>
+                <default>false</default>
+                <label>NARRANDERA (A)</label>
+            </value>
+            <value>
+                <fullName>NARROGIN (T)</fullName>
+                <default>false</default>
+                <label>NARROGIN (T)</label>
+            </value>
+            <value>
+                <fullName>NARROMINE (A)</fullName>
+                <default>false</default>
+                <label>NARROMINE (A)</label>
+            </value>
+            <value>
+                <fullName>NEDLANDS (C)</fullName>
+                <default>false</default>
+                <label>NEDLANDS (C)</label>
+            </value>
+            <value>
+                <fullName>NEWCASTLE (C)</fullName>
+                <default>false</default>
+                <label>NEWCASTLE (C)</label>
+            </value>
+            <value>
+                <fullName>NILLUMBIK (S)</fullName>
+                <default>false</default>
+                <label>NILLUMBIK (S)</label>
+            </value>
+            <value>
+                <fullName>NORFOLK ISLAND</fullName>
+                <default>false</default>
+                <label>NORFOLK ISLAND</label>
+            </value>
+            <value>
+                <fullName>NORTHAM (T)</fullName>
+                <default>false</default>
+                <label>NORTHAM (T)</label>
+            </value>
+            <value>
+                <fullName>NORTHAMPTON (S)</fullName>
+                <default>false</default>
+                <label>NORTHAMPTON (S)</label>
+            </value>
+            <value>
+                <fullName>NORTH BURNETT (RC)</fullName>
+                <default>false</default>
+                <label>NORTH BURNETT (RC)</label>
+            </value>
+            <value>
+                <fullName>NORTHERN AREAS (DC)</fullName>
+                <default>false</default>
+                <label>NORTHERN AREAS (DC)</label>
+            </value>
+            <value>
+                <fullName>NORTHERN GRAMPIANS (S)</fullName>
+                <default>false</default>
+                <label>NORTHERN GRAMPIANS (S)</label>
+            </value>
+            <value>
+                <fullName>NORTHERN MIDLANDS (M)</fullName>
+                <default>false</default>
+                <label>NORTHERN MIDLANDS (M)</label>
+            </value>
+            <value>
+                <fullName>NORTHERN PENINSULA AREA (RC)</fullName>
+                <default>false</default>
+                <label>NORTHERN PENINSULA AREA (RC)</label>
+            </value>
+            <value>
+                <fullName>NORTH SYDNEY (A)</fullName>
+                <default>false</default>
+                <label>NORTH SYDNEY (A)</label>
+            </value>
+            <value>
+                <fullName>NORWOOD PAYNEHAM ST PETERS (C)</fullName>
+                <default>false</default>
+                <label>NORWOOD PAYNEHAM ST PETERS (C)</label>
+            </value>
+            <value>
+                <fullName>NUNGARIN (S)</fullName>
+                <default>false</default>
+                <label>NUNGARIN (S)</label>
+            </value>
+            <value>
+                <fullName>OBERON (A)</fullName>
+                <default>false</default>
+                <label>OBERON (A)</label>
+            </value>
+            <value>
+                <fullName>ONKAPARINGA (C)</fullName>
+                <default>false</default>
+                <label>ONKAPARINGA (C)</label>
+            </value>
+            <value>
+                <fullName>ORANGE (C)</fullName>
+                <default>false</default>
+                <label>ORANGE (C)</label>
+            </value>
+            <value>
+                <fullName>ORROROO/CARRIETON (DC)</fullName>
+                <default>false</default>
+                <label>ORROROO/CARRIETON (DC)</label>
+            </value>
+            <value>
+                <fullName>PALERANG (A)</fullName>
+                <default>false</default>
+                <label>PALERANG (A)</label>
+            </value>
+            <value>
+                <fullName>PALMERSTON (C)</fullName>
+                <default>false</default>
+                <label>PALMERSTON (C)</label>
+            </value>
+            <value>
+                <fullName>PALM ISLAND (ASC)</fullName>
+                <default>false</default>
+                <label>PALM ISLAND (ASC)</label>
+            </value>
+            <value>
+                <fullName>PARKES (A)</fullName>
+                <default>false</default>
+                <label>PARKES (A)</label>
+            </value>
+            <value>
+                <fullName>PAROO (S)</fullName>
+                <default>false</default>
+                <label>PAROO (S)</label>
+            </value>
+            <value>
+                <fullName>PARRAMATTA (C)</fullName>
+                <default>false</default>
+                <label>PARRAMATTA (C)</label>
+            </value>
+            <value>
+                <fullName>PENRITH (C)</fullName>
+                <default>false</default>
+                <label>PENRITH (C)</label>
+            </value>
+            <value>
+                <fullName>PEPPERMINT GROVE (S)</fullName>
+                <default>false</default>
+                <label>PEPPERMINT GROVE (S)</label>
+            </value>
+            <value>
+                <fullName>PERENJORI (S)</fullName>
+                <default>false</default>
+                <label>PERENJORI (S)</label>
+            </value>
+            <value>
+                <fullName>PERTH (C)</fullName>
+                <default>false</default>
+                <label>PERTH (C)</label>
+            </value>
+            <value>
+                <fullName>PETERBOROUGH (DC)</fullName>
+                <default>false</default>
+                <label>PETERBOROUGH (DC)</label>
+            </value>
+            <value>
+                <fullName>PINGELLY (S)</fullName>
+                <default>false</default>
+                <label>PINGELLY (S)</label>
+            </value>
+            <value>
+                <fullName>PITTWATER (A)</fullName>
+                <default>false</default>
+                <label>PITTWATER (A)</label>
+            </value>
+            <value>
+                <fullName>PLANTAGENET (S)</fullName>
+                <default>false</default>
+                <label>PLANTAGENET (S)</label>
+            </value>
+            <value>
+                <fullName>PLAYFORD (C)</fullName>
+                <default>false</default>
+                <label>PLAYFORD (C)</label>
+            </value>
+            <value>
+                <fullName>PORMPURAAW (ASC)</fullName>
+                <default>false</default>
+                <label>PORMPURAAW (ASC)</label>
+            </value>
+            <value>
+                <fullName>PORT ADELAIDE ENFIELD(C)</fullName>
+                <default>false</default>
+                <label>PORT ADELAIDE ENFIELD(C)</label>
+            </value>
+            <value>
+                <fullName>PORT ADELAIDE ENFIELD (C)</fullName>
+                <default>false</default>
+                <label>PORT ADELAIDE ENFIELD (C)</label>
+            </value>
+            <value>
+                <fullName>PORT AUGUSTA (C)</fullName>
+                <default>false</default>
+                <label>PORT AUGUSTA (C)</label>
+            </value>
+            <value>
+                <fullName>PORT HEDLAND (T)</fullName>
+                <default>false</default>
+                <label>PORT HEDLAND (T)</label>
+            </value>
+            <value>
+                <fullName>PORT LINCOLN (C)</fullName>
+                <default>false</default>
+                <label>PORT LINCOLN (C)</label>
+            </value>
+            <value>
+                <fullName>PORT MACQUARIE-HASTINGS (A)</fullName>
+                <default>false</default>
+                <label>PORT MACQUARIE-HASTINGS (A)</label>
+            </value>
+            <value>
+                <fullName>PORT PHILLIP (C)</fullName>
+                <default>false</default>
+                <label>PORT PHILLIP (C)</label>
+            </value>
+            <value>
+                <fullName>PORT PIRIE C DISTS (M)</fullName>
+                <default>false</default>
+                <label>PORT PIRIE C DISTS (M)</label>
+            </value>
+            <value>
+                <fullName>PORT STEPHENS (A)</fullName>
+                <default>false</default>
+                <label>PORT STEPHENS (A)</label>
+            </value>
+            <value>
+                <fullName>PROSPECT (C)</fullName>
+                <default>false</default>
+                <label>PROSPECT (C)</label>
+            </value>
+            <value>
+                <fullName>PYRENEES (S)</fullName>
+                <default>false</default>
+                <label>PYRENEES (S)</label>
+            </value>
+            <value>
+                <fullName>QUAIRADING (S)</fullName>
+                <default>false</default>
+                <label>QUAIRADING (S)</label>
+            </value>
+            <value>
+                <fullName>QUEANBEYAN (C)</fullName>
+                <default>false</default>
+                <label>QUEANBEYAN (C)</label>
+            </value>
+            <value>
+                <fullName>QUEENSCLIFFE (B)</fullName>
+                <default>false</default>
+                <label>QUEENSCLIFFE (B)</label>
+            </value>
+            <value>
+                <fullName>QUILPIE (S)</fullName>
+                <default>false</default>
+                <label>QUILPIE (S)</label>
+            </value>
+            <value>
+                <fullName>RANDWICK</fullName>
+                <default>false</default>
+                <label>RANDWICK</label>
+            </value>
+            <value>
+                <fullName>RANDWICK (C)</fullName>
+                <default>false</default>
+                <label>RANDWICK (C)</label>
+            </value>
+            <value>
+                <fullName>RAVENSTHORPE (S)</fullName>
+                <default>false</default>
+                <label>RAVENSTHORPE (S)</label>
+            </value>
+            <value>
+                <fullName>REDLAND (S)</fullName>
+                <default>false</default>
+                <label>REDLAND (S)</label>
+            </value>
+            <value>
+                <fullName>RENMARK PARINGA (DC)</fullName>
+                <default>false</default>
+                <label>RENMARK PARINGA (DC)</label>
+            </value>
+            <value>
+                <fullName>RICHMOND (S)</fullName>
+                <default>false</default>
+                <label>RICHMOND (S)</label>
+            </value>
+            <value>
+                <fullName>RICHMOND VALLEY (A)</fullName>
+                <default>false</default>
+                <label>RICHMOND VALLEY (A)</label>
+            </value>
+            <value>
+                <fullName>ROBE (DC)</fullName>
+                <default>false</default>
+                <label>ROBE (DC)</label>
+            </value>
+            <value>
+                <fullName>ROCKDALE (C)</fullName>
+                <default>false</default>
+                <label>ROCKDALE (C)</label>
+            </value>
+            <value>
+                <fullName>ROCKHAMPTON (RC)</fullName>
+                <default>false</default>
+                <label>ROCKHAMPTON (RC)</label>
+            </value>
+            <value>
+                <fullName>ROCKINGHAM (C)</fullName>
+                <default>false</default>
+                <label>ROCKINGHAM (C)</label>
+            </value>
+            <value>
+                <fullName>ROEBOURNE (S)</fullName>
+                <default>false</default>
+                <label>ROEBOURNE (S)</label>
+            </value>
+            <value>
+                <fullName>ROMA (RC)</fullName>
+                <default>false</default>
+                <label>ROMA (RC)</label>
+            </value>
+            <value>
+                <fullName>RYDE (C)</fullName>
+                <default>false</default>
+                <label>RYDE (C)</label>
+            </value>
+            <value>
+                <fullName>SALISBURY (C)</fullName>
+                <default>false</default>
+                <label>SALISBURY (C)</label>
+            </value>
+            <value>
+                <fullName>SANDSTONE (S)</fullName>
+                <default>false</default>
+                <label>SANDSTONE (S)</label>
+            </value>
+            <value>
+                <fullName>SCENIC RIM (RC)</fullName>
+                <default>false</default>
+                <label>SCENIC RIM (RC)</label>
+            </value>
+            <value>
+                <fullName>SERPENTINE-JARRAHDALE (S)</fullName>
+                <default>false</default>
+                <label>SERPENTINE-JARRAHDALE (S)</label>
+            </value>
+            <value>
+                <fullName>SHARK BAY (S)</fullName>
+                <default>false</default>
+                <label>SHARK BAY (S)</label>
+            </value>
+            <value>
+                <fullName>SHELLHARBOUR (C)</fullName>
+                <default>false</default>
+                <label>SHELLHARBOUR (C)</label>
+            </value>
+            <value>
+                <fullName>SHOALHAVEN (C)</fullName>
+                <default>false</default>
+                <label>SHOALHAVEN (C)</label>
+            </value>
+            <value>
+                <fullName>SHOALHAVEN (C) - PT B</fullName>
+                <default>false</default>
+                <label>SHOALHAVEN (C) - PT B</label>
+            </value>
+            <value>
+                <fullName>SINGLETON (A)</fullName>
+                <default>false</default>
+                <label>SINGLETON (A)</label>
+            </value>
+            <value>
+                <fullName>SNOWY RIVER (A)</fullName>
+                <default>false</default>
+                <label>SNOWY RIVER (A)</label>
+            </value>
+            <value>
+                <fullName>SOMERSET (RC)</fullName>
+                <default>false</default>
+                <label>SOMERSET (RC)</label>
+            </value>
+            <value>
+                <fullName>SORELL (M)</fullName>
+                <default>false</default>
+                <label>SORELL (M)</label>
+            </value>
+            <value>
+                <fullName>SOUTH BURNETT (RC)</fullName>
+                <default>false</default>
+                <label>SOUTH BURNETT (RC)</label>
+            </value>
+            <value>
+                <fullName>SOUTHERN DOWNS (RC)</fullName>
+                <default>false</default>
+                <label>SOUTHERN DOWNS (RC)</label>
+            </value>
+            <value>
+                <fullName>SOUTHERN GRAMPIANS (S)</fullName>
+                <default>false</default>
+                <label>SOUTHERN GRAMPIANS (S)</label>
+            </value>
+            <value>
+                <fullName>SOUTHERN MALLEE (DC)</fullName>
+                <default>false</default>
+                <label>SOUTHERN MALLEE (DC)</label>
+            </value>
+            <value>
+                <fullName>SOUTHERN MIDLANDS (M)</fullName>
+                <default>false</default>
+                <label>SOUTHERN MIDLANDS (M)</label>
+            </value>
+            <value>
+                <fullName>SOUTH GIPPSLAND (S)</fullName>
+                <default>false</default>
+                <label>SOUTH GIPPSLAND (S)</label>
+            </value>
+            <value>
+                <fullName>SOUTH PERTH (C)</fullName>
+                <default>false</default>
+                <label>SOUTH PERTH (C)</label>
+            </value>
+            <value>
+                <fullName>STIRLING (C)</fullName>
+                <default>false</default>
+                <label>STIRLING (C)</label>
+            </value>
+            <value>
+                <fullName>STONNINGTON (C)</fullName>
+                <default>false</default>
+                <label>STONNINGTON (C)</label>
+            </value>
+            <value>
+                <fullName>STRATHBOGIE (S)</fullName>
+                <default>false</default>
+                <label>STRATHBOGIE (S)</label>
+            </value>
+            <value>
+                <fullName>STRATHFIELD (A)</fullName>
+                <default>false</default>
+                <label>STRATHFIELD (A)</label>
+            </value>
+            <value>
+                <fullName>STREAKY BAY (DC)</fullName>
+                <default>false</default>
+                <label>STREAKY BAY (DC)</label>
+            </value>
+            <value>
+                <fullName>SUBIACO (C)</fullName>
+                <default>false</default>
+                <label>SUBIACO (C)</label>
+            </value>
+            <value>
+                <fullName>SUNSHINE COAST (EC)</fullName>
+                <default>false</default>
+                <label>SUNSHINE COAST (EC)</label>
+            </value>
+            <value>
+                <fullName>SUNSHINE COAST (RC)</fullName>
+                <default>false</default>
+                <label>SUNSHINE COAST (RC)</label>
+            </value>
+            <value>
+                <fullName>SURF COAST (S)</fullName>
+                <default>false</default>
+                <label>SURF COAST (S)</label>
+            </value>
+            <value>
+                <fullName>SUTHERLAND SHIRE (A)</fullName>
+                <default>false</default>
+                <label>SUTHERLAND SHIRE (A)</label>
+            </value>
+            <value>
+                <fullName>SUTHERLAND SHIRE (S)</fullName>
+                <default>false</default>
+                <label>SUTHERLAND SHIRE (S)</label>
+            </value>
+            <value>
+                <fullName>SWAN (C)</fullName>
+                <default>false</default>
+                <label>SWAN (C)</label>
+            </value>
+            <value>
+                <fullName>SWAN (S)</fullName>
+                <default>false</default>
+                <label>SWAN (S)</label>
+            </value>
+            <value>
+                <fullName>SWAN HILL (RC)</fullName>
+                <default>false</default>
+                <label>SWAN HILL (RC)</label>
+            </value>
+            <value>
+                <fullName>SYDNEY (C)</fullName>
+                <default>false</default>
+                <label>SYDNEY (C)</label>
+            </value>
+            <value>
+                <fullName>TABLELANDS (RC)</fullName>
+                <default>false</default>
+                <label>TABLELANDS (RC)</label>
+            </value>
+            <value>
+                <fullName>TAMBELLUP (S)</fullName>
+                <default>false</default>
+                <label>TAMBELLUP (S)</label>
+            </value>
+            <value>
+                <fullName>TAMMIN (S)</fullName>
+                <default>false</default>
+                <label>TAMMIN (S)</label>
+            </value>
+            <value>
+                <fullName>TAMWORTH REGIONAL (A)</fullName>
+                <default>false</default>
+                <label>TAMWORTH REGIONAL (A)</label>
+            </value>
+            <value>
+                <fullName>TASMAN (M)</fullName>
+                <default>false</default>
+                <label>TASMAN (M)</label>
+            </value>
+            <value>
+                <fullName>TATIARA (DC)</fullName>
+                <default>false</default>
+                <label>TATIARA (DC)</label>
+            </value>
+            <value>
+                <fullName>TEA TREE GULLY (C)</fullName>
+                <default>false</default>
+                <label>TEA TREE GULLY (C)</label>
+            </value>
+            <value>
+                <fullName>TEMORA (A)</fullName>
+                <default>false</default>
+                <label>TEMORA (A)</label>
+            </value>
+            <value>
+                <fullName>TENNANT CREEK (T)</fullName>
+                <default>false</default>
+                <label>TENNANT CREEK (T)</label>
+            </value>
+            <value>
+                <fullName>TENTERFIELD (A)</fullName>
+                <default>false</default>
+                <label>TENTERFIELD (A)</label>
+            </value>
+            <value>
+                <fullName>TERRITORY OF CHRISTMAS ISLAND</fullName>
+                <default>false</default>
+                <label>TERRITORY OF CHRISTMAS ISLAND</label>
+            </value>
+            <value>
+                <fullName>TERRITORY OF COCOS ISLAND</fullName>
+                <default>false</default>
+                <label>TERRITORY OF COCOS ISLAND</label>
+            </value>
+            <value>
+                <fullName>THE COORONG (DC)</fullName>
+                <default>false</default>
+                <label>THE COORONG (DC)</label>
+            </value>
+            <value>
+                <fullName>THREE SPRINGS (S)</fullName>
+                <default>false</default>
+                <label>THREE SPRINGS (S)</label>
+            </value>
+            <value>
+                <fullName>TOODYAY (S)</fullName>
+                <default>false</default>
+                <label>TOODYAY (S)</label>
+            </value>
+            <value>
+                <fullName>TOOWOOMBA (RC)</fullName>
+                <default>false</default>
+                <label>TOOWOOMBA (RC)</label>
+            </value>
+            <value>
+                <fullName>TORRES (S)</fullName>
+                <default>false</default>
+                <label>TORRES (S)</label>
+            </value>
+            <value>
+                <fullName>TORRES STRAIT ISLAND (RC)</fullName>
+                <default>false</default>
+                <label>TORRES STRAIT ISLAND (RC)</label>
+            </value>
+            <value>
+                <fullName>TOWNSVILLE (CC)</fullName>
+                <default>false</default>
+                <label>TOWNSVILLE (CC)</label>
+            </value>
+            <value>
+                <fullName>TOWONG (S)</fullName>
+                <default>false</default>
+                <label>TOWONG (S)</label>
+            </value>
+            <value>
+                <fullName>TRAYNING (S)</fullName>
+                <default>false</default>
+                <label>TRAYNING (S)</label>
+            </value>
+            <value>
+                <fullName>Tuard Forest</fullName>
+                <default>false</default>
+                <label>Tuard Forest</label>
+            </value>
+            <value>
+                <fullName>TUMBARUMBA (A)</fullName>
+                <default>false</default>
+                <label>TUMBARUMBA (A)</label>
+            </value>
+            <value>
+                <fullName>TUMBY BAY (DC)</fullName>
+                <default>false</default>
+                <label>TUMBY BAY (DC)</label>
+            </value>
+            <value>
+                <fullName>TUMUT SHIRE (A)</fullName>
+                <default>false</default>
+                <label>TUMUT SHIRE (A)</label>
+            </value>
+            <value>
+                <fullName>TWEED (A)</fullName>
+                <default>false</default>
+                <label>TWEED (A)</label>
+            </value>
+            <value>
+                <fullName>UNINCORPORATED FAR NORTH</fullName>
+                <default>false</default>
+                <label>UNINCORPORATED FAR NORTH</label>
+            </value>
+            <value>
+                <fullName>UNINCORPORATED FAR WEST</fullName>
+                <default>false</default>
+                <label>UNINCORPORATED FAR WEST</label>
+            </value>
+            <value>
+                <fullName>UNINCORPORATED FLINDERS RANGES</fullName>
+                <default>false</default>
+                <label>UNINCORPORATED FLINDERS RANGES</label>
+            </value>
+            <value>
+                <fullName>UNINCORPORATED NT</fullName>
+                <default>false</default>
+                <label>UNINCORPORATED NT</label>
+            </value>
+            <value>
+                <fullName>UNINCORPORATED PIRIE</fullName>
+                <default>false</default>
+                <label>UNINCORPORATED PIRIE</label>
+            </value>
+            <value>
+                <fullName>UNINCORPORATED SA</fullName>
+                <default>false</default>
+                <label>UNINCORPORATED SA</label>
+            </value>
+            <value>
+                <fullName>UNINCORPORATED VIC</fullName>
+                <default>false</default>
+                <label>UNINCORPORATED VIC</label>
+            </value>
+            <value>
+                <fullName>UNINCORPORATED WA</fullName>
+                <default>false</default>
+                <label>UNINCORPORATED WA</label>
+            </value>
+            <value>
+                <fullName>UNINCORPORATED WEST COAST</fullName>
+                <default>false</default>
+                <label>UNINCORPORATED WEST COAST</label>
+            </value>
+            <value>
+                <fullName>UNLEY (C)</fullName>
+                <default>false</default>
+                <label>UNLEY (C)</label>
+            </value>
+            <value>
+                <fullName>UPPER GASCOYNE (S)</fullName>
+                <default>false</default>
+                <label>UPPER GASCOYNE (S)</label>
+            </value>
+            <value>
+                <fullName>UPPER HUNTER SHIRE (A)</fullName>
+                <default>false</default>
+                <label>UPPER HUNTER SHIRE (A)</label>
+            </value>
+            <value>
+                <fullName>UPPER LACHLAN SHIRE (A)</fullName>
+                <default>false</default>
+                <label>UPPER LACHLAN SHIRE (A)</label>
+            </value>
+            <value>
+                <fullName>URALLA (A)</fullName>
+                <default>false</default>
+                <label>URALLA (A)</label>
+            </value>
+            <value>
+                <fullName>URANA (A)</fullName>
+                <default>false</default>
+                <label>URANA (A)</label>
+            </value>
+            <value>
+                <fullName>VICTOR HARBOR (C)</fullName>
+                <default>false</default>
+                <label>VICTOR HARBOR (C)</label>
+            </value>
+            <value>
+                <fullName>VICTORIA PARK (T)</fullName>
+                <default>false</default>
+                <label>VICTORIA PARK (T)</label>
+            </value>
+            <value>
+                <fullName>VICTORIA PLAINS (S)</fullName>
+                <default>false</default>
+                <label>VICTORIA PLAINS (S)</label>
+            </value>
+            <value>
+                <fullName>VINCENT (T)</fullName>
+                <default>false</default>
+                <label>VINCENT (T)</label>
+            </value>
+            <value>
+                <fullName>WAGGA WAGGA (C)</fullName>
+                <default>false</default>
+                <label>WAGGA WAGGA (C)</label>
+            </value>
+            <value>
+                <fullName>WAGIN (S)</fullName>
+                <default>false</default>
+                <label>WAGIN (S)</label>
+            </value>
+            <value>
+                <fullName>WAKEFIELD (DC)</fullName>
+                <default>false</default>
+                <label>WAKEFIELD (DC)</label>
+            </value>
+            <value>
+                <fullName>WAKOOL (A)</fullName>
+                <default>false</default>
+                <label>WAKOOL (A)</label>
+            </value>
+            <value>
+                <fullName>WALCHA (A)</fullName>
+                <default>false</default>
+                <label>WALCHA (A)</label>
+            </value>
+            <value>
+                <fullName>WALGETT (A)</fullName>
+                <default>false</default>
+                <label>WALGETT (A)</label>
+            </value>
+            <value>
+                <fullName>WALKERVILLE (M)</fullName>
+                <default>false</default>
+                <label>WALKERVILLE (M)</label>
+            </value>
+            <value>
+                <fullName>WANDERING (S)</fullName>
+                <default>false</default>
+                <label>WANDERING (S)</label>
+            </value>
+            <value>
+                <fullName>WANGARATTA (RC)</fullName>
+                <default>false</default>
+                <label>WANGARATTA (RC)</label>
+            </value>
+            <value>
+                <fullName>WANNEROO (C)</fullName>
+                <default>false</default>
+                <label>WANNEROO (C)</label>
+            </value>
+            <value>
+                <fullName>WARATAH/WYNYARD (M)</fullName>
+                <default>false</default>
+                <label>WARATAH/WYNYARD (M)</label>
+            </value>
+            <value>
+                <fullName>WAROONA (S)</fullName>
+                <default>false</default>
+                <label>WAROONA (S)</label>
+            </value>
+            <value>
+                <fullName>WARREN (A)</fullName>
+                <default>false</default>
+                <label>WARREN (A)</label>
+            </value>
+            <value>
+                <fullName>WARRINGAH (A)</fullName>
+                <default>false</default>
+                <label>WARRINGAH (A)</label>
+            </value>
+            <value>
+                <fullName>WARRINGAH (C)</fullName>
+                <default>false</default>
+                <label>WARRINGAH (C)</label>
+            </value>
+            <value>
+                <fullName>WARRINGAH (S)</fullName>
+                <default>false</default>
+                <label>WARRINGAH (S)</label>
+            </value>
+            <value>
+                <fullName>WARRNAMBOOL (C)</fullName>
+                <default>false</default>
+                <label>WARRNAMBOOL (C)</label>
+            </value>
+            <value>
+                <fullName>WARRUMBUNGLE SHIRE (A)</fullName>
+                <default>false</default>
+                <label>WARRUMBUNGLE SHIRE (A)</label>
+            </value>
+            <value>
+                <fullName>WATTLE RANGE (DC)</fullName>
+                <default>false</default>
+                <label>WATTLE RANGE (DC)</label>
+            </value>
+            <value>
+                <fullName>WAVERLEY (A)</fullName>
+                <default>false</default>
+                <label>WAVERLEY (A)</label>
+            </value>
+            <value>
+                <fullName>WEDDIN (A)</fullName>
+                <default>false</default>
+                <label>WEDDIN (A)</label>
+            </value>
+            <value>
+                <fullName>WEIPA (TC)</fullName>
+                <default>false</default>
+                <label>WEIPA (TC)</label>
+            </value>
+            <value>
+                <fullName>WELLINGTON (A)</fullName>
+                <default>false</default>
+                <label>WELLINGTON (A)</label>
+            </value>
+            <value>
+                <fullName>WELLINGTON (S)</fullName>
+                <default>false</default>
+                <label>WELLINGTON (S)</label>
+            </value>
+            <value>
+                <fullName>WENTWORTH (A)</fullName>
+                <default>false</default>
+                <label>WENTWORTH (A)</label>
+            </value>
+            <value>
+                <fullName>WEST ARTHUR (S)</fullName>
+                <default>false</default>
+                <label>WEST ARTHUR (S)</label>
+            </value>
+            <value>
+                <fullName>WEST COAST (M)</fullName>
+                <default>false</default>
+                <label>WEST COAST (M)</label>
+            </value>
+            <value>
+                <fullName>WEST TAMAR (M)</fullName>
+                <default>false</default>
+                <label>WEST TAMAR (M)</label>
+            </value>
+            <value>
+                <fullName>WEST TORRENS (C)</fullName>
+                <default>false</default>
+                <label>WEST TORRENS (C)</label>
+            </value>
+            <value>
+                <fullName>WEST WIMMERA (S)</fullName>
+                <default>false</default>
+                <label>WEST WIMMERA (S)</label>
+            </value>
+            <value>
+                <fullName>WHITEHORSE (C)</fullName>
+                <default>false</default>
+                <label>WHITEHORSE (C)</label>
+            </value>
+            <value>
+                <fullName>WHITSUNDAY (RC)</fullName>
+                <default>false</default>
+                <label>WHITSUNDAY (RC)</label>
+            </value>
+            <value>
+                <fullName>WHITTLESEA (C)</fullName>
+                <default>false</default>
+                <label>WHITTLESEA (C)</label>
+            </value>
+            <value>
+                <fullName>WHYALLA (C)</fullName>
+                <default>false</default>
+                <label>WHYALLA (C)</label>
+            </value>
+            <value>
+                <fullName>WICKEPIN (S)</fullName>
+                <default>false</default>
+                <label>WICKEPIN (S)</label>
+            </value>
+            <value>
+                <fullName>WILLIAMS (S)</fullName>
+                <default>false</default>
+                <label>WILLIAMS (S)</label>
+            </value>
+            <value>
+                <fullName>WILLOUGHBY (C)</fullName>
+                <default>false</default>
+                <label>WILLOUGHBY (C)</label>
+            </value>
+            <value>
+                <fullName>WILUNA (S)</fullName>
+                <default>false</default>
+                <label>WILUNA (S)</label>
+            </value>
+            <value>
+                <fullName>WINGECARRIBEE (A)</fullName>
+                <default>false</default>
+                <label>WINGECARRIBEE (A)</label>
+            </value>
+            <value>
+                <fullName>WINTON (S)</fullName>
+                <default>false</default>
+                <label>WINTON (S)</label>
+            </value>
+            <value>
+                <fullName>WODONGA (RC)</fullName>
+                <default>false</default>
+                <label>WODONGA (RC)</label>
+            </value>
+            <value>
+                <fullName>WOLLONDILLY (A)</fullName>
+                <default>false</default>
+                <label>WOLLONDILLY (A)</label>
+            </value>
+            <value>
+                <fullName>WOLLONGONG (C)</fullName>
+                <default>false</default>
+                <label>WOLLONGONG (C)</label>
+            </value>
+            <value>
+                <fullName>WONGAN-BALLIDU (S)</fullName>
+                <default>false</default>
+                <label>WONGAN-BALLIDU (S)</label>
+            </value>
+            <value>
+                <fullName>WOODANILLING (S)</fullName>
+                <default>false</default>
+                <label>WOODANILLING (S)</label>
+            </value>
+            <value>
+                <fullName>WOOLLAHRA (A)</fullName>
+                <default>false</default>
+                <label>WOOLLAHRA (A)</label>
+            </value>
+            <value>
+                <fullName>WOORABINDA (ASC)</fullName>
+                <default>false</default>
+                <label>WOORABINDA (ASC)</label>
+            </value>
+            <value>
+                <fullName>WYALKATCHEM (S)</fullName>
+                <default>false</default>
+                <label>WYALKATCHEM (S)</label>
+            </value>
+            <value>
+                <fullName>WYING (A)</fullName>
+                <default>false</default>
+                <label>WYING (A)</label>
+            </value>
+            <value>
+                <fullName>WYNDHAM (C)</fullName>
+                <default>false</default>
+                <label>WYNDHAM (C)</label>
+            </value>
+            <value>
+                <fullName>WYNDHAM-EAST KIMBERLEY (S)</fullName>
+                <default>false</default>
+                <label>WYNDHAM-EAST KIMBERLEY (S)</label>
+            </value>
+            <value>
+                <fullName>WYONG (A)</fullName>
+                <default>false</default>
+                <label>WYONG (A)</label>
+            </value>
+            <value>
+                <fullName>YALGOO (S)</fullName>
+                <default>false</default>
+                <label>YALGOO (S)</label>
+            </value>
+            <value>
+                <fullName>YANKALILLA (DC)</fullName>
+                <default>false</default>
+                <label>YANKALILLA (DC)</label>
+            </value>
+            <value>
+                <fullName>YARRA (C)</fullName>
+                <default>false</default>
+                <label>YARRA (C)</label>
+            </value>
+            <value>
+                <fullName>YARRABAH (ASC)</fullName>
+                <default>false</default>
+                <label>YARRABAH (ASC)</label>
+            </value>
+            <value>
+                <fullName>YARRA RANGES (S)</fullName>
+                <default>false</default>
+                <label>YARRA RANGES (S)</label>
+            </value>
+            <value>
+                <fullName>YARRIAMBIACK (S)</fullName>
+                <default>false</default>
+                <label>YARRIAMBIACK (S)</label>
+            </value>
+            <value>
+                <fullName>YASS VALLEY (A)</fullName>
+                <default>false</default>
+                <label>YASS VALLEY (A)</label>
+            </value>
+            <value>
+                <fullName>YILGARN (S)</fullName>
+                <default>false</default>
+                <label>YILGARN (S)</label>
+            </value>
+            <value>
+                <fullName>YORK (S)</fullName>
+                <default>false</default>
+                <label>YORK (S)</label>
+            </value>
+            <value>
+                <fullName>YORKE PENINSULA (DC)</fullName>
+                <default>false</default>
+                <label>YORKE PENINSULA (DC)</label>
+            </value>
+            <value>
+                <fullName>YOUNG (A)</fullName>
+                <default>false</default>
+                <label>YOUNG (A)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

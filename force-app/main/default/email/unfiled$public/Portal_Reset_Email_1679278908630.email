@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;"><span style="font-size:11px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="line-height:107%">Hi&nbsp;</span>{{{Recipient.FirstName}}}<br />
+<span style="line-height:107%">&nbsp;<br />
+Thanks so much for getting in touch in regards to your Portal.<br />
+<br />
+Here are the details on how to log in to your Camp Quality Portal:&nbsp;<a href="https://www.mycampquality.org.au/members/portallogin" style="color:blue; text-decoration:underline">My Camp Quality Portal</a><br />
+<br />
+<b>Username:&nbsp;</b></span>{{{Recipient.Email}}}<br />
+<span style="line-height:107%"><b>Password</b>: I have just sent through a password reset automated email, please let me know if this doesn’t work or you have any further issues<br />
+&nbsp;<br />
+Once you’ve logged in you’ll be able to see your program invites under the <b>Events</b> tab and from here you can request to attend.&nbsp;<br />
+&nbsp;<br />
+Please don’t hesitate to get in touch with me if you have any questions at all.<br />
+Best wishes,<br />
+Megan<br />
+<br />
+Megan Davis | Services &amp; Programs Information Officer<br />
+Phone: 08 9388 8533<br />
+Megan.davis@campquality.org.au<br />
+PO Box 8106 | Subiaco East | WA | 6008<br />
+campquality.org.au</span></span></span><br />
+&nbsp;</body>
+</html>

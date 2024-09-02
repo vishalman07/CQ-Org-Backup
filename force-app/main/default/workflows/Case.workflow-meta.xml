@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Case_Closed_Email_Alert</fullName>
+        <description>Case Closed Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Case_Closed_Internal</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Salesforce_support_case</fullName>
+        <description>New Salesforce support case</description>
+        <protected>false</protected>
+        <recipients>
+            <field>User__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Salesforceemails/New_Salesforce_case_confirmation_1633568114267</template>
+    </alerts>
+    <alerts>
+        <fullName>Retreat_Acknowledgement_Email</fullName>
+        <description>Retreat Acknowledgement Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>mycampquality@campquality.org.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>RespiteEmailTemplates/Retreat_Acknowledgement_Email_1668060425870</template>
+    </alerts>
+    <alerts>
+        <fullName>Salesforce_case_completed</fullName>
+        <description>Salesforce case completed</description>
+        <protected>false</protected>
+        <recipients>
+            <field>User__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Salesforceemails/Case_Completed_1634095766830</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>InitialAcknowledgeDate</fullName>
+        <field>Initial_Acknowledge_Date__c</field>
+        <formula>now()</formula>
+        <name>InitialAcknowledgeDate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_to_escalated</fullName>
+        <description>Changes status to escalated after 14 dys</description>
+        <field>Status</field>
+        <literalValue>Escalated</literalValue>
+        <name>Update to escalated</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Case Acknowledge Date</fullName>
+        <actions>
+            <name>InitialAcknowledgeDate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notEqual</operation>
+            <value>New</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Initial_Acknowledge_Date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case Closed Email</fullName>
+        <actions>
+            <name>Case_Closed_Email_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Internal Requests</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case Escalation</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </criteriaItems>
+        <description>Escalates case and creates a task for owner</description>
+        <failedMigrationToolVersion>250.15.1</failedMigrationToolVersion>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Update_to_escalated</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Case_Overdue</name>
+                <type>Task</type>
+            </actions>
+            <offsetFromField>Case.CreatedDate</offsetFromField>
+            <timeLength>14</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Retreat Acknowledgement Email</fullName>
+        <actions>
+            <name>Retreat_Acknowledgement_Email</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Respite Case</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Case_Overdue</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>This case has been open for 14 days, please review and update status immediately</description>
+        <dueDateOffset>14</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Case.CreatedDate</offsetFromField>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Case Overdue</subject>
+    </tasks>
+    <tasks>
+        <fullName>Overdue_Case</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>This case has not been actioned in 14 days, please review and action case</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Case.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Overdue Case</subject>
+    </tasks>
+</Workflow>

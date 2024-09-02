@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Past Community Fundraising donors from  1/01/18</description>
+    <filter>
+        <criteriaItems>
+            <column>Campaign$Parent</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>SYD1908 City 2 Surf - Master Campaign,SYD1808 City 2 Surf,19NNSW chocolate sales</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign$Cost_Centre__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1910</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign$Branch_Code__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>=&quot;01&quot;,01 - Head Office,13,13 - Sydney SYD,16,16 - Northern NSW,17,17 - Southern NSW</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign$Type</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>NNSW - ATF,SNSW - ATF,SYD - ATF</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Past Community Fundraisers donor 1/01/18</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Campaigns_with_Payment_txns__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Campaign$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

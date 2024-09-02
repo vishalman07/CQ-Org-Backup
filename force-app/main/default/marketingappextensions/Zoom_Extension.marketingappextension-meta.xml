@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MarketingAppExtension xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isActive>true</isActive>
+    <marketingAppExtActions>
+        <actionName>Create Zoom Activity</actionName>
+        <actionParams>{
+  &quot;isStandard&quot;: false,
+  &quot;type&quot;: &quot;apex&quot;
+}</actionParams>
+        <actionSchema>{
+  &quot;properties&quot;: {
+    &quot;extension&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;title&quot;: &quot;Extension&quot;,
+      &quot;value&quot;: &quot;&quot;
+    },
+    &quot;email&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;title&quot;: &quot;Prospect Email&quot;,
+      &quot;value&quot;: &quot;&quot;
+    },
+    &quot;type&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;title&quot;: &quot;Type&quot;,
+      &quot;value&quot;: &quot;&quot;
+    },
+    &quot;value&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;title&quot;: &quot;Value&quot;,
+      &quot;value&quot;: &quot;&quot;
+    }
+  },
+  &quot;view&quot;: {
+    &quot;components&quot;: [
+      {
+        &quot;definition&quot;: &quot;lightning/control&quot;,
+        &quot;scope&quot;: &quot;#/properties/extension&quot;
+      },
+      {
+        &quot;definition&quot;: &quot;lightning/control&quot;,
+        &quot;scope&quot;: &quot;#/properties/email&quot;
+      },
+      {
+        &quot;definition&quot;: &quot;lightning/control&quot;,
+        &quot;scope&quot;: &quot;#/properties/type&quot;
+      },
+      {
+        &quot;definition&quot;: &quot;lightning/control&quot;,
+        &quot;scope&quot;: &quot;#/properties/value&quot;
+      }
+    ]
+  },
+  &quot;required&quot;: [
+    &quot;extension&quot;,
+    &quot;email&quot;,
+    &quot;type&quot;,
+    &quot;value&quot;
+  ]
+}</actionSchema>
+        <actionSelector>PardotExternalActivityPublisher</actionSelector>
+        <apiName>Create_Zoom_Activity</apiName>
+        <isActive>true</isActive>
+        <marketingAppExtension>Zoom_Extension</marketingAppExtension>
+    </marketingAppExtActions>
+    <marketingAppExtActivities>
+        <fullName>Create_Zoom_Activity</fullName>
+        <isActive>true</isActive>
+        <marketingAppExtension>Zoom_Extension</marketingAppExtension>
+        <masterLabel>Create Zoom Activity</masterLabel>
+    </marketingAppExtActivities>
+    <masterLabel>Zoom Extension</masterLabel>
+</MarketingAppExtension>

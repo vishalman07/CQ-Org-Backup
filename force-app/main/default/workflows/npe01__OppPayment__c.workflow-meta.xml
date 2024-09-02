@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <rules>
+        <fullName>Large Donation Received</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>npe01__OppPayment__c.npe01__Paid__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>npe01__OppPayment__c.npe01__Payment_Amount__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>1000</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.ProfileId</field>
+            <operation>notEqual</operation>
+            <value>Fundraising</value>
+        </criteriaItems>
+        <description>Sends email alert when a large donation is added to Salesforce by someone outside of fundraising (e.g. if gifts come through online)</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

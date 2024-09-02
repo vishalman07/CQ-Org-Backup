@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_Image_Opt_In_Permission_Corporate__c</fullName>
+    <description>Formuala Field which simply takes the value of the Image permission field from the related account object</description>
+    <formula>Account.Image_Opt_In_Permission_Corporate_Child__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Child Image Opt-In Permission Corporate</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

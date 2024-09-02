@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_Not_Accept_Donations_Reasons__c</fullName>
+    <description>used in conjunction to the &quot;Do Not Accept Donations&quot; Check box</description>
+    <inlineHelpText>Why are we not accepting donations from this account?</inlineHelpText>
+    <label>Do Not Accept Donations Reasons</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

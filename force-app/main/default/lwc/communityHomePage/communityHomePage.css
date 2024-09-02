@@ -1,0 +1,245 @@
+.headerImg {
+height: 100px;
+width:  100%;
+}
+.homeDiv{
+    background-color: #fcdbcb;
+    /* margin-top: 13vw; */
+    padding-top: 3rem;
+}
+
+.font_orange{
+font-family: Mr Orange;
+/* font-size: 3rem; */
+}
+
+.font_popinsLight{
+font-family: Poppins Light;
+}
+
+.font_poppinsSemiBold{
+font-family: Poppins SemiBold;
+}
+
+/* @font-face {
+  font-family: "Poppins Light";
+  src: url('{poppinsLight}') format('TrueType');
+}
+
+@font-face {
+  font-family: "Poppins SemiBold";
+  src: url('{poppinsSemiBold}') format('TrueType');
+}
+@font-face {
+  font-family: "Mr Orange";
+  src: url('{mrOrange}') format('OpenType');
+}  */
+
+.custom_padding{
+max-width: 73rem;
+}
+.position-content{
+position: absolute;
+top: 14vw;
+margin: auto;
+width: fit-content;
+text-align: justify;
+
+}
+.contact-margin{
+margin-left: 9vw;
+padding-left: 5vh;
+}
+body{
+background-color: lightyellow;
+}
+.home{   
+font-weight: inherit;
+font-size: 3em;
+margin-bottom: 1vw;
+margin-left: 8rem;
+}
+.text{
+margin-top:2rem;
+margin-bottom: 2rem;
+}
+.video {
+/* width: fit-content; */
+  margin: auto;
+}
+
+iframe{
+  width: 100%;
+}
+
+.position-content .footer{
+background-color: #001f34;
+height: 5vw;
+width: 100%;
+margin-top: 10vh;
+margin-left: 0;
+}
+/* Navigation Css */
+.navigation{
+  background-color: #fafaf8;
+  color: black;
+  width: 100%;
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+  z-index: 1;
+  display: inline-block;
+  height: 80px;
+  text-align: center;
+  padding-top: 20px;
+}
+.slds-avatar {
+  width: 3rem;
+  height: 3rem;
+}
+.navigation li a{
+font-size: large;
+text-align: center;
+}
+.navigation li{
+font-size: large;
+width : auto;
+margin-left: 30px;
+}
+
+.navigation li:hover{
+border-bottom: 2px solid orange;
+}
+
+.customHtAdjust{
+height: 30px;
+}
+
+
+/*Dropdown Css */
+.dropdown-content {
+  display: none;
+  background-color: #fafaf8;
+  color: black;
+  width: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content_User{
+  display: none;
+  background-color: #fafaf8;
+  color: black;
+  width: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.show {
+  display: block;
+}
+.dropdown {
+position: absolute;
+display: none;
+
+}
+abbr {
+border-radius: 30px;
+}
+.dropdown_User{
+position: absolute;
+right: 0;
+}
+.right-align {
+text-align:right;
+}
+/* Style the dropdown button */
+.dropdown-button , .dropdown-button_User {
+background-color: #fafaf8;
+color: black;
+padding: 5px;
+border: none;
+cursor: pointer;
+}
+.user{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.slds-dropdown-trigger {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  }
+
+/* Style the dropdown icon */
+.dropdown-icon {
+font-size: 34px; /* Adjust the size as needed */
+margin-right: 10px; /* Add some spacing between the icon and text */
+}
+.right-align{
+  position: absolute;
+  right: 0;
+}
+/* Media query for smaller screens */
+@media (max-width: 1059px) {
+.navbar a {
+  float: none;
+  display: block;
+  text-align: left;
+  font-size: 3.9rem;
+}
+iframe{
+  width: 100%;
+}
+.dropdown {
+  display: inline-block;
+}
+.navigation{
+display: none;
+}
+.home{
+  margin-bottom: 1vw;
+  margin-left: 2vw;
+}
+.homeDiv{
+margin-top: 2vh;
+padding-top: 5rem;
+} 
+
+.custom_padding{
+margin-top: 20px;
+}
+
+
+.position-content{
+  margin-top: 25%; 
+ 
+}
+.contact-margin{
+margin-left:0px;
+padding: 2vw;
+}
+
+.video {
+  margin: auto;
+  width: auto;
+}
+}
+
+custom_position{
+margin-top: 30px;
+}
+
+@media screen and (min-width: 1060px) and (max-width: 1245px) {
+
+.position-content{
+ margin-top: 10%;
+ margin-left: 0;
+
+} 
+
+.contact-margin{
+margin-left: 0;
+padding-left: 5vh;
+} 
+
+}

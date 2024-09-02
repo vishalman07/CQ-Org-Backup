@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X31_VIC_Campaigns</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.END_DATE</columns>
+    <columns>Cost_Centre__c</columns>
+    <columns>Account_No__c</columns>
+    <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Campaign.Fundraising</value>
+    </filters>
+    <filters>
+        <field>Branch_Code__c</field>
+        <operation>equals</operation>
+        <value>31,31 - Melbourne VIC</value>
+    </filters>
+    <label>31  - VIC Campaigns</label>
+</ListView>

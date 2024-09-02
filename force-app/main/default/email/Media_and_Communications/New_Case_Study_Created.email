@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div>Hello&nbsp;{!User.FirstName},</div><div><br></div><div>A new case study has been added to Salesforce</div><div><br></div><div><b>URL</b>:&nbsp; &nbsp;https://campquality.lightning.force.com/lightning/{!Case_Study__c.Id}</div><div><b>Family</b>:&nbsp;{!Case_Study__c.Family__c}</div><div><b>Description</b>:&nbsp;{!Case_Study__c.Case_Study_Description__c}</div><div><br></div><div>This is an automated email. If you believe it has been sent in error, or would like to no longer receive it, please advise the Salesforce team.</div>]]></td>
+</tr>
+</table>

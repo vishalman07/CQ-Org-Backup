@@ -1,0 +1,22 @@
+Hi {!Receiving_User.FirstName},
+
+Welcome to your new My Camp Quality portal!
+
+Through this portal you will be able to manage your registrations to Camp Quality programs and services, with just a few clicks on either your phone, tablet or PC.
+
+To get started in navigating your way through this exciting portal, please click here:
+{!Community_Url}
+
+Your username is your email address: {!Receiving_User.Username}
+
+Once you have activated your account you can access the portal by going to www.mycampquality.org.au at any time.
+
+Once logged in you can review your families details under the Profile tab, and you'll find useful links, policies and most commonly asked questions under our Resources and FAQ tabs.
+
+If you do have any issues with logging into your portal please contact us on 1300 662 267.
+
+
+Kind Regards,
+{!Organization.Name}
+
+You are receiving this email as you are a registered Camp Quality Family or Volunteer. To manage your invites update your profile at www.mycampquality.org.au.

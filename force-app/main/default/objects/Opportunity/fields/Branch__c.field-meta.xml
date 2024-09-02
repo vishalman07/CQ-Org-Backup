@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Branch__c</fullName>
+    <description>Branch. This data is taken from the primary campaign source of the opportunity</description>
+    <externalId>false</externalId>
+    <formula>TEXT( Campaign.Branch_Code__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Branch. This data is taken from the primary campaign source of the opportunity</inlineHelpText>
+    <label>Branch</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

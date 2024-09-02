@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Personalised_URL__c</fullName>
+    <inlineHelpText>URL for giving with prefilled details.  Could be Payments2US URL Token or givergy url.</inlineHelpText>
+    <label>Personalised URL</label>
+    <required>false</required>
+    <type>Url</type>
+</CustomField>

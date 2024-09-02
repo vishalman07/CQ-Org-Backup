@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_60228559</developerName>
+        <masterLabel>Camp Quality Location</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Account.Branch_Office__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <value>SNSW</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Northern New South Wales</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Newcastle</sourceValue>
+            </sourceValues>
+            <value>NNSW</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>National</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sydney</sourceValue>
+            </sourceValues>
+            <value>SYD</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Queensland</sourceValue>
+            </sourceValues>
+            <value>QLD</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Victoria</sourceValue>
+            </sourceValues>
+            <value>VIC</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Tasmania</sourceValue>
+            </sourceValues>
+            <value>TAS</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>South Australia</sourceValue>
+            </sourceValues>
+            <value>SA</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Northern Territory</sourceValue>
+            </sourceValues>
+            <value>NT</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Western Australia</sourceValue>
+            </sourceValues>
+            <value>WA</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_82297136</developerName>
+        <masterLabel>Family Type</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Account.Family_Type__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Patient</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Graduating Patient Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Bereaved Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Graduating Bereaved Family</sourceValue>
+            </sourceValues>
+            <value>CP</value>
+        </values>
+        <values>
+            <value>CP Bereaved</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Former Offspring Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Offspring Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Graduating Offspring Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Offspring Bereaved Family</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Graduating Offspring Bereaved Family</sourceValue>
+            </sourceValues>
+            <value>AP</value>
+        </values>
+        <values>
+            <value>AP Bereaved</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Restricted Family</sourceValue>
+            </sourceValues>
+            <value>Other</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>ACCOUNT_ID</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.Start_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>THIS_YEAR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Family_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Former Patient,Patient,Bereaved Family,Former Offspring Family,Offspring Family,Restricted Family,Offspring Bereaved Family,Graduating Patient Family,Graduating Offspring Family,Former Bereaved,Former Offspring Bereaved,Graduating Bereaved Family,Graduating Offspring Bereaved Family</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_82297136</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Family_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>2019 New Fam Registrations</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

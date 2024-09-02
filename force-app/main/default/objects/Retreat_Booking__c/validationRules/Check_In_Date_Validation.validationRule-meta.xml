@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_In_Date_Validation</fullName>
+    <active>true</active>
+    <description>Checkin date has to be before check out day.
+Minimum length of stay 1 night</description>
+    <errorConditionFormula>Check_Out_Date__c &lt;=  Check_In_Date__c</errorConditionFormula>
+    <errorDisplayField>Check_In_Date__c</errorDisplayField>
+    <errorMessage>Checkin date has to be before check out day, min stay 1 night</errorMessage>
+</ValidationRule>

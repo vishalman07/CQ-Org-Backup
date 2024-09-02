@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>Account.npo02__FirstCloseDate__c</field>
+    </columns>
+    <columns>
+        <field>Account.npo02__LastCloseDate__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.npo02__OppAmountLastYear__c</field>
+    </columns>
+    <description>List for Shirley - Logo display</description>
+    <filter>
+        <booleanFilter>(1 AND 2) OR 3</booleanFilter>
+        <criteriaItems>
+            <column>TYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Corporate Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.npo02__OppAmountLastYear__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>5000</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT.NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>PACK &amp; SEND International</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ADDRESS1_STATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Corp Partner - Current 2020 over 5k</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <endDate>2020-03-07</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2019-03-31</startDate>
+    </timeFrameFilter>
+</Report>

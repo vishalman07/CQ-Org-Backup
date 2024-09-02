@@ -1,0 +1,200 @@
+.dummy{
+	color : black;
+}
+
+/* Set Image  */
+.headerImg {
+  height: 100px;
+  width:  100%;
+}
+
+.head{
+    /* margin-top: 12vw; */
+    background-color: #bfe4f3;
+}
+
+.header {
+    color: rgb(0, 31, 52);
+    text-align: left;
+    margin-bottom: 1vw;
+    padding-left: 8rem;
+    padding-top: 3rem;
+    font-size: 3rem;
+}
+
+.font_orange{
+  font-family: Mr Orange;
+  
+}
+
+.font_popinsLight{
+  font-family: Poppins Light;
+  
+}
+
+
+.download{
+  font-family: Poppins Light;
+  float: left;
+   text-align: center;
+}
+.custom_Tex{
+  width: 80%;
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+/* 
+@font-face {
+  font-family: "Poppins Light";
+  src: url('{poppinsLight}') format('TrueType');
+}
+
+@font-face {
+  font-family: "Poppins SemiBold";
+  src: url('{poppinsSemiBold}') format('TrueType');
+}
+@font-face {
+  font-family: "Mr Orange";
+  src: url('{mrOrange}') format('OpenType');
+}  */
+
+.exampleHolder{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    height: 1110px;
+    width: 100%;
+    z-index: 30;
+}
+.font_poppinsSemiBold{
+  font-family: Poppins SemiBold;
+}
+
+.custom_btn{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    /* padding: 0px 15px 0px 15px; */
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: right;
+    width: 80%;
+    margin: auto;
+}
+
+.customTableDesign{
+    width: 80%;
+    margin: auto;
+}
+
+.form_btn{
+  width: max-content;
+  height: max-content;
+  border: 2px solid #001f34;
+  background-color: #001f34;
+  color: white;
+  border-radius: 4px;
+  font-size: 18px;
+  margin: 5px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.custom_cursor{
+  cursor: pointer;
+}
+
+.slds-box{
+  border: none;
+}
+
+table tr{
+  height: 3rem;
+}
+
+.noIncitext{
+  margin: auto;
+    width: 50%;
+}
+
+/* Responsive for tablet device */
+@media (max-width: 1059px){
+
+  table{
+    max-width: 700px;
+  }
+
+  .head{
+   margin-top: 1rem;
+}
+
+.header {   
+    padding-left: 1rem;
+    padding-top: 5rem;
+    font-size: 3rem;
+  }
+
+  .custom_btn{
+         text-align: right;
+    /* margin-left: 65vw; */
+    width: 100%;
+    margin: auto;
+    }
+}
+.form_btn_cancel{
+    width: 7rem;
+    height: 2.5rem;
+    border: 2px solid #ffe600;
+    background-color: #ffe600;
+    color: 001f34;
+    border-radius: 4px;
+    font-size: 18px;
+    margin: 5px;
+}
+
+
+/* Responsive different device */
+@media only screen 
+and (min-device-width : 1060px) and (max-device-width : 1260px) {
+    .custom_btn{
+    width: 100%;
+    margin: auto;
+    }
+}
+
+/* Responsive for mobile device */
+@media (max-width: 480px){
+  table{
+    max-width: 400px;
+  }
+  .header{
+  font-size: 3rem;
+  margin-top: 30%;
+}
+
+  .form_btn{
+    width: 100%;
+  }
+
+}
+ @media (max-width: 540px){
+  .downloadIncident{
+    width: 100%;
+  }
+  .addNewBtn{
+    width: 100%;
+  }
+
+  .download{
+    width: 100%;
+    float:none;
+    text-align: center;
+  }
+ 
+} 
+
+/* .add{
+  width: 100%;
+} */

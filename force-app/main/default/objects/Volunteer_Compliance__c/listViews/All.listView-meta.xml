@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Volunteer_Criteria__c</columns>
+    <columns>Volunteer_Name__c</columns>
+    <columns>Status__c</columns>
+    <columns>Criteria_Type__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Litmos_Course_ID__c</columns>
+    <columns>PercentageComplete__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NSW_ACT_Kids_schools</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Age__c</columns>
+    <columns>Family_Member_Type__c</columns>
+    <columns>School__c</columns>
+    <columns>Branch_Office__c</columns>
+    <columns>npe01__Home_Address__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Family_Member_Type__c</field>
+        <operation>equals</operation>
+        <value>Patient,Sibling</value>
+    </filters>
+    <filters>
+        <field>Age__c</field>
+        <operation>lessThan</operation>
+        <value>13</value>
+    </filters>
+    <filters>
+        <field>FamilyMemberStatus__c</field>
+        <operation>equals</operation>
+        <value>Eligible Child</value>
+    </filters>
+    <filters>
+        <field>npe01__Home_Address__c</field>
+        <operation>contains</operation>
+        <value>NSW,ACT</value>
+    </filters>
+    <label>NSW/ACT Kids schools</label>
+</ListView>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Logo</letterhead>
+    <name>NEWCASTLE LEAD ACKNOWLEDGMENT EMAIL</name>
+    <style>freeForm</style>
+    <subject>Volunteering At Camp Quality</subject>
+    <textOnly>Dear {!Lead.FirstName},
+
+Congratulations! You have taken the first step in helping deliver services for children (aged 0 – 13 years) impacted by cancer and their families.  Our volunteers are the heart of the Camp Quality family.
+
+We would like to thank you for your interest and your time taken in applying for the position of Recreation Volunteer at Camp Quality.  More detail on the recruitment process can be found in the document attached. We would like to invite you to come in and see us for an interview at the Camp Quality Newcastle Office which is located at:
+
+
+Unit 3, 22 John Street, Warners Bay NSW 2282
+
+Our local office will contact you soon to arrange a convenient time.
+
+Please advise if you are unable to continue the volunteer process with Camp Quality by clicking here.
+
+We know you are eager to be part of our Recreation Programs and we apologise for any delay.  In the meantime you can still help create a better life for kids living with cancer by joining our FUNdraising team.   Perhaps you’d like to purchase an Entertainment Book - packed full of discount vouchers for dining, drinking, entertainment &amp; leisure - and 20% of every membership sold supports Camp Quality. Please visit the Events page on the Camp Quality website and if you’re keen to support our families through FUNdraising while you wait to join the Recreation Team please let me know.
+
+If you have any questions please do not hesitate to contact myself, or any of the other friendly staff in the office. I would like to again thank you for considering Camp Quality; we look forward to working with you in the future.
+
+
+Regards,
+
+
+
+Tania Sweatman &amp; Jamel Alameddine |  Program Support Officers
+
+Phone 02 9876 0513  |  Fax 02 9869 0688
+Head Office  |  Suite 6, 44-46 Oxford Street  |  PO Box 400, Epping NSW 1710
+
+
+www.campquality.org.au
+
+Jamel.alameddine@campquality.org.au
+
+Tania.sweatman@campquality.org.au
+
+
+
+Jamel is in the office on Monday &amp; Tuesday
+
+Tania is in the office on Wednesday, Thursday &amp; Friday</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

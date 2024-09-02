@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Logo</letterhead>
+    <name>Vol EOI Followup</name>
+    <style>freeForm</style>
+    <subject>Volunteer Application Follow Up</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+We are so excited that you made the first step in helping us level the playing field and become a volunteer for Camp Quality through our Bro Up campaign.
+
+We are holding volunteer interviews near you soon and would love to meet you. If you are still interested in joining us, please finalise your application by clicking https://www.campquality.org.au/article/524-register-broup-2017?First_Name={!Lead.FirstName}&amp;Last_Name={!Lead.LastName}&amp;EOIID={!Lead.ExternalID__c}
+
+If you have any questions, please don’t hesitate to contact me or to check out our Become A Volunteer page. If you decide not to proceed with your application, we would love to hear from you as to why.
+
+
+We look forward to hearing from you and can&apos;t wait to have you along for a camp - it&apos;s going to be an experience you&apos;ll always remember J
+
+
+Kind Regards,
+
+
+
+{!User.FirstName}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

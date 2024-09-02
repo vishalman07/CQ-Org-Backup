@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Created for Head of Stakeholder and business development to grant access to S&amp;P data not normally accessible by Fundraising profile.</description>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.How_did_you_Hear_about_Camp_Quality__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.How_did_you_year_about_CQ_Other__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Reason_for_Joining__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Business Development</label>
+    <recordTypeVisibilities>
+        <recordType>Lead.Family_Application</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Lead.In_Hospital_Family</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

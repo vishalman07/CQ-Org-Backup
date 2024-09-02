@@ -1,0 +1,10 @@
+<apex:page standardController="Lead" extensions="ProcessLeadMappingController" action="{!processLeadMapping}" sidebar="false" showHeader="false">
+    
+    <script type="text/javascript">
+    	
+    	alert("{!msg}");
+    	window.close();
+    
+    </script>
+    
+</apex:page>

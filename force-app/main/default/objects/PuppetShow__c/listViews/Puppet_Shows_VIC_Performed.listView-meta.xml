@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Puppet_Shows_VIC_Performed</fullName>
+    <columns>NAME</columns>
+    <columns>Show_Date__c</columns>
+    <columns>Puppet_Show_Name__c</columns>
+    <columns>Child_Requesting_Show__c</columns>
+    <columns>Venue__c</columns>
+    <columns>Show_Type__c</columns>
+    <columns>Type_Of_Child__c</columns>
+    <columns>Number_Of_Shows__c</columns>
+    <columns>Venue_Suburb__c</columns>
+    <columns>Venue_State__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Show_Status__c</field>
+        <operation>equals</operation>
+        <value>Performed</value>
+    </filters>
+    <filters>
+        <field>Performance_Group__c</field>
+        <operation>equals</operation>
+        <value>VIC/TAS</value>
+    </filters>
+    <filters>
+        <field>Show_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2023</value>
+    </filters>
+    <label>Puppet Shows VIC - Performed</label>
+    <sharedTo>
+        <role>Primary_School_Programs</role>
+    </sharedTo>
+</ListView>

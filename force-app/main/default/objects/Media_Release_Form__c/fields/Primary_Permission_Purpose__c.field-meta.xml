@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Permission_Purpose__c</fullName>
+    <inlineHelpText>Why are we obtaining this permission</inlineHelpText>
+    <label>Primary Permission Purpose</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

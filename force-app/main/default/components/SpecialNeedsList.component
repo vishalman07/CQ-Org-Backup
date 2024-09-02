@@ -1,0 +1,16 @@
+<apex:component controller="SpecialNeedsListController" access="global" > 
+    
+            <apex:attribute name="ContactID" assignTo="{!cId}" description="The ID of the Contact record." type="String" />
+        <h4>Special Needs and Dietary Requirements</h4> 
+    
+    <ul>
+    
+        <apex:repeat value="{!sneeds}" var="sn">
+            <apex:outputPanel >
+               <li>{!sn.Long_Description__c} {!sn.Comments__c} </li>
+
+    </apex:outputPanel>
+        </apex:repeat>
+    
+    </ul>
+</apex:component>

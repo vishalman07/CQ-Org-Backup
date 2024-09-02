@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Family_Interests__c</fullName>
+    <label>Family Interests</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Theme Parks</fullName>
+                <default>false</default>
+                <label>Theme Parks</label>
+            </value>
+            <value>
+                <fullName>Sports</fullName>
+                <default>false</default>
+                <label>Sports</label>
+            </value>
+            <value>
+                <fullName>Arts &amp; Crafts</fullName>
+                <default>false</default>
+                <label>Arts &amp; Crafts</label>
+            </value>
+            <value>
+                <fullName>Science &amp; Education</fullName>
+                <default>false</default>
+                <label>Science &amp; Education</label>
+            </value>
+            <value>
+                <fullName>Cooking</fullName>
+                <default>false</default>
+                <label>Cooking</label>
+            </value>
+            <value>
+                <fullName>Live Entertainment</fullName>
+                <default>false</default>
+                <label>Live Entertainment</label>
+            </value>
+            <value>
+                <fullName>Animals</fullName>
+                <default>false</default>
+                <label>Animals</label>
+            </value>
+            <value>
+                <fullName>Vehicles &amp; Remote Control</fullName>
+                <default>false</default>
+                <label>Vehicles &amp; Remote Control</label>
+            </value>
+            <value>
+                <fullName>Gaming &amp; Tech</fullName>
+                <default>false</default>
+                <label>Gaming &amp; Tech</label>
+            </value>
+            <value>
+                <fullName>Toys &amp; Board Games</fullName>
+                <default>false</default>
+                <label>Toys &amp; Board Games</label>
+            </value>
+            <value>
+                <fullName>Health &amp; Wellbeing</fullName>
+                <default>false</default>
+                <label>Health &amp; Wellbeing</label>
+            </value>
+            <value>
+                <fullName>Aquarium</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Aquarium</label>
+            </value>
+            <value>
+                <fullName>Bike</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bike</label>
+            </value>
+            <value>
+                <fullName>Circus</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Circus</label>
+            </value>
+            <value>
+                <fullName>Dance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dance</label>
+            </value>
+            <value>
+                <fullName>Movies</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Movies</label>
+            </value>
+            <value>
+                <fullName>Music</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Music</label>
+            </value>
+            <value>
+                <fullName>Outdoors</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Outdoors</label>
+            </value>
+            <value>
+                <fullName>Sport - AFL</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sport - AFL</label>
+            </value>
+            <value>
+                <fullName>Sport - Basketball</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sport - Basketball</label>
+            </value>
+            <value>
+                <fullName>Sport - Cricket</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sport - Cricket</label>
+            </value>
+            <value>
+                <fullName>Sport - Motor</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sport - Motor</label>
+            </value>
+            <value>
+                <fullName>Sport - NRL</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sport - NRL</label>
+            </value>
+            <value>
+                <fullName>Sport - Netball</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sport - Netball</label>
+            </value>
+            <value>
+                <fullName>Sport - Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sport - Other</label>
+            </value>
+            <value>
+                <fullName>Sport - Rugby Union</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sport - Rugby Union</label>
+            </value>
+            <value>
+                <fullName>Sport - Soccer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sport - Soccer</label>
+            </value>
+            <value>
+                <fullName>Sport - Tennis</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sport - Tennis</label>
+            </value>
+            <value>
+                <fullName>Theater</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Theater</label>
+            </value>
+            <value>
+                <fullName>Zoo</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Zoo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

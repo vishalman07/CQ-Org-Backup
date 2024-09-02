@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WWCC_type__c</fullName>
+    <label>WWCC type/state</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACT</fullName>
+                <default>false</default>
+                <label>ACT</label>
+            </value>
+            <value>
+                <fullName>NSW</fullName>
+                <default>false</default>
+                <label>NSW</label>
+            </value>
+            <value>
+                <fullName>NQ</fullName>
+                <default>false</default>
+                <label>NQ</label>
+            </value>
+            <value>
+                <fullName>QLD</fullName>
+                <default>false</default>
+                <label>QLD</label>
+            </value>
+            <value>
+                <fullName>QLD Exempt</fullName>
+                <default>false</default>
+                <label>QLD Exempt</label>
+            </value>
+            <value>
+                <fullName>SA DCSI</fullName>
+                <default>false</default>
+                <label>SA DCSI</label>
+            </value>
+            <value>
+                <fullName>TAS</fullName>
+                <default>false</default>
+                <label>TAS</label>
+            </value>
+            <value>
+                <fullName>VIC</fullName>
+                <default>false</default>
+                <label>VIC</label>
+            </value>
+            <value>
+                <fullName>VIC Police and Teacher</fullName>
+                <default>false</default>
+                <label>VIC Police and Teacher</label>
+            </value>
+            <value>
+                <fullName>WA</fullName>
+                <default>false</default>
+                <label>WA</label>
+            </value>
+            <value>
+                <fullName>NT</fullName>
+                <default>false</default>
+                <label>NT</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$FirstName</field>
+    </columns>
+    <columns>
+        <field>Contact$LastName</field>
+    </columns>
+    <columns>
+        <field>Contact$Email</field>
+    </columns>
+    <columns>
+        <field>Contact$MailingState</field>
+    </columns>
+    <columns>
+        <field>Contact$RecordType</field>
+    </columns>
+    <columns>
+        <field>Contact$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Contact$Owner</field>
+    </columns>
+    <description>Contacts Created with date BEFORE
+With Campaign History of XX</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact.CampaignMembers$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Travel Bonanza Raffle - Tickets</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$CreatedDate</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessThan</operator>
+            <value>1/1/2022 12:00 AM</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.CampaignMembers$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact$Id</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>New Created Contacts - Campaign BEFORE</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Campaign_History__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$X2020_Camp_In_Join_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

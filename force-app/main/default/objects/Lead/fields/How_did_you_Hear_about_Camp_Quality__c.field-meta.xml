@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_did_you_Hear_about_Camp_Quality__c</fullName>
+    <label>How did you Hear about Camp Quality</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Camp Quality Representative</fullName>
+                <default>false</default>
+                <label>Camp Quality Representative</label>
+            </value>
+            <value>
+                <fullName>Cancer Hub Referral</fullName>
+                <default>false</default>
+                <label>Cancer Hub Referral</label>
+            </value>
+            <value>
+                <fullName>Child Life Therapist</fullName>
+                <default>false</default>
+                <label>Child Life Therapist</label>
+            </value>
+            <value>
+                <fullName>Friend, Relative or Colleague</fullName>
+                <default>false</default>
+                <label>Friend, Relative or Colleague</label>
+            </value>
+            <value>
+                <fullName>Hospital Posters/Brochures/Flyers</fullName>
+                <default>false</default>
+                <label>Hospital Posters/Brochures/Flyers</label>
+            </value>
+            <value>
+                <fullName>Hospital Ward Staff</fullName>
+                <default>false</default>
+                <label>Hospital Ward Staff</label>
+            </value>
+            <value>
+                <fullName>Media/Television, Radio &amp; Newspaper</fullName>
+                <default>false</default>
+                <label>Media/Television, Radio &amp; Newspaper</label>
+            </value>
+            <value>
+                <fullName>Other Charity</fullName>
+                <default>false</default>
+                <label>Other Charity</label>
+            </value>
+            <value>
+                <fullName>Puppet Hospital Visit</fullName>
+                <default>false</default>
+                <label>Puppet Hospital Visit</label>
+            </value>
+            <value>
+                <fullName>Puppet School Visit</fullName>
+                <default>false</default>
+                <label>Puppet School Visit</label>
+            </value>
+            <value>
+                <fullName>Social Media</fullName>
+                <default>false</default>
+                <label>Social Media</label>
+            </value>
+            <value>
+                <fullName>Social Worker</fullName>
+                <default>false</default>
+                <label>Social Worker</label>
+            </value>
+            <value>
+                <fullName>A family facing cancer</fullName>
+                <default>false</default>
+                <label>A family facing cancer</label>
+            </value>
+            <value>
+                <fullName>Camp Quality Website/Internet Search</fullName>
+                <default>false</default>
+                <label>Camp Quality Website/Internet Search</label>
+            </value>
+            <value>
+                <fullName>Service provider / health professional</fullName>
+                <default>false</default>
+                <label>Service provider / health professional</label>
+            </value>
+            <value>
+                <fullName>Another Family</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>A family facing cancer</label>
+            </value>
+            <value>
+                <fullName>BroUp</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>BroUp</label>
+            </value>
+            <value>
+                <fullName>Camp Quality Team</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Camp Quality Team</label>
+            </value>
+            <value>
+                <fullName>Camp Quality Volunteer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Camp Quality Volunteer</label>
+            </value>
+            <value>
+                <fullName>Camp Quality Website</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Camp Quality Website</label>
+            </value>
+            <value>
+                <fullName>Website</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Camp Quality Website/Internet Search</label>
+            </value>
+            <value>
+                <fullName>Camp Quality brochure / poster</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Camp Quality brochure / poster</label>
+            </value>
+            <value>
+                <fullName>Internet Search</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Internet Search</label>
+            </value>
+            <value>
+                <fullName>Media editorial (discussion on TV, etc)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Media editorial (discussion on TV, etc)</label>
+            </value>
+            <value>
+                <fullName>Media editorial (discussionon TV, etc)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Media editorial (discussionon TV, etc)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Play Therapist</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Play Therapist</label>
+            </value>
+            <value>
+                <fullName>Puppet Visit</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Puppet Visit</label>
+            </value>
+            <value>
+                <fullName>Referral - CQ website referral</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Referral - CQ website referral</label>
+            </value>
+            <value>
+                <fullName>Referral - Redkite direct</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Referral - Redkite direct</label>
+            </value>
+            <value>
+                <fullName>Referral- Canteen direct</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Referral- Canteen direct</label>
+            </value>
+            <value>
+                <fullName>School Visit</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>School Visit</label>
+            </value>
+            <value>
+                <fullName>TV, radio, print ad</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>TV, radio, print ad</label>
+            </value>
+            <value>
+                <fullName>Volunteer Referral Site (ie seek.com.au)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Volunteer Referral Site (ie seek.com.au)</label>
+            </value>
+            <value>
+                <fullName>Word of Mouth/Referral</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Word of Mouth/Referral</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

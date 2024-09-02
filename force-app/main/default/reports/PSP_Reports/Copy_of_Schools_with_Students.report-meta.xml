@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Students__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account$BillingAddress</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Students__r$Age__c</field>
+    </columns>
+    <columns>
+        <field>Account.Students__r$Family_Type__c</field>
+    </columns>
+    <columns>
+        <field>Account.Students__r$FamilyMemberStatus__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Students__r$Puppet_Show_Count__c</field>
+    </columns>
+    <description>Prepared for Kimberley Fox for Grant submission; January 2021</description>
+    <filter>
+        <criteriaItems>
+            <column>Account$BillingPostalCode</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>2144,2160,2142</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Students__r$Family_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Former</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Students__r$FamilyMemberStatus__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Eligible Child,Child</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Copy of Schools with Students</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Schools_with_Students__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

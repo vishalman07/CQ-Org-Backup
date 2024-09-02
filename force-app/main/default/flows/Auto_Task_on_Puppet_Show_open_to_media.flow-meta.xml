@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Notify_Media_Follow_Up</name>
+        <label>Notify Media Follow Up</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <actionName>NewTask</actionName>
+        <actionType>quickAction</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>contextId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>Subject</name>
+            <value>
+                <stringValue>Follow up for Media</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>OwnerId</name>
+            <value>
+                <elementReference>MarkComms</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>ActivityDate</name>
+            <value>
+                <elementReference>FollowUponMarketingComms</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>NewTask</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <description>Following up on Media</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>FollowUponMarketingComms</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()+7</expression>
+    </formulas>
+    <interviewLabel>Auto Task on Puppet Show open to media {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Auto Task on Puppet Show open to media test</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>GetUSer</name>
+        <label>GetUser</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Notify_Media_Follow_Up</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Marie Kent</stringValue>
+            </value>
+        </filters>
+        <object>User</object>
+        <outputAssignments>
+            <assignToReference>MarkComms</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>GetUSer</targetReference>
+        </connector>
+        <filterLogic>1 AND 2 AND (3 OR 4 OR 5)</filterLogic>
+        <filters>
+            <field>Show_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Booked</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Is_the_school_open_to_doing_media__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>No</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Show_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Metropolitan School Visit</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Show_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Country School Visit</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Show_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Camp Quality Event - School Show</stringValue>
+            </value>
+        </filters>
+        <object>PuppetShow__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Notify last modifyer</description>
+        <name>LastModifiedById</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>MarkComms</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>Marie Kent</stringValue>
+        </value>
+    </variables>
+</Flow>

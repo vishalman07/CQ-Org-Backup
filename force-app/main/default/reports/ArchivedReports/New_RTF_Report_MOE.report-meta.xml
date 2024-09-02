@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Request_To_Fundraise__c$CQ_RTFManager__c</field>
+    </columns>
+    <columns>
+        <field>Request_To_Fundraise__c$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Request_To_Fundraise__c$Event_Date__c</field>
+    </columns>
+    <columns>
+        <field>Request_To_Fundraise__c$Campaign__c</field>
+    </columns>
+    <columns>
+        <field>Request_To_Fundraise__c$Granted_Authority_Summary__c</field>
+    </columns>
+    <columns>
+        <field>Request_To_Fundraise__c$Name</field>
+    </columns>
+    <columns>
+        <field>Request_To_Fundraise__c$Approver__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Request_To_Fundraise__c$CQ_RTFManager__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Debra Moore,Rachel Gibbeson,Eleanor Mazza</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Request_To_Fundraise__c$ATF_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed,Authority To Fundraise Declined</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Request_To_Fundraise__c$Branch__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Request_To_Fundraise__c$ATF_Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>New RTF Report - MOE</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Request_to_Fundraise__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Request_To_Fundraise__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2022-01-01</startDate>
+    </timeFrameFilter>
+</Report>

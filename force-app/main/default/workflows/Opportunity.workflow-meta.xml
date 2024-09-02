@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Philanthropy_Major_Gifts_Notifications</fullName>
+        <description>Philanthropy Major Gifts Notifications</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>hgrunwaldt@campquality.org.au</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mtaylor@campquality.org.au</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>mycampquality@campquality.org.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/New_MD_Gift_Received</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_donation_alert_philanthropy</fullName>
+        <description>Send donation alert: Philanthropy Advisor</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>mtaylor@campquality.org.au</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>donorcare@campquality.org.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/New_MD_Gift_Received</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_gift_alert_to_philanthropy_team</fullName>
+        <description>Send gift alert to philanthropy team</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>hgrunwaldt@campquality.org.au</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mtaylor@campquality.org.au</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>mycampquality@campquality.org.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/New_MD_Gift_Received</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_online_donation_alert</fullName>
+        <description>Send online donation alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/New_MD_Gift_Received</template>
+    </alerts>
+    <rules>
+        <fullName>Large Donor Alerts</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Amount</field>
+            <operation>greaterOrEqual</operation>
+            <value>1000</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Major Donor Alerts</fullName>
+        <actions>
+            <name>Send_gift_alert_to_philanthropy_team</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(  CreatedBy.UserRole.Name !=&quot;Philanthropy&quot;,  CreatedBy.UserRole.Name !=&quot;Philanthropy Manager&quot;, OR(  npsp__Primary_Contact__r.Owner.UserRole.Name =&quot;Philanthropy&quot;, npsp__Primary_Contact__r.Owner.UserRole.Name =&quot;Philanthropy Manager&quot;, npsp__Primary_Contact__r.Owner.UserRole.Name =&quot;CEO&quot;, Amount &gt;1000 ) )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Online donation for managed philanthropy donor</fullName>
+        <actions>
+            <name>Send_donation_alert_philanthropy</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <description>Sends an alert when a new online donation is received for an account or contact that is owned by a philanthropy advisor.</description>
+        <formula>AND 
+(Account.Owner.Username=&quot;mtaylor@campquality.org.au&quot;,OR
+(npsp__Primary_Contact__r.Owner.Username=&quot;mtaylor@campquality.org.au&quot;))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Online donation for manager owned donor</fullName>
+        <actions>
+            <name>Send_online_donation_alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Sends an alert when a new online donation is received for an account or contact that is owned by a fundraising manager. Excludes Philanthropy who have a separate alert, and donor development</description>
+        <formula>AND(
+ CreatedBy.FirstName =&quot;Vertic&quot;,
+OR(
+	
+
+ Account.Owner.UserRole.Name = &quot;Corporate Partnerships Manager&quot;, 
+  Account.Owner.UserRole.Name = &quot;Events &amp; Community Fundraising Manager&quot;,
+  Account.Owner.UserRole.Name = &quot;Head of Stakeholder &amp; Business Development &quot;,
+  Account.Owner.UserRole.Name = &quot;GM Fundraising&quot;,
+  npsp__Primary_Contact__r.Owner.UserRole.Name  = &quot;Corporate Partnerships Manager&quot;, 
+  npsp__Primary_Contact__r.Owner.UserRole.Name = &quot;Events &amp; Community Fundraising Manager&quot;,
+  npsp__Primary_Contact__r.Owner.UserRole.Name = &quot;Head of Stakeholder &amp; Business Development &quot;,
+  npsp__Primary_Contact__r.Owner.UserRole.Name = &quot;GM Fundraising&quot;
+  )
+  )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,12 @@
+<template>
+  <lightning-card title={title}>
+    <lightning-spinner if:true={isLoading} size="small" variant="brand"></lightning-spinner>
+    <lightning-button-group slot="actions">
+      <lightning-button variant="brand" label={nextButtonLabel} onclick={handleNext} disabled={isLoading}>
+      </lightning-button>
+    </lightning-button-group>
+    <lightning-input class="slds-m-around_medium" value={value} label={inputLabel} disabled={isLoading}
+      onchange={handleChange} onkeypress={handleKeyPress}>
+    </lightning-input>
+  </lightning-card>
+</template>

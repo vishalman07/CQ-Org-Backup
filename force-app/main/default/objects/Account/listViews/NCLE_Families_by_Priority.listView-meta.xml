@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NCLE_Families_by_Priority</fullName>
+    <booleanFilter>1 AND 2 AND (3 OR 4 OR 5 OR 6)</booleanFilter>
+    <columns>Priority__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Mobile_Phone__c</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.ADDRESS1_ZIP</columns>
+    <columns>Family_Type__c</columns>
+    <columns>Regionv2__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Family</value>
+    </filters>
+    <filters>
+        <field>Branch_Office__c</field>
+        <operation>equals</operation>
+        <value>Newcastle</value>
+    </filters>
+    <filters>
+        <field>Family_Type__c</field>
+        <operation>equals</operation>
+        <value>Patient</value>
+    </filters>
+    <filters>
+        <field>Family_Type__c</field>
+        <operation>equals</operation>
+        <value>Bereaved Family</value>
+    </filters>
+    <filters>
+        <field>Family_Type__c</field>
+        <operation>equals</operation>
+        <value>Offspring Family</value>
+    </filters>
+    <filters>
+        <field>Family_Type__c</field>
+        <operation>equals</operation>
+        <value>Restricted Family</value>
+    </filters>
+    <label>NCLE Families by Priority</label>
+    <sharedTo></sharedTo>
+</ListView>

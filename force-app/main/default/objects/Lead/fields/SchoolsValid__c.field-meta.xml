@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SchoolsValid__c</fullName>
+    <formula>AND(
+if( Child_1_School_Name__c = &quot;&quot;, True, if( (Child_1_School_Validated__c ) = &quot;&quot;, false,true)),
+if( Child_2_School_Name__c = &quot;&quot;, True, if( (Child_2_School_Validated__c ) = &quot;&quot; , false,true)),
+if( Child_3_School_Name__c = &quot;&quot;, True, if( (Child_3_School_Validated__c )  =&quot;&quot;, false,true)),
+if( Child_4_School_Name__c = &quot;&quot;, True, if( (Child_4_School_Validated__c ) = &quot;&quot; , false,true)))</formula>
+    <label>SchoolsValid</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MarketingAppExtension xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isActive>true</isActive>
+    <marketingAppExtActivities>
+        <fullName>Funraisin_Registration</fullName>
+        <isActive>true</isActive>
+        <marketingAppExtension>New_funraisin_registration_Zap</marketingAppExtension>
+        <masterLabel>Funraisin Registration</masterLabel>
+    </marketingAppExtActivities>
+    <masterLabel>New Funraisin Registration</masterLabel>
+</MarketingAppExtension>

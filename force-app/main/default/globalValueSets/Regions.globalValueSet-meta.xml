@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ACT - Albury</fullName>
+        <default>false</default>
+        <label>ACT - Albury</label>
+    </customValue>
+    <customValue>
+        <fullName>ACT - Bega</fullName>
+        <default>false</default>
+        <label>ACT - Bega</label>
+    </customValue>
+    <customValue>
+        <fullName>ACT - Cooma</fullName>
+        <default>false</default>
+        <label>ACT - Cooma</label>
+    </customValue>
+    <customValue>
+        <fullName>ACT - Cowra</fullName>
+        <default>false</default>
+        <label>ACT - Cowra</label>
+    </customValue>
+    <customValue>
+        <fullName>ACT - Dubbo</fullName>
+        <default>false</default>
+        <label>ACT - Dubbo</label>
+    </customValue>
+    <customValue>
+        <fullName>ACT - Forbes/Parkes</fullName>
+        <default>false</default>
+        <label>ACT - Forbes/Parkes</label>
+    </customValue>
+    <customValue>
+        <fullName>ACT - Goulburn</fullName>
+        <default>false</default>
+        <label>ACT - Goulburn</label>
+    </customValue>
+    <customValue>
+        <fullName>ACT - Local</fullName>
+        <default>false</default>
+        <label>ACT - Local</label>
+    </customValue>
+    <customValue>
+        <fullName>ACT - Narooma</fullName>
+        <default>false</default>
+        <label>ACT - Narooma</label>
+    </customValue>
+    <customValue>
+        <fullName>ACT - Orange</fullName>
+        <default>false</default>
+        <label>ACT - Orange</label>
+    </customValue>
+    <customValue>
+        <fullName>ACT - Queanbeyan</fullName>
+        <default>false</default>
+        <label>ACT - Queanbeyan</label>
+    </customValue>
+    <customValue>
+        <fullName>ACT - Wagga Wagga</fullName>
+        <default>false</default>
+        <label>ACT - Wagga Wagga</label>
+    </customValue>
+    <customValue>
+        <fullName>ACT - Young</fullName>
+        <default>false</default>
+        <label>ACT - Young</label>
+    </customValue>
+    <customValue>
+        <fullName>ILLA - Far South Coast</fullName>
+        <default>false</default>
+        <label>ILLA - Far South Coast</label>
+    </customValue>
+    <customValue>
+        <fullName>ILLA - Local</fullName>
+        <default>false</default>
+        <label>ILLA - Local</label>
+    </customValue>
+    <customValue>
+        <fullName>ILLA - Out of Area</fullName>
+        <default>false</default>
+        <label>ILLA - Out of Area</label>
+    </customValue>
+    <customValue>
+        <fullName>ILLA - Shoalhaven</fullName>
+        <default>false</default>
+        <label>ILLA - Shoalhaven</label>
+    </customValue>
+    <customValue>
+        <fullName>ILLA - Southern Highlands</fullName>
+        <default>false</default>
+        <label>ILLA - Southern Highlands</label>
+    </customValue>
+    <customValue>
+        <fullName>NCL-Central Coast</fullName>
+        <default>false</default>
+        <label>NCL-Central Coast</label>
+    </customValue>
+    <customValue>
+        <fullName>NCL-Central West</fullName>
+        <default>false</default>
+        <label>NCL-Central West</label>
+    </customValue>
+    <customValue>
+        <fullName>NCL-Hunter</fullName>
+        <default>false</default>
+        <label>NCL-Hunter</label>
+    </customValue>
+    <customValue>
+        <fullName>NCL-Manning</fullName>
+        <default>false</default>
+        <label>NCL-Manning</label>
+    </customValue>
+    <customValue>
+        <fullName>NCL-Newcastle</fullName>
+        <default>false</default>
+        <label>NCL-Newcastle</label>
+    </customValue>
+    <customValue>
+        <fullName>NNSW - Armidale</fullName>
+        <default>false</default>
+        <label>NNSW - Armidale</label>
+    </customValue>
+    <customValue>
+        <fullName>NNSW - Byron/Ballina/lismore</fullName>
+        <default>false</default>
+        <label>NNSW - Byron/Ballina/Lismore</label>
+    </customValue>
+    <customValue>
+        <fullName>NNSW - Coffs Harbour</fullName>
+        <default>false</default>
+        <label>NNSW - Coffs Harbour</label>
+    </customValue>
+    <customValue>
+        <fullName>NNSW - Glen Innes/Inverell</fullName>
+        <default>false</default>
+        <label>NNSW - Glen Innes/Inverell</label>
+    </customValue>
+    <customValue>
+        <fullName>NNSW - Other</fullName>
+        <default>false</default>
+        <label>NNSW - Other</label>
+    </customValue>
+    <customValue>
+        <fullName>NNSW - Port Macquarie/Kempsey</fullName>
+        <default>false</default>
+        <label>NNSW - Port Macquarie/Kempsey</label>
+    </customValue>
+    <customValue>
+        <fullName>NNSW - Tamworth</fullName>
+        <default>false</default>
+        <label>NNSW - Tamworth</label>
+    </customValue>
+    <customValue>
+        <fullName>NNSW - Tweed Heads</fullName>
+        <default>false</default>
+        <label>NNSW - Tweed Heads</label>
+    </customValue>
+    <customValue>
+        <fullName>NT - Alice Springs</fullName>
+        <default>false</default>
+        <label>NT - Alice Springs</label>
+    </customValue>
+    <customValue>
+        <fullName>NT - Katherine</fullName>
+        <default>false</default>
+        <label>NT - Katherine</label>
+    </customValue>
+    <customValue>
+        <fullName>NT - Local</fullName>
+        <default>false</default>
+        <label>NT - Local</label>
+    </customValue>
+    <customValue>
+        <fullName>QLD - Brisbane</fullName>
+        <default>false</default>
+        <label>QLD - Brisbane</label>
+    </customValue>
+    <customValue>
+        <fullName>QLD - Central West</fullName>
+        <default>false</default>
+        <label>QLD - Central West</label>
+    </customValue>
+    <customValue>
+        <fullName>QLD - Darling Downs</fullName>
+        <default>false</default>
+        <label>QLD - Darling Downs</label>
+    </customValue>
+    <customValue>
+        <fullName>QLD - Far North</fullName>
+        <default>false</default>
+        <label>QLD - Far North</label>
+    </customValue>
+    <customValue>
+        <fullName>QLD - Fitzroy</fullName>
+        <default>false</default>
+        <label>QLD - Fitzroy</label>
+    </customValue>
+    <customValue>
+        <fullName>QLD - Gold Coast</fullName>
+        <default>false</default>
+        <label>QLD - Gold Coast</label>
+    </customValue>
+    <customValue>
+        <fullName>QLD - Mackay</fullName>
+        <default>false</default>
+        <label>QLD - Mackay</label>
+    </customValue>
+    <customValue>
+        <fullName>QLD - Northern</fullName>
+        <default>false</default>
+        <label>QLD - Northern</label>
+    </customValue>
+    <customValue>
+        <fullName>QLD - North West</fullName>
+        <default>false</default>
+        <label>QLD - North West</label>
+    </customValue>
+    <customValue>
+        <fullName>QLD - South West</fullName>
+        <default>false</default>
+        <label>QLD - South West</label>
+    </customValue>
+    <customValue>
+        <fullName>QLD - Sunshine Coast</fullName>
+        <default>false</default>
+        <label>QLD - Sunshine Coast</label>
+    </customValue>
+    <customValue>
+        <fullName>QLD - West Moreton</fullName>
+        <default>false</default>
+        <label>QLD - West Moreton</label>
+    </customValue>
+    <customValue>
+        <fullName>QLD - Wide Bay/Burnett</fullName>
+        <default>false</default>
+        <label>QLD - Wide Bay/Burnett</label>
+    </customValue>
+    <customValue>
+        <fullName>SA - Adelaide</fullName>
+        <default>false</default>
+        <label>SA - Adelaide</label>
+    </customValue>
+    <customValue>
+        <fullName>SA - Adelaide Hills</fullName>
+        <default>false</default>
+        <label>SA - Adelaide Hills</label>
+    </customValue>
+    <customValue>
+        <fullName>SA - Barossa</fullName>
+        <default>false</default>
+        <label>SA - Barossa</label>
+    </customValue>
+    <customValue>
+        <fullName>SA - Clare Valley</fullName>
+        <default>false</default>
+        <label>SA - Clare Valley</label>
+    </customValue>
+    <customValue>
+        <fullName>SA - Eyre Peninsula</fullName>
+        <default>false</default>
+        <label>SA - Eyre Peninsula</label>
+    </customValue>
+    <customValue>
+        <fullName>SA - Far East</fullName>
+        <default>false</default>
+        <label>SA - Far East</label>
+    </customValue>
+    <customValue>
+        <fullName>SA - Fleurieu</fullName>
+        <default>false</default>
+        <label>SA - Fleurieu</label>
+    </customValue>
+    <customValue>
+        <fullName>SA - Flinders</fullName>
+        <default>false</default>
+        <label>SA - Flinders</label>
+    </customValue>
+    <customValue>
+        <fullName>SA - Gawler</fullName>
+        <default>false</default>
+        <label>SA - Gawler</label>
+    </customValue>
+    <customValue>
+        <fullName>SA - Limestone Coast</fullName>
+        <default>false</default>
+        <label>SA - Limestone Coast</label>
+    </customValue>
+    <customValue>
+        <fullName>SA - Lower South East</fullName>
+        <default>false</default>
+        <label>SA - Lower South East</label>
+    </customValue>
+    <customValue>
+        <fullName>SA - Murraylands/Riverland</fullName>
+        <default>false</default>
+        <label>SA - Murraylands/Riverland</label>
+    </customValue>
+    <customValue>
+        <fullName>SA - Yorke Peninsula</fullName>
+        <default>false</default>
+        <label>SA - Yorke Peninsula</label>
+    </customValue>
+    <customValue>
+        <fullName>SYD - Canterbury Bankstown</fullName>
+        <default>false</default>
+        <label>SYD - Canterbury Bankstown</label>
+    </customValue>
+    <customValue>
+        <fullName>SYD - Eastern Suburbs</fullName>
+        <default>false</default>
+        <label>SYD - Eastern Suburbs</label>
+    </customValue>
+    <customValue>
+        <fullName>SYD - Inner West</fullName>
+        <default>false</default>
+        <label>SYD - Inner West</label>
+    </customValue>
+    <customValue>
+        <fullName>SYD - Lower North Shore</fullName>
+        <default>false</default>
+        <label>SYD - Lower North Shore</label>
+    </customValue>
+    <customValue>
+        <fullName>SYD - Northern Beaches</fullName>
+        <default>false</default>
+        <label>SYD - Northern Beaches</label>
+    </customValue>
+    <customValue>
+        <fullName>SYD - North West</fullName>
+        <default>false</default>
+        <label>SYD - North West</label>
+    </customValue>
+    <customValue>
+        <fullName>SYD - Outer West</fullName>
+        <default>false</default>
+        <label>SYD - Outer West</label>
+    </customValue>
+    <customValue>
+        <fullName>SYD - Parramatta</fullName>
+        <default>false</default>
+        <label>SYD - Parramatta</label>
+    </customValue>
+    <customValue>
+        <fullName>SYD - South Sydney</fullName>
+        <default>false</default>
+        <label>SYD - South Sydney</label>
+    </customValue>
+    <customValue>
+        <fullName>SYD - South West</fullName>
+        <default>false</default>
+        <label>SYD - South West</label>
+    </customValue>
+    <customValue>
+        <fullName>SYD - St George</fullName>
+        <default>false</default>
+        <label>SYD - St George</label>
+    </customValue>
+    <customValue>
+        <fullName>SYD - Sutherland</fullName>
+        <default>false</default>
+        <label>SYD - Sutherland</label>
+    </customValue>
+    <customValue>
+        <fullName>SYD - Sydney City</fullName>
+        <default>false</default>
+        <label>SYD - Sydney City</label>
+    </customValue>
+    <customValue>
+        <fullName>SYD - Upper North Shore</fullName>
+        <default>false</default>
+        <label>SYD - Upper North Shore</label>
+    </customValue>
+    <customValue>
+        <fullName>Tasmania - North East</fullName>
+        <default>false</default>
+        <label>Tasmania - North East</label>
+    </customValue>
+    <customValue>
+        <fullName>Tasmania - North West</fullName>
+        <default>false</default>
+        <label>Tasmania - North West</label>
+    </customValue>
+    <customValue>
+        <fullName>Tasmania - South</fullName>
+        <default>false</default>
+        <label>Tasmania - South</label>
+    </customValue>
+    <customValue>
+        <fullName>VIC - Barwon</fullName>
+        <default>false</default>
+        <label>VIC - Barwon</label>
+    </customValue>
+    <customValue>
+        <fullName>VIC - Central Highlands</fullName>
+        <default>false</default>
+        <label>VIC - Central Highlands</label>
+    </customValue>
+    <customValue>
+        <fullName>VIC - Gippsland</fullName>
+        <default>false</default>
+        <label>VIC - Gippsland</label>
+    </customValue>
+    <customValue>
+        <fullName>VIC - Goulburn</fullName>
+        <default>false</default>
+        <label>VIC - Goulburn</label>
+    </customValue>
+    <customValue>
+        <fullName>VIC - Great South Coast</fullName>
+        <default>false</default>
+        <label>VIC - Great South Coast</label>
+    </customValue>
+    <customValue>
+        <fullName>VIC - Loddon</fullName>
+        <default>false</default>
+        <label>VIC - Loddon</label>
+    </customValue>
+    <customValue>
+        <fullName>VIC - Mallee</fullName>
+        <default>false</default>
+        <label>VIC - Mallee</label>
+    </customValue>
+    <customValue>
+        <fullName>VIC - Metro</fullName>
+        <default>false</default>
+        <label>VIC - Metro</label>
+    </customValue>
+    <customValue>
+        <fullName>VIC - Ovens Murray</fullName>
+        <default>false</default>
+        <label>VIC - Ovens Murray</label>
+    </customValue>
+    <customValue>
+        <fullName>VIC - Southern Mallee</fullName>
+        <default>false</default>
+        <label>VIC - Southern Mallee</label>
+    </customValue>
+    <customValue>
+        <fullName>WA - Bunbury</fullName>
+        <default>false</default>
+        <label>WA - Bunbury</label>
+    </customValue>
+    <customValue>
+        <fullName>WA - Goldfields/Esperance</fullName>
+        <default>false</default>
+        <label>WA - Goldfields/Esperance</label>
+    </customValue>
+    <customValue>
+        <fullName>WA - Great Southern</fullName>
+        <default>false</default>
+        <label>WA - Great Southern</label>
+    </customValue>
+    <customValue>
+        <fullName>WA - Kimberley</fullName>
+        <default>false</default>
+        <label>WA - Kimberley</label>
+    </customValue>
+    <customValue>
+        <fullName>WA - Mid West</fullName>
+        <default>false</default>
+        <label>WA - Mid West</label>
+    </customValue>
+    <customValue>
+        <fullName>WA - Peel</fullName>
+        <default>false</default>
+        <label>WA - Peel</label>
+    </customValue>
+    <customValue>
+        <fullName>WA - Perth</fullName>
+        <default>false</default>
+        <label>WA - Perth</label>
+    </customValue>
+    <customValue>
+        <fullName>WA - Pilbara</fullName>
+        <default>false</default>
+        <label>WA - Pilbara</label>
+    </customValue>
+    <customValue>
+        <fullName>WA - South West</fullName>
+        <default>false</default>
+        <label>WA - South West</label>
+    </customValue>
+    <customValue>
+        <fullName>WA - Wheatbelt</fullName>
+        <default>false</default>
+        <label>WA - Wheatbelt</label>
+    </customValue>
+    <customValue>
+        <fullName>WA - Gascoyne</fullName>
+        <default>false</default>
+        <label>WA - Gascoyne</label>
+    </customValue>
+    <masterLabel>Regions</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

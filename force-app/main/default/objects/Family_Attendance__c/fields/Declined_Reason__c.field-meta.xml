@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Declined_Reason__c</fullName>
+    <description>Reason why families are not interested in attending an event. Differs from cancellation reason which outlines why they were interested but can no longer attend.</description>
+    <label>Declined Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Date/s.</fullName>
+                <default>false</default>
+                <label>Date/s.</label>
+            </value>
+            <value>
+                <fullName>Venue.</fullName>
+                <default>false</default>
+                <label>Venue.</label>
+            </value>
+            <value>
+                <fullName>Distance / too far to travel</fullName>
+                <default>false</default>
+                <label>Distance / too far to travel</label>
+            </value>
+            <value>
+                <fullName>Ill-health.</fullName>
+                <default>false</default>
+                <label>Ill-health.</label>
+            </value>
+            <value>
+                <fullName>In hospital / on treatment.</fullName>
+                <default>false</default>
+                <label>In hospital / on treatment.</label>
+            </value>
+            <value>
+                <fullName>Sport/club/family/religious commitment.</fullName>
+                <default>false</default>
+                <label>Sport/club/family/religious commitment.</label>
+            </value>
+            <value>
+                <fullName>We don&apos;t need the support right now</fullName>
+                <default>false</default>
+                <label>We don&apos;t need the support right now</label>
+            </value>
+            <value>
+                <fullName>Please give our place to another family this time.</fullName>
+                <default>false</default>
+                <label>Please give our place to another family this time.</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

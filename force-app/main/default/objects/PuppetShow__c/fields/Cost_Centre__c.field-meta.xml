@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cost_Centre__c</fullName>
+    <label>Cost Centre</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1110 - Corporate Partnerships</fullName>
+                <default>false</default>
+                <label>1110 - Corporate Partnerships</label>
+            </value>
+            <value>
+                <fullName>1120 - Corporate Grant</fullName>
+                <default>false</default>
+                <label>1120 - Corporate Grant</label>
+            </value>
+            <value>
+                <fullName>1130 - Government Grants</fullName>
+                <default>false</default>
+                <label>1130 - Government Grants</label>
+            </value>
+            <value>
+                <fullName>1210 - Major Gifts</fullName>
+                <default>false</default>
+                <label>1210 - Major Gifts</label>
+            </value>
+            <value>
+                <fullName>1220 - Private Trusts</fullName>
+                <default>false</default>
+                <label>1220 - Private Trusts</label>
+            </value>
+            <value>
+                <fullName>1310 - Supper Club</fullName>
+                <default>false</default>
+                <label>1310 - Supper Club</label>
+            </value>
+            <value>
+                <fullName>1320 - Dine at Mine</fullName>
+                <default>false</default>
+                <label>1320 - Dine at Mine</label>
+            </value>
+            <value>
+                <fullName>1330 - Escarpade</fullName>
+                <default>false</default>
+                <label>1330 - Escarpade</label>
+            </value>
+            <value>
+                <fullName>1340 - Convoy</fullName>
+                <default>false</default>
+                <label>1340 - Convoy</label>
+            </value>
+            <value>
+                <fullName>1350 - 1000 Kms for Kids</fullName>
+                <default>false</default>
+                <label>1350 - 1000 Kms for Kids</label>
+            </value>
+            <value>
+                <fullName>1360 - WesCarpade</fullName>
+                <default>false</default>
+                <label>1360 - WesCarpade</label>
+            </value>
+            <value>
+                <fullName>1398 - Event - Other</fullName>
+                <default>false</default>
+                <label>1398 - Event - Other</label>
+            </value>
+            <value>
+                <fullName>1400 - Donor Relations</fullName>
+                <default>false</default>
+                <label>1400 - Donor Relations</label>
+            </value>
+            <value>
+                <fullName>1410 - RG Face to Face</fullName>
+                <default>false</default>
+                <label>1410 - RG Face to Face</label>
+            </value>
+            <value>
+                <fullName>1420 - RG Telemarketing</fullName>
+                <default>false</default>
+                <label>1420 - RG Telemarketing</label>
+            </value>
+            <value>
+                <fullName>1430 - RG Other Appeal</fullName>
+                <default>false</default>
+                <label>1430 - RG Other Appeal</label>
+            </value>
+            <value>
+                <fullName>1440 - RG DM</fullName>
+                <default>false</default>
+                <label>1440 - RG DM</label>
+            </value>
+            <value>
+                <fullName>1460 - Acquisition Christmas Appeal</fullName>
+                <default>false</default>
+                <label>1460 - Acquisition Christmas Appeal</label>
+            </value>
+            <value>
+                <fullName>1470 - Acquisition Tax Appeal</fullName>
+                <default>false</default>
+                <label>1470 - Acquisition Tax Appeal</label>
+            </value>
+            <value>
+                <fullName>1510 - Renewal Christmas Appeal</fullName>
+                <default>false</default>
+                <label>1510 - Renewal Christmas Appeal</label>
+            </value>
+            <value>
+                <fullName>1520 - Renewal Tax Appeal</fullName>
+                <default>false</default>
+                <label>1520 - Renewal Tax Appeal</label>
+            </value>
+            <value>
+                <fullName>1530 - Renewal Spring Appeal</fullName>
+                <default>false</default>
+                <label>1530 - Renewal Spring Appeal</label>
+            </value>
+            <value>
+                <fullName>1540 - Renewal Autumn</fullName>
+                <default>false</default>
+                <label>1540 - Renewal Autumn</label>
+            </value>
+            <value>
+                <fullName>1550 - Renewal Newsletter</fullName>
+                <default>false</default>
+                <label>1550 - Renewal Newsletter</label>
+            </value>
+            <value>
+                <fullName>1610 - Digital Campaign Tight Hairdo / Shout</fullName>
+                <default>false</default>
+                <label>1610 - Digital Campaign Tight Hairdo / Shout</label>
+            </value>
+            <value>
+                <fullName>1620 - Digital Campaign Tax Appeal</fullName>
+                <default>false</default>
+                <label>1620 - Digital Campaign Tax Appeal</label>
+            </value>
+            <value>
+                <fullName>1630 - Digital Campaign - Autumn</fullName>
+                <default>false</default>
+                <label>1630 - Digital Campaign - Autumn</label>
+            </value>
+            <value>
+                <fullName>1640 - Change.Org</fullName>
+                <default>false</default>
+                <label>1640 - Change.Org</label>
+            </value>
+            <value>
+                <fullName>1700 - Supporter Services</fullName>
+                <default>false</default>
+                <label>1700 - Supporter Services</label>
+            </value>
+            <value>
+                <fullName>1801 - Bequests</fullName>
+                <default>false</default>
+                <label>1801 - Bequests</label>
+            </value>
+            <value>
+                <fullName>1910 - Community Fundraising</fullName>
+                <default>false</default>
+                <label>1910 - Community Fundraising</label>
+            </value>
+            <value>
+                <fullName>19201 - Cherry Ball</fullName>
+                <default>false</default>
+                <label>19201 - Cherry Ball</label>
+            </value>
+            <value>
+                <fullName>19202 - Giggle Ball</fullName>
+                <default>false</default>
+                <label>19202 - Giggle Ball</label>
+            </value>
+            <value>
+                <fullName>1920 - Special Events</fullName>
+                <default>false</default>
+                <label>1920 - Special Events</label>
+            </value>
+            <value>
+                <fullName>19299 - Other Special Events</fullName>
+                <default>false</default>
+                <label>19299 - Other Special Events</label>
+            </value>
+            <value>
+                <fullName>1930 - Support / Activity Group</fullName>
+                <default>false</default>
+                <label>1930 - Support / Activity Group</label>
+            </value>
+            <value>
+                <fullName>1940 - Local Corporate Fundraising</fullName>
+                <default>false</default>
+                <label>1940 - Local Corporate Fundraising</label>
+            </value>
+            <value>
+                <fullName>1950 - Clubs &amp; Community</fullName>
+                <default>false</default>
+                <label>1950 - Clubs &amp; Community</label>
+            </value>
+            <value>
+                <fullName>1997 - Community Fundraising - General</fullName>
+                <default>false</default>
+                <label>1997 - Community Fundraising - General</label>
+            </value>
+            <value>
+                <fullName>2110 - Mini Camp</fullName>
+                <default>false</default>
+                <label>2110 - Mini Camp</label>
+            </value>
+            <value>
+                <fullName>2120 - Junior Camp</fullName>
+                <default>false</default>
+                <label>2120 - Junior Camp</label>
+            </value>
+            <value>
+                <fullName>2130 - Middle Camp</fullName>
+                <default>false</default>
+                <label>2130 - Middle Camp</label>
+            </value>
+            <value>
+                <fullName>2140 - Family Camp</fullName>
+                <default>false</default>
+                <label>2140 - Family Camp</label>
+            </value>
+            <value>
+                <fullName>2145 - KICC Family Camp</fullName>
+                <default>false</default>
+                <label>2145 - KICC Family Camp</label>
+            </value>
+            <value>
+                <fullName>2150 - Combo Camp</fullName>
+                <default>false</default>
+                <label>2150 - Combo Camp</label>
+            </value>
+            <value>
+                <fullName>2155 - KICC Combo Camp</fullName>
+                <default>false</default>
+                <label>2155 - KICC Combo Camp</label>
+            </value>
+            <value>
+                <fullName>2170 - Bereaved Camps</fullName>
+                <default>false</default>
+                <label>2170 - Bereaved Camps</label>
+            </value>
+            <value>
+                <fullName>2180 - Family Fun Days</fullName>
+                <default>false</default>
+                <label>2180 - Family Fun Days</label>
+            </value>
+            <value>
+                <fullName>2185 - KICC Family Fun Days</fullName>
+                <default>false</default>
+                <label>2185 - KICC Family Fun Days</label>
+            </value>
+            <value>
+                <fullName>2210 - Primary School</fullName>
+                <default>false</default>
+                <label>2210 - Primary School</label>
+            </value>
+            <value>
+                <fullName>2310 - Hospital Program</fullName>
+                <default>false</default>
+                <label>2310 - Hospital Program</label>
+            </value>
+            <value>
+                <fullName>2320 - Child Life Therapy</fullName>
+                <default>false</default>
+                <label>2320 - Child Life Therapy</label>
+            </value>
+            <value>
+                <fullName>2410 - Holiday House</fullName>
+                <default>false</default>
+                <label>2410 - Holiday House</label>
+            </value>
+            <value>
+                <fullName>2415 - Salamander Bay</fullName>
+                <default>false</default>
+                <label>2415 - Salamander Bay</label>
+            </value>
+            <value>
+                <fullName>2430 - Other Family Support</fullName>
+                <default>false</default>
+                <label>2430 - Other Family Support</label>
+            </value>
+            <value>
+                <fullName>2450 - Family Experience</fullName>
+                <default>false</default>
+                <label>2450 - Family Experience</label>
+            </value>
+            <value>
+                <fullName>2510 - Kids App</fullName>
+                <default>false</default>
+                <label>2510 - Kids App</label>
+            </value>
+            <value>
+                <fullName>2701 - Volunteer Programs</fullName>
+                <default>false</default>
+                <label>2701 - Volunteer Programs</label>
+            </value>
+            <value>
+                <fullName>2710 - Volunteer - Induction &amp; Training</fullName>
+                <default>false</default>
+                <label>2710 - Volunteer - Induction &amp; Training</label>
+            </value>
+            <value>
+                <fullName>2720 - Volunteer - Oranges</fullName>
+                <default>false</default>
+                <label>2720 - Volunteer - Oranges</label>
+            </value>
+            <value>
+                <fullName>2810 - Program Promotion &amp; Awareness</fullName>
+                <default>false</default>
+                <label>2810 - Program Promotion &amp; Awareness</label>
+            </value>
+            <value>
+                <fullName>2830 - Program Development</fullName>
+                <default>false</default>
+                <label>2830 - Program Development</label>
+            </value>
+            <value>
+                <fullName>2840 - Program Evaluation</fullName>
+                <default>false</default>
+                <label>2840 - Program Evaluation</label>
+            </value>
+            <value>
+                <fullName>2898 - Programs - General</fullName>
+                <default>false</default>
+                <label>2898 - Programs - General</label>
+            </value>
+            <value>
+                <fullName>3100 - Marketing - Media</fullName>
+                <default>false</default>
+                <label>3100 - Marketing - Media</label>
+            </value>
+            <value>
+                <fullName>3200 - Marketing - Brand</fullName>
+                <default>false</default>
+                <label>3200 - Marketing - Brand</label>
+            </value>
+            <value>
+                <fullName>3400 - Marketing - Website</fullName>
+                <default>false</default>
+                <label>3400 - Marketing - Website</label>
+            </value>
+            <value>
+                <fullName>4100 - General P&amp;C</fullName>
+                <default>false</default>
+                <label>4100 - General P&amp;C</label>
+            </value>
+            <value>
+                <fullName>5200 - Finance</fullName>
+                <default>false</default>
+                <label>5200 - Finance</label>
+            </value>
+            <value>
+                <fullName>6000 - CEO</fullName>
+                <default>false</default>
+                <label>6000 - CEO</label>
+            </value>
+            <value>
+                <fullName>7000 - Board</fullName>
+                <default>false</default>
+                <label>7000 - Board</label>
+            </value>
+            <value>
+                <fullName>1001 - Fundraising General DO NOT USE</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>1001 - Fundraising General DO NOT USE</label>
+            </value>
+            <value>
+                <fullName>3000 - Marketing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>3000 - Marketing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Contact</entityName>
+    <fieldName>Volunteer_Onboarding_Status__c</fieldName>
+    <masterLabel>Volunteer Onboarding Journey</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Complete ACF Training&lt;/p&gt;</info>
+        <picklistValueName>ACF Training &amp; Certification</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Final Induction!&lt;/p&gt;</info>
+        <picklistValueName>Induction</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Schedule Interview with staff&lt;/p&gt;</info>
+        <picklistValueName>Interview</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Complete all online learning!&lt;/p&gt;</info>
+        <picklistValueName>Online Learning</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Contact both references&lt;/p&gt;</info>
+        <picklistValueName>Reference Checks</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Volunteer</recordTypeName>
+</PathAssistant>

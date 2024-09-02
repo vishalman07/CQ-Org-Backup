@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Excluding safeguarding children</description>
+        <name>New_Incident_Email_Alert</name>
+        <label>New Incident Email Alert SFG</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>Incident__c.New_Incident_Email_Alert</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Name</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Incident__c.New_Incident_Email_Alert</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>60.0</apiVersion>
+    <description>Emails Damian all incidents except safeguarding incidents.</description>
+    <environments>Default</environments>
+    <interviewLabel>Incident Emails Alerts- not Safeguarding {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Incident Emails Alerts- not Safeguarding</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>New_Incident_Email_Alert</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Safeguarding Children</stringValue>
+            </value>
+        </filters>
+        <object>Incident__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

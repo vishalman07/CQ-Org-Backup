@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Activity_to_Pardot</name>
+        <label>Send Activity to Pardot</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <actionName>PardotExternalActivityPublisher</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>email</name>
+            <value>
+                <elementReference>$Record.npsp__Primary_Contact__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>extension</name>
+            <value>
+                <stringValue>New_funraisin_registration_Zap</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>type</name>
+            <value>
+                <stringValue>Funraisin_Registration</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>value</name>
+            <value>
+                <stringValue>Test Value by Flow</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>PardotExternalActivityPublisher</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>Donation_Opportunity</name>
+        <label>Donation Opportunity</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Donation_Opportunity_Created</name>
+            <conditionLogic>3 AND (1 OR 2)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0122x000000hc32AAA</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0120K0000019bzzQAA</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.npsp__Primary_Contact__r.Email</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Activity_to_Pardot</targetReference>
+            </connector>
+            <label>Donation Opportunity Created</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Capture Funding Activity {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Capture Funding Activity</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Donation_Opportunity</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

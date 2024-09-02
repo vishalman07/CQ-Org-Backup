@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact$Power_of_One__c</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Id</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>7012x000000Ljzv</value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>Contact$Id</primaryTableColumn>
+        <relatedTable>CampaignMember-Campaign</relatedTable>
+        <relatedTableJoinColumn>Contact</relatedTableJoinColumn>
+    </crossFilters>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact$Id</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>2020 Xmas - RR W1</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>xContacts_with_or_without_payment_txns__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$X2020_Camp_In_Join_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

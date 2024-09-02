@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign$Name</field>
+    </columns>
+    <columns>
+        <field>Campaign.Family_Attendances__r.Family_Member_Attendance__r$Contact__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Campaign.Family_Attendances__r.Family_Member_Attendance__r$Contact__c.Year_Age__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Family_Attendances__r.Family_Member_Attendance__r$Contact__c.Family_Member_Type__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Family_Attendances__r$FA_00000__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Family_Attendances__r.Family_Member_Attendance__r$Companion_Name__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Family_Attendances__r.Family_Member_Attendance__r$Contact__c.FamilyMemberStatus__c</field>
+    </columns>
+    <description>Trying to find a report to give no of aged camps for request to attends</description>
+    <filter>
+        <criteriaItems>
+            <column>Campaign.Family_Attendances__r$FA_00000__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Request to Attend,Accepted</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>SYD1906 Mini Camp</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Aged Camp Attendance</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Campaigns_with_Family_Attendances_with_Family_Memb__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Campaign$StartDate</dateColumn>
+        <interval>INTERVAL_CURY</interval>
+    </timeFrameFilter>
+</Report>

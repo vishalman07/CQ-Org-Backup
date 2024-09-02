@@ -1,0 +1,35 @@
+{
+  "type" : "sfdc_cms__trustedSites",
+  "title" : "trustedSites",
+  "contentBody" : {
+    "trustedSites" : [ {
+      "isActive" : true,
+      "source" : "https://www.googletagmanager.com",
+      "sourceName" : "Google Tag manger"
+    }, {
+      "isActive" : true,
+      "source" : "https://www.google-analytics.com",
+      "sourceName" : "Google Anlytics"
+    }, {
+      "isActive" : true,
+      "source" : "https://fonts.googleapis.com",
+      "sourceName" : "CQ_GoogleFont"
+    }, {
+      "isActive" : true,
+      "source" : "https://fonts.gstatic.com",
+      "sourceName" : "CQ_GoogleFontStatic"
+    }, {
+      "isActive" : true,
+      "source" : "https://edge.fullstory.com",
+      "sourceName" : "FullStory"
+    }, {
+      "isActive" : true,
+      "source" : "https://edge.fullstory.com/s/fs.js",
+      "sourceName" : "Fullstory .com"
+    }, {
+      "isActive" : true,
+      "source" : "https://rs.fullstory.com/rec/page",
+      "sourceName" : "Fullstory Page"
+    } ]
+  }
+}

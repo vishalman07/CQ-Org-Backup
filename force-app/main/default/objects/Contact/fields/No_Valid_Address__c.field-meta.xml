@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Valid_Address__c</fullName>
+    <formula>OR(
+
+  ISBLANK(MailingState),
+
+  ISBLANK(MailingStreet),
+
+  ISBLANK(MailingCity),
+
+  ISBLANK(MailingPostalCode), RTS__c=True
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>No Valid Address</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

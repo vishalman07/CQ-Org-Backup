@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>Line</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Contact$CreatedDate</groupingColumn>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Contact.npe03__R00N80000002bOmREAU__r$npe03__Recurring_Donation_Campaign__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.npe03__R00N80000002bOmREAU__r$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact$Power_of_One__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact.npe03__R00N80000002bOmREAU__r$npe03__Amount__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>CDF1</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(
+    CONTAINS(npe03__Recurring_Donation__c.Name,&quot;Yearly&quot;),npe03__Recurring_Donation__c.npe03__Amount__c/12,
+IF(
+    CONTAINS(npe03__Recurring_Donation__c.Name,&quot;Week&quot;),npe03__Recurring_Donation__c.npe03__Amount__c*4,
+IF(
+    CONTAINS(npe03__Recurring_Donation__c.Name,&quot;Monthly&quot;),
+npe03__Recurring_Donation__c.npe03__Amount__c,
+npe03__Recurring_Donation__c.npe03__Amount__c
+)
+)
+)</calculatedFormula>
+        <dataType>Double</dataType>
+        <developerName>CDF1</developerName>
+        <label>Scaled Monthly amount</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <description>For 23 RG dashboard</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact.npe03__R00N80000002bOmREAU__r$npsp__Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Year</dateGranularity>
+        <field>Contact$CreatedDate</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.npe03__R00N80000002bOmREAU__r$npe03__Installment_Period__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>RG Individuals Active by Campaign</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Recurring_Donations__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Contact.npe03__R00N80000002bOmREAU__r$npe03__Recurring_Donation_Campaign__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

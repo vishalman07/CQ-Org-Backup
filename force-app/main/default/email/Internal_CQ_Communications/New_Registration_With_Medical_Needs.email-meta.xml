@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Logo_Letterhead</letterhead>
+    <name>New Registration With Medical Needs</name>
+    <style>freeForm</style>
+    <subject>{!Family_Member_Attendance__c.Contact__c} registered with medical needs</subject>
+    <textOnly>Dear RPC,
+
+The following child has registered {!Family_Member_Attendance__c.Contact__c} ({!Family_Member_Attendance__c.Id}) for {!Family_Member_Attendance__c.Event__c} and requires a medical form or to bring a signed management plan/webster pack.
+
+Thanks,
+
+Camp Quality.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

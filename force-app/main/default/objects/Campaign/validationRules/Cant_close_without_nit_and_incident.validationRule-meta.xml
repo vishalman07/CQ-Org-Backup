@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cant_close_without_nit_and_incident</fullName>
+    <active>false</active>
+    <errorConditionFormula>if(
+AND (
+ OR ( CONTAINS(TEXT( Event_Type__c ) , &quot;Camp&quot;),TEXT(Event_Type__c ) = &quot;Family Fun Day&quot;),
+OR (isblank( No_of_NIT__c ), isblank( No_Of_Incidents_Reported__c )), 
+text(Status) = &quot;Completed&quot;,$User.Id != &quot;0052x000003blb6AAA&quot;), True,false)</errorConditionFormula>
+    <errorMessage>You must complete NIT and incident sections before closing event</errorMessage>
+</ValidationRule>

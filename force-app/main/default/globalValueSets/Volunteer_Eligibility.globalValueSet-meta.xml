@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Meet the Vollie Team</fullName>
+        <default>false</default>
+        <label>Meet the Vollie Team</label>
+    </customValue>
+    <customValue>
+        <fullName>Our Values</fullName>
+        <default>false</default>
+        <label>Our Values</label>
+    </customValue>
+    <customValue>
+        <fullName>What If</fullName>
+        <default>false</default>
+        <label>What If</label>
+    </customValue>
+    <customValue>
+        <fullName>Volunteer at Camp Quality</fullName>
+        <default>false</default>
+        <label>Volunteer at Camp Quality</label>
+    </customValue>
+    <customValue>
+        <fullName>Safety</fullName>
+        <default>false</default>
+        <label>Safety</label>
+    </customValue>
+    <customValue>
+        <fullName>Wills Journey</fullName>
+        <default>false</default>
+        <label>Wills Journey</label>
+    </customValue>
+    <customValue>
+        <fullName>Oranges</fullName>
+        <default>false</default>
+        <label>Oranges</label>
+    </customValue>
+    <customValue>
+        <fullName>ySafe Training</fullName>
+        <default>false</default>
+        <label>ySafe Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Being a Rec Vollie</fullName>
+        <default>false</default>
+        <label>Being a Rec Vollie</label>
+    </customValue>
+    <customValue>
+        <fullName>Rec Programs 101</fullName>
+        <default>false</default>
+        <label>Rec Programs 101</label>
+    </customValue>
+    <customValue>
+        <fullName>Helping you on your Recreation Adventure</fullName>
+        <default>false</default>
+        <label>Helping you on your Recreation Adventure</label>
+    </customValue>
+    <customValue>
+        <fullName>Safeguarding Children and Young People Policy</fullName>
+        <default>false</default>
+        <label>Safeguarding Children and Young People Policy</label>
+    </customValue>
+    <customValue>
+        <fullName>Responding to Suspected Child Abuse Policy</fullName>
+        <default>false</default>
+        <label>Responding to Suspected Child Abuse Policy</label>
+    </customValue>
+    <customValue>
+        <fullName>Code of Conduct</fullName>
+        <default>false</default>
+        <label>Code of Conduct</label>
+    </customValue>
+    <customValue>
+        <fullName>Commitment to Safeguarding Children</fullName>
+        <default>false</default>
+        <label>Commitment to Safeguarding Children</label>
+    </customValue>
+    <customValue>
+        <fullName>Volunteer Interview</fullName>
+        <default>false</default>
+        <label>Volunteer Interview</label>
+    </customValue>
+    <customValue>
+        <fullName>Photo ID Sighted</fullName>
+        <default>false</default>
+        <label>Photo ID Sighted</label>
+    </customValue>
+    <customValue>
+        <fullName>Volunteer References</fullName>
+        <default>false</default>
+        <label>Volunteer References</label>
+    </customValue>
+    <customValue>
+        <fullName>Australian Safeguarding Certificate (ACF)</fullName>
+        <default>false</default>
+        <label>Australian Safeguarding Certificate (ACF)</label>
+    </customValue>
+    <customValue>
+        <fullName>WWCC</fullName>
+        <default>false</default>
+        <label>WWCC</label>
+    </customValue>
+    <customValue>
+        <fullName>Induction</fullName>
+        <default>false</default>
+        <label>Induction</label>
+    </customValue>
+    <customValue>
+        <fullName>Doctor Indemnity Insurance Policy</fullName>
+        <default>false</default>
+        <label>Doctor Indemnity Insurance Policy</label>
+    </customValue>
+    <customValue>
+        <fullName>Food Handling Training</fullName>
+        <default>false</default>
+        <label>Food Handling Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Health Practitioner Registration</fullName>
+        <default>false</default>
+        <label>Health Practitioner Registration</label>
+    </customValue>
+    <customValue>
+        <fullName>CPR Certificate</fullName>
+        <default>false</default>
+        <label>CPR Certificate</label>
+    </customValue>
+    <customValue>
+        <fullName>First Aid Certificate</fullName>
+        <default>false</default>
+        <label>First Aid Certificate</label>
+    </customValue>
+    <customValue>
+        <fullName>Lifeguard Certificate</fullName>
+        <default>false</default>
+        <label>Lifeguard Certificate</label>
+    </customValue>
+    <customValue>
+        <fullName>RSA License</fullName>
+        <default>false</default>
+        <label>RSA License</label>
+    </customValue>
+    <customValue>
+        <fullName>Running Rec Programs</fullName>
+        <default>false</default>
+        <label>Running Rec Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>First Aid and Medical Management</fullName>
+        <default>false</default>
+        <label>First Aid and Medical Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Being a Fundraising Vollie</fullName>
+        <default>false</default>
+        <label>Being a Fundraising Vollie</label>
+    </customValue>
+    <customValue>
+        <fullName>Fundraising 101</fullName>
+        <default>false</default>
+        <label>Fundraising 101</label>
+    </customValue>
+    <customValue>
+        <fullName>Helping you on your Fundraising Adventure</fullName>
+        <default>false</default>
+        <label>Helping you on your Fundraising Adventure</label>
+    </customValue>
+    <customValue>
+        <fullName>Signed Position Description</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Signed Position Description</label>
+    </customValue>
+    <description>Eligibility &amp; Compliance requirements for volunteers</description>
+    <masterLabel>Volunteer Eligibility</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

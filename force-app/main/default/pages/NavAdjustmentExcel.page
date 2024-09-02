@@ -1,0 +1,2 @@
+<apex:page controller="NavAdjustmentController" readOnly="true" contentType="application/vnd.ms-excel#SalesForceExport.xls" cache="true">
+</apex:page>

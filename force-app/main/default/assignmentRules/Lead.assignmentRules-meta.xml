@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>CQ Assignment</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <assignedTo>myoungberry@campquality.org.au</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+            <criteriaItems>
+                <field>Lead.Webform_Record_Type__c</field>
+                <operation>equals</operation>
+                <value>Family Application Form</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Parent_1_State__c</field>
+                <operation>equals</operation>
+                <value>VIC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Parent_1_State__c</field>
+                <operation>equals</operation>
+                <value>TAS</value>
+            </criteriaItems>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>myoungberry@campquality.org.au</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Lead.Webform_Record_Type__c</field>
+                <operation>equals</operation>
+                <value>Family Application Form</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Sydney</value>
+            </criteriaItems>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>myoungberry@campquality.org.au</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+            <criteriaItems>
+                <field>Lead.Webform_Record_Type__c</field>
+                <operation>equals</operation>
+                <value>Family Application Form</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Coffs Harbour</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Newcastle</value>
+            </criteriaItems>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>myoungberry@campquality.org.au</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+            <criteriaItems>
+                <field>Lead.Webform_Record_Type__c</field>
+                <operation>equals</operation>
+                <value>Family Application Form</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Canberra</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Illawarra</value>
+            </criteriaItems>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>myoungberry@campquality.org.au</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>1 AND ( 2 OR 3)</booleanFilter>
+            <criteriaItems>
+                <field>Lead.Webform_Record_Type__c</field>
+                <operation>equals</operation>
+                <value>Family Application Form</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Parent_1_State__c</field>
+                <operation>equals</operation>
+                <value>SA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Parent_1_State__c</field>
+                <operation>equals</operation>
+                <value>NT</value>
+            </criteriaItems>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>myoungberry@campquality.org.au</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.Webform_Record_Type__c</field>
+                <operation>equals</operation>
+                <value>Family Application Form</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Parent_1_State__c</field>
+                <operation>equals</operation>
+                <value>QLD</value>
+            </criteriaItems>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>myoungberry@campquality.org.au</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.Webform_Record_Type__c</field>
+                <operation>equals</operation>
+                <value>Family Application Form</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Parent_1_State__c</field>
+                <operation>equals</operation>
+                <value>WA</value>
+            </criteriaItems>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>cbrine@campquality.org.au</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>1 or 2 or 3 or 4</booleanFilter>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>South Australia Office</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Adelaide</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Darwin</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Northern Territory Office</value>
+            </criteriaItems>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Syd_Programs</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 or 2</booleanFilter>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Australian Capital Territory Office</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Canberra</value>
+            </criteriaItems>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>cbrine@campquality.org.au</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>1 or 2 or 3 or 4</booleanFilter>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Victoria Office</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Melbourne</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Hobart</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Tasmania Office</value>
+            </criteriaItems>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Syd_Programs</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 or 2 or 3 or 4</booleanFilter>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Newcastle Office</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Newcastle</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Coffs Harbour</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Northern New South Wales Office</value>
+            </criteriaItems>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Syd_Programs</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 or  2</booleanFilter>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Illawarra Office</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Illawarra</value>
+            </criteriaItems>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Syd_Programs</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 or 2</booleanFilter>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Sydney Office</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Office__c</field>
+                <operation>equals</operation>
+                <value>Sydney</value>
+            </criteriaItems>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>IS_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>New Lead Assignment Rule</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>cbrine@campquality.org.au</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Family Application,In Hospital Family</value>
+            </criteriaItems>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

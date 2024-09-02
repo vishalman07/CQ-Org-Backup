@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CQ_Update_Contact_Details_Channel__c</fullName>
+    <label>CQ Update Contact Details Channel</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DM Mail</fullName>
+                <default>false</default>
+                <label>DM Mail</label>
+            </value>
+            <value>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+                <label>Phone Call</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Updated Details</fullName>
+                <default>false</default>
+                <label>Updated Details</label>
+            </value>
+            <value>
+                <fullName>Updated Email</fullName>
+                <default>false</default>
+                <label>Updated Email</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

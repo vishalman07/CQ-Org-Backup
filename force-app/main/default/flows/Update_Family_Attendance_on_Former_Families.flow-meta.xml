@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <description>Once a family is marked as former, all family attendances in the future are marked as declined to prevent invitations/communications.</description>
+    <environments>Default</environments>
+    <interviewLabel>Update Family Attendance on Former Families {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Family Attendance on Former Families</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Find_family_attendances</name>
+        <label>Find family attendances</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>FA_00000__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Invited</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Event_Date__c</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>$Record.End_Date__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>FA_00000__c</field>
+            <value>
+                <stringValue>Declined</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Family_Attendances__r</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Find_family_attendances</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Family_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Former Offspring Bereaved Family</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Family_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Former Patient Family</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Family_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Former Bereaved Family</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Family_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Former Offspring Family</stringValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

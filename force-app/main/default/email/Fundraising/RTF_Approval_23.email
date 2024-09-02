@@ -1,0 +1,6 @@
+The {!Request_To_Fundraise__c.Name} is ready for approval. 
+Campaign: {!Request_To_Fundraise__c.Campaign__c}
+Fundraiser:{!Request_To_Fundraise__c.Contact__c}
+Link here:{!Request_To_Fundraise__c.Link} 
+Please approve this fundraiser.
+Thank you.

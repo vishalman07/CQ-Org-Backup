@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Need</fullName>
+    <active>true</active>
+    <description>Non-food related allergies</description>
+    <label>Special Need</label>
+    <picklistValues>
+        <picklist>AttributeType__c</picklist>
+        <values>
+            <fullName>DietryNeeds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SpecialNeeds</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Long_Description__c</picklist>
+        <values>
+            <fullName>Allergic to dust mites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Angel Cream</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Antibiotic Erythromycin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Asparaginase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Asprin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Bactrim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Band Aids</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Bee Stings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Bleomycin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Brietal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Ceclor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Codine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Dust</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Elastoplast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Erthromycin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Etoposide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Fentynal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Flucloxacillin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Horses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Ibuprofen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Immpienum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Luenais</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Maxalon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Morphine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Penicillin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Pethidine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Phenergan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Rhinitis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Rulide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Septrim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Soap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Stemitil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Sulphur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Sunscreen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Tegratol</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy - Vancomycin</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

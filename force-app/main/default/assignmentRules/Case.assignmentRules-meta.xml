@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Assign Case By Round Robin</fullName>
+        <active>false</active>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>Portal Cases</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>Salesforce_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Salesforce Support</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Revenue_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR 2 OR  3</booleanFilter>
+            <criteriaItems>
+                <field>Case.Reason</field>
+                <operation>equals</operation>
+                <value>Fundraising - Revenue Report Assistance</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Reason</field>
+                <operation>equals</operation>
+                <value>Fundraising - Other Assistance</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Reason</field>
+                <operation>equals</operation>
+                <value>Fundraising - Data (Duplicates etc)</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Program_Support_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Internal Requests</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Program_Support_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Volunteer Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Contact.Branch_Office__c</field>
+                <operation>equals</operation>
+                <value>Tasmania</value>
+            </criteriaItems>
+            <template>unfiled$public/SUPPORTNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Program_Support_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND ( 2 OR 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Volunteer Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Contact.Branch_Office__c</field>
+                <operation>equals</operation>
+                <value>South Australia</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Contact.Branch_Office__c</field>
+                <operation>equals</operation>
+                <value>Northern Territory</value>
+            </criteriaItems>
+            <template>unfiled$public/SUPPORTNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Program_Support_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Branch__c</field>
+                <operation>equals</operation>
+                <value>Western Australia</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Family Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Reason</field>
+                <operation>equals</operation>
+                <value>Question about upcoming event/experience</value>
+            </criteriaItems>
+            <template>unfiled$public/SUPPORTNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Program_Support_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Family Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Branch__c</field>
+                <operation>equals</operation>
+                <value>Victoria</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Reason</field>
+                <operation>equals</operation>
+                <value>Question about upcoming event/experience</value>
+            </criteriaItems>
+            <template>unfiled$public/SUPPORTNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Program_Support_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Family Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Branch__c</field>
+                <operation>equals</operation>
+                <value>Queensland</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Program_Support_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Contact.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Volunteer</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Program_Support_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Family Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.Branch_Office__c</field>
+                <operation>equals</operation>
+                <value>South Australia</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.Branch_Office__c</field>
+                <operation>equals</operation>
+                <value>Northern Territory</value>
+            </criteriaItems>
+            <template>unfiled$public/SUPPORTNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Program_Support_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Family Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.Branch_Office__c</field>
+                <operation>equals</operation>
+                <value>Western Australia</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Reason</field>
+                <operation>notEqual</operation>
+                <value>Question about upcoming event/experience</value>
+            </criteriaItems>
+            <template>unfiled$public/SUPPORTNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Program_Support_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 OR 3) AND 4</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Family Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.Branch_Office__c</field>
+                <operation>equals</operation>
+                <value>Victoria</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.Branch_Office__c</field>
+                <operation>equals</operation>
+                <value>Tasmania</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Reason</field>
+                <operation>notEqual</operation>
+                <value>Question about upcoming event/experience</value>
+            </criteriaItems>
+            <template>unfiled$public/SUPPORTNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Program_Support_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 OR 3 OR 4 OR 5 OR 6)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Family Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.Branch_Office__c</field>
+                <operation>equals</operation>
+                <value>Australian Capital Territory</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.Branch_Office__c</field>
+                <operation>equals</operation>
+                <value>Illawarra</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.Branch_Office__c</field>
+                <operation>equals</operation>
+                <value>Newcastle</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.Branch_Office__c</field>
+                <operation>equals</operation>
+                <value>Northern New South Wales</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.Branch_Office__c</field>
+                <operation>equals</operation>
+                <value>Sydney</value>
+            </criteriaItems>
+            <template>unfiled$public/SUPPORTNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Program_Support_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Family Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Branch__c</field>
+                <operation>equals</operation>
+                <value>Western Australia</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Reason</field>
+                <operation>equals</operation>
+                <value>Question about upcoming event/experience</value>
+            </criteriaItems>
+            <template>unfiled$public/SUPPORTNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Program_Support_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Program_Support_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Volunteer Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Contact.Branch_Office__c</field>
+                <operation>equals</operation>
+                <value>Sydney</value>
+            </criteriaItems>
+            <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RTS__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RTS = Return to Sender - used for Direct Mail Campaigns</description>
+    <inlineHelpText>RTS = Return to Sender - used for Direct Mail Campaigns. A date the RTS was received should also be entered.</inlineHelpText>
+    <label>RTS</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

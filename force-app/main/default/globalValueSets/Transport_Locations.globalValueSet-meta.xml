@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ACT - McDonalds (Majura Road)</fullName>
+        <default>false</default>
+        <label>ACT - McDonalds (Majura Road)</label>
+    </customValue>
+    <customValue>
+        <fullName>Albion Park - Train Station</fullName>
+        <default>false</default>
+        <label>Albion Park - Train Station</label>
+    </customValue>
+    <customValue>
+        <fullName>Alice Springs</fullName>
+        <default>false</default>
+        <label>Alice Springs</label>
+    </customValue>
+    <customValue>
+        <fullName>Armidale - McDonalds</fullName>
+        <default>false</default>
+        <label>Armidale</label>
+    </customValue>
+    <customValue>
+        <fullName>Ballina</fullName>
+        <default>false</default>
+        <label>Ballina</label>
+    </customValue>
+    <customValue>
+        <fullName>Ballina - McDonalds</fullName>
+        <default>false</default>
+        <label>Ballina - McDonalds</label>
+    </customValue>
+    <customValue>
+        <fullName>Bathurst McDonalds</fullName>
+        <default>false</default>
+        <label>Bathurst McDonalds</label>
+    </customValue>
+    <customValue>
+        <fullName>Bowen - Visitors Information Centre</fullName>
+        <default>false</default>
+        <label>Bowen - Visitors Information Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Brisbane Domestic Terminal</fullName>
+        <default>false</default>
+        <label>Brisbane Domestic Terminal</label>
+    </customValue>
+    <customValue>
+        <fullName>Brisbane City- 276 Albert Street</fullName>
+        <default>false</default>
+        <label>Brisbane City- 276 Albert Street</label>
+    </customValue>
+    <customValue>
+        <fullName>Brooklyn Wharf</fullName>
+        <default>false</default>
+        <label>Brooklyn Wharf</label>
+    </customValue>
+    <customValue>
+        <fullName>Bulahdelah</fullName>
+        <default>false</default>
+        <label>Bulahdelah</label>
+    </customValue>
+    <customValue>
+        <fullName>Bundaberg Airport</fullName>
+        <default>false</default>
+        <label>Bundaberg Airport</label>
+    </customValue>
+    <customValue>
+        <fullName>Burleigh Heads - Stockland</fullName>
+        <default>false</default>
+        <label>Burleigh Heads - Stockland</label>
+    </customValue>
+    <customValue>
+        <fullName>Cairns Central Railway Station Bus Stop</fullName>
+        <default>false</default>
+        <label>Cairns Central Railway Station Bus Stop</label>
+    </customValue>
+    <customValue>
+        <fullName>Cairns Domestic Airport</fullName>
+        <default>false</default>
+        <label>Cairns Domestic Airport</label>
+    </customValue>
+    <customValue>
+        <fullName>Camp</fullName>
+        <default>false</default>
+        <label>Camp - Drop off at / Pick up from</label>
+    </customValue>
+    <customValue>
+        <fullName>Coffs Harbour - McDonalds Sout</fullName>
+        <default>false</default>
+        <label>Coffs Harbour - McDonalds South</label>
+    </customValue>
+    <customValue>
+        <fullName>Coomera Train Station</fullName>
+        <default>false</default>
+        <label>Coomera Train Station</label>
+    </customValue>
+    <customValue>
+        <fullName>Darwin</fullName>
+        <default>false</default>
+        <label>Darwin</label>
+    </customValue>
+    <customValue>
+        <fullName>Distance - I live more than 2 hrs from transport stop</fullName>
+        <default>false</default>
+        <label>Distance - I live more than 2 hrs from transport stop</label>
+    </customValue>
+    <customValue>
+        <fullName>Dreamworld</fullName>
+        <default>false</default>
+        <label>Dreamworld</label>
+    </customValue>
+    <customValue>
+        <fullName>Dubbo</fullName>
+        <default>false</default>
+        <label>Dubbo</label>
+    </customValue>
+    <customValue>
+        <fullName>Emerald Airport</fullName>
+        <default>false</default>
+        <label>Emerald Airport</label>
+    </customValue>
+    <customValue>
+        <fullName>Gladstone Airport</fullName>
+        <default>false</default>
+        <label>Gladstone Airport</label>
+    </customValue>
+    <customValue>
+        <fullName>Glen Innes</fullName>
+        <default>false</default>
+        <label>Glen Innes</label>
+    </customValue>
+    <customValue>
+        <fullName>Goulburn South - McDonalds</fullName>
+        <default>false</default>
+        <label>Goulburn South - McDonalds</label>
+    </customValue>
+    <customValue>
+        <fullName>Grafton - McDonalds</fullName>
+        <default>false</default>
+        <label>Grafton - McDonalds</label>
+    </customValue>
+    <customValue>
+        <fullName>Gundagai Visitors Centre</fullName>
+        <default>false</default>
+        <label>Gundagai Visitors Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Heatherbrae Pies</fullName>
+        <default>false</default>
+        <label>Heatherbrae Pies</label>
+    </customValue>
+    <customValue>
+        <fullName>Herston</fullName>
+        <default>false</default>
+        <label>Herston</label>
+    </customValue>
+    <customValue>
+        <fullName>Hervey Bay Airport</fullName>
+        <default>false</default>
+        <label>Hervey Bay Airport</label>
+    </customValue>
+    <customValue>
+        <fullName>Hobart</fullName>
+        <default>false</default>
+        <label>Hobart</label>
+    </customValue>
+    <customValue>
+        <fullName>Innisfail</fullName>
+        <default>false</default>
+        <label>Innisfail</label>
+    </customValue>
+    <customValue>
+        <fullName>Ipswich</fullName>
+        <default>false</default>
+        <label>Ipswich</label>
+    </customValue>
+    <customValue>
+        <fullName>Kempsey</fullName>
+        <default>false</default>
+        <label>Kempsey</label>
+    </customValue>
+    <customValue>
+        <fullName>Launceston</fullName>
+        <default>false</default>
+        <label>Launceston</label>
+    </customValue>
+    <customValue>
+        <fullName>Lismore</fullName>
+        <default>false</default>
+        <label>Lismore</label>
+    </customValue>
+    <customValue>
+        <fullName>Loganholme</fullName>
+        <default>false</default>
+        <label>Loganholme</label>
+    </customValue>
+    <customValue>
+        <fullName>Mackay Airport</fullName>
+        <default>false</default>
+        <label>Mackay Airport</label>
+    </customValue>
+    <customValue>
+        <fullName>Macksville - Caltex</fullName>
+        <default>false</default>
+        <label>Macksville - Caltex</label>
+    </customValue>
+    <customValue>
+        <fullName>Maroochydore</fullName>
+        <default>false</default>
+        <label>Maroochydore</label>
+    </customValue>
+    <customValue>
+        <fullName>Merimbula Airport</fullName>
+        <default>false</default>
+        <label>Merimbula Airport</label>
+    </customValue>
+    <customValue>
+        <fullName>Moonee Valley Racecourse</fullName>
+        <default>false</default>
+        <label>Moonee Valley Racecourse</label>
+    </customValue>
+    <customValue>
+        <fullName>Morayfield</fullName>
+        <default>false</default>
+        <label>Morayfield</label>
+    </customValue>
+    <customValue>
+        <fullName>Moruya Airport</fullName>
+        <default>false</default>
+        <label>Moruya Airport</label>
+    </customValue>
+    <customValue>
+        <fullName>Movieworld</fullName>
+        <default>false</default>
+        <label>Movieworld</label>
+    </customValue>
+    <customValue>
+        <fullName>Mt Isa</fullName>
+        <default>false</default>
+        <label>Mt Isa</label>
+    </customValue>
+    <customValue>
+        <fullName>Muswellbrook - McDonalds</fullName>
+        <default>false</default>
+        <label>Muswellbrook - McDonalds</label>
+    </customValue>
+    <customValue>
+        <fullName>Nabiac - Caltex</fullName>
+        <default>false</default>
+        <label>Nabiac - Caltex</label>
+    </customValue>
+    <customValue>
+        <fullName>Nabiac Hotel</fullName>
+        <default>false</default>
+        <label>Nabiac Hotel</label>
+    </customValue>
+    <customValue>
+        <fullName>Nambucca Heads</fullName>
+        <default>false</default>
+        <label>Nambucca Heads</label>
+    </customValue>
+    <customValue>
+        <fullName>Nerang</fullName>
+        <default>false</default>
+        <label>Nerang</label>
+    </customValue>
+    <customValue>
+        <fullName>Newcastle</fullName>
+        <default>false</default>
+        <label>Newcastle</label>
+    </customValue>
+    <customValue>
+        <fullName>Noosa</fullName>
+        <default>false</default>
+        <label>Noosa</label>
+    </customValue>
+    <customValue>
+        <fullName>North Mackay - Kay Court cul de sac</fullName>
+        <default>false</default>
+        <label>North Mackay - Kay Court cul de sac</label>
+    </customValue>
+    <customValue>
+        <fullName>Orange - Visitors Centre</fullName>
+        <default>false</default>
+        <label>Orange - Visitors Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Ourimbah Rest Stop</fullName>
+        <default>false</default>
+        <label>Ourimbah Rest Stop</label>
+    </customValue>
+    <customValue>
+        <fullName>Own Transport</fullName>
+        <default>false</default>
+        <label>Own Transport</label>
+    </customValue>
+    <customValue>
+        <fullName>Pheasant&apos;s Nest - 7-11 Northbound</fullName>
+        <default>false</default>
+        <label>Pheasant&apos;s Nest - 7-11 Northbound</label>
+    </customValue>
+    <customValue>
+        <fullName>Pheasant&apos;s Nest 7-11 Southbound</fullName>
+        <default>false</default>
+        <label>Pheasant&apos;s Nest 7-11 Southbound</label>
+    </customValue>
+    <customValue>
+        <fullName>Port Macquarie - McDonalds (Hwy)</fullName>
+        <default>false</default>
+        <label>Port Macquarie - McDonalds (Hwy)</label>
+    </customValue>
+    <customValue>
+        <fullName>Proserpine BP</fullName>
+        <default>false</default>
+        <label>Proserpine BP</label>
+    </customValue>
+    <customValue>
+        <fullName>Robina</fullName>
+        <default>false</default>
+        <label>Robina</label>
+    </customValue>
+    <customValue>
+        <fullName>Rockhampton Airport</fullName>
+        <default>false</default>
+        <label>Rockhampton Airport</label>
+    </customValue>
+    <customValue>
+        <fullName>Seaworld</fullName>
+        <default>false</default>
+        <label>Seaworld</label>
+    </customValue>
+    <customValue>
+        <fullName>Shoalhaven Visitor Centre</fullName>
+        <default>false</default>
+        <label>Shoalhaven Visitor Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Singleton - McDonalds</fullName>
+        <default>false</default>
+        <label>Singleton - McDonalds</label>
+    </customValue>
+    <customValue>
+        <fullName>Speers Point Park</fullName>
+        <default>false</default>
+        <label>Speers Point Park</label>
+    </customValue>
+    <customValue>
+        <fullName>Surfers Paradise</fullName>
+        <default>false</default>
+        <label>Surfers Paradise</label>
+    </customValue>
+    <customValue>
+        <fullName>Sydney Airport</fullName>
+        <default>false</default>
+        <label>Sydney Airport</label>
+    </customValue>
+    <customValue>
+        <fullName>Sydney - Bus - Location TBA</fullName>
+        <default>false</default>
+        <label>Sydney - Bus - Location TBA</label>
+    </customValue>
+    <customValue>
+        <fullName>Sydney - Location TBA</fullName>
+        <default>false</default>
+        <label>Sydney - Location TBA</label>
+    </customValue>
+    <customValue>
+        <fullName>Tamworth -  Anzac Park</fullName>
+        <default>false</default>
+        <label>Tamworth -  Anzac Park</label>
+    </customValue>
+    <customValue>
+        <fullName>Taree South - McDonalds Service Centre</fullName>
+        <default>false</default>
+        <label>Taree South - McDonalds Service Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Toowoomba</fullName>
+        <default>false</default>
+        <label>Toowoomba</label>
+    </customValue>
+    <customValue>
+        <fullName>Townsville Airport</fullName>
+        <default>false</default>
+        <label>Townsville Airport</label>
+    </customValue>
+    <customValue>
+        <fullName>Townsville - Reef HQ</fullName>
+        <default>false</default>
+        <label>Townsville - Reef HQ</label>
+    </customValue>
+    <customValue>
+        <fullName>Townsville - SeaLink Ferry</fullName>
+        <default>false</default>
+        <label>Townsville - SeaLink Ferry</label>
+    </customValue>
+    <customValue>
+        <fullName>Tully Visitor Information Centre</fullName>
+        <default>false</default>
+        <label>Tully Visitor Information Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Tweed Heads Centro Bus Terminal</fullName>
+        <default>false</default>
+        <label>Tweed Heads Centro Bus Terminal</label>
+    </customValue>
+    <customValue>
+        <fullName>Wagga Wagga - Visitors Centre</fullName>
+        <default>false</default>
+        <label>Wagga Wagga - Visitors Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>West Wallsend</fullName>
+        <default>false</default>
+        <label>West Wallsend</label>
+    </customValue>
+    <customValue>
+        <fullName>Yass Service Centre</fullName>
+        <default>false</default>
+        <label>Yass Service Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Wollongong Train Station</fullName>
+        <default>false</default>
+        <label>Wollongong Train Station (Lowden Square)</label>
+    </customValue>
+    <customValue>
+        <fullName>Roma Street Bus Station</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Roma Street Bus Station</label>
+    </customValue>
+    <customValue>
+        <fullName>Cairns Central</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cairns Central</label>
+    </customValue>
+    <customValue>
+        <fullName>McDonald&apos;s Kempsey</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>McDonald&apos;s Kempsey</label>
+    </customValue>
+    <customValue>
+        <fullName>I live more than 1hr from Armidale - Transport to be determined.</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>I live more than 1hr from Armidale - Transport to be determined.</label>
+    </customValue>
+    <customValue>
+        <fullName>Tweed - Transport to be determined</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tweed - Transport to be determined</label>
+    </customValue>
+    <customValue>
+        <fullName>Narrabeen Academy of Sport</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Narrabeen Academy of Sport</label>
+    </customValue>
+    <customValue>
+        <fullName>Outback Splash</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Outback Splash</label>
+    </customValue>
+    <customValue>
+        <fullName>Ballarat</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Ballarat</label>
+    </customValue>
+    <customValue>
+        <fullName>Yelgun Rest Area</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Yelgun Rest Area</label>
+    </customValue>
+    <customValue>
+        <fullName>Location 5</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Location 5</label>
+    </customValue>
+    <customValue>
+        <fullName>McDonald&apos;s Smithfield</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>McDonald&apos;s Smithfield</label>
+    </customValue>
+    <customValue>
+        <fullName>FantaSea</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>FantaSea</label>
+    </customValue>
+    <customValue>
+        <fullName>North Coast</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>North Coast</label>
+    </customValue>
+    <customValue>
+        <fullName>Central Coast</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Central Coast</label>
+    </customValue>
+    <customValue>
+        <fullName>Cairns International Airport</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cairns International Airport</label>
+    </customValue>
+    <customValue>
+        <fullName>McDonald&apos;s Armidale</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>McDonald&apos;s Armidale</label>
+    </customValue>
+    <customValue>
+        <fullName>Yamba</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Yamba McDonalds 7 Treelands Dr, Yamba</label>
+    </customValue>
+    <customValue>
+        <fullName>Taree Service Centre</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Taree Service Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Singleton</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Singleton</label>
+    </customValue>
+    <customValue>
+        <fullName>Musswellbrook</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Musswellbrook</label>
+    </customValue>
+    <customValue>
+        <fullName>Quirindi</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Quirindi</label>
+    </customValue>
+    <customValue>
+        <fullName>M4 Westbound - Red Rooster</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>M4 Westbound - Red Rooster</label>
+    </customValue>
+    <customValue>
+        <fullName>M4 Eastbound - Oporto</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>M4 Eastbound - Oporto</label>
+    </customValue>
+    <customValue>
+        <fullName>BP Chinderah</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BP Chinderah</label>
+    </customValue>
+    <customValue>
+        <fullName>Bangalow</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Bangalow</label>
+    </customValue>
+    <customValue>
+        <fullName>Iluka</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Iluka</label>
+    </customValue>
+    <customValue>
+        <fullName>Molong</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Molong</label>
+    </customValue>
+    <customValue>
+        <fullName>Narooma</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Narooma</label>
+    </customValue>
+    <customValue>
+        <fullName>BP Clybucca</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BP Clybucca</label>
+    </customValue>
+    <customValue>
+        <fullName>Bellingen (Oak St)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Bellingen (Oak St)</label>
+    </customValue>
+    <customValue>
+        <fullName>The Rock United Petroleum</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>The Rock United Petroleum</label>
+    </customValue>
+    <customValue>
+        <fullName>McDonald&apos;s Bowen</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>McDonald&apos;s Bowen</label>
+    </customValue>
+    <customValue>
+        <fullName>Albury</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Albury</label>
+    </customValue>
+    <customValue>
+        <fullName>McDonald&apos;s Bomaderry</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>McDonald&apos;s Bomaderry</label>
+    </customValue>
+    <customValue>
+        <fullName>Fairy Meadow - McDonalds</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fairy Meadow - McDonalds</label>
+    </customValue>
+    <customValue>
+        <fullName>Camp Quality Office</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Camp Quality Office</label>
+    </customValue>
+    <customValue>
+        <fullName>Orleigh Park</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Orleigh Park</label>
+    </customValue>
+    <customValue>
+        <fullName>Russell Street Ext</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Russell Street Ext</label>
+    </customValue>
+    <customValue>
+        <fullName>McDonald&apos;s Hampton Park</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>McDonald&apos;s Hampton Park</label>
+    </customValue>
+    <customValue>
+        <fullName>Pick up from Camp</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pick up from Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>Roma Street</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Roma Street</label>
+    </customValue>
+    <customValue>
+        <fullName>Black Soil</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Black Soil</label>
+    </customValue>
+    <customValue>
+        <fullName>Moss Vale Court House</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Moss Vale Court House</label>
+    </customValue>
+    <customValue>
+        <fullName>McDonald&apos;s Sth Nowra</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>McDonald&apos;s Sth Nowra</label>
+    </customValue>
+    <customValue>
+        <fullName>Cooma</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cooma</label>
+    </customValue>
+    <customValue>
+        <fullName>State Netball Hockey Centre</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>State Netball Hockey Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>McDonald&apos;s Cranbourne</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>McDonald&apos;s Cranbourne</label>
+    </customValue>
+    <customValue>
+        <fullName>Wigley Reserve - Glenelg</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Wigley Reserve - Glenelg</label>
+    </customValue>
+    <customValue>
+        <fullName>Camp Quality Office Weston</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Camp Quality Office Weston</label>
+    </customValue>
+    <customValue>
+        <fullName>Chadstone Shopping Centre</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Chadstone Shopping Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Nowra Bus Terminal</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Nowra Bus Terminal</label>
+    </customValue>
+    <customValue>
+        <fullName>Batemans Bay Info Centre</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Batemans Bay Info Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>St. Lawrence&apos;s School</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>St. Lawrence&apos;s School</label>
+    </customValue>
+    <customValue>
+        <fullName>McDonald&apos;s Queanbeyan</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>McDonald&apos;s Queanbeyan</label>
+    </customValue>
+    <customValue>
+        <fullName>McDonald&apos;s Noble Park</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>McDonald&apos;s Noble Park</label>
+    </customValue>
+    <customValue>
+        <fullName>Burnie</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Burnie</label>
+    </customValue>
+    <customValue>
+        <fullName>Port Macquarie Bus Terminal</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Port Macquarie Bus Terminal</label>
+    </customValue>
+    <customValue>
+        <fullName>Ulverstone</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Ulverstone</label>
+    </customValue>
+    <customValue>
+        <fullName>Devonport</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Devonport</label>
+    </customValue>
+    <customValue>
+        <fullName>ETC Bakery</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ETC Bakery</label>
+    </customValue>
+    <customValue>
+        <fullName>Perth Roadhouse</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Perth Roadhouse</label>
+    </customValue>
+    <customValue>
+        <fullName>BP Brighton</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BP Brighton</label>
+    </customValue>
+    <customValue>
+        <fullName>Goulburn</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Goulburn</label>
+    </customValue>
+    <customValue>
+        <fullName>The Cathedral School</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>The Cathedral School</label>
+    </customValue>
+    <customValue>
+        <fullName>McDonald&apos;s Ingham</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>McDonald&apos;s Ingham</label>
+    </customValue>
+    <customValue>
+        <fullName>Kuttabul Service Station</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Kuttabul Service Station</label>
+    </customValue>
+    <customValue>
+        <fullName>Canberra Domestic Terminal</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Canberra Domestic Terminal</label>
+    </customValue>
+    <customValue>
+        <fullName>Melbourne Virgin Australia - T3</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Melbourne Virgin Australia - T3</label>
+    </customValue>
+    <customValue>
+        <fullName>McDonald&apos;s Innisfail</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>McDonald&apos;s Innisfail</label>
+    </customValue>
+    <customValue>
+        <fullName>Picton</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Picton</label>
+    </customValue>
+    <customValue>
+        <fullName>Epping</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Epping</label>
+    </customValue>
+    <masterLabel>Transport Locations</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

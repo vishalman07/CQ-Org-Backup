@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Social Worker</fullName>
+        <default>false</default>
+        <label>Social Worker</label>
+    </customValue>
+    <customValue>
+        <fullName>Hospital Ward Staff</fullName>
+        <default>false</default>
+        <label>Hospital Ward Staff</label>
+    </customValue>
+    <customValue>
+        <fullName>Play Therapist</fullName>
+        <default>false</default>
+        <label>Play Therapist</label>
+    </customValue>
+    <customValue>
+        <fullName>Camp Quality Team</fullName>
+        <default>false</default>
+        <label>Camp Quality Team</label>
+    </customValue>
+    <customValue>
+        <fullName>Puppet Visit</fullName>
+        <default>false</default>
+        <label>Puppet Visit</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Charity</fullName>
+        <default>false</default>
+        <label>Other Charity</label>
+    </customValue>
+    <customValue>
+        <fullName>Another Family</fullName>
+        <default>false</default>
+        <label>Another Family</label>
+    </customValue>
+    <customValue>
+        <fullName>Website</fullName>
+        <default>false</default>
+        <label>Website</label>
+    </customValue>
+    <customValue>
+        <fullName>Camp Quality Volunteer</fullName>
+        <default>false</default>
+        <label>Camp Quality Volunteer</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>Sign Up Source</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

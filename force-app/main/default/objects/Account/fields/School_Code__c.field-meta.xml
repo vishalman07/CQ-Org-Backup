@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>School_Code__c</fullName>
+    <label>School Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Primary School</fullName>
+                <default>false</default>
+                <label>Primary School</label>
+            </value>
+            <value>
+                <fullName>Early Learning Centre</fullName>
+                <default>false</default>
+                <label>Early Learning Centre</label>
+            </value>
+            <value>
+                <fullName>Hospital</fullName>
+                <default>false</default>
+                <label>Hospital</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

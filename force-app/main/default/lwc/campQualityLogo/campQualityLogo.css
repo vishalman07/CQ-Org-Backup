@@ -1,0 +1,16 @@
+img{	
+	  width: 301px;
+	  height: 85px;
+	  margin-top: 8px;
+}
+.center {
+	margin-left: auto;
+  	margin-right: auto;
+}
+/* Media query for smaller screens */
+@media (max-width: 448px) {
+img {
+	width:130px;
+	height:70px;
+	}
+}

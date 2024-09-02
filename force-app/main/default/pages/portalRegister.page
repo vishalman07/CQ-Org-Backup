@@ -1,0 +1,398 @@
+<apex:page controller="portalRegister" showHeader="false" standardStylesheets="false" cache="false" applyHtmlTag="false">
+
+    <apex:composition template="portalNoAuthComposition">
+        
+        <apex:define name="vars">
+            <apex:variable var="pageTitle" value="Portal Registration" />
+            <apex:variable var="paHeaderTitle" value="Portal Registration" />
+        </apex:define>
+
+        <apex:define name="main">
+            <apex:outputPanel layout="block" styleClass="alert alert-danger" rendered="{!hasPageMessages}">
+                <apex:pageMessages />
+            </apex:outputPanel>
+
+            <apex:variable var="labelCol" value="col-xs-12 col-sm-3" />
+            <apex:variable var="labelOffset" value="col-sm-offset-3" />
+            <apex:variable var="inputCol" value="col-xs-12 col-sm-9" />
+            <apex:variable var="errorCol" value="col-xs-12 {!labelOffset} col-sm-9" />
+            
+            <apex:variable var="formGroupSelector" value="div.form-group" />
+            <apex:variable var="inputColSelector" value="div.col-xs-12.col-sm-9" />
+
+            <script type="text/javascript">
+              $(document).ready(function() {
+                setValidation();
+              });
+                  
+                  
+              function setValidation() {
+                $('form[id$=theForm]').validate({
+                  errorPlacement: function(error, element) {
+                    $(element).closest('{!formGroupSelector}').append($('<div class="{!errorCol}"></div>').append(error));
+                  },
+                  highlight: function(element, errorClass, validClass) {
+                    $(element).addClass(errorClass).removeClass(validClass);
+                  },
+                  unhighlight: function(element, errorClass, validClass) {
+                    $(element).addClass(validClass).removeClass(errorClass);
+                  }
+                });                    
+              }
+            </script>
+
+            <apex:form id="theForm" styleClass="form-horizontal customForm">
+                <apex:outputPanel layout="none" id="bodyPanelError">
+                  <apex:outputPanel layout="block" styleClass="form-group" rendered="{!alreadyRegistered}">
+                      <div class="alert alert-danger" role="alert">
+                          <b><apex:outputText value="Your Organisation has already registered" /></b><br />
+                          <apex:outputText value="Talk to your Primary Contact to obtain access to the portal" />
+                      </div>
+                  </apex:outputPanel>
+                </apex:outputPanel>
+
+                <div class="col-xs-12">
+                  <apex:outputText value="{!acct.Corporate_Volunteer_Signup_Message__c}" escape="false" />
+                </div>
+
+                <br /> 
+
+                <div class="col-xs-12">
+                    <h2>
+                        Sign up to Volunteer for Camp Quality
+                    </h2>
+                </div>
+                
+                <!--<div class="col-xs-12 alert alert-success">
+                    <p>You have <b>successfully subscribed</b> to your ANZSOG Membership.</p>
+                    
+                    <p>You can now finalise your portal registration below by setting your password.</p>
+                </div>-->
+
+                <div class="form-group">
+                    <label class="control-label {!labelCol}">
+                        <apex:actionStatus id="loader" startStyle="padding-right: 10px;">
+                            <apex:facet name="start">
+                              <img class="loadingImage" src="{!URLFOR($Resource.assets, '/assets/img/loader.gif')}" alt="loading" />
+                            </apex:facet>
+                  		</apex:actionStatus>
+                  		<apex:outputText value="Organisation Name" />
+              			<span class="required">*</span>
+                    </label>
+                    <div class="{!inputCol}">
+                        <apex:actionRegion >
+                            <apex:outputText value="{!acct.Name}" />
+                        </apex:actionRegion>
+              
+                    </div>
+                        
+                </div>
+                
+               
+            <!--
+                <div class="form-group">
+            <label class="control-label {!labelCol}">
+                Organisation Address <span class="required">*</span>
+            </label>
+            <div class="{!inputCol}">
+                <apex:inputField value="{!acct.Street_Address__c}" styleClass="required form-control" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label {!labelCol}">
+                Organisation Suburb <span class="required">*</span>
+            </label>
+            <div class="{!inputCol}">
+                <apex:inputField value="{!acct.Street_Suburb__c}" styleClass="required form-control" />
+            </div>
+          </div>
+          
+          <div class="form-group">
+              <label class="control-label {!labelCol}">
+                  <apex:outputText value="Organisation Country" />
+                  <span class="required">*</span>
+              </label>
+              <div class="{!inputCol}">
+                  <apex:inputField value="{!acct.Street_Country__c}" id="org-country" styleClass="required form-control" onchange="setValidation();" />
+              </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label {!labelCol}">
+              <apex:outputText value="Organisation State" />
+              <span class="required">*</span>
+            </label>
+            <div class="{!inputCol}">
+              <apex:inputField value="{!acct.Street_State__c}" styleClass="required form-control" id="state" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label {!labelCol}">
+                Organisation Post Code <span class="required">*</span>
+            </label>
+            <div class="{!inputCol}">
+                <apex:inputField value="{!acct.Street_Postcode__c}" id="org-postcode" styleClass="required form-control" />
+            </div>
+          </div>
+			-->
+          
+                 
+                <div class="form-group">
+                    <label class="control-label {!labelCol}">
+                        <apex:outputText value="First Name" />
+             			 <span class="required">*</span>
+                    </label>
+                    <div class="{!inputCol}">
+                        <apex:inputText value="{!firstName}" styleClass="required form-control" />
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="control-label {!labelCol}">
+                        <apex:outputText value="Last Name" />
+              			<span class="required">*</span>
+                    </label>
+                    <div class="{!inputCol}">
+                        <apex:inputText value="{!lastName}" styleClass="required form-control" />
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="control-label {!labelCol}">
+                        <apex:outputText value="{!$Label.site.email}" />
+              			<span class="required">*</span>
+                    </label>
+                    <div class="{!inputCol}">
+                        <apex:inputText value="{!email}" styleClass="required email form-control" />
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="control-label {!labelCol}">
+                        <apex:outputText value="{!$Label.site.password} must be at least 8 characters and include letters and numbers." />
+              			<span class="required">*</span>
+                    </label>
+                    <div class="{!inputCol}">
+                        <apex:inputSecret value="{!password}" styleClass="required form-control" />
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="control-label {!labelCol}">
+                        <apex:outputText value="{!$Label.site.confirm_password}" />
+             			<span class="required">*</span>
+                    </label>
+                    <div class="{!inputCol}">
+                        <apex:inputSecret value="{!confirmPassword}" styleClass="required form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label {!labelCol}">
+                      <apex:outputText value="Home Phone" />
+                    </label>
+                    <div class="{!inputCol}">
+                        <apex:inputField value="{!newContact.HomePhone}" styleClass="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label {!labelCol}">
+                      <apex:outputText value="Work Phone" />
+                    </label>
+                    <div class="{!inputCol}">
+                        <apex:inputField value="{!newContact.Phone}" styleClass="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label {!labelCol}">
+                      <apex:outputText value="Mobile Phone" />
+                                              <span class="required">*</span>
+
+                    </label>
+                    <div class="{!inputCol}">
+                        <apex:inputField value="{!newContact.MobilePhone}" styleClass="form-control required" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label {!labelCol}">
+                      <apex:outputText value="Other Phone" />
+                    </label>
+                    <div class="{!inputCol}">
+                        <apex:inputField value="{!newContact.OtherPhone}" styleClass="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label {!labelCol}">
+                      <apex:outputText value="Preferred Phone" />
+                      <span class="required">*</span>
+                    </label>
+                    <div class="{!inputCol}">
+                        <apex:inputField value="{!newContact.npe01__PreferredPhone__c}" styleClass="required form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label {!labelCol}">
+                      <apex:outputText value="Address" />
+                      <span class="required">*</span>
+                    </label>
+                    <div class="{!inputCol}">
+                        <apex:inputField value="{!newContact.MailingStreet}" styleClass="required form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label {!labelCol}">
+                      <apex:outputText value="City" />
+                      <span class="required">*</span>
+                    </label>
+                    <div class="{!inputCol}">
+                        <apex:inputField value="{!newContact.MailingCity}" styleClass="required form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label {!labelCol}">
+                      <apex:outputText value="State" />
+                      <span class="required">*</span>
+                    </label>
+                    <div class="{!inputCol}">
+                        <apex:inputField value="{!newContact.MailingState}" styleClass="required form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label {!labelCol}">
+                      <apex:outputText value="Postcode" />
+                      <span class="required">*</span>
+                    </label>
+                    <div class="{!inputCol}">
+                        <apex:inputField value="{!newContact.MailingPostalCode}" styleClass="required form-control" />
+                    </div>
+                </div>
+
+            <!--    <div class="form-group">
+                    <label class="control-label {!labelCol}">
+                      <apex:outputText value="T-Shirt Size" />
+                      <span class="required">*</span>
+                    </label>
+                    <div class="{!inputCol}">
+                        <apex:inputField value="{!newContact.Shirt_Size__c}" styleClass="required form-control" />
+                    </div>
+                </div>
+-->
+          <!--       <apex:outputPanel id="specialNeedsPanel" styleClass="col-md-12" layout="block">
+
+                  <apex:actionStatus id="familyContactLd" startStyleClass="loading" stopStyleClass="">
+                      <apex:facet name="start">
+                          <span class="glyphicon glyphicon-refresh spinning"></span>
+                      </apex:facet>
+                  </apex:actionStatus>
+                
+                 <div class="row">
+                    <label class="control-label {!labelCol}">Dietary Requirements</label>
+                    <div class="{!inputCol}">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th>Comments</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!currentNeeds}" var="key1">
+                                        <apex:outputPanel layout="none" rendered="{!currentNeeds[key1].AttributeType__c = 'DietryNeeds'}">
+                                            <tr class="something">
+                                                <td><apex:inputField value="{!currentNeeds[key1].Long_Description__c}" styleClass="form-control" /></td>
+                                                <td><apex:inputField value="{!currentNeeds[key1].Comments__c}" styleClass="form-control" /></td>
+                                                <td>
+                                                  <apex:commandButton action="{!removeSpecialNeed}" styleClass="btn btn-danger" value="-" reRender="specialNeedsPanel,alertPanel" status="familyContactLd">
+                                                        <apex:param name="removeNeedId" value="{!key1}" assignTo="{!removeNeedId}" />
+                                                    </apex:commandButton>
+                                                </td>
+                                            </tr>
+                                        </apex:outputPanel>
+                                    </apex:repeat>
+                                </tbody>
+                            </table>
+                        </div>
+                        <apex:commandButton action="{!addSpecialNeed}" styleClass="btn btn-primary pull-right" value="Add Dietary Requirement" reRender="specialNeedsPanel,alertPanel" status="familyContactLd">
+                            <apex:param name="addType" value="{!'DietryNeeds'}" assignTo="{!addType}" />
+                        </apex:commandButton>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <label class="control-label {!labelCol}">Special Needs</label>
+                    <div class="{!inputCol}">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th>Comments</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!currentNeeds}" var="key2">
+                                        <apex:outputPanel layout="none" rendered="{!currentNeeds[key2].AttributeType__c = 'SpecialNeeds'}">
+                                            <tr>
+                                                <td><apex:inputField value="{!currentNeeds[key2].Long_Description__c}" styleClass="form-control" /></td>
+                                                <td><apex:inputField value="{!currentNeeds[key2].Comments__c}" styleClass="form-control" /></td>
+                                                <td>
+                                                  <apex:commandButton action="{!removeSpecialNeed}" styleClass="btn btn-danger" value="-" reRender="specialNeedsPanel,alertPanel" status="familyContactLd">
+                                                        <apex:param name="removeNeedId" value="{!key2}" assignTo="{!removeNeedId}" />
+                                                    </apex:commandButton>
+                                                </td>
+                                            </tr>
+                                        </apex:outputPanel>
+                                    </apex:repeat>
+                                </tbody>
+                            </table>
+                        </div>
+                        <apex:commandButton action="{!addSpecialNeed}" styleClass="btn btn-primary pull-right" value="Add Special Need" reRender="specialNeedsPanel,alertPanel" status="familyContactLd">
+                            <apex:param name="addType" value="{!'SpecialNeeds'}" assignTo="{!addType}" />
+                        </apex:commandButton>
+                    </div>
+                </div>
+              </apex:outputPanel>
+-->
+              <div class="form-group">
+                  <label class="control-label {!labelCol}">
+                    <apex:outputText value="" />
+                  </label>
+                  <div class="{!inputCol} checkbox">
+                      <label>
+                        <apex:inputCheckbox value="{!codeOfConduct}" styleClass="required" />
+                        I acknowledge that I have read and agree to the Camp Quality <a href="https://www.campquality.org.au/images/ways-you-can-help/docs/become-a-volunteer/Volunteers-CodeOfConduct.pdf" target="_blank">Code of Conduct</a>.
+                        <span class="required" style="position:relative;">*</span>
+                      </label>
+                  </div>
+              </div>
+                
+              <div class="{!inputCol} {!labelOffset}">
+                  <apex:outputPanel id="registerButtonContainer" layout="block" styleClass="btn-row">
+                    <div class="col-sm-5">
+                      <apex:commandButton value="Register" action="{!registerUser}" styleClass="btn btn-primary btn-block" disabled="{!alreadyRegistered}" />
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-2">
+                      <apex:commandLink value="Cancel" styleClass="btn btn-info btn-block" action="{!loginPage}" immediate="true" />
+                    </div>
+                  </apex:outputPanel>
+              </div>
+                                                  
+            </apex:form>
+        </apex:define>
+        
+    </apex:composition>
+    
+</apex:page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Registrations_Remaining__c</fullName>
+    <label>Registrations Remaining</label>
+    <summarizedField>Registration_Type__c.Registrations_Remaining__c</summarizedField>
+    <summaryForeignKey>Registration_Type__c.Event__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

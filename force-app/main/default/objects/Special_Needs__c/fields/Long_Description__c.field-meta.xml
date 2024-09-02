@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Long_Description__c</fullName>
+    <label>Long Description</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ADD</fullName>
+                <default>false</default>
+                <label>ADD</label>
+            </value>
+            <value>
+                <fullName>ADHD</fullName>
+                <default>false</default>
+                <label>ADHD</label>
+            </value>
+            <value>
+                <fullName>Allergic - All Nuts</fullName>
+                <default>false</default>
+                <label>Allergic - All Nuts</label>
+            </value>
+            <value>
+                <fullName>Allergic - Buckwheat</fullName>
+                <default>false</default>
+                <label>Allergic - Buckwheat</label>
+            </value>
+            <value>
+                <fullName>Allergic - Eggs</fullName>
+                <default>false</default>
+                <label>Allergic - Eggs</label>
+            </value>
+            <value>
+                <fullName>Allergic - Fish</fullName>
+                <default>false</default>
+                <label>Allergic - Fish</label>
+            </value>
+            <value>
+                <fullName>Allergic - Garlic</fullName>
+                <default>false</default>
+                <label>Allergic - Garlic</label>
+            </value>
+            <value>
+                <fullName>Allergic - Kiwi Fruit</fullName>
+                <default>false</default>
+                <label>Allergic - Kiwi Fruit</label>
+            </value>
+            <value>
+                <fullName>Allergic - Mushrooms</fullName>
+                <default>false</default>
+                <label>Allergic - Mushrooms</label>
+            </value>
+            <value>
+                <fullName>Allergic - Oranges</fullName>
+                <default>false</default>
+                <label>Allergic - Oranges</label>
+            </value>
+            <value>
+                <fullName>Allergic - Other</fullName>
+                <default>false</default>
+                <label>Allergic - Other</label>
+            </value>
+            <value>
+                <fullName>Allergic - Parmesan Cheese</fullName>
+                <default>false</default>
+                <label>Allergic - Parmesan Cheese</label>
+            </value>
+            <value>
+                <fullName>Allergic - Peanuts</fullName>
+                <default>false</default>
+                <label>Allergic - Peanuts</label>
+            </value>
+            <value>
+                <fullName>Allergic - Pork</fullName>
+                <default>false</default>
+                <label>Allergic - Pork</label>
+            </value>
+            <value>
+                <fullName>Allergic - Prawns</fullName>
+                <default>false</default>
+                <label>Allergic - Prawns</label>
+            </value>
+            <value>
+                <fullName>Allergic - Seafood</fullName>
+                <default>false</default>
+                <label>Allergic - Seafood</label>
+            </value>
+            <value>
+                <fullName>Allergic - Sesame</fullName>
+                <default>false</default>
+                <label>Allergic - Sesame</label>
+            </value>
+            <value>
+                <fullName>Allergic - Shellfish</fullName>
+                <default>false</default>
+                <label>Allergic - Shellfish</label>
+            </value>
+            <value>
+                <fullName>Allergic - Tomatoes</fullName>
+                <default>false</default>
+                <label>Allergic - Tomatoes</label>
+            </value>
+            <value>
+                <fullName>Allergic - Yeast</fullName>
+                <default>false</default>
+                <label>Allergic - Yeast</label>
+            </value>
+            <value>
+                <fullName>Allergic to dust mites</fullName>
+                <default>false</default>
+                <label>Allergic to dust mites</label>
+            </value>
+            <value>
+                <fullName>Allergy - Angel Cream</fullName>
+                <default>false</default>
+                <label>Allergy - Angel Cream</label>
+            </value>
+            <value>
+                <fullName>Allergy - Antibiotic Erythromycin</fullName>
+                <default>false</default>
+                <label>Allergy - Antibiotic Erythromycin</label>
+            </value>
+            <value>
+                <fullName>Allergy - Asparaginase</fullName>
+                <default>false</default>
+                <label>Allergy - Asparaginase</label>
+            </value>
+            <value>
+                <fullName>Allergy - Asprin</fullName>
+                <default>false</default>
+                <label>Allergy - Asprin</label>
+            </value>
+            <value>
+                <fullName>Allergy - Bactrim</fullName>
+                <default>false</default>
+                <label>Allergy - Bactrim</label>
+            </value>
+            <value>
+                <fullName>Allergy - Band Aids</fullName>
+                <default>false</default>
+                <label>Allergy - Band Aids</label>
+            </value>
+            <value>
+                <fullName>Allergy - Bee Stings</fullName>
+                <default>false</default>
+                <label>Allergy - Bee Stings</label>
+            </value>
+            <value>
+                <fullName>Allergy - Bleomycin</fullName>
+                <default>false</default>
+                <label>Allergy - Bleomycin</label>
+            </value>
+            <value>
+                <fullName>Allergy - Brietal</fullName>
+                <default>false</default>
+                <label>Allergy - Brietal</label>
+            </value>
+            <value>
+                <fullName>Allergy - Ceclor</fullName>
+                <default>false</default>
+                <label>Allergy - Ceclor</label>
+            </value>
+            <value>
+                <fullName>Allergy - Codine</fullName>
+                <default>false</default>
+                <label>Allergy - Codine</label>
+            </value>
+            <value>
+                <fullName>Allergy - Dust</fullName>
+                <default>false</default>
+                <label>Allergy - Dust</label>
+            </value>
+            <value>
+                <fullName>Allergy - Elastoplast</fullName>
+                <default>false</default>
+                <label>Allergy - Elastoplast</label>
+            </value>
+            <value>
+                <fullName>Allergy - Erthromycin</fullName>
+                <default>false</default>
+                <label>Allergy - Erthromycin</label>
+            </value>
+            <value>
+                <fullName>Allergy - Etoposide</fullName>
+                <default>false</default>
+                <label>Allergy - Etoposide</label>
+            </value>
+            <value>
+                <fullName>Allergy - Fentynal</fullName>
+                <default>false</default>
+                <label>Allergy - Fentynal</label>
+            </value>
+            <value>
+                <fullName>Allergy - Flucloxacillin</fullName>
+                <default>false</default>
+                <label>Allergy - Flucloxacillin</label>
+            </value>
+            <value>
+                <fullName>Allergy - Horses</fullName>
+                <default>false</default>
+                <label>Allergy - Horses</label>
+            </value>
+            <value>
+                <fullName>Allergy - Ibuprofen</fullName>
+                <default>false</default>
+                <label>Allergy - Ibuprofen</label>
+            </value>
+            <value>
+                <fullName>Allergy - Immpienum</fullName>
+                <default>false</default>
+                <label>Allergy - Immpienum</label>
+            </value>
+            <value>
+                <fullName>Allergy - Luenais</fullName>
+                <default>false</default>
+                <label>Allergy - Luenais</label>
+            </value>
+            <value>
+                <fullName>Allergy - Maxalon</fullName>
+                <default>false</default>
+                <label>Allergy - Maxalon</label>
+            </value>
+            <value>
+                <fullName>Allergy - Morphine</fullName>
+                <default>false</default>
+                <label>Allergy - Morphine</label>
+            </value>
+            <value>
+                <fullName>Allergy - Other</fullName>
+                <default>false</default>
+                <label>Allergy - Other</label>
+            </value>
+            <value>
+                <fullName>Allergy - Penicillin</fullName>
+                <default>false</default>
+                <label>Allergy - Penicillin</label>
+            </value>
+            <value>
+                <fullName>Allergy - Pethidine</fullName>
+                <default>false</default>
+                <label>Allergy - Pethidine</label>
+            </value>
+            <value>
+                <fullName>Allergy - Phenergan</fullName>
+                <default>false</default>
+                <label>Allergy - Phenergan</label>
+            </value>
+            <value>
+                <fullName>Allergy - Rhinitis</fullName>
+                <default>false</default>
+                <label>Allergy - Rhinitis</label>
+            </value>
+            <value>
+                <fullName>Allergy - Rulide</fullName>
+                <default>false</default>
+                <label>Allergy - Rulide</label>
+            </value>
+            <value>
+                <fullName>Allergy - Septrim</fullName>
+                <default>false</default>
+                <label>Allergy - Septrim</label>
+            </value>
+            <value>
+                <fullName>Allergy - Soap</fullName>
+                <default>false</default>
+                <label>Allergy - Soap</label>
+            </value>
+            <value>
+                <fullName>Allergy - Stemitil</fullName>
+                <default>false</default>
+                <label>Allergy - Stemitil</label>
+            </value>
+            <value>
+                <fullName>Allergy - Sulphur</fullName>
+                <default>false</default>
+                <label>Allergy - Sulphur</label>
+            </value>
+            <value>
+                <fullName>Allergy - Sunscreen</fullName>
+                <default>false</default>
+                <label>Allergy - Sunscreen</label>
+            </value>
+            <value>
+                <fullName>Allergy - Tegratol</fullName>
+                <default>false</default>
+                <label>Allergy - Tegratol</label>
+            </value>
+            <value>
+                <fullName>Allergy - Vancomycin</fullName>
+                <default>false</default>
+                <label>Allergy - Vancomycin</label>
+            </value>
+            <value>
+                <fullName>Amputee</fullName>
+                <default>false</default>
+                <label>Amputee</label>
+            </value>
+            <value>
+                <fullName>Anxiety</fullName>
+                <default>false</default>
+                <label>Anxiety</label>
+            </value>
+            <value>
+                <fullName>Aspergers Syndrome</fullName>
+                <default>false</default>
+                <label>Aspergers Syndrome</label>
+            </value>
+            <value>
+                <fullName>Asthma</fullName>
+                <default>false</default>
+                <label>Asthma</label>
+            </value>
+            <value>
+                <fullName>Autism</fullName>
+                <default>false</default>
+                <label>Autism</label>
+            </value>
+            <value>
+                <fullName>Bedwetting</fullName>
+                <default>false</default>
+                <label>Bedwetting</label>
+            </value>
+            <value>
+                <fullName>Bipolar</fullName>
+                <default>false</default>
+                <label>Bipolar</label>
+            </value>
+            <value>
+                <fullName>Bronchiolitis Obliterans</fullName>
+                <default>false</default>
+                <label>Bronchiolitis Obliterans</label>
+            </value>
+            <value>
+                <fullName>Cannot Swim</fullName>
+                <default>false</default>
+                <label>Cannot Swim</label>
+            </value>
+            <value>
+                <fullName>Cannot Swim in Public Pools</fullName>
+                <default>false</default>
+                <label>Cannot Swim in Public Pools</label>
+            </value>
+            <value>
+                <fullName>Central Line</fullName>
+                <default>false</default>
+                <label>Central Line</label>
+            </value>
+            <value>
+                <fullName>Cerebal Palsy</fullName>
+                <default>false</default>
+                <label>Cerebal Palsy</label>
+            </value>
+            <value>
+                <fullName>Claustrophobic</fullName>
+                <default>false</default>
+                <label>Claustrophobic</label>
+            </value>
+            <value>
+                <fullName>Coeliac</fullName>
+                <default>false</default>
+                <label>Coeliac</label>
+            </value>
+            <value>
+                <fullName>Crohns Disease</fullName>
+                <default>false</default>
+                <label>Crohns Disease</label>
+            </value>
+            <value>
+                <fullName>Crutches</fullName>
+                <default>false</default>
+                <label>Crutches</label>
+            </value>
+            <value>
+                <fullName>Depression</fullName>
+                <default>false</default>
+                <label>Depression</label>
+            </value>
+            <value>
+                <fullName>Developmental Delays</fullName>
+                <default>false</default>
+                <label>Developmental Delays</label>
+            </value>
+            <value>
+                <fullName>Diabetes</fullName>
+                <default>false</default>
+                <label>Diabetes</label>
+            </value>
+            <value>
+                <fullName>Diabetic</fullName>
+                <default>false</default>
+                <label>Diabetic</label>
+            </value>
+            <value>
+                <fullName>Down Syndrome</fullName>
+                <default>false</default>
+                <label>Down Syndrome</label>
+            </value>
+            <value>
+                <fullName>Dyslexia</fullName>
+                <default>false</default>
+                <label>Dyslexia</label>
+            </value>
+            <value>
+                <fullName>Epilepsy</fullName>
+                <default>false</default>
+                <label>Epilepsy</label>
+            </value>
+            <value>
+                <fullName>Gluten Free</fullName>
+                <default>false</default>
+                <label>Gluten Free</label>
+            </value>
+            <value>
+                <fullName>Haemophilia</fullName>
+                <default>false</default>
+                <label>Haemophilia</label>
+            </value>
+            <value>
+                <fullName>Halal</fullName>
+                <default>false</default>
+                <label>Halal</label>
+            </value>
+            <value>
+                <fullName>Hayfever</fullName>
+                <default>false</default>
+                <label>Hayfever</label>
+            </value>
+            <value>
+                <fullName>Hearing Impaired</fullName>
+                <default>false</default>
+                <label>Hearing Impaired</label>
+            </value>
+            <value>
+                <fullName>Heart condition</fullName>
+                <default>false</default>
+                <label>Heart condition</label>
+            </value>
+            <value>
+                <fullName>Hypothyroid</fullName>
+                <default>false</default>
+                <label>Hypothyroid</label>
+            </value>
+            <value>
+                <fullName>Hypothyroidism</fullName>
+                <default>false</default>
+                <label>Hypothyroidism</label>
+            </value>
+            <value>
+                <fullName>Incontinent</fullName>
+                <default>false</default>
+                <label>Incontinent</label>
+            </value>
+            <value>
+                <fullName>Intellectual Disability</fullName>
+                <default>false</default>
+                <label>Intellectual Disability</label>
+            </value>
+            <value>
+                <fullName>Irritable Bowel Sydrome</fullName>
+                <default>false</default>
+                <label>Irritable Bowel Sydrome</label>
+            </value>
+            <value>
+                <fullName>Kosher</fullName>
+                <default>false</default>
+                <label>Kosher</label>
+            </value>
+            <value>
+                <fullName>Lactose Intolerant</fullName>
+                <default>false</default>
+                <label>Lactose Intolerant</label>
+            </value>
+            <value>
+                <fullName>Liquid Diet Only</fullName>
+                <default>false</default>
+                <label>Liquid Diet Only</label>
+            </value>
+            <value>
+                <fullName>Low Fat Diet</fullName>
+                <default>false</default>
+                <label>Low Fat Diet</label>
+            </value>
+            <value>
+                <fullName>Migraine Headaches</fullName>
+                <default>false</default>
+                <label>Migraine Headaches</label>
+            </value>
+            <value>
+                <fullName>Mulitple Scierosis</fullName>
+                <default>false</default>
+                <label>Mulitple Scierosis</label>
+            </value>
+            <value>
+                <fullName>No Bananas</fullName>
+                <default>false</default>
+                <label>No Bananas</label>
+            </value>
+            <value>
+                <fullName>No Chicken</fullName>
+                <default>false</default>
+                <label>No Chicken</label>
+            </value>
+            <value>
+                <fullName>No Dairy</fullName>
+                <default>false</default>
+                <label>No Dairy</label>
+            </value>
+            <value>
+                <fullName>No Fish</fullName>
+                <default>false</default>
+                <label>No Fish</label>
+            </value>
+            <value>
+                <fullName>No Grapefruits</fullName>
+                <default>false</default>
+                <label>No Grapefruits</label>
+            </value>
+            <value>
+                <fullName>No Red Meat</fullName>
+                <default>false</default>
+                <label>No Red Meat</label>
+            </value>
+            <value>
+                <fullName>No Spicy Food</fullName>
+                <default>false</default>
+                <label>No Spicy Food</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Panic Attacks</fullName>
+                <default>false</default>
+                <label>Panic Attacks</label>
+            </value>
+            <value>
+                <fullName>Pescetarian</fullName>
+                <default>false</default>
+                <label>Pescetarian</label>
+            </value>
+            <value>
+                <fullName>Portacath</fullName>
+                <default>false</default>
+                <label>Portacath</label>
+            </value>
+            <value>
+                <fullName>Shunt</fullName>
+                <default>false</default>
+                <label>Shunt</label>
+            </value>
+            <value>
+                <fullName>Sinus</fullName>
+                <default>false</default>
+                <label>Sinus</label>
+            </value>
+            <value>
+                <fullName>Sleepwalking</fullName>
+                <default>false</default>
+                <label>Sleepwalking</label>
+            </value>
+            <value>
+                <fullName>Soy Milk</fullName>
+                <default>false</default>
+                <label>No Soy Milk</label>
+            </value>
+            <value>
+                <fullName>Tracheotomy</fullName>
+                <default>false</default>
+                <label>Tracheotomy</label>
+            </value>
+            <value>
+                <fullName>Vegan</fullName>
+                <default>false</default>
+                <label>Vegan</label>
+            </value>
+            <value>
+                <fullName>Vegetarian</fullName>
+                <default>false</default>
+                <label>Vegetarian</label>
+            </value>
+            <value>
+                <fullName>Visually Impaired</fullName>
+                <default>false</default>
+                <label>Visually Impaired</label>
+            </value>
+            <value>
+                <fullName>Wears Glasses</fullName>
+                <default>false</default>
+                <label>Wears Glasses</label>
+            </value>
+            <value>
+                <fullName>Wheat Free</fullName>
+                <default>false</default>
+                <label>Wheat Free</label>
+            </value>
+            <value>
+                <fullName>Wheelchair</fullName>
+                <default>false</default>
+                <label>Wheelchair</label>
+            </value>
+            <value>
+                <fullName>Adrenal insufficiency</fullName>
+                <default>false</default>
+                <label>Adrenal insufficiency</label>
+            </value>
+            <value>
+                <fullName>ODD</fullName>
+                <default>false</default>
+                <label>ODD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

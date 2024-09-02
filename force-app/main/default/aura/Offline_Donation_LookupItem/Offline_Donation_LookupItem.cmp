@@ -1,0 +1,34 @@
+<!-- 
+******************************************************************************
+  Author:       Noble CX
+  @Since:       02-May-2019
+  Description:  Lookup Item Lightning Component
+******************************************************************************
+-->
+
+<aura:component >
+    
+    <aura:attribute name="record" type="Object" required="true" />
+	
+    <!--Declare Events-->
+    <aura:registerEvent name="lookupSelect" type="c:OfflineDonation_LookupSelectEvent" />
+          
+    <li role="presentation" class="slds-listbox__item" onclick="{!c.handleSelect}">
+        <span class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+              role="option">
+
+            <span class="slds-media__figure">
+                <lightning:icon iconName="standard:campaign" size="small" alternativeText="{!v.record.Name}"/>
+            </span>
+            <span class="slds-media__body">
+                <span class="slds-listbox__option-text slds-listbox__option-text_entity">
+                    {!v.record.Name}
+                </span>
+                <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">
+                    {!v.record.StartDate}
+                </span>
+            </span>
+        </span>
+    </li>
+    
+</aura:component>

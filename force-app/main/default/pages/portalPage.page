@@ -1,0 +1,40 @@
+<apex:page controller="portalCompositionController" showHeader="false" standardStylesheets="false" applyHtmlTag="false" >
+    
+    <apex:composition template="portalComposition">
+        
+        <apex:define name="main">
+           
+            <div class="page-title">
+                
+                <div class="container">
+                    <h1>
+                        <apex:outputText value="{!page.Title__c}" />
+                    </h1>
+                </div>
+                
+            </div>
+            
+            <div class="container" style="margin-top:40px;position:relative;">
+            	<div class="row">
+                    
+                    
+                    
+                    <div class="col-sm-12 col-xs-12 page-content-container">
+
+                        <apex:outputText escape="false" value="{!pageFilteredContent}" />
+
+                        <apex:outputText escape="false" value="{!page.HTML_Content__c}" />
+                        
+                        <apex:include pageName="{!page.Visualforce__c}" />
+                        
+                    </div>
+                    
+                </div>
+             
+            </div>
+                
+        </apex:define>
+        
+    </apex:composition>
+    
+</apex:page>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Property__c$Name</field>
+    </columns>
+    <columns>
+        <field>Property__c.Retreat_Bookings__r$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Property__c.Retreat_Bookings__r$Guests__c</field>
+    </columns>
+    <columns>
+        <field>Property__c.Retreat_Bookings__r$Check_In_Date__c</field>
+    </columns>
+    <columns>
+        <field>Property__c.Retreat_Bookings__r$Check_Out_Date__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Property__c$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Salamander Bay (NSW)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Property__c.Retreat_Bookings__r$Check_In_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>1/1/2021</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Property__c.Retreat_Bookings__r$Contact__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Sal Bay bookings 2021</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Properties_with_Retreat_and_Guest_Bookings__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Property__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

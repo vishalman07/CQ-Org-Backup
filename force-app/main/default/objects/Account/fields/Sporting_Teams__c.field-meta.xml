@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sporting_Teams__c</fullName>
+    <label>Sporting Teams</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AFL - Adelaide Football Club</fullName>
+                <default>false</default>
+                <label>AFL - Adelaide Football Club</label>
+            </value>
+            <value>
+                <fullName>AFL - Brisbane Lions</fullName>
+                <default>false</default>
+                <label>AFL - Brisbane Lions</label>
+            </value>
+            <value>
+                <fullName>AFL - Carlton Football Club</fullName>
+                <default>false</default>
+                <label>AFL - Carlton Football Club</label>
+            </value>
+            <value>
+                <fullName>AFL - Collingwood Football Club</fullName>
+                <default>false</default>
+                <label>AFL - Collingwood Football Club</label>
+            </value>
+            <value>
+                <fullName>AFL - Essendon Football Club</fullName>
+                <default>false</default>
+                <label>AFL - Essendon Football Club</label>
+            </value>
+            <value>
+                <fullName>AFL - Fremantle Football Club</fullName>
+                <default>false</default>
+                <label>AFL - Fremantle Football Club</label>
+            </value>
+            <value>
+                <fullName>AFL - Geelong Football Club</fullName>
+                <default>false</default>
+                <label>AFL - Geelong Football Club</label>
+            </value>
+            <value>
+                <fullName>AFL - Gold Coast Football Club</fullName>
+                <default>false</default>
+                <label>AFL - Gold Coast Football Club</label>
+            </value>
+            <value>
+                <fullName>AFL - Greater Western Sydney Giants</fullName>
+                <default>false</default>
+                <label>AFL - Greater Western Sydney Giants</label>
+            </value>
+            <value>
+                <fullName>AFL - Hawthorn Football Club</fullName>
+                <default>false</default>
+                <label>AFL - Hawthorn Football Club</label>
+            </value>
+            <value>
+                <fullName>AFL - Melbourne Football Club</fullName>
+                <default>false</default>
+                <label>AFL - Melbourne Football Club</label>
+            </value>
+            <value>
+                <fullName>AFL - North Melbourne Football Club</fullName>
+                <default>false</default>
+                <label>AFL - North Melbourne Football Club</label>
+            </value>
+            <value>
+                <fullName>AFL - Port Adelaide Football Club</fullName>
+                <default>false</default>
+                <label>AFL - Port Adelaide Football Club</label>
+            </value>
+            <value>
+                <fullName>AFL - Richmond Football Club</fullName>
+                <default>false</default>
+                <label>AFL - Richmond Football Club</label>
+            </value>
+            <value>
+                <fullName>AFL - St Kilda Football Club</fullName>
+                <default>false</default>
+                <label>AFL - St Kilda Football Club</label>
+            </value>
+            <value>
+                <fullName>AFL - Sydney Swans</fullName>
+                <default>false</default>
+                <label>AFL - Sydney Swans</label>
+            </value>
+            <value>
+                <fullName>AFL - West Coast Eagles</fullName>
+                <default>false</default>
+                <label>AFL - West Coast Eagles</label>
+            </value>
+            <value>
+                <fullName>AFL - Western Bulldogs</fullName>
+                <default>false</default>
+                <label>AFL - Western Bulldogs</label>
+            </value>
+            <value>
+                <fullName>AFL - Any team</fullName>
+                <default>false</default>
+                <label>AFL - Any team</label>
+            </value>
+            <value>
+                <fullName>NRL - Broncos</fullName>
+                <default>false</default>
+                <label>NRL - Broncos</label>
+            </value>
+            <value>
+                <fullName>NRL - Bulldogs</fullName>
+                <default>false</default>
+                <label>NRL - Bulldogs</label>
+            </value>
+            <value>
+                <fullName>NRL - Cowboys</fullName>
+                <default>false</default>
+                <label>NRL - Cowboys</label>
+            </value>
+            <value>
+                <fullName>NRL - Dragons</fullName>
+                <default>false</default>
+                <label>NRL - Dragons</label>
+            </value>
+            <value>
+                <fullName>NRL - Eels</fullName>
+                <default>false</default>
+                <label>NRL - Eels</label>
+            </value>
+            <value>
+                <fullName>NRL - Raiders</fullName>
+                <default>false</default>
+                <label>NRL - Raiders</label>
+            </value>
+            <value>
+                <fullName>NRL - Panthers</fullName>
+                <default>false</default>
+                <label>NRL - Panthers</label>
+            </value>
+            <value>
+                <fullName>NRL - Rabbitohs</fullName>
+                <default>false</default>
+                <label>NRL - Rabbitohs</label>
+            </value>
+            <value>
+                <fullName>NRL - Roosters</fullName>
+                <default>false</default>
+                <label>NRL - Roosters</label>
+            </value>
+            <value>
+                <fullName>NRL - Sea Eagles</fullName>
+                <default>false</default>
+                <label>NRL - Sea Eagles</label>
+            </value>
+            <value>
+                <fullName>NRL - Sharks</fullName>
+                <default>false</default>
+                <label>NRL - Sharks</label>
+            </value>
+            <value>
+                <fullName>NRL - Storm</fullName>
+                <default>false</default>
+                <label>NRL - Storm</label>
+            </value>
+            <value>
+                <fullName>NRL - Titans</fullName>
+                <default>false</default>
+                <label>NRL - Titans</label>
+            </value>
+            <value>
+                <fullName>NRL - Tigers</fullName>
+                <default>false</default>
+                <label>NRL - Tigers</label>
+            </value>
+            <value>
+                <fullName>NRL - Warriors</fullName>
+                <default>false</default>
+                <label>NRL - Warriors</label>
+            </value>
+            <value>
+                <fullName>NRL - Any team</fullName>
+                <default>false</default>
+                <label>NRL - Any team</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

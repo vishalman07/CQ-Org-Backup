@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reactivated_Regular_Giver__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Has this contact had a recurring donation before? 
+Have they reactivated??</description>
+    <inlineHelpText>Has this contact had a recurring donation before?</inlineHelpText>
+    <label>Reactivated Regular Giver?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

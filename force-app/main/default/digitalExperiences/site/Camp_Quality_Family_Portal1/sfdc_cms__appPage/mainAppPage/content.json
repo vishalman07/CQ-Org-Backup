@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__appPage",
+  "title" : "main",
+  "contentBody" : {
+    "currentThemeId" : "Build_Your_Own_LWR",
+    "headMarkup" : "<meta charset=\"UTF-8\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, Content-Security-Policy\" content=\"default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;**script-src 'self' http://onlineerp.solution.quebec 'unsafe-inline' 'unsafe-eval';** \"/>\n\n<title>Welcome to LWC Communities!</title>\n\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/styles.css?{ versionKey }\" />\n<link rel=\"icon\" href=\"https://www.campquality.org.au/wp-content/themes/campquality/assets/dist/images/app-icons/favicon-16x16.png\" sizes=\"16x16\">\n<link rel=\"icon\" href=\"https://www.campquality.org.au/wp-content/themes/campquality/assets/dist/images/app-icons/favicon-32x32.png\" sizes=\"32x32\">\n<link rel=\"shortcut icon\" sizes=\"196x196\" href=\"https://www.campquality.org.au/wp-content/themes/campquality/assets/dist/images/app-icons/favicon-196x196.png\">\n<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"https://www.campquality.org.au/wp-content/themes/campquality/assets/dist/images/app-icons/apple-touch-icon.png\">\n\n\n\n<!-- webruntime-branding-shared stylesheets -->\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/salesforce-lightning-design-system.min.css?{ versionKey }\" />\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/dxp-site-spacing-styling-hooks.min.css?{ versionKey }\" />\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/dxp-styling-hooks.min.css?{ versionKey }\" />\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/dxp-slds-extensions.min.css?{ versionKey }\" />\n\n<x-oasis-script hidden=\"true\">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5JTK2JC');</x-oasis-script>",
+    "isLockerServiceEnabled" : true,
+    "isRelaxedCSPLevel" : true,
+    "templateName" : "talon-template-byo"
+  }
+}

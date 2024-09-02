@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$Campaign.Location_Venue__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Campaign.Event_Group__c</field>
+    </columns>
+    <columns>
+        <field>FK_CMP_TYPE</field>
+    </columns>
+    <columns>
+        <field>FK_$Campaign.Event_Type__c</field>
+    </columns>
+    <description>Has State, venue and event type</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Incidents by Campaign/Event</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Incident__c@Incident__c.Event_Program_Name__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Incident__c.Incident_Close_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

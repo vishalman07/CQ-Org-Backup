@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transport__c</fullName>
+    <label>Transport</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fuel Card Requested</fullName>
+                <default>false</default>
+                <label>Fuel Card Requested</label>
+            </value>
+            <value>
+                <fullName>Fuel Card Sent</fullName>
+                <default>false</default>
+                <label>Fuel Card Sent</label>
+            </value>
+            <value>
+                <fullName>Flights Required</fullName>
+                <default>false</default>
+                <label>Flights Required</label>
+            </value>
+            <value>
+                <fullName>Flights requested from TTA</fullName>
+                <default>false</default>
+                <label>Flights requested from TTA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

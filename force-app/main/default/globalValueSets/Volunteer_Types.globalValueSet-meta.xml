@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Camp Leader</fullName>
+        <default>false</default>
+        <label>Camp Leader</label>
+    </customValue>
+    <customValue>
+        <fullName>Companion Support</fullName>
+        <default>false</default>
+        <label>Companion Support</label>
+    </customValue>
+    <customValue>
+        <fullName>Companion/Rover</fullName>
+        <default>false</default>
+        <label>Companion/Rover</label>
+    </customValue>
+    <customValue>
+        <fullName>Doctor</fullName>
+        <default>false</default>
+        <label>Doctor</label>
+    </customValue>
+    <customValue>
+        <fullName>Endorsed Enrolled Nurse</fullName>
+        <default>false</default>
+        <label>Endorsed Enrolled Nurse</label>
+    </customValue>
+    <customValue>
+        <fullName>Events/Fundraising</fullName>
+        <default>false</default>
+        <label>Community Fundraising</label>
+    </customValue>
+    <customValue>
+        <fullName>First Aider</fullName>
+        <default>false</default>
+        <label>First Aider</label>
+    </customValue>
+    <customValue>
+        <fullName>Office Administration</fullName>
+        <default>false</default>
+        <label>Office Administration</label>
+    </customValue>
+    <customValue>
+        <fullName>Paramedic</fullName>
+        <default>false</default>
+        <label>Paramedic</label>
+    </customValue>
+    <customValue>
+        <fullName>Photographer</fullName>
+        <default>false</default>
+        <label>Photographer</label>
+    </customValue>
+    <customValue>
+        <fullName>Registered Nurse</fullName>
+        <default>false</default>
+        <label>Registered Nurse</label>
+    </customValue>
+    <customValue>
+        <fullName>Camp Support Officer</fullName>
+        <default>false</default>
+        <label>Camp Support Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Midwife</fullName>
+        <default>false</default>
+        <label>Midwife</label>
+    </customValue>
+    <customValue>
+        <fullName>Mentor</fullName>
+        <default>false</default>
+        <label>Mentor</label>
+    </customValue>
+    <customValue>
+        <fullName>Major Events</fullName>
+        <default>false</default>
+        <label>Major Events</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Volunteer</fullName>
+        <default>false</default>
+        <label>Corporate Volunteer</label>
+    </customValue>
+    <customValue>
+        <fullName>Lead Rover</fullName>
+        <default>false</default>
+        <label>Lead Rover</label>
+    </customValue>
+    <customValue>
+        <fullName>Activity Support Officer</fullName>
+        <default>false</default>
+        <label>Activity Support Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Casual Event &amp; Office Volunteer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Casual Event &amp; Office Volunteer</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical Volunteer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Medical Volunteer</label>
+    </customValue>
+    <customValue>
+        <fullName>Fundraising Volunteer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fundraising Volunteer</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Lapsed/Former</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Lapsed/Former</label>
+    </customValue>
+    <customValue>
+        <fullName>Leave</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Leave</label>
+    </customValue>
+    <customValue>
+        <fullName>z Rover</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>z Rover</label>
+    </customValue>
+    <customValue>
+        <fullName>Volunteer Consultation Committee</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Volunteer Consultation Committee</label>
+    </customValue>
+    <customValue>
+        <fullName>Puppeteer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Puppeteer</label>
+    </customValue>
+    <customValue>
+        <fullName>Local Team Leader</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Local Team Leader</label>
+    </customValue>
+    <customValue>
+        <fullName>Leadership Committee Member</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Leadership Committee Member</label>
+    </customValue>
+    <customValue>
+        <fullName>Fundraising Support Group</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fundraising Support Group</label>
+    </customValue>
+    <customValue>
+        <fullName>Recreation Volunteer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Recreation Volunteer</label>
+    </customValue>
+    <customValue>
+        <fullName>Former Registered Nurse</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Former Registered Nurse</label>
+    </customValue>
+    <customValue>
+        <fullName>Former Doctor</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Former Doctor</label>
+    </customValue>
+    <customValue>
+        <fullName>Former First Aid</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Former First Aid</label>
+    </customValue>
+    <customValue>
+        <fullName>Former Endorsed Enrolled Nurse</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Former Endorsed Enrolled Nurse</label>
+    </customValue>
+    <description>Roles of volunteers in the organisation</description>
+    <masterLabel>Volunteer Types</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

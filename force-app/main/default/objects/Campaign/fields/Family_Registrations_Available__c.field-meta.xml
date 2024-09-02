@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Family_Registrations_Available__c</fullName>
+    <label>Family Registrations Available</label>
+    <summarizedField>Registration_Type__c.Number_Available__c</summarizedField>
+    <summaryFilterItems>
+        <field>Registration_Type__c.RecordTypeId</field>
+        <operation>notEqual</operation>
+        <value>Corporate Volunteer</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Registration_Type__c.RecordTypeId</field>
+        <operation>notEqual</operation>
+        <value>Volunteer</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Registration_Type__c.RecordTypeId</field>
+        <operation>notEqual</operation>
+        <value>Volunteer Training</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Registration_Type__c.Event__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

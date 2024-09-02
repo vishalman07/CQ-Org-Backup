@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Welcome email sent to new My Camp Quality Portal volunteers members</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CQ_Letterhead_for_classic_tempates</letterhead>
+    <name>Experience Cloud: Welcome Family Portal Email</name>
+    <style>formalLetter</style>
+    <subject>Welcome to {!Community_Name}</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

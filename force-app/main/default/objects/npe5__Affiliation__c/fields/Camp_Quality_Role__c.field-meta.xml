@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Camp_Quality_Role__c</fullName>
+    <label>Camp Quality Role</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounts Payable Contact</fullName>
+                <default>false</default>
+                <label>Accounts Payable Contact</label>
+            </value>
+            <value>
+                <fullName>ATF Contact</fullName>
+                <default>false</default>
+                <label>ATF Contact</label>
+            </value>
+            <value>
+                <fullName>CQ CEO Contact</fullName>
+                <default>false</default>
+                <label>CQ CEO Contact</label>
+            </value>
+            <value>
+                <fullName>Decision Maker</fullName>
+                <default>false</default>
+                <label>Decision Maker</label>
+            </value>
+            <value>
+                <fullName>Primary CQ Contact</fullName>
+                <default>false</default>
+                <label>Primary CQ Contact</label>
+            </value>
+            <value>
+                <fullName>Secondary CQ Contact</fullName>
+                <default>false</default>
+                <label>Secondary CQ Contact</label>
+            </value>
+            <value>
+                <fullName>Corporate Volunteer</fullName>
+                <default>false</default>
+                <label>Corporate Volunteer</label>
+            </value>
+            <value>
+                <fullName>WorkPlaceGiving</fullName>
+                <default>false</default>
+                <label>WorkPlaceGiving</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

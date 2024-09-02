@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowTest xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowApiName>Recurring_Donation_Prev_RG_data_Update</flowApiName>
+    <label>New Test - No OLF RG</label>
+    <testPoints>
+        <elementApiName>Start</elementApiName>
+        <parameters>
+            <leftValueReference>$Record</leftValueReference>
+            <type>InputTriggeringRecordInitial</type>
+            <value>
+                <sobjectValue>{&quot;Name&quot;:&quot;Miakela Hadfield Monthly Recurring Donation - $1,000&quot;,&quot;OwnerId&quot;:&quot;0050K000009doK1QAI&quot;,&quot;Reactivated_Regular_Giver__c&quot;:false,&quot;Stripe_Last_Invoice_Status__c&quot;:&quot;Paid&quot;,&quot;Stripe_Subscription_Status__c&quot;:&quot;Active&quot;,&quot;npe03__Amount__c&quot;:1000,&quot;npe03__Contact__c&quot;:&quot;0031y00000ZRNvaAAH&quot;,&quot;npe03__Date_Established__c&quot;:&quot;2024-01-12&quot;,&quot;npe03__Installment_Period__c&quot;:&quot;Monthly&quot;,&quot;npe03__Installments__c&quot;:1,&quot;npe03__Next_Payment_Date__c&quot;:&quot;2024-03-12&quot;,&quot;npe03__Open_Ended_Status__c&quot;:&quot;None&quot;,&quot;npe03__Organization__c&quot;:&quot;0011y00000lRTzuAAG&quot;,&quot;npe03__Recurring_Donation_Campaign__c&quot;:&quot;7011y000000BxwwAAC&quot;,&quot;npsp__ACH_Last_4__c&quot;:&quot;1234&quot;,&quot;npsp__Always_Use_Last_Day_Of_Month__c&quot;:false,&quot;npsp__CardExpirationMonth__c&quot;:&quot;12&quot;,&quot;npsp__CardExpirationYear__c&quot;:&quot;2025&quot;,&quot;npsp__CurrentYearValue__c&quot;:12000,&quot;npsp__Day_of_Month__c&quot;:&quot;12&quot;,&quot;npsp__DisableFirstInstallment__c&quot;:false,&quot;npsp__InstallmentFrequency__c&quot;:1,&quot;npsp__NextYearValue__c&quot;:12000,&quot;npsp__PaymentMethod__c&quot;:&quot;Credit Card&quot;,&quot;npsp__RecurringType__c&quot;:&quot;Open&quot;,&quot;npsp__StartDate__c&quot;:&quot;2024-01-12&quot;,&quot;npsp__Status__c&quot;:&quot;Active&quot;,&quot;attributes&quot;:{&quot;type&quot;:{&quot;value&quot;:&quot;npe03__Recurring_Donation__c&quot;}}}</sobjectValue>
+            </value>
+        </parameters>
+    </testPoints>
+    <testPoints>
+        <assertions>
+            <conditions>
+                <leftValueReference>No</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+        </assertions>
+        <elementApiName>Finish</elementApiName>
+    </testPoints>
+</FlowTest>

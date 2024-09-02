@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Camp_Quality_Logo</letterhead>
+    <name>Volunteer EOI Ops</name>
+    <style>freeForm</style>
+    <subject>Correct Link to Apply as Volunteer</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+
+Oops! Unfortunately it seems there was an issue with the previous link we sent you. Please click on the following link https://www.campquality.org.au/article/524-register-broup-2017?First_Name={!Lead.FirstName}&amp;Last_Name={!Lead.LastName}&amp;EOIID={!Lead.ExternalID__c} to complete your application:
+
+
+We look forward to receiving your application soon.
+
+
+Kind Regards,
+
+Your Camp Quality Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

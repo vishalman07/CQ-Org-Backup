@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Approval_Denied_Step_1</fullName>
+        <description>Voucher was not approved for sending to family</description>
+        <field>Status__c</field>
+        <literalValue>Denied</literalValue>
+        <name>Approval Denied Step 1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Step_1</fullName>
+        <description>Voucher approved for sending to family</description>
+        <field>Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Approval Step 1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_for_Sending</fullName>
+        <description>Approved for sending via Blackhawke system</description>
+        <field>Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Approved for Sending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Final_Approval_Step</fullName>
+        <description>Approval received and voucher sent to family</description>
+        <field>Status__c</field>
+        <literalValue>Completed</literalValue>
+        <name>Final Approval Step</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Voucher_Completed</fullName>
+        <field>Status__c</field>
+        <literalValue>Completed</literalValue>
+        <name>Voucher Sent</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Voucher_Sent</fullName>
+        <description>Voucher has been sent to family</description>
+        <field>Status__c</field>
+        <literalValue>Completed</literalValue>
+        <name>Voucher Sent</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Voucher_Sent_to_family</fullName>
+        <field>Status__c</field>
+        <literalValue>Completed</literalValue>
+        <name>Voucher Sent to family</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

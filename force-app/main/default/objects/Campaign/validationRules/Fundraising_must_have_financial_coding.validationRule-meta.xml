@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fundraising_must_have_financial_coding</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(
+AND(
+ $User.ProfileId = &apos;00e0K000002Jaa4&apos;,
+OR(
+ISPICKVAL( Account_No__c,&apos;&apos; ),
+ISPICKVAL( Cost_Centre__c,&apos;&apos; ),
+ISPICKVAL( Branch_Code__c,&apos;&apos; )),
+OR(
+AND(ISCHANGED(Account_No__c),NOT(ISPICKVAL(PRIORVALUE(Account_No__c),&apos;&apos;))),
+AND(ISCHANGED(Cost_Centre__c),NOT(ISPICKVAL(PRIORVALUE(Cost_Centre__c),&apos;&apos;))),
+AND(ISCHANGED(Branch_Code__c),NOT(ISPICKVAL(PRIORVALUE(Branch_Code__c),&apos;&apos;))))
+),true,false)</errorConditionFormula>
+    <errorMessage>Fundraising campaigns must have a GL Code, Cost Centre and Fundraising Branch Code. Once created, campaign financial coding cannot be changed. Please refer to Finance for campaign financial coding to be updated.</errorMessage>
+</ValidationRule>

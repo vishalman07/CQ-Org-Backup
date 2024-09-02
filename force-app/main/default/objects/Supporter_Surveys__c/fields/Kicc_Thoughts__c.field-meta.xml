@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kicc_Thoughts__c</fullName>
+    <inlineHelpText>7. For the first time, we are running ‘Kids Impacted by Carer’s Cancer’ Camps.  Briefly tell us how you feel about supporting children who are struggling because their mum, dad, or carer has cancer?</inlineHelpText>
+    <label>7. Kicc Thoughts</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

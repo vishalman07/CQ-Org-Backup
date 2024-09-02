@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_OWNER</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_CREATED_BY</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Fundraising_Branch_Code__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Account_No__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Cost_Centre__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <criteriaItems>
+            <column>Campaign.Account_No__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,No GL Allocated</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Cost_Centre__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,No Cost Centre Allocated</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Branch_Code__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Campaigns missing finance coding</name>
+    <params>
+        <name>open</name>
+        <value>closedwon</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityCampaign</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CAMPAIGN_STARTDATE</dateColumn>
+        <interval>INTERVAL_CURY</interval>
+    </timeFrameFilter>
+</Report>

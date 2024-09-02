@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Who_should_we_contact_about_this_referra__c</fullName>
+    <description>Who should we contact for this referral?</description>
+    <inlineHelpText>Who should we contact for this referral?</inlineHelpText>
+    <label>Best person to contact</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Me</fullName>
+                <default>false</default>
+                <label>Me</label>
+            </value>
+            <value>
+                <fullName>The person I am referring</fullName>
+                <default>false</default>
+                <label>The person I am referring</label>
+            </value>
+            <value>
+                <fullName>Someone Else</fullName>
+                <default>false</default>
+                <label>Someone Else</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

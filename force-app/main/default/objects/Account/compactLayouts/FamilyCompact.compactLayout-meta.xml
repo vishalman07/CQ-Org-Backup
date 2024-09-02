@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FamilyCompact</fullName>
+    <fields>Name</fields>
+    <fields>Family_Type__c</fields>
+    <fields>Priority__c</fields>
+    <fields>Branch_Office__c</fields>
+    <fields>npe01__One2OneContact__c</fields>
+    <label>FamilyCompact</label>
+</CompactLayout>

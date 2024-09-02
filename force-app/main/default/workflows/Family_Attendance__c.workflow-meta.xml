@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Moved_Attendance_From_Unsuccessful_To_Accepted</fullName>
+        <description>Moved Attendance From Unsuccessful To Accepted</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>salesforcehelp@campquality.org.au</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Internal_CQ_Communications/Family_Attendance_Invalid</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>DateStampRequestToAttend</fullName>
+        <field>Family_Request_To_Attend_Date__c</field>
+        <formula>now()</formula>
+        <name>DateStampRequestToAttend</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Invalid Family Attendance</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Family_Attendance__c.FA_00000__c</field>
+            <operation>equals</operation>
+            <value>Accepted</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Family_Attendance__c.Accepted_Members__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Moved_Attendance_From_Unsuccessful_To_Accepted</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Request To Attend - Date Stamp</fullName>
+        <actions>
+            <name>DateStampRequestToAttend</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Family_Attendance__c.FA_00000__c</field>
+            <operation>equals</operation>
+            <value>Request to Attend</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Family_Attendance__c.Family_Request_To_Attend_Date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

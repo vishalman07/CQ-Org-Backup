@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteers_must_have_a_role</fullName>
+    <active>true</active>
+    <description>When marking someone as attended in the system, we need to have a role for them.  This is for our volunteer hour contributions.</description>
+    <errorConditionFormula>and  (text( Attendance__c) = &apos;Attended&apos;, text(Participation_Role__c) =&apos;&apos;)</errorConditionFormula>
+    <errorMessage>You must select a role for a volunteer before marking attendance.</errorMessage>
+</ValidationRule>

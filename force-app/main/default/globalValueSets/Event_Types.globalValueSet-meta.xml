@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Family Camp</fullName>
+        <default>false</default>
+        <label>Family Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>Family Experiences</fullName>
+        <default>false</default>
+        <label>Family Experiences</label>
+    </customValue>
+    <customValue>
+        <fullName>Family Fun Days</fullName>
+        <default>false</default>
+        <label>Family Fun Days</label>
+    </customValue>
+    <customValue>
+        <fullName>Family Respite</fullName>
+        <default>false</default>
+        <label>Family Respite</label>
+    </customValue>
+    <customValue>
+        <fullName>Graduation Camp</fullName>
+        <default>false</default>
+        <label>Graduation Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>Hospital Program</fullName>
+        <default>false</default>
+        <label>Hospital Program</label>
+    </customValue>
+    <customValue>
+        <fullName>Junior Camp</fullName>
+        <default>false</default>
+        <label>Junior Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>Middle Camp</fullName>
+        <default>false</default>
+        <label>Middle Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>Mini Camp</fullName>
+        <default>false</default>
+        <label>Mini Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>Senior Camp</fullName>
+        <default>false</default>
+        <label>Senior Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>Star Camp</fullName>
+        <default>false</default>
+        <label>Star Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>Volunteer Recognition Event</fullName>
+        <default>false</default>
+        <label>Volunteer Recognition Event</label>
+    </customValue>
+    <customValue>
+        <fullName>Volunteer Training Days</fullName>
+        <default>false</default>
+        <label>Volunteer Training Days</label>
+    </customValue>
+    <customValue>
+        <fullName>Weekend Camp</fullName>
+        <default>false</default>
+        <label>Weekend Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>z Activity Days</fullName>
+        <default>false</default>
+        <label>z Activity Days</label>
+    </customValue>
+    <customValue>
+        <fullName>z Community</fullName>
+        <default>false</default>
+        <label>z Community</label>
+    </customValue>
+    <customValue>
+        <fullName>z Father and Son Camp</fullName>
+        <default>false</default>
+        <label>z Father and Son Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>z GIGGLE - Hospital Visits</fullName>
+        <default>false</default>
+        <label>z GIGGLE - Hospital Visits</label>
+    </customValue>
+    <customValue>
+        <fullName>z HSP - Metropolitan School Visits</fullName>
+        <default>false</default>
+        <label>z HSP - Metropolitan School Visits</label>
+    </customValue>
+    <customValue>
+        <fullName>z Holiday Cabin</fullName>
+        <default>false</default>
+        <label>z Holiday Cabin</label>
+    </customValue>
+    <customValue>
+        <fullName>z Mother and Daughter Camp</fullName>
+        <default>false</default>
+        <label>z Mother and Daughter Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>z Senior Adventure Camp</fullName>
+        <default>false</default>
+        <label>z Senior Adventure Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>z Siblings Camp</fullName>
+        <default>false</default>
+        <label>z Siblings Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>z Ski Camp</fullName>
+        <default>false</default>
+        <label>z Ski Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>z Summer Camp</fullName>
+        <default>false</default>
+        <label>z Summer Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>z Tickets</fullName>
+        <default>false</default>
+        <label>z Tickets</label>
+    </customValue>
+    <customValue>
+        <fullName>z Winter Camp</fullName>
+        <default>false</default>
+        <label>z Winter Camp</label>
+    </customValue>
+    <masterLabel>Event Types</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

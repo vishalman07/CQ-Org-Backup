@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATSIC__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Captures families who have identified as Aboriginal Australian or Torres Strait Islander</description>
+    <inlineHelpText>Does this family identify as Aboriginal Australian or Torres Strait Islander?</inlineHelpText>
+    <label>ATSIC</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

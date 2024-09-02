@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MoveData_Contact_Fieldset_Ext</fullName>
+    <description>MoveData_Donation_Contact_Mapping_Ext</description>
+    <label>[MoveData] Contact Fieldset Ext</label>
+</FieldSet>

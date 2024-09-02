@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewal_Plan_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Contract_Sub_Type__c &gt; 5000, ContractTerm &gt; 12,    ISBLANK(Renewal_Option__c) )</errorConditionFormula>
+    <errorMessage>If we enter into contracts worth more than $5000 and exceeding 12 months duration we need to have a renewal plan in the renewal option field.</errorMessage>
+</ValidationRule>
